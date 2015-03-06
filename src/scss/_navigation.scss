@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    #navigation
+\*------------------------------------*/
+
+    .main-nav__logo {
+        margin: 12px auto 0;
+        @include use-sprite("gluru-logo");
+    }
+    .main-nav__list { // ul
+        list-style: none;
+        padding: 0;
+
+        .divider {
+            border-bottom: 1px solid white;
+            margin-bottom: 20px;
+            padding-bottom: 10px;        
+        }
+    }
+        .main-nav__item { // li
+            &.divider {
+                border-bottom: 1px solid white;
+                margin-bottom: 20px;
+                padding-bottom: 10px;        
+            }
+        }
+            .main-nav__link { // a
+                position: relative;
+                margin: 8px auto;
+                text-indent: -9999px;
+
+                &.avatar {     @include use-sprite("nav-avatar"); }
+                &.add {        @include use-sprite("ico-nav-add"); }
+                &.search {     @include use-sprite("ico-nav-search"); }
+                &.files {      @include use-sprite("ico-nav-files"); }
+                &.moments {    @include use-sprite("ico-nav-moments"); }
+                &.people {     @include use-sprite("ico-nav-people"); }
+                &.projects {   @include use-sprite("ico-nav-projects"); }
+                &.auto-push {  @include use-sprite("ico-nav-auto-push"); }
+                &.settings {   @include use-sprite("ico-nav-settings"); }
+                &.highlight {
+                    &:hover {
+                        &:after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            width: 40px;
+                            height: 40px;
+                            margin: auto;
+                            border: 1px solid white;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+

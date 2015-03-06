@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #custom
+\*------------------------------------*/
+
+// temp classes to mimic content
+.tmp-content {
+    display: none;
+    width: 20px;
+    height: 110px;
+    margin: 10px;
+    background: $grey;
+    outline: 1px solid $pink;
+}
+.tmp-panel {
+    float: left;
+    width: 33.3%;
+    height: 110px;
+    margin: 0;
+    background: #F5F5F5;
+    outline: 1px solid $pink;
+}
+
+// temp buttons
+.tmp-buttons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}

@@ -1,0 +1,22 @@
+// Neat settings override
+
+// $column: golden-ratio(1em, 3); // Column width
+// $gutter: golden-ratio(1em, 1); // Gutter between each two columns
+// $grid-columns: 12; // Total number of columns in the grid
+// $max-width: em(1088); // Max-width of the outer container
+// $border-box-sizing: true; // Makes all elements have a border-box layout
+// $default-feature: min-width; // Default @media feature for the breakpoint() mixin
+// $default-layout-direction: LTR;
+
+
+// colors
+$pink: #d41a68;
+$orange: #f9441f;
+$green: #16b451;
+$lime-green: #8ce31c;
+$grey: #eeeeee;
+
+// dimensions
+$tools-width: 80px;
+$drawer-width: 300px;
+
