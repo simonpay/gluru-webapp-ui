@@ -8,8 +8,8 @@
     width: 20px;
     height: 110px;
     margin: 10px;
-    background: $grey;
-    outline: 1px solid $pink;
+    background: $gallery;
+    outline: 1px solid $red-violet;
 }
 .tmp-panel {
     float: left;
@@ -17,7 +17,7 @@
     height: 110px;
     margin: 0;
     background: #F5F5F5;
-    outline: 1px solid $pink;
+    outline: 1px solid $red-violet;
 }
 
 // temp buttons
@@ -26,3 +26,5 @@
     bottom: 30px;
     right: 30px;
 }
+
+

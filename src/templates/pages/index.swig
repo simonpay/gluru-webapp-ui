@@ -26,44 +26,111 @@
 		</ul>
 	</nav>
 
-	<aside class="drawer">
-		<h1 class="drawer__heading">Files</h1>
+	<div class="drawer__wrap">
+		<aside class="drawer is-visible">
+			<header class="panel-header">
+				<div class="drawer__heading">Files</div>
+			</header>
 
-		<div class="drawer__list">
-			<h2>Sources</h2>
-			<ul class="drawer__list">
-				<li class="drawer__item drawer__files">Everything</li>
-				<li class="">Box</li>
-				<li class="">Drive</li>
-				<li class="">Dropbox</li>
-				<li class="">Evernote</li>
-			</ul>
-		</div>
+			<div class="drawer__options">
+				<div class="drawer__sub-heading">Sources</div>
+				<ul class="drawer__list">
+					<li class="drawer__item">
+						<a href="#" class="drawer__link ">
+							<span class="drawer__icon drawer__icon--everything"></span>
+							<span class="drawer__text">Everything</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--box"></span>
+							<span class="drawer__text">Box</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--drive"></span>
+							<span class="drawer__text">Drive</span>
+						</a>
+					</li>
+	{# 				<li class="drawer__item">
+						<a href="#" class="drawer__link drawer__link--dropbox">Dropbox</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link drawer__link--evernote">Evernote</a>
+					</li>
+	 #}			</ul>
+			</div>
 
-		<div class="tool-list">
-			<h2>Favourites</h2>
-			<ul>
-				<li class="tool tool--files"></li>
-			</ul>
-		</div>
+			<div class="drawer__options">
+				<div class="drawer__sub-heading">Favourites</div>
+				<ul class="drawer__list">
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__text">Alex Li</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__text">Jason Smith</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__text">Stephanie Clarke</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 
-	</aside>
+			<div class="drawer__options">
+				<div class="drawer__sub-heading">Teams</div>
+				<ul class="drawer__list">
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__text">Sales Team</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__text">Marketing Team</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__text">Development Team</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</aside>
+
+	</div>
+
 
 	<main class="stage">
-		<header>
-			<h1>Files</h1>
+		<header class="panel-header">
+			<div class="stage__heading">Files</div>
 		</header>
-		<div class="tmp-panel"></div>
-		<div class="tmp-panel"></div>
-		<div class="tmp-panel"></div>
-	</main>
 
+{# 		<div class="tmp-panel"></div>
+		<div class="tmp-panel"></div>
+		<div class="tmp-panel"></div>
+ #}	</main>
+
+{# 	<aside class="actions is-visible">
+		<h1 class="actions__heading">Files</h1>
+
+	</aside>
+ #}
 </div>
 
 <div class="tmp-buttons">
 	<button class="show">Show</button>
 	<button class="hide">Hide</button>
 </div>
+
 
 {% endblock %}
 
