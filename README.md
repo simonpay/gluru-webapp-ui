@@ -79,3 +79,9 @@ Watch for changes in SCSS, js, image and font directories, and any templates. On
 #### grunt docco
 Build HTML documentation for javascript files. See [Docco documentation](http://jashkenas.github.io/docco/) for more information.
 
+
+### CSS Style Guide
+Where possible, all CSS is based on the style guide written by Harry Roberts:
+[CSS style guide](http://cssguidelin.es/)
+
+Naming conveention is based on BEM methodology with a variation described here: [BEM Variation](http://webuild.envato.com/blog/chainable-bem-modifiers/)

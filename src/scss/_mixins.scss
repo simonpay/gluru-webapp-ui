@@ -2,7 +2,6 @@
     #mixins
 \*------------------------------------*/
 
-
 // media queries for responsive views
 @mixin mq($screen) {
     @if $screen == medium {

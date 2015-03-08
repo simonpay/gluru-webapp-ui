@@ -1,13 +1,48 @@
+// reset
 @import "normalize";
+
+// mixins etc
 @import "bourbon";
+
+// variables, colors etc
 @import "settings";
+
+// css grid
 @import "neat";
+
+// handy utilities
 @import "scut";
+
+// css tooltips
+// TODO: evaluate this and see if its worth using
+	// UPDATE: not suitable due to being clipped by parent
+// @import "tooltips";
+
+// TODO: check this out as it may prove useful - lots of utilities!
+	// add to bower.json using "bower install scss-tooltips --save" if used or 
+	// delete from current "bower_components" folder if not
+// @import "utility-belt"; 
+
+// project specific mixins
 @import "mixins";
+
+// sprites via compass (loaded with Bower) - see config.rb file for load path
 @import "retina-sprites";
-@import "base";
-@import "layout";
-@import "navigation";
+
+// base styles and other resets, utilities classes etc
+@import "base",
+		"utilities";
+
+// the majority of the elements in the web app are within modules
+@import "modules/stage-container",
+		"modules/stage",
+		"modules/main-nav",
+		"modules/panel-header",
+		"modules/drawer",
+		"modules/actions";
+
+// anything that doesnt quite fit anywhere else
+// TODO - refactor these into a different file
 @import "custom";
 
 

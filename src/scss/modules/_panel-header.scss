@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    # PANEL-HEADER
+\*------------------------------------*/
+
+.panel-header {
+    display: block;
+    position: relative;
+    height: 58px;
+    overflow: hidden;
+    margin: 0 10px 0 13px;        
+    border-bottom: 1px solid $silver;
+}
+

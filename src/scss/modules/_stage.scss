@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    # STAGE
+\*------------------------------------*/
+
+.stage {
+	padding: 0 4px;
+    background: #fff;
+    @include clearfix;
+    @include mq(medium){
+        height: 100%;
+        margin-left: $tools-width;
+        overflow: auto;
+    }
+}
+
+	.stage__heading-wrap {
+		@extend %vertical-align-center;
+	}
+		.stage__heading {
+		    // @include scut-center-transform(y);
+		    // text-transform: uppercase;
+		    font-size: 16px;
+		    // font-weight: lighter;
+		    color: $black;
+		}
+
+		.stage__sub-heading {
+		    // @include scut-center-transform(y);
+		    font-size: 14px;
+		    font-weight: lighter;
+		    color: $mountain-meadow;
+		}

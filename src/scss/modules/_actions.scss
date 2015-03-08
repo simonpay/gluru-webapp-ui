@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    # ACTIONS
+\*------------------------------------*/
+
+.actions__wrap {
+    float: right;
+    width: 0;
+    height: 100%;
+    transition: width 0.4s;
+    overflow: hidden;
+    
+    // css transition for slide out of drawer
+    &.is-visible {
+        width: 100%;
+        @include mq(medium){
+            width: $actions-width;
+        }
+    }
+    &.is-hidden {
+        width: 100%;
+        @include mq(medium){
+            width: 0;
+        }
+    }
+}
+
+    .actions {
+        height: 100%;
+        width: $actions-width;
+        padding-left: 4px;
+        background: $gallery;
+        overflow-y: auto;
+    }
+        
+        // main heading in drawer panel
+        .actions__heading {
+            @extend %vertical-align-center;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: lighter;
+            color: $mountain-meadow;
+        }
+
+        // .drawer__options {
+        //     position: relative;
+        //     padding: 15px 0 10px;
+        // }
+
+        //     .drawer__sub-heading {
+        //         padding: 0 13px 8px 13px;
+        //         text-transform: uppercase;
+        //         font-size: 14px;
+        //     }
+
+        //         .drawer__list { // ul
+        //         }
+
+        //             .drawer__item { // li
+        //                 margin-bottom: 4px;
+        //             }
+
+        //                 .drawer__link { // a
+        //                     display: block;
+        //                     height: 38px;
+        //                     padding: 0 20px;
+        //                     background: $gallery;
+        //                     &:hover {
+        //                         background: $alto;
+        //                     }
+        //                 }
+
+        //                 .drawer__icon--everything {  @include use-sprite("ico-source-everything"); }
+        //                 .drawer__icon--box {         @include use-sprite("ico-source-box"); }
+        //                 .drawer__icon--drive {       @include use-sprite("ico-source-drive"); }
+        //                 .drawer__icon--dropbox {     @include use-sprite("ico-source-dropbox"); }
+        //                 .drawer__icon--evernote {    @include use-sprite("ico-source-evernote"); }
+
+        //                 .drawer__icon,
+        //                 .drawer__text {
+        //                     display: block;
+        //                     @include scut-center-transform(y);
+        //                     position: relative;
+        //                     float: left;
+        //                 }
+
+        //                 .drawer__text {
+        //                     margin-left: 8px;
+        //                     text-decoration: none;
+        //                     font-size: 14px;
+        //                     font-weight: lighter;
+        //                     color: $dove-gray;
+        //                 }
+
+
