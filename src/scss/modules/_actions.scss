@@ -4,8 +4,11 @@
 
 .actions__wrap {
     float: right;
+    position: relative;
+    top: $panel-header-height;
     width: 0;
-    height: 100%;
+    height: calc(100% - #{$panel-header-height});
+    // height: 100%;
     transition: width 0.4s;
     overflow: hidden;
     
@@ -27,6 +30,7 @@
     .actions {
         height: 100%;
         width: $actions-width;
+        // padding-top: $panel-header-height;
         padding-left: 4px;
         background: $gallery;
         overflow-y: auto;
@@ -77,8 +81,7 @@
 
         //                 .drawer__icon,
         //                 .drawer__text {
-        //                     display: block;
-        //                     @include scut-center-transform(y);
+        //                     @extend %vertical-align-center;
         //                     position: relative;
         //                     float: left;
         //                 }

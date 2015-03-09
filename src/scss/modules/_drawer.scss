@@ -34,88 +34,10 @@
         
         // main heading in drawer panel
         .drawer__heading {
-            @include scut-center-transform(y);
+            @extend %vertical-align-center;
             text-transform: uppercase;
             font-size: 22px;
             font-weight: lighter;
             color: $mountain-meadow;
         }
-
-        .drawer__options {
-            position: relative;
-            margin: 15px 0 30px;
-        }
-
-            .drawer__sub-heading {
-                padding: 0 13px 8px 13px;
-                text-transform: uppercase;
-                font-size: 14px;
-            }
-
-                .drawer__list { // ul
-                }
-
-                    .drawer__item { // li
-                        margin-bottom: 4px;
-                    }
-
-                        .drawer__link { // a
-                            display: block;
-                            height: 38px;
-                            padding-left: 20px;
-                            background: $gallery;
-                            &:hover {
-                                background: $alto;
-                            }
-                        }
-
-                        .drawer__icon--everything {  @include use-sprite("ico-source-everything"); }
-                        .drawer__icon--box {         @include use-sprite("ico-source-box"); }
-                        .drawer__icon--drive {       @include use-sprite("ico-source-drive"); }
-                        .drawer__icon--dropbox {     @include use-sprite("ico-source-dropbox"); }
-                        .drawer__icon--evernote {    @include use-sprite("ico-source-evernote"); }
-                        
-                        // temp sprites
-                        // TODO: build live avatar holders
-                        .drawer__icon--tmp-fav-avatar-1 {    @include use-sprite("tmp-fav-avatar-1"); }
-                        .drawer__icon--tmp-fav-avatar-2 {    @include use-sprite("tmp-fav-avatar-2"); }
-                        .drawer__icon--tmp-fav-avatar-3 {    @include use-sprite("tmp-fav-avatar-3"); }
-
-                        .drawer__icon,
-                        .drawer__text {
-                            display: block;
-                            @include scut-center-transform(y);
-                            position: relative;
-                            float: left;
-                        }
-
-                        .drawer__icon {
-                            &.-team {
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 100%;
-                                &.-sales {
-                                    background: $team-color-sales;
-                                }
-                                &.-marketing {
-                                    background: $team-color-marketing;
-                                }
-                                &.-development {
-                                    background: $team-color-development;
-                                }
-                            }
-                        }
-
-                        .drawer__text {
-                            width: 115px;
-                            margin-left: 8px;
-                            text-decoration: none;
-                            font-size: 14px;
-                            font-weight: lighter;
-                            color: $dove-gray;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                        }
-
 

@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<div class="stage-container">
+<div class="main-container">
 
 	<nav class="main-nav">
 		<a href="#" class="main-nav__logo"></a>
@@ -33,10 +33,10 @@
 			</header>
 
 			<div class="drawer__options">
-				<div class="drawer__sub-heading tooltip tooltip--se">Sources</div>
+				<div class="drawer__sub-heading">Sources</div>
 				<ul class="drawer__list">
 					<li class="drawer__item">
-						<a href="#" class="drawer__link ">
+						<a href="#" class="drawer__link">
 							<span class="drawer__icon drawer__icon--everything"></span>
 							<span class="drawer__text">Everything</span>
 						</a>
@@ -186,19 +186,93 @@
 	<div class="actions__wrap is-visible">
 		<aside class="actions">
 			<header class="panel-header">
-				<div class="actions__heading">Actions</div>
+				<div class="actions__heading">Footprint</div>
 			</header>
+
+				<div class="drawer__options">
+					<div class="drawer__sub-heading">Sources</div>
+					<ul class="drawer__list">
+						<li class="drawer__item">
+							<a href="#" class="drawer__link ">
+								<span class="drawer__icon drawer__icon--everything"></span>
+								<span class="drawer__text">Everything</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--box"></span>
+								<span class="drawer__text">Box</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--drive"></span>
+								<span class="drawer__text">Drive</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--dropbox"></span>
+								<span class="drawer__text">Dropbox</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--evernote"></span>
+								<span class="drawer__text">Evernote</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+
+				<div class="drawer__options">
+					<div class="drawer__sub-heading">Sources</div>
+					<ul class="drawer__list">
+						<li class="drawer__item">
+							<a href="#" class="drawer__link ">
+								<span class="drawer__icon drawer__icon--everything"></span>
+								<span class="drawer__text">Everything</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--box"></span>
+								<span class="drawer__text">Box</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--drive"></span>
+								<span class="drawer__text">Drive</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--dropbox"></span>
+								<span class="drawer__text">Dropbox</span>
+							</a>
+						</li>
+						<li class="drawer__item">
+							<a href="#" class="drawer__link">
+								<span class="drawer__icon drawer__icon--evernote"></span>
+								<span class="drawer__text">Evernote</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
 		</aside>
 	</div>
 
-	<main class="stage">
-		<header class="panel-header">
-			<div class="stage__heading-wrap">
-				<div class="stage__heading">Files</div>
-				<div class="stage__sub-heading">2,1145 files</div>
-			</div>
-		</header>
-
+	<div class="stage__wrap">
+		<main class="stage">
+			<header class="panel-header panel-header--stage">
+				<div class="stage__heading-wrap">
+					<div class="stage__heading">Files</div>
+					<div class="stage__sub-heading">2,1145 files</div>
+				</div>
+			</header>
 
 			<div class="drawer__options">
 				<div class="drawer__sub-heading">Sources</div>
@@ -236,11 +310,119 @@
 				</ul>
 			</div>
 
-{# 		<div class="tmp-panel"></div>
-		<div class="tmp-panel"></div>
-		<div class="tmp-panel"></div>
- #}	</main>
+			<div class="drawer__options">
+				<div class="drawer__sub-heading">Sources</div>
+				<ul class="drawer__list">
+					<li class="drawer__item">
+						<a href="#" class="drawer__link ">
+							<span class="drawer__icon drawer__icon--everything"></span>
+							<span class="drawer__text">Everything</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--box"></span>
+							<span class="drawer__text">Box</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--drive"></span>
+							<span class="drawer__text">Drive</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--dropbox"></span>
+							<span class="drawer__text">Dropbox</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--evernote"></span>
+							<span class="drawer__text">Evernote</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 
+			<div class="drawer__options">
+				<div class="drawer__sub-heading">Sources</div>
+				<ul class="drawer__list">
+					<li class="drawer__item">
+						<a href="#" class="drawer__link ">
+							<span class="drawer__icon drawer__icon--everything"></span>
+							<span class="drawer__text">Everything</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--box"></span>
+							<span class="drawer__text">Box</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--drive"></span>
+							<span class="drawer__text">Drive</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--dropbox"></span>
+							<span class="drawer__text">Dropbox</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--evernote"></span>
+							<span class="drawer__text">Evernote</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="drawer__options">
+				<div class="drawer__sub-heading">Sources</div>
+				<ul class="drawer__list">
+					<li class="drawer__item">
+						<a href="#" class="drawer__link ">
+							<span class="drawer__icon drawer__icon--everything"></span>
+							<span class="drawer__text">Everything</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--box"></span>
+							<span class="drawer__text">Box</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--drive"></span>
+							<span class="drawer__text">Drive</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--dropbox"></span>
+							<span class="drawer__text">Dropbox</span>
+						</a>
+					</li>
+					<li class="drawer__item">
+						<a href="#" class="drawer__link">
+							<span class="drawer__icon drawer__icon--evernote"></span>
+							<span class="drawer__text">Evernote</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+	{# 		<div class="tmp-panel"></div>
+			<div class="tmp-panel"></div>
+			<div class="tmp-panel"></div>
+	 #}	</main>
+	</div>
 
 </div>
 

@@ -34,11 +34,12 @@
 		"utilities";
 
 // the majority of the elements in the web app are within modules
-@import "modules/stage-container",
+@import "modules/main-container",
 		"modules/stage",
 		"modules/main-nav",
 		"modules/panel-header",
 		"modules/drawer",
+		"modules/drawer-options",
 		"modules/actions";
 
 // anything that doesnt quite fit anywhere else

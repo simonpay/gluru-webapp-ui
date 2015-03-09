@@ -94,3 +94,5 @@ Retina sprites are being handled by a Scss mixin called "Retina Sprites for Comp
 2. Copy all images into folder '/src/img/icons' Use Photoshop batch task to reduce by 50%, save and close.
 3. Use the sprite-image in the Scss using: '@include use-sprite(<sprite-name>)' replacing <sprite-name> with the file name of the image (no need for the extension)
 4. On save, compass will create 2 sprite map images and place them in the root or '/src'.
+
+__Note:__ It is important within this project to set the 'http_generated_images_path' variable within config.rb to "../img/" which is the relative path to the generated spritemap images. 

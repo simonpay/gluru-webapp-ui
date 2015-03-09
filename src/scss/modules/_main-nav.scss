@@ -9,14 +9,14 @@
     @include clearfix;
     @include mq(medium){
         float: left;
-        width: $tools-width;
+        width: $main-nav-width;
         height: 100%;
         overflow: hidden;
     }
 }
 
     .main-nav__logo {
-        margin: 10px auto 25px;
+        margin: 17px auto 45px;
         @include use-sprite("gluru-logo");
     }
 
@@ -24,13 +24,14 @@
     }
 
         .main-nav__item { // li
-            margin-bottom: 8px;
+            // margin-bottom: 8px;
+            margin-bottom: 15px;
             &.-primary { // items above the divider
-                margin-bottom: 15px;
+                // margin-bottom: 15px;
             }
             &.-divider {
-                margin-bottom: 20px;
-                padding-bottom: 10px;
+                margin-bottom: 30px;
+                padding-bottom: 15px;
                 border-bottom: 1px solid white;
             }
         }
@@ -49,20 +50,24 @@
                 &.projects {   @include use-sprite("ico-nav-projects"); }
                 &.auto-push {  @include use-sprite("ico-nav-auto-push"); }
                 &.settings {   @include use-sprite("ico-nav-settings"); }
+                
+                // repeat class to increase specificity to override overflow set by sprite mixin above
+                &.main-nav__link {
+                    overflow: visible;
+                }
+
                 &.highlight {
                     &:hover {
                         &:after {
                             content: "";
                             display: block;
                             position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            left: 0;
-                            right: 0;
-                            width: 40px;
-                            height: 40px;
+                            top: -10px;
+                            bottom: -10px;
+                            left: -10px;
+                            right: -10px;
                             margin: auto;
-                            border: 1px solid white;
+                            border: 2px solid white;
                             border-radius: 100%;
                         }
                     }

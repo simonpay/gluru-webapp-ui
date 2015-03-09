@@ -5,9 +5,14 @@
 .panel-header {
     display: block;
     position: relative;
-    height: 58px;
+    height: $panel-header-height;
     overflow: hidden;
     margin: 0 10px 0 13px;        
     border-bottom: 1px solid $silver;
 }
 
+.panel-header--stage {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+}
