@@ -80,8 +80,17 @@ Watch for changes in SCSS, js, image and font directories, and any templates. On
 Build HTML documentation for javascript files. See [Docco documentation](http://jashkenas.github.io/docco/) for more information.
 
 
-### CSS Style Guide
+## CSS Style Guide
 Where possible, all CSS is based on the style guide written by Harry Roberts:
 [CSS style guide](http://cssguidelin.es/)
 
 Naming conveention is based on BEM methodology with a variation described here: [BEM Variation](http://webuild.envato.com/blog/chainable-bem-modifiers/)
+
+## Retina enabled sprites
+Retina sprites are being handled by a Scss mixin called "Retina Sprites for Compass". 
+
+#### Usage
+1. Save all retina quality images into the folder '/src/img/icons-2x').
+2. Copy all images into folder '/src/img/icons' Use Photoshop batch task to reduce by 50%, save and close.
+3. Use the sprite-image in the Scss using: '@include use-sprite(<sprite-name>)' replacing <sprite-name> with the file name of the image (no need for the extension)
+4. On save, compass will create 2 sprite map images and place them in the root or '/src'.
