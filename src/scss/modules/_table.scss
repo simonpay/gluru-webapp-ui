@@ -25,14 +25,7 @@
             white-space: nowrap;
             text-overflow: ellipsis;
             border-bottom: 1px solid rgba(0,0,0,0.065);
-
-            // font-size: rem(14);
             color: $black;
-            .-header & {
-                border-bottom-width: 2px;
-                font-weight: bold;
-                color: $dusty-gray;
-            }
             &.-file-name {
                 // width: 100%; // width only used if table-layout: fixed;
             }
@@ -43,6 +36,12 @@
             &.-source {
                 // width: 140px
                 text-align: center;
+            }
+
+            .-header & {
+                border-bottom-width: 2px;
+                font-weight: bold;
+                color: $dusty-gray;
             }
         }
         .tmp-icon-dropbox {

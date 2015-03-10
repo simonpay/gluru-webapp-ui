@@ -40,14 +40,14 @@
                 //         @include use-sprite("ico-source-everything");
                 //     }
                 // }
-                .drawer__icon--everything {  @include use-sprite("ico-source-everything"); }
-                .drawer__icon--box {         @include use-sprite("ico-source-box"); }
-                .drawer__icon--drive {       @include use-sprite("ico-source-drive"); }
-                .drawer__icon--dropbox {     @include use-sprite("ico-source-dropbox"); }
-                .drawer__icon--evernote {    @include use-sprite("ico-source-evernote"); }
+                // .drawer__icon--everything {  @include use-sprite("ico-source-everything"); }
+                // .drawer__icon--box {         @include use-sprite("ico-source-box"); }
+                // .drawer__icon--drive {       @include use-sprite("ico-source-drive"); }
+                // .drawer__icon--dropbox {     @include use-sprite("ico-source-dropbox"); }
+                // .drawer__icon--evernote {    @include use-sprite("ico-source-evernote"); }
                 
                 // temp sprites
-                // TODO: build live avatar holders
+                // TODO: build live avatar holders with img tags
                 .drawer__icon--tmp-fav-avatar-1 {    @include use-sprite("tmp-fav-avatar-1"); }
                 .drawer__icon--tmp-fav-avatar-2 {    @include use-sprite("tmp-fav-avatar-2"); }
                 .drawer__icon--tmp-fav-avatar-3 {    @include use-sprite("tmp-fav-avatar-3"); }

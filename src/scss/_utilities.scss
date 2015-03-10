@@ -8,3 +8,7 @@
 %vertical-align-center {
     @include scut-center-transform(y);
 }
+
+.center-block {
+	margin: 0 auto;
+}

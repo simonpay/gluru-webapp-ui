@@ -2,22 +2,26 @@
     # DRAWER
 \*------------------------------------*/
 
-.drawer__wrap {
+.drawer-wrap {
     float: left;
     width: 0;
     height: 100%;
-    transition: width 0.4s;
+    width: 100%;
+    transition: width $drawer-animation-duration;
     overflow: hidden;
+    @include mq(medium){
+        width: $drawer-width;
+    }
     
     // css transition for slide out of drawer
-    &.is-visible {
-        width: 100%;
-        @include mq(medium){
-            width: $drawer-width;
-        }
-    }
+    // &.is-visible {
+    //     width: 100%;
+    //     @include mq(medium){
+    //         width: $drawer-width;
+    //     }
+    // }
+
     &.is-hidden {
-        width: 100%;
         @include mq(medium){
             width: 0;
         }

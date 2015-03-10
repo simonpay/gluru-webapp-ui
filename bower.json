@@ -9,7 +9,6 @@
     "bourbon": "~4.2.1",
     "scut": "~0.10.3",
     "normalize-scss": "~3.0.0",
-    "Retina-sprites-for-Compass": "*",
-    "susy": "~2.2.2"
+    "Retina-sprites-for-Compass": "*"
   }
 }

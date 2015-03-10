@@ -84,7 +84,25 @@ Build HTML documentation for javascript files. See [Docco documentation](http://
 Where possible, all CSS is based on the style guide written by Harry Roberts:
 [CSS style guide](http://cssguidelin.es/)
 
-Naming conveention is based on BEM methodology with a variation described here: [BEM Variation](http://webuild.envato.com/blog/chainable-bem-modifiers/)
+Naming convention is based on BEM methodology with a variation described here: [http://webuild.envato.com/blog/chainable-bem-modifiers/](http://webuild.envato.com/blog/chainable-bem-modifiers/) and here: [http://webuild.envato.com/blog/chainable-bem-modifiers/](http://viget.com/extend/bem-sass-modifiers).
+
+The methodology could be described as BEVM:
+
+	block__element--variation -modifier, plus internal SASS %modifier selectors.
+
+Any class prefixed with a "-" is scoped to the parent. E.g. 
+
+HTML:
+
+	<div class="container -modifier"></div>
+
+SCSS:
+
+	.container {
+		&.-modifier {
+			// styles
+		}
+	}
 
 ## Retina enabled sprites
 Retina sprites are being handled by a Scss mixin called "Retina Sprites for Compass". 

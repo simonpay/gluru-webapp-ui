@@ -1,4 +1,4 @@
-<div class="drawer__wrap is-visible">
+<div class="drawer-wrap is-hidden js-drawer-wrap">
 	<aside class="drawer">
 		<header class="panel-header">
 			<div class="drawer__heading">Files</div>
@@ -9,31 +9,31 @@
 			<ul class="drawer__list">
 				<li class="drawer__item">
 					<a href="#" class="drawer__link">
-						<span class="drawer__icon drawer__icon--everything"></span>
+						<span class="drawer__icon icon-everything"></span>
 						<span class="drawer__text">Everything</span>
 					</a>
 				</li>
 				<li class="drawer__item">
 					<a href="#" class="drawer__link">
-						<span class="drawer__icon drawer__icon--box"></span>
+						<span class="drawer__icon icon-box"></span>
 						<span class="drawer__text">Box</span>
 					</a>
 				</li>
 				<li class="drawer__item">
 					<a href="#" class="drawer__link">
-						<span class="drawer__icon drawer__icon--drive"></span>
+						<span class="drawer__icon icon-drive"></span>
 						<span class="drawer__text">Drive</span>
 					</a>
 				</li>
 				<li class="drawer__item">
 					<a href="#" class="drawer__link">
-						<span class="drawer__icon drawer__icon--dropbox"></span>
+						<span class="drawer__icon icon-dropbox"></span>
 						<span class="drawer__text">Dropbox</span>
 					</a>
 				</li>
 				<li class="drawer__item">
 					<a href="#" class="drawer__link">
-						<span class="drawer__icon drawer__icon--evernote"></span>
+						<span class="drawer__icon icon-evernote"></span>
 						<span class="drawer__text">Evernote</span>
 					</a>
 				</li>

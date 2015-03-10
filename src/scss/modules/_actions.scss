@@ -2,23 +2,26 @@
     # ACTIONS
 \*------------------------------------*/
 
-.actions__wrap {
+.actions-wrap {
     float: right;
     position: relative;
     top: $panel-header-height;
-    width: 0;
-    height: calc(100% - #{$panel-header-height});
+    width: 100%;
     // height: 100%;
-    transition: width 0.4s;
+    transition: width $actions-animation-duration;
     overflow: hidden;
+    @include mq(medium){
+        height: calc(100% - #{$panel-header-height});
+        width: $actions-width;
+    }
     
     // css transition for slide out of drawer
-    &.is-visible {
-        width: 100%;
-        @include mq(medium){
-            width: $actions-width;
-        }
-    }
+    // &.is-visible {
+    //     width: 100%;
+    //     @include mq(medium){
+    //         width: $actions-width;
+    //     }
+    // }
     &.is-hidden {
         width: 100%;
         @include mq(medium){

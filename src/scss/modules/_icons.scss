@@ -1,0 +1,11 @@
+/*------------------------------------*\
+# ICONS
+\*------------------------------------*/
+
+.icon-everything {  @include use-sprite("ico-source-everything"); }
+.icon-box {         @include use-sprite("ico-source-box"); }
+.icon-drive {       @include use-sprite("ico-source-drive"); }
+.icon-dropbox {     @include use-sprite("ico-source-dropbox"); }
+.icon-evernote {    @include use-sprite("ico-source-evernote"); }
+
+

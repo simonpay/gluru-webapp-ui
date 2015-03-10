@@ -1,4 +1,4 @@
-<div class="actions__wrap is-visible">
+<div class="actions-wrap is-hidden js-actions-wrap">
 	<aside class="actions">
 		<header class="panel-header">
 			<div class="actions__heading">Footprint</div>
