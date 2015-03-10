@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    # TABLE
+\*------------------------------------*/
+
+
+.table {
+    display: table;
+    width: 100%;
+    // table-layout: fixed; // make table cell widths depend on values rather than their content
+    font-size: rem(14);
+}
+
+    .table__row {
+        display: table-row;
+        &:not(.-header):hover .table__col {
+            background: $gallery;
+        }
+    }
+
+        .table__col {
+            display: table-cell;
+            padding: 15px;
+            overflow: hidden;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            border-bottom: 1px solid rgba(0,0,0,0.065);
+
+            // font-size: rem(14);
+            color: $black;
+            .-header & {
+                border-bottom-width: 2px;
+                font-weight: bold;
+                color: $dusty-gray;
+            }
+            &.-file-name {
+                // width: 100%; // width only used if table-layout: fixed;
+            }
+            &.-modified {
+                // width: 140px;
+                text-align: center;
+            }
+            &.-source {
+                // width: 140px
+                text-align: center;
+            }
+        }
+        .tmp-icon-dropbox {
+            @include use-sprite("ico-source-drive");
+            margin: 0 auto;
+            // @extend %vertical-align-center;
+        }
+
+
+
+
+// /* Changing Susy default global settings */
+// $susy: (
+//     /* Tells Susy to use 12 columns */
+//     columns: 12,
+//     /* Tells Susy that the container has a max-width of 1120px */
+//     // container: 1120px,
+//     /* Tells Susy to use border-box */
+//     global-box-sizing: border-box 
+// );
+
+// /* Makes border-box properties */
+// // @include border-box-sizing;
+
+// .row {
+//     // position: relative;
+//     @include container;
+//     // height: 60px;
+//     background: $red-violet;
+// }
+// .col {
+//     // position: relative;
+//     padding: 15px ;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     // height: 100%;
+//     // line-height: 50px;
+// }
+// .tmp-file__name {
+//     @include span(7 of 12 first);
+// }
+// .tmp-file__mod {
+//     @include span(3 of 12);
+// }
+// .tmp-file__source {
+//     @include span(2 of 12 last);
+// }
+// .tmp-icon-dropbox {
+//     @include use-sprite("ico-source-drive");
+//     // @extend %vertical-align-center;
+// }
+
+
+

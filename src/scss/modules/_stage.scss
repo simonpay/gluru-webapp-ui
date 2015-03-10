@@ -10,12 +10,10 @@
 }
 
 	.stage {
-		padding: 0 4px;
-	    background: #fff;
+		padding: 0 12px;
 	    @include clearfix;
 	    @include mq(medium){
 	        height: 100%;
-	        // margin-left: $main-nav-width;
 	        overflow: auto;
 	    }
 	}

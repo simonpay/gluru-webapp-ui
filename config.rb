@@ -1,6 +1,7 @@
 # Require any additional compass plugins here.
-# OLD PATH FROM NEWER VERSION OF BOURBON which doesnt work with compass
-# add_import_path "bower_components/bourbon/dist"
+# this seems to work as well as require - not sure which is best?
+# add_import_path "bower_components/susy/sass/"
+require 'susy'
 add_import_path "bower_components/bourbon/app/assets/stylesheets"
 add_import_path "bower_components/neat/app/assets/stylesheets"
 add_import_path "bower_components/normalize-scss"

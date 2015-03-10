@@ -3,6 +3,8 @@
 \*------------------------------------*/
 
 .main-nav {
+    z-index: 100;
+    position: relative;
     width: 100%;
     height: 100px;
     background: $red-violet;
@@ -12,6 +14,7 @@
         width: $main-nav-width;
         height: 100%;
         overflow: hidden;
+        // box-shadow: 3px 0px 7px $dusty-gray;
     }
 }
 

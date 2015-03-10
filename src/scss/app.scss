@@ -10,37 +10,43 @@
 // css grid
 @import "neat";
 
+// sprites via compass (loaded with Bower) - see config.rb file for load path
+@import "retina-sprites";
+
+// // susy is anpther css grid system - possible superior to neat
+// // TODO: trial this and keep or remove
+// @import "susy";
+
 // handy utilities
 @import "scut";
 
 // css tooltips
 // TODO: evaluate this and see if its worth using
-	// UPDATE: not suitable due to being clipped by parent
+    // UPDATE: not suitable due to being clipped by parent
 // @import "tooltips";
 
 // TODO: check this out as it may prove useful - lots of utilities!
-	// add to bower.json using "bower install scss-tooltips --save" if used or 
-	// delete from current "bower_components" folder if not
+    // add to bower.json using "bower install scss-tooltips --save" if used or 
+    // delete from current "bower_components" folder if not
 // @import "utility-belt"; 
 
 // project specific mixins
 @import "mixins";
 
-// sprites via compass (loaded with Bower) - see config.rb file for load path
-@import "retina-sprites";
-
 // base styles and other resets, utilities classes etc
 @import "base",
-		"utilities";
+        "utilities";
 
-// the majority of the elements in the web app are within modules
+// modules
+// the majority of elements are modules, including layout elements such as headers
 @import "modules/main-container",
-		"modules/stage",
-		"modules/main-nav",
-		"modules/panel-header",
-		"modules/drawer",
-		"modules/drawer-options",
-		"modules/actions";
+        "modules/stage",
+        "modules/main-nav",
+        "modules/panel-header",
+        "modules/drawer",
+        "modules/drawer-options",
+        "modules/table",
+        "modules/actions";
 
 // anything that doesnt quite fit anywhere else
 // TODO - refactor these into a different file
