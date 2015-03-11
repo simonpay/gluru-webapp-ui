@@ -14,31 +14,17 @@
 				<div class="table__col -modified">Modified</div>
 				<div class="table__col -source">Source</div>
 			</div>
-			<div class="table__row">
-				<div class="table__col -file-name">This-file-has-a-very-very-long-Filename.ext</div>
-				<div class="table__col -modified">9:01 pm</div>
-				<div class="table__col -source"><div class="icon-dropbox center-block"></div></div>
-			</div>
-			<div class="table__row">
-				<div class="table__col -file-name">Normal-Filename.ext</div>
-				<div class="table__col -modified">10:33 pm</div>
-				<div class="table__col -source"><div class="icon-drive center-block"></div></div>
-			</div>
-			<div class="table__row">
-				<div class="table__col -file-name">Normal-Filename.ext</div>
-				<div class="table__col -modified">12 May 2015</div>
-				<div class="table__col -source"><div class="icon-drive center-block"></div></div>
-			</div>
-			<div class="table__row">
-				<div class="table__col -file-name">Normal-Filename.ext</div>
-				<div class="table__col -modified">12 May 2015</div>
-				<div class="table__col -source"><div class="icon-evernote center-block"></div></div>
-			</div>
-			<div class="table__row">
-				<div class="table__col -file-name">Normal-Filename.ext</div>
-				<div class="table__col -modified">12 May 2015</div>
-				<div class="table__col -source"><div class="icon-evernote center-block"></div></div>
-			</div>
+
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+			{%> "table-row-file" %}
+
 		</div>
 
 	</main>

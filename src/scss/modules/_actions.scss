@@ -35,8 +35,9 @@
         width: $actions-width;
         // padding-top: $panel-header-height;
         padding-left: 4px;
-        background: $gallery;
+        background: $alabaster;
         overflow-y: auto;
+        border-left: 1px solid $silver;
     }
         
         // main heading in drawer panel

@@ -24,8 +24,10 @@
                     display: block;
                     height: 38px;
                     padding-left: 20px;
-                    background: $gallery;
-                    &:hover {
+                    // background: $gallery;
+                    &:hover,
+                    &.is-selected {
+                        background: $alto;
                         background: $alto;
                     }
                 }
@@ -40,6 +42,8 @@
                 //         @include use-sprite("ico-source-everything");
                 //     }
                 // }
+
+                // source icons now in _icons.scss
                 // .drawer__icon--everything {  @include use-sprite("ico-source-everything"); }
                 // .drawer__icon--box {         @include use-sprite("ico-source-box"); }
                 // .drawer__icon--drive {       @include use-sprite("ico-source-drive"); }

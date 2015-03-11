@@ -16,13 +16,13 @@
 	{%> "stage" %}
 </div>
 
-<div class="tmp-buttons tmp-buttons--drawer">
+{# <div class="tmp-buttons tmp-buttons--drawer">
 	<button class="toggle">Toggle Drawer</button>
 </div>
 <div class="tmp-buttons tmp-buttons--actions">
 	<button class="toggle">Toggle Actions</button>
 </div>
-
+ #}
 
 {% endblock %}
 

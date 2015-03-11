@@ -44,22 +44,22 @@
                 margin: 0 auto;
                 text-indent: -9999px;
 
-                &.avatar {     @include use-sprite("tmp-nav-avatar"); }
-                &.add {        @include use-sprite("ico-nav-add"); }
-                &.search {     @include use-sprite("ico-nav-search"); }
-                &.files {      @include use-sprite("ico-nav-files"); }
-                &.moments {    @include use-sprite("ico-nav-moments"); }
-                &.people {     @include use-sprite("ico-nav-people"); }
-                &.projects {   @include use-sprite("ico-nav-projects"); }
-                &.auto-push {  @include use-sprite("ico-nav-auto-push"); }
-                &.settings {   @include use-sprite("ico-nav-settings"); }
+                &.-avatar {     @include use-sprite("tmp-nav-avatar"); }
+                &.-add {        @include use-sprite("icon-nav-add"); }
+                &.-search {     @include use-sprite("icon-nav-search"); }
+                &.-files {      @include use-sprite("icon-nav-files"); }
+                &.-moments {    @include use-sprite("icon-nav-moments"); }
+                &.-people {     @include use-sprite("icon-nav-people"); }
+                &.-projects {   @include use-sprite("icon-nav-projects"); }
+                &.-auto-push {  @include use-sprite("icon-nav-auto-push"); }
+                &.-settings {   @include use-sprite("icon-nav-settings"); }
                 
                 // repeat class to increase specificity to override overflow set by sprite mixin above
                 &.main-nav__link {
                     overflow: visible;
                 }
 
-                &.highlight {
+                &.-highlight {
                     &:hover {
                         &:after {
                             content: "";

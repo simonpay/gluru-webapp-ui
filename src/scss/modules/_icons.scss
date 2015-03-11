@@ -2,10 +2,25 @@
 # ICONS
 \*------------------------------------*/
 
-.icon-everything {  @include use-sprite("ico-source-everything"); }
-.icon-box {         @include use-sprite("ico-source-box"); }
-.icon-drive {       @include use-sprite("ico-source-drive"); }
-.icon-dropbox {     @include use-sprite("ico-source-dropbox"); }
-.icon-evernote {    @include use-sprite("ico-source-evernote"); }
+.icon-everything {           @include use-sprite("icon-source-everything"); }
+.icon-box {                  @include use-sprite("icon-source-box"); }
+.icon-drive {                @include use-sprite("icon-source-drive"); }
+.icon-dropbox {              @include use-sprite("icon-source-dropbox"); }
+.icon-evernote {             @include use-sprite("icon-source-evernote"); }
+
+.icon-box-sml {              @include use-sprite("icon-source-box-sml"); }
+.icon-drive-sml {            @include use-sprite("icon-source-drive-sml"); }
+.icon-dropbox-sml {          @include use-sprite("icon-source-dropbox-sml"); }
+.icon-evernote-sml {         @include use-sprite("icon-source-evernote-sml"); }
+
+.icon-folder-shared {        @include use-sprite("icon-folder-shared"); }
+.icon-folder {               @include use-sprite("icon-folder"); }
+.icon-folder-custom {        @include use-sprite("icon-folder-custom"); }
+.icon-project {              @include use-sprite("icon-project"); }
+.icon-file-pdf {             @include use-sprite("icon-file-pdf"); }
+.icon-file-text {            @include use-sprite("icon-file-text"); }
+.icon-file-spreadsheet {     @include use-sprite("icon-file-spreadsheet"); }
+.icon-file-evernote {        @include use-sprite("icon-file-evernote"); }
+.icon-file-drive {           @include use-sprite("icon-file-drive"); }
 
 

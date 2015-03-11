@@ -28,7 +28,7 @@
 // TODO: check this out as it may prove useful - lots of utilities!
     // add to bower.json using "bower install scss-tooltips --save" if used or 
     // delete from current "bower_components" folder if not
-// @import "utility-belt"; 
+@import "utility-belt"; 
 
 // project specific mixins
 @import "mixins";
@@ -39,7 +39,8 @@
 
 // modules
 // the majority of elements are modules, including layout elements such as headers
-@import "modules/main-container",
+@import "modules/media-object",
+        "modules/main-container",
         "modules/stage",
         "modules/main-nav",
         "modules/panel-header",

@@ -10,7 +10,7 @@
 }
 
 	.stage {
-		padding: 0 12px;
+		padding: 0 $stage-right-padding 0 $stage-left-padding;
 	    @include clearfix;
 	    @include mq(medium){
 	        height: 100%;

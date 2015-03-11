@@ -2,13 +2,13 @@
     #UTILITIES
 \*------------------------------------*/
 
-// .-vcenter {
-//     @include scut-center-transform(y);
-// }
+
 %vertical-align-center {
     @include scut-center-transform(y);
 }
-
+.vertical-align-center {
+    @extend %vertical-align-center;
+}
 .center-block {
 	margin: 0 auto;
 }

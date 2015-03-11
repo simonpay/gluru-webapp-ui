@@ -7,7 +7,7 @@ add_import_path "bower_components/neat/app/assets/stylesheets"
 add_import_path "bower_components/normalize-scss"
 add_import_path "bower_components/scut/dist"
 add_import_path "bower_components/Retina-sprites-for-Compass/src"
-add_import_path "bower_components/scss-tooltips"
+add_import_path "bower_components/scss-tooltips/vendor/"
 
 
 # Set this to the root of your project when deployed:
