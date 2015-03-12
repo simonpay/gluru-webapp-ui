@@ -1,9 +1,9 @@
 <div class="drawer-wrap is-hidden js-drawer-wrap">
-	<aside class="drawer">
-		<header class="panel-header">
-			<div class="drawer__heading">Files</div>
-		</header>
+	<header class="panel-header">
+		<div class="drawer__heading">Files</div>
+	</header>
 
+	<aside class="drawer">
 		<div class="drawer__options">
 			<div class="drawer__sub-heading">Sources</div>
 			<ul class="drawer__list">

@@ -9,6 +9,7 @@
     width: 100%;
     transition: width $drawer-animation-duration;
     overflow: hidden;
+    background: $gallery;
     @include mq(medium){
         width: $drawer-width;
     }
@@ -29,10 +30,9 @@
 }
 
     .drawer {
-        height: 100%;
+        height: calc(100% - #{$panel-header-height});
         width: $drawer-width;
         padding-left: 4px;
-        background: $gallery;
         overflow-y: auto;
     }
         
