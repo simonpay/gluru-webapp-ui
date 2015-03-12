@@ -4,7 +4,7 @@
 
 // helper class for extending
 %panel-shadow {
-    box-shadow: 6px 0px 10px $panel-drop-shadow;
+    box-shadow: 6px 0px $panel-drop-shadow-spread $panel-drop-shadow;
     // box-shadow: 6px 0px 10px black;
 }
 

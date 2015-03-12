@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .actions-wrap {
+    z-index: 10;
     float: right;
     position: relative;
     top: $panel-header-height;
@@ -10,6 +11,9 @@
     // height: 100%;
     transition: width $actions-animation-duration;
     overflow: hidden;
+    background: $alabaster;
+    border-left: 1px solid $silver;
+    box-shadow: -7px 0px $panel-drop-shadow-spread $panel-drop-shadow;
     @include mq(medium){
         height: calc(100% - #{$panel-header-height});
         width: $actions-width;
@@ -35,9 +39,7 @@
         width: $actions-width;
         // padding-top: $panel-header-height;
         // padding-left: 4px;
-        background: $alabaster;
         overflow-y: auto;
-        border-left: 1px solid $silver;
     }
         
         // main heading in drawer panel
