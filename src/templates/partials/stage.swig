@@ -16,7 +16,7 @@
 			<div class="table-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
-					<div class="media vertical-align-center">
+					<div class="media">
 					    <div class="media__img">
 					    	<div class="icon-drive"></div>
 					    </div>
@@ -79,7 +79,7 @@
 			<div class="table-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
-					<div class="media vertical-align-center">
+					<div class="media">
 					    <div class="media__img">
 					    	<div class="icon-drive"></div>
 					    </div>
@@ -119,7 +119,7 @@
 			<div class="table-wrap-container -col-2 js-file-view">
 			
 				<header class="panel-header panel-header--location">
-					<div class="media vertical-align-center">
+					<div class="media">
 					    <div class="media__img">
 					    	<div class="icon-drive"></div>
 					    </div>
@@ -160,7 +160,7 @@
 			<div class="table-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
-					<div class="media vertical-align-center">
+					<div class="media">
 					    <div class="media__img">
 					    	<div class="icon-drive"></div>
 					    </div>
@@ -190,7 +190,7 @@
 			<div class="table-wrap-container -col-2 js-file-view">
 			
 				<header class="panel-header panel-header--location">
-					<div class="media vertical-align-center">
+					<div class="media">
 					    <div class="media__img">
 					    	<div class="icon-drive"></div>
 					    </div>
@@ -242,7 +242,7 @@
 			<div class="table-wrap-container -col-3 js-file-view">
 			
 				<header class="panel-header panel-header--location">
-					<div class="media vertical-align-center">
+					<div class="media">
 					    <div class="media__img">
 					    	<div class="icon-drive"></div>
 					    </div>
