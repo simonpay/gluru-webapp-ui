@@ -15,7 +15,8 @@
     .table-wrap-container {
         position: relative;
         float: left;
-        height: 100%;
+        // height: 100%;
+        height: calc(100% - #{$panel-header-height}); // viewport(h) - panel-header(h)
         
         // when inside parent class .-cols-2
         .-cols-2 & {

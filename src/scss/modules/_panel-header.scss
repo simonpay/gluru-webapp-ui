@@ -20,48 +20,57 @@
         bottom: 0;
         // background: red;
     }
-
+    
+    // stage panel-header must be position: fixed to anable the actions panel to open 'underneath' it  
+    // we now have to set the width of panel-header based on whether the drawer panel is open 
+    // and animate it to match the opening of the drawer panel
     &.-stage {
         position: fixed;
-        width: calc(100% ); // viewport - 
         top: 0;
+        transition: width $drawer-animation-duration;
+        width: calc(100% - #{$main-nav-width}); // viewport - main-nav
+        .drawer-is-open & {
+            width: calc( 100% - #{$main-nav-width} - #{$drawer-width} ); // viewport - main-nav - drawer
+        }
+
     }
 }
 
 
 // header for file explorer showing current source and crumbtrail (location) 
 .panel-header--location {
-    position: fixed;
-    width: calc( 100% - #{$main-nav-width} ); // viewport - main nav
-    transform: translateY(-100%);
+    // position: fixed;
+    // width: calc( 100% - #{$main-nav-width} ); // viewport - main nav
+    width: 100%;
+    // transform: translateY(-100%);
     background: $alabaster;
     border-left: 1px solid $silver;
     // background: red;
-    transition: width $drawer-animation-duration;
+    // transition: width $drawer-animation-duration;
     
 
 
     // width of header for file explorer calculated using calc() formula 
     // because it is position: fixed and the width cannot be set based on parent
     // TODO: refactor mixin to make more efficient?
-    @mixin calc-col-width($col-count) {
-        .-cols-#{$col-count} & {
-            width: calc( (100% - #{$main-nav-width}) / #{$col-count} ); // viewport - main nav
-        }
-        .drawer-is-open .-cols-#{$col-count} & {
-            width: calc( (100% - #{$main-nav-width} - #{$drawer-width}) / #{$col-count} ); // (viewport - main-nav - drawer) / col-count
-        }
-        .actions-is-open .-cols-#{$col-count} & {
-            width: calc( (100% - #{$main-nav-width} - #{$actions-width}) / #{$col-count} ); // (viewport - main-nav - actions) / col-count
-        }
-        .drawer-is-open.actions-is-open .-cols-#{$col-count} & {
-            width: calc( (100% - #{$main-nav-width} - #{$drawer-width} - #{$actions-width}) / #{$col-count} ); // (viewport - main-nav - drawer - actions) / col-count
-        }
-    }
+    // @mixin calc-col-width($col-count) {
+    //     .-cols-#{$col-count} & {
+    //         width: calc( (100% - #{$main-nav-width}) / #{$col-count} ); // viewport - main nav
+    //     }
+    //     .drawer-is-open .-cols-#{$col-count} & {
+    //         width: calc( (100% - #{$main-nav-width} - #{$drawer-width}) / #{$col-count} ); // (viewport - main-nav - drawer) / col-count
+    //     }
+    //     .actions-is-open .-cols-#{$col-count} & {
+    //         width: calc( (100% - #{$main-nav-width} - #{$actions-width}) / #{$col-count} ); // (viewport - main-nav - actions) / col-count
+    //     }
+    //     .drawer-is-open.actions-is-open .-cols-#{$col-count} & {
+    //         width: calc( (100% - #{$main-nav-width} - #{$drawer-width} - #{$actions-width}) / #{$col-count} ); // (viewport - main-nav - drawer - actions) / col-count
+    //     }
+    // }
 
-    @include calc-col-width(1);
-    @include calc-col-width(2);
-    @include calc-col-width(3);
+    // @include calc-col-width(1);
+    // @include calc-col-width(2);
+    // @include calc-col-width(3);
     
     // remove left border when panel is inside the first column
     .-first-col & {
