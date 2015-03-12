@@ -7,12 +7,67 @@
     position: relative;
     height: $panel-header-height;
     overflow: hidden;
-    margin: 0 10px 0 13px;        
+    padding: 0 $panel-header-padding-left 0 $panel-header-padding-right;
     border-bottom: 1px solid $silver;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        height: 5px;
+        bottom: 0;
+        // background: red;
+    }
+
+    &.-stage {
+        position: fixed;
+        width: calc(100% ); // viewport - 
+        top: 0;
+    }
 }
 
-.panel-header--stage {
-	position: fixed;
-	width: 100%;
-	top: 0;
+
+// header for file explorer showing current source and crumbtrail (location) 
+.panel-header--location {
+    position: fixed;
+    width: calc( 100% - #{$main-nav-width} ); // viewport - main nav
+    transform: translateY(-100%);
+    background: $alabaster;
+    border-left: 1px solid $silver;
+    // background: red;
+    transition: width $drawer-animation-duration;
+    
+
+
+    // width of header for file explorer calculated using calc() formula 
+    // because it is position: fixed and the width cannot be set based on parent
+    // TODO: refactor mixin to make more efficient?
+    @mixin calc-col-width($col-count) {
+        .-cols-#{$col-count} & {
+            width: calc( (100% - #{$main-nav-width}) / #{$col-count} ); // viewport - main nav
+        }
+        .drawer-is-open .-cols-#{$col-count} & {
+            width: calc( (100% - #{$main-nav-width} - #{$drawer-width}) / #{$col-count} ); // (viewport - main-nav - drawer) / col-count
+        }
+        .actions-is-open .-cols-#{$col-count} & {
+            width: calc( (100% - #{$main-nav-width} - #{$actions-width}) / #{$col-count} ); // (viewport - main-nav - actions) / col-count
+        }
+        .drawer-is-open.actions-is-open .-cols-#{$col-count} & {
+            width: calc( (100% - #{$main-nav-width} - #{$drawer-width} - #{$actions-width}) / #{$col-count} ); // (viewport - main-nav - drawer - actions) / col-count
+        }
+    }
+
+    @include calc-col-width(1);
+    @include calc-col-width(2);
+    @include calc-col-width(3);
+    
+    // remove left border when panel is inside the first column
+    .-first-col & {
+        border-left: none;
+    }
 }
+
+
+

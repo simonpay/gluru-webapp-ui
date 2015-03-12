@@ -6,15 +6,18 @@
 	overflow: auto;
 	height: 100%;
 	position: relative;
-	padding-top: 60px;
+	// padding-top: $panel-header-height;
+	padding-top: $panel-header-height + $panel-header-height;
 }
 
 	.stage {
-		padding: 0 $stage-right-padding 0 $stage-left-padding;
+		// padding: 0 $stage-right-padding 0 $stage-left-padding;
+		// padding-left: $stage-left-padding;
 	    @include clearfix;
 	    @include mq(medium){
 	        height: 100%;
 	        overflow: auto;
+	        // overflow: hidden; // remove this 
 	    }
 	}
 
@@ -23,12 +26,12 @@
 		}
 
 			.stage__heading {
-			    font-size: 16px;
+			    font-size: rem(16);
 			    color: $black;
 			}
 
 			.stage__sub-heading {
-			    font-size: 14px;
+			    font-size: rem(14);
 			    font-weight: lighter;
 			    color: $mountain-meadow;
 			}

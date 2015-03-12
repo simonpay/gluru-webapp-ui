@@ -1,7 +1,10 @@
 /*------------------------------------*\
-    #UTILITIES
+    #UTILITIES - prefixed with "u-"
 \*------------------------------------*/
 
+// NOTE: due to element’s appearance not staying constant (RWD), 
+// utility class are used sparingly - most styles are component-based (modules)
+// Ref: http://davidtheclark.com/on-utility-classes/
 
 %vertical-align-center {
     @include scut-center-transform(y);
@@ -9,6 +12,10 @@
 .vertical-align-center {
     @extend %vertical-align-center;
 }
-.center-block {
-	margin: 0 auto;
+.u-center-block {
+	@include scut-center-block;
+	// margin: 0 auto;
 }
+// .u-fixed {
+//     position: fixed !important;
+// }

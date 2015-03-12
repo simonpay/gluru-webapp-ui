@@ -19,7 +19,7 @@ $inch-worm: 		#8ce31c;	// lime green
 // shades of gray - white to black range
 $white: 			#fff;		// white - no surprises there!
 $alabaster: 		#fafafa;	// almost white
-$gallery: 			#eee;		// almost white
+$gallery: 			#eee;		// off white
 $alto: 				#ddd;		// very light gray
 $silver: 			#ccc;		// light gray
 $dusty-gray: 		#999;		// mid gray
@@ -32,13 +32,18 @@ $team-color-development:	$inch-worm;
 
 
 // dimensions
-$main-nav-width: 		100px;
-$drawer-width: 			300px;
-$actions-width: 		250px;
-$panel-header-height: 	58px;
+$main-nav-width: 				80px;
+$drawer-width: 					260px;
+$actions-width: 				250px;
+$panel-header-height: 			58px;
+$panel-header-padding-left: 	10px;
+$panel-header-padding-right: 	10px;
 
-$stage-left-padding: 	12px;
-$stage-right-padding: 	12px;
+$stage-left-padding: 			12px;
+$stage-right-padding: 			12px;
+
+$sml-icon-height: 				20px;
+$lrg-icon-height: 				32px;
 
 
 // fonts

@@ -12,6 +12,11 @@
 .media__body {
     overflow: hidden;
     text-overflow: ellipsis;
+
+    // heading inside file explorer source panel header
+    &.-location-text {
+        line-height: $lrg-icon-height;
+    }
 }
 .media__img {
     float: left;
@@ -25,6 +30,6 @@
 
 
 .media__body--table-text {
-    line-height: 20px; // same as current small icon height
+    line-height: $sml-icon-height;
 }
 

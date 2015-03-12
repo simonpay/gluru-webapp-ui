@@ -17,12 +17,19 @@
 </div>
 
 {# <div class="tmp-buttons tmp-buttons--drawer">
-	<button class="toggle">Toggle Drawer</button>
+	<button class="button js-toggle">Toggle Drawer</button>
 </div>
 <div class="tmp-buttons tmp-buttons--actions">
-	<button class="toggle">Toggle Actions</button>
+	<button class="button js-toggle">Toggle Actions</button>
 </div>
  #}
+
+<div class="tmp-buttons js-buttons-files">
+	<button class="button js-single" data-class=".-cols-1">Single View</button>
+	<button class="button js-double" data-class=".-cols-2">Split - 2 cols</button>
+	<button class="button js-triple" data-class=".-cols-3">Split - 3 cols</button>
+</div>
+
 
 {% endblock %}
 

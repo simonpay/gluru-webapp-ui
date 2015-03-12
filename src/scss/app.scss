@@ -1,44 +1,66 @@
-// reset
-@import "normalize";
+// ------------------------------------------------
+// MASTER SCSS FILE
+// ------------------------------------------------
 
-// mixins etc
-@import "bourbon";
 
-// variables, colors etc
-@import "settings";
 
-// css grid
-@import "neat";
+// VENDOR LIBRARIES
+// ------------------------------------------------
+@import "bourbon"; // mixins
+@import "neat"; // css grid
+@import "scut"; // handy utilities
 
+// Retina Sprites
 // sprites via compass (loaded with Bower) - see config.rb file for load path
 @import "retina-sprites";
 
-// // susy is anpther css grid system - possible superior to neat
-// // TODO: trial this and keep or remove
-// @import "susy";
-
-// handy utilities
-@import "scut";
+// TODO: check this out as it may prove useful - lots of utilities!
+    // add to bower.json using "bower install scss-tooltips --save" if used or 
+    // delete from current "bower_components" folder if not
+@import "utility-belt";
 
 // css tooltips
 // TODO: evaluate this and see if its worth using
     // UPDATE: not suitable due to being clipped by parent
 // @import "tooltips";
 
-// TODO: check this out as it may prove useful - lots of utilities!
-    // add to bower.json using "bower install scss-tooltips --save" if used or 
-    // delete from current "bower_components" folder if not
-@import "utility-belt"; 
+// // susy is anpther css grid system - possible superior to neat
+// // TODO: trial this and keep or remove
+// @import "susy";
 
-// project specific mixins
+
+
+// GLOBAL CONFIG
+// ------------------------------------------------
+// Variables, colors, font stacks, etc
+@import "settings";
+
+// Project-specific mixins
 @import "mixins";
 
-// base styles and other resets, utilities classes etc
-@import "base",
-        "utilities";
+// @font-face webfonts
+// @import "fonts"
 
-// modules
-// the majority of elements are modules, including layout elements such as headers
+// @keyframe animations
+// @import "animations"
+
+
+
+// BASE STYLES
+// ------------------------------------------------
+@import "normalize"; // css reset
+
+// Base styles and other resets, utilities classes etc
+@import "base";
+
+// Utilities, state classes, rules with !important
+@import "utilities";
+
+
+
+// MODULES
+// ------------------------------------------------
+// The majority of elements are modules - even layout elements (sidebar, containers etc)
 @import "modules/media-object",
         "modules/main-container",
         "modules/stage",
@@ -50,9 +72,13 @@
         "modules/actions",
         "modules/icons";
 
-// anything that doesnt quite fit anywhere else
-// TODO - refactor these into a different file
+
+
+// MISC
+// ------------------------------------------------
+// Anything that doesnt quite fit anywhere else
 @import "custom";
+@import "shame"; // temp stuff or code in need of refactoring
 
 
 
