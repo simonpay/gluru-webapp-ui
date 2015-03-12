@@ -4,19 +4,21 @@
 
 // helper class for extending
 %panel-shadow {
-    box-shadow: 6px 0px 10px $gallery;
+    box-shadow: 6px 0px 10px $panel-drop-shadow;
+    // box-shadow: 6px 0px 10px black;
 }
 
 .table-wrap-outer {
     position: relative;
     height: 100%;
+    padding-left: 7px;
 }
 
     .table-wrap-container {
         position: relative;
         float: left;
-        // height: 100%;
-        height: calc(100% - #{$panel-header-height}); // viewport(h) - panel-header(h)
+        height: 100%;
+        // height: calc(100% - #{$panel-header-height}); // viewport(h) - panel-header(h)
         
         // when inside parent class .-cols-2
         .-cols-2 & {
@@ -29,12 +31,20 @@
             @extend %panel-shadow;
             width: percentage(1 / 3);
         }
+        
+        // first col
+        &.-col-1 {
+            z-index: 3;
+        }
+        &.-col-2 {
+            z-index: 2;
+        }
     }
 
         .table-wrap {
             position: relative;
-            // height: calc(100% - #{$panel-header-height}); // TODO: move to file-explorer scoped partial??
-            height: 100%;
+            height: calc(100% - #{$panel-header-height}); // TODO: move to file-explorer scoped partial??
+            // height: 100%;
             overflow: auto;
             padding-right: 10px;
         }

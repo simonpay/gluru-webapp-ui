@@ -7,19 +7,20 @@
     position: relative;
     height: $panel-header-height;
     overflow: hidden;
-    padding: 0 $panel-header-padding-left 0 $panel-header-padding-right;
+    padding: 0 $panel-header-padding-right 0 $panel-header-padding-left;
     border-bottom: 1px solid $silver;
-
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 20px;
-        right: 20px;
-        height: 5px;
-        bottom: 0;
-        // background: red;
-    }
+    
+    // // make bottom border using psuedo el (to add indents without adding padding to parent)
+    // &:after {
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     left: 12px;
+    //     right: 8px;
+    //     height: 1px;
+    //     bottom: 0px;
+    //     background: $silver;
+    // }
     
     // stage panel-header must be position: fixed to anable the actions panel to open 'underneath' it  
     // we now have to set the width of panel-header based on whether the drawer panel is open 
@@ -44,7 +45,7 @@
     width: 100%;
     // transform: translateY(-100%);
     background: $alabaster;
-    border-left: 1px solid $silver;
+    // border-left: 1px solid $silver;
     // background: red;
     // transition: width $drawer-animation-duration;
     
@@ -72,10 +73,10 @@
     // @include calc-col-width(2);
     // @include calc-col-width(3);
     
-    // remove left border when panel is inside the first column
-    .-first-col & {
-        border-left: none;
-    }
+    // // remove left border when panel is inside the first column for file explorer
+    // .-col-1 & {
+    //     border-left: none;
+    // }
 }
 
 

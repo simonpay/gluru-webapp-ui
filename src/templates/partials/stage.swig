@@ -13,7 +13,7 @@
 		{# single view #}
 		<div class="table-wrap-outer -cols-1">
 
-			<div class="table-wrap-container -first-col js-file-view">
+			<div class="table-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media vertical-align-center">
@@ -76,7 +76,7 @@
 		{# split-view - 2 col3 #}
 		<div class="table-wrap-outer -split-view -cols-2">
 
-			<div class="table-wrap-container -first-col js-file-view">
+			<div class="table-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media vertical-align-center">
@@ -116,7 +116,7 @@
 
 
 
-			<div class="table-wrap-container js-file-view">
+			<div class="table-wrap-container -col-2 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media vertical-align-center">
@@ -157,7 +157,7 @@
 		{# split-view - 3 cols #}
 		<div class="table-wrap-outer -split-view -cols-3">
 
-			<div class="table-wrap-container -first-col js-file-view">
+			<div class="table-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media vertical-align-center">
@@ -187,7 +187,7 @@
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 
-			<div class="table-wrap-container js-file-view">
+			<div class="table-wrap-container -col-2 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media vertical-align-center">
@@ -239,7 +239,7 @@
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 
-			<div class="table-wrap-container js-file-view">
+			<div class="table-wrap-container -col-3 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media vertical-align-center">
