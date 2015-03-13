@@ -32,19 +32,25 @@ $team-color-development:	$inch-worm;
 
 
 // dimensions
-$main-nav-width: 				80px;
-$drawer-width: 					260px;
-$actions-width: 				370px;
-$panel-header-height: 			58px;
-$panel-header-padding-left: 	17px;
-$panel-header-padding-right: 	10px;
+$main-nav-width: 							80px;
+$drawer-width: 								260px;
+$actions-width: 							370px;
+$panel-header-height: 						58px;
+$panel-header-padding-left: 				17px;
+$panel-header-padding-right: 				10px;
 
-$stage-left-padding: 			12px;
-$stage-right-padding: 			12px;
+$stage-left-padding: 						12px;
+$stage-right-padding: 						12px;
 
-$sml-icon-height: 				20px;
-$lrg-icon-height: 				32px;
+$sml-icon-height: 							20px;
+$lrg-icon-height: 							32px;
+$options-list-link-height-drawer:			38px;
+$options-list-link-height-actions:			30px;
 
+$drawer-options-link-left-padding:			20px;
+$actions-options-link-left-padding:			5px;
+$drawer-options-link-text-width:			$drawer-width - 86px;
+$actions-options-link-text-width:			$actions-width - 86px;
 
 // fonts
 $em-base: 16px;

@@ -1,1 +1,17 @@
-{}
+{
+	"pages": [
+		{
+			"text" 				: "Home"
+		},
+		{
+			"text" 				: "Products"
+		},
+		{
+			"text" 				: "Contact"
+		},
+		{
+			"text" 				: "About"
+		}
+	]
+}
+

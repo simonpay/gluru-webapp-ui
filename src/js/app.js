@@ -21,7 +21,7 @@
 		$( ".main-container" ).toggleClass( "actions-is-open" );
 	});
 
-	$( ".drawer__link" ).on( "click", function(){
+	$( ".options-list__link" ).on( "click", function(){
 		$(this).toggleClass( "is-selected" );
 	});
 
@@ -35,6 +35,21 @@
 		setFileExplorerView($( $(this).data("class") ));
 	});
 	setFileExplorerView($( ".-cols-1" ));
+
+
+	$( ".js-toggle-expand-list" ).on( "click", function(){
+		// console.log("hit");
+		$(this).parent().toggleClass( "is-collapsed" );
+		$( this ).parent().find( ".options-list__list" ).animate({
+			"height": "toggle"
+		}, {
+			duration: 300
+		});
+	});
+
+
+	$actionsWrap.removeClass( "is-hidden" );
+	$drawerWrap.removeClass( "is-hidden" );
 
 
 })();
