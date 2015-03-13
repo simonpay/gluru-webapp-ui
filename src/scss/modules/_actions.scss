@@ -20,12 +20,6 @@
     }
     
     // css transition for slide out of drawer
-    // &.is-visible {
-    //     width: 100%;
-    //     @include mq(medium){
-    //         width: $actions-width;
-    //     }
-    // }
     &.is-hidden {
         width: 100%;
         @include mq(medium){

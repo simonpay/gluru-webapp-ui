@@ -26,6 +26,15 @@
 	});
 
 
+	$( ".drawer .options-list__link" ).on( "click", function(){
+		$( ".section-wrap.-files, .panel-header.-stage" ).animate({
+			"opacity": "toggle"
+		}, {
+			duration: 300
+		});
+	});
+
+
 	var setFileExplorerView = function (obj) {
 		$( ".table-wrap-outer" ).hide();
 		obj.show();
@@ -48,8 +57,9 @@
 	});
 
 
-	$actionsWrap.removeClass( "is-hidden" );
-	$drawerWrap.removeClass( "is-hidden" );
+	// $actionsWrap.removeClass( "is-hidden" );
+	// $drawerWrap.removeClass( "is-hidden" );
+	// $drawerWrap.removeClass( "is-hidden" );
 
 
 })();

@@ -7,31 +7,37 @@
 	height: 100%;
 	position: relative;
 	padding-top: $panel-header-height;
-	// padding-top: $panel-header-height + $panel-header-height;
 }
 
 	.stage {
-		// padding: 0 $stage-right-padding 0 $stage-left-padding;
-		// padding-left: $stage-left-padding;
 	    @include clearfix;
 	    @include mq(medium){
 	        height: 100%;
 	        overflow: auto;
-	        // overflow: hidden; // remove this 
 	    }
 	}
 
-		.stage__heading-wrap {
-			@extend %vertical-align-center;
+		.section-wrap {
+			display: block;
+			height: 100%;
+			&.is-hidden {
+				display: none;
+			}
 		}
 
-			.stage__heading {
-			    font-size: rem(16);
-			    color: $black;
+			.stage__heading-wrap {
+				@extend %vertical-align-center;
 			}
 
-			.stage__sub-heading {
-			    font-size: rem(14);
-			    font-weight: lighter;
-			    color: $mountain-meadow;
-			}
+				.stage__heading {
+				    font-size: rem(16);
+				    color: $black;
+				}
+
+				.stage__sub-heading {
+				    font-size: rem(14);
+				    font-weight: lighter;
+				    color: $mountain-meadow;
+				}
+
+			

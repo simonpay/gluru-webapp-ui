@@ -10,6 +10,9 @@
     .actions & {
         border-top: 1px solid $alto;
         padding-top: 20px;
+        &:nth-of-type(1) { //remove top border from first options list in actions panel
+            border-top: none;
+        }
     }
 
     &.is-collapsed {
@@ -88,66 +91,53 @@
                             font-size: 0; // remove space between inline-blocks
                         }
 
-                        .options-list__icon,
-                        .options-list__text, {
-                            display: inline-block;
-                            vertical-align: middle;
-                        }
-
-                    // // temp sprites
-                    // // TODO: build live avatar holders with img tags
-                    // .tmp-fav-avatar-1 {    @include use-sprite("tmp-fav-avatar-1"); }
-                    // .tmp-fav-avatar-2 {    @include use-sprite("tmp-fav-avatar-2"); }
-                    // .tmp-fav-avatar-3 {    @include use-sprite("tmp-fav-avatar-3"); }
-
-                    // .drawer__icon,
-                    // .drawer__text {
-                    //     // @extend %vertical-align-center;
-                    //     @include scut-center-transform(y);;
-                    //     position: relative;
-                    //     float: left;
-                    // }
-
-                    .options-list__icon {
-                        margin-right: 8px;
-
-                        .drawer & {
-                            margin-right: 12px;
-                        }
-
-                        &.-team {
-                            width: 30px;
-                            height: 30px;
-                            border-radius: 100%;
-                            &.-sales {
-                                background: $team-color-sales;
+                            .options-list__icon,
+                            .options-list__text, {
+                                display: inline-block;
+                                vertical-align: middle;
                             }
-                            &.-marketing {
-                                background: $team-color-marketing;
-                            }
-                            &.-development {
-                                background: $team-color-development;
-                            }
-                        }
-                    }
 
-                    .options-list__text {
-                        // width: $drawer-width - 95px;
-                        // margin-left: 8px;
-                        width: $options-link-text-width-actions;
-                        text-decoration: none;
-                        font-size: rem(13);
-                        color: $black;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
 
-                        .drawer & {
-                            width: $options-link-text-width-drawer;
-                            font-weight: lighter;
-                            color: $dove-gray;
-                            font-size: rem(14);
-                        }
-                    }
+                            .options-list__icon {
+                                margin-right: 8px;
+
+                                .drawer & {
+                                    margin-right: 12px;
+                                }
+
+                                &.-team {
+                                    width: 30px;
+                                    height: 30px;
+                                    border-radius: 100%;
+                                    &.-sales {
+                                        background: $team-color-sales;
+                                    }
+                                    &.-marketing {
+                                        background: $team-color-marketing;
+                                    }
+                                    &.-development {
+                                        background: $team-color-development;
+                                    }
+                                }
+                            }
+
+                            .options-list__text {
+                                // width: $drawer-width - 95px;
+                                // margin-left: 8px;
+                                width: $options-link-text-width-actions;
+                                text-decoration: none;
+                                font-size: rem(13);
+                                color: $black;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+
+                                .drawer & {
+                                    width: $options-link-text-width-drawer;
+                                    font-weight: lighter;
+                                    color: $dove-gray;
+                                    font-size: rem(14);
+                                }
+                            }
 
 

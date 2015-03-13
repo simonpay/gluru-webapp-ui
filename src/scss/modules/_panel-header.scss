@@ -36,6 +36,9 @@
         .drawer-is-open & {
             width: calc( 100% - #{$main-nav-width} - #{$drawer-width} ); // viewport - main-nav - drawer
         }
+        &.is-hidden {
+            display: none;
+        }
 
     }
 }
