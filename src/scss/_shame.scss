@@ -21,3 +21,12 @@
 }
 
 
+.thumbnail {
+    height: 99px;
+    margin-bottom: 10px; 
+    background-image: url("../img/tmp-thumbnail-preview.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+
+}

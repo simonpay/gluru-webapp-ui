@@ -35,7 +35,7 @@
 }
 
     .actions {
-        height: 100%;
+        height: calc(100% - #{$panel-header-height});
         width: $actions-width;
         // padding-top: $panel-header-height;
         padding: 0px 25px 0 20px;
