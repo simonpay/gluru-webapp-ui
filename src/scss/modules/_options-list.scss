@@ -61,7 +61,7 @@
                     display: block;
                     position: relative;
                     height: $options-list-link-height-actions;
-                    padding-left: $actions-options-link-left-padding;
+                    padding-left: $options-link-left-padding-actions;
                     text-decoration: none;
                     // font-size: rem(14);
                     color: $black;
@@ -74,7 +74,7 @@
 
                     .drawer & {
                         height: $options-list-link-height-drawer;
-                        padding-left: $drawer-options-link-left-padding;
+                        padding-left: $options-link-left-padding-drawer;
                     }
                 }
                 
@@ -130,7 +130,7 @@
                 .options-list__text {
                     // width: $drawer-width - 95px;
                     // margin-left: 8px;
-                    width: $actions-options-link-text-width;
+                    width: $options-link-text-width-actions;
                     text-decoration: none;
                     font-size: rem(13);
                     color: $black;
@@ -139,7 +139,7 @@
                     text-overflow: ellipsis;
 
                     .drawer & {
-                        width: $drawer-options-link-text-width;
+                        width: $options-link-text-width-drawer;
                         font-weight: lighter;
                         color: $dove-gray;
                         font-size: rem(14);
