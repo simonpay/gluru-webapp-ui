@@ -104,13 +104,14 @@
 
 	// set hidden classes to show content immediately 
 	// $drawerWrap.removeClass( "is-hidden" );
-	$actionsWrap.removeClass( "is-hidden" );
+	// $actionsWrap.removeClass( "is-hidden" );
 	// $( ".panel-header.-stage" ).removeClass( "is-hidden" );
 	$( ".panel-header.-stage" ).removeClass( "is-hidden" );
 	$( ".section-wrap.-moments" ).removeClass( "is-hidden" );
+	$( ".section-wrap.-files" ).removeClass( "is-hidden" );
 
-	$( ".panel-header.-stage" ).find( ".stage__heading" ).html( "Moments" );
-	$( ".panel-header.-stage" ).find( ".stage__sub-heading" ).html( "18 March, 2015" );
+	// $( ".panel-header.-stage" ).find( ".stage__heading" ).html( "Moments" );
+	// $( ".panel-header.-stage" ).find( ".stage__sub-heading" ).html( "18 March, 2015" );
 
 
 })();

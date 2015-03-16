@@ -18,7 +18,16 @@
 
 <body>
 
+<div class="main-container">
 {% block content %}{% endblock %}
+</div>
+
+{# TODO: remove this when finished dev! #}
+<div class="tmp-buttons tmp-buttons--moments">
+    <button class="button js-toggle-drawer">Toggle Drawer</button>
+    <button class="button js-toggle-actions">Toggle Actions</button>
+</div>
+
 
 {% block javascripts %}
 <script src="js/app.js"></script>
