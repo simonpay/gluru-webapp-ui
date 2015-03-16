@@ -21,4 +21,5 @@
 
 {% block javascripts %}
 	{% parent %}
+	<script src="js/pages/files.js"></script>
 {% endblock %}

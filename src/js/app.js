@@ -14,11 +14,15 @@
 	});
 
 
-	// click for main nav link to show drawer
+	// naviagte to main sections on main nav item click event
 	$( ".main-nav__link.-files" ).click(function() {
-		$drawerWrap.toggleClass( "is-hidden" );
+		// $drawerWrap.toggleClass( "is-hidden" );
 		// toggle class on main-container when drawer is open
-		$( ".main-container" ).toggleClass( "drawer-is-open" );
+		// $( ".main-container" ).toggleClass( "drawer-is-open" );
+		location.href = "files.html";
+	});
+	$( ".main-nav__link.-moments" ).click(function() {
+		location.href = "moments.html";
 	});
 
 

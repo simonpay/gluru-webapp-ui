@@ -10,10 +10,22 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '<%= pkg.project_paths.bower_folder %>jquery/dist/jquery.js',
-                    '<%= pkg.src_paths.js %>**/*.js'
+                    ['<%= pkg.src_paths.js %>**/*.js', '!<%= pkg.src_paths.js %>pages/**']
                 ],
                 dest: '<%= pkg.dest_paths.js %>app.js'
-            }
+            },
+            files: {
+                src: [
+                    '<%= pkg.src_paths.js %>pages/files.js',
+                ],
+                dest: '<%= pkg.dest_paths.js %>pages/files.js',
+            },
+            moments: {
+                src: [
+                    '<%= pkg.src_paths.js %>pages/moments.js',
+                ],
+                dest: '<%= pkg.dest_paths.js %>pages/moments.js',
+            },
         },
         // Minification of JS
         uglify: {
@@ -23,6 +35,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '<%= pkg.dest_paths.js %>app.js': ['<%= concat.dist.dest %>'],
+                    // '<%= pkg.dest_paths.js %>page*.js': ['<%= pkg.dest_paths.js %>page*.js'],
                 }
             },
             dev: {

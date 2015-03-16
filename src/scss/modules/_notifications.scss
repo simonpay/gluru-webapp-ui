@@ -8,9 +8,9 @@
 
     .notifications {
         position: relative;
+        margin-top: 10px;
         white-space: nowrap;
         font-size: 0;
-        text-align: center;
     }
 
         .notification {
@@ -43,6 +43,7 @@
                 border: 6px solid $white;
                 color: white;
                 font-size: rem(30);
+                text-align: center;
                 font-weight: bold;
                 line-height: 50px;
             }

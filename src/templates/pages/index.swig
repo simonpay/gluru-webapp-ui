@@ -12,7 +12,8 @@
 {%> "main-nav" %}
 {%> "drawer"  %}
 {%> "actions" %}
-{%> "stage" %}
+{%> "stage-start" %}
+{%> "stage-end" %}
 
 {% endblock %}
 
