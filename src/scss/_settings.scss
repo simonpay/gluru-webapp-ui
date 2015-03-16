@@ -12,12 +12,12 @@
 // -----------------------------------
 // COLORS
 // -----------------------------------
-// color names generated using http://chir.ag/projects/name-that-color/
-$red-violet: 		#d41a68;	// pink
-$pomegranate: 		#f9441f;	// orange
-$mountain-meadow: 	#16b451;	// green
-$pacific-blue: 		#0098ce;	// blue
-$inch-worm: 		#8ce31c;	// lime green
+// non-brand color names generated using http://chir.ag/projects/name-that-color/
+$pink: 				#d41a68;	// pink
+$orange: 			#f9441f;	// orange
+$green: 			#16b451;	// green
+$blue: 				#0098ce;	// blue
+$light-green: 		#8ce31c;	// lime green
 // shades of gray - white to black range
 $white: 			#fff;		// white - no surprises there!
 $alabaster: 		#fafafa;	// almost white
@@ -25,12 +25,14 @@ $gallery: 			#eee;		// off white
 $alto: 				#ddd;		// very light gray
 $silver: 			#ccc;		// light gray
 $dusty-gray: 		#999;		// mid gray
+// $dusty-gray-dark: 	#949494;	// slightly darker than dusty-gray
 $dove-gray: 		#666;		// dark gray
+$zeus:		 		#2e261e;	// virtually black
 $black: 			#000;		// black - no surprises there!
 
-$team-color-sales:			$pomegranate;
-$team-color-marketing:		$pacific-blue;
-$team-color-development:	$inch-worm;
+$team-color-sales:			$orange;
+$team-color-marketing:		$blue;
+$team-color-development:	$light-green;
 
 
 // -----------------------------------
@@ -54,6 +56,9 @@ $panel-header-height: 						58px;
 $panel-header-padding-left: 				17px;
 $panel-header-padding-right: 				10px;
 
+// content-panel=header
+$content-panel-header-height: 				28px;
+
 // icons
 $sml-icon-height: 							20px;
 $lrg-icon-height: 							32px;
@@ -66,6 +71,10 @@ $options-link-left-padding-actions:			5px;
 $options-link-text-width-drawer:			$drawer-width - 86px;
 $options-link-text-width-actions:			$actions-width - 86px;
 
+// timeline
+$event-time-width:							120px;
+$event-icon-wrap-width:						62px;
+$event-icon-wrap-height:					$event-icon-wrap-width;
 
 // -----------------------------------
 // FONTS

@@ -8,6 +8,8 @@
 .icon-dropbox {              @include use-sprite("icon-source-dropbox"); }
 .icon-evernote {             @include use-sprite("icon-source-evernote"); }
 
+.icon-moments {    	         @include use-sprite("icon-nav-moments"); }
+
 .icon-box-sml {              @include use-sprite("icon-source-box-sml"); }
 .icon-drive-sml {            @include use-sprite("icon-source-drive-sml"); }
 .icon-dropbox-sml {          @include use-sprite("icon-source-dropbox-sml"); }

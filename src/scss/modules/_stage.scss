@@ -16,13 +16,22 @@
 	        overflow: auto;
 	    }
 	}
-
+		
+		// TODO: move section-wrap rules into their own module?
 		.section-wrap {
 			display: block;
 			height: 100%;
+			&.-moments {
+				padding: 20px;
+			}
 			&.is-hidden {
 				display: none;
 			}
+		}
+		
+		// section within the stage content area
+		.stage-section {
+			margin-bottom: 20px;
 		}
 
 			.stage__heading-wrap {
@@ -31,13 +40,15 @@
 
 				.stage__heading {
 				    font-size: rem(16);
+				    font-weight: lighter;
 				    color: $black;
+				    margin-bottom: 3px;
 				}
 
 				.stage__sub-heading {
-				    font-size: rem(14);
-				    font-weight: lighter;
-				    color: $mountain-meadow;
+				    font-size: rem(16);
+				    font-weight: normal;
+				    color: $green;
 				}
 
 			

@@ -1,0 +1,79 @@
+/*------------------------------------*\
+# NOTIFICATIONS
+\*------------------------------------*/
+
+.notifications-wrap {
+    margin-bottom: 40px;
+}
+
+    .notifications {
+        position: relative;
+        white-space: nowrap;
+        font-size: 0;
+        text-align: center;
+    }
+
+        .notification {
+            display: inline-block;
+            position: relative;
+            margin: 0 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            border-width: 6px;
+            border-style: solid;
+            
+            &:before {
+                content: "Critical";
+                @include scut-center-transform;
+                color: $white;
+                font-size: rem(20);
+                font-weight: bold;
+            }
+
+            &:after {
+                content: "1";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                border: 6px solid $white;
+                color: white;
+                font-size: rem(30);
+                font-weight: bold;
+                line-height: 50px;
+            }
+
+            &.-critical {
+                background: $pink;
+                border-color: $pink;
+                &:after {
+                    background-color: $pink;
+                }
+            }
+            &.-non-critical {
+                background: $orange;
+                border-color: $orange;
+                &:before {
+                    content: "Non-Critical";
+                }
+                &:after {
+                    content: "2";
+                    background-color: $orange;
+                }
+            }
+            &.-now {
+                background: $green;
+                border-color: $green;
+                &:before {
+                    content: "Now";
+                }
+                &:after {
+                    background-color: $green;
+                }
+            }
+
+        }

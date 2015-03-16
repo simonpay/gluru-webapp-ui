@@ -1,0 +1,187 @@
+/*------------------------------------*\
+    # TIMELINE
+\*------------------------------------*/
+
+.timeline-wrap {
+    // padding: 50px 20px;
+}
+    .timeline {
+        position: relative;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 149px;
+            width: 3px;
+            height: calc(100% - 60px);
+            background: $alto;
+        }
+    }
+        .event-group {
+            position: relative;
+        }
+
+        .event-group-heading {
+            position: relative;
+            width: 142px;
+            height: 62px;
+            margin: 0 0 20px ($event-time-width + ($event-icon-wrap-width / 2)); // align left edge with center of icon
+            background-color: $dusty-gray;
+            border-radius: 31px;
+            border: 6px solid #fff;
+            transform: translateX(-50%); // pull back 50% of width to center with icon
+
+            .-text {
+                @include scut-center-transform;
+                font-size: rem(18);
+                color: $white;
+                line-height: 50px;
+                text-transform: uppercase;
+                font-weight: lighter;
+            }
+        }
+
+            .event-wrap {
+                margin-bottom: 30px;
+                white-space: nowrap;
+                font-size: 0; // remove space between inline-block els
+            }
+                
+                .event-time, 
+                .event-icon-wrap, 
+                .event, 
+                {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .event-time {
+                    width: $event-time-width;
+                    height: 20px;
+                    font-size: rem(20);
+                    font-weight: lighter;
+                    color: $zeus;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+
+                .event-icon-wrap {
+                    width: $event-icon-wrap-width;
+                    height: $event-icon-wrap-height;
+                    background-color: $dusty-gray;
+                    border-radius: 100%;
+                    margin-right: 35px;
+                    border: 6px solid $white;
+
+
+                    &.-moments {
+                        // @include use-sprite("icon-nav-moments");
+                        // display: inline-block;
+                        // 
+                    }
+                }
+
+                .event-icon {
+                    @include scut-center-transform(y);
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+
+                .event {
+                    // width: calc(100% - 200px);
+                    height: 120px;
+                    min-width: 500px;
+                    padding: 20px;
+                    background: $dusty-gray;
+                    border-radius: 15px;
+                    transition: transform 0.2s;
+
+                    color: white;
+                    font-weight: bold;
+                    font-size: rem(30);
+
+                    .-critical & {
+                        background: $pink;
+                    }
+                    .-non-critical & {
+                        background: $orange;
+                    }
+                    .-now & {
+                        background: $green;
+                    }
+
+                    &:after {
+                        content: "";
+                        @include scut-triangle(left, 20px 40px, $pink);
+                        position: absolute;
+                        left: -20px;;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        border-right-color: $dusty-gray;
+                    }
+
+                    // set color of triangles when inside specific class 
+                    .-critical &:after {
+                        border-right-color: $pink;
+                    }
+                    .-non-critical &:after {
+                        border-right-color: $orange;
+                    }
+                    .-now &:after {
+                        border-right-color: $green;
+                    }
+
+                    &:hover {
+                        transform: translateX(20px);
+                    }
+
+
+
+
+
+                    .event-group.is-collapsed & {
+                        // &:nth-of-type(1) {
+                        //     top: 10px;
+                        //     left: 10px;
+                        //     background: blue;
+                        // }
+
+
+                        // &:not(:nth-of-type(1)) {
+                        //     position: absolute;
+                        //     top: 0;
+                        // }
+                        // &:nth-of-type(1) {
+                        //     top: 10px;
+                        //     left: 10px;
+                        //     background: blue;
+                        // }
+                        // &:nth-of-type(2) {
+                        //     top: 20px;
+                        //     left: 20px;
+                        //     background: green;
+                        // }
+                    }
+
+                }
+
+    // .drawer {
+    //     height: calc(100% - #{$panel-header-height});
+    //     width: $drawer-width;
+    //     padding-top: 15px;
+    //     padding-left: 4px;
+    //     overflow-y: auto;
+    // }
+        
+    //     // main heading in drawer panel
+    //     .drawer__heading {
+    //         @extend %vertical-align-center;
+    //         text-transform: uppercase;
+    //         font-size: 22px;
+    //         font-weight: lighter;
+    //         color: $green;
+    //     }
+

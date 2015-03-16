@@ -11,18 +11,16 @@
 
 <div class="main-container">
 	{%> "main-nav" %}
-	{%> "drawer" %}
+	{%> "drawer"  %}
 	{%> "actions" %}
 	{%> "stage" %}
 </div>
 
-{# <div class="tmp-buttons tmp-buttons--drawer">
-	<button class="button js-toggle">Toggle Drawer</button>
+<div class="tmp-buttons tmp-buttons--moments">
+	<button class="button js-toggle-drawer">Toggle Drawer</button>
+	<button class="button js-toggle-actions">Toggle Actions</button>
 </div>
-<div class="tmp-buttons tmp-buttons--actions">
-	<button class="button js-toggle">Toggle Actions</button>
-</div>
- #}
+
 
 
 {% endblock %}
