@@ -82,8 +82,8 @@
 	// animate all collapsable lists
 	$( ".js-toggle-expand-list" ).on( "click", function(){
 		// console.log("hit");
-		$(this).parent().toggleClass( "is-collapsed" );
-		$( this ).parent().find( ".option-list__inner-wrap" ).animate({
+		$( this ).parent().toggleClass( "is-collapsed" );
+		$( this ).parent().find( ".options-list__inner-wrap" ).animate({
 			"height": "toggle"
 		}, {
 			duration: 300

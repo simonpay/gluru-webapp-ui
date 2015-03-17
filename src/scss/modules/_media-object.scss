@@ -38,7 +38,13 @@
 }
 
 
-.media__body--table-text {
+.media__body--table-text { //a
     line-height: $sml-icon-height;
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 

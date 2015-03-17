@@ -14,6 +14,12 @@ module.exports = function(grunt) {
                 ],
                 dest: '<%= pkg.dest_paths.js %>app.js'
             },
+            home: {
+                src: [
+                    '<%= pkg.src_paths.js %>pages/home.js',
+                ],
+                dest: '<%= pkg.dest_paths.js %>pages/home.js',
+            },
             files: {
                 src: [
                     '<%= pkg.src_paths.js %>pages/files.js',

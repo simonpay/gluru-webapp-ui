@@ -1,0 +1,114 @@
+<div class="options-list">
+	<div class="options-list__heading -collapsable js-toggle-expand-list">{{ rObj.heading }}</div>
+	<div class="options-list__inner-wrap">
+		<ul class="options-list__list">
+
+		{% for obj in rObj.options %}
+
+			<li class="options-list__item">
+
+
+			{% if rObj.id === "sources" || rObj.id === "favourites" || rObj.id === "teams" || rObj.id === "relatedFiles" || rObj.id === "hierarchy" %}
+
+				<a href="#" class="options-list__link">
+					<div class="options-list-link__inner-wrap">
+
+			{% endif %}
+
+
+				{% if rObj.id === "sources" || rObj.id === "favourites" || rObj.id === "teams" || rObj.id === "relatedFiles" || rObj.id === "hierarchy" %}
+
+					{% if rObj.id === "teams" %}
+
+						{# teams #}
+						<div class="options-list__icon -team {{obj.className}}"></div>
+
+					{% else %}
+
+						{# sources and favourites #}
+						<div class="options-list__icon">
+							<div class="{{obj.className}}"></div>
+						</div>
+
+					{% endif %}
+
+						<div class="options-list__text">{{ obj.text|safe }}</div>
+
+				{% elseif rObj.id === "email" || rObj.id === "people" %}
+
+						<div class="media">
+							<div class="media__img">
+								<div class="tmp-fav-avatar-1"></div>
+							</div>
+							<div class="media__body">
+								<div><strong>Alex Li</strong> renamed this file</div>
+								<div class="date-time">Today, 9:00am</div>
+								<div class="media">
+									<div class="media__img">
+										<div class="icon-gdrive-sml"></div>
+									</div>
+									<div class="media__body">Meeting Notes</div>
+								</div>
+								<div class="media">
+									<div class="media__img">
+										<div class="icon-gdrive-sml"></div>
+									</div>
+									<div class="media__body">Meeting Notes</div>
+								</div>
+							</div>
+						</div>
+
+				{% elseif rObj.id === "people" %}
+
+						<div class="media">
+							<div class="media__img">
+								<div class="tmp-fav-avatar-1"></div>
+							</div>
+							<div class="media__body">
+								<div><strong>Alex Li</strong> renamed this file</div>
+								<div class="date-time">Today, 9:00am</div>
+								<div class="media">
+									<div class="media__img">
+										<div class="icon-gdrive-sml"></div>
+									</div>
+									<div class="media__body">Meeting Notes</div>
+								</div>
+								<div class="media">
+									<div class="media__img">
+										<div class="icon-gdrive-sml"></div>
+									</div>
+									<div class="media__body">Meeting Notes</div>
+								</div>
+							</div>
+						</div>
+
+				{% elseif rObj.id === "webPages" %}
+
+						<div class="media">
+							<div class="media__img">
+								<div class="icon-evernote"></div>
+							</div>
+							<div class="media__body">
+								<div>Firefox Redesigns Its Search Interface</div>
+								<p>Last week we learned that Mozilla had made a pact with Yahoo to switch Firefox’s default search engine to a yet-to-be launched new version of </p>
+							</div>
+						</div>
+
+				{% endif %}
+
+
+			{% if rObj.id === "sources" || rObj.id === "favourites" || rObj.id === "teams" || rObj.id === "relatedFiles" || rObj.id === "hierarchy" %}
+
+					</div>
+				</a>
+
+			{% endif %}
+
+
+			</li>
+
+		{% endfor %}
+
+		</ul><!-- //.options-list__list -->
+	</div><!-- //.options-list__inner-wrap -->
+</div><!-- //.options-list -->

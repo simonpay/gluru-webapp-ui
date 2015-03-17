@@ -1,17 +1,132 @@
 {
-	"pages": [
-		{
-			"text" 				: "Home"
-		},
-		{
-			"text" 				: "Products"
-		},
-		{
-			"text" 				: "Contact"
-		},
-		{
-			"text" 				: "About"
-		}
-	]
+    "drawer": {
+        "sources": {
+            "id":      "sources",
+            "heading": "Sources",
+            "options": [
+                {
+                    "text"              : "Everything",
+                    "className"         : "icon-everything"
+                },
+                {
+                    "text"              : "Box",
+                    "className"         : "icon-box"
+                },
+                {
+                    "text"              : "Drive",
+                    "className"         : "icon-gdrive"
+                },
+                {
+                    "text"              : "Dropbox",
+                    "className"         : "icon-dropbox"
+                },
+                {
+                    "text"              : "Evernote - long source name",
+                    "className"         : "icon-evernote"
+                }
+            ]
+        },
+        "favourites": {
+            "id":      "favourites",
+            "heading": "Favourites",
+            "options": [
+                {
+                    "text"              : "Alex Li",
+                    "className"         : "tmp-fav-avatar-1"
+                },
+                {
+                    "text"              : "Jason Smith",
+                    "className"         : "tmp-fav-avatar-2"
+                },
+                {
+                    "text"              : "Stephanie Double-barrelled-longname",
+                    "className"         : "tmp-fav-avatar-3"
+                }
+            ]
+        },
+        "teams": {
+            "id":      "teams",
+            "heading": "Teams",
+            "options": [
+                {
+                    "text"              : "Sales team",
+                    "className"         : "-sales"
+                },
+                {
+                    "text"              : "Marketing Team",
+                    "className"         : "-marketing"
+                },
+                {
+                    "text"              : "Overly Long Team Department Name",
+                    "className"         : "-development"
+                }
+            ]
+        }
+    },
+    "actions": {
+        "relatedFiles": {
+            "id":      "relatedFiles",
+            "heading": "Related Files",
+            "options": [
+                {
+                    "text"              : "this_file_has_a_very_long_name_and_cant_fit_on_the_screen.doc",
+                    "className"         : "icon-file-evernote"
+                },
+                {
+                    "text"              : "Sales_Report.doc",
+                    "className"         : "icon-folder"
+                },
+                {
+                    "text"              : "Sales_Report.xsl",
+                    "className"         : "icon-file-spreadsheet"
+                },
+                {
+                    "text"              : "Profit_and_loss.xls",
+                    "className"         : "icon-file-spreadsheet"
+                },
+                {
+                    "text"              : "todo-list.txt",
+                    "className"         : "icon-file-text"
+                }
+            ]
+        },
+        "email": {
+            "id":      "email",
+            "heading": "Email",
+            "options": [
+                {}
+            ]
+        },
+        "people": {
+            "id":      "people",
+            "heading": "People",
+            "options": [
+                {},
+                {}
+            ]
+        },
+        "hierarchy": {
+            "id":      "hierarchy",
+            "heading": "Hierarchy",
+            "options": [
+                {
+                    "text"              : "<strong>My Drive</strong> > Meetings 2015",
+                    "className"         : "icon-gdrive-sml"
+                },
+                {
+                    "text"              : "<strong>My Drive</strong> > Meetings 2015",
+                    "className"         : "icon-gdrive-sml"
+                }
+            ]
+        },
+        "webPages": {
+            "id":      "webPages",
+            "heading": "Web Pages",
+            "options": [
+                {},
+                {}
+            ]
+        }
+    }
 }
 

@@ -9,13 +9,20 @@
 
 {% block content %}
 
-{%> "main-nav" %}
-{%> "drawer"  %}
-{%> "actions" %}
-{%> "stage-start" %}
-	{%> "panel-header-stage" %}
-	{%> "stage-moments" %}
-{%> "stage-end" %}
+	{# main-nav #}
+	{%> "main-nav" %}
+
+	{# drawer #}
+	{% include "src/templates/includes/drawer-moments.swig" %}
+
+	{# actions #}
+	{% include "src/templates/includes/actions-moments.swig" %}
+
+	{# stage #}
+	{%> "stage-start" %}
+		{%> "panel-header-stage" %}
+		{%> "stage-moments" %}
+	{%> "stage-end" %}
 
 {% endblock %}
 

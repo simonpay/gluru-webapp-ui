@@ -15,7 +15,7 @@
 				</div>
 				<div class="options-list__text">this_file_has_a_very_long_name_and_cant_fit_on_the_screen.doc</div>
 				<div class="">
-					<div class="icon-drive"></div>
+					<div class="icon-gdrive"></div>
 				</div>
 			</div>
 		</div>
@@ -38,7 +38,7 @@
 		{# SUMMARY #}
 		<div class="options-list">
 			<div class="options-list__heading -collapsable js-toggle-expand-list">Summary</div>
-			<div class="option-list__inner-wrap">
+			<div class="options-list__inner-wrap">
 				<div class="thumbnail"></div>
 				<ul class="text-list">
 					<li class="text-list__item">Brand strategy 2015 across all regions.</li>
@@ -55,7 +55,7 @@
 		{# RELATED FILES #}
 		<div class="options-list">
 			<div class="options-list__heading -collapsable js-toggle-expand-list">Related Files</div>
-			<div class="option-list__inner-wrap">
+			<div class="options-list__inner-wrap">
 				<ul class="options-list__list">
 					<li class="options-list__item">
 						<a href="#" class="options-list__link">
@@ -105,7 +105,7 @@
 		{# EMAIL #}
 		<div class="options-list">
 			<div class="options-list__heading -collapsable js-toggle-expand-list">Email</div>
-			<div class="option-list__inner-wrap">
+			<div class="options-list__inner-wrap">
 				<ul class="options-list__list">
 					<li class="options-list__item">
 						<div class="media">
@@ -117,13 +117,13 @@
 								<div class="date-time">Today, 9:00am</div>
 								<div class="media">
 									<div class="media__img">
-										<div class="icon-drive-sml"></div>
+										<div class="icon-gdrive-sml"></div>
 									</div>
 									<div class="media__body">Meeting Notes</div>
 								</div>
 								<div class="media">
 									<div class="media__img">
-										<div class="icon-drive-sml"></div>
+										<div class="icon-gdrive-sml"></div>
 									</div>
 									<div class="media__body">Meeting Notes</div>
 								</div>
@@ -139,7 +139,7 @@
 		{# PEOPLE #}
 		<div class="options-list">
 			<div class="options-list__heading -collapsable js-toggle-expand-list">People</div>
-			<div class="option-list__inner-wrap">
+			<div class="options-list__inner-wrap">
 				<ul class="options-list__list">
 	 				<li class="options-list__item">
 						<div class="media">
@@ -151,13 +151,13 @@
 								<div class="date-time">Today, 9:00am</div>
 								<div class="media">
 									<div class="media__img">
-										<div class="icon-drive-sml"></div>
+										<div class="icon-gdrive-sml"></div>
 									</div>
 									<div class="media__body">Meeting Notes</div>
 								</div>
 								<div class="media">
 									<div class="media__img">
-										<div class="icon-drive-sml"></div>
+										<div class="icon-gdrive-sml"></div>
 									</div>
 									<div class="media__body">Meeting Notes</div>
 								</div>
@@ -174,13 +174,13 @@
 								<div class="date-time">Today, 9:00am</div>
 								<div class="media">
 									<div class="media__img">
-										<div class="icon-drive-sml"></div>
+										<div class="icon-gdrive-sml"></div>
 									</div>
 									<div class="media__body">Meeting Notes</div>
 								</div>
 								<div class="media">
 									<div class="media__img">
-										<div class="icon-drive-sml"></div>
+										<div class="icon-gdrive-sml"></div>
 									</div>
 									<div class="media__body">Meeting Notes</div>
 								</div>
@@ -196,13 +196,13 @@
 		{# HIERARCHY #}
 		<div class="options-list">
 			<div class="options-list__heading -collapsable js-toggle-expand-list">Hierarchy</div>
-			<div class="option-list__inner-wrap">
+			<div class="options-list__inner-wrap">
 				<ul class="options-list__list">
 					<li class="options-list__item">
 						<a href="#" class="options-list__link">
 							<div class="options-list-link__inner-wrap">
 								<div class="options-list__icon">
-									<div class="icon-drive-sml"></div>
+									<div class="icon-gdrive-sml"></div>
 								</div>
 								<div class="options-list__text"><strong>My Drive</strong> > Meetings 2015</div>
 							</div>
@@ -217,7 +217,7 @@
 		{# WEB PAGES #}
 		<div class="options-list">
 			<div class="options-list__heading -collapsable js-toggle-expand-list">Web Pages</div>
-			<div class="option-list__inner-wrap">
+			<div class="options-list__inner-wrap">
 				<ul class="options-list__list">
 	 				<li class="options-list__item">
 						<div class="media">

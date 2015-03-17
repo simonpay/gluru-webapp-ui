@@ -1,10 +1,3 @@
-<div class="drawer-wrap is-hidden js-drawer-wrap">
-	<header class="panel-header panel-header--drawer">
-		<div class="drawer__heading">Files</div>
-	</header>
-
-	<aside class="drawer">
-
 		{# Sources Menu #}
 		<div class="options-list">
 			<div class="options-list__heading -collapsable js-toggle-expand-list">Sources</div>
@@ -138,8 +131,3 @@
 				</ul>
 			</div>
 		</div>
-
-
-	</aside>
-
-</div>

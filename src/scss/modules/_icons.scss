@@ -4,14 +4,14 @@
 
 .icon-everything {           @include use-sprite("icon-source-everything"); }
 .icon-box {                  @include use-sprite("icon-source-box"); }
-.icon-drive {                @include use-sprite("icon-source-drive"); }
+.icon-gdrive {               @include use-sprite("icon-source-drive"); }
 .icon-dropbox {              @include use-sprite("icon-source-dropbox"); }
 .icon-evernote {             @include use-sprite("icon-source-evernote"); }
 
 .icon-moments {    	         @include use-sprite("icon-nav-moments"); }
 
 .icon-box-sml {              @include use-sprite("icon-source-box-sml"); }
-.icon-drive-sml {            @include use-sprite("icon-source-drive-sml"); }
+.icon-gdrive-sml {           @include use-sprite("icon-source-drive-sml"); }
 .icon-dropbox-sml {          @include use-sprite("icon-source-dropbox-sml"); }
 .icon-evernote-sml {         @include use-sprite("icon-source-evernote-sml"); }
 

@@ -10,13 +10,10 @@
 {% block content %}
 
 {%> "main-nav" %}
-{%> "drawer"  %}
-{%> "actions" %}
-{%> "stage-start" %}
-{%> "stage-end" %}
 
 {% endblock %}
 
 {% block javascripts %}
 	{% parent %}
+	<script src="js/pages/home.js"></script>
 {% endblock %}

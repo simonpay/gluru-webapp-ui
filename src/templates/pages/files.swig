@@ -9,13 +9,21 @@
 
 {% block content %}
 
-{%> "main-nav" %}
-{%> "drawer"  %}
-{%> "actions" %}
-{%> "stage-start" %}
-	{%> "panel-header-stage" %}
-	{%> "stage-files" %}
-{%> "stage-end" %}
+	{# main-nav #}
+	{%> "main-nav" %}
+
+	{# drawer #}
+	{% include "src/templates/includes/drawer-files.swig" %}
+
+	{# actions #}
+	{% include "src/templates/includes/actions-files.swig" %}
+	{# {%> "actions" %} #}
+
+	{# stage #}
+	{%> "stage-start" %}
+		{%> "panel-header-stage" %}
+		{%> "stage-files" %}
+	{%> "stage-end" %}
 
 {% endblock %}
 
