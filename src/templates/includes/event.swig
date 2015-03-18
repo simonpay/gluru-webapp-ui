@@ -7,10 +7,18 @@
 	</div>
 
 	<div class="event">
-		{# <div class="event__inner-wrap"> #}
-			<div class="event__avatar">
-				<img class="event__avatar-img" src="img/tmp_avatar.png" alt="">
+
+			<div class="event-avatar">
+				<div class="event-avatar__img-wrap">
+					<img class="event-avatar__img" src="img/tmp_avatar.png" alt="">
+				</div>
+				{% if event_obj.source_type !== "" %}
+				<div class="event-avatar__source-type">
+					<div class="-icon {{ event_obj.source_type }}"></div>
+				</div>
+				{% endif %}
 			</div>
+
 			<div class="event__text-wrap">
 				<div class="event__title">{{ event_obj.title|safe }}</div>
 				<div class="event__description">{{ event_obj.description|safe }}</div>
@@ -31,7 +39,7 @@
 					<div class="dot"></div>
 				</div>
 			</nav>
-		{# </div> #}
+
 	</div>
 
 </div>

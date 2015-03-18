@@ -137,7 +137,7 @@
                     "priority":             "now",
                     "title":                "<strong>Alex Li</strong> renamed this file",
                     "description":          "Monday 10th meeting notes.docx",
-                    "source_type":          "icon-gdrive",
+                    "source_type":          "icon-gdrive-sml",
                     "date_time":            "14:10 PM",
                     "personID":             ""
                 },
@@ -157,7 +157,7 @@
                     "priority":             "normal",
                     "title":                "<strong>Mike Smith</strong>",
                     "description":          "Monday 10th meeting",
-                    "source_type":          "",
+                    "source_type":          "icon-evernote-sml",
                     "date_time":            "12:30 PM",
                     "personID":             ""
                 },
@@ -167,7 +167,7 @@
                     "priority":             "non-critical",
                     "title":                "<strong>Alex Li</strong> renamed this file",
                     "description":          "Monday 10th meeting notes.docx",
-                    "source_type":          "icon-gdrive",
+                    "source_type":          "icon-gdrive-sml",
                     "date_time":            "9:30 AM",
                     "personID":             ""
                 },
@@ -177,7 +177,7 @@
                     "priority":             "non-critical",
                     "title":                "<strong>Alex Li</strong> renamed this file",
                     "description":          "Monday 10th meeting notes.docx",
-                    "source_type":          "icon-gdrive",
+                    "source_type":          "",
                     "date_time":            "9:30 AM",
                     "personID":             ""
                 },
@@ -191,7 +191,7 @@
                             "priority":             "normal",
                             "title":                "<strong>Alex Li</strong> renamed this file",
                             "description":          "Monday 10th meeting notes.docx",
-                            "source_type":          "icon-gdrive",
+                            "source_type":          "",
                             "date_time":            "9:30 AM",
                             "personID":             ""
                         },
@@ -201,7 +201,7 @@
                             "priority":             "normal",
                             "title":                "<strong>Alex Li</strong> renamed this file",
                             "description":          "Monday 10th meeting notes.docx",
-                            "source_type":          "icon-gdrive",
+                            "source_type":          "",
                             "date_time":            "9:30 AM",
                             "personID":             ""
                         }
