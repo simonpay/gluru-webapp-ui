@@ -3,7 +3,7 @@
 	<ul class="main-nav__list">
 		<li class="main-nav__item -primary"><a href="#" class="main-nav__link -avatar">Avatar</a></li>
 		<li class="main-nav__item -primary"><a href="#" class="main-nav__link -add">Add</a></li>
-		<li class="main-nav__item -primary -divider"><a href="#" class="main-nav__link -search">Search</a></li>
+		<li class="main-nav__item -primary -divider"><a href="#" class="main-nav__link -search js-search">Search</a></li>
 		<li class="main-nav__item"><a href="#" class="main-nav__link -moments -highlight">Moments</a></li>
 		<li class="main-nav__item"><a href="#" class="main-nav__link -files -highlight">Files</a></li>
 		<li class="main-nav__item"><a href="#" class="main-nav__link -people -highlight">People</a></li>

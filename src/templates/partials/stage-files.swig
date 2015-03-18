@@ -2,14 +2,6 @@
 
 <section class="section-wrap -files is-hidden js-section-files">
 
-
-	<div class="tmp-buttons -files js-buttons-files">
-		<button class="button js-single" data-class=".-cols-1">Single View</button>
-		<button class="button js-double" data-class=".-cols-2">Split - 2 cols</button>
-		<button class="button js-triple" data-class=".-cols-3">Split - 3 cols</button>
-	</div>
-
-
 	{# single view #}
 	<div class="table-wrap-outer -cols-1">
 

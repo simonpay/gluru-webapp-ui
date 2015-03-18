@@ -1,22 +1,23 @@
 
 (function(){
 
-	var $drawerWrap = $( ".drawer-wrap" ),
-		$actionsWrap = $( ".actions-wrap" );
+	var $drawer_wrap = $( ".drawer-wrap" ),
+		$actions_wrap = $( ".actions-wrap" ),
+		$search_wrap = $( ".js-search-wrap" );
 
 
 	// toggle drawer and actions panels
 	$( ".js-toggle-drawer" ).click(function() {
-		$drawerWrap.toggleClass( "is-hidden" );
+		$drawer_wrap.toggleClass( "is-hidden" );
 	});
 	$( ".js-toggle-actions" ).click(function() {
-		$actionsWrap.toggleClass( "is-hidden" );
+		$actions_wrap.toggleClass( "is-hidden" );
 	});
 
 
 	// naviagte to main sections on main nav item click event
 	$( ".main-nav__link.-files" ).click(function() {
-		// $drawerWrap.toggleClass( "is-hidden" );
+		// $drawer_wrap.toggleClass( "is-hidden" );
 		// toggle class on main-container when drawer is open
 		// $( ".main-container" ).toggleClass( "drawer-is-open" );
 		location.href = "files.html";
@@ -31,7 +32,7 @@
 	$( ".table__row:not(.-header)" ).on( "click", function(){
 		$( ".table__row" ).removeClass( "is-selected" );
 		$(this).toggleClass( "is-selected" );
-		$actionsWrap.toggleClass( "is-hidden" );
+		$actions_wrap.toggleClass( "is-hidden" );
 		// toggle class on main-container when actions is open
 		$( ".main-container" ).toggleClass( "actions-is-open" );
 	});
@@ -62,7 +63,7 @@
 	// 		:split-view - 2 cols
 	// 		:split-view - 3 cols
 	// 		
-	// 		Th e3 variations are hardcoded in the HTML.
+	// 		Th 3 variations are hardcoded in the HTML.
 	// 		This just sets display for the 3 variations
 	// 		(hides all then shows the target view)
 	var setFileExplorerView = function (obj) {
@@ -78,7 +79,6 @@
 
 
 
-
 	// animate all collapsable lists
 	$( ".js-toggle-expand-list" ).on( "click", function(){
 		// console.log("hit");
@@ -91,31 +91,32 @@
 	});
 
 
-	// // animate timeline group container height
-	// $( ".stage__sub-heading" ).on( "click", function(){
-	// 	$( ".js-event-1" ).toggle(function() {
-	// 	    $(this).stop().animate({
-	// 	        width: "350px",
-	// 	        height: "300px"
-	// 	    }, 500);
-	// 	}, function() {
-	// 	    $(this).stop().animate({
-	// 	        width: "60px",
-	// 	        height: "60px"
-	// 	    }, 500);
-	// 	});
-	// });
+	// show search "modal" screen
+	$( ".js-search" ).on( "click", function(){
+		$( ".search-wrap" ).toggleClass( "is-hidden" );
+		$actions_wrap.addClass( "is-hidden" );
+	});
+
+
 
 	// set hidden classes to show content immediately 
-	// $drawerWrap.removeClass( "is-hidden" );
-	// $actionsWrap.removeClass( "is-hidden" );
+	// $drawer_wrap.removeClass( "is-hidden" );
+	// $actions_wrap.removeClass( "is-hidden" );
 	// $( ".panel-header.-stage" ).removeClass( "is-hidden" );
 	$( ".panel-header.-stage" ).removeClass( "is-hidden" );
 	$( ".section-wrap.-moments" ).removeClass( "is-hidden" );
 	$( ".section-wrap.-files" ).removeClass( "is-hidden" );
 
-	// $( ".panel-header.-stage" ).find( ".stage__heading" ).html( "Moments" );
-	// $( ".panel-header.-stage" ).find( ".stage__sub-heading" ).html( "18 March, 2015" );
+
+	// hide search "modal" screen
+	$search_wrap.addClass( "is-hidden" );
+
+	// close search panel
+	$( ".js-search-close" ).on( "click", function(){
+		$search_wrap.addClass( "is-hidden" );
+	});
+
+
 
 
 })();

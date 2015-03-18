@@ -23,9 +23,20 @@
 </div>
 
 {# TODO: remove this when finished dev! #}
-<div class="tmp-buttons tmp-buttons--moments">
-    <button class="button js-toggle-drawer">Toggle Drawer</button>
-    <button class="button js-toggle-actions">Toggle Actions</button>
+<div class="tmp-buttons">
+    <div class="button-group js-buttons-generic">
+        <button class="button js-toggle-drawer">Toggle <strong>Drawer</strong></button>
+        <button class="button js-toggle-actions">Toggle <strong>Actions</strong></button>
+    </div>
+
+    <div class="button-group js-buttons-files">
+        <button class="button js-single" data-class=".-cols-1"><strong>Single</strong> View</button>
+        <button class="button js-double" data-class=".-cols-2">Split - <strong>2 cols</strong></button>
+        <button class="button js-triple" data-class=".-cols-3">Split - <strong>3 cols</strong></button>
+    </div>
+
+
+
 </div>
 
 

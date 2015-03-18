@@ -11,4 +11,9 @@
 	$drawerWrap.addClass( "is-hidden" );
 	$actionsWrap.removeClass( "is-hidden" );
 
+	// show debug buttons
+	$( ".button-group" ).addClass( "is-hidden" );
+	$( ".js-buttons-generic" ).removeClass( "is-hidden" );
+
+
 })();
