@@ -64,10 +64,10 @@
                         content: "";
                         display: block;
                         position: absolute;
-                        top: -3px;
-                        bottom: -3px;
-                        left: -3px;
-                        right: -3px;
+                        top: -5px;
+                        bottom: -5px;
+                        left: -5px;
+                        right: -5px;
                         margin: auto;
                         border: 2px solid white;
                         border-radius: 100%;
@@ -77,29 +77,13 @@
 
                     
                     &:hover:after {
-                        // content: "";
-                        // display: block;
-                        // position: absolute;
-                        // top: 0;
-                        // bottom: 0;
-                        // left: 0;
-                        // right: 0;
-                        // margin: auto;
-                        // border: 2px solid white;
-                        // border-radius: 100%;
                         opacity: 1;
                     }
                     &.is-selected:after {
-                        // content: "";
-                        // display: block;
-                        // position: absolute;
-                        top: -5px;
-                        bottom: -5px;
-                        left: -5px;
-                        right: -5px;
-                        // margin: auto;
-                        // border: 2px solid white;
-                        // border-radius: 100%;
+                        // top: -5px;
+                        // bottom: -5px;
+                        // left: -5px;
+                        // right: -5px;
                         opacity: 1;
                     }
                 }
