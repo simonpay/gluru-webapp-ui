@@ -127,6 +127,88 @@
                 {}
             ]
         }
+    },
+    "moments": {
+        "timeline": {
+            "events": [
+                {
+                    "is_group":             0,
+                    "type":                 "moments",
+                    "priority":             "now",
+                    "title":                "<strong>Alex Li</strong> renamed this file",
+                    "description":          "Monday 10th meeting notes.docx",
+                    "source_type":          "icon-gdrive",
+                    "date_time":            "14:10 PM",
+                    "personID":             ""
+                },
+                {
+                    "is_group":             0,
+                    "type":                 "moments",
+                    "priority":             "critical",
+                    "title":                "<strong>Mike Smith</strong>",
+                    "description":          "Incoming call",
+                    "source_type":          "",
+                    "date_time":            "13:42 PM",
+                    "personID":             ""
+                },
+                {
+                    "is_group":             0,
+                    "type":                 "moments",
+                    "priority":             "normal",
+                    "title":                "<strong>Mike Smith</strong>",
+                    "description":          "Monday 10th meeting",
+                    "source_type":          "",
+                    "date_time":            "12:30 PM",
+                    "personID":             ""
+                },
+                {
+                    "is_group":             0,
+                    "type":                 "moments",
+                    "priority":             "non-critical",
+                    "title":                "<strong>Alex Li</strong> renamed this file",
+                    "description":          "Monday 10th meeting notes.docx",
+                    "source_type":          "icon-gdrive",
+                    "date_time":            "9:30 AM",
+                    "personID":             ""
+                },
+                {
+                    "is_group":             0,
+                    "type":                 "moments",
+                    "priority":             "non-critical",
+                    "title":                "<strong>Alex Li</strong> renamed this file",
+                    "description":          "Monday 10th meeting notes.docx",
+                    "source_type":          "icon-gdrive",
+                    "date_time":            "9:30 AM",
+                    "personID":             ""
+                },
+                {
+                    "is_group":             1,
+                    "group_name":           "Yesterday",
+                    "events": [
+                        {
+                            "is_group":             0,
+                            "type":                 "moments",
+                            "priority":             "normal",
+                            "title":                "<strong>Alex Li</strong> renamed this file",
+                            "description":          "Monday 10th meeting notes.docx",
+                            "source_type":          "icon-gdrive",
+                            "date_time":            "9:30 AM",
+                            "personID":             ""
+                        },
+                        {
+                            "is_group":             0,
+                            "type":                 "moments",
+                            "priority":             "normal",
+                            "title":                "<strong>Alex Li</strong> renamed this file",
+                            "description":          "Monday 10th meeting notes.docx",
+                            "source_type":          "icon-gdrive",
+                            "date_time":            "9:30 AM",
+                            "personID":             ""
+                        }
+                    ]
+                }
+            ]
+        }
     }
 }
 

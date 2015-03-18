@@ -19,10 +19,7 @@
 	{% include "src/templates/includes/actions-moments.swig" %}
 
 	{# stage #}
-	{%> "stage-start" %}
-		{%> "panel-header-stage" %}
-		{%> "stage-moments" %}
-	{%> "stage-end" %}
+	{% include "src/templates/includes/stage-moments.swig" %}
 
 {% endblock %}
 

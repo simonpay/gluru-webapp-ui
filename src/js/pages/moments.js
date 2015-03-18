@@ -9,6 +9,6 @@
 		$actionsWrap = $( ".actions-wrap" );
 
 	$drawerWrap.addClass( "is-hidden" );
-	$actionsWrap.addClass( "is-hidden" );
+	$actionsWrap.removeClass( "is-hidden" );
 
 })();

@@ -94,23 +94,32 @@
                     // width: calc(100% - 200px);
                     height: 120px;
                     min-width: 500px;
-                    padding: 20px;
+                    // padding: 0 20px;
                     background: $dusty-gray;
                     border-radius: 15px;
                     transition: transform 0.2s;
 
-                    color: white;
-                    font-weight: bold;
-                    font-size: rem(30);
-
+                    &:hover {
+                        // box-shadow: 0px 0px 15px $dusty-gray;
+                        transform: translateX(10px);
+                    }
                     .-critical & {
                         background: $pink;
+                        // &:hover {
+                        //     box-shadow: 0px 0px 15px $pink;
+                        // }
                     }
                     .-non-critical & {
                         background: $orange;
+                        // &:hover {
+                        //     box-shadow: 0px 0px 15px $orange;
+                        // }
                     }
                     .-now & {
                         background: $green;
+                        // &:hover {
+                        //     box-shadow: 0px 0px 15px $green;
+                        // }
                     }
 
                     &:after {
@@ -133,55 +142,75 @@
                     .-now &:after {
                         border-right-color: $green;
                     }
-
-                    &:hover {
-                        transform: translateX(20px);
-                    }
-
-
-
-
-
-                    .event-group.is-collapsed & {
-                        // &:nth-of-type(1) {
-                        //     top: 10px;
-                        //     left: 10px;
-                        //     background: blue;
-                        // }
-
-
-                        // &:not(:nth-of-type(1)) {
-                        //     position: absolute;
-                        //     top: 0;
-                        // }
-                        // &:nth-of-type(1) {
-                        //     top: 10px;
-                        //     left: 10px;
-                        //     background: blue;
-                        // }
-                        // &:nth-of-type(2) {
-                        //     top: 20px;
-                        //     left: 20px;
-                        //     background: green;
-                        // }
-                    }
-
                 }
 
-    // .drawer {
-    //     height: calc(100% - #{$panel-header-height});
-    //     width: $drawer-width;
-    //     padding-top: 15px;
-    //     padding-left: 4px;
-    //     overflow-y: auto;
-    // }
-        
-    //     // main heading in drawer panel
-    //     .drawer__heading {
-    //         @extend %vertical-align-center;
-    //         text-transform: uppercase;
-    //         font-size: 22px;
-    //         font-weight: lighter;
-    //         color: $green;
-    //     }
+                    .event__avatar {
+                        @include scut-center-transform(y);
+                        left: 20px;
+                        width: 52px;
+                        height: 52px;
+                        overflow: hidden;
+                        border-radius: 100%;
+                        border: 3px solid $white;
+                    }
+
+                        .event__avatar-img {
+                            width: 100%;
+                        }
+
+                    .event__text-wrap {
+                        @include scut-center-transform(y);
+                        left: 95px;
+                        right: 50px;
+                        max-height: 80px;
+                        overflow: hidden;
+                        white-space: normal;
+                        color: $white;
+                        font-size: rem(16);
+                    }
+
+                    .event-nav {
+                        @include scut-center-transform(y);
+                        right: 8px;
+
+                        .dot {
+                            width: 8px;
+                            height: 8px;
+                            background: white;
+                            border-radius: 100%;
+                            margin: 4px;
+                        }
+
+                        &:hover {
+                            .event-nav__list {
+                                right: 15px;
+                                visibility: visible;
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                        .event-nav__more {
+                        }
+
+                        .event-nav__list {
+                            @include scut-center-transform(y);
+                            padding-right: 10px;
+                            right: -10px;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                        }
+
+                            .event-nav__item {
+                                display: inline-block;
+                                margin: 0 5px;
+                                transform: scale(1.3); // temp style to make icons bigger
+                                cursor: pointer;
+                            }
+
+
+
+
+
 
