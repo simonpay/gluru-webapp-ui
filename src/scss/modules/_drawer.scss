@@ -3,20 +3,29 @@
 \*------------------------------------*/
 
 .drawer-wrap {
-    float: left;
-    width: 0;
-    height: 100%;
+    z-index: $drawer-wrap-z-index;
+    position: relative;
+    float: none;
     width: 100%;
-    transition: width $drawer-animation-duration;
+    height: 200px;
     overflow: hidden;
+    transition: height $drawer-animation-duration;
     background: $gallery;
-    @include mq(medium){
+
+    @include mq(large){
+        float: left;
+        transition: width $drawer-animation-duration;
         width: $drawer-width;
+        height: 100%;
     }
     
     &.is-hidden {
-        @include mq(medium){
+        // width: 100%;
+        height: 0;
+
+        @include mq(large){
             width: 0;
+            height: 100%;
         }
     }
 }

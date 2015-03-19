@@ -26,20 +26,29 @@
     // we now have to set the width of panel-header based on whether the drawer panel is open 
     // and animate it to match the opening of the drawer panel
     &.-stage {
-        z-index: 20;
-        position: fixed;
-        width: calc(100% - #{$main-nav-width}); // viewport - main-nav
-        top: 0;
-        background: $white;
-        transition: width $drawer-animation-duration;
-        // border-bottom: 0;
-        .drawer-is-open & {
-            width: calc( 100% - #{$main-nav-width} - #{$drawer-width} ); // viewport - main-nav - drawer
-        }
-        &.is-hidden {
-            display: none;
+        z-index: $panel-header-stage-z-index;
+        position: relative;
+        width: 100%;
+        top: auto;
+
+        @include mq(large) {
+            position: fixed;
+            width: calc(100% - #{$main-nav-width}); // viewport - main-nav
+            top: 0;
+            background: $white;
+            transition: width $drawer-animation-duration;
+            // border-bottom: 0;
+            .drawer-is-open & {
+                width: calc( 100% - #{$main-nav-width} - #{$drawer-width} ); // viewport - main-nav - drawer
+            }
+            &.is-hidden {
+                display: none;
+            }
         }
 
+        &:after {
+            left: 7px;
+        }
     }
 }
 

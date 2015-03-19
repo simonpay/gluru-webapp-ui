@@ -10,7 +10,7 @@
 
 			<div class="event-avatar">
 				<div class="event-avatar__img-wrap">
-					<img class="event-avatar__img" src="img/tmp_avatar.png" alt="">
+					<img class="event-avatar__img" src="img/{{ event_obj.person_id }}.png" alt="">
 				</div>
 				{% if event_obj.source_type !== "" %}
 				<div class="event-avatar__source-type">

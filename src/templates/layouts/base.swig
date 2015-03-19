@@ -18,15 +18,24 @@
 
 <body>
 
-<div class="main-container">
+<div class="main-container js-main-container">
 {% block content %}{% endblock %}
 </div>
 
 {# TODO: remove this when finished dev! #}
 <div class="tmp-buttons">
     <div class="button-group js-buttons-generic">
-        <button class="button js-toggle-drawer">Toggle <strong>Drawer</strong></button>
-        <button class="button js-toggle-actions">Toggle <strong>Actions</strong></button>
+        <div class="label">Actions</div>
+        <button class="button js-open-actions">open</button>
+        <button class="button js-close-actions">close</button>
+        <button class="button js-toggle-actions">toggle</button>
+    </div>
+
+    <div class="button-group js-buttons-generic">
+        <div class="label">Drawer</div>
+        <button class="button js-open-drawer">open</button>
+        <button class="button js-close-drawer">close</button>
+        <button class="button js-toggle-drawer">toggle</button>
     </div>
 
     <div class="button-group js-buttons-files">
@@ -34,9 +43,6 @@
         <button class="button js-double" data-class=".-cols-2">Split - <strong>2 cols</strong></button>
         <button class="button js-triple" data-class=".-cols-3">Split - <strong>3 cols</strong></button>
     </div>
-
-
-
 </div>
 
 

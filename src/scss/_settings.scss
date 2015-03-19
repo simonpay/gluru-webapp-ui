@@ -37,6 +37,17 @@ $team-color-development:	$light-green;
 
 
 // -----------------------------------
+// STACKING ORDER (z-index)
+// -----------------------------------
+$main-nav-z-index:							100;
+$drawer-wrap-z-index:						50;
+$actions-wrap-z-index:						40;
+$search-wrap-z-index:						30;
+$panel-header-stage-z-index:				20;
+// small screens
+$actions-wrap-z-index_mq-sml:				110;
+
+// -----------------------------------
 // DIMENSIONS
 // -----------------------------------
 // stage

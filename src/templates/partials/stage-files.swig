@@ -1,6 +1,6 @@
 {# section files #}
 
-<section class="section-wrap -files is-hidden js-section-files">
+<section class="section-wrap -files js-section-files">
 
 	{# single view #}
 	<div class="table-wrap-outer -cols-1">

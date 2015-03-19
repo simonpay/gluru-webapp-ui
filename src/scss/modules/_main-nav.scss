@@ -3,13 +3,17 @@
 \*------------------------------------*/
 
 .main-nav {
-    z-index: 100;
-    position: relative;
+    z-index: $main-nav-z-index;
+    position: absolute;
+    top: 0;
     width: 100%;
     height: 100px;
     background: $pink;
-    @include clearfix;
-    @include mq(medium){
+    overflow: auto;
+
+    @include mq(large){
+        position: relative;
+        @include clearfix;
         float: left;
         width: $main-nav-width;
         height: 100%;
@@ -19,23 +23,32 @@
 }
 
     .main-nav__logo {
-        margin: 17px auto 45px;
+        float: left;
         @include use-sprite("gluru-logo");
+
+        @include mq(large){
+            float: none;
+            margin: 17px auto 45px;
+        }
     }
 
     .main-nav__list { // ul
     }
 
         .main-nav__item { // li
-            // margin-bottom: 8px;
-            margin-bottom: 15px;
-            &.-primary { // items above the divider
-                // margin-bottom: 15px;
-            }
-            &.-divider {
-                margin-bottom: 30px;
-                padding-bottom: 15px;
-                border-bottom: 1px solid white;
+            float: left;
+            
+            @include mq(large){
+                float: none;
+                margin-bottom: 15px;
+                &.-primary { // items above the divider
+                    // margin-bottom: 15px;
+                }
+                &.-divider {
+                    margin-bottom: 30px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid white;
+                }
             }
         }
 

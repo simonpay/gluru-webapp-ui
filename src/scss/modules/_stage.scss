@@ -11,7 +11,7 @@
 
 	.stage {
 	    @include clearfix;
-	    @include mq(medium){
+	    @include mq(large){
 	        height: 100%;
 	        overflow: auto;
 	    }

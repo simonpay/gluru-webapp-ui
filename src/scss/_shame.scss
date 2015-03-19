@@ -2,6 +2,29 @@
     #SHAME
 \*------------------------------------*/
 
+// debug - show labels for current MQ breakpoint on the screen
+body:before {
+   position:fixed;
+   bottom:2px;
+   left:2px;
+   color:black;
+   z-index:9999;
+   background:rgba(255,255,255,0.75);
+   content:"small";
+   @include mq(medium) { content:"medium"; }
+   @include mq(large) { content:"large"; }
+}
+body:after {
+   position:fixed;
+   bottom:20px;
+   left: 2px;
+   color:black;
+   z-index:99999;
+   background:rgba(255,255,255,0.75);
+   @include mq(medium-and-up) { content:"medium-and-up"; }
+   @include mq(large-and-up) { content:"large-and-up"; }
+}
+
 
 // temp buttons
 .tmp-buttons {
@@ -33,18 +56,37 @@
             display: none !important;
         }
     }
+    
+    .label {
+        float: left;
+        padding: 2px 3px;
+        font-size: 10px;
+        font-weight: bold;
+    }
 
     .button {
         float: left;
         margin: 0 2px;
         border: 1px solid gray;
         padding: 1px 3px;
-        background: $alto;
+        background: rgba(255,255,255,0.8);
         outline: none;
         font-size: 9px;
         cursor: pointer;
+        @include mq(large) {
+            background: rgba(0,0,0,0.075);
+        }
+        &:hover {
+            background: rgba(255,255,255,0.7);
+            @include mq(large) {
+                background: rgba(0,0,0,0.075);
+            }
+        }
         &:active {
-            background: $silver;
+            background: rgba(255,255,255,0.6);
+            @include mq(large) {
+                background: rgba(0,0,0,0.2);
+            }
         }
     }
 }

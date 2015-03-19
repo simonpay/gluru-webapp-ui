@@ -3,7 +3,7 @@
 
 {# section files #}
 
-<section class="section-wrap -moments is-hidden js-section-moments">
+<section class="section-wrap -moments js-section-moments">
 	
 
 	{# Notifications #}
