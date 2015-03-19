@@ -1,4 +1,4 @@
-<div class="event-wrap -{{ event_obj.priority }}">
+<div class="event-wrap -{{ event_obj.priority }} js-event-wrap">
 
 	<div class="event-time">{{ event_obj.date_time }}</div>
 
@@ -27,10 +27,10 @@
 			<nav class="event-nav">
 				<ul class="event-nav__list">
 					<li class="event-nav__item">
-						<div class="icon-moments"></div>
+						<div class="icon-moments js-event-nav__link"></div>
 					</li>
 					<li class="event-nav__item">
-						<div class="icon-moments"></div>
+						<div class="icon-moments js-event-nav__link"></div>
 					</li>
 				</ul>
 				<div class="event-nav__more">

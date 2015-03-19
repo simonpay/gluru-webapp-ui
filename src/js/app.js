@@ -158,8 +158,30 @@
 				$main_container.removeClass( "search-is-open" );
 			}
 
-		}
+		},
 
+
+		moments: {
+
+			timeline: {
+
+				do_click: function () {
+
+					// cache event nav menu item clicked
+					$this = $(this);
+
+					// open actions
+					obj_gluru.actions.set_state( "open" );
+
+					$( ".js-event-wrap" ).removeClass( "is-selected" );
+
+					$this
+						.closest( ".js-event-wrap" )
+						.addClass( "is-selected" );
+					
+				}
+			}
+		}
 	};
 
 
@@ -202,6 +224,17 @@
 		// pass $(this) to function
 		obj_gluru.main_nav.do_click.call( $(this) );
 	});
+
+
+	// event nav links
+	$( ".js-event-nav__link" ).on( "click", function(){
+		// pass $(this) to function
+		obj_gluru.moments.timeline.do_click.call( $(this) );
+	});
+
+
+
+
 
 
 
