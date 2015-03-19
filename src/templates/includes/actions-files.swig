@@ -1,8 +1,9 @@
 
 	{# actions #}
-	{%> "actions-start" %}
+	{% include "actions-start.swig" %}
 		
-		
+		{%> "actions-file-summary" %}
+
 		{# related files #}
 		{% set rObj = mydata.actions.relatedFiles %}
 		{% include "options-list.swig" %}

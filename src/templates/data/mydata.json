@@ -129,6 +129,10 @@
         }
     },
     "moments": {
+        "stage_data": {
+            "stage_heading":                    "Moments",
+            "stage_sub_heading":                "18 March, 2015"
+        },
         "timeline": {
             "events": [
                 {
@@ -208,6 +212,12 @@
                     ]
                 }
             ]
+        }
+    },
+    "files": {
+        "stage_data": {
+            "stage_heading":                    "Files",
+            "stage_sub_heading":                "2,1145 files"
         }
     }
 }

@@ -46,5 +46,8 @@
     &:hover {
         text-decoration: underline;
     }
+    .is-selected & {
+        color: $white;
+    }
 }
 

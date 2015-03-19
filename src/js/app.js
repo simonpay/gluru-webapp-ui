@@ -181,6 +181,24 @@
 					
 				}
 			}
+		},
+
+
+		files: {
+
+			do_click: function () {
+
+				// cache file clicked
+				$this = $(this);
+
+				// open actions
+				obj_gluru.actions.set_state( "open" );
+
+				$( ".js-table-row" ).removeClass( "is-selected" );
+
+				$this.addClass( "is-selected" );
+				
+			}
 		}
 	};
 
@@ -189,7 +207,8 @@
 	// cache main app obj to var
 	var obj_gluru = gluru_app;
 
-	// drawer
+	// DRAWER
+	// -------------------------------------------------
 	// toggle drawer
 	$tmp_toggle_drawer.on( "click", function(){
 		obj_gluru.drawer.set_state();
@@ -204,7 +223,8 @@
 	});
 
 
-	// actions
+	// ACTIONS
+	// -------------------------------------------------
 	// toggle actions
 	$tmp_toggle_actions.on( "click", function(){
 		obj_gluru.actions.set_state();
@@ -219,40 +239,54 @@
 	});
 
 
-	// main nav clicks
+	// MAIN NAV 
+	// -------------------------------------------------
+	// clicks
 	$( ".js-main-nav__link" ).on( "click", function(){
-		// pass $(this) to function
 		obj_gluru.main_nav.do_click.call( $(this) );
 	});
 
 
+	// MOMENTS
+	// -------------------------------------------------
 	// event nav links
 	$( ".js-event-nav__link" ).on( "click", function(){
-		// pass $(this) to function
 		obj_gluru.moments.timeline.do_click.call( $(this) );
 	});
 
 
-
-
-
-
-
-
-	// ------------------------------------------------------------
-	// scripts that dont access main gluru obj
-	// These wil be moved up into the obj when 
-	// the complexity requires it
-	// ------------------------------------------------------------
-
+	// FILES
+	// -------------------------------------------------
 	// click event for each row in the table (except the header)
-	$( ".table__row:not(.-header)" ).on( "click", function(){
-		$( ".table__row" ).removeClass( "is-selected" );
-		$(this).toggleClass( "is-selected" );
+	$( ".js-table-row:not(.-header)" ).on( "click", function(){
+		obj_gluru.files.do_click.call( $(this) );
+	});
+
+
+	// SEARCH
+	// -------------------------------------------------
+	// show search "modal" screen
+	$( ".js-nav-search" ).on( "click", function(){
+		obj_gluru.search.set_state( "open" );
+	});
+	// close search panel
+	$( ".js-search-close" ).on( "click", function(){
+		obj_gluru.search.set_state( "close" );
 	});
 
 
 
+
+
+
+	// -------------------------------------------------
+	// scripts that dont access main gluru obj
+	// These wil be moved up into the obj when 
+	// the complexity requires it
+	// -------------------------------------------------
+
+	// FILE EXPLORER SPLIT VIEW
+	// -------------------------------------------------
 	// set file explorer view 
 	// options:
 	// 		:single view
@@ -275,6 +309,8 @@
 
 
 
+	// COLLAPSABLE OPTIONS LISTS
+	// -------------------------------------------------
 	// animate all collapsable lists
 	$( ".js-toggle-expand-list" ).on( "click", function(){
 		// console.log("hit");
@@ -285,20 +321,6 @@
 			duration: 300
 		});
 	});
-
-
-	// show search "modal" screen
-	$( ".js-nav-search" ).on( "click", function(){
-		$( ".search-wrap" ).toggleClass( "is-hidden" );
-		// $actions_wrap.addClass( "is-hidden" );
-	});
-
-
-	// close search panel
-	$( ".js-search-close" ).on( "click", function(){
-		$search_wrap.addClass( "is-hidden" );
-	});
-
 
 
 

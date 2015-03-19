@@ -17,13 +17,9 @@
 
 	{# actions #}
 	{% include "src/templates/includes/actions-files.swig" %}
-	{# {%> "actions" %} #}
 
 	{# stage #}
-	{%> "stage-start" %}
-		{%> "panel-header-stage" %}
-		{%> "stage-files" %}
-	{%> "stage-end" %}
+	{% include "src/templates/includes/stage-files.swig" %}
 
 {% endblock %}
 
