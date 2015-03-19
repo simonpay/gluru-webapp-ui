@@ -60,10 +60,17 @@
     }
 }
 .panel-header--actions {
-    // border-bottom: 0;
-    &:after {
-        content: none;
+
+    @include mq(large) {
+        // set width to prevent close button moving when actions is closed
+        width: $actions-width;
+
+        // remove bottom keyline
+        &:after {
+            content: none;
+        }
     }
+
 }
 
 

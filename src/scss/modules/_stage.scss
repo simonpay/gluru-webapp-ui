@@ -36,6 +36,7 @@
 
 			.stage__heading-wrap {
 				@extend %vertical-align-center;
+				position: relative;
 			}
 
 				.stage__heading {

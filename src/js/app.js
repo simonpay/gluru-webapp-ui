@@ -28,7 +28,9 @@
 
 			set_state: function ( requested_state ) {
 
+
 				var drawer_is_open = $main_container.hasClass( "drawer-is-open" );
+				$( ".js-toggle-drawer" ).removeClass( "-left -right" );
 
 				// open/close drawer based on param "requested_state" passed to function
 				if ( requested_state !== undefined ) {
@@ -38,12 +40,13 @@
 				// toggle drawer
 				} else {
 
+				// console.log( $(this) );
 					if ( drawer_is_open ) {
 						// // close drawer
-						obj_gluru.drawer._close();
+						obj_gluru.drawer._close.call( $(this) );
 					} else {
 						// // open drawer
-						obj_gluru.drawer._open();
+						obj_gluru.drawer._open.call( $(this) );
 					}
 
 				}
@@ -53,11 +56,19 @@
 			_open: function () {
 				$drawer_wrap.removeClass( "is-hidden" );
 				$main_container.addClass( "drawer-is-open" );
+
+				// $(this).removeClass( "-left -right" );
+				// $(this).addClass( "-left" );
+				$( ".js-toggle-drawer" ).addClass( "-left" );
 			},
 
 			_close: function () {
 				$drawer_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "drawer-is-open" );
+
+				// $(this).removeClass( "-left -right" );
+				// $(this).addClass( "-right" );
+				$( ".js-toggle-drawer" ).addClass( "-right" );
 			}
 
 		},
@@ -97,6 +108,11 @@
 			_close: function () {
 				$actions_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "actions-is-open" );
+
+				// deselect table row in files
+				$( ".js-table-row" ).removeClass( "is-selected" );
+				// deselect event in timeline
+				$( ".js-event-wrap" ).removeClass( "is-selected" );
 			}
 
 		},
@@ -207,11 +223,12 @@
 	// cache main app obj to var
 	var obj_gluru = gluru_app;
 
-	// DRAWER
+	// DEV BUTTONS
 	// -------------------------------------------------
+	// drawer
 	// toggle drawer
 	$tmp_toggle_drawer.on( "click", function(){
-		obj_gluru.drawer.set_state();
+		obj_gluru.drawer.set_state.call( $(this) );
 	});
 	// open drawer
 	$tmp_open_drawer.on( "click", function(){
@@ -222,9 +239,7 @@
 		obj_gluru.drawer.set_state( "close" );
 	});
 
-
-	// ACTIONS
-	// -------------------------------------------------
+	// actions
 	// toggle actions
 	$tmp_toggle_actions.on( "click", function(){
 		obj_gluru.actions.set_state();
@@ -322,6 +337,12 @@
 		});
 	});
 
+
+	// FORCE PANEL STATES
+	// -------------------------------------------------
+	// obj_gluru.actions._open();
+	// obj_gluru.drawer._open();
+	// obj_gluru.search._open();
 
 
 })();

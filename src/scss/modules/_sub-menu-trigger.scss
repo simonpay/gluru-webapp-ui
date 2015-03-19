@@ -1,0 +1,27 @@
+/*------------------------------------*\
+# SUB MENU TRIGGER
+\*------------------------------------*/
+
+.sub-menu-trigger {
+    position: relative;
+    padding-right: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &:after {
+        content: "";
+        @include scut-triangle(down, 9px 4px, $black);
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0.3s;
+        opacity: 1;
+    }
+
+    &:hover:after {
+        opacity: 0.3;
+    }
+
+}
+
