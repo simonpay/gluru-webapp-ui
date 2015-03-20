@@ -72,7 +72,7 @@
                         white-space: nowrap;
                         text-overflow: ellipsis;
                         vertical-align: middle;
-                        border-bottom: 1px solid rgba(0,0,0,0.065);
+                        border-bottom: 1px solid $gallery;
                         color: $black;
                         @include transition(all 0.3s);
                         

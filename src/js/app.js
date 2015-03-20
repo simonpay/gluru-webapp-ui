@@ -20,7 +20,12 @@
 		$tooltip = 				$( ".js-tooltip" ),
 		$tooltip_triggers = 	$( ".js-tt" ),
 
-		$expandable_lists = 	$( ".js-toggle-expand-list" );
+		$pop_menu_wrap = 		$( ".js-pop-menu-wrap" ),
+		$pop_menu_triggers = 	$( ".js-pmt" ),
+
+		$expandable_lists = 	$( ".js-toggle-expand-list" ),
+
+		$table_wraps = 			$( ".table-wrap-outer" );
 
 
 
@@ -34,7 +39,6 @@
 
 			set_state: function ( requested_state ) {
 
-
 				var drawer_is_open = $main_container.hasClass( "drawer-is-open" );
 				$( ".js-toggle-drawer" ).removeClass( "-left -right" );
 
@@ -46,7 +50,6 @@
 				// toggle drawer
 				} else {
 
-				// console.log( $(this) );
 					if ( drawer_is_open ) {
 						// // close drawer
 						obj_gluru.drawer._close.call( $(this) );
@@ -60,6 +63,7 @@
 			},
 
 			_open: function () {
+
 				$drawer_wrap.removeClass( "is-hidden" );
 				$main_container.addClass( "drawer-is-open" );
 
@@ -69,6 +73,7 @@
 			},
 
 			_close: function () {
+
 				$drawer_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "drawer-is-open" );
 
@@ -107,11 +112,13 @@
 			},
 
 			_open: function () {
+
 				$actions_wrap.removeClass( "is-hidden" );
 				$main_container.addClass( "actions-is-open" );
 			},
 
 			_close: function () {
+
 				$actions_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "actions-is-open" );
 
@@ -127,10 +134,10 @@
 		main_nav: {
 
 			do_click: function () {
-				// console.log( $(this) );
-				_is_files 		= $(this).hasClass( "-files" );
-				_is_moments 	= $(this).hasClass( "-moments" );
-				_is_gluru_logo 	= $(this).hasClass( "-gluru" );
+				
+				var _is_files 		= $(this).hasClass( "-files" ),
+					_is_moments 	= $(this).hasClass( "-moments" ),
+					_is_gluru_logo 	= $(this).hasClass( "-gluru" );
 
 				if ( _is_files ) {
 					location.href = "files.html";
@@ -171,11 +178,13 @@
 			},
 
 			_open: function () {
+
 				$search_wrap.removeClass( "is-hidden" );
 				$main_container.addClass( "search-is-open" );
 			},
 
 			_close: function () {
+
 				$search_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "search-is-open" );
 			}
@@ -190,7 +199,7 @@
 				do_click: function () {
 
 					// cache event nav menu item clicked
-					$this = $(this);
+					var $this = $(this);
 
 					// open actions
 					obj_gluru.actions.set_state( "open" );
@@ -208,10 +217,11 @@
 
 		files: {
 
+			// click row in files table
 			do_click: function () {
 
 				// cache file clicked
-				$this = $(this);
+				var $this = $(this);
 
 				// open actions
 				obj_gluru.actions.set_state( "open" );
@@ -220,6 +230,16 @@
 
 				$this.addClass( "is-selected" );
 				
+			},
+
+			// change single / split view
+			set_file_explorer_view: function () {
+
+				var $this 	= $(this);
+					$target = $( $this.data("class") );
+
+				$table_wraps.hide();
+				$target.show();
 			}
 		},
 
@@ -236,7 +256,7 @@
 					_is_main_nav_item 		= $this.hasClass( "js-main-nav__link" )
 					;
 
-				console.log(_tooltip_text);
+				// console.log(_tooltip_text);
 
 				if ( _tooltip_config === undefined) {
 
@@ -258,7 +278,6 @@
 					;
 			},
 			hide: function () {
-				// console.log( $(this) );
 				$tooltip.addClass( "is-hidden" );
 			}
 		},
@@ -281,15 +300,59 @@
 							});
 
 			}
+		},
+
+
+		pop_menu: {
+
+			show: function () {
+				// console.log( "SHOW" );
+
+				var $this 					= $(this),
+					_height 				= $this.height(),
+					_offset 				= $this.offset()
+					// _tooltip_config 		= $this.data( "tt-config" ),
+					;
+
+				// console.log( _offset );
+
+				$pop_menu_wrap
+					.removeClass( "is-hidden" )
+					// .html( _tooltip_text )
+					.offset({ left: _offset.left, top: _offset.top + _height })
+					;
+
+			},
+			hide: function () {
+				// console.log( "HIDE" );
+				$pop_menu_wrap.addClass( "is-hidden" );
+			}
 		}
 	};
 
 
 
-	// cache main app obj to var
+	// cache main app obj to variable
 	var obj_gluru = gluru_app;
 
 
+
+	// POP MENUS
+	// -------------------------------------------------
+	$pop_menu_triggers.on( "click", function(){
+		obj_gluru.pop_menu.show.call( $(this) );
+	});
+	$(document).on('click', function(e) {
+		// if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
+		if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {
+			// Hide the pop_menu
+			obj_gluru.pop_menu.hide.call( $(this) );
+		}
+	});
+
+
+	// TOOLTIPS
+	// -------------------------------------------------
 	$tooltip_triggers.on( "mouseover", function(){
 		obj_gluru.tooltips.show.call( $(this) );
 	});
@@ -351,6 +414,22 @@
 	$( ".js-table-row:not(.-header)" ).on( "click", function(){
 		obj_gluru.files.do_click.call( $(this) );
 	});
+	// FILE EXPLORER SPLIT VIEW
+	// -------------------------------------------------
+	// set file explorer view 
+	// options:
+	// 		:single view
+	// 		:split-view - 2 cols
+	// 		:split-view - 3 cols
+	// 		
+	// 		Th 3 variations are hardcoded in the HTML.
+	// 		This just sets display for the 3 variations
+	// 		(hides all then shows the target view)
+	$( ".js-buttons-files .button" ).on( "click", function(){
+		obj_gluru.files.set_file_explorer_view.call( $(this) );
+	});
+	// set the initial view
+	obj_gluru.files.set_file_explorer_view.call( $( ".js-single" ) );
 
 
 	// SEARCH
@@ -365,7 +444,6 @@
 	});
 
 
-
 	// COLLAPSABLE OPTIONS LISTS
 	// -------------------------------------------------
 	// animate all collapsable lists
@@ -373,35 +451,6 @@
 		obj_gluru.options_list.toggle.call( $(this) );
 	});
 
-
-
-	// -------------------------------------------------
-	// scripts that dont access main gluru obj
-	// These wil be moved up into the obj when 
-	// the complexity requires it
-	// -------------------------------------------------
-
-	// FILE EXPLORER SPLIT VIEW
-	// -------------------------------------------------
-	// set file explorer view 
-	// options:
-	// 		:single view
-	// 		:split-view - 2 cols
-	// 		:split-view - 3 cols
-	// 		
-	// 		Th 3 variations are hardcoded in the HTML.
-	// 		This just sets display for the 3 variations
-	// 		(hides all then shows the target view)
-	var setFileExplorerView = function (obj) {
-		$( ".table-wrap-outer" ).hide();
-		obj.show();
-	};
-	
-	$( ".js-buttons-files .button" ).on( "click", function(){
-		setFileExplorerView($( $(this).data("class") ));
-	});
-	// set to single view by default
-	setFileExplorerView($( ".-cols-1" ));
 
 
 
@@ -412,6 +461,8 @@
 	// obj_gluru.actions._open();
 	// obj_gluru.drawer._open();
 	// obj_gluru.search._open();
+
+	// obj_gluru.pop_menu.show.call( $( ".table-wrap-outer.-cols-1 .js-pmt" ) );
 
 
 })();

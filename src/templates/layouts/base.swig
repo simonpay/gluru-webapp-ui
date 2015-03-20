@@ -20,7 +20,8 @@
 
 <div class="main-container js-main-container">
     {% block content %}{% endblock %}
-    <div class="tooltip is-hidden js-tooltip"></div>
+    {%> "tool-tip" %}
+    {%> "pop-menu" %}
 </div>
 
 

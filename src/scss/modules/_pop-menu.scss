@@ -1,0 +1,47 @@
+/*------------------------------------*\
+# POP MENU
+\*------------------------------------*/
+
+.pop-menu-wrap {
+    z-index: 999999;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // width: 180px;
+    background: $white;
+    opacity: 1;
+    border: 1px solid $alto;
+    box-shadow: 
+        0 6px 20px rgba($black, 0.04), 
+        -6px 8px 15px rgba($black, 0.04), 
+        6px 8px 15px rgba($black, 0.04);
+    @include transition(opacity 0.3s, height 0);
+
+    &.is-hidden {
+        height: 0;
+        opacity: 0;
+        @include transition(opacity 0.3s, height 0 0.3s);
+    }
+}
+
+    .pop-menu { // nav
+        padding: 15px 20px 20px;
+    }
+
+        .pop-menu__heading {
+            // padding: 13px;
+            font-size: rem(16);
+            font-weight: lighter;
+        }
+
+            .pop-menu__item { // li
+                padding-top: 12px;
+                font-size: rem(13);
+                // border-bottom: 1px solid $alto;
+            }
+
+                .pop-menu__text { // label
+                    padding-left: 10px;
+                }
+

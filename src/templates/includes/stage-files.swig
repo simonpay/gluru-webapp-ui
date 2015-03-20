@@ -13,7 +13,7 @@
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
-					    <div class="media__img sub-menu-trigger js-tt" 
+					    <div class="media__img sub-menu-trigger js-tt js-pmt" 
 					    	data-tt="Change Source" 
 					    	data-tt-config='{ "offset": {"top": 0, "left": 50} }'>
 					    	<div class="icon-gdrive"></div>
