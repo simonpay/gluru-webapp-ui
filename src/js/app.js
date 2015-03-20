@@ -325,7 +325,10 @@
 			},
 			hide: function () {
 				// console.log( "HIDE" );
-				$pop_menu_wrap.addClass( "is-hidden" );
+				$pop_menu_wrap
+					.addClass( "is-hidden" )
+					.offset({ left: -9999, top: -9999 })
+					;
 			}
 		}
 	};
