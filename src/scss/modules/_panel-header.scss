@@ -36,7 +36,7 @@
             width: calc(100% - #{$main-nav-width}); // viewport - main-nav
             top: 0;
             background: $white;
-            transition: width $drawer-animation-duration;
+            @include transition(width $drawer-animation-duration);
             // border-bottom: 0;
             .drawer-is-open & {
                 width: calc( 100% - #{$main-nav-width} - #{$drawer-width} ); // viewport - main-nav - drawer

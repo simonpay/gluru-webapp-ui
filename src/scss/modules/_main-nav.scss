@@ -85,7 +85,7 @@
                         border: 2px solid white;
                         border-radius: 100%;
                         opacity: 0;
-                        transition: all 0.4s;
+                        @include transition(all 0.4s);
                     }
 
                     

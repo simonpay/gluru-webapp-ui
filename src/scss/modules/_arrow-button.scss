@@ -16,7 +16,7 @@
         transform: rotate(45deg);
         cursor: pointer;
         opacity: 1;
-        transition: opacity 0.3s;
+        @include transition(opacity 0.3s);
         border-radius: 100%;
         border: 1px solid $dusty-gray-dark;
 

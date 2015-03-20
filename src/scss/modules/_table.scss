@@ -60,7 +60,8 @@
                     display: table-row;
                     &:not(.-header):not(.is-selected):hover .table__col {
                         cursor: pointer;
-                        background: $gallery;
+                        background-color: $gallery;
+                        // @include transition(all 0.5);
                     }
                 }
 
@@ -73,6 +74,7 @@
                         vertical-align: middle;
                         border-bottom: 1px solid rgba(0,0,0,0.065);
                         color: $black;
+                        @include transition(all 0.3s);
                         
 
                         // specific modifiers for files explorer table

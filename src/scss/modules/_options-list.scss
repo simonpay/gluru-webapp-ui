@@ -5,7 +5,7 @@
 .options-list {
     position: relative;
     margin: 5px 0 30px;
-    transition: margin 0.3s;
+    @include transition(margin 0.3s);
 
     .actions & {
         border-top: 1px solid $alto;

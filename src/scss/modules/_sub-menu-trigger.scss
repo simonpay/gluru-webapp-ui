@@ -15,7 +15,7 @@
         right: 5px;
         top: 50%;
         transform: translateY(-50%);
-        transition: opacity 0.3s;
+        @include transition(opacity 0.3s);
         opacity: 1;
     }
 

@@ -18,7 +18,7 @@
     // properties:   
     // - opacity with {x}s duration, 
     // - bottom with zero duration and delay
-    transition: opacity 0.5s, bottom 0;
+    @include transition(opacity 0.5s, bottom 0);
 
     &.is-hidden {
         bottom: 100%;
@@ -28,7 +28,7 @@
         // properties:   
         // - opacity with {x}s duration, 
         // - bottom with zero duration and {x}s delay
-        transition: opacity 0.3s, bottom 0 0.3s;
+        @include transition(opacity 0.3s, bottom 0 0.3s);
     }
 
 }
@@ -73,7 +73,7 @@
                 transform: rotate(45deg);
                 cursor: pointer;
                 opacity: 1;
-                transition: opacity 0.3s;
+                @include transition(opacity 0.3s);
 
                 &:before,
                 &:after {

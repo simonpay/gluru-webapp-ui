@@ -18,7 +18,7 @@
 	color: rgba($white, 0.8);
 	text-transform: uppercase;
 	font-size: rem(12);
-	transition: opacity $tooltip-animation-duration $tooltip-show-delay;
+	@include transition(opacity $tooltip-animation-duration $tooltip-show-delay);
 
     &:after {
         content: "";
@@ -35,8 +35,8 @@
     	visibility: hidden;
     	// todo: fix this
     	// fade out slowly - creates visual bug
-		// transition: opacity $tooltip-animation-duration, visibility 0 ($tooltip-animation-duration + $tooltip-show-delay);
-		transition: none;
+		// @include transition(opacity $tooltip-animation-duration, visibility 0 ($tooltip-animation-duration + $tooltip-show-delay));
+		@include transition(none);
     }
 
 }
