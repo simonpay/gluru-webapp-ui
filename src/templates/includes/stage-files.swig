@@ -13,7 +13,9 @@
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
-					    <div class="media__img sub-menu-trigger">
+					    <div class="media__img sub-menu-trigger js-tt" 
+					    	data-tt="Change Source" 
+					    	data-tt-config='{ "offset": {"top": 0, "left": 50} }'>
 					    	<div class="icon-gdrive"></div>
 					    </div>
 					    <div class="media__body -location-text">My Drive</div>
@@ -76,7 +78,7 @@
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
-					    <div class="media__img sub-menu-trigger">
+					    <div class="media__img sub-menu-trigger js-tt" data-tt="Change Source">
 					    	<div class="icon-gdrive"></div>
 					    </div>
 					    <div class="media__body -location-text">My Drive</div>
@@ -116,7 +118,7 @@
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
-					    <div class="media__img sub-menu-trigger">
+					    <div class="media__img sub-menu-trigger js-tt" data-tt="Change Source">
 					    	<div class="icon-gdrive"></div>
 					    </div>
 					    <div class="media__body -location-text">My Drive</div>
@@ -157,7 +159,7 @@
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
-					    <div class="media__img sub-menu-trigger">
+					    <div class="media__img sub-menu-trigger js-tt" data-tt="Change Source">
 					    	<div class="icon-gdrive"></div>
 					    </div>
 					    <div class="media__body -location-text">My Drive</div>
@@ -187,7 +189,7 @@
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
-					    <div class="media__img sub-menu-trigger">
+					    <div class="media__img sub-menu-trigger js-tt" data-tt="Change Source">
 					    	<div class="icon-gdrive"></div>
 					    </div>
 					    <div class="media__body -location-text">My Drive</div>
@@ -239,7 +241,7 @@
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
-					    <div class="media__img sub-menu-trigger">
+					    <div class="media__img sub-menu-trigger js-tt" data-tt="Change Source">
 					    	<div class="icon-gdrive"></div>
 					    </div>
 					    <div class="media__body -location-text">My Drive</div>

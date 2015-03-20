@@ -17,6 +17,7 @@
         transition: width $drawer-animation-duration;
         width: $drawer-width;
         height: 100%;
+        visibility: visible;
     }
     
     &.is-hidden {
@@ -26,6 +27,8 @@
         @include mq(large){
             width: 0;
             height: 100%;
+            // visibility: hidden;
+            // transition: height $drawer-animation-duration, bottom 0 $drawer-animation-duration;
         }
     }
 }

@@ -59,6 +59,7 @@
                 .table__row {
                     display: table-row;
                     &:not(.-header):not(.is-selected):hover .table__col {
+                        cursor: pointer;
                         background: $gallery;
                     }
                 }

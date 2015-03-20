@@ -1,15 +1,53 @@
 <nav class="main-nav">
-	<a href="#" class="main-nav__logo -gluru js-main-nav__link"></a>
+	<a href="#" 
+		class="main-nav__logo -gluru js-main-nav__link js-tt" 
+		data-tt="Home"></a>
 	<ul class="main-nav__list">
-		<li class="main-nav__item -primary"><a href="#" class="main-nav__link js-main-nav__link -avatar">Avatar</a></li>
-		<li class="main-nav__item -primary"><a href="#" class="main-nav__link js-main-nav__link -add">Add</a></li>
-		<li class="main-nav__item -primary -divider"><a href="#" class="main-nav__link js-main-nav__link -search js-nav-search">Search</a></li>
-		<li class="main-nav__item"><a href="#" class="main-nav__link js-main-nav__link -moments -highlight">Moments</a></li>
-		<li class="main-nav__item"><a href="#" class="main-nav__link js-main-nav__link -files -highlight">Files</a></li>
-		<li class="main-nav__item"><a href="#" class="main-nav__link js-main-nav__link -people -highlight">People</a></li>
-		<li class="main-nav__item"><a href="#" class="main-nav__link js-main-nav__link -projects -highlight">Projects</a></li>
-		<li class="main-nav__item"><a href="#" class="main-nav__link js-main-nav__link -auto-push -highlight">Auto-push</a></li>
-		<li class="main-nav__item"><a href="#" class="main-nav__link js-main-nav__link -settings -highlight">Settings</a></li>
+		<li class="main-nav__item -primary">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -avatar js-tt" 
+				data-tt="Profile">Avatar</a>
+		</li>
+		<li class="main-nav__item -primary">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -add js-tt" 
+				data-tt="Add  a File">Add</a>
+		</li>
+		<li class="main-nav__item -primary -divider">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -search js-nav-search js-tt" 
+				data-tt="Search">Search</a>
+		</li>
+		<li class="main-nav__item">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -moments -highlight js-tt" 
+				data-tt="Moments">Moments</a>
+		</li>
+		<li class="main-nav__item">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -files -highlight js-tt" 
+				data-tt="Files">Files</a>
+		</li>
+		<li class="main-nav__item">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -people -highlight js-tt" 
+				data-tt="People">People</a>
+		</li>
+		<li class="main-nav__item">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -projects -highlight js-tt" 
+				data-tt="Projects">Projects</a>
+		</li>
+		<li class="main-nav__item">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -auto-push -highlight js-tt" 
+				data-tt="Auto-push">Auto-push</a>
+		</li>
+		<li class="main-nav__item">
+			<a href="#" 
+				class="main-nav__link js-main-nav__link -settings -highlight js-tt" 
+				data-tt="Settings">Settings</a>
+		</li>
 	</ul>
 </nav>
 

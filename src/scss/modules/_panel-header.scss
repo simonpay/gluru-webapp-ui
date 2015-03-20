@@ -84,7 +84,10 @@
     background: $alabaster;
     // border-left: 1px solid $silver;
     // background: red;
-
+    
+    &:after {
+        background: $silver-dark;
+    }
 
     // // remove left border when panel is inside the first column for file explorer
     // .-col-1 & {

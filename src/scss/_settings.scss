@@ -23,9 +23,11 @@ $white: 					#fff;						// white - no surprises there!
 $alabaster: 				#fafafa;					// almost white
 $gallery: 					#eee;						// off white
 $alto: 						#ddd;						// very light gray
-$silver-light:				#d4d1d1;					// slightly lighter than "silver"
 $silver: 					#ccc;						// light gray
+$silver-light:				lighten($silver, 5%);		// slightly lighter than "silver"
+$silver-dark:				darken($silver, 5%);		// slightly darker than "silver"
 $dusty-gray: 				#999;						// mid gray
+$dusty-gray-light: 			lighten($dusty-gray, 5%);	// slightly lighter than "dusty-gray"
 $dusty-gray-dark: 			darken($dusty-gray, 5%);	// slightly darker than "dusty-gray"
 $dove-gray: 				#666;						// dark gray
 $zeus:		 				#2e261e;					// virtually black
@@ -35,10 +37,13 @@ $team-color-sales:			$orange;
 $team-color-marketing:		$blue;
 $team-color-development:	$light-green;
 
+$tooltips-background-color:	rgba($black, 0.8);
+
 
 // -----------------------------------
 // STACKING ORDER (z-index)
 // -----------------------------------
+$tooltip-z-index:							200;
 $main-nav-z-index:							100;
 $drawer-wrap-z-index:						50;
 $actions-wrap-z-index:						40;
@@ -102,6 +107,9 @@ $actions-animation-duration: 	0.3s;
 
 $panel-drop-shadow:				rgba(0, 0, 0, 0.15);
 $panel-drop-shadow-spread:		20px;
+
+$tooltip-animation-duration: 	0.3s;
+$tooltip-show-delay:			0.5s;
 
 
 

@@ -15,7 +15,13 @@
 		// actions
 		$tmp_open_actions = 	$( ".js-open-actions" ),
 		$tmp_close_actions = 	$( ".js-close-actions" ),
-		$tmp_toggle_actions = 	$( ".js-toggle-actions" );
+		$tmp_toggle_actions = 	$( ".js-toggle-actions" ),
+
+		$tooltip = 				$( ".js-tooltip" ),
+		$tooltip_triggers = 	$( ".js-tt" ),
+
+		$expandable_lists = 	$( ".js-toggle-expand-list" );
+
 
 
 	var gluru_app = {
@@ -215,6 +221,66 @@
 				$this.addClass( "is-selected" );
 				
 			}
+		},
+
+
+		tooltips: {
+
+			show: function () {
+
+				var $this 					= $(this),
+					_width 					= $this.width(),
+					_offset 				= $this.offset(),
+					_tooltip_text			= $this.data( "tt" ),
+					_tooltip_config 		= $this.data( "tt-config" ),
+					_is_main_nav_item 		= $this.hasClass( "js-main-nav__link" )
+					;
+
+				console.log(_tooltip_text);
+
+				if ( _tooltip_config === undefined) {
+
+					if ( _is_main_nav_item ) {
+						_offset.top += 0;
+						_offset.left += _width + 10;
+					}
+
+				} else {
+					// console.log("_tooltip_config.offset.top: " + _tooltip_config.offset.top + ", _tooltip_config.offset.left: " + _tooltip_config.offset.left);
+					_offset.top += _tooltip_config.offset.top;
+					_offset.left += _tooltip_config.offset.left;
+				}
+
+				$tooltip
+					.removeClass( "is-hidden" )
+					.html( _tooltip_text )
+					.offset({ left: _offset.left, top: _offset.top })
+					;
+			},
+			hide: function () {
+				// console.log( $(this) );
+				$tooltip.addClass( "is-hidden" );
+			}
+		},
+
+
+		options_list: {
+
+			toggle: function () {
+
+				$this = $(this);
+
+				$this
+					.parent()
+					.toggleClass( "is-collapsed" )
+						.find( ".options-list__inner-wrap" )
+						.animate({
+								"height": "toggle"
+							}, {
+								duration: 300
+							});
+
+			}
 		}
 	};
 
@@ -222,6 +288,15 @@
 
 	// cache main app obj to var
 	var obj_gluru = gluru_app;
+
+
+	$tooltip_triggers.on( "mouseover", function(){
+		obj_gluru.tooltips.show.call( $(this) );
+	});
+	$tooltip_triggers.on( "mouseout", function(){
+		obj_gluru.tooltips.hide.call( $(this) );
+	});
+
 
 	// DEV BUTTONS
 	// -------------------------------------------------
@@ -291,6 +366,12 @@
 
 
 
+	// COLLAPSABLE OPTIONS LISTS
+	// -------------------------------------------------
+	// animate all collapsable lists
+	$expandable_lists.on( "click", function(){
+		obj_gluru.options_list.toggle.call( $(this) );
+	});
 
 
 
@@ -324,18 +405,6 @@
 
 
 
-	// COLLAPSABLE OPTIONS LISTS
-	// -------------------------------------------------
-	// animate all collapsable lists
-	$( ".js-toggle-expand-list" ).on( "click", function(){
-		// console.log("hit");
-		$( this ).parent().toggleClass( "is-collapsed" );
-		$( this ).parent().find( ".options-list__inner-wrap" ).animate({
-			"height": "toggle"
-		}, {
-			duration: 300
-		});
-	});
 
 
 	// FORCE PANEL STATES

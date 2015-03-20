@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    # TOOLTIP
+\*------------------------------------*/
+
+.tooltip {
+	z-index: $tooltip-z-index;
+	display: block;
+	position: absolute;
+	top: 15px;
+	left: 42px;
+	padding: 8px 10px 7px;
+	// width: 100px;
+	// height: 25px;
+	opacity: 1;
+	visibility: visible;
+	background: $tooltips-background-color;
+	border-radius: 3px;
+	color: rgba($white, 0.8);
+	text-transform: uppercase;
+	font-size: rem(12);
+	transition: opacity $tooltip-animation-duration $tooltip-show-delay;
+
+    &:after {
+        content: "";
+        @include scut-triangle(left, 7px 13px, $tooltips-background-color);
+        position: absolute;
+        left: 0;;
+        top: 50%;
+        transform: translateY(-50%) translateX(-100%);
+        // border-right-color: $dusty-gray;
+    }
+
+    &.is-hidden {
+    	opacity: 0;
+    	visibility: hidden;
+    	// todo: fix this
+    	// fade out slowly - creates visual bug
+		// transition: opacity $tooltip-animation-duration, visibility 0 ($tooltip-animation-duration + $tooltip-show-delay);
+		transition: none;
+    }
+
+}
+
