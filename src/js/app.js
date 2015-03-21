@@ -342,9 +342,15 @@
 
 	// POP MENUS
 	// -------------------------------------------------
+	// $pop_menu_triggers.on( "click touchstart", function(){
 	$pop_menu_triggers.on( "click", function(){
 		obj_gluru.pop_menu.show.call( $(this) );
 	});
+	// $pop_menu_triggers.on( "touchstart", function(e){
+	// 	// alert("touchstart");
+	// 	obj_gluru.pop_menu.show.call( $(this) );
+	// 	e.preventDefault();
+	// });
 	$(document).on('click', function(e) {
 		// if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
 		if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {
@@ -456,7 +462,11 @@
 
 
 
-
+	// disable iOS overscroll effect
+	// http://www.html5rocks.com/en/mobile/touch/
+	document.body.addEventListener('touchmove', function(e) {
+		e.preventDefault();
+	}, false); 
 
 
 	// FORCE PANEL STATES

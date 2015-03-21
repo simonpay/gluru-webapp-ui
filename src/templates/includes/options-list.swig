@@ -1,11 +1,16 @@
 <div class="options-list">
 	<div class="options-list__heading -collapsable js-toggle-expand-list">{{ rObj.heading }}</div>
 	<div class="options-list__inner-wrap">
+
+	{% if rObj.id !== "file_summary" %}
 		<ul class="options-list__list">
+	{% endif %}
 
 		{% for obj in rObj.options %}
 
+			{% if rObj.id !== "file_summary" %}
 			<li class="options-list__item">
+			{% endif %}
 
 
 			{% if rObj.id === "sources" || rObj.id === "favourites" || rObj.id === "teams" || rObj.id === "relatedFiles" || rObj.id === "hierarchy" %}
@@ -94,6 +99,16 @@
 							</div>
 						</div>
 
+				{% elseif rObj.id === "file_summary" %}
+
+					<div class="thumbnail"></div>
+					<ul class="text-list">
+						<li class="text-list__item">Brand strategy 2015 across all regions.</li>
+						<li class="text-list__item">Key values, core style, new branding focus.</li>
+						<li class="text-list__item">Competitor benchmarking tools.</li>
+						<li class="text-list__item">Brand evolution roadmap.</li>
+					</ul>
+
 				{% endif %}
 
 
@@ -105,10 +120,14 @@
 			{% endif %}
 
 
+		{% if rObj.id !== "file_summary" %}
 			</li>
+		{% endif %}
 
 		{% endfor %}
 
+	{% if rObj.id !== "file_summary" %}
 		</ul><!-- //.options-list__list -->
+	{% endif %}
 	</div><!-- //.options-list__inner-wrap -->
 </div><!-- //.options-list -->

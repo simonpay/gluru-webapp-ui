@@ -64,6 +64,20 @@
         }
     },
     "actions": {
+        "current_file": {
+            "id":      "current_file",
+            "heading": "",
+            "options": [
+                {}
+            ]
+        },
+        "file_summary": {
+            "id":      "file_summary",
+            "heading": "Summary",
+            "options": [
+                {}
+            ]
+        },
         "relatedFiles": {
             "id":      "relatedFiles",
             "heading": "Related Files",

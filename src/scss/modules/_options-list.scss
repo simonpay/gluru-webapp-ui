@@ -2,6 +2,13 @@
 # OPTIONS-LIST
 \*------------------------------------*/
 
+// todo: 
+// options-list contents will need to be refactored to allow them to take up 
+// 100% of container - currently they are dsplay:inline-block with fixed widths
+// which wont work for tablet and mobile screens with varying viewport widths 
+// current approach will be fine for Apr 2015 deadline
+
+
 .options-list {
     position: relative;
     margin: 5px 0 30px;
@@ -36,10 +43,10 @@
                 right: 20px;
                 width: 20px;
                 height: 12px;
-                transform: rotate(180deg);
+                @include transform( rotate(180deg) );
                 @include use-sprite("icon-expand");
                 .is-collapsed & {
-                    transform: rotate(0deg);
+                    @include transform( rotate(0deg) );
                 }
             }
         }
@@ -57,7 +64,13 @@
             }
 
                 .options-list__item { // li
+                    position: relative;
                     margin-bottom: 0;
+
+                    &.-current-file {
+                        height: $options-list-link-height-actions;
+                        margin: 10px 0px 20px;
+                    }
 
                     .drawer & {
                         margin-bottom: 4px;
@@ -68,7 +81,7 @@
                         display: block;
                         position: relative;
                         height: $options-list-link-height-actions;
-                        padding-left: $options-link-left-padding-actions;
+                        // padding-left: $options-link-left-padding-actions;
                         text-decoration: none;
                         // font-size: rem(14);
                         color: $black;
@@ -99,7 +112,13 @@
 
 
                             .options-list__icon {
+                                margin-left: 5px;
                                 margin-right: 8px;
+
+                                &.-right {
+                                    margin-right: 0;
+                                    margin-left: 8px;
+                                }
 
                                 .drawer & {
                                     margin-right: 12px;
@@ -137,7 +156,14 @@
                                     font-weight: lighter;
                                     color: $dove-gray;
                                     font-size: rem(14);
+
                                 }
+                                
+                                &.options-list__text--current-file {
+                                    width: $options-link-text-width-actions - 35px;
+                                    // width: 248px;
+                                }
+
                             }
 
 

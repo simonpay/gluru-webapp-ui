@@ -14,7 +14,7 @@
         position: absolute;
         right: 5px;
         top: 50%;
-        transform: translateY(-50%);
+        @include transform( translateY(-50%) );
         @include transition(opacity 0.3s);
         opacity: 1;
     }

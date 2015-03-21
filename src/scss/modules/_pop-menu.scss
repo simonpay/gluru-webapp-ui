@@ -31,8 +31,10 @@
 
         .pop-menu__heading {
             // padding: 13px;
-            font-size: rem(16);
-            font-weight: lighter;
+            font-size: rem(15);
+            color: $dove-gray;
+            margin-bottom: 5px;
+            // font-weight: lighter;
         }
 
             .pop-menu__item { // li
