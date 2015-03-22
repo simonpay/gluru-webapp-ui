@@ -1,0 +1,55 @@
+/*------------------------------------*\
+    # EVENT NAV
+\*------------------------------------*/
+
+.event-nav {
+    @include scut-center-transform(y);
+    right: 0;
+    // set 'hit' area for hover
+    padding: 40px 8px 40px 30px;
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 100%;
+        margin: 4px;
+    }
+    
+    // show sub nav options on:
+    // - hover, or 
+    // - when inside is-selected class, 
+    &:hover,
+    .is-selected & {
+        .event-nav__list {
+            right: 20px;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+    .event-nav__more {
+    }
+
+    .event-nav__list {
+        @include scut-center-transform(y);
+        padding-right: 10px;
+        right: -10px;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all 0.3s ease);
+    }
+
+        .event-nav__item {
+            display: inline-block;
+            margin: 0 5px;
+            @include transform( scale(1.3) ); // temp style to make icons bigger
+            cursor: pointer;
+        }
+
+
+
+
+
+

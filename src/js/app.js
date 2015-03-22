@@ -277,6 +277,7 @@
 					.offset({ left: _offset.left, top: _offset.top })
 					;
 			},
+
 			hide: function () {
 				$tooltip.addClass( "is-hidden" );
 			}
@@ -310,7 +311,8 @@
 
 				var $this 					= $(this),
 					_height 				= $this.height(),
-					_offset 				= $this.offset()
+					_offset 				= $this.offset(),
+					_obj_gluru				= gluru_app
 					// _tooltip_config 		= $this.data( "tt-config" ),
 					;
 
@@ -321,6 +323,9 @@
 					// .html( _tooltip_text )
 					.offset({ left: _offset.left, top: _offset.top + _height })
 					;
+
+				// // hide tooltip
+				// _obj_gluru.tooltips.hide();
 
 			},
 			hide: function () {
@@ -352,6 +357,8 @@
 	// 	e.preventDefault();
 	// });
 	$(document).on('click', function(e) {
+		// hide tooltip
+		obj_gluru.tooltips.hide();
 		// if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
 		if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {
 			// Hide the pop_menu

@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    # FILE NAV
+\*------------------------------------*/
+
+.file-nav { // nav
+    @include scut-center-transform(y);
+    right: 0;
+    opacity: 0;
+    // hide file-nav instantly
+    @include transition(opacity 0);
+
+    .dot {
+        width: 5px;
+        height: 5px;
+        background: $dusty-gray;
+        .is-selected & {
+            background: $white;
+        }
+        border-radius: 100%;
+        margin: 3px auto;
+    }
+}
+
+    .file-nav__more {
+        width: 30px;
+        height: 30px;
+        padding-top: 2px;
+    }
+
+    .file-nav__list {
+        position: relative;
+        padding-right: 10px;
+    }
+
+        .file-nav__item {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+            .file-nav__icon {
+
+                &.-edit {
+                    @include use-sprite("icon-files__edit");
+                    .is-selected & {
+                        @include use-sprite("icon-files__edit--white");
+                    }
+                }
+                &.-folder {
+                    @include use-sprite("icon-files__folder");
+                    .is-selected & {
+                        @include use-sprite("icon-files__folder--white");
+                    }
+                }
+                &.-network {
+                    @include use-sprite("icon-files__network");
+                    .is-selected & {
+                        @include use-sprite("icon-files__network--white");
+                    }
+                }
+                &.-delete {
+                    @include use-sprite("icon-files__delete");
+                    .is-selected & {
+                        @include use-sprite("icon-files__delete--white");
+                    }
+                }
+            }
+
+
+
+
+
+

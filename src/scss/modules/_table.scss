@@ -58,10 +58,23 @@
 
                 .table__row {
                     display: table-row;
-                    &:not(.-header):not(.is-selected):hover .table__col {
-                        cursor: pointer;
-                        background-color: $gallery;
-                        // @include transition(all 0.5);
+                    &:not(.-header) {
+                        &:not(.is-selected):hover {
+                            .table__col {
+                                cursor: pointer;
+                                background-color: $gallery;
+                                // @include transition(all 0.5);
+                            }
+                        }
+                        &:hover, 
+                        &.is-selected {
+                            // show file nav on table row hover
+                            .file-nav {
+                                // fade file-nav up
+                                @include transition(opacity 0.3s);
+                                opacity: 1;
+                            }
+                        }
                     }
                 }
 

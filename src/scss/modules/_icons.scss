@@ -2,32 +2,41 @@
 # ICONS
 \*------------------------------------*/
 
-.icon-everything {           @include use-sprite("icon-source-everything"); }
-.icon-box {                  @include use-sprite("icon-source-box"); }
-.icon-gdrive {               @include use-sprite("icon-source-drive"); }
-.icon-dropbox {              @include use-sprite("icon-source-dropbox"); }
-.icon-evernote {             @include use-sprite("icon-source-evernote"); }
+.icon-everything {           	@include use-sprite("icon-source-everything"); }
+.icon-box {                  	@include use-sprite("icon-source-box"); }
+.icon-gdrive {               	@include use-sprite("icon-source-drive"); }
+.icon-dropbox {              	@include use-sprite("icon-source-dropbox"); }
+.icon-evernote {             	@include use-sprite("icon-source-evernote"); }
 
-.icon-moments {    	         @include use-sprite("icon-nav-moments"); }
+.icon-moments {    	         	@include use-sprite("icon-nav-moments"); }
 
-.icon-box-sml {              @include use-sprite("icon-source-box-sml"); }
-.icon-gdrive-sml {           @include use-sprite("icon-source-drive-sml"); }
-.icon-dropbox-sml {          @include use-sprite("icon-source-dropbox-sml"); }
-.icon-evernote-sml {         @include use-sprite("icon-source-evernote-sml"); }
+.icon-box-sml {              	@include use-sprite("icon-source-box-sml"); }
+.icon-gdrive-sml {           	@include use-sprite("icon-source-drive-sml"); }
+.icon-dropbox-sml {          	@include use-sprite("icon-source-dropbox-sml"); }
+.icon-evernote-sml {         	@include use-sprite("icon-source-evernote-sml"); }
 
-.icon-folder-shared {        @include use-sprite("icon-folder-shared"); }
-.icon-folder {               @include use-sprite("icon-folder"); }
-.icon-folder-custom {        @include use-sprite("icon-folder-custom"); }
-.icon-project {              @include use-sprite("icon-project"); }
-.icon-file-pdf {             @include use-sprite("icon-file-pdf"); }
-.icon-file-text {            @include use-sprite("icon-file-text"); }
-.icon-file-spreadsheet {     @include use-sprite("icon-file-spreadsheet"); }
-.icon-file-evernote {        @include use-sprite("icon-file-evernote"); }
-.icon-file-drive {           @include use-sprite("icon-file-drive"); }
+.icon-folder-shared {        	@include use-sprite("icon-folder-shared"); }
+.icon-folder {               	@include use-sprite("icon-folder"); }
+.icon-folder-custom {        	@include use-sprite("icon-folder-custom"); }
+.icon-project {              	@include use-sprite("icon-project"); }
+.icon-file-pdf {             	@include use-sprite("icon-file-pdf"); }
+.icon-file-text {            	@include use-sprite("icon-file-text"); }
+.icon-file-spreadsheet {     	@include use-sprite("icon-file-spreadsheet"); }
+.icon-file-evernote {        	@include use-sprite("icon-file-evernote"); }
+.icon-file-drive {           	@include use-sprite("icon-file-drive"); }
 
-.icon-expand {  	         @include use-sprite("icon-expand"); }
+.icon-expand {  	         	@include use-sprite("icon-expand"); }
 
-.tmp-fav-avatar-1 {   		 @include use-sprite("tmp-fav-avatar-1"); }
-.tmp-fav-avatar-2 {   		 @include use-sprite("tmp-fav-avatar-2"); }
-.tmp-fav-avatar-3 {   		 @include use-sprite("tmp-fav-avatar-3"); }
+.icon-files__edit {           	@include use-sprite("icon-files__edit"); }
+.icon-files__folder {        	@include use-sprite("icon-files__folder"); }
+.icon-files__network {       	@include use-sprite("icon-files__network"); }
+.icon-files__delete {         	@include use-sprite("icon-files__delete"); }
+.icon-files__edit--white {      @include use-sprite("icon-files__edit--white"); }
+.icon-files__folder--white {   	@include use-sprite("icon-files__folder--white"); }
+.icon-files__network--white {  	@include use-sprite("icon-files__network--white"); }
+.icon-files__delete--white {    @include use-sprite("icon-files__delete--white"); }
+
+.tmp-fav-avatar-1 {   		 	@include use-sprite("tmp-fav-avatar-1"); }
+.tmp-fav-avatar-2 {   		 	@include use-sprite("tmp-fav-avatar-2"); }
+.tmp-fav-avatar-3 {   		 	@include use-sprite("tmp-fav-avatar-3"); }
 
