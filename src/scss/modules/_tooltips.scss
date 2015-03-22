@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    # TOOLTIP
+    # TOOLTIPS
 \*------------------------------------*/
 
 .tooltip {
@@ -22,17 +22,43 @@
 
     &:after {
         content: "";
-        @include scut-triangle(left, 7px 13px, $tooltips-background-color);
+        @include scut-triangle(left, $tooltips-arrow-width $tooltips-arrow-height, $tooltips-background-color);
         position: absolute;
-        left: 0;;
+        left: 0;
         top: 50%;
         @include transform( translateY(-50%) translateX(-100%) );
-        // border-right-color: $dusty-gray;
+    }
+
+    &.-right:after {
+    	@include scut-triangle(right, $tooltips-arrow-width $tooltips-arrow-height, $tooltips-background-color);
+        left: auto;
+        top: auto;
+        right: -$tooltips-arrow-width;
+    }
+
+    &.-up:after {
+    	@include scut-triangle(up, $tooltips-arrow-height $tooltips-arrow-width, $tooltips-background-color);
+		top: -$tooltips-arrow-width;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+    }
+
+    &.-down:after {
+    	@include scut-triangle(down, $tooltips-arrow-height $tooltips-arrow-width, $tooltips-background-color);
+    	top: auto;
+		bottom: -$tooltips-arrow-width;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
     }
 
     &.is-hidden {
     	opacity: 0;
     	visibility: hidden;
+    	// opacity: 1;
+    	// visibility: visible;
+
     	// todo: fix this
     	// fade out slowly - creates visual bug
 		// @include transition(opacity $tooltip-animation-duration, visibility 0 ($tooltip-animation-duration + $tooltip-show-delay));

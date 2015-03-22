@@ -1,1 +1,1 @@
-<div class="tooltip is-hidden js-tooltip"></div>
+<div class="tooltip is-hidden -right js-tooltip">This is a tooltip</div>

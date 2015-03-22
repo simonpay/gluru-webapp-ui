@@ -248,15 +248,20 @@
 
 			show: function () {
 
-				var $this 					= $(this),
-					_width 					= $this.width(),
-					_offset 				= $this.offset(),
-					_tooltip_text			= $this.data( "tt" ),
-					_tooltip_config 		= $this.data( "tt-config" ),
-					_is_main_nav_item 		= $this.hasClass( "js-main-nav__link" )
+				var $this 						= $(this),
+					_width 						= $this.width(),
+					_offset 					= $this.offset(),
+					_tooltip_text				= $this.data( "tt" ),
+					_tooltip_config 			= $this.data( "tt-config" ),
+					_tooltip_direction 			= $this.data( "tt-dir" ),
+					_is_main_nav_item 			= $this.hasClass( "js-main-nav__link" ),
+					_tooltip_direction_class 	= ""
 					;
 
-				// console.log(_tooltip_text);
+					if ( _tooltip_direction !== undefined ) {
+						_tooltip_direction_class = "-" + _tooltip_direction;
+					}
+
 
 				if ( _tooltip_config === undefined) {
 
@@ -267,19 +272,29 @@
 
 				} else {
 					// console.log("_tooltip_config.offset.top: " + _tooltip_config.offset.top + ", _tooltip_config.offset.left: " + _tooltip_config.offset.left);
+
 					_offset.top += _tooltip_config.offset.top;
 					_offset.left += _tooltip_config.offset.left;
 				}
 
 				$tooltip
-					.removeClass( "is-hidden" )
+					.addClass( _tooltip_direction_class )
 					.html( _tooltip_text )
 					.offset({ left: _offset.left, top: _offset.top })
 					;
+
+				if ( _tooltip_direction === "right" ) {
+
+					$tooltip.offset({ left: _offset.left - $tooltip.width() - _width });
+				}
+
+				$tooltip.removeClass( "is-hidden" );
 			},
 
 			hide: function () {
-				$tooltip.addClass( "is-hidden" );
+				$tooltip
+					.removeClass( "-right" )
+					.addClass( "is-hidden" );
 			}
 		},
 
@@ -358,6 +373,7 @@
 	// });
 	$(document).on('click', function(e) {
 		// hide tooltip
+		console.log( "CLICK" );
 		obj_gluru.tooltips.hide();
 		// if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
 		if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {
