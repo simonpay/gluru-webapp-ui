@@ -13,7 +13,7 @@
 
         .stage-nav__item { // li
             display: inline-block;
-            margin: 0 4px;
+            margin: 0 6px;
         }
 
             .stage-nav__icon {
@@ -40,6 +40,14 @@
 
                 &.-actions {
                     @include use-sprite("icon-files__toggle-actions");
+                }
+
+                &.-search {
+                    @include use-sprite("icon-files__search");
+                }
+
+                &.-now {
+                    @include use-sprite("icon-files__now");
                 }
 
                 &:after {

@@ -6,6 +6,16 @@
 	<nav class="stage-nav">
 		<ul class="stage-nav__list">
 			<li class="stage-nav__item">
+				<div class="stage-nav__icon -search js-search js-tt"
+				data-tt="Search"
+				data-tt-dir="right"></div>
+			</li>
+			<li class="stage-nav__item">
+				<div class="stage-nav__icon -now js-now js-tt"
+				data-tt="Now"
+				data-tt-dir="right"></div>
+			</li>
+			<li class="stage-nav__item">
 				<div class="stage-nav__icon -drawer js-toggle-drawer js-tt"
 				data-tt="Toggle Drawer"
 				data-tt-dir="right"></div>

@@ -20,6 +20,7 @@
         top: $panel-header-height;
         height: calc(100% - #{$panel-header-height});
         width: $actions-width;
+        overflow: visible;
         @include transition(width $actions-animation-duration);
         // border-left: 1px solid $silver;
         box-shadow: 

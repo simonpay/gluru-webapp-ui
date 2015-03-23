@@ -9,7 +9,5 @@
     top: 0px;
     right: 0px;
     bottom: 0px;
-
-    @include mq(large){
-	}
+    overflow: hidden;
 }

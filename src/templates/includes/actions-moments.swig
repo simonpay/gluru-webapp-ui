@@ -2,15 +2,17 @@
 	{# actions #}
 	{% include "actions-start.swig" %}
 		
-		{%> "actions-file-summary" %}
+		{# summary #}
+		{% set rObj = mydata.actions.file_summary %}
+		{% include "options-list.swig" %}
 
 		{# related files #}
 		{% set rObj = mydata.actions.relatedFiles %}
 		{% include "options-list.swig" %}
 
 		{# email #}
-		{% set rObj = mydata.actions.email %}
-		{% include "options-list.swig" %}
+		{# {% set rObj = mydata.actions.email %} #}
+		{# {% include "options-list.swig" %} #}
 
 		{# people #}
 		{% set rObj = mydata.actions.people %}

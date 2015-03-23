@@ -2,28 +2,35 @@
 (function(){
 
 	// cached objects
-	var $main_container = 		$( ".js-main-container" ),
-		$drawer_wrap = 			$( ".js-drawer-wrap" ),
-		$actions_wrap = 		$( ".js-actions-wrap" ),
-		$search_wrap = 			$( ".js-search-wrap" ),
+	var $main_container 	= $( ".js-main-container" ),
+		$drawer_wrap 		= $( ".js-drawer-wrap" ),
+		$actions_wrap 		= $( ".js-actions-wrap" ),
+		$search_wrap 		= $( ".js-search-wrap" ),
 
 		// drawer
-		$toggle_drawer = 		$( ".js-toggle-drawer" ),
-		$close_drawer = 		$( ".js-close-drawer" ),
+		$toggle_drawer 		= $( ".js-toggle-drawer" ),
+		$close_drawer 		= $( ".js-close-drawer" ),
 
 		// actions
-		$toggle_actions = 		$( ".js-toggle-actions" ),
-		$close_actions = 		$( ".js-close-actions" ),
+		$toggle_actions 	= $( ".js-toggle-actions" ),
+		$close_actions 		= $( ".js-close-actions" ),
 
-		$tooltip = 				$( ".js-tooltip" ),
-		$tooltip_triggers = 	$( ".js-tt" ),
+		// search
+		$search 			= $( ".js-search" ),
+		$close_search 		= $( ".js-close-search" ),
 
-		$pop_menu_wrap = 		$( ".js-pop-menu-wrap" ),
-		$pop_menu_triggers = 	$( ".js-pmt" ),
+		// moments
+		$now				= $( ".js-now" ),
 
-		$expandable_lists = 	$( ".js-toggle-expand-list" ),
+		$tooltip 			= $( ".js-tooltip" ),
+		$tooltip_triggers 	= $( ".js-tt" ),
 
-		$table_wraps = 			$( ".table-wrap-outer" );
+		$pop_menu_wrap 		= $( ".js-pop-menu-wrap" ),
+		$pop_menu_triggers 	= $( ".js-pmt" ),
+
+		$expandable_lists 	= $( ".js-toggle-expand-list" ),
+
+		$table_wraps 		= $( ".table-wrap-outer" );
 
 
 
@@ -186,13 +193,21 @@
 
 			_open: function () {
 
-				$search_wrap.removeClass( "is-hidden" );
+				$search_wrap
+					.removeClass( "is-hidden" )
+					.find( ".search__field" )
+						.focus()
+						;
 				$main_container.addClass( "search-is-open" );
 			},
 
 			_close: function () {
 
-				$search_wrap.addClass( "is-hidden" );
+				$search_wrap
+					.addClass( "is-hidden" )
+					.find( ".search__field" )
+						.blur()
+						;
 				$main_container.removeClass( "search-is-open" );
 			}
 
@@ -216,6 +231,11 @@
 					$this
 						.closest( ".js-event-wrap" )
 						.addClass( "is-selected" );
+				},
+
+				now: function () {
+
+					location.href = "moments-now.html";
 				}
 			}
 		},
@@ -476,6 +496,9 @@
 	$( ".js-event-nav__link" ).on( "click", function(){
 		obj_gluru.moments.timeline.do_click.call( $(this) );
 	});
+	$now.on( "click", function() {
+		obj_gluru.moments.timeline.now();
+	});
 
 
 	// FILES
@@ -513,11 +536,11 @@
 	// SEARCH
 	// -------------------------------------------------
 	// show search "modal" screen
-	$( ".js-nav-search" ).on( "click", function(){
+	$search.on( "click", function(){
 		obj_gluru.search.set_state( "open" );
 	});
 	// close search panel
-	$( ".js-search-close" ).on( "click", function(){
+	$close_search.on( "click", function(){
 		obj_gluru.search.set_state( "close" );
 	});
 

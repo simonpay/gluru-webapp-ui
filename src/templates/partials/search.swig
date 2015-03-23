@@ -6,7 +6,7 @@
 			class="search__field" 
 			name="fname" 
 			placeholder="Search everywhere">
-		<div class="search__close js-search-close">
+		<div class="search__close js-close-search">
 			<div class="inner"></div>
 		</div>
 	</div>

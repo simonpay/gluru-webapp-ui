@@ -15,7 +15,7 @@
 		</li>
 		<li class="main-nav__item -primary -divider">
 			<a href="#" 
-				class="main-nav__link js-main-nav__link -search js-nav-search js-tt" 
+				class="main-nav__link js-main-nav__link -search js-search js-tt" 
 				data-tt="Search">Search</a>
 		</li>
 		<li class="main-nav__item">
