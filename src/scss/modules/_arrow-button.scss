@@ -1,33 +1,39 @@
 /*------------------------------------*\
-# CLOSE BUTTON
+# ARROW BUTTON
 \*------------------------------------*/
+
+.arrow-button-wrap__header-panel {
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: $panel-header-height;
+}
 
 .arrow-button {
     z-index: 1;
     @include scut-center-transform(y);
-    right: 35px;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 
     .inner {
         position: absolute;
         width: 100%;
         height: 100%;
         @include transform( rotate(45deg) );
-        cursor: pointer;
         opacity: 1;
-        @include transition( opacity 0.3s );
         border-radius: 100%;
         border: 1px solid $dusty-gray-dark;
-
+        cursor: pointer;
+        @include transition( opacity 0.3s );
 
         &:before,
         &:after {
             content: "";
             display: block;
             position: absolute;
-            top: 33%;
-            right: 33%;
+            top: 31%;
+            right: 31%;
             width: 3px;
             height: 50%;
             background: $dusty-gray-dark;
@@ -59,6 +65,12 @@
     left: -5px;
     float: left;
     margin-right: 10px;
+}
+
+.arrow-button__actions {
+    right: 25px;
+    // position: absolute;
+    // top: 0;
 }
 
 

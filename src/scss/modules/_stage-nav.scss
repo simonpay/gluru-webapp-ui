@@ -1,0 +1,74 @@
+/*------------------------------------*\
+# STAGE NAV
+\*------------------------------------*/
+
+.stage-nav { // nav
+    @include scut-center-transform(y);
+    right: 20px;
+}
+
+    .stage-nav__list { // ul
+        font-size: 0;
+    }
+
+        .stage-nav__item { // li
+            display: inline-block;
+            margin: 0 4px;
+        }
+
+            .stage-nav__icon {
+                position: relative;
+                overflow: visible !important;
+                opacity: 0.5;
+                cursor: pointer;
+
+                &.-infinity{
+                    @include use-sprite("icon-files__infinity-view");
+
+                    &.is-split-view{
+                        @include use-sprite("icon-files__split-view");
+                    }
+                }
+
+                &.-sort {
+                    @include use-sprite("icon-files__sort");
+                }
+
+                &.-drawer {
+                    @include use-sprite("icon-files__toggle-drawer");
+                }
+
+                &.-actions {
+                    @include use-sprite("icon-files__toggle-actions");
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    left: -2px;
+                    right: -2px;
+                    bottom: -2px;
+                    border: 1px solid rgba($dusty-gray, 0.4);
+                    border-radius: 100%;
+                }
+
+                &:hover,
+                &.is-selected,
+                {
+                    opacity: 1;
+
+                    &:after {
+                        content: "";
+                        border-color: rgba($dusty-gray, 0.6);
+                    }
+                }
+
+                &:active {
+                    &:after {
+                        background: rgba($black, .03);
+                    }
+                }
+            }
+
+

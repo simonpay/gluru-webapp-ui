@@ -7,7 +7,7 @@
 	<section class="section-wrap -files js-section-files">
 
 		{# single view #}
-		<div class="table-wrap-outer -cols-1">
+		<div class="table-wrap-outer -cols-1 -narrow-view">
 
 			<div class="table-wrap-container -col-1 js-file-view">
 			

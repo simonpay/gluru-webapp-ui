@@ -53,7 +53,8 @@
 }
 
 .panel-header--drawer {
-    // border-bottom: 0;
+    // set width to prevent close button moving when actions is closed
+    width: $drawer-width;
     &:after {
         left: 10px;
         right: 10px;

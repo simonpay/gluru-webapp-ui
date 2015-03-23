@@ -8,14 +8,14 @@
 		$search_wrap = 			$( ".js-search-wrap" ),
 
 		// drawer
-		$tmp_open_drawer = 		$( ".js-open-drawer" ),
-		$tmp_close_drawer = 	$( ".js-close-drawer" ),
-		$tmp_toggle_drawer = 	$( ".js-toggle-drawer" ),
+		$toggle_drawer = 		$( ".js-toggle-drawer" ),
+		// $open_drawer = 			$( ".js-open-drawer" ),
+		$close_drawer = 		$( ".js-close-drawer" ),
 
 		// actions
-		$tmp_open_actions = 	$( ".js-open-actions" ),
-		$tmp_close_actions = 	$( ".js-close-actions" ),
-		$tmp_toggle_actions = 	$( ".js-toggle-actions" ),
+		$toggle_actions = 		$( ".js-toggle-actions" ),
+		// $tmp_open_actions = 	$( ".js-open-actions" ),
+		$close_actions = 		$( ".js-close-actions" ),
 
 		$tooltip = 				$( ".js-tooltip" ),
 		$tooltip_triggers = 	$( ".js-tt" ),
@@ -39,8 +39,8 @@
 
 			set_state: function ( requested_state ) {
 
-				var drawer_is_open = $main_container.hasClass( "drawer-is-open" );
-				$( ".js-toggle-drawer" ).removeClass( "-left -right" );
+				var $this = $(this),
+				drawer_is_open = $main_container.hasClass( "drawer-is-open" );
 
 				// open/close drawer based on param "requested_state" passed to function
 				if ( requested_state !== undefined ) {
@@ -51,11 +51,21 @@
 				} else {
 
 					if ( drawer_is_open ) {
-						// // close drawer
+
+						// select drawer toggle button
+						$this.removeClass( "is-selected" );
+
+						// close drawer
 						obj_gluru.drawer._close.call( $(this) );
+
 					} else {
-						// // open drawer
+
+						// deselect drawer toggle button
+						$this.addClass( "is-selected" );
+
+						// open drawer
 						obj_gluru.drawer._open.call( $(this) );
+
 					}
 
 				}
@@ -67,9 +77,7 @@
 				$drawer_wrap.removeClass( "is-hidden" );
 				$main_container.addClass( "drawer-is-open" );
 
-				// $(this).removeClass( "-left -right" );
-				// $(this).addClass( "-left" );
-				$( ".js-toggle-drawer" ).addClass( "-left" );
+				// $( ".js-toggle-drawer" ).addClass( "-left" );
 			},
 
 			_close: function () {
@@ -77,9 +85,7 @@
 				$drawer_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "drawer-is-open" );
 
-				// $(this).removeClass( "-left -right" );
-				// $(this).addClass( "-right" );
-				$( ".js-toggle-drawer" ).addClass( "-right" );
+				// $( ".js-toggle-drawer" ).addClass( "-right" );
 			}
 
 		},
@@ -89,22 +95,35 @@
 
 			set_state: function ( requested_state ) {
 
-				var actions_is_open = $main_container.hasClass( "actions-is-open" );
+				var $this = $(this),
+					actions_is_open = $main_container.hasClass( "actions-is-open" );
 
 				// open/close actions based on param "requested_state" passed to function
 				if ( requested_state !== undefined ) {
 
 					obj_gluru.actions["_" + requested_state]();
 
+					if (requested_state === "open") $toggle_actions.addClass( "is-selected" );
+
 				// toggle actions
 				} else {
 
 					if ( actions_is_open ) {
-						// // close actions
+
+						// select actions toggle button
+						$this.removeClass( "is-selected" );
+
+						// close actions
 						obj_gluru.actions._close();
+
 					} else {
-						// // open actions
+
+						// deselect actions toggle button
+						$this.addClass( "is-selected" );
+
+						// open actions
 						obj_gluru.actions._open();
+
 					}
 
 				}
@@ -123,9 +142,9 @@
 				$main_container.removeClass( "actions-is-open" );
 
 				// deselect table row in files
-				$( ".js-table-row" ).removeClass( "is-selected" );
+				// $( ".js-table-row" ).removeClass( "is-selected" );
 				// deselect event in timeline
-				$( ".js-event-wrap" ).removeClass( "is-selected" );
+				// $( ".js-event-wrap" ).removeClass( "is-selected" );
 			}
 
 		},
@@ -217,6 +236,7 @@
 
 		files: {
 
+
 			// click row in files table
 			do_click: function () {
 
@@ -233,13 +253,35 @@
 			},
 
 			// change single / split view
-			set_file_explorer_view: function () {
+			set_file_explorer_view: function ( requested_view ) {
 
 				var $this 	= $(this);
 					$target = $( $this.data("class") );
 
+				if ( requested_view !== undefined ) {
+					$target = $( requested_view );
+				}
+
 				$table_wraps.hide();
 				$target.show();
+			},
+
+			toggle_file_view: function () {
+				var $this 		= $(this),
+					_obj_gluru	= gluru_app;
+
+				if ( $this.hasClass( "is-split-view" ) ) {
+
+					// make it single view - infinity
+					_obj_gluru.files.set_file_explorer_view( ".-cols-1" );
+				} else {
+
+					// make it split view - 2 cols
+					_obj_gluru.files.set_file_explorer_view( ".-cols-2" );
+				}
+
+				$this.toggleClass( "is-split-view" );
+
 			}
 		},
 
@@ -271,7 +313,6 @@
 					}
 
 				} else {
-					// console.log("_tooltip_config.offset.top: " + _tooltip_config.offset.top + ", _tooltip_config.offset.left: " + _tooltip_config.offset.left);
 
 					_offset.top += _tooltip_config.offset.top;
 					_offset.left += _tooltip_config.offset.left;
@@ -284,7 +325,6 @@
 					;
 
 				if ( _tooltip_direction === "right" ) {
-
 					$tooltip.offset({ left: _offset.left - $tooltip.width() - _width });
 				}
 
@@ -373,7 +413,7 @@
 	// });
 	$(document).on('click', function(e) {
 		// hide tooltip
-		console.log( "CLICK" );
+		// console.log( "CLICK" );
 		obj_gluru.tooltips.hide();
 		// if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
 		if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {
@@ -396,31 +436,57 @@
 	// DEV BUTTONS
 	// -------------------------------------------------
 	// drawer
-	// toggle drawer
-	$tmp_toggle_drawer.on( "click", function(){
-		obj_gluru.drawer.set_state.call( $(this) );
-	});
+	// // toggle drawer
+	// $toggle_drawer.on( "click", function(){
+	// 	obj_gluru.drawer.set_state.call( $(this) );
+	// });
 	// open drawer
-	$tmp_open_drawer.on( "click", function(){
-		obj_gluru.drawer.set_state( "open" );
-	});
-	// close drawer
-	$tmp_close_drawer.on( "click", function(){
-		obj_gluru.drawer.set_state( "close" );
-	});
+	// $open_drawer.on( "click", function(){
+	// 	obj_gluru.drawer.set_state( "open" );
+	// });
 
 	// actions
-	// toggle actions
-	$tmp_toggle_actions.on( "click", function(){
-		obj_gluru.actions.set_state();
-	});
+	// // toggle actions
+	// $toggle_actions.on( "click", function(){
+	// 	obj_gluru.actions.set_state.call( $(this) );
+	// });
 	// open actions
-	$tmp_open_actions.on( "click", function(){
-		obj_gluru.actions.set_state( "open" );
+	// $tmp_open_actions.on( "click", function(){
+	// 	obj_gluru.actions.set_state( "open" );
+	// });
+
+
+	// DRAWER
+	// -------------------------------------------------
+	// close drawer
+	$close_drawer.on( "click", function(){
+		// obj_gluru.drawer.set_state( "close" );
+		
+		// assuming the close button is only visible when 
+		// panel is open, this will close the panel 
+		// by simulating a click on the toggle button
+		$( ".-drawer.js-toggle-drawer" ).click();
 	});
+	// toggle drawer
+	$toggle_drawer.on( "click", function(){
+		obj_gluru.drawer.set_state.call( $(this) );
+	});
+
+
+	// ACTIONS
+	// -------------------------------------------------
 	// close actions
-	$tmp_close_actions.on( "click", function(){
-		obj_gluru.actions.set_state( "close" );
+	$close_actions.on( "click", function(){
+		// obj_gluru.actions.set_state( "close" );
+		
+		// assuming the close button is only visible when 
+		// panel is open, this will close the panel 
+		// by simulating a click on the toggle button
+		$( ".-actions.js-toggle-actions" ).click();
+	});
+	// toggle drawer
+	$toggle_actions.on( "click", function(){
+		obj_gluru.actions.set_state.call( $(this) );
 	});
 
 
@@ -443,8 +509,10 @@
 	// FILES
 	// -------------------------------------------------
 	// click event for each row in the table (except the header)
-	$( ".js-table-row:not(.-header)" ).on( "click", function(){
-		obj_gluru.files.do_click.call( $(this) );
+	// $( ".js-table-row:not(.-header, .js-open-file)" ).on( "click", function(){
+	$( ".js-table-row" )
+		.on( "click", function(){
+			obj_gluru.files.do_click.call( $(this) );
 	});
 	// FILE EXPLORER SPLIT VIEW
 	// -------------------------------------------------
@@ -462,6 +530,12 @@
 	});
 	// set the initial view
 	obj_gluru.files.set_file_explorer_view.call( $( ".js-single" ) );
+
+	// toggle file view
+	$( ".js-toggle-file-view" ).on( "click", function(){
+		obj_gluru.files.toggle_file_view.call( $(this) );
+	});
+
 
 
 	// SEARCH

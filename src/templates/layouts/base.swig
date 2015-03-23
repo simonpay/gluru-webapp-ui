@@ -29,15 +29,11 @@
 <div class="tmp-buttons">
     <div class="button-group js-buttons-generic">
         <div class="label">Actions</div>
-        <button class="button js-open-actions">open</button>
-        <button class="button js-close-actions">close</button>
         <button class="button js-toggle-actions">toggle</button>
     </div>
 
     <div class="button-group js-buttons-generic">
         <div class="label">Drawer</div>
-        <button class="button js-open-drawer">open</button>
-        <button class="button js-close-drawer">close</button>
         <button class="button js-toggle-drawer">toggle</button>
     </div>
 

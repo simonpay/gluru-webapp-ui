@@ -16,6 +16,7 @@
 	background: $tooltips-background-color;
 	border-radius: 3px;
 	color: rgba($white, 0.8);
+    white-space: nowrap;
 	text-transform: uppercase;
 	font-size: rem(12);
 	@include transition(opacity $tooltip-animation-duration $tooltip-show-delay);
