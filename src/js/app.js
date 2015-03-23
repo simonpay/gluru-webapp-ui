@@ -9,12 +9,10 @@
 
 		// drawer
 		$toggle_drawer = 		$( ".js-toggle-drawer" ),
-		// $open_drawer = 			$( ".js-open-drawer" ),
 		$close_drawer = 		$( ".js-close-drawer" ),
 
 		// actions
 		$toggle_actions = 		$( ".js-toggle-actions" ),
-		// $tmp_open_actions = 	$( ".js-open-actions" ),
 		$close_actions = 		$( ".js-close-actions" ),
 
 		$tooltip = 				$( ".js-tooltip" ),
@@ -76,16 +74,12 @@
 
 				$drawer_wrap.removeClass( "is-hidden" );
 				$main_container.addClass( "drawer-is-open" );
-
-				// $( ".js-toggle-drawer" ).addClass( "-left" );
 			},
 
 			_close: function () {
 
 				$drawer_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "drawer-is-open" );
-
-				// $( ".js-toggle-drawer" ).addClass( "-right" );
 			}
 
 		},
@@ -123,7 +117,6 @@
 
 						// open actions
 						obj_gluru.actions._open();
-
 					}
 
 				}
@@ -140,11 +133,6 @@
 
 				$actions_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "actions-is-open" );
-
-				// deselect table row in files
-				// $( ".js-table-row" ).removeClass( "is-selected" );
-				// deselect event in timeline
-				// $( ".js-event-wrap" ).removeClass( "is-selected" );
 			}
 
 		},
@@ -228,7 +216,6 @@
 					$this
 						.closest( ".js-event-wrap" )
 						.addClass( "is-selected" );
-					
 				}
 			}
 		},
@@ -354,7 +341,6 @@
 							}, {
 								duration: 300
 							});
-
 			}
 		},
 
@@ -368,21 +354,15 @@
 					_height 				= $this.height(),
 					_offset 				= $this.offset(),
 					_obj_gluru				= gluru_app
-					// _tooltip_config 		= $this.data( "tt-config" ),
 					;
-
-				// console.log( _offset );
 
 				$pop_menu_wrap
 					.removeClass( "is-hidden" )
 					// .html( _tooltip_text )
 					.offset({ left: _offset.left, top: _offset.top + _height })
 					;
-
-				// // hide tooltip
-				// _obj_gluru.tooltips.hide();
-
 			},
+
 			hide: function () {
 				// console.log( "HIDE" );
 				$pop_menu_wrap
@@ -399,21 +379,13 @@
 	var obj_gluru = gluru_app;
 
 
-
 	// POP MENUS
 	// -------------------------------------------------
-	// $pop_menu_triggers.on( "click touchstart", function(){
 	$pop_menu_triggers.on( "click", function(){
 		obj_gluru.pop_menu.show.call( $(this) );
 	});
-	// $pop_menu_triggers.on( "touchstart", function(e){
-	// 	// alert("touchstart");
-	// 	obj_gluru.pop_menu.show.call( $(this) );
-	// 	e.preventDefault();
-	// });
 	$(document).on('click', function(e) {
 		// hide tooltip
-		// console.log( "CLICK" );
 		obj_gluru.tooltips.hide();
 		// if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
 		if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {

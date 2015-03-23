@@ -101,7 +101,7 @@
 
 				{% elseif rObj.id === "file_summary" %}
 
-					<div class="thumbnail"></div>
+					{# <div class="thumbnail"></div> #}
 					<ul class="text-list">
 						<li class="text-list__item">Brand strategy 2015 across all regions.</li>
 						<li class="text-list__item">Key values, core style, new branding focus.</li>

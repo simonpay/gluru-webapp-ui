@@ -14,6 +14,10 @@
 			</div>
 		</div>
 
+		{# hierarchy #}
+		{% set rObj = mydata.actions.hierarchy %}
+		{% include "options-list.swig" %}
+
 		{# summary #}
 		{% set rObj = mydata.actions.file_summary %}
 		{% include "options-list.swig" %}
@@ -23,15 +27,11 @@
 		{% include "options-list.swig" %}
 
 		{# email #}
-		{% set rObj = mydata.actions.email %}
-		{% include "options-list.swig" %}
+		{# {% set rObj = mydata.actions.email %} #}
+		{# {% include "options-list.swig" %} #}
 
 		{# people #}
 		{% set rObj = mydata.actions.people %}
-		{% include "options-list.swig" %}
-
-		{# hierarchy #}
-		{% set rObj = mydata.actions.hierarchy %}
 		{% include "options-list.swig" %}
 
 		{# web pages #}
