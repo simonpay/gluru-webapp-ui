@@ -1,7 +1,10 @@
 /*------------------------------------*\
     # EVENTS
 \*------------------------------------*/
-// events sit within the timeline
+// events sit within the timeline.
+// a single event container also as a header
+// at the top of the actions panel
+// when an event is selected 
 
 
 .event-group {
@@ -17,6 +20,12 @@
     border-radius: 31px;
     border: 6px solid #fff;
     @include transform( translateX(-50%) ); // pull back 50% of width to center with icon
+
+    .-split-view & {
+        // width: 142px;
+        margin: 0 auto;
+        @include transform( none );
+    }
 
     .-text {
         @include scut-center-transform;
@@ -41,6 +50,11 @@
             position: relative;
             display: inline-block;
             vertical-align: middle;
+
+            .-split-view & {
+                display: block;
+                margin: 0 auto;
+            }
         }
 
         .event-time {
@@ -77,40 +91,59 @@
         }
 
         .event {
-            // width: calc(100% - 200px);
-            height: 120px;
-            min-width: 500px;
-            // padding: 0 20px;
+            height: $event-height;
+            // width: 500px;
+            width: 65%;
             background: $dusty-gray;
             border-radius: 15px;
-            @include transition(transform 0.2s);
 
-            &:hover {
-                // box-shadow: 0px 0px 15px $dusty-gray;
-                @include transform( translateX(3px) );
+            // add hover when inside event-wrap 
+            // (must be in timeline - not in actions header)
+            .event-wrap & {
+                @include transition(transform 0.2s);
+
+                &:hover {
+                    // box-shadow: 0px 0px 15px $dusty-gray;
+                    @include transform( translateX(3px) );
+                }
+            }
+            
+            // when timeline is split, remove animations
+            .-split-view & {
+                @include transition( none );
+
+                &:hover {
+                    // box-shadow: 0px 0px 15px $dusty-gray;
+                    @include transform( none );
+                }
+            }
+
+            .-split-view & {
+                width: 80%;
+                min-width: 270px;
+                
+                // remove triangle
+                &:after {
+                    content: none;
+                }
             }
 
             .is-selected & {
-                @include transform( translateX(30px) );
+                @include transform( translateX(30px) !important );
+                // when timeline is split, remove animations
+                .-split-view & {
+                    @include transform( none !important );
+                }
             }
 
-            .-critical & {
+            &.-critical {
                 background: $pink;
-                // &:hover {
-                //     box-shadow: 0px 0px 15px $pink;
-                // }
             }
-            .-non-critical & {
+            &.-non-critical {
                 background: $orange;
-                // &:hover {
-                //     box-shadow: 0px 0px 15px $orange;
-                // }
             }
-            .-now & {
+            &.-now {
                 background: $green;
-                // &:hover {
-                //     box-shadow: 0px 0px 15px $green;
-                // }
             }
 
             &:after {
@@ -122,16 +155,30 @@
                 @include transform( translateY(-50%) );
                 border-right-color: $dusty-gray;
             }
-
+        
             // set color of triangles when inside specific class 
-            .-critical &:after {
+            &.-critical:after {
                 border-right-color: $pink;
             }
-            .-non-critical &:after {
+            &.-non-critical:after {
                 border-right-color: $orange;
             }
-            .-now &:after {
+            &.-now:after {
                 border-right-color: $green;
+            }
+            
+            // config for the header panel in actions panel
+            // for timeline section
+            &.event--actions-header {
+                width: calc( #{$actions-width} + 20px );
+                left: 20px;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                @include transition( left $actions-animation-duration );
+
+                .actions-is-open & {
+                    left: -20px;
+                }
             }
         }
 

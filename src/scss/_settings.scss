@@ -90,7 +90,12 @@ $options-link-left-padding-actions:			5px;
 $options-link-text-width-drawer:			$drawer-width - 86px;
 $options-link-text-width-actions:			$actions-width - 86px;
 
+// files
+$min-table-width-files-single:				600px;
+$min-table-width-files-split:				$min-table-width-files-single - 200px;
+
 // timeline
+$event-height:								120px;
 $event-time-width:							120px;
 $event-icon-wrap-width:						62px;
 $event-icon-wrap-height:					$event-icon-wrap-width;

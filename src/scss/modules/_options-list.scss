@@ -156,12 +156,15 @@
                                     font-weight: lighter;
                                     color: $dove-gray;
                                     font-size: rem(14);
-
                                 }
                                 
                                 &.options-list__text--current-file {
                                     width: $options-link-text-width-actions - 35px;
                                     // width: 248px;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
                                 }
 
                             }

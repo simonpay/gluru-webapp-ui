@@ -54,6 +54,13 @@
         @include mq(large){
             height: calc(100% - #{$panel-header-height});
             width: $actions-width;
+            
+            // set height of actions panel to be 100% minus
+            // height of event in header when an event is selected
+            // TODO: refactor this as its too fiddly
+            .event-is-selected & {
+                height: calc(100% - #{$event-height});
+            }
         }
     }
         

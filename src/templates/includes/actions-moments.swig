@@ -1,5 +1,6 @@
 
 	{# actions #}
+	{% set moments_header = true %}
 	{% include "actions-start.swig" %}
 		
 		{# summary #}

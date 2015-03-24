@@ -26,9 +26,15 @@
 				data-tt-dir="right"></div>
 			</li>
 			<li class="stage-nav__item">
+			{% if obj.stage_id === "moments" %}
+				<div class="stage-nav__icon -infinity js-toggle-timeline-view js-tt"
+				data-tt="Toggle View"
+				data-tt-dir="right"></div>
+			{% elseif obj.stage_id === "files" %}
 				<div class="stage-nav__icon -infinity js-toggle-file-view js-tt"
 				data-tt="Toggle View"
 				data-tt-dir="right"></div>
+			{% endif %}
 			</li>
 			<li class="stage-nav__item">
 				<div class="stage-nav__icon -sort js-tt"

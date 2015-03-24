@@ -29,6 +29,7 @@
 	<script>
 		(function(){
 			$( ".stage-nav__icon.js-toggle-actions" ).click();
+			$( ".js-event-nav__link" )[0].click();
 		})();
 		</script>
 {% endblock %}

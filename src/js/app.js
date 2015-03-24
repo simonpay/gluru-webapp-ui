@@ -2,35 +2,41 @@
 (function(){
 
 	// cached objects
-	var $main_container 	= $( ".js-main-container" ),
-		$drawer_wrap 		= $( ".js-drawer-wrap" ),
-		$actions_wrap 		= $( ".js-actions-wrap" ),
-		$search_wrap 		= $( ".js-search-wrap" ),
-
-		// drawer
-		$toggle_drawer 		= $( ".js-toggle-drawer" ),
-		$close_drawer 		= $( ".js-close-drawer" ),
-
-		// actions
-		$toggle_actions 	= $( ".js-toggle-actions" ),
-		$close_actions 		= $( ".js-close-actions" ),
+	var $main_container 		= $( ".js-main-container" ),
+		$drawer_wrap 			= $( ".js-drawer-wrap" ),
+		$actions_wrap 			= $( ".js-actions-wrap" ),
+		$search_wrap 			= $( ".js-search-wrap" ),
+	
+		// drawer	
+		$toggle_drawer 			= $( ".js-toggle-drawer" ),
+		$close_drawer 			= $( ".js-close-drawer" ),
+	
+		// actions	
+		$toggle_actions 		= $( ".js-toggle-actions" ),
+		$close_actions 			= $( ".js-close-actions" ),
+		$event_actions_header 	= $( ".js-event--actions-header" ),
 
 		// search
-		$search 			= $( ".js-search" ),
-		$close_search 		= $( ".js-close-search" ),
-
-		// moments
-		$now				= $( ".js-now" ),
-
-		$tooltip 			= $( ".js-tooltip" ),
-		$tooltip_triggers 	= $( ".js-tt" ),
-
-		$pop_menu_wrap 		= $( ".js-pop-menu-wrap" ),
-		$pop_menu_triggers 	= $( ".js-pmt" ),
-
-		$expandable_lists 	= $( ".js-toggle-expand-list" ),
-
-		$table_wraps 		= $( ".table-wrap-outer" );
+		$search 				= $( ".js-search" ),
+		$close_search 			= $( ".js-close-search" ),
+	
+		// moments	
+		$now					= $( ".js-now" ),
+		$timeline_wrap			= $( ".js-timeline-wrap" ),
+		
+		// tooltips
+		$tooltip 				= $( ".js-tooltip" ),
+		$tooltip_triggers 		= $( ".js-tt" ),
+		
+		// pop menu
+		$pop_menu_wrap 			= $( ".js-pop-menu-wrap" ),
+		$pop_menu_triggers 		= $( ".js-pmt" ),
+		
+		// collapsable lists
+		$expandable_lists 		= $( ".js-toggle-expand-list" ),
+		
+		// files
+		$table_wraps 			= $( ".table-wrap-outer" );
 
 
 
@@ -221,7 +227,8 @@
 				do_click: function () {
 
 					// cache event nav menu item clicked
-					var $this = $(this);
+					var $this = $(this),
+						_priority_class = "-" + $this.closest( ".js-event" ).data( "priority" );
 
 					// open actions
 					obj_gluru.actions.set_state( "open" );
@@ -231,11 +238,54 @@
 					$this
 						.closest( ".js-event-wrap" )
 						.addClass( "is-selected" );
+
+					$main_container
+						.addClass( "event-is-selected" );
+
+					$event_actions_header
+						.removeClass( "-now -critical -non-critical" )
+						.addClass( _priority_class )
+						;
 				},
 
 				now: function () {
 
 					location.href = "moments-now.html";
+				},
+
+				// toggle timeline between infinity and split view
+				set_timeline_view: function ( requested_view ) {
+
+					var $this 	= $(this);
+						$target = $( $this.data("class") );
+
+					if ( requested_view !== undefined ) {
+						$target = $( requested_view );
+					}
+
+					$table_wraps.hide();
+					$target.show();
+				},
+
+				// toggle button between infinity and split view
+				toggle_timeline_view: function () {
+					var $this 		= $(this),
+						_obj_gluru	= gluru_app;
+
+					if ( $this.hasClass( "is-split-view" ) ) {
+
+						// make it single view - infinity
+						// _obj_gluru.files.set_timeline_view( ".-cols-1" );
+						$timeline_wrap.removeClass( "-split-view -cols-1 -cols-2 -cols-3" );
+					} else {
+
+						// make it split view - 2 cols
+						// _obj_gluru.files.set_timeline_view( ".-cols-2" );
+						$timeline_wrap.addClass( "-split-view -cols-2" );
+					}
+
+					$this.toggleClass( "is-split-view" );
+
 				}
 			}
 		},
@@ -498,6 +548,10 @@
 	});
 	$now.on( "click", function() {
 		obj_gluru.moments.timeline.now();
+	});
+	// toggle timeline view
+	$( ".js-toggle-timeline-view" ).on( "click", function(){
+		obj_gluru.moments.timeline.toggle_timeline_view.call( $(this) );
 	});
 
 

@@ -12,6 +12,16 @@
     position: relative;
     height: 100%;
     padding-left: 7px;
+
+    &.-cols-1 {
+        min-width: $min-table-width-files-single;
+    }
+    &.-cols-2 {
+        min-width: $min-table-width-files-split * 2;
+    }
+    &.-cols-3 {
+        min-width: $min-table-width-files-split * 3;
+    }
 }
 
     .table-wrap-container {

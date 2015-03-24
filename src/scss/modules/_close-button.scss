@@ -2,20 +2,21 @@
 # CLOSE BUTTON
 \*------------------------------------*/
 
-// .close-button-wrap__header-panel {
-//     z-index: 5;
-//     position: absolute;
-//     right: 0;
-//     width: 45px;
-//     height: $panel-header-height;
-// }
+.close-button-wrap__header-panel {
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: $panel-header-height;
+}
 
 .close-button {
     z-index: 1;
     @include scut-center-transform(y);
     width: 28px;
     height: 28px;
-
+    
     .inner {
         position: absolute;
         width: 100%;
@@ -42,6 +43,18 @@
         }
         &:hover {
             opacity: 0.5;
+        }
+    }
+
+    &.-reverse {
+        .inner {
+            border-color: $white;
+
+            &:before,
+            &:after {
+                background: $white;
+
+            }
         }
     }
 
