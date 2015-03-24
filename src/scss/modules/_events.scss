@@ -170,7 +170,7 @@
             // config for the header panel in actions panel
             // for timeline section
             &.event--actions-header {
-                width: calc( #{$actions-width} + 20px );
+                @include calc( width, "#{$actions-width} + 20px" );
                 left: 20px;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;

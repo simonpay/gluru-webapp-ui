@@ -33,14 +33,15 @@
 
         @include mq(large) {
             position: fixed;
-            width: calc(100% - #{$main-nav-width}); // viewport - main-nav
+            @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav
             top: 0;
             background: $white;
             @include transition(width $drawer-animation-duration);
-            // border-bottom: 0;
+
             .drawer-is-open & {
-                width: calc( 100% - #{$main-nav-width} - #{$drawer-width} ); // viewport - main-nav - drawer
+                @include calc( width, "100% - #{$main-nav-width} - #{$drawer-width}" ); // viewport - main-nav - drawer
             }
+
             &.is-hidden {
                 display: none;
             }
@@ -55,6 +56,7 @@
 .panel-header--drawer {
     // set width to prevent close button moving when actions is closed
     width: $drawer-width;
+
     &:after {
         left: 10px;
         right: 10px;
@@ -78,23 +80,9 @@
 
 // header for file explorer showing current source and crumbtrail (location) 
 .panel-header--location {
-    // position: fixed;
-    // width: calc( 100% - #{$main-nav-width} ); // viewport - main nav
     width: 100%;
-    // @include transform( translateY(-100%) );
     padding-top: 13px;
     background: $alabaster;
-    // border-left: 1px solid $silver;
-    // background: red;
-    
-    &:after {
-        // background: $silver-dark;
-    }
-
-    // // remove left border when panel is inside the first column for file explorer
-    // .-col-1 & {
-    //     border-left: none;
-    // }
 }
 
 

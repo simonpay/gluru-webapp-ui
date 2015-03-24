@@ -28,7 +28,6 @@
         position: relative;
         float: left;
         height: 100%;
-        // height: calc(100% - #{$panel-header-height}); // viewport(h) - panel-header(h)
         
         // when inside parent class .-cols-2
         .-cols-2 & {
@@ -53,8 +52,7 @@
 
         .table-wrap {
             position: relative;
-            height: calc(100% - #{$panel-header-height}); // TODO: move to file-explorer scoped partial??
-            // height: 100%;
+            @include calc( height, "100% - #{$panel-header-height}" ); // TODO: move to file-explorer scoped partial??
             overflow: auto;
             padding-right: 10px;
         }

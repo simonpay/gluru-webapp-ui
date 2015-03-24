@@ -18,7 +18,7 @@
         position: relative;
         float: right;
         top: $panel-header-height;
-        height: calc(100% - #{$panel-header-height});
+        @include calc( height, "100% - #{$panel-header-height}" );
         width: $actions-width;
         overflow: visible;
         @include transition(width $actions-animation-duration);
@@ -40,7 +40,7 @@
             opacity: 1;
             visibility: visible;
             width: 0;
-            height: calc(100% - #{$panel-header-height});
+            @include calc( height, "100% - #{$panel-header-height}" );
         }
     }
 }
@@ -52,14 +52,14 @@
         overflow-y: auto;
 
         @include mq(large){
-            height: calc(100% - #{$panel-header-height});
+            @include calc( height, "100% - #{$panel-header-height}" );
             width: $actions-width;
             
             // set height of actions panel to be 100% minus
             // height of event in header when an event is selected
             // TODO: refactor this as its too fiddly
             .event-is-selected & {
-                height: calc(100% - #{$event-height});
+                @include calc( height, "100% - #{$event-height}" );
             }
         }
     }
