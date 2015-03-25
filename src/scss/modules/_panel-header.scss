@@ -57,7 +57,7 @@
 .panel-header--drawer {
     // set width to prevent close button moving when actions is closed
     width: $drawer-width;
-    padding: 0 $drawer-padding-right 0 $drawer-padding-left;
+    padding: 0 $panel-header-padding-right--drawer 0 $panel-header-padding-left--drawer;
 
     &:before {
         left: 10px;

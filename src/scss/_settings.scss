@@ -75,10 +75,9 @@ $main-nav-width:                            100px;
 
 // drawer
 $drawer-wrap-width:                         260px;
-$drawer-wrap-padding-left:                  4px;
-$drawer-width:                              $drawer-wrap-width - $drawer-wrap-padding-left;
-$drawer-padding-left:                       15px;
-$drawer-padding-right:                      $drawer-padding-left;
+$drawer-width:                              $drawer-wrap-width;
+$drawer-padding-left:                       4px;
+// $drawer-padding-right:                      $drawer-padding-left;
 
 // actions
 $actions-width:                             370px;
@@ -89,6 +88,8 @@ $panel-header-height:                       58px;
 $panel-header-stage-height:                 117px;
 $panel-header-padding-left:                 $stage-padding-left;
 $panel-header-padding-right:                $stage-padding-right;
+$panel-header-padding-left--drawer:         18px;
+$panel-header-padding-right--drawer:        $panel-header-padding-left--drawer;
 
 // content-panel=header
 $content-panel-header-height:               28px;
@@ -107,6 +108,7 @@ $options-link-text-width-actions:           $actions-width - 86px;
 $options-list-heading-font-size:            rem(16);
 $options-list-text-font-size:               rem(13);
 $options-list-text-font-size--drawer:       rem(14);
+$options-list-heading-padding-left--drawer: $panel-header-padding-left--drawer - $drawer-padding-left;
 
 // files
 $min-table-width-files-single:              600px;
