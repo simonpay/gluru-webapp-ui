@@ -35,7 +35,7 @@
             position: fixed;
             top: 0;
             @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav
-            // height: $panel-header-height + 50px;
+            height: $panel-header-stage-height;
             background: $white;
             @include transition(width $drawer-animation-duration);
 

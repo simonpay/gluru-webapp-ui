@@ -17,8 +17,8 @@
         z-index: $actions-wrap-z-index;
         position: relative;
         float: right;
-        top: $panel-header-height;
-        @include calc( height, "100% - #{$panel-header-height}" );
+        top: $panel-header-stage-height;
+        @include calc( height, "100% - #{$panel-header-stage-height}" );
         width: $actions-width;
         overflow: visible;
         @include transition(width $actions-animation-duration);
@@ -40,7 +40,7 @@
             opacity: 1;
             visibility: visible;
             width: 0;
-            @include calc( height, "100% - #{$panel-header-height}" );
+            @include calc( height, "100% - #{$panel-header-stage-height}" );
         }
     }
 }
