@@ -21,6 +21,7 @@
                 overflow: visible !important;
                 opacity: 0.5;
                 cursor: pointer;
+                @include transition( opacity 0.3s );
 
                 &.-infinity{
                     @include use-sprite("icon-files__infinity-view");
@@ -51,7 +52,7 @@
                 }
 
                 &:after {
-                    content: "";
+                    // content: "";
                     position: absolute;
                     top: -2px;
                     left: -2px;

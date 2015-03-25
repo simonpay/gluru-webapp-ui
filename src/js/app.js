@@ -23,6 +23,7 @@
 		// moments	
 		$now					= $( ".js-now" ),
 		$timeline_wrap			= $( ".js-timeline-wrap" ),
+		$timeline_range			= $( ".js-timeline-range" ),
 		
 		// tooltips
 		$tooltip 				= $( ".js-tooltip" ),
@@ -285,6 +286,15 @@
 					}
 
 					$this.toggleClass( "is-split-view" );
+
+				},
+
+				do_range_nav_click: function () {
+					var $this 		= $(this),
+						_obj_gluru	= gluru_app;
+
+					$timeline_range.removeClass( "is-selected" );
+					$this.addClass( "is-selected" );
 
 				}
 			}
@@ -552,6 +562,10 @@
 	// toggle timeline view
 	$( ".js-toggle-timeline-view" ).on( "click", function(){
 		obj_gluru.moments.timeline.toggle_timeline_view.call( $(this) );
+	});
+	// timeline recent and future links
+	$timeline_range.on( "click", function(){
+		obj_gluru.moments.timeline.do_range_nav_click.call( $(this) );
 	});
 
 

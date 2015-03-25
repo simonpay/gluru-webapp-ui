@@ -39,6 +39,8 @@
 			// cursor is placed over the area of padding - 
 			// works correctly with border 
 			// this appears to be a chrome bug?
+			// TODO: revisit this and comfirm if neccesary 
+			// - feels hackish!!
 			border-style: solid;
 			border-color: transparent;
 			border-left-width: 20px;

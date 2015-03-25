@@ -2,10 +2,12 @@
     # SCROLLABLE CONTENT
 \*------------------------------------*/
 
+// TODO: maybe add this tp other sections?
+// - only in moments atm
 .scrollable-content {
     width: 100%;
     overflow: auto;
-
+	
     .main-container--moments & {
         @include calc( height, "100% - #{$panel-header-height}" );
     }
