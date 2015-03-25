@@ -8,6 +8,8 @@
 
 	<div class="event -{{ event_obj.priority }} js-event" data-priority="{{ event_obj.priority }}">
 
+		<div class="triangle"></div>
+
 		<div class="event-avatar">
 			<div class="event-avatar__img-wrap">
 				<img class="event-avatar__img" src="img/{{ event_obj.person_id }}.png" alt="">

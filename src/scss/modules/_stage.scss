@@ -21,9 +21,9 @@
 		.section-wrap {
 			display: block;
 			height: 100%;
-			&.-moments {
-				padding: 20px;
-			}
+			// &.-moments {
+			// 	padding: 20px;
+			// }
 			&.is-hidden {
 				display: none;
 			}
@@ -32,6 +32,17 @@
 		// section within the stage content area
 		.stage-section {
 			margin-bottom: 20px;
+			padding: 30px 0;
+			// padding: 20px;
+			// use border for vertical spacing instead of 
+			// padding because the div doesnt scroll when the 
+			// cursor is placed over the area of padding - 
+			// works correctly with border 
+			// this appears to be a chrome bug?
+			border-style: solid;
+			border-color: transparent;
+			border-left-width: 20px;
+			border-right-width: 20px;
 		}
 
 			.stage__heading-wrap {

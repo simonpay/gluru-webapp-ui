@@ -9,7 +9,11 @@
 
 {% block content %}
 
-{%> "main-nav" %}
+<div class="main-container js-main-container">
+
+	{%> "main-nav" %}
+
+</div>
 
 {% endblock %}
 

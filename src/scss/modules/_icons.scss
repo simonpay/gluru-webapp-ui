@@ -44,6 +44,11 @@
 .icon-files__search {           @include use-sprite("icon-files__search"); }
 .icon-files__now {              @include use-sprite("icon-files__now"); }
 
+.icon-clock--gray {             @include use-sprite("icon-clock--gray"); }
+.icon-clock--pink {             @include use-sprite("icon-clock--pink"); }
+.icon-calendar--gray {          @include use-sprite("icon-calendar--gray"); }
+.icon-calendar--pink {          @include use-sprite("icon-calendar--pink"); }
+
 .tmp-fav-avatar-1 {             @include use-sprite("tmp-fav-avatar-1"); }
 .tmp-fav-avatar-2 {             @include use-sprite("tmp-fav-avatar-2"); }
 .tmp-fav-avatar-3 {             @include use-sprite("tmp-fav-avatar-3"); }

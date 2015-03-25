@@ -18,11 +18,9 @@
 
 <body>
 
-<div class="main-container js-main-container">
-    {% block content %}{% endblock %}
-    {%> "tool-tip" %}
-    {%> "pop-menu" %}
-</div>
+{% block content %}{% endblock %}
+{%> "tool-tip" %}
+{%> "pop-menu" %}
 
 
 {# TODO: remove this when finished dev! #}

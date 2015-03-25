@@ -9,6 +9,8 @@
 
 {% block content %}
 
+<div class="main-container main-container--moments js-main-container">
+
 	{# main-nav #}
 	{%> "main-nav" %}
 
@@ -20,6 +22,8 @@
 
 	{# stage #}
 	{% include "src/templates/includes/stage-moments.swig" %}
+
+</div>
 
 {% endblock %}
 

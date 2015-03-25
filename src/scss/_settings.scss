@@ -13,92 +13,94 @@
 // COLORS
 // -----------------------------------
 // non-brand color names generated using http://chir.ag/projects/name-that-color/
-$pink: 						#d41a68;					// pink
-$orange: 					#f9441f;					// orange
-$green: 					#16b451;					// green
-$blue: 						#0098ce;					// blue
-$light-green: 				#8ce31c;					// lime green
-// shades of gray - white to black range: 	
-$white: 					#fff;						// white - no surprises there!
-$alabaster: 				#fafafa;					// almost white
-$gallery: 					#eee;						// off white
-$alto: 						#ddd;						// very light gray
-$silver: 					#ccc;						// light gray
-$silver-light:				lighten($silver, 5%);		// slightly lighter than "silver"
-$silver-dark:				darken($silver, 5%);		// slightly darker than "silver"
-$dusty-gray: 				#999;						// mid gray
-$dusty-gray-light: 			lighten($dusty-gray, 5%);	// slightly lighter than "dusty-gray"
-$dusty-gray-dark: 			darken($dusty-gray, 5%);	// slightly darker than "dusty-gray"
-$dove-gray: 				#666;						// dark gray
-$zeus:		 				#2e261e;					// virtually black
-$black: 					#000;						// black - no surprises there!
+$pink:                      #d41a68;                    // pink
+$orange:                    #f9441f;                    // orange
+$green:                     #16b451;                    // green
+$blue:                      #0098ce;                    // blue
+$light-green:               #8ce31c;                    // lime green
+// shades of gray - white to black range:   
+$white:                     #fff;                       // white - no surprises there!
+$alabaster:                 #fafafa;                    // almost white
+$gallery:                   #eee;                       // off white
+$alto:                      #ddd;                       // very light gray
+$silver:                    #ccc;                       // light gray
+$silver-light:              lighten($silver, 5%);       // slightly lighter than "silver"
+$silver-dark:               darken($silver, 5%);        // slightly darker than "silver"
+$dusty-gray:                #999;                       // mid gray
+$dusty-gray-light:          lighten($dusty-gray, 5%);   // slightly lighter than "dusty-gray"
+$dusty-gray-dark:           darken($dusty-gray, 5%);    // slightly darker than "dusty-gray"
+$dove-gray:                 #666;                       // dark gray
+$zeus:                      #2e261e;                    // virtually black
+$black:                     #000;                       // black - no surprises there!
 
-$team-color-sales:			$orange;
-$team-color-marketing:		$blue;
-$team-color-development:	$light-green;
+$team-color-sales:          $orange;
+$team-color-marketing:      $blue;
+$team-color-development:    $light-green;
 
-$tooltips-background-color:	rgba($black, 0.8);
-$tooltips-arrow-width:		7px;
-$tooltips-arrow-height:		13px;
+$tooltips-background-color: rgba($black, 0.8);
+$tooltips-arrow-width:      7px;
+$tooltips-arrow-height:     13px;
 
 
 // -----------------------------------
 // STACKING ORDER (z-index)
 // -----------------------------------
-$tooltip-z-index:							200;
-$main-nav-z-index:							100;
-$drawer-wrap-z-index:						50;
-$actions-wrap-z-index:						40;
-$search-wrap-z-index:						30;
-$panel-header-stage-z-index:				20;
+$tooltip-z-index:                           200;
+$main-nav-z-index:                          100;
+$drawer-wrap-z-index:                       50;
+$actions-wrap-z-index:                      40;
+$search-wrap-z-index:                       30;
+$panel-header-stage-z-index:                20;
 // small screens
-$actions-wrap-z-index_mq-sml:				110;
+$actions-wrap-z-index_mq-sml:               110;
 
 // -----------------------------------
 // DIMENSIONS
 // -----------------------------------
 // stage
-$stage-left-padding: 						12px;
-$stage-right-padding: 						12px;
+$stage-left-padding:                        12px;
+$stage-right-padding:                       12px;
 
 // main nav
-$main-nav-width: 							80px;
+$main-nav-width:                            80px;
 
 // drawer
-$drawer-width: 								260px;
+$drawer-width:                              260px;
 
 // actions
-$actions-width: 							370px;
+$actions-width:                             370px;
+$event-style-header-box-shadow:             -2px 5px 10px rgba(0, 0, 0, 0.3);
 
 // panel=header
-$panel-header-height: 						58px;
-$panel-header-padding-left: 				17px;
-$panel-header-padding-right: 				10px;
+$panel-header-height:                       58px;
+$panel-header-padding-left:                 17px;
+$panel-header-padding-right:                10px;
 
 // content-panel=header
-$content-panel-header-height: 				28px;
+$content-panel-header-height:               28px;
 
 // icons
-$sml-icon-height: 							20px;
-$lrg-icon-height: 							32px;
+$sml-icon-height:                           20px;
+$lrg-icon-height:                           32px;
 
 // options list
-$options-list-link-height-drawer:			38px;
-$options-list-link-height-actions:			30px;
-$options-link-left-padding-drawer:			15px;
-$options-link-left-padding-actions:			5px;
-$options-link-text-width-drawer:			$drawer-width - 86px;
-$options-link-text-width-actions:			$actions-width - 86px;
+$options-list-link-height-drawer:           38px;
+$options-list-link-height-actions:          30px;
+$options-link-left-padding-drawer:          15px;
+$options-link-left-padding-actions:         5px;
+$options-link-text-width-drawer:            $drawer-width - 86px;
+$options-link-text-width-actions:           $actions-width - 86px;
 
 // files
-$min-table-width-files-single:				600px;
-$min-table-width-files-split:				$min-table-width-files-single - 200px;
+$min-table-width-files-single:              600px;
+$min-table-width-files-split:               $min-table-width-files-single - 200px;
 
 // timeline
-$event-height:								120px;
-$event-time-width:							120px;
-$event-icon-wrap-width:						62px;
-$event-icon-wrap-height:					$event-icon-wrap-width;
+$event-height:                              80px;
+$event-height-split-view:                   100px;
+$event-time-width:                          120px;
+$event-icon-wrap-width:                     62px;
+$event-icon-wrap-height:                    $event-icon-wrap-width;
 
 // -----------------------------------
 // FONTS
@@ -109,14 +111,14 @@ $em-base: 16px;
 // -----------------------------------
 // ANIMATIONS
 // -----------------------------------
-$drawer-animation-duration: 	0.3s;
-$actions-animation-duration: 	0.3s;
+$drawer-animation-duration:     0.3s;
+$actions-animation-duration:    0.3s;
 
-$panel-drop-shadow:				rgba(0, 0, 0, 0.15);
-$panel-drop-shadow-spread:		20px;
+$panel-drop-shadow:             rgba(0, 0, 0, 0.15);
+$panel-drop-shadow-spread:      20px;
 
-$tooltip-animation-duration: 	0.3s;
-$tooltip-show-delay:			0.5s;
+$tooltip-animation-duration:    0.3s;
+$tooltip-show-delay:            0.5s;
 
 
 

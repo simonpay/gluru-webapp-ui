@@ -15,11 +15,15 @@
     position: relative;
     width: 142px;
     height: 62px;
-    margin: 0 0 20px ($event-time-width + ($event-icon-wrap-width / 2)); // align left edge with center of icon
+    margin: 40px 0 40px ($event-time-width + ($event-icon-wrap-width / 2)); // align left edge with center of icon
     background-color: $dusty-gray;
     border-radius: 31px;
     border: 6px solid #fff;
     @include transform( translateX(-50%) ); // pull back 50% of width to center with icon
+
+    &:nth-of-type(1) {
+        margin-top: 0;
+    }
 
     .-split-view & {
         // width: 142px;
@@ -93,7 +97,9 @@
         .event {
             height: $event-height;
             // width: 500px;
-            width: 65%;
+            width: 50%;
+            max-width: 500px;
+            min-width: 400px;
             background: $dusty-gray;
             border-radius: 15px;
 
@@ -110,6 +116,7 @@
             
             // when timeline is split, remove animations
             .-split-view & {
+                height: $event-height-split-view;
                 @include transition( none );
 
                 &:hover {
@@ -122,10 +129,10 @@
                 width: 80%;
                 min-width: 270px;
                 
-                // remove triangle
-                &:after {
-                    content: none;
-                }
+                // // remove triangle
+                // &:after {
+                //     content: none;
+                // }
             }
 
             .is-selected & {
@@ -135,37 +142,67 @@
                     @include transform( none !important );
                 }
             }
+            
+            // small 'arrow' that points towards the date/time
+            // replaced old method using borders to allow for 
+            // application of box-shadow
+            .triangle {
+                position: absolute;
+                top: 0;
+                right: 100%;
+                width: 40px;
+                height: 100%;
+                overflow: hidden;
 
-            &.-critical {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    background: $dusty-gray;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+
+                .-split-view & {
+                    display: none;
+                }
+            }
+
+            &.-critical,
+            &.-critical .triangle:after {
                 background: $pink;
             }
-            &.-non-critical {
+            &.-non-critical,
+            &.-non-critical .triangle:after {
                 background: $orange;
             }
-            &.-now {
+            &.-now,
+            &.-now .triangle:after {
                 background: $green;
             }
 
-            &:after {
-                content: "";
-                @include scut-triangle(left, 20px 40px, $pink);
-                position: absolute;
-                left: -20px;;
-                top: 50%;
-                @include transform( translateY(-50%) );
-                border-right-color: $dusty-gray;
-            }
+            // &:after {
+            //     content: "";
+            //     @include scut-triangle(left, 20px 40px, $pink);
+            //     position: absolute;
+            //     left: -20px;;
+            //     top: 50%;
+            //     @include transform( translateY(-50%) );
+            //     border-right-color: $dusty-gray;
+            // }
         
-            // set color of triangles when inside specific class 
-            &.-critical:after {
-                border-right-color: $pink;
-            }
-            &.-non-critical:after {
-                border-right-color: $orange;
-            }
-            &.-now:after {
-                border-right-color: $green;
-            }
+            // // set color of triangles when inside specific class 
+            // &.-critical:after {
+            //     border-right-color: $pink;
+            // }
+            // &.-non-critical:after {
+            //     border-right-color: $orange;
+            // }
+            // &.-now:after {
+            //     border-right-color: $green;
+            // }
             
             // config for the header panel in actions panel
             // for timeline section
@@ -174,10 +211,15 @@
                 left: 20px;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
+                box-shadow: $event-style-header-box-shadow;
                 @include transition( left $actions-animation-duration );
 
                 .actions-is-open & {
                     left: -20px;
+                }
+
+                .triangle:after {
+                    box-shadow: $event-style-header-box-shadow;
                 }
             }
         }
