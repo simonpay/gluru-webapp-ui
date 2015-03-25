@@ -4,8 +4,6 @@
 
 	<div class="event event--actions-header -now js-event--actions-header">
 
-		<div class="triangle"></div>
-
 		<div class="event-avatar">
 			<div class="event-avatar__img-wrap">
 				<img class="event-avatar__img" src="img/tmp_avatar_1.png" alt="">
