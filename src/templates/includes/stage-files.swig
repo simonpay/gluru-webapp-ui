@@ -7,9 +7,9 @@
 	<section class="section-wrap -files js-section-files">
 
 		{# single view #}
-		<div class="table-wrap-outer -cols-1 js-file-table-wrap-outer">
+		<div class="split-view-wrap-outer -cols-1 js-file-table-wrap-outer">
 
-			<div class="table-wrap-container -col-1 js-file-view">
+			<div class="split-view-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
@@ -22,47 +22,49 @@
 					</div>
 				</header>
 
-				<div class="table-wrap">
+				<div class="split-view-wrap">
 
-					<div class="table">
-						<div class="table__row -header">
-							<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
-							<div class="table__col -modified"><div class="th-inner">Modified</div></div>
-							<div class="table__col -source"><div class="th-inner">Source</div></div>
+					<div class="scrollable-content">
+						<div class="table">
+							<div class="table__row -header">
+								<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
+								<div class="table__col -modified"><div class="th-inner">Modified</div></div>
+								<div class="table__col -source"><div class="th-inner">Source</div></div>
+							</div>
+
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+
 						</div>
-
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-
-					</div>
+					</div><!-- // .scrollable-content -->
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 
@@ -72,9 +74,9 @@
 
 
 		{# split-view - 2 col3 #}
-		<div class="table-wrap-outer -split-view -cols-2 js-file-table-wrap-outer">
+		<div class="split-view-wrap-outer -split-view -cols-2 js-file-table-wrap-outer">
 
-			<div class="table-wrap-container -col-1 js-file-view">
+			<div class="split-view-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
@@ -85,36 +87,38 @@
 					</div>
 				</header>
 
-				<div class="table-wrap">
-					<div class="table">
-						<div class="table__row -header">
-							<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
-							<div class="table__col -modified"><div class="th-inner">Modified</div></div>
-							<div class="table__col -source"><div class="th-inner">Source</div></div>
-						</div>
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<div class="table">
+							<div class="table__row -header">
+								<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
+								<div class="table__col -modified"><div class="th-inner">Modified</div></div>
+								<div class="table__col -source"><div class="th-inner">Source</div></div>
+							</div>
 
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
 
-					</div><!-- // .table -->
+						</div><!-- // .table -->
+					</div><!-- // .scrollable-content -->
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 
 
 
-			<div class="table-wrap-container -col-2 js-file-view">
+			<div class="split-view-wrap-container -col-2 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
@@ -125,22 +129,24 @@
 					</div>
 				</header>
 
-				<div class="table-wrap">
-					<div class="table">
-						<div class="table__row -header">
-							<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
-							<div class="table__col -modified"><div class="th-inner">Modified</div></div>
-							<div class="table__col -source"><div class="th-inner">Source</div></div>
-						</div>
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<div class="table">
+							<div class="table__row -header">
+								<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
+								<div class="table__col -modified"><div class="th-inner">Modified</div></div>
+								<div class="table__col -source"><div class="th-inner">Source</div></div>
+							</div>
 
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
 
-					</div><!-- // .table -->
+						</div><!-- // .table -->
+					</div><!-- // .scrollable-content -->
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 
@@ -153,9 +159,9 @@
 
 
 		{# split-view - 3 cols #}
-		<div class="table-wrap-outer -split-view -cols-3 js-file-table-wrap-outer">
+		<div class="split-view-wrap-outer -split-view -cols-3 js-file-table-wrap-outer">
 
-			<div class="table-wrap-container -col-1 js-file-view">
+			<div class="split-view-wrap-container -col-1 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
@@ -166,26 +172,28 @@
 					</div>
 				</header>
 
-				<div class="table-wrap">
-					<div class="table">
-						<div class="table__row -header">
-							<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
-							<div class="table__col -modified"><div class="th-inner">Modified</div></div>
-							<div class="table__col -source"><div class="th-inner">Source</div></div>
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<div class="table">
+							<div class="table__row -header">
+								<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
+								<div class="table__col -modified"><div class="th-inner">Modified</div></div>
+								<div class="table__col -source"><div class="th-inner">Source</div></div>
+							</div>
+
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+
 						</div>
-
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-
-					</div>
+					</div><!-- // .scrollable-content -->
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 
-			<div class="table-wrap-container -col-2 js-file-view">
+			<div class="split-view-wrap-container -col-2 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
@@ -196,48 +204,50 @@
 					</div>
 				</header>
 
-				<div class="table-wrap">
-					<div class="table">
-						<div class="table__row -header">
-							<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
-							<div class="table__col -modified"><div class="th-inner">Modified</div></div>
-							<div class="table__col -source"><div class="th-inner">Source</div></div>
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<div class="table">
+							<div class="table__row -header">
+								<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
+								<div class="table__col -modified"><div class="th-inner">Modified</div></div>
+								<div class="table__col -source"><div class="th-inner">Source</div></div>
+							</div>
+
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+
 						</div>
-
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-
-					</div>
+					</div><!-- // .scrollable-content -->
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 
-			<div class="table-wrap-container -col-3 js-file-view">
+			<div class="split-view-wrap-container -col-3 js-file-view">
 			
 				<header class="panel-header panel-header--location">
 					<div class="media">
@@ -248,34 +258,36 @@
 					</div>
 				</header>
 
-				<div class="table-wrap">
-					<div class="table">
-						<div class="table__row -header">
-							<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
-							<div class="table__col -modified"><div class="th-inner">Modified</div></div>
-							<div class="table__col -source"><div class="th-inner">Source</div></div>
-						</div>
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<div class="table">
+							<div class="table__row -header">
+								<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
+								<div class="table__col -modified"><div class="th-inner">Modified</div></div>
+								<div class="table__col -source"><div class="th-inner">Source</div></div>
+							</div>
 
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-						{%> "table-row-file" %}
-					</div>
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+							{%> "table-row-file" %}
+						</div>
+					</div><!-- // .scrollable-content -->
 				</div><!-- // .table-wrap -->
 			</div><!-- // .table-container -->
 		</div><!-- // .table-wrap-outer -->

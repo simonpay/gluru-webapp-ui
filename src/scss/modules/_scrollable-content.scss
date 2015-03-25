@@ -6,11 +6,12 @@
 // - only in moments atm
 .scrollable-content {
     width: 100%;
+    height: 100%;
     overflow: auto;
 	
-    .main-container--moments & {
-        // @include calc( height, "100% - #{$panel-header-height}" );
-       	height: 100%;
-    }
+    // .main-container--moments & {
+    //     // @include calc( height, "100% - #{$panel-header-height}" );
+    //    	height: 100%;
+    // }
 }
 
