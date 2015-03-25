@@ -57,6 +57,8 @@
     &.is-hidden {
     	opacity: 0;
     	visibility: hidden;
+        top: -99999px;
+        left: -99999px;
     	// opacity: 1;
     	// visibility: visible;
 

@@ -15,8 +15,8 @@
 // -----------------------------------
 // non-brand color names generated using http://chir.ag/projects/name-that-color/
 $pink:                      #d41a68;                    // pink
-$pink-dark:                 #af044c;          			// dark pink
-$pink-darker:               #8a003a;         			// darker pink
+$pink-dark:                 #af044c;                    // dark pink
+$pink-darker:               #8a003a;                    // darker pink
 $orange:                    #f9441f;                    // orange
 $green:                     #16b451;                    // green
 $blue:                      #0098ce;                    // blue
@@ -63,18 +63,22 @@ $actions-wrap-z-index_mq-sml:               110;
 // stage
 // these values are starting points for other variables
 // they are not intended for direct use in rules
-$_stage-left-indent:                        24px;
-$_stage-right-indent:                       $_stage-left-indent;
+$_stage-indent-left:                        24px;
+$_stage-indent-right:                       $_stage-indent-left;
 
-$stage-padding-left:                        $_stage-left-indent;
-$stage-padding-right:                       $_stage-right-indent;
+$stage-padding-left:                        $_stage-indent-left;
+$stage-padding-right:                       $_stage-indent-right;
 
 
 // main nav
 $main-nav-width:                            100px;
 
 // drawer
-$drawer-width:                              260px;
+$drawer-wrap-width:                         260px;
+$drawer-wrap-padding-left:                  4px;
+$drawer-width:                              $drawer-wrap-width - $drawer-wrap-padding-left;
+$drawer-padding-left:                       15px;
+$drawer-padding-right:                      $drawer-padding-left;
 
 // actions
 $actions-width:                             370px;
@@ -100,6 +104,9 @@ $options-link-left-padding-drawer:          15px;
 $options-link-left-padding-actions:         5px;
 $options-link-text-width-drawer:            $drawer-width - 86px;
 $options-link-text-width-actions:           $actions-width - 86px;
+$options-list-heading-font-size:            rem(16);
+$options-list-text-font-size:               rem(13);
+$options-list-text-font-size--drawer:       rem(14);
 
 // files
 $min-table-width-files-single:              600px;

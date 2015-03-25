@@ -15,8 +15,9 @@
     @include mq(large){
         float: left;
         @include transition(width $drawer-animation-duration);
-        width: $drawer-width;
+        width: $drawer-wrap-width;
         height: 100%;
+        padding-left: $drawer-wrap-padding-left;
         visibility: visible;
     }
     
@@ -37,13 +38,12 @@
         @include calc( height, "100% - #{$panel-header-height}" );
         width: $drawer-width;
         padding-top: 15px;
-        padding-left: 4px;
         overflow-y: auto;
     }
         
         // main heading in drawer panel
         .drawer__heading {
-            @extend %vertical-align-center;
+            @include scut-center-transform(y);
             text-transform: uppercase;
             font-size: 22px;
             font-weight: lighter;

@@ -31,7 +31,7 @@
                 @include transition( all 0.3s );
 
                 &:hover {
-                    box-shadow: inset 0px -1px 0px $dove-gray;
+                    box-shadow: inset 0px -2px 0px $dove-gray;
 
                     .header-nav__text {
                         color: $black;
@@ -40,7 +40,7 @@
 
                 &.is-selected {
                     // background: $gallery;
-                    box-shadow: inset 0px -1px 0px $pink;
+                    box-shadow: inset 0px -2px 0px $pink;
 
                     .header-nav__text {
                         color: $pink;

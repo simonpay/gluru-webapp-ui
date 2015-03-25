@@ -417,7 +417,9 @@
 			hide: function () {
 				$tooltip
 					.removeClass( "-right" )
-					.addClass( "is-hidden" );
+					.addClass( "is-hidden" )
+					.removeAttr("style")
+					;
 			}
 		},
 
@@ -463,7 +465,7 @@
 				// console.log( "HIDE" );
 				$pop_menu_wrap
 					.addClass( "is-hidden" )
-					.offset({ left: -9999, top: -9999 })
+					.removeAttr("style")
 					;
 			}
 		}
