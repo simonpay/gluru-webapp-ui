@@ -2,9 +2,13 @@
 # STAGE NAV
 \*------------------------------------*/
 
+// the list of buttons that sits in the header beneath the avatar 
+
 .stage-nav { // nav
-    @include scut-center-transform(y);
-    right: 20px;
+    // @include scut-center-transform(y);
+    position: absolute;
+    top: 20px;
+    right: $stage-padding-right;
 }
 
     .stage-nav__list { // ul

@@ -22,15 +22,22 @@
     }
 }
 
-    .main-nav__logo {
-        float: left;
-        @include use-sprite("gluru-logo");
-
-        @include mq(large){
-            float: none;
-            margin: 17px auto 48px;
-        }
+    .main-nav__logo-wrap {
+        position: relative;
+        height: $panel-header-stage-height - 2px;
     }
+
+        .main-nav__logo {
+            float: left;
+            @include use-sprite("gluru-logo");
+
+            @include mq(large){
+                position: relative;
+                top: 17px;
+                float: none;
+                margin: 0 auto;
+            }
+        }
 
     .main-nav__list { // ul
     }

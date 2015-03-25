@@ -40,6 +40,12 @@
         <button class="button js-double" data-class=".-cols-2">Split - <strong>2 cols</strong></button>
         <button class="button js-triple" data-class=".-cols-3">Split - <strong>3 cols</strong></button>
     </div>
+
+    <div class="button-group js-buttons-moments">
+        <button class="button js-single" data-class=".-cols-1"><strong>Single</strong> View</button>
+        <button class="button js-double" data-class=".-cols-2">Split - <strong>2 cols</strong></button>
+        <button class="button js-triple" data-class=".-cols-3">Split - <strong>3 cols</strong></button>
+    </div>
 </div>
 
 

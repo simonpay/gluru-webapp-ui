@@ -8,7 +8,7 @@
     height: $panel-header-height;
     overflow: hidden;
     padding: 0 $panel-header-padding-right 0 $panel-header-padding-left;
-    // border-bottom: 1px solid $silver;
+    // border-bottom: 1px solid $alto;
     
     // make bottom border using psuedo el (to add indents without adding padding to parent)
     &:before {
@@ -19,7 +19,7 @@
         right: 0px;
         height: 1px;
         bottom: 0px;
-        background: $silver;
+        background: $alto;
     }
     
     &.-stage {
@@ -49,7 +49,7 @@
         }
 
         &:before {
-            left: 7px;
+            left: $stage-padding-left;
         }
     }
 }
@@ -78,18 +78,25 @@
     }
 }
 
+.panel-header--location,
+.panel-header--timeline {
+    background: $alabaster;
+
+    &:before {
+        height: 2px;
+    }
+}
+
 // header for file explorer showing current source and crumbtrail (location) 
 .panel-header--location {
     width: 100%;
     padding-top: 13px;
-    background: $alabaster;
 }
 
 // header for timeline containing recent and future tabs 
 .panel-header--timeline {
     // width: 100%;
-    background: $alabaster;
-    margin-left: 12px;
+    // margin-left: 12px;
     padding-left: 0;
 }
 

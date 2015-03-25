@@ -1,7 +1,9 @@
 <nav class="main-nav">
-	<a href="#" 
-		class="main-nav__logo -gluru js-main-nav__link js-tt" 
-		data-tt="Home"></a>
+	<div class="main-nav__logo-wrap">
+		<a href="#" 
+			class="main-nav__logo js-gluru js-main-nav__link js-tt" 
+			data-tt="Home"></a>
+	</div>
 	<ul class="main-nav__list">
 {# 		<li class="main-nav__item -primary">
 			<a href="#" 

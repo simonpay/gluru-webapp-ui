@@ -1,0 +1,212 @@
+/*------------------------------------*\
+    # SPLIT VIEW WRAP
+\*------------------------------------*/
+
+.split-view-wrap-outer {
+    position: relative;
+    height: 100%;
+    // padding-left: 7px;
+    
+    .-moments & {
+        @include calc( height, "100% - #{$panel-header-height}" );
+    }
+
+    &.-cols-1 {
+        min-width: $min-table-width-files-single;
+    }
+    &.-cols-2 {
+        min-width: $min-table-width-files-split * 2;
+    }
+    &.-cols-3 {
+        min-width: $min-table-width-files-split * 3;
+    }
+}
+
+    .split-view-wrap-container {
+        position: relative;
+        height: 100%;
+        // TODO: remove this transition if its not able to 
+        // take effect when inside the app - it was added to
+        // create an animation when jumping between split-view 
+        // modes
+        @include transition( width 0.5s );
+        
+        // float containers left when in split-view mode
+        // inside class '.split-view'
+        .-split-view & {
+            float: left;
+        }
+
+        // when inside parent class .-cols-2 or .-cols-3
+        .-cols-2 &, 
+        .-cols-3 &, {
+            border-left: 1px solid $silver;
+        }
+
+        // when inside parent class .-cols-2
+        .-cols-2 & {
+            // @extend %panel-shadow !optional;
+            width: percentage(1 / 2);
+            // width: calc( #{percentage(1 / 2)} - 10px );
+            // margin-right: 10px;
+        }
+
+        // when inside parent class .-cols-3
+        .-cols-3 & {
+            // @extend %panel-shadow !optional;
+            width: percentage(1 / 3);
+        }
+        
+        // remove border-left from 1st item
+        &:nth-of-type(1) {
+            border-left: none;
+        }
+
+        // first col
+        &.-col-1 {
+            z-index: 1;
+        }
+        &.-col-2 {
+            z-index: 2;
+        }
+        &.-col-3 {
+            z-index: 3;
+        }
+    }
+
+        .split-view-wrap {
+            position: relative;
+            overflow: hidden;
+            // padding-right: 10px;
+
+            .main-container--moments & {
+                height: 100%;
+            }
+            .main-container--files & {
+                @include calc( height, "100% - #{$panel-header-height}" ); 
+            }
+        }
+
+
+            // .table {
+            //     display: table;
+            //     width: 100%;
+            //     table-layout: fixed; // make table cell widths depend on values rather than their content
+            //     font-size: rem(13);
+            // }
+
+            //     .table__row {
+            //         display: table-row;
+            //         &:not(.-header) {
+            //             &:not(.is-selected):hover {
+            //                 .table__col {
+            //                     cursor: pointer;
+            //                     background-color: $gallery;
+            //                     // @include transition(all 0.5);
+            //                 }
+            //             }
+            //             &:hover, 
+            //             &.is-selected {
+            //                 // show file nav on table row hover
+            //                 .file-nav {
+            //                     // fade file-nav up
+            //                     @include transition(opacity 0.3s);
+            //                     opacity: 1;
+            //                 }
+            //             }
+            //         }
+            //     }
+
+            //         .table__col {
+            //             display: table-cell;
+            //             padding: 15px;
+            //             overflow: hidden;
+            //             white-space: nowrap;
+            //             text-overflow: ellipsis;
+            //             vertical-align: middle;
+            //             border-bottom: 1px solid $gallery;
+            //             color: $black;
+            //             @include transition(all 0.3s);
+                        
+
+            //             // specific modifiers for files explorer table
+            //             &.-file-name {
+            //                 width: 100%; // width only used if table-layout: fixed;
+            //             }
+            //             &.-modified {
+            //                 width: 120px;
+            //                 // text-align: center;
+            //             }
+            //             &.-source {
+
+            //                 // when .-source inside split view hide it
+            //                 .-split-view & {
+            //                     display: none;
+            //                 }
+
+            //                 width: 90px;
+            //                 text-align: center;
+            //                 .media {
+            //                     width: 40px;
+            //                 }
+            //             }
+
+            //             .-header & {
+            //                 border-bottom-width: 2px;
+            //                 font-weight: bold;
+            //                 color: $dusty-gray;
+            //             }
+
+            //             .is-selected & {
+            //                 background: $pink;
+            //                 color: $white;
+            //             }
+
+            //             .media {
+            //                 z-index: 1;
+            //                 position: relative;
+            //                 overflow: visible;
+            //             }
+
+            //             .media__img {
+            //                 position: relative;
+            //                 margin-left: 10px;
+            //                 margin-right: 20px;
+            //                 &:after {
+            //                     content: "";
+            //                     display: block;
+            //                     position: absolute;
+            //                     top: -40%;
+            //                     left: -40%;
+            //                     width: 180%;
+            //                     height: 180%;
+            //                     background: white;
+            //                     z-index: -1;
+            //                     border-radius: 100%;
+            //                 }
+            //             }
+
+                        
+            //             // // TODO: review temp styles 
+            //             // .table__row.-header & {
+            //             //     padding: 0;
+            //             // }
+            //             // .th-inner {
+            //             //     position: absolute;
+            //             //     top: 0;
+            //             // }
+            //             // //
+
+
+
+
+            //         }
+            //         .tmp-icon-dropbox {
+            //             @include use-sprite("icon-source-drive");
+            //             margin: 0 auto;
+            //             // @extend %vertical-align-center;
+            //         }
+
+
+
+

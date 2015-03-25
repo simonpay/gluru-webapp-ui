@@ -29,39 +29,87 @@
 			</nav>
 		</header>
 
-		<div class="scrollable-content">
 
-			{# Notifications #}
-{# 			<section class="stage-section notifications-wrap" role="notifications">
-				<header class="content-panel-header">
-					<div class="content-panel-heading">Notifications</div>
-				</header>
+		<!-- split-view combos -->
 
-				<div class="notifications">
-					
-					<div class="notification -critical"></div>
-					<div class="notification -non-critical"></div>
-					<div class="notification -now"></div>
+		<!-- single col -->
+		<div class="split-view-wrap-outer -cols-1 js-timeline-wrap-outer">
 
-				</div>
-			</section>
- #}
+			<div class="split-view-wrap-container -col-1">
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<section class="stage-section timeline-wrap js-timeline-wrap">
+							{% include "timeline.swig" %}
+						</section><!-- // .timeline-wrap -->
+					</div><!-- // .scrollable-content -->
+				</div><!-- // .split-view-wrap -->
+			</div><!-- // .split-view-wrap-container -->
+			
+		</div><!-- // .split-view-wrap-outer -->
 
-			{# Timeline #}
-			{# classes to config this el #}
-				{# -split-view: #}
-				{# -cols-{n} #}
-			<section class="stage-section timeline-wrap js-timeline-wrap">
-{# 				<header class="content-panel-header">
-					<div class="content-panel-heading">Timeline</div>
-				</header>
- #}
-				{% include "timeline.swig" %}
-				{% include "timeline.swig" %}
-				{% include "timeline.swig" %}
-			</section><!-- // .timeline-wrap -->
 
-		</div><!-- // .scrollable-content -->
+		<!-- double col -->
+		<div class="split-view-wrap-outer -split-view -cols-2 js-timeline-wrap-outer">
+
+			<div class="split-view-wrap-container -col-1">
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<section class="stage-section timeline-wrap js-timeline-wrap">
+							{% include "timeline.swig" %}
+						</section><!-- // .timeline-wrap -->
+					</div><!-- // .scrollable-content -->
+				</div><!-- // .split-view-wrap -->
+			</div><!-- // .split-view-wrap-container -->
+
+			<div class="split-view-wrap-container -col-2">
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<section class="stage-section timeline-wrap js-timeline-wrap">
+							{% include "timeline.swig" %}
+						</section><!-- // .timeline-wrap -->
+					</div><!-- // .scrollable-content -->
+				</div><!-- // .split-view-wrap -->
+			</div><!-- // .split-view-wrap-container -->
+
+		</div><!-- // .split-view-wrap-outer -->
+
+
+		<!-- triple col -->
+		<div class="split-view-wrap-outer -split-view -cols-3 js-timeline-wrap-outer">
+
+			<div class="split-view-wrap-container -col-1">
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<section class="stage-section timeline-wrap js-timeline-wrap">
+							{% include "timeline.swig" %}
+						</section><!-- // .timeline-wrap -->
+					</div><!-- // .scrollable-content -->
+				</div><!-- // .split-view-wrap -->
+			</div><!-- // .split-view-wrap-container -->
+
+			<div class="split-view-wrap-container -col-2">
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<section class="stage-section timeline-wrap js-timeline-wrap">
+							{% include "timeline.swig" %}
+						</section><!-- // .timeline-wrap -->
+					</div><!-- // .scrollable-content -->
+				</div><!-- // .split-view-wrap -->
+			</div><!-- // .split-view-wrap-container -->
+
+			<div class="split-view-wrap-container -col-3">
+				<div class="split-view-wrap">
+					<div class="scrollable-content">
+						<section class="stage-section timeline-wrap js-timeline-wrap">
+							{% include "timeline.swig" %}
+						</section><!-- // .timeline-wrap -->
+					</div><!-- // .scrollable-content -->
+				</div><!-- // .split-view-wrap -->
+			</div><!-- // .split-view-wrap-container -->
+
+		</div><!-- // .split-view-wrap-outer -->
+
+
 
 	</section><!-- // .section-moments -->
 

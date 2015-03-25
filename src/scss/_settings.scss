@@ -61,11 +61,17 @@ $actions-wrap-z-index_mq-sml:               110;
 // DIMENSIONS
 // -----------------------------------
 // stage
-$stage-left-padding:                        12px;
-$stage-right-padding:                       12px;
+// these values are starting points for other variables
+// they are not intended for direct use in rules
+$_stage-left-indent:                        24px;
+$_stage-right-indent:                       $_stage-left-indent;
+
+$stage-padding-left:                        $_stage-left-indent;
+$stage-padding-right:                       $_stage-right-indent;
+
 
 // main nav
-$main-nav-width:                            80px;
+$main-nav-width:                            100px;
 
 // drawer
 $drawer-width:                              260px;
@@ -77,8 +83,8 @@ $event-style-header-box-shadow:             -2px 5px 10px rgba(0, 0, 0, 0.3);
 // panel-header
 $panel-header-height:                       58px;
 $panel-header-stage-height:                 117px;
-$panel-header-padding-left:                 17px;
-$panel-header-padding-right:                10px;
+$panel-header-padding-left:                 $stage-padding-left;
+$panel-header-padding-right:                $stage-padding-right;
 
 // content-panel=header
 $content-panel-header-height:               28px;

@@ -21,6 +21,7 @@
 		.section-wrap {
 			display: block;
 			height: 100%;
+			padding-left: $stage-padding-left;
 			// &.-moments {
 			// 	padding: 20px;
 			// }
@@ -41,19 +42,20 @@
 			// this appears to be a chrome bug?
 			// TODO: revisit this and comfirm if neccesary 
 			// - feels hackish!!
-			border-style: solid;
-			border-color: transparent;
-			border-left-width: 20px;
-			border-right-width: 20px;
+				// border-style: solid;
+				// border-color: transparent;
+				// border-left-width: $stage-padding-left;
+				// border-right-width: $stage-padding-right;
 		}
 
 			.stage__heading-wrap {
-				@extend %vertical-align-center;
+				// @extend %vertical-align-center;
 				position: relative;
+				top: $stage-padding-left;
 			}
 
 				.stage__heading {
-				    font-size: rem(16);
+				    font-size: rem(20);
 				    font-weight: lighter;
 				    color: $black;
 				    margin-bottom: 3px;

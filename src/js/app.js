@@ -23,7 +23,9 @@
 		// moments	
 		$now					= $( ".js-now" ),
 		$timeline_wrap			= $( ".js-timeline-wrap" ),
+		$timeline_wrap_outer	= $( ".js-timeline-wrap-outer" ),
 		$timeline_range			= $( ".js-timeline-range" ),
+		$toggle_timeline_view	= $( ".js-toggle-timeline-view" ),
 		
 		// tooltips
 		$tooltip 				= $( ".js-tooltip" ),
@@ -37,7 +39,7 @@
 		$expandable_lists 		= $( ".js-toggle-expand-list" ),
 		
 		// files
-		$table_wraps 			= $( ".table-wrap-outer" );
+		$table_wraps 			= $( ".js-file-table-wrap-outer" );
 
 
 
@@ -158,7 +160,7 @@
 				
 				var _is_files 		= $(this).hasClass( "-files" ),
 					_is_moments 	= $(this).hasClass( "-moments" ),
-					_is_gluru_logo 	= $(this).hasClass( "-gluru" );
+					_is_gluru_logo 	= $(this).hasClass( "js-gluru" );
 
 				if ( _is_files ) {
 					location.href = "files.html";
@@ -254,7 +256,21 @@
 					location.href = "moments-now.html";
 				},
 
-				// toggle timeline between infinity and split view
+				// // toggle timeline between infinity and split view
+				// set_timeline_view: function ( requested_view ) {
+
+				// 	var $this 	= $(this);
+				// 		$target = $( $this.data("class") );
+
+				// 	if ( requested_view !== undefined ) {
+				// 		$target = $( requested_view );
+				// 	}
+
+				// 	$table_wraps.hide();
+				// 	$target.show();
+				// },
+
+				// change single / split view
 				set_timeline_view: function ( requested_view ) {
 
 					var $this 	= $(this);
@@ -263,8 +279,8 @@
 					if ( requested_view !== undefined ) {
 						$target = $( requested_view );
 					}
-
-					$table_wraps.hide();
+					// console.log();
+					$timeline_wrap_outer.hide();
 					$target.show();
 				},
 
@@ -276,13 +292,13 @@
 					if ( $this.hasClass( "is-split-view" ) ) {
 
 						// make it single view - infinity
-						// _obj_gluru.files.set_timeline_view( ".-cols-1" );
-						$timeline_wrap.removeClass( "-split-view -cols-1 -cols-2 -cols-3" );
+						_obj_gluru.moments.timeline.set_timeline_view( ".-cols-1" );
+						// $timeline_wrap.removeClass( "-split-view -cols-1 -cols-2 -cols-3" );
 					} else {
 
 						// make it split view - 2 cols
-						// _obj_gluru.files.set_timeline_view( ".-cols-2" );
-						$timeline_wrap.addClass( "-split-view -cols-2" );
+						_obj_gluru.moments.timeline.set_timeline_view( ".-cols-2" );
+						// $timeline_wrap.addClass( "-split-view -cols-2" );
 					}
 
 					$this.toggleClass( "is-split-view" );
@@ -559,14 +575,30 @@
 	$now.on( "click", function() {
 		obj_gluru.moments.timeline.now();
 	});
+	// TIMELINE SPLIT VIEW
+	// -------------------------------------------------
+	// set timeline view 
+	// options:
+	// 		:single view
+	// 		:split-view - 2 cols
+	// 		:split-view - 3 cols
+	// 		
+	// 		Th 3 variations are hardcoded in the HTML.
+	// 		This just sets display for the 3 variations
+	// 		(hides all then shows the target view)
+	$( ".js-buttons-moments .button" ).on( "click", function(){
+		obj_gluru.moments.timeline.set_timeline_view.call( $(this) );
+	});
 	// toggle timeline view
-	$( ".js-toggle-timeline-view" ).on( "click", function(){
+	$toggle_timeline_view.on( "click", function(){
 		obj_gluru.moments.timeline.toggle_timeline_view.call( $(this) );
 	});
 	// timeline recent and future links
 	$timeline_range.on( "click", function(){
 		obj_gluru.moments.timeline.do_range_nav_click.call( $(this) );
 	});
+	// set the initial view
+	obj_gluru.moments.timeline.set_timeline_view( ".-cols-1" );
 
 
 	// FILES
@@ -591,13 +623,13 @@
 	$( ".js-buttons-files .button" ).on( "click", function(){
 		obj_gluru.files.set_file_explorer_view.call( $(this) );
 	});
-	// set the initial view
-	obj_gluru.files.set_file_explorer_view.call( $( ".js-single" ) );
 
 	// toggle file view
 	$( ".js-toggle-file-view" ).on( "click", function(){
 		obj_gluru.files.toggle_file_view.call( $(this) );
 	});
+	// set the initial view
+	obj_gluru.files.set_file_explorer_view( ".-cols-1" );
 
 
 

@@ -7,7 +7,7 @@
 	<section class="section-wrap -files js-section-files">
 
 		{# single view #}
-		<div class="table-wrap-outer -cols-1">
+		<div class="table-wrap-outer -cols-1 js-file-table-wrap-outer">
 
 			<div class="table-wrap-container -col-1 js-file-view">
 			
@@ -72,7 +72,7 @@
 
 
 		{# split-view - 2 col3 #}
-		<div class="table-wrap-outer -split-view -cols-2">
+		<div class="table-wrap-outer -split-view -cols-2 js-file-table-wrap-outer">
 
 			<div class="table-wrap-container -col-1 js-file-view">
 			
@@ -153,7 +153,7 @@
 
 
 		{# split-view - 3 cols #}
-		<div class="table-wrap-outer -split-view -cols-3">
+		<div class="table-wrap-outer -split-view -cols-3 js-file-table-wrap-outer">
 
 			<div class="table-wrap-container -col-1 js-file-view">
 			

@@ -9,7 +9,8 @@
     overflow: auto;
 	
     .main-container--moments & {
-        @include calc( height, "100% - #{$panel-header-height}" );
+        // @include calc( height, "100% - #{$panel-header-height}" );
+       	height: 100%;
     }
 }
 
