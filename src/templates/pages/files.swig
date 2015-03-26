@@ -18,7 +18,7 @@
 	{% include "src/templates/includes/drawer-files.swig" %}
 
 	{# actions #}
-	{% include "src/templates/includes/actions-files.swig" %}
+	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}
 	{% include "src/templates/includes/stage-files.swig" %}

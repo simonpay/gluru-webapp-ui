@@ -3,7 +3,6 @@
 	{% set heading = 'Files' %}
 	{% include "drawer-start.swig" %}
 
-
 		{# sources #}
 		{% set rObj = mydata.drawer.sources %}
 		{% include "options-list.swig" %}

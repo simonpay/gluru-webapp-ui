@@ -22,11 +22,7 @@
         width: $actions-width;
         overflow: visible;
         @include transition(width $actions-animation-duration);
-        // border-left: 1px solid $silver;
-        box-shadow: 
-            // -7px 0px $panel-drop-shadow-spread $panel-drop-shadow, 
-            -1px 0px 0px $silver; // border-left so width stays at zero 
-
+        box-shadow: -1px 0px 0px $silver; // border-left so width stays at zero 
     }
     
     // css transition for slide out of drawer
