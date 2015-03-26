@@ -26,18 +26,33 @@
 					{% if rObj.id === "teams" %}
 
 						{# teams #}
-						<div class="options-list__icon -team {{obj.className}}"></div>
+						<div class="options-list__icon -team {{ obj.className }}"></div>
+
+					{% elseif rObj.id === "favourites" %}
+
+						<div class="options-list__icon">
+							<div class="avatar -favourite">
+								<div class="avatar__img-wrap">
+									<img class="avatar__img" src="{{ obj.img_src }}" alt="">
+								</div>
+							</div>
+						</div>
 
 					{% else %}
 
-						{# sources and favourites #}
+						{# sources #}
 						<div class="options-list__icon">
 							<div class="{{obj.className}}"></div>
 						</div>
 
 					{% endif %}
 
-						<div class="options-list__text">{{ obj.text|safe }}</div>
+						<div class="options-list__text-wrap">
+							<div class="options-list__text">{{ obj.text|safe }}</div>
+						{% if rObj.id === "favourites" %}
+							<div class="options-list__text -secondary">{{ obj.email|safe }}</div>
+						{% endif %}
+						</div>
 
 				{% elseif rObj.id === "email" || rObj.id === "people" %}
 

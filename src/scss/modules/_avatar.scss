@@ -26,10 +26,18 @@
         border-radius: 100%;
         border: 3px solid $white;
 
-        .-profile & {
-            border: 3px solid $pink;
+        .-profile &,
+        .-favourite & {
             width: 34px;
             height: 34px;
+        }
+
+        .-profile & {
+            border: 3px solid $pink;
+        }
+
+        .-favourite & {
+            border: none;
         }
     }
 

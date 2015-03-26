@@ -106,7 +106,7 @@
                         }
 
                             .options-list__icon,
-                            .options-list__text, {
+                            .options-list__text-wrap {
                                 display: inline-block;
                                 vertical-align: middle;
                             }
@@ -155,8 +155,14 @@
                                 .drawer & {
                                     width: $options-link-text-width-drawer;
                                     font-weight: lighter;
-                                    color: $dove-gray;
+                                    color: $mine-shaft;
                                     font-size: $options-list-text-font-size--drawer;
+
+                                    &.-secondary {
+                                        margin-top: 3px;
+                                        font-size: rem(13);
+                                        color: $dusty-gray-dark;
+                                    }
                                 }
                                 
                                 &.options-list__text--current-file {

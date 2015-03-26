@@ -32,15 +32,18 @@
             "options": [
                 {
                     "text"              : "Alex Li",
-                    "className"         : "tmp-fav-avatar-1"
+                    "email"             : "alexli@gmail.com",
+                    "img_src"           : "img/tmp_avatar_1.png"
                 },
                 {
                     "text"              : "Jason Smith",
-                    "className"         : "tmp-fav-avatar-2"
+                    "email"             : "jaysmith@gmail.com",
+                    "img_src"           : "img/tmp_avatar_2.png"
                 },
                 {
                     "text"              : "Stephanie Double-barrelled-longname",
-                    "className"         : "tmp-fav-avatar-3"
+                    "email"             : "stephanieC@lego.com",
+                    "img_src"           : "img/tmp_avatar_2.png"
                 }
             ]
         },
