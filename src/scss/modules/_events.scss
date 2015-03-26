@@ -179,61 +179,17 @@
             // for timeline section
             &.event--actions-header {
                 @include calc( width, "#{$actions-width} + 20px" );
+                top: -( ($event-height - $panel-header-height) / 2);
                 left: 20px;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
                 @include transition( left $actions-animation-duration );
 
                 .actions-is-open & {
-                    top: -( ($event-height - $panel-header-height) / 2);
                     left: -20px;
                 }
             }
         }
-
-            .event-avatar {
-                @include scut-center-transform(y);
-                left: 16px;
-            }
-
-                .event-avatar__img-wrap {
-                    width: 52px;
-                    height: 52px;
-                    overflow: hidden;
-                    border-radius: 100%;
-                    border: 3px solid $white;
-                }
-
-                    .event-avatar__img {
-                        width: 100%;
-                    }
-
-                    .event-avatar__source-type {
-                        position: absolute;
-                        top: -4px;
-                        right: -16px;
-                        width: 35px;
-                        height: 35px;
-                        background: $white;
-                        border-radius: 100%;
-                        border-width: 3px;
-                        border-style: solid;
-                        border-color: $dusty-gray;
-
-                        .-critical & {
-                            border-color: $pink;
-                        }
-                        .-non-critical & {
-                            border-color: $orange;
-                        }
-                        .-now & {
-                            border-color: $green;
-                        }
-
-                        .-icon {
-                            @include scut-center-transform;
-                        }
-                    }
 
             .event__text-wrap {
                 @include scut-center-transform(y);

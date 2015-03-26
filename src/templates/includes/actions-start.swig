@@ -4,11 +4,11 @@
 
 	<div class="event event--actions-header -now js-event--actions-header">
 
-		<div class="event-avatar">
-			<div class="event-avatar__img-wrap">
-				<img class="event-avatar__img" src="img/tmp_avatar_1.png" alt="">
+		<div class="avatar -event">
+			<div class="avatar__img-wrap">
+				<img class="avatar__img" src="img/tmp_avatar_1.png" alt="">
 			</div>
-			<div class="event-avatar__source-type">
+			<div class="avatar__source-type">
 				<div class="-icon icon-gdrive-sml"></div>
 			</div>
 		</div>
@@ -22,7 +22,6 @@
 			<div class="icon-button -center-transform -right -reverse js-close-actions">
 				<div class="icon-close"></div>
 			</div>
-
 
 		</div>
 

@@ -23,6 +23,10 @@
         .stage-nav__item { // li
             display: inline-block;
             margin: 0 6px;
+
+            &.-profile {
+                margin-left: 20px;
+            }
         }
 
             // custom styles for accounts icons in top right corner 

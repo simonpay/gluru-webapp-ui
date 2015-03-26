@@ -5,12 +5,7 @@
 			data-tt="Home"></a>
 	</div>
 	<ul class="main-nav__list">
-{# 		<li class="main-nav__item -primary">
-			<a href="#" 
-				class="main-nav__link js-main-nav__link -avatar js-tt" 
-				data-tt="Profile">Avatar</a>
-		</li>
- #}		<li class="main-nav__item -primary -divider">
+		<li class="main-nav__item -primary -divider">
 			<a href="#" 
 				class="main-nav__link js-main-nav__link -add js-tt" 
 				data-tt="Add  a File">Add</a>

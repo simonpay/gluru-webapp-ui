@@ -1,0 +1,67 @@
+/*------------------------------------*\
+    # AVATAR
+\*------------------------------------*/
+
+// avatars are placeholders for circular (images usually avatar 
+// images) with a keyline and optional inset number or icon
+
+
+.avatar {
+    position: relative;
+
+    &.-event {
+        @include scut-center-transform(y);
+        left: 16px;
+    }
+
+    .-profile & {
+        top: 2px;
+    }
+}
+
+    .avatar__img-wrap {
+        width: 52px;
+        height: 52px;
+        overflow: hidden;
+        border-radius: 100%;
+        border: 3px solid $white;
+
+        .-profile & {
+            border: 3px solid $pink;
+            width: 34px;
+            height: 34px;
+        }
+    }
+
+        .avatar__img {
+            width: 100%;
+        }
+
+        .avatar__source-type {
+            position: absolute;
+            top: -4px;
+            right: -16px;
+            width: 35px;
+            height: 35px;
+            background: $white;
+            border-radius: 100%;
+            border-width: 3px;
+            border-style: solid;
+            border-color: $dusty-gray;
+
+            .-critical & {
+                border-color: $pink;
+            }
+            .-non-critical & {
+                border-color: $orange;
+            }
+            .-now & {
+                border-color: $green;
+            }
+
+            .-icon {
+                @include scut-center-transform;
+            }
+        }
+
+

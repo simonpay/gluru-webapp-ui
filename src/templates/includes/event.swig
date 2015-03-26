@@ -8,12 +8,12 @@
 
 	<div class="event -{{ event_obj.priority }} js-event" data-priority="{{ event_obj.priority }}">
 
-		<div class="event-avatar">
-			<div class="event-avatar__img-wrap">
-				<img class="event-avatar__img" src="img/{{ event_obj.person_id }}.png" alt="">
+		<div class="avatar -event">
+			<div class="avatar__img-wrap">
+				<img class="avatar__img" src="img/{{ event_obj.person_id }}.png" alt="">
 			</div>
 			{% if event_obj.source_type !== "" %}
-			<div class="event-avatar__source-type">
+			<div class="avatar__source-type">
 				<div class="-icon {{ event_obj.source_type }}"></div>
 			</div>
 			{% endif %}
