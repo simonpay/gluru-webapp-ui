@@ -43,6 +43,7 @@
     }
 
         .main-nav__item { // li
+            position: relative;
             float: left;
             
             @include mq(large){
@@ -54,7 +55,17 @@
                 &.-divider {
                     margin-bottom: 30px;
                     padding-bottom: 15px;
-                    border-bottom: 1px solid $pink-darker;
+                    // border-bottom: 1px solid $pink-darker;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                        background: rgba($pink-lighter, 1);
+                    }
                 }
             }
         }

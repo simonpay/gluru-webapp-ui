@@ -1,0 +1,90 @@
+/*------------------------------------*\
+    # ICON BUTTON
+\*------------------------------------*/
+
+// the grey icons at the top of the ui
+// also used for close buttons in actions and drawer
+
+.icon-button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    overflow: visible !important;
+    opacity: 0.5;
+    cursor: pointer;
+    @include transition( opacity 0.3s );
+
+    &.-center-transform {
+        @include scut-center-transform(y);
+    }
+
+    &.-right {
+        position: absolute;
+        right: 14px;
+    }
+
+    &.-infinity{
+        @include use-sprite("icon-infinity-view");
+
+        &.is-split-view{
+            @include use-sprite("icon-split-view");
+        }
+    }
+
+    &.-sort {
+        @include use-sprite("icon-sort");
+    }
+
+    &.-drawer {
+        @include use-sprite("icon-toggle-drawer");
+    }
+
+    &.-actions {
+        @include use-sprite("icon-toggle-actions");
+    }
+
+    &.-search {
+        @include use-sprite("icon-search");
+    }
+
+    &.-now {
+        @include use-sprite("icon-now");
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border: 1px solid rgba($dusty-gray, 0.6);
+        border-radius: 100%;
+        opacity: 0;
+        @include transition( opacity 0.3s );
+
+    }
+
+    &.-reverse:after {
+        border-color: rgba($white, 0.6);
+    }
+
+
+    &:hover,
+    &.is-selected,
+    {
+        opacity: 1;
+
+        &:after {
+            // content: "";
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        &:after {
+            background: rgba($black, .03);
+        }
+    }
+}
+

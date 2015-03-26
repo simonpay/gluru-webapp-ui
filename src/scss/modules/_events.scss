@@ -185,6 +185,7 @@
                 @include transition( left $actions-animation-duration );
 
                 .actions-is-open & {
+                    top: -( ($event-height - $panel-header-height) / 2);
                     left: -20px;
                 }
             }

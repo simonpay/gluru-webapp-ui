@@ -18,6 +18,8 @@
 
 		// search
 		$search 				= $( ".js-search" ),
+		$search_field_wrap		= $( ".js-search-field-wrap" ),
+		$search_field			= $( ".js-search-field" ),
 		$close_search 			= $( ".js-close-search" ),
 	
 		// moments	
@@ -175,6 +177,16 @@
 
 
 		search: {
+
+			activate_field: function () {
+
+				$search_field_wrap.addClass( "is-selected" );
+			},
+
+			deactivate_field: function () {
+
+				$search_field_wrap.removeClass( "is-selected" );
+			},
 
 			set_state: function ( requested_state ) {
 
@@ -415,6 +427,7 @@
 			},
 
 			hide: function () {
+				// console.log( "tooltips.hide()" );
 				$tooltip
 					.removeClass( "-right" )
 					.addClass( "is-hidden" )
@@ -490,7 +503,22 @@
 			// Hide the pop_menu
 			obj_gluru.pop_menu.hide.call( $(this) );
 		}
+
+		if ( !$(e.target).closest($search_field_wrap).length ) {
+			obj_gluru.search.deactivate_field();
+			
+			// console.log( $search_field.val().length );
+			// if ( $search_field.value.length ) {
+
+			// }
+		}
 	});
+
+
+	$search_field.on( "click", function() {
+		obj_gluru.search.activate_field();
+	});
+
 
 
 	// TOOLTIPS

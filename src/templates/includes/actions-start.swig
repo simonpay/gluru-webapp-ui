@@ -19,9 +19,11 @@
 		</div>
 
 		<div class="close-button-wrap__header-panel">
-			<div class="close-button close-button__actions -reverse js-close-actions">
-				<div class="inner"></div>
+			<div class="icon-button -center-transform -right -reverse js-close-actions">
+				<div class="icon-close"></div>
 			</div>
+
+
 		</div>
 
 	</div>
@@ -31,8 +33,8 @@
 
 	<header class="panel-header panel-header--actions">
 		<div class="actions__heading">Footprint</div>
-		<div class="close-button close-button__actions js-close-actions">
-			<div class="inner"></div>
+		<div class="icon-button -center-transform -right js-close-actions">
+			<div class="icon-close"></div>
 		</div>
 	</header>
 

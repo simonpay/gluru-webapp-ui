@@ -11,53 +11,63 @@
     height: $panel-header-height;
 }
 
-.close-button {
-    z-index: 1;
-    @include scut-center-transform(y);
-    width: 28px;
-    height: 28px;
+// .close-button {
+//     z-index: 1;
+//     @include scut-center-transform(y);
+//     width: 28px;
+//     height: 28px;
     
-    .inner {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        @include transform( rotate(45deg) );
-        opacity: 1;
-        border-radius: 100%;
-        border: 1px solid $dusty-gray-dark;
-        cursor: pointer;
-        @include transition( opacity 0.3s );
 
+//     &.-reverse {
+//         .inner {
+//             border-color: $white;
+
+//             &:before,
+//             &:after {
+//                 background: $white;
+
+//             }
+//         }
+//     }
+
+// }
+
+.icon-close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    @include transform( rotate(45deg) );
+    // opacity: 1;
+    // border-radius: 100%;
+    // border: 1px solid $dusty-gray-dark;
+    cursor: pointer;
+    // @include transition( opacity 0.3s );
+
+    &:before,
+    &:after {
+        content: "";
+        @include scut-center-transform;
+        width: 3px;
+        height: 75%;
+        background: $dusty-gray-dark;
+
+    }
+    &:after {
+        width: 75%;
+        height: 3px;
+    }
+    // &:hover {
+    //     opacity: 0.5;
+    // }
+
+
+    .-reverse & {
         &:before,
         &:after {
-            content: "";
-            @include scut-center-transform;
-            width: 3px;
-            height: 75%;
-            background: $dusty-gray-dark;
+            background: $white;
 
-        }
-        &:after {
-            width: 75%;
-            height: 3px;
-        }
-        &:hover {
-            opacity: 0.5;
         }
     }
-
-    &.-reverse {
-        .inner {
-            border-color: $white;
-
-            &:before,
-            &:after {
-                background: $white;
-
-            }
-        }
-    }
-
 }
 
 .close-button__drawer,

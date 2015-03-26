@@ -36,13 +36,13 @@
 .icon-files__network--white {   @include use-sprite("icon-files__network--white"); }
 .icon-files__delete--white {    @include use-sprite("icon-files__delete--white"); }
 
-.icon-files__sort {             @include use-sprite("icon-files__sort"); }
-.icon-files__infinity-view {    @include use-sprite("icon-files__infinity-view"); }
-.icon-files__split-view {       @include use-sprite("icon-files__split-view"); }
-.icon-files__toggle-drawer {    @include use-sprite("icon-files__toggle-drawer"); }
-.icon-files__toggle-actions {   @include use-sprite("icon-files__toggle-actions"); }
-.icon-files__search {           @include use-sprite("icon-files__search"); }
-.icon-files__now {              @include use-sprite("icon-files__now"); }
+.icon-sort {             		@include use-sprite("icon-sort"); }
+.icon-infinity-view {    		@include use-sprite("icon-infinity-view"); }
+.icon-split-view {       		@include use-sprite("icon-split-view"); }
+.icon-toggle-drawer {    		@include use-sprite("icon-toggle-drawer"); }
+.icon-toggle-actions {   		@include use-sprite("icon-toggle-actions"); }
+.icon-search {           		@include use-sprite("icon-search"); }
+.icon-now {              		@include use-sprite("icon-now"); }
 
 .icon-clock--gray {             @include use-sprite("icon-clock--gray"); }
 .icon-clock--pink {             @include use-sprite("icon-clock--pink"); }
