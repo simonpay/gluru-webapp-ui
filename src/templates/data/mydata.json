@@ -118,8 +118,12 @@
             "id":      "people",
             "heading": "People",
             "options": [
-                {},
-                {}
+                {
+                    "img_src"           : "img/tmp_avatar_1.png"
+                },
+                {
+                    "img_src"           : "img/tmp_avatar_2.png"
+                }
             ]
         },
         "hierarchy": {

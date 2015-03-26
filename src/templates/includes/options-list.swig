@@ -31,7 +31,7 @@
 					{% elseif rObj.id === "favourites" %}
 
 						<div class="options-list__icon">
-							<div class="avatar -favourite">
+							<div class="avatar">
 								<div class="avatar__img-wrap">
 									<img class="avatar__img" src="{{ obj.img_src }}" alt="">
 								</div>
@@ -58,7 +58,11 @@
 
 						<div class="media">
 							<div class="media__img">
-								<div class="tmp-fav-avatar-1"></div>
+								<div class="avatar">
+									<div class="avatar__img-wrap">
+										<img class="avatar__img" src="{{ obj.img_src }}" alt="">
+									</div>
+								</div>
 							</div>
 							<div class="media__body">
 								<div><strong>Alex Li</strong> renamed this file</div>
