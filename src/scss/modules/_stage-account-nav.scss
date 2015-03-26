@@ -1,92 +1,28 @@
 /*------------------------------------*\
-# STAGE NAV
+# STAGE ACCOUNT NAV
 \*------------------------------------*/
 
-// the list of buttons that sits in the header beneath the avatar 
+// the avatar account button and the now and notifications 
+// buttons in the header on the stage 
 // the icons themselves are in icon-button.scss
 
-.stage-nav { // nav
+.stage-account-nav { // nav
+    // @include scut-center-transform(y);
     position: absolute;
-    bottom: 25px;
+    bottom: 23px;
     right: $stage-padding-right - 5px;
-
-    &.-account {
-        top: 15px;
-        bottom: auto;
-    }
 }
 
-    .stage-nav__list { // ul
+    .stage-account-nav__list { // ul
         font-size: 0;
     }
 
-        .stage-nav__item { // li
+        .stage-account-nav__item { // li
             display: inline-block;
             margin: 0 6px;
         }
 
-            // custom styles for accounts icons in top right corner 
-            .stage-nav__icon-wrap { // wrapper for icon
-                position: relative;
-                width: $stage-nav__icon-wrap-width;
-                height: $stage-nav__icon-wrap-height;
-                border-radius: $stage-nav__icon-wrap-height;
-                @include transition( width 0.3s );
-                cursor: pointer;
-
-                .-now & {
-                    background: $green;
-                    width: $stage-nav__icon-wrap-width;
-
-                    &:hover,
-                    &.is-selected {
-                        width: 76px;
-
-                        .text { // now text
-                            opacity: 1;
-                            @include transition( opacity 0.3s 0.1s );
-                        }
-                    }
-
-                    .icon-now-white {
-                        position: absolute;
-                        right: 0;
-                    }
-
-                    .text {
-                        @include scut-center-transform(y);
-                        left: 13px;
-                        font-size: rem(16);
-                        color: $white;
-                        opacity: 0;
-                        line-height: $stage-nav__icon-wrap-height;
-                        @include transition( opacity 0.1s);
-                    }
-                }
-
-                .-notifications & {
-                    background: $pink;
-
-                    .inset-num {
-                        position: absolute;
-                        top: -3px;
-                        right: -13px;
-                        width: 20px;
-                        height: 20px;
-                        background: $pink;
-                        border-radius: 100%;
-                        border: 2px solid $white;
-                        color: $white;
-                        font-size: rem(12);
-                        font-weight: bold;
-                        text-align: center;
-                        line-height: 18px;
-                    }
-                }
-            }
-
-
-            // .stage-nav__icon {
+            // .stage-account-nav__icon {
             //     position: relative;
             //     width: 30px;
             //     height: 30px;

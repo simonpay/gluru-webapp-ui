@@ -3,11 +3,13 @@
 {% set obj = mydata.files.stage_data %}
 {% include "panel-header-stage.swig" %}
 
+	{# todo: remove inline style attr - these are just for testing #}
+
 	{# section files #}
 	<section class="section-wrap -files js-section-files">
 
 		{# single view #}
-		<div class="split-view-wrap-outer -cols-1 js-file-table-wrap-outer">
+		<div class="split-view-wrap-outer -cols-1 js-file-table-wrap-outer" style="display:none">
 
 			<div class="split-view-wrap-container -col-1 js-file-view">
 			
@@ -74,7 +76,7 @@
 
 
 		{# split-view - 2 col3 #}
-		<div class="split-view-wrap-outer -split-view -cols-2 js-file-table-wrap-outer">
+		<div class="split-view-wrap-outer -split-view -cols-2 js-file-table-wrap-outer" style="display:none">
 
 			<div class="split-view-wrap-container -col-1 js-file-view">
 			
@@ -159,7 +161,7 @@
 
 
 		{# split-view - 3 cols #}
-		<div class="split-view-wrap-outer -split-view -cols-3 js-file-table-wrap-outer">
+		<div class="split-view-wrap-outer -split-view -cols-3 js-file-table-wrap-outer" style="display:none">
 
 			<div class="split-view-wrap-container -col-1 js-file-view">
 			

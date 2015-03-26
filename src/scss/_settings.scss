@@ -63,14 +63,17 @@ $actions-wrap-z-index_mq-sml:               110;
 // DIMENSIONS
 // -----------------------------------
 // stage
-// these values are starting points for other variables
+// these a vars are starting points for other variables
 // they are not intended for direct use in rules
 $_stage-indent-left:                        24px;
 $_stage-indent-right:                       $_stage-indent-left;
-
 $stage-padding-left:                        $_stage-indent-left;
 $stage-padding-right:                       $_stage-indent-right;
 
+
+// stage nav
+$stage-nav__icon-wrap-width:                30px;
+$stage-nav__icon-wrap-height:               $stage-nav__icon-wrap-width;
 
 // main nav
 $main-nav-width:                            100px;

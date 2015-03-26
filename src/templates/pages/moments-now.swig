@@ -34,6 +34,7 @@
 		(function(){
 			$( ".stage-nav__icon.js-toggle-actions" ).click();
 			$( ".js-event-nav__link" )[0].click();
+			$( ".js-now" ).addClass( "is-selected" );
 		})();
 		</script>
 {% endblock %}

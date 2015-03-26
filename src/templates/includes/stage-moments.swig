@@ -3,6 +3,8 @@
 {% set obj = mydata.moments.stage_data %}
 {% include "panel-header-stage.swig" %}
 
+	{# todo: remove inline style attr - these are just for testing #}
+
 	{# section moments #}
 	<section class="section-wrap -moments js-section-moments">
 		
@@ -33,7 +35,7 @@
 		<!-- split-view combos -->
 
 		<!-- single col -->
-		<div class="split-view-wrap-outer -cols-1 js-timeline-wrap-outer">
+		<div class="split-view-wrap-outer -cols-1 js-timeline-wrap-outer" style="display:none">
 
 			<div class="split-view-wrap-container -col-1">
 				<div class="split-view-wrap">
@@ -49,7 +51,7 @@
 
 
 		<!-- double col -->
-		<div class="split-view-wrap-outer -split-view -cols-2 js-timeline-wrap-outer">
+		<div class="split-view-wrap-outer -split-view -cols-2 js-timeline-wrap-outer" style="display:none">
 
 			<div class="split-view-wrap-container -col-1">
 				<div class="split-view-wrap">
@@ -75,7 +77,7 @@
 
 
 		<!-- triple col -->
-		<div class="split-view-wrap-outer -split-view -cols-3 js-timeline-wrap-outer">
+		<div class="split-view-wrap-outer -split-view -cols-3 js-timeline-wrap-outer" style="display:none">
 
 			<div class="split-view-wrap-container -col-1">
 				<div class="split-view-wrap">

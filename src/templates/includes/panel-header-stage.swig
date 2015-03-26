@@ -1,6 +1,7 @@
 <header class="panel-header -stage">
 
 	{% include "stage-heading.swig" %}
+	{% include "stage-account-nav.swig" %}
 	{% include "stage-nav.swig" %}
 
 	<div class="search-field-wrap js-search-field-wrap">
