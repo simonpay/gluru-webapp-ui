@@ -27,7 +27,7 @@
 
     .-split-view & {
         // width: 142px;
-        margin: 0 auto;
+        margin: 0 auto 25px;
         @include transform( none );
     }
 
@@ -42,9 +42,14 @@
 }
 
     .event-wrap {
+        position: relative;
         margin-bottom: 30px;
         white-space: nowrap;
         font-size: 0; // remove space between inline-block els
+
+        .-split-view & {
+            margin-bottom: 50px;
+        }
     }
         
         .event-time, 
@@ -66,9 +71,16 @@
             height: 20px;
             font-size: rem(20);
             font-weight: lighter;
-            color: $zeus;
+            color: $dove-gray;
             text-transform: uppercase;
             text-align: center;
+
+            .-split-view & {
+                position: absolute;
+                top: 24px;
+                right: 50%;
+                width: 200px;
+            }
         }
 
         .event-icon-wrap {
@@ -102,6 +114,16 @@
             min-width: 400px;
             background: $dusty-gray;
             border-radius: 15px;
+            
+            &.-critical {
+                background: $pink;
+            }
+            &.-non-critical {
+                background: $orange;
+            }
+            &.-now {
+                background: $green;
+            }
 
             // add hover when inside event-wrap 
             // (must be in timeline - not in actions header)
@@ -114,27 +136,7 @@
                 }
             }
             
-            // when timeline is split, remove animations
-            .-split-view & {
-                height: $event-height-split-view;
-                @include transition( none );
-
-                &:hover {
-                    // box-shadow: 0px 0px 15px $dusty-gray;
-                    @include transform( none );
-                }
-            }
-
-            .-split-view & {
-                width: 80%;
-                min-width: 270px;
-                
-                // remove triangle
-                &:after {
-                    content: none;
-                }
-            }
-
+            // selected event
             .is-selected & {
                 @include transform( translateX(30px) !important );
                 
@@ -143,27 +145,15 @@
                     @include transform( none !important );
                 }
             }
-            
-            &.-critical {
-                background: $pink;
-            }
-            &.-non-critical {
-                background: $orange;
-            }
-            &.-now {
-                background: $green;
-            }
 
+            // the triangle that points to the time
             &:after {
                 content: "";
-                @include scut-triangle(left, 20px 40px, $pink);
-                position: absolute;
-                left: -20px;;
-                top: 50%;
-                @include transform( translateY(-50%) );
-                border-right-color: $dusty-gray;
+                @include scut-triangle(left, $event-arrow-height $event-arrow-width, $dusty-gray);
+                @include scut-center-transform(y);
+                left: -20px;
             }
-        
+
             // set color of triangles when inside specific class 
             &.-critical:after {
                 border-right-color: $pink;
@@ -174,6 +164,44 @@
             &.-now:after {
                 border-right-color: $green;
             }
+        
+            // when timeline is split, remove animations
+            .-split-view & {
+                width: 80%;
+                min-width: 320px;
+                max-width: 400px;
+                height: $event-height-split-view;
+                margin-top: 20px;
+                box-shadow: 
+                    0px 10px 0px $white, 
+                    // 0px -25px 0px $white
+                    ;
+                @include transition( none );
+
+                &:hover {
+                    @include transform( none );
+                }
+
+                // remove triangle
+                &:after {
+                    // content: none;
+                    @include scut-triangle(up, $event-arrow-width $event-arrow-height, $dusty-gray);
+                    @include scut-center-transform(x);
+                    top: -$event-arrow-height;
+                }
+
+                // set color of triangles when inside specific class 
+                &.-critical:after {
+                    border-bottom-color: $pink;
+                }
+                &.-non-critical:after {
+                    border-bottom-color: $orange;
+                }
+                &.-now:after {
+                    border-bottom-color: $green;
+                }
+            }
+
             
             // config for the header panel in actions panel
             // for timeline section
@@ -191,6 +219,7 @@
             }
         }
 
+            // the text content of the event
             .event__text-wrap {
                 @include scut-center-transform(y);
                 left: 95px;
