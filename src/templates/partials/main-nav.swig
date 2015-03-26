@@ -7,8 +7,8 @@
 	<ul class="main-nav__list">
 		<li class="main-nav__item -primary -divider">
 			<a href="#" 
-				class="main-nav__link js-main-nav__link -add js-tt" 
-				data-tt="Add  a File">Add</a>
+				class="main-nav__link js-main-nav__link -add js-add js-tt" 
+				data-tt="Add Stuff Here">Add</a>
 		</li>
 {# 		<li class="main-nav__item -primary -divider">
 			<a href="#" 

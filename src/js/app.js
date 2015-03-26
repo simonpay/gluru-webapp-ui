@@ -6,6 +6,9 @@
 		$drawer_wrap 			= $( ".js-drawer-wrap" ),
 		$actions_wrap 			= $( ".js-actions-wrap" ),
 		$search_wrap 			= $( ".js-search-wrap" ),
+
+		// main nav
+		$add_button	 			= $( ".js-add" ),
 	
 		// drawer	
 		$toggle_drawer 			= $( ".js-toggle-drawer" ),
@@ -39,6 +42,7 @@
 		
 		// collapsable lists
 		$expandable_lists 		= $( ".js-toggle-expand-list" ),
+		$options_list_link 		= $( ".options-list__link" ),
 		
 		// files
 		$table_wraps 			= $( ".js-file-table-wrap-outer" );
@@ -70,6 +74,7 @@
 
 						// select drawer toggle button
 						$this.removeClass( "is-selected" );
+						$add_button.removeClass( "is-selected" );
 
 						// close drawer
 						obj_gluru.drawer._close.call( $(this) );
@@ -78,6 +83,7 @@
 
 						// deselect drawer toggle button
 						$this.addClass( "is-selected" );
+						$add_button.addClass( "is-selected" );
 
 						// open drawer
 						obj_gluru.drawer._open.call( $(this) );
@@ -160,16 +166,38 @@
 
 			do_click: function () {
 				
-				var _is_files 		= $(this).hasClass( "-files" ),
+				var $this 			= $(this),
+					_is_gluru_logo 	= $(this).hasClass( "js-gluru" ),
+					_is_add		 	= $(this).hasClass( "-add" ),
 					_is_moments 	= $(this).hasClass( "-moments" ),
-					_is_gluru_logo 	= $(this).hasClass( "js-gluru" );
+					_is_files 		= $(this).hasClass( "-files" )
+					;
 
-				if ( _is_files ) {
-					location.href = "files.html";
-				} else if ( _is_moments ) {
-					location.href = "moments.html";
-				} else if ( _is_gluru_logo ) {
+				if ( _is_gluru_logo ) {
+
 					location.href = "index.html";
+
+				} else if ( _is_moments ) {
+
+					location.href = "moments.html";
+
+				} else if ( _is_add ) {
+
+					// console.log("HIT");
+
+					if ( !$main_container.hasClass( "drawer-is-open" ) ) {
+						$( ".-drawer.js-toggle-drawer" ).click();
+						$this.addClass( "is-selected" );
+						// $this.toggleClass( "is-selected" );
+					} else {
+						$( ".-drawer.js-toggle-drawer" ).click();
+						$this.removeClass( "is-selected" );
+					}
+
+				} else if ( _is_files ) {
+
+					location.href = "files.html";
+
 				}
 			}
 
@@ -452,6 +480,16 @@
 							}, {
 								duration: 300
 							});
+			},
+
+			select_item: function () {
+
+				$this = $(this);
+
+				$options_list_link.removeClass( "is-selected" );
+				$this.addClass( "is-selected" );
+
+
 			}
 		},
 
@@ -513,12 +551,6 @@
 			// }
 		}
 	});
-
-
-	$search_field.on( "click", function() {
-		obj_gluru.search.activate_field();
-	});
-
 
 
 	// TOOLTIPS
@@ -665,6 +697,10 @@
 
 	// SEARCH
 	// -------------------------------------------------
+	// search activate
+	$search_field.on( "click", function() {
+		obj_gluru.search.activate_field();
+	});
 	// show search "modal" screen
 	$search.on( "click", function(){
 		obj_gluru.search.set_state( "open" );
@@ -680,6 +716,10 @@
 	// animate all collapsable lists
 	$expandable_lists.on( "click", function(){
 		obj_gluru.options_list.toggle.call( $(this) );
+	});
+	// select optins list item
+	$options_list_link.on( "click", function(){
+		obj_gluru.options_list.select_item.call( $(this) );
 	});
 
 

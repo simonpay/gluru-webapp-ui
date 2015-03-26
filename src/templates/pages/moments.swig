@@ -15,7 +15,7 @@
 	{%> "main-nav" %}
 
 	{# drawer #}
-	{% include "src/templates/includes/drawer-moments.swig" %}
+	{% include "src/templates/includes/drawer-files.swig" %}
 
 	{# actions #}
 	{% set moments_header = true %}

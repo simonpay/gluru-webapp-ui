@@ -1,6 +1,6 @@
 
 	{# drawer #}
-	{% set heading = 'Files' %}
+	{% set heading = 'Create' %}
 	{% include "drawer-start.swig" %}
 
 		{# sources #}

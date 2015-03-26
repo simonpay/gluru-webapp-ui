@@ -76,7 +76,14 @@
                 text-indent: -9999px;
 
                 &.-avatar {     @include use-sprite("tmp-nav-avatar"); }
-                &.-add {        @include use-sprite("icon-nav-add"); }
+                &.-add {
+                    @include use-sprite("icon-nav-add");
+                    @include transition( transform 0.3s );
+
+                    &.is-selected {
+                        @include transform( rotate(45deg) );
+                    }
+                }
                 &.-search {     @include use-sprite("icon-nav-search"); }
                 &.-files {      @include use-sprite("icon-nav-files"); }
                 &.-moments {    @include use-sprite("icon-nav-moments"); }
