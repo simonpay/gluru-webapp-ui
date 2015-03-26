@@ -98,6 +98,12 @@
 .panel-header--timeline {
     // width: 100%;
     // margin-left: 12px;
+
+    // make panel absolute so it streteches 100% width when 
+    // multiple timelines cause horizonatl scrolling
+    position: absolute;
+    left: $_stage-indent-left;
+    right: 0;
     padding-left: 0;
 }
 
