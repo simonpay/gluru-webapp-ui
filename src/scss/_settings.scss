@@ -72,6 +72,19 @@ $stage-padding-left:                        $_stage-indent-left;
 $stage-padding-right:                       $_stage-indent-right;
 
 
+// this section is to toggle the left indent 
+// -----------------------------------
+// on the stage (that eddie doesnt like)
+// toggle the value between 0 and 1;
+$show-stage-left-indent:					0;
+
+$stage-left-indent:							0;
+@if $show-stage-left-indent == 1 {
+	$stage-left-indent:						$stage-padding-left;
+}
+// -----------------------------------
+
+
 // stage nav
 $stage-nav__icon-wrap-width:                30px;
 $stage-nav__icon-wrap-height:               $stage-nav__icon-wrap-width;

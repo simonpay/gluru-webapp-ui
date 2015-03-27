@@ -21,7 +21,10 @@
 		.section-wrap {
 			display: block;
 			height: 100%;
-			padding-left: $stage-padding-left;
+
+			// add left indent
+			padding-left: $stage-left-indent;
+			
 			// &.-moments {
 			// 	padding: 20px;
 			// }
