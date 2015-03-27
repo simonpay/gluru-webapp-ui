@@ -9,7 +9,8 @@
 .avatar {
     position: relative;
 
-    &.-event {
+    &.-event,
+    &.-current-item {
         @include scut-center-transform(y);
         left: 16px;
     }
@@ -26,10 +27,15 @@
         overflow: hidden;
         border-radius: 100%;
 
-        .-event & {
-            width: 52px;
-            height: 52px;
+        .-event &,
+        .-current-item & {
+            width: 46px;
+            height: 46px;
             border: 3px solid $white;
+        }
+
+        .-current-item & {
+            background: $white;
         }
 
         .-profile & {
@@ -43,8 +49,8 @@
 
         .avatar__source-type {
             position: absolute;
-            top: -4px;
-            right: -16px;
+            top: -8px;
+            right: -19px;
             width: 35px;
             height: 35px;
             background: $white;
@@ -63,9 +69,9 @@
                 border-color: $green;
             }
 
-            .-icon {
+        }
+            .avatar__source-type-icon {
                 @include scut-center-transform;
             }
-        }
 
 

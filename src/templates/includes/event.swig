@@ -14,7 +14,7 @@
 			</div>
 			{% if event_obj.source_type !== "" %}
 			<div class="avatar__source-type">
-				<div class="-icon {{ event_obj.source_type }}"></div>
+				<div class="avatar__source-type-icon {{ event_obj.source_type }}"></div>
 			</div>
 			{% endif %}
 		</div>

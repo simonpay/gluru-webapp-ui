@@ -16,14 +16,19 @@
 {# {% endif %} #}
 	<div class="priority-box -current-item -now is-hidden js-actions--current-item">
 
-		<div class="avatar -event">
-			<div class="avatar__img-wrap">
+		<div class="avatar -current-item">
+{# 			<div class="avatar__img-wrap">
 				<img class="avatar__img" src="img/tmp_avatar_1.png" alt="">
 			</div>
-			<div class="avatar__source-type">
-				<div class="-icon icon-gdrive-sml"></div>
+ #}			<div class="avatar__img-wrap">
+				<div class="avatar__source-type-icon icon-gdrive"></div>
 			</div>
-		</div>
+
+
+{# 			<div class="avatar__source-type">
+				<div class="avatar__source-type-icon icon-gdrive-sml"></div>
+			</div>
+ #}		</div>
 
 		<div class="priority-box__text-wrap">
 			<div class="event__title">Sales_Report.doc</div>
