@@ -2,52 +2,84 @@
 # MEDIA OBJECT
 \*------------------------------------*/
 
-/* ====== media ====== */
-// .media {
-//     margin:10px;
-// }
 .media {
     overflow: hidden;
-}
-.media__body {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: rem(13);
+    // margin:10px;
+    
+    &.-level-1.media__body {
 
-    // heading inside file explorer source panel header
-    &.-location-text {
-        font-size: rem(18);
-        font-weight: lighter;
-        line-height: $lrg-icon-height;
-        white-space: nowrap;
+        .media.-level-2:nth-of-type(1) {
+            margin-top: 10px;
+        }
     }
 }
-.media__img {
-    float: left;
-    margin-right: 10px;
-    display: block;
 
-    .options-list & {
-        margin-left: 20px;
+    .media__body {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: rem(13);
+
+        // heading inside file explorer source panel header
+        &.-location-text {
+            font-size: rem(18);
+            font-weight: lighter;
+            line-height: $lrg-icon-height;
+            white-space: nowrap;
+        }
     }
-}
-.media__img--right {
-    float: right;
-    margin-right: 0;
-    margin-left: 10px;
-}
 
+    .media__body--table-text { //a
+        line-height: $sml-icon-height;
+        color: $black;
+        text-decoration: none;
 
-.media__body--table-text { //a
-    line-height: $sml-icon-height;
-    color: $black;
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
+        .is-selected & {
+            color: $white;
+        }
     }
-    .is-selected & {
-        color: $white;
+
+    .media__img {
+        float: left;
+        margin-right: 10px;
+        display: block;
+
+        .options-list & {
+            margin-right: 12px;
+        }
+
+        &.-right {
+            float: right;
+            margin-right: 0;
+            margin-left: 10px;
+        }
     }
-}
+
+        .media__text {
+            
+            &.-list-primary,
+            &.-list-secondary,
+            &.-list-tertiary {
+                display: block;
+            }
+
+            &.-list-primary {
+                margin-bottom: 6px;
+            }
+
+            &.-list-secondary {
+                margin-bottom: 3px;
+                font-size: rem(11);
+                color: $dusty-gray;
+            }
+
+            &.-list-tertiary {
+                margin-bottom: 2px;
+            }
+        }
+
+
+
 

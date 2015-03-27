@@ -1,4 +1,4 @@
-<div class="options-list">
+<div class="options-list {{ rObj.options_list_type_class }}">
 	<div class="options-list__heading -collapsable js-toggle-expand-list">{{ rObj.heading }}</div>
 	<div class="options-list__inner-wrap">
 
@@ -49,14 +49,20 @@
 
 						<div class="options-list__text-wrap">
 							<div class="options-list__text">{{ obj.text|safe }}</div>
+
 						{% if rObj.id === "favourites" %}
+
 							<div class="options-list__text -secondary">{{ obj.email|safe }}</div>
+
 						{% endif %}
+
 						</div>
 
-				{% elseif rObj.id === "email" || rObj.id === "people" %}
+				{% elseif rObj.id === "email" %}
 
-						<div class="media">
+				{% elseif rObj.id === "people" %}
+
+						<div class="media -level-1">
 							<div class="media__img">
 								<div class="avatar">
 									<div class="avatar__img-wrap">
@@ -65,46 +71,27 @@
 								</div>
 							</div>
 							<div class="media__body">
-								<div><strong>Alex Li</strong> renamed this file</div>
-								<div class="date-time">Today, 9:00am</div>
-								<div class="media">
+								<div class="media__text -list-primary"><strong>Alex Li</strong> renamed this file</div>
+								<div class="media__text -list-secondary">Today, 9:00am</div>
+								<div class="media -level-2">
 									<div class="media__img">
 										<div class="icon-gdrive-sml"></div>
 									</div>
-									<div class="media__body">Meeting Notes</div>
+									<div class="media__body">
+										<div class="media__text -list-primary">Meeting Notes</div>
+									</div>
 								</div>
-								<div class="media">
+								<div class="media -level-2">
 									<div class="media__img">
 										<div class="icon-gdrive-sml"></div>
 									</div>
-									<div class="media__body">Meeting Notes</div>
+									<div class="media__body">
+										<div class="media__text -list-primary">Meeting Notes</div>
+									</div>
 								</div>
 							</div>
 						</div>
 
-				{% elseif rObj.id === "people" %}
-
-						<div class="media">
-							<div class="media__img">
-								<div class="tmp-fav-avatar-1"></div>
-							</div>
-							<div class="media__body">
-								<div><strong>Alex Li</strong> renamed this file</div>
-								<div class="date-time">Today, 9:00am</div>
-								<div class="media">
-									<div class="media__img">
-										<div class="icon-gdrive-sml"></div>
-									</div>
-									<div class="media__body">Meeting Notes</div>
-								</div>
-								<div class="media">
-									<div class="media__img">
-										<div class="icon-gdrive-sml"></div>
-									</div>
-									<div class="media__body">Meeting Notes</div>
-								</div>
-							</div>
-						</div>
 
 				{% elseif rObj.id === "webPages" %}
 
@@ -113,8 +100,8 @@
 								<div class="icon-evernote"></div>
 							</div>
 							<div class="media__body">
-								<div>Firefox Redesigns Its Search Interface</div>
-								<p>Last week we learned that Mozilla had made a pact with Yahoo to switch Firefox’s default search engine to a yet-to-be launched new version of </p>
+								<div class="options-list__text">Firefox Redesigns Its Search Interface</div>
+								<div class="options-list__text -paragraph">Last week we learned that Mozilla had made a pact with Yahoo to switch Firefox’s default search engine to a yet-to-be launched new version of </div>
 							</div>
 						</div>
 

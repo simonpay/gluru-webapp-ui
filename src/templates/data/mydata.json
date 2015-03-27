@@ -115,8 +115,9 @@
             ]
         },
         "people": {
-            "id":      "people",
+            "id": "people",
             "heading": "People",
+            "options_list_type_class": "-multiple-line",
             "options": [
                 {
                     "img_src"           : "img/tmp_avatar_1.png"
@@ -139,6 +140,7 @@
         "webPages": {
             "id":      "webPages",
             "heading": "Web Links",
+            "options_list_type_class": "-multiple-line",
             "options": [
                 {},
                 {}

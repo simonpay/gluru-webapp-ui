@@ -17,9 +17,10 @@
     .actions & {
         border-top: 1px solid $alto;
         padding-top: 20px;
-        &:nth-of-type(1) { //remove top border from first options list in actions panel
-            border-top: none;
-        }
+
+        // &:nth-of-type(1) { //remove top border from first options list in actions panel
+        //     border-top: none;
+        // }
     }
 
     &.is-collapsed {
@@ -29,25 +30,31 @@
 
     .options-list__heading {
         position: relative;
-        padding: 0 13px 10px 5px;
+        padding-bottom: 10px;
         text-transform: uppercase;
         font-size: $options-list-heading-font-size;
         color: $dove-gray;
 
         &.-collapsable {
             cursor: pointer;
+
             &:after {
                 content: "";
                 display: block;
                 position: absolute;
                 top: 0;
-                right: 20px;
+                right: 0;
                 width: 20px;
                 height: 12px;
                 @include transform( rotate(180deg) );
                 @include use-sprite("icon-expand");
+
                 .is-collapsed & {
                     @include transform( rotate(0deg) );
+                }
+
+                .drawer & {
+                    right: 10px;
                 }
             }
         }
@@ -75,6 +82,10 @@
 
                     .drawer & {
                         margin-bottom: 4px;
+                    }
+
+                    .-multiple-line & { // when ".-multiple-line" class present (on ".options-list__list" level)
+                        margin-bottom: 14px;
                     }
                 }
 
@@ -113,7 +124,7 @@
 
 
                             .options-list__icon {
-                                margin-left: 5px;
+                                margin-left: 2px;
                                 margin-right: 8px;
 
                                 &.-right {
@@ -122,6 +133,7 @@
                                 }
 
                                 .drawer & {
+                                    margin-left: 5px;
                                     margin-right: 12px;
                                 }
 
@@ -144,6 +156,8 @@
                             .options-list__text {
                                 // width: $drawer-width - 95px;
                                 // margin-left: 8px;
+                                display: block;
+                                position: relative;
                                 width: $options-link-text-width-actions;
                                 text-decoration: none;
                                 font-size: $options-list-text-font-size;
@@ -165,6 +179,16 @@
                                     }
                                 }
                                 
+                                .media & {
+                                    // add leading for text within media object
+                                    // line-height: 1.7;
+                                    
+                                    // let text inside paragraph class wrap
+                                    &.-paragraph {
+                                        white-space: normal;
+                                    }
+                                }
+
                                 &.options-list__text--current-file {
                                     width: $options-link-text-width-actions - 35px;
                                     // width: 248px;
