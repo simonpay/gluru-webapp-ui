@@ -53,7 +53,7 @@
         
         .event-time, 
         .event-icon-wrap, 
-        .event, 
+        .priority-box.-event, 
         {
             position: relative;
             display: inline-block;
@@ -90,7 +90,6 @@
             margin-right: 35px;
             border: 6px solid $white;
 
-
             &.-moments {
                 // @include use-sprite("icon-nav-moments");
                 // display: inline-block;
@@ -105,135 +104,6 @@
             margin: 0 auto;
         }
 
-        .event {
-            height: $event-height;
-            // width: 500px;
-            width: 50%;
-            max-width: 500px;
-            min-width: 400px;
-            background: $dusty-gray;
-            border-radius: 15px;
-            
-            &.-critical {
-                background: $pink;
-            }
-            &.-non-critical {
-                background: $orange;
-            }
-            &.-now {
-                background: $green;
-            }
-
-            // add hover when inside event-wrap 
-            // (must be in timeline - not in actions header)
-            .event-wrap & {
-                @include transition(transform 0.2s);
-
-                &:hover {
-                    // box-shadow: 0px 0px 15px $dusty-gray;
-                    @include transform( translateX(3px) );
-                }
-            }
-            
-            // selected event
-            .is-selected & {
-                @include transform( translateX(30px) !important );
-                
-                // when timeline is split, remove animations
-                .-split-view & {
-                    @include transform( none !important );
-                }
-            }
-
-            // the triangle that points to the time
-            &:after {
-                content: "";
-                @include scut-triangle(left, $event-arrow-height $event-arrow-width, $dusty-gray);
-                @include scut-center-transform(y);
-                left: -20px;
-            }
-
-            // set color of triangles when inside specific class 
-            &.-critical:after {
-                border-right-color: $pink;
-            }
-            &.-non-critical:after {
-                border-right-color: $orange;
-            }
-            &.-now:after {
-                border-right-color: $green;
-            }
-        
-            // when timeline is split, remove animations
-            .-split-view & {
-                width: 80%;
-                min-width: 320px;
-                max-width: 400px;
-                height: $event-height-split-view;
-                margin-top: 20px;
-                box-shadow: 
-                    0px 10px 0px $white, 
-                    // 0px -25px 0px $white
-                    ;
-                @include transition( none );
-
-                &:hover {
-                    @include transform( none );
-                }
-
-                // remove triangle
-                &:after {
-                    // content: none;
-                    @include scut-triangle(up, $event-arrow-width $event-arrow-height, $dusty-gray);
-                    @include scut-center-transform(x);
-                    top: -$event-arrow-height;
-                }
-
-                // set color of triangles when inside specific class 
-                &.-critical:after {
-                    border-bottom-color: $pink;
-                }
-                &.-non-critical:after {
-                    border-bottom-color: $orange;
-                }
-                &.-now:after {
-                    border-bottom-color: $green;
-                }
-            }
-
-            
-            // config for the header panel in actions panel
-            // for timeline section
-            &.actions--current-file {
-                position: absolute; // position over the top of the actions header
-                @include calc( width, "#{$actions-width} + 20px" );
-                top: -( ($event-height - $panel-header-height) / 2);
-                left: 20px;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                @include transition( left $actions-animation-duration );
-
-                .actions-is-open & {
-                    left: -20px;
-                }
-
-                &.is-hidden {
-                    display: none;
-                }
-            }
-        }
-
-            // the text content of the event
-            .event__text-wrap {
-                @include scut-center-transform(y);
-                left: 95px;
-                right: 50px;
-                max-height: 80px;
-                overflow: hidden;
-                white-space: normal;
-                color: $white;
-                font-size: rem(16);
-            }
 
 
 

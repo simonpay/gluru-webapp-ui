@@ -79,8 +79,10 @@ $stage-padding-right:                       $_stage-indent-right;
 $show-stage-left-indent:					0;
 
 $stage-left-indent:							0;
+$stage-section-padding-left:				$stage-padding-left;
 @if $show-stage-left-indent == 1 {
 	$stage-left-indent:						$stage-padding-left;
+	$stage-section-padding-left:			0;
 }
 // -----------------------------------
 

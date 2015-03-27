@@ -6,7 +6,7 @@
 		<div class="event-icon icon-{{ event_obj.type }}"></div>
 	</div>
 
-	<div class="event -{{ event_obj.priority }} js-event" data-priority="{{ event_obj.priority }}">
+	<div class="priority-box -event -{{ event_obj.priority }} js-event" data-priority="{{ event_obj.priority }}">
 
 		<div class="avatar -event">
 			<div class="avatar__img-wrap">
@@ -19,7 +19,7 @@
 			{% endif %}
 		</div>
 
-		<div class="event__text-wrap">
+		<div class="priority-box__text-wrap">
 			<div class="event__title">{{ event_obj.title|safe }}</div>
 			<div class="event__description">{{ event_obj.description|safe }}</div>
 		</div>

@@ -22,9 +22,6 @@
 			display: block;
 			height: 100%;
 
-			// add left indent
-			padding-left: $stage-left-indent;
-			
 			// &.-moments {
 			// 	padding: 20px;
 			// }
@@ -36,7 +33,10 @@
 		// section within the stage content area
 		.stage-section {
 			margin-bottom: 20px;
-			padding: 30px 0;
+			// padding: 30px 0;
+			padding-top: 30px;
+			// add left indent
+			padding-left: $stage-section-padding-left;
 			// padding: 20px;
 			// use border for vertical spacing instead of 
 			// padding because the div doesnt scroll when the 
