@@ -44,18 +44,28 @@
     .actions { // aside
         width: 100%;
         height: auto;
-        padding: 0px 25px 0 20px;
+        padding: 20px 25px 0 20px;
         overflow-y: auto;
 
         @include mq(large){
-            @include calc( height, "100% - #{$panel-header-height}" );
+            position: absolute;
+            top: $panel-header-height;
+            bottom: 0;
+            @include transition( top 0.3s );
+
+            // @include calc( height, "100% - #{$panel-header-height}" );
             width: $actions-width;
             
             // set height of actions panel to be 100% minus
             // height of event in header when an event is selected
             // TODO: refactor this as its too fiddly
-            .event-is-selected & {
-                @include calc( height, "100% - #{$event-height}" );
+            .item-is-selected & {
+                top: $panel-header-height--item-selected;
+                // @include calc( height, "100% - #{$event-height}" );
+            }
+
+            &.is-hidden {
+                display: none;
             }
         }
     }

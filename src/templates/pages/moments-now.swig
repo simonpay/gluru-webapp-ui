@@ -18,7 +18,7 @@
 	{% include "src/templates/includes/drawer-files.swig" %}
 
 	{# actions #}
-	{% set moments_header = true %}
+	{# {% set moments_header = true %} #}
 	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}

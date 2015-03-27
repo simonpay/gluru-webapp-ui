@@ -5,6 +5,7 @@
 	var $main_container 		= $( ".js-main-container" ),
 		$drawer_wrap 			= $( ".js-drawer-wrap" ),
 		$actions_wrap 			= $( ".js-actions-wrap" ),
+		$actions 				= $( ".js-actions" ),
 		$search_wrap 			= $( ".js-search-wrap" ),
 
 		// main nav
@@ -17,7 +18,7 @@
 		// actions	
 		$toggle_actions 		= $( ".js-toggle-actions" ),
 		$close_actions 			= $( ".js-close-actions" ),
-		$event_actions_header 	= $( ".js-event--actions-header" ),
+		$actions_current_file 	= $( ".js-actions--current-item" ),
 
 		// search
 		$search 				= $( ".js-search" ),
@@ -157,6 +158,20 @@
 
 				$actions_wrap.addClass( "is-hidden" );
 				$main_container.removeClass( "actions-is-open" );
+			},
+
+			current_file: {
+
+				_show: function () {
+					$actions_current_file.show();
+					$actions.show();
+				},
+
+				_hide: function () {
+					$actions_current_file.hide();
+					$actions.hide();
+				}
+
 			}
 
 		},
@@ -257,7 +272,9 @@
 					.find( ".search__field" )
 						.blur()
 						;
-				$main_container.removeClass( "search-is-open" );
+
+				$main_container
+					.removeClass( "search-is-open" );
 			}
 
 		},
@@ -282,13 +299,16 @@
 						.closest( ".js-event-wrap" )
 						.addClass( "is-selected" );
 
-					$main_container
-						.addClass( "event-is-selected" );
+					$actions_wrap
+						.addClass( "item-is-selected" );
 
-					$event_actions_header
+					$actions_current_file
 						.removeClass( "-now -critical -non-critical" )
 						.addClass( _priority_class )
 						;
+
+					obj_gluru.actions.current_file._show();
+
 				},
 
 				now: function () {
@@ -319,9 +339,13 @@
 					if ( requested_view !== undefined ) {
 						$target = $( requested_view );
 					}
+
 					// console.log();
-					$timeline_wrap_outer.hide();
-					$target.show();
+					$timeline_wrap_outer
+						.hide();
+
+					$target
+						.show();
 				},
 
 				// toggle button between infinity and split view
@@ -349,8 +373,11 @@
 					var $this 		= $(this),
 						_obj_gluru	= gluru_app;
 
-					$timeline_range.removeClass( "is-selected" );
-					$this.addClass( "is-selected" );
+					$timeline_range
+						.removeClass( "is-selected" );
+
+					$this
+						.addClass( "is-selected" );
 
 				}
 			}
@@ -359,9 +386,8 @@
 
 		files: {
 
-
 			// click row in files table
-			do_click: function () {
+			do_click: function () { 
 
 				// cache file clicked
 				var $this = $(this);
@@ -371,8 +397,15 @@
 
 				$( ".js-table-row" ).removeClass( "is-selected" );
 
-				$this.addClass( "is-selected" );
+				$this
+					.addClass( "is-selected" );
+
+				$actions_wrap
+					.addClass( "item-is-selected" );
+
+				obj_gluru.actions.current_file._show();
 				
+
 			},
 
 			// change single / split view
@@ -385,8 +418,11 @@
 					$target = $( requested_view );
 				}
 
-				$table_wraps.hide();
-				$target.show();
+				$table_wraps
+					.hide();
+
+				$target
+					.show();
 			},
 
 			toggle_file_view: function () {

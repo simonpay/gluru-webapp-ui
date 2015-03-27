@@ -204,7 +204,8 @@
             
             // config for the header panel in actions panel
             // for timeline section
-            &.event--actions-header {
+            &.actions--current-file {
+                position: absolute; // position over the top of the actions header
                 @include calc( width, "#{$actions-width} + 20px" );
                 top: -( ($event-height - $panel-header-height) / 2);
                 left: 20px;
@@ -214,6 +215,10 @@
 
                 .actions-is-open & {
                     left: -20px;
+                }
+
+                &.is-hidden {
+                    display: none;
                 }
             }
         }

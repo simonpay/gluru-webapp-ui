@@ -132,6 +132,9 @@ $event-icon-wrap-height:                    $event-icon-wrap-width;
 $event-arrow-width:							40px;
 $event-arrow-height:						20px;
 
+
+$panel-header-height--item-selected:        $panel-header-height + ($event-height - $panel-header-height) / 2;
+
 // -----------------------------------
 // FONTS
 // -----------------------------------
