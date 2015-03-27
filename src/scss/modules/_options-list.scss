@@ -179,16 +179,6 @@
                                     }
                                 }
                                 
-                                .media & {
-                                    // add leading for text within media object
-                                    // line-height: 1.7;
-                                    
-                                    // let text inside paragraph class wrap
-                                    &.-paragraph {
-                                        white-space: normal;
-                                    }
-                                }
-
                                 &.options-list__text--current-file {
                                     width: $options-link-text-width-actions - 35px;
                                     // width: 248px;

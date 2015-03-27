@@ -13,8 +13,8 @@
 
 .event-group-heading {
     position: relative;
-    width: 142px;
-    height: 62px;
+    width: 192px;
+    height: 52px;
     margin: 40px 0 40px ($event-time-width + ($event-icon-wrap-width / 2)); // align left edge with center of icon
     background-color: $dusty-gray;
     border-radius: 31px;
@@ -26,14 +26,13 @@
     }
 
     .-split-view & {
-        // width: 142px;
         margin: 0 auto 25px;
         @include transform( none );
     }
 
     .-text {
         @include scut-center-transform;
-        font-size: rem(18);
+        font-size: rem(16);
         color: $white;
         line-height: 50px;
         text-transform: uppercase;

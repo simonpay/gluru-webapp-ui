@@ -38,11 +38,28 @@
         }
 
         // when inside parent class .-cols-2 or .-cols-3
-        .-cols-1 &, // remove this to remove border single view 
+        // .-cols-1 &, // remove this to remove border single view 
         .-cols-2 &, 
         .-cols-3 &, {
             border-left: 1px solid $silver;
         }
+        
+        // // when inside "-moments" class, remove border 
+        // // from ".split-view-wrap-container.-col-1" 
+        // // (first col in split view)
+        // .-moments & {
+        //     &.-col-1 {
+        //         border-left: none;
+        //     }
+        // }
+        
+        // remove border from 1st col when inside ".-cols-1" single col view
+        // .-cols-1 & {
+            &.-col-1 {
+                border-left: none;
+            }
+        // }
+
 
         // when inside parent class .-cols-2
         .-cols-2 & {

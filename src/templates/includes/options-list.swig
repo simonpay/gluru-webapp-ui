@@ -62,7 +62,7 @@
 
 				{% elseif rObj.id === "people" %}
 
-						<div class="media -level-1">
+						<div class="media">
 							<div class="media__img">
 								<div class="avatar">
 									<div class="avatar__img-wrap">
@@ -71,22 +71,24 @@
 								</div>
 							</div>
 							<div class="media__body">
-								<div class="media__text -list-primary"><strong>Alex Li</strong> renamed this file</div>
+								<div class="media__text -list-primary"><strong>Alex Li</strong> renamed this file with a very long description that will wrap</div>
 								<div class="media__text -list-secondary">Today, 9:00am</div>
-								<div class="media -level-2">
-									<div class="media__img">
-										<div class="icon-gdrive-sml"></div>
+								<div class="media__nested-media-lvl2-wrap">
+									<div class="media">
+										<div class="media__img">
+											<div class="icon-gdrive-sml"></div>
+										</div>
+										<div class="media__body">
+											<div class="media__text -list-primary">Meeting Notes</div>
+										</div>
 									</div>
-									<div class="media__body">
-										<div class="media__text -list-primary">Meeting Notes</div>
-									</div>
-								</div>
-								<div class="media -level-2">
-									<div class="media__img">
-										<div class="icon-gdrive-sml"></div>
-									</div>
-									<div class="media__body">
-										<div class="media__text -list-primary">Meeting Notes</div>
+									<div class="media">
+										<div class="media__img">
+											<div class="icon-gdrive-sml"></div>
+										</div>
+										<div class="media__body">
+											<div class="media__text -list-primary">Meeting Notes</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -100,8 +102,8 @@
 								<div class="icon-evernote"></div>
 							</div>
 							<div class="media__body">
-								<div class="options-list__text">Firefox Redesigns Its Search Interface</div>
-								<div class="options-list__text -paragraph">Last week we learned that Mozilla had made a pact with Yahoo to switch Firefox’s default search engine to a yet-to-be launched new version of </div>
+								<div class="media__text -list-primary">Firefox Redesigns Its Search Interface</div>
+								<div class="media__text -paragraph">Last week we learned that Mozilla had made a pact with Yahoo to switch Firefox’s default search engine to a yet-to-be launched new version of </div>
 							</div>
 						</div>
 
