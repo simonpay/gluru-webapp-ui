@@ -9,6 +9,22 @@
                     "className"         : "icon-everything"
                 },
                 {
+                    "text"              : "Onedrive",
+                    "className"         : "icon-onedrive"
+                },
+                {
+                    "text"              : "Google Calendar",
+                    "className"         : "icon-gcalendar"
+                },
+                {
+                    "text"              : "Google Mail",
+                    "className"         : "icon-gmail"
+                },
+                {
+                    "text"              : "Exchange",
+                    "className"         : "icon-exchange"
+                },
+                {
                     "text"              : "Box",
                     "className"         : "icon-box"
                 },

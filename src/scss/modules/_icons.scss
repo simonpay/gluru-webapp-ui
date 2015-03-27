@@ -3,6 +3,10 @@
 \*------------------------------------*/
 
 .icon-everything {              @include use-sprite("icon-source-everything"); }
+.icon-onedrive {                @include use-sprite("icon-source-onedrive"); }
+.icon-gcalendar {               @include use-sprite("icon-source-gcalendar"); }
+.icon-gmail {                   @include use-sprite("icon-source-gmail"); }
+.icon-exchange {                @include use-sprite("icon-source-exchange"); }
 .icon-box {                     @include use-sprite("icon-source-box"); }
 .icon-gdrive {                  @include use-sprite("icon-source-drive"); }
 .icon-dropbox {                 @include use-sprite("icon-source-dropbox"); }

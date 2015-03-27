@@ -19,6 +19,7 @@
 
 	{# actions #}
 	{% include "src/templates/includes/actions-footprint.swig" %}
+	{# {% include "src/templates/includes/rendered__actions-footprint.swig" %} #}
 
 	{# stage #}
 	{% include "src/templates/includes/stage-files.swig" %}
