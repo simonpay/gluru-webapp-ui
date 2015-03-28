@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    # DISC-IMG
+\*------------------------------------*/
+
+// disc img is placeholder for circular images (usually  
+// avatar images or icons) with a keyline and optional 
+// inset number or icon (separate module _inset-icon.scss)
+
+
+.disc-img {
+    position: relative;
+
+    &.-event,
+    &.-current-item {
+        @include scut-center-transform(y);
+        left: 16px;
+    }
+    
+    // when inside .-profile class
+    .-profile & {
+        top: 2px;
+    }
+
+    &.-right {
+        left: auto;
+        right: 50px;        
+    }
+}
+
+    .disc-img__img-wrap {
+        width: 34px;
+        height: 34px;
+        overflow: hidden;
+        border-radius: 100%;
+
+        .-event &,
+        .-current-item & {
+            width: 46px;
+            height: 46px;
+            border: 3px solid $white;
+            background: $white
+        }
+
+        .-current-item & {
+            background: $white;
+        }
+
+        .-profile & {
+            border: 3px solid $pink;
+        }
+    }
+
+        .disc-img__img {
+            width: 100%;
+        }
+
+
+
+

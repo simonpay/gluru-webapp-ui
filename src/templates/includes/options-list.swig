@@ -31,9 +31,9 @@
 					{% elseif rObj.id === "favourites" %}
 
 						<div class="options-list__icon">
-							<div class="avatar">
-								<div class="avatar__img-wrap">
-									<img class="avatar__img" src="{{ obj.img_src }}" alt="">
+							<div class="disc-img">
+								<div class="disc-img__img-wrap">
+									<img class="disc-img__img" src="{{ obj.img_src }}" alt="">
 								</div>
 							</div>
 						</div>
@@ -48,7 +48,7 @@
 					{% endif %}
 
 						<div class="options-list__text-wrap">
-							<div class="options-list__text">{{ obj.text|safe }}</div>
+							<div class="options-list__text" title="{{ obj.text }}">{{ obj.text|safe }}</div>
 
 						{% if rObj.id === "favourites" %}
 
@@ -64,9 +64,9 @@
 
 						<div class="media">
 							<div class="media__img">
-								<div class="avatar">
-									<div class="avatar__img-wrap">
-										<img class="avatar__img" src="{{ obj.img_src }}" alt="">
+								<div class="disc-img">
+									<div class="disc-img__img-wrap">
+										<img class="disc-img__img" src="{{ obj.img_src }}" alt="">
 									</div>
 								</div>
 							</div>

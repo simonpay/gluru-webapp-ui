@@ -16,30 +16,31 @@
 {# {% endif %} #}
 	<div class="priority-box -current-item -now is-hidden js-actions--current-item">
 
-		<div class="avatar -current-item">
-{# 			<div class="avatar__img-wrap">
-				<img class="avatar__img" src="img/tmp_avatar_1.png" alt="">
-			</div>
- #}			<div class="avatar__img-wrap">
-				<div class="avatar__source-type-icon icon-gdrive"></div>
-			</div>
+{# <div class="media">
+    <div class="media__img">
+		{%> "disc-img__avatar" %}
+    </div>
+    <div class="media__body">
+		{%> "priority-box__text-wrap--file" %}
+	</div>
+</div>
+ #}
 
 
-{# 			<div class="avatar__source-type">
-				<div class="avatar__source-type-icon icon-gdrive-sml"></div>
-			</div>
- #}		</div>
+		{# {%> "disc-img__avatar" %} #}
+		{# {%> "disc-img__avatar--inset-icon" %} #}
+		{%> "disc-img__icon" %}
+		{# {%> "disc-img__icon--inset-icon" %} #}
 
-		<div class="priority-box__text-wrap">
-			<div class="event__title">Sales_Report.doc</div>
-		</div>
+		{# {%> "priority-box__text-wrap--file" %} #}
+		{%> "priority-box__text-wrap--file--no-inset-icon" %}
+		{# {%> "priority-box__text-wrap--event" %} #}
+		{# {%> "priority-box__text-wrap--event--no-inset-icon" %} #}
 
-{# 		<div class="priority-box__text-wrap">
-			<div class="event__title"><strong>Alex Li</strong> renamed this file</div>
-			<div class="event__description">Monday 10th meeting notes.docx</div>
-		</div>
+		{%> "disc-img__icon--right" %}
 
- #}		<div class="close-button-wrap__header-panel">
+
+		<div class="close-button-wrap__header-panel">
 			<div class="icon-button -center-transform -right -reverse js-close-actions">
 				<div class="icon-close"></div>
 			</div>

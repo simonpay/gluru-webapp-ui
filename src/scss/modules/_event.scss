@@ -61,23 +61,25 @@
 
             .-split-view & {
                 display: block;
-                margin: 0 auto;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
 
         .event-time {
             width: $event-time-width;
             height: 20px;
-            font-size: rem(20);
+            padding-right: 18px;
+            font-size: rem(16);
             font-weight: lighter;
             color: $dove-gray;
-            text-transform: uppercase;
-            text-align: center;
+            // text-transform: uppercase;
+            text-align: right;
 
             .-split-view & {
                 position: absolute;
-                top: 24px;
-                right: 50%;
+                top: 17px;
+                @include calc( right, "50% + 18px" );
                 width: 200px;
             }
         }
@@ -90,11 +92,9 @@
             margin-right: 35px;
             border: 6px solid $white;
 
-            &.-moments {
-                // @include use-sprite("icon-nav-moments");
-                // display: inline-block;
-                // 
-            }
+            // .-split-view & {
+            //     margin-bottom: 30px;
+            // }
         }
 
         .event-icon {

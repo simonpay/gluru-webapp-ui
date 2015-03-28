@@ -11,6 +11,9 @@
 		// main nav
 		$add_button	 			= $( ".js-add" ),
 	
+		// accounts nav
+		$notifications	 		= $( ".js-notifications" ),
+	
 		// drawer	
 		$toggle_drawer 			= $( ".js-toggle-drawer" ),
 		$close_drawer 			= $( ".js-close-drawer" ),
@@ -445,6 +448,14 @@
 		},
 
 
+		notifications: {
+
+			do_click: function () {
+				location.href = "moments.html";
+			}
+		},
+
+
 		tooltips: {
 
 			show: function () {
@@ -563,6 +574,12 @@
 	// cache main app obj to variable
 	var obj_gluru = gluru_app;
 
+
+	// NOTIFICATIONS
+	// -------------------------------------------------
+	$notifications.on( "click", function(){
+		obj_gluru.notifications.do_click.call( $(this) );
+	});
 
 	// POP MENUS
 	// -------------------------------------------------

@@ -1,0 +1,52 @@
+/*------------------------------------*\
+# INSET ICON
+\*------------------------------------*/
+
+// the icon container that sits to the top left of avatars
+// and othe circular buttons
+
+.inset-icon {
+    position: absolute;
+    top: -3px;
+    right: -13px;
+    width: 34px;
+    height: 34px;
+    background: $white;
+    border-radius: 100%;
+    border-width: 3px;
+    border-style: solid;
+    border-color: $white;
+
+    &.-notifications {
+        width: 20px;
+        height: 20px;
+        background: $pink;
+        border-width: 2px;
+        
+        // text number
+        color: $white;
+        font-size: rem(12);
+        font-weight: bold;
+        text-align: center;
+        line-height: 18px;
+    }
+    
+    &.-event-source {
+        top: -8px;
+        right: -19px;
+        border-color: $dusty-gray;
+
+        .-critical & {
+            border-color: $pink;
+        }
+        .-non-critical & {
+            border-color: $orange;
+        }
+        .-now & {
+            border-color: $green;
+        }
+    }
+
+
+}
+

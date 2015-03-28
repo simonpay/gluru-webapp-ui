@@ -93,6 +93,8 @@
 .panel-header--location {
     width: 100%;
     padding-top: 13px;
+    // make padding less to visually align icon with main heading
+    padding-left: $panel-header-padding-left - 3px;
 }
 
 // header for timeline containing recent and future tabs 

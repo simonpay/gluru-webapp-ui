@@ -22,6 +22,11 @@
     &.is-collapsed {
         margin-bottom: 0;
     }
+    
+    &:last-child {
+        border: none;
+        margin-bottom: 0;
+    }
 }
 
     .options-list__heading {

@@ -40,7 +40,6 @@
 
                 .drawer__icon,
                 .drawer__text {
-                    // @extend %vertical-align-center;
                     @include scut-center-transform(y);;
                     position: relative;
                     float: left;

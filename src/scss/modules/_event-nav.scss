@@ -9,11 +9,11 @@
     padding: 40px 8px 40px 30px;
 
     .dot {
-        width: 8px;
-        height: 8px;
+        width: 5px;
+        height: 5px;
         background: white;
         border-radius: 100%;
-        margin: 4px;
+        margin: 3px;
     }
     
     // show sub nav options on:
@@ -34,7 +34,7 @@
 
     .event-nav__list {
         @include scut-center-transform(y);
-        padding-right: 10px;
+        padding-right: 5px;
         right: -10px;
         visibility: hidden;
         opacity: 0;
@@ -43,8 +43,8 @@
 
         .event-nav__item {
             display: inline-block;
-            margin: 0 5px;
-            @include transform( scale(1.3) ); // temp style to make icons bigger
+            // margin: 0 5px;
+            // @include transform( scale(1.3) ); // temp style to make icons bigger
             cursor: pointer;
         }
 

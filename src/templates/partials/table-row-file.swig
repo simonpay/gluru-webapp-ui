@@ -5,8 +5,8 @@
 	    	<div class="icon-project"></div>
 	    </div>
 	    <div class="media__body">
-	    	{# <a href="#" class="media__body--table-text">Filename.ext</a> #}
-	    	<a href="#" class="media__text -link">file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext</a>
+	    	<a href="#" class="media__body--table-text">Filename.ext</a>
+	    	{# <a href="#" class="media__text -link">file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext</a> #}
 	    </div>
 
 	    {# {%> "file-nav" %} #}

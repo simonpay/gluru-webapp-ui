@@ -173,17 +173,17 @@
             "events": [
                 {
                     "is_group":             0,
-                    "type":                 "moments",
+                    "type":                 "icon-event__now",
                     "priority":             "now",
-                    "title":                "<strong>Alex Li</strong> renamed this file",
-                    "description":          "Monday 10th meeting notes.docx",
-                    "source_type":          "icon-gdrive-sml",
-                    "date_time":            "14:10 PM",
-                    "person_id":            "tmp_avatar_1"
+                    "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
+                    "description":          "",
+                    "source_type":          "",
+                    "date_time":            "Now!",
+                    "person_id":            "icon-event__now--green"
                 },
                 {
                     "is_group":             0,
-                    "type":                 "moments",
+                    "type":                 "icon-event__phone",
                     "priority":             "critical",
                     "title":                "<strong>Mike Smith</strong>",
                     "description":          "Incoming call",
@@ -193,7 +193,7 @@
                 },
                 {
                     "is_group":             0,
-                    "type":                 "moments",
+                    "type":                 "icon-event__calendar",
                     "priority":             "normal",
                     "title":                "<strong>Mike Smith</strong>",
                     "description":          "Monday 10th meeting",
@@ -203,7 +203,17 @@
                 },
                 {
                     "is_group":             0,
-                    "type":                 "moments",
+                    "type":                 "icon-event__now",
+                    "priority":             "now",
+                    "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
+                    "description":          "",
+                    "source_type":          "",
+                    "date_time":            "12:30 PM",
+                    "person_id":            "icon-event__now--green"
+                },
+                {
+                    "is_group":             0,
+                    "type":                 "icon-event__calendar",
                     "priority":             "non-critical",
                     "title":                "<strong>Alex Li</strong> renamed this file",
                     "description":          "Monday 10th meeting notes.docx",
@@ -213,7 +223,7 @@
                 },
                 {
                     "is_group":             0,
-                    "type":                 "moments",
+                    "type":                 "icon-event__add",
                     "priority":             "non-critical",
                     "title":                "<strong>Alex Li</strong> renamed this file",
                     "description":          "Monday 10th meeting notes.docx",
@@ -227,7 +237,7 @@
                     "events": [
                         {
                             "is_group":             0,
-                            "type":                 "moments",
+                            "type":                 "icon-event__calendar",
                             "priority":             "normal",
                             "title":                "<strong>Alex Li</strong> renamed this file",
                             "description":          "Monday 10th meeting notes.docx",
@@ -237,7 +247,7 @@
                         },
                         {
                             "is_group":             0,
-                            "type":                 "moments",
+                            "type":                 "icon-event__calendar",
                             "priority":             "normal",
                             "title":                "<strong>Alex Li</strong> renamed this file",
                             "description":          "Monday 10th meeting notes.docx",

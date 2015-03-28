@@ -6,16 +6,12 @@
 // utility class are used sparingly - most styles are component-based (modules)
 // Ref: http://davidtheclark.com/on-utility-classes/
 
-%vertical-align-center {
-    @include scut-center-transform(y);
+.u-center-transform {
+    @include scut-center-transform;
 }
-.vertical-align-center {
-    @extend %vertical-align-center;
+.u-center-transform-y {
+    @include scut-center-transform(y);
 }
 .u-center-block {
 	@include scut-center-block;
-	// margin: 0 auto;
 }
-// .u-fixed {
-//     position: fixed !important;
-// }

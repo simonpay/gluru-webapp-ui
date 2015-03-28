@@ -76,7 +76,7 @@
             margin-top: 20px;
             box-shadow: 
                 0px 10px 0px $white, 
-                // 0px -25px 0px $white
+                0px -25px 0px $white
                 ;
             @include transition( none );
 
@@ -130,13 +130,34 @@
     // the text content of the event
     .priority-box__text-wrap {
         @include scut-center-transform(y);
-        left: 95px;
-        right: 50px;
+        left: 90px;
+        right: 110px;
         max-height: 80px;
         overflow: hidden;
         white-space: normal;
         color: $white;
         font-size: rem(16);
+        font-weight: lighter;
+        line-height: 1.2;
+        
+        .-current-item & {
+            font-size: rem(14);
+            font-weight: normal;
+        }
+
+        .-split-view & {
+           right: 30px;
+           font-size: rem(15);
+        }
+
+        &.-no-inset-icon {
+            left: 75px;
+        }
+
+        // &.-no-src-icon {
+        //     left: 75px;
+        //     right: 50px;
+        // }
     }
 
 
