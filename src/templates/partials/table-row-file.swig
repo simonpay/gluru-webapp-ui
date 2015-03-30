@@ -2,7 +2,7 @@
 <div class="table__col -file-name">
 	<div class="media">
 	    <div class="media__img">
-	    	<div class="icon-project"></div>
+	    	<div class="icon-sml__file--text"></div>
 	    </div>
 	    <div class="media__body">
 	    	<a href="#" class="media__body--table-text">Filename.ext</a>

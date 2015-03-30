@@ -19,30 +19,29 @@
 .icon-dropbox-sml {             @include use-sprite("icon-source-dropbox-sml"); }
 .icon-evernote-sml {            @include use-sprite("icon-source-evernote-sml"); }
 
-.icon-folder-shared {           @include use-sprite("icon-folder-shared"); }
-.icon-folder {                  @include use-sprite("icon-folder"); }
-.icon-folder-custom {           @include use-sprite("icon-folder-custom"); }
-.icon-project {                 @include use-sprite("icon-project"); }
-.icon-file-pdf {                @include use-sprite("icon-file-pdf"); }
-.icon-file-text {               @include use-sprite("icon-file-text"); }
-.icon-file-email {              @include use-sprite("icon-file-email"); }
-.icon-file-calendar {           @include use-sprite("icon-file-calendar"); }
-.icon-file-spreadsheet {        @include use-sprite("icon-file-spreadsheet"); }
-.icon-file-evernote {           @include use-sprite("icon-file-evernote"); }
-.icon-file-drive {              @include use-sprite("icon-file-drive"); }
+.icon-sml__folder {             @include use-sprite("icon-sml__folder"); }
+.icon-sml__folder--shared {     @include use-sprite("icon-sml__folder--shared"); }
+.icon-sml__folder--custom {     @include use-sprite("icon-sml__folder--custom"); }
+.icon-sml__folder--project {    @include use-sprite("icon-sml__folder--project"); }
+.icon-sml__file--pdf {          @include use-sprite("icon-sml__file--pdf"); }
+.icon-sml__file--text {         @include use-sprite("icon-sml__file--text"); }
+.icon-sml__file--email {        @include use-sprite("icon-sml__file--email"); }
+.icon-sml__file--calendar {     @include use-sprite("icon-sml__file--calendar"); }
+.icon-sml__file--spreadsheet {  @include use-sprite("icon-sml__file--spreadsheet"); }
+.icon-sml__file--evernote {     @include use-sprite("icon-sml__file--evernote"); }
+.icon-sml__file--drive {        @include use-sprite("icon-sml__file--drive"); }
 
 .icon-expand {                  @include use-sprite("icon-expand"); }
-
 .icon-tick {	                @include use-sprite("icon-tick"); }
 
-.icon-files__edit {             @include use-sprite("icon-files__edit"); }
-.icon-files__folder {           @include use-sprite("icon-files__folder"); }
-.icon-files__network {          @include use-sprite("icon-files__network"); }
-.icon-files__delete {           @include use-sprite("icon-files__delete"); }
-.icon-files__edit--white {      @include use-sprite("icon-files__edit--white"); }
-.icon-files__folder--white {    @include use-sprite("icon-files__folder--white"); }
-.icon-files__network--white {   @include use-sprite("icon-files__network--white"); }
-.icon-files__delete--white {    @include use-sprite("icon-files__delete--white"); }
+.icon__edit {           		@include use-sprite("icon__edit"); }
+.icon__folder {         		@include use-sprite("icon__folder"); }
+.icon__share {          		@include use-sprite("icon__share"); }
+.icon__delete {         		@include use-sprite("icon__delete"); }
+.icon__edit--white {    		@include use-sprite("icon__edit--white"); }
+.icon__folder--white {  		@include use-sprite("icon__folder--white"); }
+.icon__share--white {   		@include use-sprite("icon__share--white"); }
+.icon__delete--white {  		@include use-sprite("icon__delete--white"); }
 
 .icon-sort {                    @include use-sprite("icon-sort"); }
 .icon-infinity-view {           @include use-sprite("icon-infinity-view"); }

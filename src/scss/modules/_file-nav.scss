@@ -40,27 +40,27 @@
             .file-nav__icon {
 
                 &.-edit {
-                    @include use-sprite("icon-files__edit");
+                    @include use-sprite("icon__edit");
                     .is-selected & {
-                        @include use-sprite("icon-files__edit--white");
+                        @include use-sprite("icon__edit--white");
                     }
                 }
                 &.-folder {
-                    @include use-sprite("icon-files__folder");
+                    @include use-sprite("icon__folder");
                     .is-selected & {
-                        @include use-sprite("icon-files__folder--white");
+                        @include use-sprite("icon__folder--white");
                     }
                 }
                 &.-network {
-                    @include use-sprite("icon-files__network");
+                    @include use-sprite("icon__share");
                     .is-selected & {
-                        @include use-sprite("icon-files__network--white");
+                        @include use-sprite("icon__share--white");
                     }
                 }
                 &.-delete {
-                    @include use-sprite("icon-files__delete");
+                    @include use-sprite("icon__delete");
                     .is-selected & {
-                        @include use-sprite("icon-files__delete--white");
+                        @include use-sprite("icon__delete--white");
                     }
                 }
             }
