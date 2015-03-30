@@ -276,12 +276,15 @@
                         "avatar_type":          "icon",
                         "type":                 "icon__notifications--white",
                         "priority":             "non-critical",
-                        "title":                "Todays important 3 People",
+                        "title":                "Todays important <strong>3 People</strong>",
                         "description":          "",
                         "source_type":          "",
                         "date_time":            "9:30 AM",
                         "person_id":            "icon-event__people",
                         "items": [
+                            {
+                                "item":                 ""
+                            },
                             {
                                 "item":                 ""
                             },
@@ -296,18 +299,12 @@
                         "avatar_type":          "icon",
                         "type":                 "icon__notifications--white",
                         "priority":             "non-critical",
-                        "title":                "Todays important 3 People",
+                        "title":                "Todays important <strong>4 Files</strong>",
                         "description":          "",
                         "source_type":          "",
                         "date_time":            "9:30 AM",
                         "person_id":            "icon-event__files",
                         "items": [
-                            {
-                                "item":                 ""
-                            },
-                            {
-                                "item":                 ""
-                            },
                             {
                                 "item":                 ""
                             },

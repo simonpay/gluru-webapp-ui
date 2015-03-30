@@ -55,11 +55,6 @@
 
 		<div class="scrollable-content">
 			<div class="table">
-				<div class="table__row -header">
-					<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
-					<div class="table__col -modified"><div class="th-inner">Modified</div></div>
-					<div class="table__col -source"><div class="th-inner">Source</div></div>
-				</div>
 
 			{% for sub_obj_2 in event_obj.items %}
 				

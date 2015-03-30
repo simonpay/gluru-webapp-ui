@@ -30,7 +30,7 @@
         &:hover {
             text-decoration: underline;
         }
-        .is-selected & {
+        .table__row.is-selected & {
             color: $white;
         }
     }
@@ -69,7 +69,7 @@
 
             // when the text is inside a "is-selected" class
             .is-selected & {
-                color: $white;
+                // color: $white;
             }
             
             &.-list-primary,
