@@ -112,13 +112,13 @@
         position: absolute; // position over the top of the actions header
         @include calc( width, "#{$actions-width} + 20px" );
         top: -( ($event-height - $panel-header-height) / 2);
-        left: 20px;
+        left: -20px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         @include transition( left $actions-animation-duration );
 
-        .actions-is-open & {
-            left: -20px;
+        .is-hidden & {
+            left: 20px;
         }
 
         &.is-hidden {

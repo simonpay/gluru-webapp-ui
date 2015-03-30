@@ -34,17 +34,19 @@
         @include mq(large) {
             position: fixed;
             top: 0;
-            @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav
+            @include calc( width, "100% - #{$main-nav-width} - #{$drawer-width}" ); // viewport - main-nav - drawer
             height: $panel-header-stage-height;
             background: $white;
             @include transition(width $drawer-animation-duration);
 
-            .drawer-is-open & {
-                @include calc( width, "100% - #{$main-nav-width} - #{$drawer-width}" ); // viewport - main-nav - drawer
-            }
-
             &.is-hidden {
                 display: none;
+            }
+            
+            // use sibling selector to set width of .panel-header.-stage 
+            // based on existence of 'is-hidden' class on drawer-wrap
+            .drawer-wrap.is-hidden ~ .stage-wrap & {
+                @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
             }
         }
 
@@ -54,6 +56,13 @@
         }
     }
 }
+
+// .drawer-wrap ~ .stage-wrap .panel-header.-stage {
+//     @include calc( width, "100% - #{$main-nav-width} - #{$drawer-width}" ); // viewport - main-nav - drawer
+// }
+// .drawer-wrap.is-hidden ~ .stage-wrap .panel-header.-stage {
+//     @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
+// }
 
 .panel-header--drawer {
     // set width to prevent close button moving when actions is closed

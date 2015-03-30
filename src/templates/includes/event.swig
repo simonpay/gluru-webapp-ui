@@ -10,7 +10,7 @@
 
 		<div class="disc-img -event">
 			<div class="disc-img__img-wrap">
-			{% if event_obj.priority === "now" %}
+			{% if event_obj.avatar_type === "icon" %}
 				<div class="u-center-transform {{ event_obj.person_id }}"></div>
 			{% else %}
 				<img class="disc-img__img" src="img/{{ event_obj.person_id }}.png" alt="">
@@ -47,5 +47,31 @@
 		</nav>
 
 	</div>
+
+
+{% if event_obj.is_multiple_event %}
+
+	<div class="event-table-wrap">
+
+		<div class="scrollable-content">
+			<div class="table">
+				<div class="table__row -header">
+					<div class="table__col -file-name"><div class="th-inner">Filename</div></div>
+					<div class="table__col -modified"><div class="th-inner">Modified</div></div>
+					<div class="table__col -source"><div class="th-inner">Source</div></div>
+				</div>
+
+			{% for sub_obj_2 in event_obj.items %}
+				
+				{%> "table-row-file" %}
+
+			{% endfor %}
+
+			</div>
+		</div><!-- // .scrollable-content -->
+	</div>
+
+{% endif %}
+
 
 </div>

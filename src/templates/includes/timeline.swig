@@ -4,7 +4,7 @@
 		<div class="-text">Today</div>
 	</div>
 
-	{% for obj in mydata.moments.timeline.events %}
+	{% for obj in mydata.moments.timeline[type].events %}
 
 		{% if obj.is_group %}
 

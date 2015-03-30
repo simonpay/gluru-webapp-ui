@@ -170,94 +170,160 @@
             "stage_sub_heading":                "20 March, 2015"
         },
         "timeline": {
-            "events": [
-                {
-                    "is_group":             0,
-                    "type":                 "icon-event__now",
-                    "priority":             "now",
-                    "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
-                    "description":          "",
-                    "source_type":          "",
-                    "date_time":            "Now!",
-                    "person_id":            "icon-event__now--green"
-                },
-                {
-                    "is_group":             0,
-                    "type":                 "icon-event__phone",
-                    "priority":             "critical",
-                    "title":                "<strong>Mike Smith</strong>",
-                    "description":          "Incoming call",
-                    "source_type":          "",
-                    "date_time":            "13:42 PM",
-                    "person_id":            "tmp_avatar_2"
-                },
-                {
-                    "is_group":             0,
-                    "type":                 "icon-event__calendar",
-                    "priority":             "normal",
-                    "title":                "<strong>Mike Smith</strong>",
-                    "description":          "Monday 10th meeting",
-                    "source_type":          "icon-evernote-sml",
-                    "date_time":            "12:30 PM",
-                    "person_id":            "tmp_avatar_2"
-                },
-                {
-                    "is_group":             0,
-                    "type":                 "icon-event__now",
-                    "priority":             "now",
-                    "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
-                    "description":          "",
-                    "source_type":          "",
-                    "date_time":            "12:30 PM",
-                    "person_id":            "icon-event__now--green"
-                },
-                {
-                    "is_group":             0,
-                    "type":                 "icon-event__calendar",
-                    "priority":             "non-critical",
-                    "title":                "<strong>Alex Li</strong> renamed this file",
-                    "description":          "Monday 10th meeting notes.docx",
-                    "source_type":          "icon-gdrive-sml",
-                    "date_time":            "9:30 AM",
-                    "person_id":            "tmp_avatar_1"
-                },
-                {
-                    "is_group":             0,
-                    "type":                 "icon-event__add",
-                    "priority":             "non-critical",
-                    "title":                "<strong>Alex Li</strong> renamed this file",
-                    "description":          "Monday 10th meeting notes.docx",
-                    "source_type":          "",
-                    "date_time":            "9:30 AM",
-                    "person_id":            "tmp_avatar_1"
-                },
-                {
-                    "is_group":             1,
-                    "group_name":           "Yesterday",
-                    "events": [
-                        {
-                            "is_group":             0,
-                            "type":                 "icon-event__calendar",
-                            "priority":             "normal",
-                            "title":                "<strong>Alex Li</strong> renamed this file",
-                            "description":          "Monday 10th meeting notes.docx",
-                            "source_type":          "",
-                            "date_time":            "9:30 AM",
-                            "person_id":            "tmp_avatar_1"
-                        },
-                        {
-                            "is_group":             0,
-                            "type":                 "icon-event__calendar",
-                            "priority":             "normal",
-                            "title":                "<strong>Alex Li</strong> renamed this file",
-                            "description":          "Monday 10th meeting notes.docx",
-                            "source_type":          "",
-                            "date_time":            "9:30 AM",
-                            "person_id":            "tmp_avatar_1"
-                        }
-                    ]
-                }
-            ]
+            "recent": {
+                "events": [
+                    {
+                        "is_group":             0,
+                        "avatar_type":          "icon",
+                        "type":                 "icon-event__now--white",
+                        "priority":             "now",
+                        "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
+                        "description":          "",
+                        "source_type":          "",
+                        "date_time":            "Now!",
+                        "person_id":            "icon-event__now--green"
+                    },
+                    {
+                        "is_group":             0,
+                        "avatar_type":          "image",
+                        "type":                 "icon-event__phone--white",
+                        "priority":             "critical",
+                        "title":                "<strong>Mike Smith</strong>",
+                        "description":          "Incoming call",
+                        "source_type":          "",
+                        "date_time":            "13:42 PM",
+                        "person_id":            "tmp_avatar_2"
+                    },
+                    {
+                        "is_group":             0,
+                        "avatar_type":          "image",
+                        "type":                 "icon-event__calendar--white",
+                        "priority":             "normal",
+                        "title":                "<strong>Mike Smith</strong>",
+                        "description":          "Monday 10th meeting",
+                        "source_type":          "icon-evernote-sml",
+                        "date_time":            "12:30 PM",
+                        "person_id":            "tmp_avatar_2"
+                    },
+                    {
+                        "is_group":             0,
+                        "avatar_type":          "icon",
+                        "type":                 "icon-event__now--white",
+                        "priority":             "now",
+                        "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
+                        "description":          "",
+                        "source_type":          "",
+                        "date_time":            "12:30 PM",
+                        "person_id":            "icon-event__now--green"
+                    },
+                    {
+                        "is_group":             0,
+                        "avatar_type":          "image",
+                        "type":                 "icon-event__calendar--white",
+                        "priority":             "non-critical",
+                        "title":                "<strong>Alex Li</strong> renamed this file",
+                        "description":          "Monday 10th meeting notes.docx",
+                        "source_type":          "icon-gdrive-sml",
+                        "date_time":            "9:30 AM",
+                        "person_id":            "tmp_avatar_1"
+                    },
+                    {
+                        "is_group":             0,
+                        "avatar_type":          "image",
+                        "type":                 "icon-event__add--white",
+                        "priority":             "non-critical",
+                        "title":                "<strong>Alex Li</strong> renamed this file",
+                        "description":          "Monday 10th meeting notes.docx",
+                        "source_type":          "",
+                        "date_time":            "9:30 AM",
+                        "person_id":            "tmp_avatar_1"
+                    },
+                    {
+                        "is_group":             1,
+                        "group_name":           "Yesterday",
+                        "events": [
+                            {
+                                "is_group":             0,
+                                "avatar_type":          "image",
+                                "type":                 "icon-event__calendar--white",
+                                "priority":             "normal",
+                                "title":                "<strong>Alex Li</strong> renamed this file",
+                                "description":          "Monday 10th meeting notes.docx",
+                                "source_type":          "",
+                                "date_time":            "9:30 AM",
+                                "person_id":            "tmp_avatar_1"
+                            },
+                            {
+                                "is_group":             0,
+                                "avatar_type":          "image",
+                                "type":                 "icon-event__calendar--white",
+                                "priority":             "normal",
+                                "title":                "<strong>Alex Li</strong> renamed this file",
+                                "description":          "Monday 10th meeting notes.docx",
+                                "source_type":          "",
+                                "date_time":            "9:30 AM",
+                                "person_id":            "tmp_avatar_1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "future": {
+                "events": [
+                    {
+                        "is_group":             0,
+                        "is_multiple_event":    1,
+                        "avatar_type":          "icon",
+                        "type":                 "icon__notifications--white",
+                        "priority":             "non-critical",
+                        "title":                "Todays important 3 People",
+                        "description":          "",
+                        "source_type":          "",
+                        "date_time":            "9:30 AM",
+                        "person_id":            "icon-event__people",
+                        "items": [
+                            {
+                                "item":                 ""
+                            },
+                            {
+                                "item":                 ""
+                            }
+                        ]
+                    },
+                    {
+                        "is_group":             0,
+                        "is_multiple_event":    1,
+                        "avatar_type":          "icon",
+                        "type":                 "icon__notifications--white",
+                        "priority":             "non-critical",
+                        "title":                "Todays important 3 People",
+                        "description":          "",
+                        "source_type":          "",
+                        "date_time":            "9:30 AM",
+                        "person_id":            "icon-event__files",
+                        "items": [
+                            {
+                                "item":                 ""
+                            },
+                            {
+                                "item":                 ""
+                            },
+                            {
+                                "item":                 ""
+                            },
+                            {
+                                "item":                 ""
+                            },
+                            {
+                                "item":                 ""
+                            },
+                            {
+                                "item":                 ""
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     },
     "files": {

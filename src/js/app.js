@@ -68,7 +68,7 @@
             set_state: function ( requested_state ) {
 
                 var $this = $(this),
-                drawer_is_open = $main_container.hasClass( "drawer-is-open" );
+                drawer_is_open = !$drawer_wrap.hasClass( "is-hidden" );
 
                 // open/close drawer based on param "requested_state" passed to function
                 if ( requested_state !== undefined ) {
@@ -105,13 +105,11 @@
             _open: function () {
 
                 $drawer_wrap.removeClass( "is-hidden" );
-                $main_container.addClass( "drawer-is-open" );
             },
 
             _close: function () {
 
                 $drawer_wrap.addClass( "is-hidden" );
-                $main_container.removeClass( "drawer-is-open" );
             }
 
         },
@@ -122,7 +120,7 @@
             set_state: function ( requested_state ) {
 
                 var $this = $(this),
-                    actions_is_open = $main_container.hasClass( "actions-is-open" );
+                    actions_is_open = !$actions_wrap.hasClass( "is-hidden" );
 
                 // open/close actions based on param "requested_state" passed to function
                 if ( requested_state !== undefined ) {
@@ -158,13 +156,11 @@
             _open: function () {
 
                 $actions_wrap.removeClass( "is-hidden" );
-                $main_container.addClass( "actions-is-open" );
             },
 
             _close: function () {
 
                 $actions_wrap.addClass( "is-hidden" );
-                $main_container.removeClass( "actions-is-open" );
             },
 
             current_file: {
@@ -207,7 +203,7 @@
 
                     // console.log("HIT");
 
-                    if ( !$main_container.hasClass( "drawer-is-open" ) ) {
+                    if ( $drawer_wrap.hasClass( "is-hidden" ) ) {
                         $( ".-drawer.js-toggle-drawer" ).click();
                         $this.addClass( "is-selected" );
                         // $this.toggleClass( "is-selected" );
@@ -377,15 +373,26 @@
                 },
 
                 do_range_nav_click: function () {
-                    var $this       = $(this),
-                        _obj_gluru  = gluru_app;
+                    var $this               = $(this),
+                        _timeline_range     = $this.data( "timeline-range" ),
+                        _obj_gluru          = gluru_app;
+
+                    if ( _timeline_range === "future" ) {
+                        location.href = "moments-future.html";
+                    } else {
+                        location.href = "moments.html";
+                    }
+
+                },
+
+                select_range_link: function () {
+                    var $this = $(this);
 
                     $timeline_range
                         .removeClass( "is-selected" );
 
                     $this
                         .addClass( "is-selected" );
-
                 }
             }
         },

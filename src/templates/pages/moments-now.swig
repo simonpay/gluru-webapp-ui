@@ -22,6 +22,7 @@
 	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}
+	{% set type = "recent" %}
 	{% include "src/templates/includes/stage-moments.swig" %}
 
 </div>

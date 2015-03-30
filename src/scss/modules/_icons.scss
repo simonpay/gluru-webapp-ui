@@ -50,15 +50,19 @@
 .icon-toggle-actions {          @include use-sprite("icon-toggle-actions"); }
 .icon-search {                  @include use-sprite("icon-search"); }
 .icon-now {                     @include use-sprite("icon-now"); }
-.icon-now-white {               @include use-sprite("icon-now-white"); }
-.icon-notifications-white {     @include use-sprite("icon-notifications-white"); }
+.icon__now--white {             @include use-sprite("icon__now--white"); }
+.icon__notifications--white {   @include use-sprite("icon__notifications--white"); }
 
-.icon-event__add {              @include use-sprite("icon-event__add"); }
-.icon-event__calendar {         @include use-sprite("icon-event__calendar"); }
-.icon-event__edit {             @include use-sprite("icon-event__edit"); }
-.icon-event__now {              @include use-sprite("icon-event__now"); }
+.icon-event__add--white {       @include use-sprite("icon-event__add--white"); }
+.icon-event__calendar--white {  @include use-sprite("icon-event__calendar--white"); }
+.icon-event__edit--white {      @include use-sprite("icon-event__edit--white"); }
+.icon-event__now--white {       @include use-sprite("icon-event__now--white"); }
 .icon-event__now--green {       @include use-sprite("icon-event__now--green"); }
-.icon-event__phone {            @include use-sprite("icon-event__phone"); }
+.icon-event__phone--white {     @include use-sprite("icon-event__phone--white"); }
+.icon-event__people--white {    @include use-sprite("icon-event__people--white"); }
+.icon-event__files--white {     @include use-sprite("icon-event__files--white"); }
+.icon-event__people {    		@include use-sprite("icon-event__people"); }
+.icon-event__files {     		@include use-sprite("icon-event__files"); }
 
 .icon-clock--gray {             @include use-sprite("icon-clock--gray"); }
 .icon-clock--pink {             @include use-sprite("icon-clock--pink"); }
