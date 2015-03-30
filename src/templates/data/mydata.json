@@ -103,23 +103,47 @@
             "options": [
                 {
                     "text"              : "this_file_has_a_very_long_name_and_cant_fit_on_the_screen.doc",
-                    "className"         : "icon-file-evernote"
+                    "className"         : "icon-sml__folder--shared"
                 },
                 {
-                    "text"              : "Sales_Report.doc",
-                    "className"         : "icon-folder"
+                    "text"              : "Sales_Report",
+                    "className"         : "icon-sml__folder"
                 },
                 {
-                    "text"              : "Sales_Report.xsl",
-                    "className"         : "icon-file-spreadsheet"
+                    "text"              : "Sales_Report",
+                    "className"         : "icon-sml__folder--custom"
                 },
                 {
-                    "text"              : "Profit_and_loss.xls",
-                    "className"         : "icon-file-spreadsheet"
+                    "text"              : "Profit_and_loss",
+                    "className"         : "icon-sml__folder--project"
+                },
+                {
+                    "text"              : "summary.pdf",
+                    "className"         : "icon-sml__file--pdf"
                 },
                 {
                     "text"              : "todo-list.txt",
-                    "className"         : "icon-file-text"
+                    "className"         : "icon-sml__file--text"
+                },
+                {
+                    "text"              : "cost-forecast.xls",
+                    "className"         : "icon-sml__file--spreadsheet"
+                },
+                {
+                    "text"              : "todo-list.txt",
+                    "className"         : "icon-sml__file--evernote"
+                },
+                {
+                    "text"              : "stuff.txt",
+                    "className"         : "icon-sml__file--drive"
+                },
+                {
+                    "text"              : "todo-list.eml",
+                    "className"         : "icon-sml__file--email"
+                },
+                {
+                    "text"              : "todo-list.txt",
+                    "className"         : "icon-sml__file--calendar"
                 }
             ]
         },
