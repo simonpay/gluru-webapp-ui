@@ -76,14 +76,14 @@
         opacity: 1;
 
         &:after {
-            // content: "";
+            background: rgba($black, .03);
             opacity: 1;
         }
     }
 
     &:active {
         &:after {
-            background: rgba($black, .03);
+            background: rgba($black, .09);
         }
     }
 }

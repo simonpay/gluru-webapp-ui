@@ -564,6 +564,7 @@
 
                 var _pop_menu_width         = $pop_menu_wrap.width();
 
+                $this.addClass( "is-selected" );
 
                 // console.log( _window_width );
 
@@ -581,6 +582,9 @@
             },
 
             hide: function () {
+
+                $pop_menu_triggers.removeClass( "is-selected" );
+
                 $pop_menu_wrap
                     .addClass( "is-hidden" )
                     .removeAttr("style")
@@ -588,7 +592,8 @@
             },
 
             select_item: function () {
-                var $this = $(this);
+                var $this        = $(this),
+                    _obj_gluru   = gluru_app;
 
                 $this
                     .closest( ".js-pop-menu__list" )
@@ -598,6 +603,8 @@
                 // console.log( $this.closest( ".js-pop-menu__list" ) );
 
                 $this.addClass( "is-selected" );
+
+                _obj_gluru.pop_menu.hide();
             }
         }
     };
