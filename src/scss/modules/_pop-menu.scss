@@ -12,10 +12,7 @@
     background: $white;
     opacity: 1;
     border: 1px solid $alto;
-    box-shadow: 
-        0 6px 20px rgba(0, 0, 0, 0.04), 
-        -4px 8px 15px rgba(0, 0, 0, 0.05), 
-        4px 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.3);
     @include transition(opacity 0.3s, height 0);
 
     &.is-hidden {
