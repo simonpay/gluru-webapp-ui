@@ -33,6 +33,8 @@
 
 .icon-expand {                  @include use-sprite("icon-expand"); }
 
+.icon-tick {	                @include use-sprite("icon-tick"); }
+
 .icon-files__edit {             @include use-sprite("icon-files__edit"); }
 .icon-files__folder {           @include use-sprite("icon-files__folder"); }
 .icon-files__network {          @include use-sprite("icon-files__network"); }

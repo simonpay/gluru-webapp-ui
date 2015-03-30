@@ -8,7 +8,7 @@
 		<input 
 			type="text" 
 			class="search-field js-search-field" 
-			name="fname" 
+			name="name" 
 			placeholder="Search Gluru">
 		<div class="icon-search js-search"></div>
 	</div>

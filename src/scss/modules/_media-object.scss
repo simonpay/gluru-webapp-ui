@@ -12,7 +12,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: rem(13);
-        padding-top: 3px;
 
         // heading inside file explorer source panel header
         &.-location-text {
@@ -80,7 +79,7 @@
             }
 
             &.-list-primary {
-                margin-bottom: 3px;
+                margin: 3px 0;
             }
 
             &.-list-secondary {

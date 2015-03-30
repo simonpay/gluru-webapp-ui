@@ -17,6 +17,7 @@
 					<div class="media">
 					    <div class="media__img sub-menu-trigger js-tt js-pmt" 
 					    	data-tt="Change Source" 
+							data-pop-menu="sources" 
 					    	data-tt-config='{ "offset": {"top": 0, "left": 50} }'>
 					    	<div class="icon-gdrive"></div>
 					    </div>

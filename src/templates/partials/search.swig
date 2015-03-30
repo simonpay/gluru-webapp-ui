@@ -1,16 +1,5 @@
 <section class="search-wrap is-hidden js-search-wrap">
 
-{# 	<div class="search">
-		<input 
-			type="text" 
-			class="search__field" 
-			name="fname" 
-			placeholder="Search everywhere">
-		<div class="search__close js-close-search">
-			<div class="inner"></div>
-		</div>
-	</div>
- #}	
 		<div class="close-button-wrap__header-panel">
 			<div class="icon-button -center-transform -right js-close-search">
 				<div class="icon-close"></div>
