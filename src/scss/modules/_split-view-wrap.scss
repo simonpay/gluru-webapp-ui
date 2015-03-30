@@ -92,6 +92,7 @@
             }
             .main-container--files & {
                 @include calc( height, "100% - #{$panel-header-height}" ); 
+                padding-left: $files-table-padding-left;
             }
         }
 
