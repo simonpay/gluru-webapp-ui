@@ -3,12 +3,12 @@
 		<li class="stage-nav__item -now">
 			<div class="stage-nav__icon-wrap js-now">
 				<div class="text">Now</div>
-				<div class="icon__now--white"></div>
+				<div class="stage-nav__icon icon__now--white"></div>
 			</div>
 		</li>
 		<li class="stage-nav__item -notifications">
 			<div class="stage-nav__icon-wrap">
-				<div class="icon__notifications--white js-notifications"></div>
+				<div class="stage-nav__icon icon__notifications--white js-notifications"></div>
 				<div class="inset-icon -notifications js-notifications">5</div>
 			</div>
 		</li>

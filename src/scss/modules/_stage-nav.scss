@@ -53,8 +53,9 @@
                         }
                     }
 
-                    .icon-now-white {
+                    .icon__now--white {
                         position: absolute;
+                        left: auto;
                         right: 0;
                     }
 
@@ -73,5 +74,11 @@
                     background: $pink;
                 }
             }
+
+                .stage-nav__icon {
+                    position: relative;
+                    left: -1px;
+                    top: -1px;
+                }
 
 
