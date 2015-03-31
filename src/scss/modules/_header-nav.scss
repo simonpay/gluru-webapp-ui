@@ -47,11 +47,11 @@
                     }
                     .header-nav__icon {
                         &.-recent {
-                            @include use-sprite("icon-clock--pink");
+                            @include use-sprite("icon-sml__clock--pink");
                         }
 
                         &.-future {
-                            @include use-sprite("icon-calendar--pink");
+                            @include use-sprite("icon-sml__calendar--pink");
                         }
                     }
                 }
@@ -69,11 +69,11 @@
                     margin-right: 6px;
 
                     &.-recent {
-                        @include use-sprite("icon-clock--gray");
+                        @include use-sprite("icon-sml__clock");
                     }
 
                     &.-future {
-                        @include use-sprite("icon-calendar--gray");
+                        @include use-sprite("icon-sml__calendar");
                         margin-right: 8px;
                     }
                 }

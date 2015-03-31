@@ -24,31 +24,31 @@
     }
 
     &.-infinity{
-        @include use-sprite("icon-infinity-view");
+        @include use-sprite("icon__infinityview--dark");
 
         &.is-split-view{
-            @include use-sprite("icon-split-view");
+            @include use-sprite("icon__splitview--dark");
         }
     }
 
     &.-sort {
-        @include use-sprite("icon-sort");
+        @include use-sprite("icon__sort--dark");
     }
 
     &.-drawer {
-        @include use-sprite("icon-toggle-drawer");
+        @include use-sprite("icon__toggledrawer--dark");
     }
 
     &.-actions {
-        @include use-sprite("icon-toggle-actions");
+        @include use-sprite("icon__toggleactions--dark");
     }
 
     &.-search {
-        @include use-sprite("icon-search");
+        @include use-sprite("icon__search--dark");
     }
 
     &.-now {
-        @include use-sprite("icon-now");
+        @include use-sprite("icon__now--dark");
     }
 
     &:after {

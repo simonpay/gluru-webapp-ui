@@ -7,7 +7,7 @@
                 <a href="#" class="options-list__link">
                     <div class="options-list-link__inner-wrap">
                         <div class="options-list__icon">
-                            <div class="icon-gdrive-sml"></div>
+                            <div class="icon-sml__gdrive"></div>
                         </div>
                         <div class="options-list__text-wrap">
                             <div class="options-list__text"><strong>My Drive</strong> &gt; Meetings 2015</div>

@@ -18,7 +18,7 @@
                         <div class="media__nested-media-lvl2-wrap">
                             <div class="media">
                                 <div class="media__img">
-                                    <div class="icon-gdrive-sml"></div>
+                                    <div class="icon-sml__gdrive"></div>
                                 </div>
                                 <div class="media__body">
                                     <div class="media__text -list-primary">Meeting Notes</div>
@@ -26,7 +26,7 @@
                             </div>
                             <div class="media">
                                 <div class="media__img">
-                                    <div class="icon-gdrive-sml"></div>
+                                    <div class="icon-sml__gdrive"></div>
                                 </div>
                                 <div class="media__body">
                                     <div class="media__text -list-primary">Meeting Notes</div>

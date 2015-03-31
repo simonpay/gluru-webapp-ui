@@ -10,7 +10,7 @@
 			class="search-field js-search-field" 
 			name="name" 
 			placeholder="Search Gluru">
-		<div class="icon-search js-search"></div>
+		<div class="search-field-icon icon__search--dark js-search"></div>
 	</div>
 
 

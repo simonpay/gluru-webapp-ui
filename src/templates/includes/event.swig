@@ -58,7 +58,15 @@
 
 			{% for sub_obj_2 in event_obj.items %}
 				
-				{%> "table-row-file" %}
+				{% if event_obj.multiple_event_type === "people" %}
+
+					{%> "table-row-people" %}
+
+				{% elseif event_obj.multiple_event_type === "files" %}
+
+					{%> "table-row-file" %}
+
+				{% endif %}
 
 			{% endfor %}
 

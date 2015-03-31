@@ -40,6 +40,13 @@
             border: 3px solid $white;
             background: $white
         }
+        
+        // events table - people 
+        .-people > & {
+            width: 46px;
+            height: 46px;
+            background: $white
+        }
 
         .-current-item & {
             background: $white;

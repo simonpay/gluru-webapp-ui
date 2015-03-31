@@ -6,39 +6,39 @@
             "options": [
                 {
                     "text"              : "Everything",
-                    "className"         : "icon-everything"
+                    "className"         : "icon__everything"
                 },
                 {
                     "text"              : "Onedrive",
-                    "className"         : "icon-onedrive"
+                    "className"         : "icon__onedrive"
                 },
                 {
                     "text"              : "Google Calendar",
-                    "className"         : "icon-gcalendar"
+                    "className"         : "icon__gcalendar"
                 },
                 {
                     "text"              : "Google Mail",
-                    "className"         : "icon-gmail"
+                    "className"         : "icon__gmail"
                 },
                 {
                     "text"              : "Exchange",
-                    "className"         : "icon-exchange"
+                    "className"         : "icon__exchange"
                 },
                 {
                     "text"              : "Box",
-                    "className"         : "icon-box"
+                    "className"         : "icon__box"
                 },
                 {
                     "text"              : "Drive",
-                    "className"         : "icon-gdrive"
+                    "className"         : "icon__gdrive"
                 },
                 {
                     "text"              : "Dropbox",
-                    "className"         : "icon-dropbox"
+                    "className"         : "icon__dropbox"
                 },
                 {
                     "text"              : "Evernote - long source name",
-                    "className"         : "icon-evernote"
+                    "className"         : "icon__evernote"
                 }
             ]
         },
@@ -173,7 +173,7 @@
             "options": [
                 {
                     "text"              : "<strong>My Drive</strong> > Meetings 2015",
-                    "className"         : "icon-gdrive-sml"
+                    "className"         : "icon-sml__gdrive"
                 }
             ]
         },
@@ -199,18 +199,18 @@
                     {
                         "is_group":             0,
                         "avatar_type":          "icon",
-                        "type":                 "icon-event__now--white",
+                        "type":                 "icon__now--white",
                         "priority":             "now",
                         "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
                         "description":          "",
                         "source_type":          "",
                         "date_time":            "Now!",
-                        "person_id":            "icon-event__now--green"
+                        "person_id":            "icon__now--green"
                     },
                     {
                         "is_group":             0,
                         "avatar_type":          "image",
-                        "type":                 "icon-event__phone--white",
+                        "type":                 "icon__phone--white",
                         "priority":             "critical",
                         "title":                "<strong>Mike Smith</strong>",
                         "description":          "Incoming call",
@@ -221,40 +221,40 @@
                     {
                         "is_group":             0,
                         "avatar_type":          "image",
-                        "type":                 "icon-event__calendar--white",
+                        "type":                 "icon__calendar--white",
                         "priority":             "normal",
                         "title":                "<strong>Mike Smith</strong>",
                         "description":          "Monday 10th meeting",
-                        "source_type":          "icon-evernote-sml",
+                        "source_type":          "icon-sml__evernote",
                         "date_time":            "12:30 PM",
                         "person_id":            "tmp_avatar_2"
                     },
                     {
                         "is_group":             0,
                         "avatar_type":          "icon",
-                        "type":                 "icon-event__now--white",
+                        "type":                 "icon__now--white",
                         "priority":             "now",
                         "title":                "<strong>Gluru</strong> has just found files and people useful to you right now!",
                         "description":          "",
                         "source_type":          "",
                         "date_time":            "12:30 PM",
-                        "person_id":            "icon-event__now--green"
+                        "person_id":            "icon__now--green"
                     },
                     {
                         "is_group":             0,
                         "avatar_type":          "image",
-                        "type":                 "icon-event__calendar--white",
+                        "type":                 "icon__calendar--white",
                         "priority":             "non-critical",
                         "title":                "<strong>Alex Li</strong> renamed this file",
                         "description":          "Monday 10th meeting notes.docx",
-                        "source_type":          "icon-gdrive-sml",
+                        "source_type":          "icon-sml__gdrive",
                         "date_time":            "9:30 AM",
                         "person_id":            "tmp_avatar_1"
                     },
                     {
                         "is_group":             0,
                         "avatar_type":          "image",
-                        "type":                 "icon-event__add--white",
+                        "type":                 "icon__add--white",
                         "priority":             "non-critical",
                         "title":                "<strong>Alex Li</strong> renamed this file",
                         "description":          "Monday 10th meeting notes.docx",
@@ -269,7 +269,7 @@
                             {
                                 "is_group":             0,
                                 "avatar_type":          "image",
-                                "type":                 "icon-event__calendar--white",
+                                "type":                 "icon__calendar--white",
                                 "priority":             "normal",
                                 "title":                "<strong>Alex Li</strong> renamed this file",
                                 "description":          "Monday 10th meeting notes.docx",
@@ -280,7 +280,7 @@
                             {
                                 "is_group":             0,
                                 "avatar_type":          "image",
-                                "type":                 "icon-event__calendar--white",
+                                "type":                 "icon__calendar--white",
                                 "priority":             "normal",
                                 "title":                "<strong>Alex Li</strong> renamed this file",
                                 "description":          "Monday 10th meeting notes.docx",
@@ -297,6 +297,7 @@
                     {
                         "is_group":             0,
                         "is_multiple_event":    1,
+                        "multiple_event_type":  "people",
                         "avatar_type":          "icon",
                         "type":                 "icon__notifications--white",
                         "priority":             "non-critical",
@@ -304,7 +305,7 @@
                         "description":          "",
                         "source_type":          "",
                         "date_time":            "9:30 AM",
-                        "person_id":            "icon-event__people",
+                        "person_id":            "icon__people",
                         "items": [
                             {
                                 "item":                 ""
@@ -320,6 +321,7 @@
                     {
                         "is_group":             0,
                         "is_multiple_event":    1,
+                        "multiple_event_type":  "files",
                         "avatar_type":          "icon",
                         "type":                 "icon__notifications--white",
                         "priority":             "non-critical",
@@ -327,7 +329,7 @@
                         "description":          "",
                         "source_type":          "",
                         "date_time":            "9:30 AM",
-                        "person_id":            "icon-event__files",
+                        "person_id":            "icon__files",
                         "items": [
                             {
                                 "item":                 ""

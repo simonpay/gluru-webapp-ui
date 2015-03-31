@@ -2,23 +2,43 @@
 # ICONS
 \*------------------------------------*/
 
-.icon-everything {              @include use-sprite("icon-source-everything"); }
-.icon-onedrive {                @include use-sprite("icon-source-onedrive"); }
-.icon-gcalendar {               @include use-sprite("icon-source-gcalendar"); }
-.icon-gmail {                   @include use-sprite("icon-source-gmail"); }
-.icon-exchange {                @include use-sprite("icon-source-exchange"); }
-.icon-box {                     @include use-sprite("icon-source-box"); }
-.icon-gdrive {                  @include use-sprite("icon-source-drive"); }
-.icon-dropbox {                 @include use-sprite("icon-source-dropbox"); }
-.icon-evernote {                @include use-sprite("icon-source-evernote"); }
+// source icons
+// ------------------------------------
+.icon__everything {             @include use-sprite("icon__everything"); }
+.icon__custom {                 @include use-sprite("icon__everything"); }
+.icon__onedrive {               @include use-sprite("icon__onedrive"); }
+.icon__gcalendar {              @include use-sprite("icon__gcalendar"); }
+.icon__gmail {                  @include use-sprite("icon__gmail"); }
+.icon__exchange {               @include use-sprite("icon__exchange"); }
+.icon__box {                    @include use-sprite("icon__box"); }
+.icon__gdrive {                 @include use-sprite("icon__gdrive"); }
+.icon__dropbox {                @include use-sprite("icon__dropbox"); }
+.icon__evernote {               @include use-sprite("icon__evernote"); }
 
-.icon-moments {                 @include use-sprite("icon-nav-moments"); }
+//sml variants
+.icon-sml__custom {             @include use-sprite("icon-sml__everything"); }
+.icon-sml__onedrive {           @include use-sprite("icon-sml__onedrive"); }
+.icon-sml__gcalendar {          @include use-sprite("icon-sml__gcalendar"); }
+.icon-sml__gmail {              @include use-sprite("icon-sml__gmail"); }
+.icon-sml__exchange {           @include use-sprite("icon-sml__exchange"); }
+.icon-sml__box {                @include use-sprite("icon-sml__box"); }
+.icon-sml__gdrive {             @include use-sprite("icon-sml__gdrive"); }
+.icon-sml__dropbox {            @include use-sprite("icon-sml__dropbox"); }
+.icon-sml__evernote {           @include use-sprite("icon-sml__evernote"); }
 
-.icon-box-sml {                 @include use-sprite("icon-source-box-sml"); }
-.icon-gdrive-sml {              @include use-sprite("icon-source-drive-sml"); }
-.icon-dropbox-sml {             @include use-sprite("icon-source-dropbox-sml"); }
-.icon-evernote-sml {            @include use-sprite("icon-source-evernote-sml"); }
 
+// nav icons (re-used in other places)
+// ------------------------------------
+.icon__moments--white {         @include use-sprite("icon__moments--white"); }
+.icon__files--white {           @include use-sprite("icon__files--white"); }
+.icon__people--white {          @include use-sprite("icon__people--white"); }
+.icon__projects--white {        @include use-sprite("icon__projects--white"); }
+.icon__autopush--white {        @include use-sprite("icon__autopush--white"); }
+.icon__settings--white {        @include use-sprite("icon__settings--white"); }
+
+
+// file/folder icons
+// ------------------------------------
 .icon-sml__folder {             @include use-sprite("icon-sml__folder"); }
 .icon-sml__folder--shared {     @include use-sprite("icon-sml__folder--shared"); }
 .icon-sml__folder--custom {     @include use-sprite("icon-sml__folder--custom"); }
@@ -31,45 +51,57 @@
 .icon-sml__file--evernote {     @include use-sprite("icon-sml__file--evernote"); }
 .icon-sml__file--drive {        @include use-sprite("icon-sml__file--drive"); }
 
-.icon-expand {                  @include use-sprite("icon-expand"); }
-.icon-tick {	                @include use-sprite("icon-tick"); }
 
-.icon__edit {           		@include use-sprite("icon__edit"); }
-.icon__folder {         		@include use-sprite("icon__folder"); }
-.icon__share {          		@include use-sprite("icon__share"); }
-.icon__delete {         		@include use-sprite("icon__delete"); }
-.icon__edit--white {    		@include use-sprite("icon__edit--white"); }
-.icon__folder--white {  		@include use-sprite("icon__folder--white"); }
-.icon__share--white {   		@include use-sprite("icon__share--white"); }
-.icon__delete--white {  		@include use-sprite("icon__delete--white"); }
-
-.icon-sort {                    @include use-sprite("icon-sort"); }
-.icon-infinity-view {           @include use-sprite("icon-infinity-view"); }
-.icon-split-view {              @include use-sprite("icon-split-view"); }
-.icon-toggle-drawer {           @include use-sprite("icon-toggle-drawer"); }
-.icon-toggle-actions {          @include use-sprite("icon-toggle-actions"); }
-.icon-search {                  @include use-sprite("icon-search"); }
-.icon-now {                     @include use-sprite("icon-now"); }
+// event icons
+// ------------------------------------
+.icon__add--white {             @include use-sprite("icon__add--white"); }
+.icon__calendar--white {        @include use-sprite("icon__calendar--white"); }
+.icon__edit--white {            @include use-sprite("icon__edit--white"); }
 .icon__now--white {             @include use-sprite("icon__now--white"); }
+.icon__now--green {             @include use-sprite("icon__now--green"); }
+.icon__phone--white {           @include use-sprite("icon__phone--white"); }
+.icon__people--white {          @include use-sprite("icon__people--white"); }
+.icon__files--white {           @include use-sprite("icon__files--white"); }
+.icon__people {                 @include use-sprite("icon__people"); }
+.icon__files {                  @include use-sprite("icon__files"); }
+
+
+//  icons
+// ------------------------------------
+.icon__edit {                   @include use-sprite("icon__edit"); }
+.icon__folder {                 @include use-sprite("icon__folder"); }
+.icon__share {                  @include use-sprite("icon__share"); }
+.icon__delete {                 @include use-sprite("icon__delete"); }
+.icon__folder--white {          @include use-sprite("icon__folder--white"); }
+.icon__share--white {           @include use-sprite("icon__share--white"); }
+.icon__delete--white {          @include use-sprite("icon__delete--white"); }
+
+
+//  stage nav icons (top right)
+// ------------------------------------
+.icon__sort--dark {             @include use-sprite("icon__sort--dark"); }
+.icon__infinityview--dark {     @include use-sprite("icon__infinityview--dark"); }
+.icon__splitview--dark {        @include use-sprite("icon__splitview--dark"); }
+.icon__toggledrawer--dark {     @include use-sprite("icon__toggledrawer--dark"); }
+.icon__toggleactions--dark {    @include use-sprite("icon__toggleactions--dark"); }
+.icon__search--dark {           @include use-sprite("icon__search--dark"); }
+.icon__now--dark {              @include use-sprite("icon__now--dark"); }
+
+
+//  custom icons
+// ------------------------------------
+.icon__nav-add--green {         @include use-sprite("icon__nav-add--green"); }
+.icon__expand {                 @include use-sprite("icon__expand"); }
+.icon__tick {                   @include use-sprite("icon__tick"); }
 .icon__notifications--white {   @include use-sprite("icon__notifications--white"); }
 
-.icon-event__add--white {       @include use-sprite("icon-event__add--white"); }
-.icon-event__calendar--white {  @include use-sprite("icon-event__calendar--white"); }
-.icon-event__edit--white {      @include use-sprite("icon-event__edit--white"); }
-.icon-event__now--white {       @include use-sprite("icon-event__now--white"); }
-.icon-event__now--green {       @include use-sprite("icon-event__now--green"); }
-.icon-event__phone--white {     @include use-sprite("icon-event__phone--white"); }
-.icon-event__people--white {    @include use-sprite("icon-event__people--white"); }
-.icon-event__files--white {     @include use-sprite("icon-event__files--white"); }
-.icon-event__people {    		@include use-sprite("icon-event__people"); }
-.icon-event__files {     		@include use-sprite("icon-event__files"); }
+.icon-sml__clock {              @include use-sprite("icon-sml__clock"); }
+.icon-sml__clock--pink {        @include use-sprite("icon-sml__clock--pink"); }
+.icon-sml__calendar {           @include use-sprite("icon-sml__calendar"); }
+.icon-sml__calendar--pink {     @include use-sprite("icon-sml__calendar--pink"); }
 
-.icon-clock--gray {             @include use-sprite("icon-clock--gray"); }
-.icon-clock--pink {             @include use-sprite("icon-clock--pink"); }
-.icon-calendar--gray {          @include use-sprite("icon-calendar--gray"); }
-.icon-calendar--pink {          @include use-sprite("icon-calendar--pink"); }
 
-.tmp-fav-avatar-1 {             @include use-sprite("tmp-fav-avatar-1"); }
-.tmp-fav-avatar-2 {             @include use-sprite("tmp-fav-avatar-2"); }
-.tmp-fav-avatar-3 {             @include use-sprite("tmp-fav-avatar-3"); }
+// .tmp-fav-avatar-1 {             @include use-sprite("tmp-fav-avatar-1"); }
+// .tmp-fav-avatar-2 {             @include use-sprite("tmp-fav-avatar-2"); }
+// .tmp-fav-avatar-3 {             @include use-sprite("tmp-fav-avatar-3"); }
 

@@ -75,22 +75,22 @@
                 margin: 0 auto;
                 text-indent: -9999px;
 
-                &.-avatar {     @include use-sprite("tmp-nav-avatar"); }
+                // &.-avatar {     @include use-sprite("tmp-nav-avatar"); }
                 &.-add {
-                    @include use-sprite("icon-nav-add");
+                    @include use-sprite("icon__nav-add--green");
                     @include transition( transform 0.3s );
 
                     &.is-selected {
                         @include transform( rotate(45deg) );
                     }
                 }
-                &.-search {     @include use-sprite("icon-nav-search"); }
-                &.-files {      @include use-sprite("icon-nav-files"); }
-                &.-moments {    @include use-sprite("icon-nav-moments"); }
-                &.-people {     @include use-sprite("icon-nav-people"); }
-                &.-projects {   @include use-sprite("icon-nav-projects"); }
-                &.-auto-push {  @include use-sprite("icon-nav-auto-push"); }
-                &.-settings {   @include use-sprite("icon-nav-settings"); }
+                // &.-search {     @include use-sprite("icon-nav-search"); }
+                &.-files {      @include use-sprite("icon__files--white"); }
+                &.-moments {    @include use-sprite("icon__moments--white"); }
+                &.-people {     @include use-sprite("icon__people--white"); }
+                &.-projects {   @include use-sprite("icon__projects--white"); }
+                &.-auto-push {  @include use-sprite("icon__autopush--white"); }
+                &.-settings {   @include use-sprite("icon__settings--white"); }
                 
                 // repeat class to increase specificity to override overflow set by sprite mixin above
                 &.main-nav__link {

@@ -49,10 +49,12 @@
             &.-file-name {
                 width: 100%; // width only used if table-layout: fixed;
             }
+
             &.-modified {
                 width: 120px;
                 // text-align: center;
             }
+
             &.-source {
 
                 // when .-source inside split view hide it
@@ -66,16 +68,27 @@
                     width: 40px;
                 }
             }
+            
+            // table inside future event for poeple 
+            &.-people {
+                padding: 11px 6px;
+            }
 
             .-header > & {
                 border-bottom-width: 2px;
                 font-weight: bold;
                 color: $dusty-gray;
             }
+            
 
-            .is-selected > & {
+            .section-wrap.-files .is-selected > & {
                 background: $pink;
-                color: $white;
+                // color: $white;
+            }
+
+            .section-wrap.-moments .is-selected > & {
+                background: $gallery;
+                // color: $white;
             }
 
             .media {

@@ -5,7 +5,7 @@
 	</div>
 
 	<div class="inset-icon -event-source">
-		<div class="u-center-transform icon-gdrive-sml"></div>
+		<div class="u-center-transform icon-sml__gdrive"></div>
 	</div>
 
 </div>

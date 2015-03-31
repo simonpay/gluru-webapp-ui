@@ -23,7 +23,7 @@
 
 	{# stage #}
 	{% set type = "future" %}
-	{% include "src/templates/includes/stage-moments.swig" %}
+	{% include "src/templates/includes/stage__moments.swig" %}
 
 </div>
 
