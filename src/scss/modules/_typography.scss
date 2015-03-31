@@ -11,10 +11,13 @@
 .table__text,
 .media__text,
 {
-    // line-height: $sml-icon-height;
+    font-size: rem(13);
     line-height: 1.3;
     color: $black;
-
+    
+    // scope selection of text to specific location to
+    // avoid application when 'is-selected' class applied to 
+    // parent further up in dom
     .-files .table__row.is-selected & {
         color: $white;
     }
