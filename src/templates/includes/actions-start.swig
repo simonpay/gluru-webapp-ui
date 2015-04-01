@@ -16,17 +16,24 @@
 {# {% endif %} #}
 	<div class="priority-box -current-item -now is-hidden js-actions--current-item">
 
-		{# {%> "disc-img__avatar" %} #}
-		{# {%> "disc-img__avatar--inset-icon" %} #}
-		{%> "disc-img__icon" %}
-		{# {%> "disc-img__icon--inset-icon" %} #}
+		<div class="media -v-center">
+		    <div class="media__img">
 
-		{%> "priority-box__text-wrap--file" %}
-		{# {%> "priority-box__text-wrap--file--no-inset-icon" %} #}
-		{# {%> "priority-box__text-wrap--event" %} #}
-		{# {%> "priority-box__text-wrap--event--no-inset-icon" %} #}
+				{# {%> "disc-img__avatar" %} #}
+				{# {%> "disc-img__avatar--inset-icon" %} #}
+				{%> "disc-img__icon" %}
+				{# {%> "disc-img__icon--inset-icon" %} #}
 
-		{%> "disc-img__icon--right" %}
+		    </div>
+		    <div class="media__body">
+
+				{# {%> "priority-box__current-item--media-body" %} #}
+				{%> "priority-box__current-item--media-body--icon-right" %}
+				
+		    </div>
+		</div>
+
+
 
 
 		<div class="close-button-wrap__header-panel">

@@ -124,7 +124,6 @@
 
 
 
-
     // 
     &.-heading {
         font-size: rem(13);
@@ -150,6 +149,11 @@
     .-files .table__row.is-selected & {
         color: $white;
     }
+}
+
+
+@mixin break-word {
+    word-break: break-word;
 }
 
 .text--small {

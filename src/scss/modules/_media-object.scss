@@ -16,6 +16,11 @@
     // nested media object
     .media {
         height: 24px;
+
+        // inside priority box
+        .priority-box & {
+            height: 50px;
+        }
     }
 }
 
@@ -23,7 +28,7 @@
         overflow: hidden;
         padding-top: 2px;
 
-        &.-v-center {
+        .-v-center & {
             padding-top: 0;
         }
     }
@@ -59,6 +64,12 @@
         .table & {
             margin-left: 10px;
             margin-right: 20px;
+        }
+        
+        // add extra margin to accomodate inset icons on event
+        // priority panels
+        .-event & {
+            margin-right: 26px;
         }
     }
 

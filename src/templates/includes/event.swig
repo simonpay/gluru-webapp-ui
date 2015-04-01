@@ -8,27 +8,34 @@
 
 	<div class="priority-box -event -{{ event_obj.priority }} js-event" data-priority="{{ event_obj.priority }}">
 
-		<div class="disc-img -event">
-			<div class="disc-img__img-wrap">
-			{% if event_obj.avatar_type === "icon" %}
-				<div class="u-center-transform {{ event_obj.person_id }}"></div>
-			{% else %}
-				<img class="disc-img__img" src="img/{{ event_obj.person_id }}.png" alt="">
-			{% endif %}
-			</div>
+		<div class="media -v-center">
+		    <div class="media__img">
 
-			{% if event_obj.source_type !== "" %}
-			<div class="inset-icon -event-source">
-				<div class="u-center-transform {{ event_obj.source_type }}"></div>
-			</div>
-			{% endif %}
+				<div class="disc-img -event">
+					<div class="disc-img__img-wrap">
+					{% if event_obj.avatar_type === "icon" %}
+						<div class="u-center-transform {{ event_obj.person_id }}"></div>
+					{% else %}
+						<img class="disc-img__img" src="img/{{ event_obj.person_id }}.png" alt="">
+					{% endif %}
+					</div>
 
+					{% if event_obj.source_type !== "" %}
+					<div class="inset-icon -event-source">
+						<div class="u-center-transform {{ event_obj.source_type }}"></div>
+					</div>
+					{% endif %}
+				</div>
+
+		    </div>
+		    <div class="media__body">
+
+				<div class="text {% if event_obj.priority !== 'now' %}-nowrap{% endif %} -xxlrg -c-white -fw-light">{{ event_obj.title|safe }}</div>
+				<div class="text -nowrap -xxlrg -c-white -fw-light">{{ event_obj.description|safe }}</div>
+
+		    </div>
 		</div>
 
-		<div class="priority-box__text-wrap">
-			<div class="text -xxlrg -c-white -fw-light">{{ event_obj.title|safe }}</div>
-			<div class="text -xxlrg -c-white -fw-light">{{ event_obj.description|safe }}</div>
-		</div>
 
 		<nav class="event-nav">
 			<ul class="event-nav__list">

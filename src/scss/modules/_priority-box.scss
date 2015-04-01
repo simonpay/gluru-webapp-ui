@@ -7,6 +7,8 @@
 
 .priority-box {
     height: $event-height;
+    white-space: normal;
+    font-size: 1rem; // rest font-size
 
     // width: 500px;
     background: $dusty-gray;
@@ -62,6 +64,11 @@
         border-right-color: $green;
     }
 
+    &.-event,
+    &.-current-item {
+        padding: 0 35px 0 16px;
+    }
+
     &.-event {
         width: 50%;
         max-width: 500px;
@@ -112,6 +119,7 @@
         @include calc( width, "#{$actions-width} + 20px" );
         top: -( ($event-height - $panel-header-height) / 2);
         left: -20px;
+        padding-right: 55px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         @include transition( left $actions-animation-duration );
@@ -125,25 +133,5 @@
         }
     }
 }
-
-    // the text content of the event
-    .priority-box__text-wrap {
-        @include scut-center-transform(y);
-        left: 90px;
-        right: 110px;
-        max-height: 80px;
-        overflow: hidden;
-        white-space: normal;
-
-        .-split-view & {
-           right: 30px;
-           font-size: rem(15);
-        }
-
-        &.-no-inset-icon {
-            left: 75px;
-        }
-    }
-
 
 

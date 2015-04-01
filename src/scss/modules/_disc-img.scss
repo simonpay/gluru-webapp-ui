@@ -10,11 +10,11 @@
 .disc-img {
     position: relative;
 
-    &.-event,
-    &.-current-item {
-        @include scut-center-transform(y);
-        left: 16px;
-    }
+    // &.-event,
+    // &.-current-item {
+    //     @include scut-center-transform(y);
+    //     left: 16px;
+    // }
 
     // when inside .-profile class
     .-profile & {
@@ -24,6 +24,15 @@
     &.-right {
         left: auto;
         right: 50px;        
+    }
+
+     // add extra margin-right for when the 
+     // inset icon is displayed within current-item
+     // on 'priority-box' in actions panel 
+    .-current-item & {
+        &.-inset-icon {
+            margin-right: 15px;
+        }
     }
 
 }
