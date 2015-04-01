@@ -9,13 +9,25 @@
     // make height the same as container when inside 
     // '-v-center' class present (this vrtically centers 
     // the content - media__body & media__img)
+    // to work, the parent must have a 'height' value
     &.-v-center {
         height: inherit;
+    }
+    
+    // nested media object
+    .media {
+        height: 24px;
     }
 }
 
     .media__body {
         overflow: hidden;
+        padding-top: 2px;
+
+        &.-v-center {
+            padding-top: 0;
+        }
+
         // text-overflow: ellipsis;
         // font-size: rem(13);
         // 
@@ -34,9 +46,9 @@
         //     color: $black;
         // }
 
-        .media__nested-media-lvl2-wrap { // nested media wrapper
-            margin-top: 5px;
-        }
+        // .media__nested-media-lvl2-wrap { // nested media wrapper
+        //     margin-top: 5px;
+        // }
 
     .media__img {
         float: left;
@@ -51,6 +63,18 @@
             float: right;
             margin-right: 0;
             margin-left: 10px;
+        }
+            
+        // when inside actions, add margin to left 
+        // for small icons in related files etc
+        .actions & {
+            margin-left: 4px;
+        }
+        
+        // set width for media__img for all items inside drawer
+        // due to teams dics being smaller than avatar discs
+        .drawer & {
+            width: 34px;
         }
 
         // .table__col & {
@@ -68,7 +92,8 @@
     .media__img,
     {
         // vertically center media__body & media__img 
-        // when inside '-v-center' class
+        // when inside '-v-center' class 
+        // to work, the parent of '.media' must have a 'height' value
         .-v-center & {
             @include scut-center-transform(y);
             position: relative;

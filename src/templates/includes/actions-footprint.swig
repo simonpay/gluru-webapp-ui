@@ -14,7 +14,7 @@
 		{% include "options-list.swig" %}
 
 		{# related files #}
-		{% set rObj = mydata.actions.relatedFiles %}
+		{% set rObj = mydata.actions.related_files %}
 		{% include "options-list.swig" %}
 
 		{# email #}
@@ -26,7 +26,7 @@
 		{% include "options-list.swig" %}
 
 		{# web pages #}
-		{% set rObj = mydata.actions.webPages %}
+		{% set rObj = mydata.actions.web_pages %}
 		{% include "options-list.swig" %}
 
 

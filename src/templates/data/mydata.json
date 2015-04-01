@@ -97,8 +97,8 @@
                 {}
             ]
         },
-        "relatedFiles": {
-            "id":      "relatedFiles",
+        "related_files": {
+            "id":      "related_files",
             "heading": "Related Files",
             "options": [
                 {
@@ -172,13 +172,13 @@
             "heading": "Hierarchy",
             "options": [
                 {
-                    "text"              : "<strong>My Drive</strong> > Meetings 2015",
+                    "text"              : "<strong>My Drive</strong> > 2015 > Meetings > Meetings 2015 > Meetings 2015 > Meetings 2015",
                     "className"         : "icon-sml__gdrive"
                 }
             ]
         },
-        "webPages": {
-            "id":      "webPages",
+        "web_pages": {
+            "id":      "web_pages",
             "heading": "Web Links",
             "options_list_type_class": "-multiple-line",
             "options": [

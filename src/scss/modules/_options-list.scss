@@ -124,42 +124,45 @@
                             }
 
 
-                            .options-list__icon {
-                                margin-left: 2px;
-                                margin-right: 8px;
 
-                                &.-right {
-                                    margin-right: 0;
-                                    margin-left: 8px;
-                                }
+                            // .options-list__icon {
+                            //     // margin-left: 2px;
+                            //     // margin-right: 8px;
 
-                                .drawer & {
-                                    margin-left: 5px;
-                                    margin-right: 12px;
-                                }
+                            //     &.-right {
+                            //         margin-right: 0;
+                            //         margin-left: 8px;
+                            //     }
 
-                                &.-team {
-                                    width: 30px;
-                                    height: 30px;
-                                    border-radius: 100%;
-                                    &.-sales {
-                                        background: $team-color-sales;
-                                    }
-                                    &.-marketing {
-                                        background: $team-color-marketing;
-                                    }
-                                    &.-development {
-                                        background: $team-color-development;
-                                    }
-                                }
-                            }
+                            //     .drawer & {
+                            //         margin-left: 5px;
+                            //         margin-right: 12px;
+                            //     }
+
+                            //     &.-team {
+                            //         width: 30px;
+                            //         height: 30px;
+                            //         border-radius: 100%;
+                            //         &.-sales {
+                            //             background: $team-color-sales;
+                            //         }
+                            //         &.-marketing {
+                            //             background: $team-color-marketing;
+                            //         }
+                            //         &.-development {
+                            //             background: $team-color-development;
+                            //         }
+                            //     }
+                            // }
 
                             .options-list__text-container {
                                 // width: $drawer-width - 95px;
                                 // margin-left: 8px;
                                 display: block;
                                 position: relative;
-                                width: $options-link-text-width-actions;
+
+                                // width: $options-link-text-width-actions;
+
                                 // text-decoration: none;
                                 // font-size: $options-list-text-font-size;
                                 // color: $black;
@@ -169,7 +172,8 @@
                                 // text-overflow: ellipsis;
 
                                 .drawer & {
-                                    width: $options-link-text-width-drawer;
+                                    // width: $options-link-text-width-drawer;
+
                                     // font-weight: lighter;
                                     // color: $mine-shaft;
                                     // font-size: $options-list-text-font-size--drawer;
