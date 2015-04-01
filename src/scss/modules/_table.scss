@@ -50,7 +50,25 @@
             color: $black;
             @include transition(all 0.3s);
             
-
+            // add rounded corners to first and last table row 
+            // inside tables on 'future' events screen to match 
+            // 'event' panels (priority-box)
+            .event-table-wrap .table__row:first-child & {
+                &:first-child {
+                    border-top-left-radius: 15px;
+                }
+                &:last-child {
+                    border-top-right-radius: 15px;
+                }
+            }
+            .event-table-wrap .table__row:last-child & {
+                &:first-child {
+                    border-bottom-left-radius: 15px;
+                }
+                &:last-child {
+                    border-bottom-right-radius: 15px;
+                }
+            }
 
             // specific modifiers for files explorer table
             &.-file-name {
@@ -97,7 +115,7 @@
             }
 
             .section-wrap.-moments .is-selected > & {
-                background: $gallery;
+                background: $alto;
                 // color: $white;
             }
             
