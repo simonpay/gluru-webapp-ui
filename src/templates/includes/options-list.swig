@@ -63,11 +63,9 @@
                         <div class="media -v-center">
                             <div class="media__img">
 
-                                <div class="options-list__icon">
-                                    <div class="disc-img">
-                                        <div class="disc-img__img-wrap">
-                                            <img class="disc-img__img" src="{{ obj.img_src }}" alt="">
-                                        </div>
+                                <div class="disc-img">
+                                    <div class="disc-img__img-wrap">
+                                        <img class="disc-img__img" src="{{ obj.img_src }}" alt="">
                                     </div>
                                 </div>
                                 
@@ -86,16 +84,12 @@
                         <div class="media -v-center">
                             <div class="media__img">
 
-                                <div class="options-list__icon">
-                                    <div class="{{obj.className}}"></div>
-                                </div>
+                                <div class="{{obj.className}}"></div>
 
                             </div>
                             <div class="media__body">
 
-                                <div class="options-list__text-container" title="{{ obj.text }}">
-                                    <div class="text -nowrap">{{ obj.text|safe }}</div>
-                                </div>
+                                <div class="text -nowrap" title="{{ obj.text }}">{{ obj.text|safe }}</div>
 
                             </div>
                         </div>
@@ -107,16 +101,12 @@
                         <div class="media -v-center">
                             <div class="media__img">
 
-                                <div class="options-list__icon">
-                                    <div class="{{obj.className}}"></div>
-                                </div>
+                                <div class="{{obj.className}}"></div>
 
                             </div>
                             <div class="media__body">
 
-                                <div class="options-list__text-container" title="{{ obj.text }}">
-                                    <div class="text -nowrap">{{ obj.text|safe }}</div>
-                                </div>
+                                <div class="text -nowrap" title="{{ obj.text }}">{{ obj.text|safe }}</div>
 
                             </div>
                         </div>
@@ -183,7 +173,7 @@
 
                         <ul class="text-list">
                             <li class="text-list__item">Brand strategy 2015 across all regions.</li>
-                            <li class="text-list__item">Key values, core style, new branding focus.</li>
+                            <li class="text-list__item">Key values, core style, new branding focus, lots of options that will wrap</li>
                             <li class="text-list__item">Competitor benchmarking tools.</li>
                             <li class="text-list__item">Brand evolution roadmap.</li>
                         </ul>

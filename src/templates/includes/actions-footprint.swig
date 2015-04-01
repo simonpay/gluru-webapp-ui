@@ -2,9 +2,6 @@
 	{# actions #}
 	{% include "actions-start.swig" %}
 		
-		{# current file #}
-		{# {%> "actions-current-file" %} #}
-
 		{# hierarchy #}
 		{% set rObj = mydata.actions.hierarchy %}
 		{% include "options-list.swig" %}

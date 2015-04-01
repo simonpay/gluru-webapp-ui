@@ -2,7 +2,7 @@
     # TABLE
 \*------------------------------------*/
 
-// table currently only shows results for file explorer
+// generic table module for files, people etc
 
 .table {
     display: table;
@@ -19,16 +19,15 @@
                 .table__col {
                     cursor: pointer;
                     background-color: $gallery;
-                    // @include transition(all 0.5);
                 }
             }
             &:hover, 
             &.is-selected {
+
                 // show file nav on table row hover
                 .file-nav {
-                    // fade file-nav up
-                    @include transition(opacity 0.3s);
                     opacity: 1;
+                    @include transition(opacity 0.3s);
                 }
             }
         }
@@ -36,18 +35,13 @@
 
         .table__col {
             display: table-cell;
-
             height: 50px;
-            // line-height: 50px;
-
-            // padding: 15px;
             padding: 0 10px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             vertical-align: middle;
             border-bottom: 1px solid $gallery;
-            color: $black;
             @include transition(all 0.3s);
             
             // add rounded corners to first and last table row 
@@ -70,14 +64,13 @@
                 }
             }
 
-            // specific modifiers for files explorer table
+            // specific modifiers for file explorer table
             &.-file-name {
                 width: 100%; // width only used if table-layout: fixed;
             }
 
             &.-modified {
                 width: 120px;
-                // text-align: center;
             }
 
             &.-source {
@@ -98,8 +91,6 @@
             // table inside future event for poeple 
             &.-people {
                 height: 70px;
-                // padding: 11px 6px;
-                // line-height: inherit;
             }
 
             .-header > & {
@@ -108,33 +99,16 @@
                 color: $dusty-gray;
             }
             
-
             .section-wrap.-files .is-selected > & {
                 background: $pink;
-                // color: $white;
             }
 
             .section-wrap.-moments .is-selected > & {
                 background: $alto;
-                // color: $white;
-            }
-            
-
-            // todo: remove these? should be in media object scss
-            .media {
-                z-index: 1;
-                position: relative;
-                overflow: visible;
-            }
-            .media__img {
-                position: relative;
-                margin-left: 10px;
-                margin-right: 20px;
             }
         }
 
             .table__icon {
-                // @include scut-center-transform(y);
                 position: relative;
 
                 &:after {

@@ -2,12 +2,7 @@
 # OPTIONS-LIST
 \*------------------------------------*/
 
-// todo: 
-// options-list contents will need to be refactored to allow them to take up 
-// 100% of container - currently they are dsplay:inline-block with fixed widths
-// which wont work for tablet and mobile screens with varying viewport widths 
-// current approach will be fine for Apr 2015 deadline
-
+// all lists within drawer & actions panels
 
 .options-list {
     position: relative;
@@ -84,8 +79,10 @@
                     .drawer & {
                         margin-bottom: 4px;
                     }
-
-                    .-multiple-line & { // when ".-multiple-line" class present (on ".options-list__list" level)
+                    
+                    // when ".-multi-line" class present on '.options-list'
+                    // add margin to bottom of .options-list__item (li)
+                    .-multi-block & { 
                         margin-bottom: 14px;
                     }
                 }
@@ -94,14 +91,10 @@
                         display: block;
                         position: relative;
                         height: $options-list-link-height-actions;
-                        // padding-left: $options-link-left-padding-actions;
                         text-decoration: none;
-                        // font-size: rem(14);
-                        color: $black;
 
                         &:hover,
                         &.is-selected {
-                            // background: $alto;
                             background: rgba(0, 0, 0, 0.075);
                         }
 
@@ -111,89 +104,5 @@
                         }
                     }
                     
-                        .options-list-link__inner-wrap {
-                            @include scut-center-transform(y); //vertically align center
-                            white-space: nowrap;
-                            font-size: 0; // remove space between inline-blocks
-                        }
-
-                            .options-list__icon,
-                            .options-list__text-wrap {
-                                display: inline-block;
-                                vertical-align: middle;
-                            }
-
-
-
-                            // .options-list__icon {
-                            //     // margin-left: 2px;
-                            //     // margin-right: 8px;
-
-                            //     &.-right {
-                            //         margin-right: 0;
-                            //         margin-left: 8px;
-                            //     }
-
-                            //     .drawer & {
-                            //         margin-left: 5px;
-                            //         margin-right: 12px;
-                            //     }
-
-                            //     &.-team {
-                            //         width: 30px;
-                            //         height: 30px;
-                            //         border-radius: 100%;
-                            //         &.-sales {
-                            //             background: $team-color-sales;
-                            //         }
-                            //         &.-marketing {
-                            //             background: $team-color-marketing;
-                            //         }
-                            //         &.-development {
-                            //             background: $team-color-development;
-                            //         }
-                            //     }
-                            // }
-
-                            .options-list__text-container {
-                                // width: $drawer-width - 95px;
-                                // margin-left: 8px;
-                                display: block;
-                                position: relative;
-
-                                // width: $options-link-text-width-actions;
-
-                                // text-decoration: none;
-                                // font-size: $options-list-text-font-size;
-                                // color: $black;
-
-                                // white-space: nowrap;
-                                // overflow: hidden;
-                                // text-overflow: ellipsis;
-
-                                .drawer & {
-                                    // width: $options-link-text-width-drawer;
-
-                                    // font-weight: lighter;
-                                    // color: $mine-shaft;
-                                    // font-size: $options-list-text-font-size--drawer;
-
-                                    // &.-secondary {
-                                    //     // margin-top: 3px;
-                                    //     font-size: rem(13);
-                                    //     color: $dusty-gray-dark;
-                                    // }
-                                }
-                                
-                                &.options-list__text--current-file {
-                                    width: $options-link-text-width-actions - 35px;
-                                    // width: 248px;
-
-                                    &:hover {
-                                        text-decoration: underline;
-                                    }
-                                }
-
-                            }
 
 

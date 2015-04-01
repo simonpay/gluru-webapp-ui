@@ -8,7 +8,6 @@
     height: $panel-header-height;
     overflow: hidden;
     padding: 0 $panel-header-padding-right 0 $panel-header-padding-left;
-    // border-bottom: 1px solid $alto;
     
     // make bottom border using psuedo el (to add indents without adding padding to parent)
     &:before {
@@ -57,13 +56,6 @@
     }
 }
 
-// .drawer-wrap ~ .stage-wrap .panel-header.-stage {
-//     @include calc( width, "100% - #{$main-nav-width} - #{$drawer-width}" ); // viewport - main-nav - drawer
-// }
-// .drawer-wrap.is-hidden ~ .stage-wrap .panel-header.-stage {
-//     @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
-// }
-
 .panel-header--drawer {
     // set width to prevent close button moving when actions is closed
     width: $drawer-width;
@@ -100,17 +92,12 @@
 
 // header for file explorer showing current source and crumbtrail (location) 
 .panel-header--location {
-    // width: 100%;
-    // padding-top: 13px;
     // make padding less to visually align icon with main heading
     padding-left: $panel-header-padding-left - 3px;
 }
 
 // header for timeline containing recent and future tabs 
 .panel-header--timeline {
-    // width: 100%;
-    // margin-left: 12px;
-
     // make panel absolute so it streteches 100% width when 
     // multiple timelines cause horizonatl scrolling
     position: absolute;

@@ -7,7 +7,8 @@
     @if $screen == medium {
         @media only screen and (min-width: 641px) { @content; }
     } @else if $screen == large {
-        @media only screen and (min-width: 1025px) { @content; }
+        // @media only screen and (min-width: 1025px) { @content; }
+        @media only screen and (min-width: 1px) { @content; }
     }
 }
 

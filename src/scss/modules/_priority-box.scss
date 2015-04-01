@@ -86,7 +86,6 @@
 
             // remove triangle
             &:after {
-                // content: none;
                 @include scut-triangle(up, $event-arrow-width $event-arrow-height, $dusty-gray);
                 @include scut-center-transform(x);
                 top: -$event-arrow-height;
@@ -135,15 +134,6 @@
         max-height: 80px;
         overflow: hidden;
         white-space: normal;
-        // color: $white;
-        // font-size: rem(16);
-        // font-weight: lighter;
-        // line-height: 1.2;
-        
-        // .-current-item & {
-        //     font-size: rem(14);
-        //     font-weight: normal;
-        // }
 
         .-split-view & {
            right: 30px;
@@ -153,11 +143,6 @@
         &.-no-inset-icon {
             left: 75px;
         }
-
-        // &.-no-src-icon {
-        //     left: 75px;
-        //     right: 50px;
-        // }
     }
 
 

@@ -11,21 +11,11 @@
     position: relative;
 
     &.-event,
-    &.-current-item,
-    // &.-people,
-    {
-        @include scut-center-transform(y);
-    }
-
-    &.-event,
     &.-current-item {
+        @include scut-center-transform(y);
         left: 16px;
     }
 
-    // &.-people {
-    //     position: relative;
-    // }
-    
     // when inside .-profile class
     .-profile & {
         top: 2px;
@@ -71,7 +61,6 @@
             width: 30px;
             height: 30px;
             margin-left: 2px;
-            // border-radius: 100%;
             &.-sales {
                 background: $team-color-sales;
             }
@@ -82,8 +71,6 @@
                 background: $team-color-development;
             }
         }
-
-
     }
 
         .disc-img__img {
