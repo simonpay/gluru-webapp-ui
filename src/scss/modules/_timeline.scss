@@ -4,19 +4,8 @@
 
 .timeline-wrap {
     position: relative;
-    // min-width: 600px;
-    // max-width: 700px;
-
-    // &.-cols-2 {
-    //     min-width: 660px;
-    //     max-width: 880px;
-    // }
-
-    // &.-cols-3 {
-    //     min-width: 900px;
-    //     max-width: 1200px;
-    // }
 }
+
     .timeline {
         position: relative;
         width: 100%;
@@ -32,22 +21,14 @@
             }
         }
 
-        .-cols-2 & {
-            // width: 50%;
-        }
-        
-        .-cols-3 & {
-            // width: 33.3333%;
-        }
-        
         // timeline - v line
         &:before {
             content: "";
             position: absolute;
             top: 0;
+            bottom: 40px;
             left: 149px;
             width: 3px;
-            @include calc( height, "100% - 60px" );
             background: $alto;
         }
     }

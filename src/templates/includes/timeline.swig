@@ -32,4 +32,8 @@
 
 	{% endfor %}
 
+	<div class="event-group-heading">
+		<div class="-text">Start</div>
+	</div>
+
 </div><!-- // .timeline -->
