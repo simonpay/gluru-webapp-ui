@@ -11,10 +11,20 @@
     position: relative;
 
     &.-event,
-    &.-current-item {
+    &.-current-item,
+    // &.-people,
+    {
         @include scut-center-transform(y);
+    }
+
+    &.-event,
+    &.-current-item {
         left: 16px;
     }
+
+    // &.-people {
+    //     position: relative;
+    // }
     
     // when inside .-profile class
     .-profile & {
@@ -25,6 +35,7 @@
         left: auto;
         right: 50px;        
     }
+
 }
 
     .disc-img__img-wrap {

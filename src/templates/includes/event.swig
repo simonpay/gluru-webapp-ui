@@ -26,8 +26,8 @@
 		</div>
 
 		<div class="priority-box__text-wrap">
-			<div class="event__title">{{ event_obj.title|safe }}</div>
-			<div class="event__description">{{ event_obj.description|safe }}</div>
+			<div class="text -xxlrg -c-white -fw-light">{{ event_obj.title|safe }}</div>
+			<div class="text -xxlrg -c-white -fw-light">{{ event_obj.description|safe }}</div>
 		</div>
 
 		<nav class="event-nav">

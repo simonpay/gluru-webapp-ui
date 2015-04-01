@@ -6,22 +6,33 @@
     overflow: hidden;
     // margin:10px;
     
+    // make height the same as container when inside 
+    // '-v-center' class present (this vrtically centers 
+    // the content - media__body & media__img)
+    &.-v-center {
+        height: inherit;
+    }
 }
 
     .media__body {
         overflow: hidden;
-        text-overflow: ellipsis;
+        // text-overflow: ellipsis;
         // font-size: rem(13);
+        // 
+        // .-v-center & {
+        //     @include scut-center-transform(y);
+        //     position: relative;
+        // }
     }
 
-    .media__body--table-link { //a
-        text-decoration: none;
-    }
+    // .media__body--table-link { //a
+    //     text-decoration: none;
+    // }
 
-        .media__body--table-text { //a
-            line-height: $sml-icon-height;
-            color: $black;
-        }
+        // .media__body--table-text { //a
+        //     line-height: $sml-icon-height;
+        //     color: $black;
+        // }
 
         .media__nested-media-lvl2-wrap { // nested media wrapper
             margin-top: 5px;
@@ -41,7 +52,29 @@
             margin-right: 0;
             margin-left: 10px;
         }
+
+        // .table__col & {
+        //     // height: inherit;
+        // }
+
+        // .table__col & {
+        //     @include scut-center-transform(y);
+        // }
+
+
     }
+
+    .media__body,
+    .media__img,
+    {
+        // vertically center media__body & media__img 
+        // when inside '-v-center' class
+        .-v-center & {
+            @include scut-center-transform(y);
+            position: relative;
+        }
+    }
+
 
         // .media__text {
         //     line-height: 1.3;

@@ -48,11 +48,15 @@
 					{% endif %}
 
 						<div class="options-list__text-wrap">
-							<div class="options-list__text" title="{{ obj.text }}">{{ obj.text|safe }}</div>
+							<div class="options-list__text-container" title="{{ obj.text }}">
+								<div class="text -nowrap">{{ obj.text|safe }}</div>
+							</div>
 
 						{% if rObj.id === "favourites" %}
 
-							<div class="options-list__text -secondary">{{ obj.email|safe }}</div>
+							<div class="options-list__text-container">
+								<div class="text -nowrap -sml -c-mid">{{ obj.email|safe }}</div>
+							</div>
 
 						{% endif %}
 
@@ -71,15 +75,15 @@
 								</div>
 							</div>
 							<div class="media__body">
-								<div class="media__text -list-primary"><strong>Alex Li</strong> renamed this file with a very long description that will wrap</div>
-								<div class="media__text -list-secondary">Today, 9:00am</div>
+								<div class="text"><strong>Alex Li</strong> renamed this file with a very long description that will wrap</div>
+								<div class="text -sml -c-mid">Today, 9:00am</div>
 								<div class="media__nested-media-lvl2-wrap">
 									<div class="media">
 										<div class="media__img">
 											<div class="icon-sml__gdrive"></div>
 										</div>
 										<div class="media__body">
-											<div class="media__text -list-primary">Meeting Notes</div>
+											<span class="text">Meeting Notes</span>
 										</div>
 									</div>
 									<div class="media">
@@ -87,7 +91,7 @@
 											<div class="icon-sml__gdrive"></div>
 										</div>
 										<div class="media__body">
-											<div class="media__text -list-primary">Meeting Notes</div>
+											<span class="text">Meeting Notes</span>
 										</div>
 									</div>
 								</div>
@@ -102,8 +106,8 @@
 								<div class="icon__evernote"></div>
 							</div>
 							<div class="media__body">
-								<div class="media__text -list-primary">Firefox Redesigns Its Search Interface</div>
-								<div class="media__text -paragraph">Last week we learned that Mozilla had made a pact with Yahoo to switch Firefox’s default search engine to a yet-to-be launched new version of </div>
+								<div class="text text__heading">Firefox Redesigns Its Search Interface</div>
+								<div class="text -paragraph">Last week we learned that Mozilla had made a pact with Yahoo to switch Firefox’s default search engine to a yet-to-be launched new version of </div>
 							</div>
 						</div>
 

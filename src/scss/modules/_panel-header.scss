@@ -100,8 +100,8 @@
 
 // header for file explorer showing current source and crumbtrail (location) 
 .panel-header--location {
-    width: 100%;
-    padding-top: 13px;
+    // width: 100%;
+    // padding-top: 13px;
     // make padding less to visually align icon with main heading
     padding-left: $panel-header-padding-left - 3px;
 }

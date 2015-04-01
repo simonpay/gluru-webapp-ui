@@ -2,7 +2,7 @@
 
 	<div class="table__col -people">
 
-		<div class="media">
+		<div class="media -v-center">
 		    <div class="media__img">
 
 				<div class="disc-img -people">
@@ -13,11 +13,12 @@
 
 		    </div>
 		    <div class="media__body">
-		    	<a href="#" class="media__body--table-link">
-		    		<div class="table__text table__text--heading">Alex Li</div>
-		    		<div class="table__text table__text--subheading">alexLi@gmail.com</div>
+		    	<a href="#" class="link">
+		    		<div class="text -nowrap -xlrg -fw-bold -c-dark">Alex ihil ib liu njjk asdsdsaas oinkLi oinkLi asdsdsaas</div>
 		    	</a>
-		    	{# <a href="#" class="media__text -link">file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext</a> #}
+		    	<a href="#" class="link">
+		    		<div class="text -nowrap -c-light">alesadsadsadsadasdsdsaasasdsdsaassadsadsadxLi@gmail.com</div>
+		    	</a>
 		    </div>
 
 		    {# {%> "file-nav" %} #}
@@ -26,14 +27,12 @@
 
 	</div>
 
-	<div class="table__col -modified">
-		<div class="table-text">12 May 2015</div>
-	</div>
-
 	<div class="table__col -source">
 		<div class="media u-center-block">
 		    <div class="media__img">
-		    	<div class="icon-sml__gdrive"></div>
+		    	<div class="table__icon">
+			    	<div class="icon-sml__gdrive"></div>
+			    </div>
 		    </div>
 		</div>
 	</div>

@@ -16,24 +16,13 @@
 {# {% endif %} #}
 	<div class="priority-box -current-item -now is-hidden js-actions--current-item">
 
-{# <div class="media">
-    <div class="media__img">
-		{%> "disc-img__avatar" %}
-    </div>
-    <div class="media__body">
-		{%> "priority-box__text-wrap--file" %}
-	</div>
-</div>
- #}
-
-
 		{# {%> "disc-img__avatar" %} #}
 		{# {%> "disc-img__avatar--inset-icon" %} #}
 		{%> "disc-img__icon" %}
 		{# {%> "disc-img__icon--inset-icon" %} #}
 
-		{# {%> "priority-box__text-wrap--file" %} #}
-		{%> "priority-box__text-wrap--file--no-inset-icon" %}
+		{%> "priority-box__text-wrap--file" %}
+		{# {%> "priority-box__text-wrap--file--no-inset-icon" %} #}
 		{# {%> "priority-box__text-wrap--event" %} #}
 		{# {%> "priority-box__text-wrap--event--no-inset-icon" %} #}
 

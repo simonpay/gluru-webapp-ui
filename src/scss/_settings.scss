@@ -14,6 +14,9 @@
 // COLORS
 // -----------------------------------
 // non-brand color names generated using http://chir.ag/projects/name-that-color/
+$dusty-gray:                #999;                       // mid gray
+$silver:                    #ccc;                       // light gray
+
 $pink:                      #d41a68;                    // pink
 $pink-dark:                 #af044c;                    // dark pink
 $pink-darker:               #8a003a;                    // darker pink
@@ -24,20 +27,21 @@ $green:                     #16b451;                    // green
 $blue:                      #0098ce;                    // blue
 $light-green:               #8ce31c;                    // lime green
 // shades of gray - white to black range:   
-$white:                     #fff;                       // white - no surprises there!
-$alabaster:                 #fafafa;                    // almost white
+$white:                     #fff;                       // white
+$alabaster:                 #fafafa;                    // virtually white
 $gallery:                   #eee;                       // off white
 $alto:                      #ddd;                       // very light gray
-$silver:                    #ccc;                       // light gray
-$silver-light:              lighten($silver, 5%);       // slightly lighter than "silver"
-$silver-dark:               darken($silver, 5%);        // slightly darker than "silver"
-$dusty-gray:                #999;                       // mid gray
-$dusty-gray-light:          lighten($dusty-gray, 5%);   // slightly lighter than "dusty-gray"
-$dusty-gray-dark:           darken($dusty-gray, 5%);    // slightly darker than "dusty-gray"
+$silver-light:              lighten($silver, 5%);
+$silver:                    $silver;                    // light gray
+$silver-dark:               darken($silver, 5%);
+$dusty-gray-light:          lighten($dusty-gray, 5%);
+$dusty-gray:                $dusty-gray;                // mid-light gray
+$dusty-gray-dark:           darken($dusty-gray, 5%);
+$Gray:                 		#7f7f7f;                    // mid gray
 $dove-gray:                 #666;                       // dark gray
 $mine-shaft:                #333;                       // very dark gray
 $zeus:                      #2e261e;                    // virtually black
-$black:                     #000;                       // black - no surprises there!
+$black:                     #000;                       // black
 
 $team-color-sales:          $orange;
 $team-color-marketing:      $blue;

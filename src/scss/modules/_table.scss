@@ -13,6 +13,7 @@
 
     .table__row {
         display: table-row;
+
         &:not(.-header) {
             &:not(.is-selected):hover {
                 .table__col {
@@ -35,7 +36,12 @@
 
         .table__col {
             display: table-cell;
-            padding: 15px;
+
+            height: 50px;
+            // line-height: 50px;
+
+            // padding: 15px;
+            padding: 0 10px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -44,6 +50,7 @@
             color: $black;
             @include transition(all 0.3s);
             
+
 
             // specific modifiers for files explorer table
             &.-file-name {
@@ -57,7 +64,8 @@
 
             &.-source {
 
-                // when .-source inside split view hide it
+                // when .-source column is inside split view 
+                // hide it due to narrow width
                 .-split-view & {
                     display: none;
                 }
@@ -71,7 +79,9 @@
             
             // table inside future event for poeple 
             &.-people {
-                padding: 11px 6px;
+                height: 70px;
+                // padding: 11px 6px;
+                // line-height: inherit;
             }
 
             .-header > & {
@@ -90,17 +100,25 @@
                 background: $gallery;
                 // color: $white;
             }
+            
 
+            // todo: remove these? should be in media object scss
             .media {
                 z-index: 1;
                 position: relative;
                 overflow: visible;
             }
-
             .media__img {
                 position: relative;
                 margin-left: 10px;
                 margin-right: 20px;
+            }
+        }
+
+            .table__icon {
+                // @include scut-center-transform(y);
+                position: relative;
+
                 &:after {
                     content: "";
                     display: block;
@@ -114,5 +132,3 @@
                     border-radius: 100%;
                 }
             }
-        }
-

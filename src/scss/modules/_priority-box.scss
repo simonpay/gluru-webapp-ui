@@ -135,15 +135,15 @@
         max-height: 80px;
         overflow: hidden;
         white-space: normal;
-        color: $white;
-        font-size: rem(16);
-        font-weight: lighter;
-        line-height: 1.2;
+        // color: $white;
+        // font-size: rem(16);
+        // font-weight: lighter;
+        // line-height: 1.2;
         
-        .-current-item & {
-            font-size: rem(14);
-            font-weight: normal;
-        }
+        // .-current-item & {
+        //     font-size: rem(14);
+        //     font-weight: normal;
+        // }
 
         .-split-view & {
            right: 30px;

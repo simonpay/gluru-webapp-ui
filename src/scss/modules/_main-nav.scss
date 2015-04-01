@@ -49,13 +49,10 @@
             @include mq(large){
                 float: none;
                 margin-bottom: 15px;
-                &.-primary { // items above the divider
-                    // margin-bottom: 15px;
-                }
+
                 &.-divider {
                     margin-bottom: 30px;
                     padding-bottom: 15px;
-                    // border-bottom: 1px solid $pink-darker;
 
                     &:after {
                         content: "";
@@ -75,7 +72,6 @@
                 margin: 0 auto;
                 text-indent: -9999px;
 
-                // &.-avatar {     @include use-sprite("tmp-nav-avatar"); }
                 &.-add {
                     @include use-sprite("icon__nav-add--green");
                     @include transition( transform 0.3s );
@@ -84,9 +80,8 @@
                         @include transform( rotate(45deg) );
                     }
                 }
-                // &.-search {     @include use-sprite("icon-nav-search"); }
-                &.-files {      @include use-sprite("icon__files--white"); }
                 &.-moments {    @include use-sprite("icon__moments--white"); }
+                &.-files {      @include use-sprite("icon__files--white"); }
                 &.-people {     @include use-sprite("icon__people--white"); }
                 &.-projects {   @include use-sprite("icon__projects--white"); }
                 &.-auto-push {  @include use-sprite("icon__autopush--white"); }
@@ -118,10 +113,6 @@
                         opacity: 1;
                     }
                     &.is-selected:after {
-                        // top: -5px;
-                        // bottom: -5px;
-                        // left: -5px;
-                        // right: -5px;
                         opacity: 1;
                     }
                 }
