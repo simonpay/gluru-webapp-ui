@@ -1,2 +1,2 @@
-<div class="stage-wrap">
-	<main class="stage stage--{{ section }}">
+<div class="stage-wrap stage-wrap--{{ section }}">
+	<main class="stage">

@@ -78,10 +78,10 @@
             position: relative;
             overflow: hidden;
 
-            .stage--moments & {
+            .stage-wrap--moments & {
                 height: 100%;
             }
-            .stage--files & {
+            .stage-wrap--files & {
                 @include calc( height, "100% - #{$panel-header-height}" ); 
                 padding-left: $files-table-padding-left;
             }
