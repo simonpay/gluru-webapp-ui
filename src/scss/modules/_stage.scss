@@ -22,9 +22,6 @@
 			display: block;
 			height: 100%;
 
-			// &.-moments {
-			// 	padding: 20px;
-			// }
 			&.is-hidden {
 				display: none;
 			}
@@ -57,16 +54,7 @@
 			}
 
 				.stage__heading {
-				    font-size: rem(20);
-				    font-weight: lighter;
-				    color: $black;
 				    margin-bottom: 3px;
-				}
-
-				.stage__sub-heading {
-				    font-size: rem(16);
-				    font-weight: normal;
-				    color: $green;
 				}
 
 			

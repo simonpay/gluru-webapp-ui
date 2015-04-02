@@ -1,5 +1,3 @@
-{# {% for obj in mydata.moments.table_data.people %} #}
-
 <div class="table__row js-table-row">
 
 	<div class="table__col -people">
@@ -40,5 +38,3 @@
 	</div>
 
 </div>
-
-{# {% endfor %} #}

@@ -12,58 +12,64 @@
 // TYPOGRAPHY MIXINS
 // -----------------------------------
 // font-size    
-@mixin font-size($val)          {   font-size: rem($val);     }
-%font-size__10                  {   @include font-size(10);   }
-%font-size__11                  {   @include font-size(11);   }
-%font-size__12                  {   @include font-size(12);   }
-%font-size__13                  {   @include font-size(13);   }
-%font-size__14                  {   @include font-size(14);   }
-%font-size__15                  {   @include font-size(15);   }
-%font-size__16                  {   @include font-size(16);   }
-%font-size__18                  {   @include font-size(18);   }
-%font-size__22                  {   @include font-size(22);   }
+@mixin font-size($val)          {   font-size: rem($val);                                               }
+%font-size__10                  {   @include font-size(10);                                             }
+%font-size__11                  {   @include font-size(11);                                             }
+%font-size__12                  {   @include font-size(12);                                             }
+%font-size__13                  {   @include font-size(13);                                             }
+%font-size__14                  {   @include font-size(14);                                             }
+%font-size__15                  {   @include font-size(15);                                             }
+%font-size__16                  {   @include font-size(16);                                             }
+%font-size__18                  {   @include font-size(18);                                             }
+%font-size__20                  {   @include font-size(20);                                             }
+%font-size__22                  {   @include font-size(22);                                             }
 
 // font-weight  
-@mixin font-weight($val)        {   font-weight: $val;               }
-%font-weight__lighter           {   @include font-weight(lighter);   }
-%font-weight__bold              {   @include font-weight(bold);      }
+@mixin font-weight($val)        {   font-weight: $val;                                                  }
+%font-weight__lighter           {   @include font-weight(lighter);                                      }
+%font-weight__bold              {   @include font-weight(bold);                                         }
 
 // color
-@mixin color($val)              {   color: $val;                    }
-%color__gray--xxlight           {   @include color($silver);        }
-%color__gray--xlight            {   @include color($silver-dark);   }
-%color__gray--light             {   @include color($dusty-gray);    }
-%color__gray--mid               {   @include color($Gray);          }
-%color__gray--dark              {   @include color($dove-gray);     }
-%color__gray--xdark             {   @include color($mine-shaft);    }
-%color__gray--xxdark            {   @include color($zeus);          }
-%color__white                   {   @include color($white);         }
-%color__black                   {   @include color($black);         }
-%color__green                   {   @include color($green);         }
-%color__pink                    {   @include color($pink);          }
+@mixin color($val)              {   color: $val;                                                        }
+%color__gray--xxlight           {   @include color($silver);                                            }
+%color__gray--xlight            {   @include color($silver-dark);                                       }
+%color__gray--light             {   @include color($dusty-gray);                                        }
+%color__gray--mid               {   @include color($Gray);                                              }
+%color__gray--dark              {   @include color($dove-gray);                                         }
+%color__gray--xdark             {   @include color($mine-shaft);                                        }
+%color__gray--xxdark            {   @include color($zeus);                                              }
+%color__white                   {   @include color($white);                                             }
+%color__black                   {   @include color($black);                                             }
+%color__green                   {   @include color($green);                                             }
+%color__pink                    {   @include color($pink);                                              }
 
 // text-decoration
-@mixin text-decoration($val)    {   text-decoration: none;                 }
-%text-decoration__none          {   @include text-decoration(none);        }
-%text-decoration__underline     {   @include text-decoration(underline);   }
+@mixin text-decoration($val)    {   text-decoration: none;                                              }
+%text-decoration__none          {   @include text-decoration(none);                                     }
+%text-decoration__underline     {   @include text-decoration(underline);                                }
 
 // word-break
-@mixin word-break($val)         {   word-break: $val;                  }
-%word-break__break-word         {   @include word-break(break-word);   }
+@mixin word-break($val)         {   word-break: $val;                                                   }
+%word-break__break-word         {   @include word-break(break-word);                                    }
 
 // nowrap
-@mixin nowrap                   {   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;   }
-%nowrap                         {   @include nowrap;                                                  }
+@mixin nowrap                   {   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;     }
+%nowrap                         {   @include nowrap;                                                    }
 
 // wrap
-@mixin wrap                     {   white-space: normal; overflow: visible; text-overflow: inherit;   }
-%wrap                           {   @include wrap;                                                    }
+@mixin wrap                     {   white-space: normal; overflow: visible; text-overflow: inherit;     }
+%wrap                           {   @include wrap;                                                      }
 
 // text-transform
-@mixin text-transform($val)     {   text-transform: $val;                  }
-%text-transform__uppercase      {   @include text-transform(uppercase);    }
-%text-transform__lowercase      {   @include text-transform(lowercase);    }
-%text-transform__capitalize     {   @include text-transform(capitalize);   }
+@mixin text-transform($val)     {   text-transform: $val;                                               }
+%text-transform__uppercase      {   @include text-transform(uppercase);                                 }
+%text-transform__lowercase      {   @include text-transform(lowercase);                                 }
+%text-transform__capitalize     {   @include text-transform(capitalize);                                }
+
+// line-height
+@mixin line-height($val)        {   line-height: $val;                                                  }
+%line-height__normal            {   @include line-height(normal);                                       }
+
 
 
 
@@ -72,6 +78,22 @@
 // -----------------------------------
 // all text styles across teh app are 
 // defined here using @extend for efficiency
+
+
+// stage heading
+.stage__heading-text {
+    @extend %font-size__20;
+    @extend %font-weight__lighter;
+    @extend %color__black;
+    @extend %line-height__normal;
+}
+
+// stage sub-heading
+.stage__sub-heading-text {
+    @extend %font-size__16;
+    @extend %color__green;
+    @extend %line-height__normal;
+}
 
 // text withun basic text lists 
 // ul > li > text
