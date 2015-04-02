@@ -111,7 +111,6 @@
         }
     }
 
-    
     // config for the header panel in actions panel
     // for timeline section
     &.-current-item {
@@ -135,3 +134,11 @@
 }
 
 
+    .break { // br
+        
+        // stop br breaking when inside split-view
+        // this is for the 'now' text inside green panels
+        .-split-view .priority-box__text & {
+            display: none;
+        } 
+    }

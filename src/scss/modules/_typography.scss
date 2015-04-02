@@ -132,6 +132,11 @@
     .-now & {
         @extend %wrap;
     }
+    
+    // reduce font-size of event in split-view 
+    .-split-view & {
+        @extend %font-size__15;
+    }
 }
 
 // the default text within tables

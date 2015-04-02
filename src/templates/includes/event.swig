@@ -32,8 +32,8 @@
 		    </div>
 		    <div class="media__body">
 
-				<div class="priority-box__text">{{ event_obj.title|safe }}</div>
-				<div class="priority-box__text">{{ event_obj.description|safe }}</div>
+				<div class="priority-box__text" title="{{ event_obj.title|striptags }}">{{ event_obj.title|safe }}</div>
+				<div class="priority-box__text" title="{{ event_obj.description|striptags }}">{{ event_obj.description|safe }}</div>
 
 		    </div>
 		</div>
