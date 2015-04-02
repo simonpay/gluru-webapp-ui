@@ -75,9 +75,9 @@
 
             &.-source {
 
-                // when .-source column is inside split view 
-                // hide it due to narrow width
-                .-split-view & {
+                // when .-source column is inside '.stage-wrap--files .-split-view' 
+                // hide it due to narrow width - scope to files section only
+                .stage-wrap--files .-split-view & {
                     display: none;
                 }
 
