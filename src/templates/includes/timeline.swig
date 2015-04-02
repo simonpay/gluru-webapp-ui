@@ -1,7 +1,9 @@
 <div class="timeline">
 
 	<div class="event-group-heading">
-		<div class="-text">Today</div>
+		<div class="event-group-heading__text-wrap">
+			<div class="event-group-heading__text">Today</div>
+		</div>
 	</div>
 
 	{% for obj in mydata.moments.timeline[type].events %}
@@ -9,7 +11,9 @@
 		{% if obj.is_group %}
 
 			<div class="event-group-heading">
-				<div class="-text">{{ obj.group_name }}</div>
+				<div class="event-group-heading__text-wrap">
+					<div class="event-group-heading__text">{{ obj.group_name }}</div>
+				</div>
 			</div>
 
 			<div class="event-group">
@@ -33,7 +37,9 @@
 	{% endfor %}
 
 	<div class="event-group-heading">
-		<div class="-text">Start</div>
+		<div class="event-group-heading__text-wrap">
+			<div class="event-group-heading__text">Start</div>
+		</div>
 	</div>
 
 </div><!-- // .timeline -->

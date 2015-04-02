@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    # TEXT LIST
+\*------------------------------------*/
+
+// basic unordered lists - text only
+
+.text-list { // ul
+    margin-left: 4px;
+}
+
+    .text-list__item { // li
+        position: relative;
+        padding-left: 11px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background: $dove-gray;
+        }
+    }

@@ -100,9 +100,14 @@
 
                         .drawer & {
                             height: $options-list-link-height-drawer;
-                            padding-left: $options-link-left-padding-drawer;
+                            padding-left: 18px;
+                            padding-right: 10px;
                         }
                     }
                     
+                    // center icon for 'sources' and 'teams' in 'drawer' 
+                    .options-list__icon {
+                        margin: 0 auto;
+                    }
 
 

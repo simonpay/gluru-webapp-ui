@@ -44,15 +44,6 @@
             border-left: 1px solid $silver;
         }
         
-        // // when inside "-moments" class, remove border 
-        // // from ".split-view-wrap-container.-col-1" 
-        // // (first col in split view)
-        // .-moments & {
-        //     &.-col-1 {
-        //         border-left: none;
-        //     }
-        // }
-        
         // remove border from 1st col when inside ".-cols-1" single col view
         // .-cols-1 & {
             &.-col-1 {
@@ -87,10 +78,10 @@
             position: relative;
             overflow: hidden;
 
-            .main-container--moments & {
+            .stage--moments & {
                 height: 100%;
             }
-            .main-container--files & {
+            .stage--files & {
                 @include calc( height, "100% - #{$panel-header-height}" ); 
                 padding-left: $files-table-padding-left;
             }

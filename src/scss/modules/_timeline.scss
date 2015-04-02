@@ -11,9 +11,8 @@
         width: 100%;
         
         .-split-view & {
-            float: left;
 
-            // timeline - v line
+            // timeline - v line split-view
             &:before {
                 left: 0;
                 right: 0;

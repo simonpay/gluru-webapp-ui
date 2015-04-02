@@ -7,7 +7,7 @@
 	    	<div class="icon__gdrive"></div>
 	    </div>
 	    <div class="media__body">
-	    	<div class="text -nowrap header-panel__text--location">My Drive</div>
+	    	<div class="split-view__heading">My Drive</div>
 	    </div>
 	</div>
 </header>

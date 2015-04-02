@@ -10,12 +10,6 @@
 .disc-img {
     position: relative;
 
-    // &.-event,
-    // &.-current-item {
-    //     @include scut-center-transform(y);
-    //     left: 16px;
-    // }
-
     // when inside .-profile class
     .-profile & {
         top: 2px;
@@ -69,13 +63,15 @@
         &.-team {
             width: 30px;
             height: 30px;
-            margin-left: 2px;
+
             &.-sales {
                 background: $team-color-sales;
             }
+
             &.-marketing {
                 background: $team-color-marketing;
             }
+
             &.-development {
                 background: $team-color-development;
             }
@@ -85,6 +81,7 @@
         .disc-img__img {
             width: 100%;
         }
+
 
 
 

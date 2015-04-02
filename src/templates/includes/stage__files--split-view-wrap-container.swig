@@ -11,36 +11,47 @@
 
 				{%> "table-row__file--header" %}
 
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
+
 
 			{% if col_class === "-col-2" %}
 
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
 
 			{% endif %}
 
 			{% if col_class === "-col-3" %}
 
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
-				{%> "table-row-file" %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
+				{% for sub_obj in mydata.files.table_data.files %}
+					{% set obj = sub_obj %}
+					{% include "table-row-file.swig" %}
+				{% endfor %}
 
 			{% endif %}
 

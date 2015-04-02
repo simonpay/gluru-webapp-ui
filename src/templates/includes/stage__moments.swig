@@ -1,4 +1,5 @@
-{%> "stage-start" %}
+{% set section = "moments" %}
+{% include "stage-start.swig" %}
 
 {% set obj = mydata.moments.stage_data %}
 {% include "panel-header-stage.swig" %}
@@ -53,4 +54,4 @@
 
 	</section><!-- // .section-wrap.-moments -->
 
-{%> "stage-end" %}
+{% include "stage-end.swig" %}

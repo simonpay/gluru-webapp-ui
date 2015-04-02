@@ -1,6 +1,8 @@
 <div class="event-wrap js-event-wrap">
 
-	<div class="event-time">{{ event_obj.date_time }}</div>
+	<div class="event-time">
+		<div class="event-time__text">{{ event_obj.date_time }}</div>
+	</div>
 
 	<div class="event-icon-wrap">
 		<div class="event-icon {{ event_obj.type }}"></div>
@@ -30,8 +32,8 @@
 		    </div>
 		    <div class="media__body">
 
-				<div class="text {% if event_obj.priority !== 'now' %}-nowrap{% endif %} -xxlrg -c-white -fw-light">{{ event_obj.title|safe }}</div>
-				<div class="text -nowrap -xxlrg -c-white -fw-light">{{ event_obj.description|safe }}</div>
+				<div class="priority-box__text">{{ event_obj.title|safe }}</div>
+				<div class="priority-box__text">{{ event_obj.description|safe }}</div>
 
 		    </div>
 		</div>
@@ -64,14 +66,16 @@
 			<div class="table">
 
 			{% for sub_obj_2 in event_obj.items %}
+			
+				{% set obj = sub_obj_2 %}
 				
 				{% if event_obj.multiple_event_type === "people" %}
-
-					{%> "table-row-people" %}
+					
+					{% include "table-row-people.swig" %}
 
 				{% elseif event_obj.multiple_event_type === "files" %}
 
-					{%> "table-row-file" %}
+					{% include "table-row-file.swig" %}
 
 				{% endif %}
 

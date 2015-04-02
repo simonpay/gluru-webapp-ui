@@ -98,12 +98,14 @@
 
 // header for timeline containing recent and future tabs 
 .panel-header--timeline {
+    z-index: $panel-header--timeline-z-index;
     // make panel absolute so it streteches 100% width when 
     // multiple timelines cause horizonatl scrolling
     position: absolute;
     left: $stage-left-indent;
     right: 0;
     padding-left: 0;
+    box-shadow: 0px 2px 20px rgba( $black, 0.2 );
 }
 
 

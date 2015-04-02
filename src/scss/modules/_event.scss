@@ -19,9 +19,12 @@
     background-color: $dusty-gray;
     border-radius: 31px;
     border: 6px solid #fff;
-    @include transform( translateX(-50%) ); // pull back 50% of width to center with icon
-
-    &:nth-of-type(1) {
+    // pull back 50% of width to center with icon
+    @include transform( translateX(-50%) ); 
+    
+    // remove margin-top from first occurance 
+    // of .event-group-heading
+    &:first-child {
         margin-top: 0;
     }
 
@@ -30,79 +33,67 @@
         @include transform( none );
     }
 
-    .-text {
-        @include scut-center-transform;
-        font-size: rem(16);
-        color: $white;
-        line-height: 50px;
-        text-transform: uppercase;
-        font-weight: lighter;
-    }
 }
 
-    .event-wrap {
+    .event-group-heading__text-wrap {
+        @include scut-center-transform;
+    }
+
+.event-wrap {
+    position: relative;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    font-size: 0; // remove space between inline-block els
+
+    .-split-view & {
+        margin-bottom: 50px;
+    }
+}
+    
+    .event-time, 
+    .event-icon-wrap, 
+    .priority-box.-event, 
+    {
         position: relative;
-        margin-bottom: 30px;
-        white-space: nowrap;
-        font-size: 0; // remove space between inline-block els
+        display: inline-block;
+        vertical-align: middle;
 
         .-split-view & {
-            margin-bottom: 50px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
-        
-        .event-time, 
-        .event-icon-wrap, 
-        .priority-box.-event, 
-        {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
 
-            .-split-view & {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
+    .event-time {
+        width: $event-time-width;
+        height: 20px;
+        padding-right: 18px;
+        text-align: right;
+
+        .-split-view & {
+            position: absolute;
+            top: 17px;
+            @include calc( right, "50% + 18px" );
+            width: 200px;
         }
+    }
 
-        .event-time {
-            width: $event-time-width;
-            height: 20px;
-            padding-right: 18px;
-            font-size: rem(16);
-            font-weight: lighter;
-            color: $dove-gray;
-            // text-transform: uppercase;
-            text-align: right;
+    .event-icon-wrap {
+        width: $event-icon-wrap-width;
+        height: $event-icon-wrap-height;
+        background-color: $dusty-gray;
+        border-radius: 100%;
+        margin-right: 35px;
+        border: 6px solid $white;
+    }
 
-            .-split-view & {
-                position: absolute;
-                top: 17px;
-                @include calc( right, "50% + 18px" );
-                width: 200px;
-            }
-        }
-
-        .event-icon-wrap {
-            width: $event-icon-wrap-width;
-            height: $event-icon-wrap-height;
-            background-color: $dusty-gray;
-            border-radius: 100%;
-            margin-right: 35px;
-            border: 6px solid $white;
-
-            // .-split-view & {
-            //     margin-bottom: 30px;
-            // }
-        }
-
-        .event-icon {
-            @include scut-center-transform(y);
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-        }
+    .event-icon {
+        @include scut-center-transform(y);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
 
 .event-table-wrap {
     position: relative;

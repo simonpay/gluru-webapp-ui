@@ -1,3 +1,5 @@
+{# {% for obj in mydata.moments.table_data.people %} #}
+
 <div class="table__row js-table-row">
 
 	<div class="table__col -people">
@@ -7,17 +9,17 @@
 
 				<div class="disc-img -people">
 					<div class="disc-img__img-wrap">
-						<img class="disc-img__img" src="img/tmp_avatar_1.png" alt="">
+						<img class="disc-img__img" src="{{ obj.person_avatar_src }}" alt="">
 					</div>
 				</div>
 
 		    </div>
 		    <div class="media__body">
 		    	<a href="#" class="link">
-		    		<div class="text -nowrap -xlrg -fw-bold -c-dark">Alex ihil ib liu njjk asdsdsaas oinkLi oinkLi asdsdsaas</div>
+		    		<div class="table__text--heading" title="{{ obj.person_name }}">{{ obj.person_name }}</div>
 		    	</a>
 		    	<a href="#" class="link">
-		    		<div class="text -nowrap -c-light">alesadsadsadsadasdsdsaasasdsdsaassadsadsadxLi@gmail.com</div>
+		    		<div class="table__text--sub-heading" title="{{ obj.person_email }}">{{ obj.person_email }}</div>
 		    	</a>
 		    </div>
 
@@ -38,3 +40,5 @@
 	</div>
 
 </div>
+
+{# {% endfor %} #}

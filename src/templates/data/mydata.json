@@ -57,9 +57,9 @@
                     "img_src"           : "img/tmp_avatar_2.png"
                 },
                 {
-                    "text"              : "Stephanie Double-barrelled-longname",
-                    "email"             : "stephanieDouble-barrelled@lego.com",
-                    "img_src"           : "img/tmp_avatar_2.png"
+                    "text"              : "Alphonso Double-barrelled Long-name Engelking",
+                    "email"             : "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                    "img_src"           : "img/tmp_avatar_3.png"
                 }
             ]
         },
@@ -193,6 +193,18 @@
             "stage_heading":                    "Moments",
             "stage_sub_heading":                "20 March, 2015"
         },
+        "table_data": {
+            "people": [
+                {
+                    "person_name":                  "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
+                    "person_email":                 "icon-sml__file--text"
+                },
+                {
+                    "person_name":                  "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
+                    "person_email":                 "icon-sml__file--text"
+                }
+            ]
+        },
         "timeline": {
             "recent": {
                 "events": [
@@ -308,13 +320,19 @@
                         "person_id":            "icon__people",
                         "items": [
                             {
-                                "item":                 ""
+                                "person_name":                  "Alex Li",
+                                "person_email":                 "alexLi@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_1.png"
                             },
                             {
-                                "item":                 ""
+                                "person_name":                  "Jason Smith",
+                                "person_email":                 "jasonsmith@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_2.png"
                             },
                             {
-                                "item":                 ""
+                                "person_name":                  "Alphonso Double-barrelled Long-name Engelking",
+                                "person_email":                 "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_3.png"
                             }
                         ]
                     },
@@ -332,16 +350,34 @@
                         "person_id":            "icon__files",
                         "items": [
                             {
-                                "item":                 ""
+                                "file_name":                "todo-list.text",
+                                "file_type_class":          "icon-sml__file--evernote",
+                                "file_modified":            "12 May 2015",
+                                "file_source_class":        "icon-sml__evernote"
                             },
                             {
-                                "item":                 ""
+                                "file_name":                "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
+                                "file_type_class":          "icon-sml__file--text",
+                                "file_modified":            "12 May 2015",
+                                "file_source_class":        "icon-sml__gdrive"
                             },
                             {
-                                "item":                 ""
+                                "file_name":                "todo-list.text",
+                                "file_type_class":          "icon-sml__file--evernote",
+                                "file_modified":            "12 May 2015",
+                                "file_source_class":        "icon-sml__evernote"
                             },
                             {
-                                "item":                 ""
+                                "file_name":                "summary.pdf",
+                                "file_type_class":          "icon-sml__file--pdf",
+                                "file_modified":            "12 May 2015",
+                                "file_source_class":        "icon-sml__box"
+                            },
+                            {
+                                "file_name":                "cost-forecast.xls",
+                                "file_type_class":          "icon-sml__file--spreadsheet",
+                                "file_modified":            "12 May 2015",
+                                "file_source_class":        "icon-sml__dropbox"
                             }
                         ]
                     }
@@ -354,6 +390,34 @@
             "stage_id":                         "files",
             "stage_heading":                    "Files",
             "stage_sub_heading":                "21,145 files"
+        },
+        "table_data": {
+            "files": [
+                {
+                    "file_name":                "todo-list.text",
+                    "file_type_class":          "icon-sml__file--evernote",
+                    "file_modified":            "12 May 2015",
+                    "file_source_class":        "icon-sml__evernote"
+                },
+                {
+                    "file_name":                "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
+                    "file_type_class":          "icon-sml__file--text",
+                    "file_modified":            "12 May 2015",
+                    "file_source_class":        "icon-sml__gdrive"
+                },
+                {
+                    "file_name":                "summary.pdf",
+                    "file_type_class":          "icon-sml__file--pdf",
+                    "file_modified":            "12 May 2015",
+                    "file_source_class":        "icon-sml__box"
+                },
+                {
+                    "file_name":                "cost-forecast.xls",
+                    "file_type_class":          "icon-sml__file--spreadsheet",
+                    "file_modified":            "12 May 2015",
+                    "file_source_class":        "icon-sml__dropbox"
+                }
+            ]
         }
     }
 }

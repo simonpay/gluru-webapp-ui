@@ -1,4 +1,5 @@
-{%> "stage-start" %}
+{% set section = "files" %}
+{% include "stage-start.swig" %}
 
 {% set obj = mydata.files.stage_data %}
 {% include "panel-header-stage.swig" %}
@@ -26,5 +27,5 @@
 
 	</section><!-- // .section-wrap.-files -->
 
-{%> "stage-end" %}
+{% include "stage-end.swig" %}
 

@@ -61,6 +61,7 @@ $drawer-wrap-z-index:                       50;
 $actions-wrap-z-index:                      40;
 $search-wrap-z-index:                       30;
 $panel-header-stage-z-index:                20;
+$panel-header--timeline-z-index:			10;
 // small screens
 $actions-wrap-z-index_mq-sml:               110;
 
@@ -129,7 +130,8 @@ $standard-font-size--lists:			        rem(13);
 // options list
 $options-list-link-height-drawer:           38px;
 $options-list-link-height-actions:          30px;
-$options-link-left-padding-drawer:          15px;
+// $options-link-left-padding-drawer:          18px;
+// $options-link-right-padding-drawer:         10px;
 $options-link-left-padding-actions:         5px;
 $options-link-text-width-drawer:            $drawer-width - 86px;
 $options-link-text-width-actions:           $actions-width - 86px;
