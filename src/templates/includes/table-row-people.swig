@@ -29,11 +29,11 @@
 
 	</div>
 
-	<div class="table__col -source">
+	<div class="table__col -event-type">
 		<div class="media -v-center u-center-block">
 		    <div class="media__img">
 		    	<div class="table__icon">
-			    	<div class="icon-sml__gdrive"></div>
+			    	<div class="icon__phone"></div>
 			    </div>
 		    </div>
 		</div>

@@ -59,14 +59,20 @@
 .icon__edit--white {            @include use-sprite("icon__edit--white"); }
 .icon__now--white {             @include use-sprite("icon__now--white"); }
 .icon__now--green {             @include use-sprite("icon__now--green"); }
+.icon__phone {           		@include use-sprite("icon__phone"); }
 .icon__phone--white {           @include use-sprite("icon__phone--white"); }
+.icon__phone-in {           	@include use-sprite("icon__phone-in"); }
+.icon__phone-in--white {        @include use-sprite("icon__phone-in--white"); }
 .icon__people--white {          @include use-sprite("icon__people--white"); }
 .icon__files--white {           @include use-sprite("icon__files--white"); }
 .icon__people {                 @include use-sprite("icon__people"); }
 .icon__files {                  @include use-sprite("icon__files"); }
 
+// sml variants
+.icon-sml__phone {           	@include use-sprite("icon-sml__phone"); }
+.icon-sml__phone-in {           @include use-sprite("icon-sml__phone-in"); }
 
-//  icons
+//  
 // ------------------------------------
 .icon__edit {                   @include use-sprite("icon__edit"); }
 .icon__folder {                 @include use-sprite("icon__folder"); }

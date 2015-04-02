@@ -222,7 +222,7 @@
                     {
                         "is_group":             0,
                         "avatar_type":          "image",
-                        "type":                 "icon__phone--white",
+                        "type":                 "icon__phone-in--white",
                         "priority":             "critical",
                         "title":                "<strong>Mike Smith</strong>  has just found files and people useful to you right now!",
                         "description":          "Incoming call has just found files and people useful to you right now!",
