@@ -41,6 +41,7 @@
         
         // tooltips
         $tooltip                = $( ".js-tooltip" ),
+        $tooltip_text           = $( ".js-tooltip-text" ),
         $tooltip_triggers       = $( ".js-tt" ),
         
         // pop menu
@@ -472,26 +473,32 @@
             show: function () {
 
                 var $this                       = $(this),
-                    _button_width               = $this.width(),
+                    _button_width               = $this.outerWidth(),
+                    _button_height              = $this.outerHeight(),
                     _offset                     = $this.offset(),
                     _tooltip_text               = $this.data( "tt" ),
                     _tooltip_config             = $this.data( "tt-config" ),
-                    _tooltip_direction          = $this.data( "tt-dir" ),
+                    _tooltip_position           = $this.data( "tt-pos" ),
                     _is_main_nav_item           = $this.hasClass( "js-main-nav__link" ),
-                    _tooltip_direction_class    = ""
+                    _tooltip_position_class     = "",
+                    _left,
+                    _top,
+                    _arrow_width                = 6 + 5
                     ;
 
-                    if ( _tooltip_direction !== undefined ) {
-                        _tooltip_direction_class = "-" + _tooltip_direction;
+                    // console.log(_offset);
+
+                    if ( _tooltip_position !== undefined ) {
+                        _tooltip_position_class = "-" + _tooltip_position;
                     }
 
 
                 if ( _tooltip_config === undefined) {
 
-                    if ( _is_main_nav_item ) {
-                        _offset.top += 0;
-                        _offset.left += _button_width + 10;
-                    }
+                    // if ( _is_main_nav_item ) {
+                    //     _offset.top += 0;
+                    //     _offset.left += _button_width + 10;
+                    // }
 
                 } else {
 
@@ -499,14 +506,48 @@
                     _offset.left += _tooltip_config.offset.left;
                 }
 
-                $tooltip
-                    .addClass( _tooltip_direction_class )
+                // set tooltip text
+                $tooltip_text
                     .html( _tooltip_text )
+                    ;
+
+                // position tooltip
+                $tooltip
+                    .addClass( _tooltip_position_class )
                     .offset({ left: _offset.left, top: _offset.top })
                     ;
 
-                if ( _tooltip_direction === "right" ) {
-                    $tooltip.offset({ left: _offset.left - $tooltip.width() - _button_width });
+                var _tooltip_width = $tooltip.outerWidth(),
+                    _tooltip_height = $tooltip.outerHeight();
+
+                // console.log(_offset);
+                // console.log("button offset: " + _offset);
+                
+                if ( _tooltip_position === "left" ) {
+
+                    $tooltip.offset({ left: _offset.left - _tooltip_width - _arrow_width });
+
+
+                } else if ( _tooltip_position === "right" ) {
+
+                    $tooltip.offset({ left: _offset.left + _button_width + _arrow_width });
+
+
+                } else if ( _tooltip_position === "above" ) {
+
+                    _left = _offset.left - ( _tooltip_width / 2 ) + ( _button_width / 2 );
+                    _top = _offset.top - _button_height - _arrow_width;
+
+                    $tooltip.offset({ left: _left, top: _top });
+
+
+                } else if ( _tooltip_position === "below" ) {
+
+                    _left = _offset.left - ( _tooltip_width / 2 ) + ( _button_width / 2 );
+                    _top = _offset.top + _button_height + _arrow_width;
+
+                    $tooltip.offset({ left: _left, top: _top });
+
                 }
 
                 $tooltip.removeClass( "is-hidden" );
@@ -515,7 +556,7 @@
             hide: function () {
                 // console.log( "tooltips.hide()" );
                 $tooltip
-                    .removeClass( "-right" )
+                    .removeClass( "-left -right -above -below" )
                     .addClass( "is-hidden" )
                     .removeAttr("style")
                     ;

@@ -6,56 +6,21 @@
 	z-index: $tooltip-z-index;
 	display: block;
 	position: absolute;
-	top: 15px;
-	left: 42px;
-	padding: 8px 10px 7px;
-	// width: 100px;
-	// height: 25px;
-	opacity: 1;
-	visibility: visible;
-	background: $tooltips-background-color;
-	border-radius: 3px;
-	color: rgba($white, 0.8);
-    white-space: nowrap;
-	text-transform: uppercase;
-	font-size: rem(12);
-	@include transition(opacity $tooltip-animation-duration $tooltip-show-delay);
+    top: 15px;
+    left: 42px;
+    padding: 8px 8px 6px;
+    // width: 100px;
+    // height: 25px;
+    opacity: 1;
+    visibility: visible;
+    background: $tooltips-background-color;
+    // background: $black;
+    border-radius: 4px;
+    @include transition(opacity $tooltip-animation-duration $tooltip-show-delay);
 
-    &:after {
-        content: "";
-        @include scut-triangle(left, $tooltips-arrow-width $tooltips-arrow-height, $tooltips-background-color);
-        position: absolute;
-        left: 0;
-        top: 50%;
-        @include transform( translateY(-50%) translateX(-100%) );
-    }
-
-    &.-right:after {
-    	@include scut-triangle(right, $tooltips-arrow-width $tooltips-arrow-height, $tooltips-background-color);
-        left: auto;
-        top: auto;
-        right: -$tooltips-arrow-width;
-    }
-
-    &.-up:after {
-    	@include scut-triangle(up, $tooltips-arrow-height $tooltips-arrow-width, $tooltips-background-color);
-		top: -$tooltips-arrow-width;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-    }
-
-    &.-down:after {
-    	@include scut-triangle(down, $tooltips-arrow-height $tooltips-arrow-width, $tooltips-background-color);
-    	top: auto;
-		bottom: -$tooltips-arrow-width;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-    }
 
     &.is-hidden {
-    	opacity: 0;
+        opacity: 0;
     	visibility: hidden;
         top: -99999px;
         left: -99999px;
@@ -70,3 +35,50 @@
 
 }
 
+    .tooltip__triangle {
+        position: absolute;
+
+        &:after {
+            content: "";
+            @include scut-triangle(right, $tooltips-arrow-width $tooltips-arrow-height, $tooltips-background-color);
+            display: block;
+        }
+
+        .-left &, 
+        .-right & {
+            @include scut-center-transform(y);
+        }
+
+        .-left & {
+            right: -$tooltips-arrow-width;
+        }
+
+        .-right & {
+            left: -$tooltips-arrow-width;
+
+            &:after {
+                @include transform( rotate(180deg) );
+            }
+        }
+
+        .-above &,
+        .-below & {
+            @include scut-center-transform(x);
+        }
+
+        .-above & {
+            bottom: -($tooltips-arrow-height - $tooltips-arrow-width / 2);
+
+            &:after {
+                @include transform( rotate(90deg) );
+            }
+        }
+
+        .-below & {
+            top: -($tooltips-arrow-height - $tooltips-arrow-width / 2);
+
+            &:after {
+                @include transform( rotate(270deg) );
+            }
+        }
+    }

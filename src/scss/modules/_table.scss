@@ -98,12 +98,6 @@
                 height: 70px;
             }
 
-            .-header > & {
-                border-bottom-width: 2px;
-                font-weight: bold;
-                color: $dusty-gray;
-            }
-            
             .section-wrap.-files .is-selected > & {
                 background: $pink;
             }

@@ -2,7 +2,9 @@
 	<ul class="stage-nav__list">
 		<li class="stage-nav__item -now">
 			<div class="stage-nav__icon-wrap js-now">
-				<div class="text">Now</div>
+				<div class="stage-nav__now-text-wrap">
+					<div class="stage-nav__now-text">Now</div>
+				</div>
 				<div class="stage-nav__icon icon__now--white"></div>
 			</div>
 		</li>

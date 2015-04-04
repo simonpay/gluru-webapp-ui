@@ -29,56 +29,46 @@
         .pop-menu__list { // ul
         }
 
-            .pop-menu__heading {
-                // padding: 13px;
-                font-size: rem(15);
-                color: $dove-gray;
-                margin-bottom: 5px;
-                // font-weight: lighter;
-            }
-
-                .pop-menu__item { // li
-                    position: relative;
-                    padding: 10px 20px 10px 46px;
-                    background: $white;
-                    font-size: rem(14);
-                    color: $dove-gray;
-                    cursor: pointer;
-                    @include transition( background 0.3s );
-                    
-                    &:hover,
-                    &.is-selected {
-                        background: $gallery;
-                    }
-
-                    // tick
-                    &.is-selected:before {
-                        content: "";
-                        @include scut-center-transform(y);
-                        left: 16px;
-                        @include use-sprite("icon__tick"); 
-                    }
-
-                    &.-divider {
-                        &:after {
-                            content: "";
-                            display: block;
-                            position: absolute;
-                            top: -5px;
-                            left: 0;
-                            width: 100%;
-                            height: 1px;
-                            background: $alto;
-
-                        }
-                        margin-top: 9px;
-                    }
-
+            .pop-menu__item { // li
+                position: relative;
+                padding: 10px 20px 10px 46px;
+                background: $white;
+                cursor: pointer;
+                @include transition( background 0.3s );
+                
+                &:hover {
+                    background: $gallery-light;
+                }
+                
+                &.is-selected {
+                    background: $gallery;
                 }
 
-                    .pop-menu__label { // label
-                        padding-left: 10px;
+                // tick
+                &.is-selected:before {
+                    content: "";
+                    @include scut-center-transform(y);
+                    left: 16px;
+                    @include use-sprite("icon__tick"); 
+                }
+
+                &.-divider {
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: -5px;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background: $alto;
+
                     }
+                    margin-top: 9px;
+                }
+
+            }
+
 
 
 

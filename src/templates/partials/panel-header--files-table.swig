@@ -2,7 +2,7 @@
 	<div class="media -v-center">
 	    <div class="media__img pop-menu-trigger js-pmt js-tt" 
 	    	data-tt="Change Source"
-	    	data-tt-dir="right"
+	    	data-tt-pos="above"
 	    	data-pop-menu="sources"
 	    	>
 	    	<div class="icon__gdrive"></div>

@@ -47,7 +47,7 @@
                     &.is-selected {
                         width: 76px;
 
-                        .text { // now text
+                        .stage-nav__now-text-wrap { // now text
                             opacity: 1;
                             @include transition( opacity 0.3s 0.1s );
                         }
@@ -58,13 +58,10 @@
                         right: -1px;
                     }
 
-                    .text {
+                    .stage-nav__now-text-wrap {
                         @include scut-center-transform(y);
                         left: 13px;
-                        font-size: rem(16);
-                        color: $white;
                         opacity: 0;
-                        line-height: $stage-nav__icon-wrap-height;
                         @include transition( opacity 0.1s);
                     }
                 }

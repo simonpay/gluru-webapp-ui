@@ -16,6 +16,7 @@
 // non-brand color names generated using http://chir.ag/projects/name-that-color/
 $dusty-gray:                #999;                       // mid gray
 $silver:                    #ccc;                       // light gray
+$gallery:                   #eee;                       // off white
 
 $pink:                      #d41a68;                    // pink
 $pink-dark:                 #af044c;                    // dark pink
@@ -29,7 +30,7 @@ $light-green:               #8ce31c;                    // lime green
 // shades of gray - white to black range:   
 $white:                     #fff;                       // white
 $alabaster:                 #fafafa;                    // virtually white
-$gallery:                   #eee;                       // off white
+$gallery-light:             lighten($gallery, 4%);
 $alto:                      #ddd;                       // very light gray
 $silver-light:              lighten($silver, 5%);
 $silver:                    $silver;                    // light gray
@@ -48,8 +49,8 @@ $team-color-marketing:      $blue;
 $team-color-development:    $light-green;
 
 $tooltips-background-color: rgba($black, 0.8);
-$tooltips-arrow-width:      7px;
-$tooltips-arrow-height:     13px;
+$tooltips-arrow-width:      6px;
+$tooltips-arrow-height:     12px;
 
 
 // -----------------------------------

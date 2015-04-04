@@ -150,6 +150,14 @@
     }
 }
 
+// th text
+.table__text--header {
+    @extend %nowrap;
+    @extend %font-weight__bold;
+    @extend %color__gray--light;
+}
+
+// font style for headings within tables
 .table__text--heading {
     @extend %nowrap;
     @extend %font-size__16;
@@ -157,6 +165,7 @@
     @extend %color__gray--xdark;
 }
 
+// font style for sub-headings within tables
 .table__text--sub-heading {
     @extend %nowrap;
     @extend %font-size__13;
@@ -192,6 +201,7 @@
     }
 }
 
+// heading in options-list
 .options-list__text--secondary {
     @extend %nowrap;
     @extend %font-size__13;
@@ -199,6 +209,7 @@
     @extend %color__gray--light;
 }
 
+// sub-heading in options-list
 .options-list__text--heading {
     @extend %font-size__13;
     @extend %color__black;
@@ -221,4 +232,23 @@
     @extend %color__green;
 }
 
+// text in 'now' icon in top right stage 
+.stage-nav__now-text {
+    @extend %font-size__16;
+    @extend %color__white;
+}
 
+// text within the tooltips
+.tooltip__text {
+    @extend %font-size__11;
+    @extend %nowrap;
+    @extend %color__white;
+    @extend %text-transform__uppercase;
+}
+
+// the text inside pop menu items like source
+// selection of sorting
+.pop-menu__text {
+    @extend %font-size__14;
+    @extend %color__gray--dark;
+}
