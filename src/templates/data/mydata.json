@@ -187,6 +187,13 @@
             ]
         }
     },
+    "setup": {
+        "stage_data": {
+            "stage_id":                         "setup",
+            "stage_heading":                    "Setup",
+            "stage_sub_heading":                ""
+        }
+    },
     "moments": {
         "stage_data": {
             "stage_id":                         "moments",

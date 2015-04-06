@@ -70,6 +70,10 @@
 @mixin line-height($val)        {   line-height: $val;                                                  }
 %line-height__normal            {   @include line-height(normal);                                       }
 
+// text-align
+@mixin text-align($val)         {   text-align: $val;                                                  }
+%text-align__center             {   @include text-align(center);                                       }
+
 
 
 
@@ -252,3 +256,54 @@
     @extend %font-size__14;
     @extend %color__gray--dark;
 }
+
+// text within the nav that sits in the header panel on the stage
+// containing buttons for timeline recent / future and
+// setup progress 
+.header-nav__text {
+    @extend %font-size__16;
+    @extend %color__gray--dark;
+    @extend %text-transform__uppercase;
+    @include transition( color 0.3s );
+
+    .is-selected & {
+        @extend %color__pink;
+    }
+
+    // make text smaller for setup progress
+    .-setup & {
+        @extend %font-size__14;
+        @extend %color__gray--xxlight;
+    }
+
+    .is-complete & {
+        @extend %color__green;
+    }
+
+    .-setup .is-selected & {
+        @extend %font-weight__bold;
+    }
+
+}
+
+// the text within circles on setup process
+.header-nav__icon-text {
+    @extend %font-size__18;
+    @extend %font-weight__bold;
+    @extend %text-align__center;
+    @extend %color__gray--xxlight;
+
+    .is-complete & {
+        @extend %color__green;
+    }
+
+    .is-selected & {
+        @extend %color__pink;
+    }
+}
+
+
+
+
+
+

@@ -9,8 +9,6 @@
 
 {% block content %}
 
-<div class="main-container js-main-container">
-
 	{# main-nav #}
 	{%> "main-nav" %}
 
@@ -18,14 +16,11 @@
 	{% include "src/templates/includes/drawer-files.swig" %}
 
 	{# actions #}
-	{# {% set moments_header = true %} #}
 	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}
 	{% set type = "recent" %}
 	{% include "src/templates/includes/stage__moments.swig" %}
-
-</div>
 
 {% endblock %}
 

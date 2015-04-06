@@ -18,7 +18,9 @@
 
 <body>
 
+<div class="main-container js-main-container">
 {% block content %}{% endblock %}
+</div>
 {%> "tool-tip" %}
 {%> "pop-menu" %}
 

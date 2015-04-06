@@ -9,8 +9,6 @@
 
 {% block content %}
 
-<div class="main-container js-main-container">
-
 	{# main-nav #}
 	{%> "main-nav" %}
 
@@ -19,12 +17,9 @@
 
 	{# actions #}
 	{% include "src/templates/includes/actions-footprint.swig" %}
-	{# {% include "src/templates/includes/rendered__actions-footprint.swig" %} #}
 
 	{# stage #}
 	{% include "src/templates/includes/stage__files.swig" %}
-
-</div>
 
 {% endblock %}
 

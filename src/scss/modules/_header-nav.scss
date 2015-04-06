@@ -6,8 +6,6 @@
 // setup process > create account, connect sources
 
 .header-nav { // nav
-    // @include scut-center-transform(y);
-    // right: 20px;
     display: inline-block;
     height: 100%;
 }
@@ -39,12 +37,8 @@
                 }
 
                 &.is-selected {
-                    // background: $gallery;
                     box-shadow: inset 0px -2px 0px $pink;
 
-                    .header-nav__text {
-                        color: $pink;
-                    }
                     .header-nav__icon {
                         &.-recent {
                             @include use-sprite("icon-sml__clock--pink");
@@ -57,37 +51,38 @@
                 }
             }
 
-                .header-nav__icon,
-                .header-nav__text {
-                    position: relative;
-                    display: inline-block !important;
-                    vertical-align: middle;
-                }
-
                 .header-nav__icon {
                     @include transform( translateY(-2px) );
-                    margin-right: 6px;
+                    margin-right: -2px;
 
                     &.-recent {
                         @include use-sprite("icon-sml__clock");
+                        margin-right: -4px;
                     }
 
                     &.-future {
                         @include use-sprite("icon-sml__calendar");
-                        margin-right: 8px;
+                    }
+
+                    &.-num {
+                        display: block;
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        border: 3px solid $alto;
+                        line-height: 26px;
+
+                        .is-complete & {
+                            border-color: $green;
+                        }
+
+                        .is-selected & {
+                            border-color: $pink;
+                        }
                     }
                 }
 
-                .header-nav__text {
-                    font-size: rem(16);
-                    color: $dove-gray;
-                    text-transform: uppercase;
-                    // font-weight: lighter;
-                    line-height: $panel-header-height + 2;
-                    @include transition( all 0.3s );
-                }
 
-
-                // box-shadow: inset 0px -1px 0px black;
 
 

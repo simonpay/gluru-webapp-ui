@@ -9,11 +9,21 @@
 
 {% block content %}
 
+	{# main-nav #}
 	{%> "main-nav" %}
+
+	{# drawer #}
+	{% include "src/templates/includes/drawer-files.swig" %}
+
+	{# actions #}
+	{% include "src/templates/includes/actions-footprint.swig" %}
+
+	{# stage #}
+	{% include "src/templates/includes/stage__setup.swig" %}
 
 {% endblock %}
 
 {% block javascripts %}
 	{% parent %}
-	<script src="js/pages/home.js"></script>
+	<script src="js/pages/moments.js"></script>
 {% endblock %}
