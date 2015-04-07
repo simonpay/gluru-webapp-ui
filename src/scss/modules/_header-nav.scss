@@ -28,16 +28,25 @@
                 text-decoration: none;
                 @include transition( all 0.3s );
 
-                &:hover {
-                    box-shadow: inset 0px -2px 0px $dove-gray;
+                &:not(.is-complete):not(.is-selected):hover {
+                    box-shadow: inset 0px -4px 0px $dove-gray;
 
                     .header-nav__text {
                         color: $black;
                     }
+
+                    .header-nav__icon.-num {
+                        border-color: $dove-gray;
+                        color: $dove-gray;
+                    }
                 }
 
+                // &.is-complete {
+                //     box-shadow: inset 0px -4px 0px $green;
+                // }
+
                 &.is-selected {
-                    box-shadow: inset 0px -2px 0px $pink;
+                    box-shadow: inset 0px -4px 0px $pink;
 
                     .header-nav__icon {
                         &.-recent {
@@ -53,6 +62,7 @@
 
                 .header-nav__icon {
                     @include transform( translateY(-2px) );
+                    @include transition( all .3s );
                     margin-right: -2px;
 
                     &.-recent {

@@ -23,10 +23,16 @@
 </div>
 {%> "tool-tip" %}
 {%> "pop-menu" %}
+{% include "../includes/modal.swig" %}
 
 
 {# TODO: remove this when finished dev! #}
 <div class="tmp-buttons">
+    <div class="button-group js-buttons-generic">
+        <div class="label">Modal</div>
+        <button class="button js-show-modal">Show</button>
+    </div>
+
     <div class="button-group js-buttons-generic">
         <div class="label">Actions</div>
         <button class="button js-toggle-actions">toggle</button>

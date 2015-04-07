@@ -5,9 +5,26 @@
 // this class is applied to any div taht contains 
 // scrollable content
 
-.scrollable-content {
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+.scrollable-content__wrap {
+    &.-stage {
+        position: relative;
+        top: $panel-header-height;
+        @include calc( height, "100% - 58px" );
+    }
 }
+
+    .scrollable-content {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+        .scrollable-content__inner-wrap {
+            &.-stage {
+                position: relative;
+                height: 100%;
+                padding: 50px 30px;
+                overflow: auto;
+            }
+        }
 

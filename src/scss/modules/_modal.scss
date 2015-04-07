@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    # MODAL
+\*------------------------------------*/
+
+.modal {
+	z-index: $modal-z-index;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+	@include transition( visibility 0 );
+
+	&.is-hidden {
+    	visibility: hidden;
+		@include transition( visibility 0 0.3s );
+
+		.modal__screen,
+		.modal__box,
+		{
+			opacity: 0;
+		}
+	}
+
+
+}
+
+	.modal__screen {
+	    position: absolute;
+	    left: 0px;
+	    top: 0px;
+	    right: 0px;
+	    bottom: 0px;
+	    overflow: hidden;
+	    background: $white;
+	    opacity: 0.75;
+	    @include transition( opacity 0.3s );
+	}
+
+	.modal__box {
+		@extend %scut-center-transform;
+		width: 500px;
+		height: 300px;
+	    background: $white;
+	    border: 1px solid $alto;
+	    box-shadow: 0px 0px 15px rgba($black, 0.3);
+	    @include transition( opacity 0.3s );
+	}

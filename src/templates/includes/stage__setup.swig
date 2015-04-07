@@ -36,7 +36,7 @@
                                     <div class="header-nav__icon header-nav__icon-text -num">2</div>
                                 </div>
                                 <div class="media__body">
-                                    <div class="header-nav__text">Account Type</div>
+                                    <div class="header-nav__text">Account Setup</div>
                                 </div>
                             </div>
 
@@ -52,7 +52,7 @@
                                     <div class="header-nav__icon header-nav__icon-text -num">3</div>
                                 </div>
                                 <div class="media__body">
-                                    <div class="header-nav__text">Team Setup</div>
+                                    <div class="header-nav__text">Connect Sources</div>
                                 </div>
                             </div>
 
@@ -93,6 +93,23 @@
 				</ul>
 			</nav>
 		</header>
+
+		<div class="scrollable-content__wrap -stage">
+			<div class="scrollable-content">
+				<div class="scrollable-content__inner-wrap -stage">
+					<div class="process__text-pos">
+						<div class="process__heading-text">Almost there!</div>
+						<div class="process__subheading-text">Create a team and invite some team members.</div>
+					</div>
+					<div class="info-panel">
+						<header class="panel-header -info-panel">
+							<div class="info-panel-header__text-pos info-panel-header__text"><strong>Step 3</strong> - Team Setup</div>
+						</header>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 	</section><!-- // .section-wrap.-setup -->
 

@@ -17,16 +17,6 @@
 	    }
 	}
 		
-		// TODO: move section-wrap rules into their own module?
-		.section-wrap {
-			display: block;
-			height: 100%;
-
-			&.is-hidden {
-				display: none;
-			}
-		}
-		
 		// section within the stage content area
 		.stage-section {
 			margin-bottom: 20px;

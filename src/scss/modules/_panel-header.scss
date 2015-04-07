@@ -54,6 +54,13 @@
             left: $stage-left-indent;
         }
     }
+
+    &.-info-panel {
+        height: 70px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background: $green;
+    }
 }
 
 .panel-header--drawer {

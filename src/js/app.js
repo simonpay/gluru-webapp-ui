@@ -10,6 +10,11 @@
 
         // main nav
         $add_button             = $( ".js-add" ),
+
+        // modal
+        $modal                  = $( ".js-modal" ),
+        $show_modal             = $( ".js-show-modal" ),
+        $close_modal            = $( ".js-close-modal" ),
     
         // accounts nav
         $notifications          = $( ".js-notifications" ),
@@ -63,6 +68,18 @@
         // cache main app obj to variable
         _obj_gluru: gluru_app,
 
+
+        modal: {
+
+            _show: function () {
+                $modal.removeClass( "is-hidden" );
+            },
+
+            _hide: function () {
+                $modal.addClass( "is-hidden" );
+            },
+
+        },
 
         drawer: {
 
@@ -662,6 +679,17 @@
     // cache main app obj to variable
     var obj_gluru = gluru_app;
 
+
+    // MODAL
+    // -------------------------------------------------
+    // show
+    $close_modal.on( "click", function(){
+        obj_gluru.modal._hide();
+    });
+    // hide
+    $show_modal.on( "click", function(){
+        obj_gluru.modal._show();
+    });
 
     // NOTIFICATIONS
     // -------------------------------------------------

@@ -23,6 +23,7 @@
 %font-size__18                  {   @include font-size(18);                                             }
 %font-size__20                  {   @include font-size(20);                                             }
 %font-size__22                  {   @include font-size(22);                                             }
+%font-size__42                  {   @include font-size(42);                                             }
 
 // font-weight  
 @mixin font-weight($val)        {   font-weight: $val;                                                  }
@@ -229,6 +230,7 @@
 // main heading inside drawer and actions
 .drawer__heading-text,
 .actions__heading-text,
+.modal__heading-text,
 {
     @extend %text-transform__uppercase;
     @extend %font-size__22;
@@ -303,7 +305,23 @@
 }
 
 
+.info-panel-header__text {
+    @extend %font-size__20;
+    @extend %font-weight__lighter;
+    @extend %color__white;
+    @extend %text-transform__uppercase;
+}
 
-
-
+// the text heading in staged sections such
+// as the setup process 
+.process__heading-text {
+    @extend %font-size__42;
+    @extend %font-weight__lighter;
+    @extend %color__pink;
+}
+.process__subheading-text {
+    @extend %font-size__20;
+    @extend %font-weight__lighter;
+    @extend %color__gray--light;
+}
 
