@@ -11,11 +11,11 @@
 				data-tt-pos="left"></div>
 		</li>
 		<li class="stage-nav__item">
-		{% if obj.stage_id === "moments" %}
+		{% if obj_stage_data.stage_id === "moments" %}
 			<div class="icon-button js-icon-button -infinity js-toggle-timeline-view js-tt"
 				data-tt="Toggle View" 
 				data-tt-pos="left"></div>
-		{% elseif obj.stage_id === "files" %}
+		{% elseif obj_stage_data.stage_id === "files" %}
 			<div class="icon-button js-icon-button -infinity js-toggle-file-view js-tt"
 				data-tt="Toggle View" 
 				data-tt-pos="left"></div>

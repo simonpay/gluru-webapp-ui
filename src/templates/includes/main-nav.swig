@@ -5,6 +5,7 @@
 			data-tt="Home"
 			data-tt-pos="right"></a>
 	</div>
+	{% if !obj.hide_nav_items %}
 	<ul class="main-nav__list">
 		<li class="main-nav__item -divider">
 			<a href="#" 
@@ -49,5 +50,6 @@
 				data-tt-pos="right">Settings</a>
 		</li>
 	</ul>
+	{% endif %}
 </nav>
 

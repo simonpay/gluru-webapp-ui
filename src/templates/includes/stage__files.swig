@@ -1,7 +1,5 @@
-{% set section = "files" %}
+{% set obj_stage_data = obj.stage_data %}
 {% include "stage-start.swig" %}
-
-{% set obj = mydata.files.stage_data %}
 {% include "panel-header-stage.swig" %}
 
 	{# section files #}

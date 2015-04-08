@@ -23,6 +23,7 @@
 %font-size__18                  {   @include font-size(18);                                             }
 %font-size__20                  {   @include font-size(20);                                             }
 %font-size__22                  {   @include font-size(22);                                             }
+%font-size__30                  {   @include font-size(30);                                             }
 %font-size__42                  {   @include font-size(42);                                             }
 
 // font-weight  
@@ -45,7 +46,7 @@
 %color__pink                    {   @include color($pink);                                              }
 
 // text-decoration
-@mixin text-decoration($val)    {   text-decoration: none;                                              }
+@mixin text-decoration($val)    {   text-decoration: $val;                                              }
 %text-decoration__none          {   @include text-decoration(none);                                     }
 %text-decoration__underline     {   @include text-decoration(underline);                                }
 
@@ -91,6 +92,11 @@
     @extend %font-weight__lighter;
     @extend %color__black;
     @extend %line-height__normal;
+
+    .stage-wrap--signup & {
+        @extend %font-size__30;
+        @extend %color__pink;
+    }
 }
 
 // stage sub-heading
@@ -98,6 +104,12 @@
     @extend %font-size__16;
     @extend %color__green;
     @extend %line-height__normal;
+
+    .stage-wrap--signup & {
+        @extend %font-size__16;
+        @extend %font-weight__lighter;
+        @extend %color__gray--light;
+    }
 }
 
 // text withun basic text lists 
@@ -182,6 +194,14 @@
 // a tags
 .link {
     @extend %text-decoration__none;
+
+    &.-stage {
+        @extend %color__gray--mid;
+
+        &:hover {
+            @extend %text-decoration__underline;
+        }
+    }
 }
 
 // heading in single / split view panel-header
@@ -274,7 +294,7 @@
 
     // make text smaller for setup progress
     .-setup & {
-        @extend %font-size__14;
+        @extend %font-size__11;
         @extend %color__gray--xxlight;
     }
 
@@ -290,7 +310,7 @@
 
 // the text within circles on setup process
 .header-nav__icon-text {
-    @extend %font-size__18;
+    @extend %font-size__13;
     @extend %font-weight__bold;
     @extend %text-align__center;
     @extend %color__gray--xxlight;
@@ -324,4 +344,42 @@
     @extend %font-weight__lighter;
     @extend %color__gray--light;
 }
+
+//
+.btn__text {
+    @extend %font-size__18;
+    @extend %color__gray--light;
+}
+
+.or-text {
+    @extend %font-size__22;
+    @extend %color__gray--light;
+}
+
+
+.stage__text {
+    @extend %font-size__16;
+    @extend %color__gray--dark;
+    margin-bottom: 20px;
+    
+    .btn__wrap & {
+        @extend %text-align__center;
+    }
+}
+
+
+.speech-bubble__text {
+    @extend %font-size__16;
+    @extend %color__gray--dark;
+    @extend %font-weight__lighter;
+
+    &.-heading {
+        @extend %font-size__18;
+        @extend %font-weight__bold;
+        margin-bottom: 10px;
+    }
+}
+
+
+
 

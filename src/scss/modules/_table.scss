@@ -79,7 +79,10 @@
 
                 // when .-source column is inside '.stage-wrap--files .-split-view' 
                 // hide it due to narrow width - scope to files section only
-                .stage-wrap--files .-split-view & {
+                // note: removed scoping to files section as removal needs to happen
+                // in timeline as well
+                // .stage-wrap--files 
+                .-split-view & {
                     display: none;
                 }
 

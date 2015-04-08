@@ -1,9 +1,16 @@
 <header class="panel-header -stage">
-
+	
 	{% include "stage-heading.swig" %}
-	{% if obj.stage_id !== "setup" %}
+
+	{% if !obj.hide_account_nav %}
 		{% include "stage-account-nav.swig" %}
+	{% endif %}
+
+	{% if !obj.hide_stage_nav %}
 		{% include "stage-nav.swig" %}
+	{% endif %}
+
+	{% if !obj.hide_search_input %}
 		{% include "search-input.swig" %}
 	{% endif %}
 

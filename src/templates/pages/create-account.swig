@@ -9,7 +9,7 @@
 
 {% block content %}
 
-	{% set obj = mydata.moments %}
+	{% set obj = mydata.setup %}
 
 	{# main-nav #}
 	{% include "src/templates/includes/main-nav.swig" %}
@@ -21,16 +21,11 @@
 	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}
-	{% set type = "future" %}
-	{% include "src/templates/includes/stage__moments.swig" %}
+	{% include "src/templates/includes/stage__setup--create-account.swig" %}
 
 {% endblock %}
 
 {% block javascripts %}
 	{% parent %}
 	<script src="js/pages/moments.js"></script>
-	<script>
-        $( ".js-timeline-range" ).removeClass( "is-selected" );
-        $( ".js-timeline-range[data-timeline-range='future']" ).addClass( "is-selected" );
-	</script>
 {% endblock %}

@@ -6,21 +6,21 @@
 		</div>
 	</div>
 
-	{% for obj in mydata.moments.timeline[type].events %}
+	{% for obj_event in obj.timeline[type].events %}
 
-		{% if obj.is_group %}
+		{% if obj_event.is_group %}
 
 			<div class="event-group-heading">
 				<div class="event-group-heading__text-wrap">
-					<div class="event-group-heading__text">{{ obj.group_name }}</div>
+					<div class="event-group-heading__text">{{ obj_event.group_name }}</div>
 				</div>
 			</div>
 
 			<div class="event-group">
 
-			{% for sub_obj in obj.events %}
+			{% for sub_obj_event in obj_event.events %}
 				
-				{% set event_obj = sub_obj %}
+				{% set obj_event = sub_obj_event %}
 				{% include "event.swig" %}
 
 			{% endfor %}
@@ -29,7 +29,7 @@
 
 		{% else %}
 
-				{% set event_obj = obj %}
+				{% set obj_event = obj_event %}
 				{% include "event.swig" %}
 
 		{% endif %}

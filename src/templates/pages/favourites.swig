@@ -9,8 +9,10 @@
 
 {% block content %}
 
+	{% set obj = mydata.setup %}
+
 	{# main-nav #}
-	{%> "main-nav" %}
+	{% include "src/templates/includes/main-nav.swig" %}
 
 	{# drawer #}
 	{% include "src/templates/includes/drawer-files.swig" %}
@@ -19,7 +21,7 @@
 	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}
-	{% include "src/templates/includes/stage__setup.swig" %}
+	{% include "src/templates/includes/stage__setup--favourites.swig" %}
 
 {% endblock %}
 

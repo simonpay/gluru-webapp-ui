@@ -9,8 +9,10 @@
 
 {% block content %}
 
+	{% set obj = mydata.moments %}
+
 	{# main-nav #}
-	{%> "main-nav" %}
+	{% include "src/templates/includes/main-nav.swig" %}
 
 	{# drawer #}
 	{% include "src/templates/includes/drawer-files.swig" %}

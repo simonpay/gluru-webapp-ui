@@ -1,30 +1,30 @@
 <div class="event-wrap js-event-wrap">
 
 	<div class="event-time">
-		<div class="event-time__text">{{ event_obj.date_time }}</div>
+		<div class="event-time__text">{{ obj_event.date_time }}</div>
 	</div>
 
 	<div class="event-icon-wrap">
-		<div class="event-icon {{ event_obj.type }}"></div>
+		<div class="event-icon {{ obj_event.type }}"></div>
 	</div>
 
-	<div class="priority-box -event -{{ event_obj.priority }} js-event" data-priority="{{ event_obj.priority }}">
+	<div class="priority-box -event -{{ obj_event.priority }} js-event" data-priority="{{ obj_event.priority }}">
 
 		<div class="media -v-center">
 		    <div class="media__img">
 
 				<div class="disc-img -event">
 					<div class="disc-img__img-wrap">
-					{% if event_obj.avatar_type === "icon" %}
-						<div class="u-center-transform {{ event_obj.person_id }}"></div>
+					{% if obj_event.avatar_type === "icon" %}
+						<div class="u-center-transform {{ obj_event.person_id }}"></div>
 					{% else %}
-						<img class="disc-img__img" src="img/{{ event_obj.person_id }}.png" alt="">
+						<img class="disc-img__img" src="img/{{ obj_event.person_id }}.png" alt="">
 					{% endif %}
 					</div>
 
-					{% if event_obj.source_type !== "" %}
+					{% if obj_event.source_type !== "" %}
 					<div class="inset-icon -event-source">
-						<div class="u-center-transform {{ event_obj.source_type }}"></div>
+						<div class="u-center-transform {{ obj_event.source_type }}"></div>
 					</div>
 					{% endif %}
 				</div>
@@ -32,8 +32,8 @@
 		    </div>
 		    <div class="media__body">
 
-				<div class="priority-box__text" title="{{ event_obj.title|striptags }}">{{ event_obj.title|safe }}</div>
-				<div class="priority-box__text" title="{{ event_obj.description|striptags }}">{{ event_obj.description|safe }}</div>
+				<div class="priority-box__text" title="{{ obj_event.title|striptags }}">{{ obj_event.title|safe }}</div>
+				<div class="priority-box__text" title="{{ obj_event.description|striptags }}">{{ obj_event.description|safe }}</div>
 
 		    </div>
 		</div>
@@ -58,23 +58,23 @@
 	</div>
 
 
-{% if event_obj.is_multiple_event %}
+{% if obj_event.is_multiple_event %}
 
 	<div class="event-table-wrap">
 
 		<div class="scrollable-content">
 			<div class="table">
 
-			{% for sub_obj_2 in event_obj.items %}
-			
-				{% set obj = sub_obj_2 %}
+			{% for sub_obj_event in obj_event.items %}
 				
-				{% if event_obj.multiple_event_type === "people" %}
+				{% if obj_event.multiple_event_type === "people" %}
 					
+					{% set obj_person_row = sub_obj_event %}
 					{% include "table-row-people.swig" %}
 
-				{% elseif event_obj.multiple_event_type === "files" %}
+				{% elseif obj_event.multiple_event_type === "files" %}
 
+					{% set obj_file_row = sub_obj_event %}
 					{% include "table-row-file.swig" %}
 
 				{% endif %}

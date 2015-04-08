@@ -5,14 +5,14 @@
 		    <div class="media__img">
 
 		    	<div class="table__icon">
-		    		<div class="{{ obj.file_type_class }}"></div>
+		    		<div class="{{ obj_file_row.file_type_class }}"></div>
 		    	</div>
 
 		    </div>
 		    <div class="media__body">
 
 		    	<a href="#" class="link">
-		    		<div class="table__text" title="{{ obj.file_name }}">{{ obj.file_name }}</div>
+		    		<div class="table__text" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_name }}</div>
 		    	</a>
 		    </div>
 
@@ -22,7 +22,7 @@
 	</div>
 
 	<div class="table__col -modified">
-		<div class="table__text" title="{{ obj.file_modified }}">{{ obj.file_modified }}</div>
+		<div class="table__text" title="{{ obj_file_row.file_modified }}">{{ obj_file_row.file_modified }}</div>
 	</div>
 
 	<div class="table__col -source">
@@ -30,7 +30,7 @@
 		    <div class="media__img">
 
 		    	<div class="table__icon">
-		    		<div class="{{ obj.file_source_class }}"></div>
+		    		<div class="{{ obj_file_row.file_source_class }}"></div>
 		    	</div>
 
 		    </div>

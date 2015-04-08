@@ -7,17 +7,17 @@
 
 				<div class="disc-img -people">
 					<div class="disc-img__img-wrap">
-						<img class="disc-img__img" src="{{ obj.person_avatar_src }}" alt="">
+						<img class="disc-img__img" src="{{ obj_person_row.person_avatar_src }}" alt="">
 					</div>
 				</div>
 
 		    </div>
 		    <div class="media__body">
 		    	<a href="#" class="link">
-		    		<div class="table__text--heading" title="{{ obj.person_name }}">{{ obj.person_name }}</div>
+		    		<div class="table__text--heading" title="{{ obj_person_row.person_name }}">{{ obj_person_row.person_name }}</div>
 		    	</a>
 		    	<a href="#" class="link">
-		    		<div class="table__text--sub-heading" title="{{ obj.person_email }}">{{ obj.person_email }}</div>
+		    		<div class="table__text--sub-heading" title="{{ obj_person_row.person_email }}">{{ obj_person_row.person_email }}</div>
 		    	</a>
 		    </div>
 

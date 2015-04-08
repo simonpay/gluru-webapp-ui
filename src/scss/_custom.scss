@@ -3,6 +3,59 @@
 \*------------------------------------*/
 
 .process__text-pos {
-	text-align: center;
-	line-height: 1.2;
+    text-align: center;
+    line-height: 1.2;
 }
+
+// the or text inside disc with border
+.or {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $dusty-gray;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 36px;
+    margin: 0 auto 25px;
+}
+
+
+
+
+.speech-bubble {
+    position: relative;
+    width: 280px;
+    // height: 100px;
+    // text-align: center;
+    // line-height: 100px;
+    margin: 10px auto 40px;
+    padding: 18px 20px 26px;
+    background-color: $gallery;
+    border: 8px solid $alto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba($black, .15);
+
+    &:before,
+    &:after,
+    {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        @include transform( translateX( -50% ) translateY( 100% ) );
+    }
+
+    &:before {
+        border: 34px solid;
+        border-color: $alto transparent transparent;
+    }
+
+    &:after {
+        border: 22px solid;
+        border-color: $gallery transparent transparent;         
+    }
+}
+
+

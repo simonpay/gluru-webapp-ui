@@ -1,10 +1,6 @@
-{% set section = "moments" %}
+{% set obj_stage_data = obj.stage_data %}
 {% include "stage-start.swig" %}
-
-{% set obj = mydata.moments.stage_data %}
 {% include "panel-header-stage.swig" %}
-
-    {# todo: remove inline style attr - these are just for testing #}
 
     {# section moments #}
     <section class="section-wrap -moments js-section-moments">

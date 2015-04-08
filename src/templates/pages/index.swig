@@ -9,7 +9,7 @@
 
 {% block content %}
 
-	{%> "main-nav" %}
+	{% include "src/templates/includes/main-nav.swig" %}
 
 {% endblock %}
 

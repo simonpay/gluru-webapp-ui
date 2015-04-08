@@ -11,28 +11,28 @@
 
 				{%> "table-row__file--header" %}
 
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
 
 
 			{% if col_class === "-col-2" %}
 
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
 
@@ -40,16 +40,16 @@
 
 			{% if col_class === "-col-3" %}
 
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
-				{% for sub_obj in mydata.files.table_data.files %}
-					{% set obj = sub_obj %}
+				{% for obj_file_row in obj.table_data.files %}
+					{% set obj_file_row = obj_file_row %}
 					{% include "table-row-file.swig" %}
 				{% endfor %}
 
