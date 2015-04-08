@@ -26,6 +26,7 @@
 {% include "../includes/modal.swig" %}
 
 
+{% if !bln_hide_dev_buttons %}
 {# TODO: remove this when finished dev! #}
 <div class="tmp-buttons">
     <div class="button-group js-buttons-generic">
@@ -55,6 +56,7 @@
         <button class="button js-triple" data-class=".-cols-3">Split - <strong>3 cols</strong></button>
     </div>
 </div>
+{% endif %}
 
 
 {% block javascripts %}

@@ -9,6 +9,7 @@
 
 {% block content %}
 
+	{% set bln_hide_dev_buttons = 1 %}
 	{% set obj = mydata.setup %}
 
 	{# main-nav #}
