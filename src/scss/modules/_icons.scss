@@ -101,6 +101,8 @@
 .icon__tick {                   @include use-sprite("icon__tick"); }
 .icon__notifications--white {   @include use-sprite("icon__notifications--white"); }
 
+.icon__arrow--white {           @include use-sprite("icon__arrow--white"); }
+
 .icon-sml__clock {              @include use-sprite("icon-sml__clock"); }
 .icon-sml__clock--pink {        @include use-sprite("icon-sml__clock--pink"); }
 .icon-sml__calendar {           @include use-sprite("icon-sml__calendar"); }
@@ -111,6 +113,7 @@
 // ------------------------------------
 .icon-lrg__googleplus {         @include use-sprite("icon-lrg__googleplus"); }
 .icon-lrg__email {              @include use-sprite("icon-lrg__email"); }
+.icon-lrg__tick--green {        @include use-sprite("icon-lrg__tick--green"); }
 
 
 //  sprites

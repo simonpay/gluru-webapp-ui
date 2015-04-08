@@ -5,6 +5,9 @@
 {% set obj_setup_data = obj.sections[2] %}
 {% include "stage__setup--start.swig" %}
 
+    <p class="info-panel__heading-text">Account Type</p>
+    <p class="stage__text">You can either select Single User or Team.</p>
+
                         
 {% include "stage__setup--end.swig" %}
 

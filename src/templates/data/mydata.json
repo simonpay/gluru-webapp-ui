@@ -211,8 +211,6 @@
                 "section_id":                           "connect_sources",
                 "text":                                 "Connect Sources",
                 "url":                                  "connect-sources.html",
-                "bln_create_account_complete":          1,
-                "bln_account_type_complete":            1,
                 "stage_data": {
                     "stage_id":                         "signup",
                     "stage_heading":                    "Almost there!",
@@ -221,13 +219,55 @@
                 "help_data": {
                     "heading":                          "Ok great now let’s connect your sources!",
                     "subheading":                       "Connecting your data to Gluru is easy. Indexing time varies depending on how many files you have."
-                }
+                },
+                "sources": [
+                    {
+                        "name":                          "Gmail",
+                        "info":                          "3.8 GB used",
+                        "icon_class":                    "icon__gmail",
+                        "action_type":                   "loader"
+                    },
+                    {
+                        "name":                          "Drive",
+                        "info":                          "5.1 GB used",
+                        "icon_class":                    "icon__gdrive",
+                        "action_type":                   "loader"
+                    },
+                    {
+                        "name":                          "Calendar",
+                        "icon_class":                    "icon__gcalendar",
+                        "action_type":                   "tick"
+                    },
+                    {
+                        "name":                          "Dropbox",
+                        "info":                          "",
+                        "icon_class":                    "icon__dropbox",
+                        "action_type":                   "button"
+                    },
+                    {
+                        "name":                          "Evernote",
+                        "info":                          "",
+                        "icon_class":                    "icon__evernote",
+                        "action_type":                   "button"
+                    },
+                    {
+                        "name":                          "Box",
+                        "info":                          "",
+                        "icon_class":                    "icon__box",
+                        "action_type":                   "button"
+                    },
+                    {
+                        "name":                          "Exchange",
+                        "info":                          "",
+                        "icon_class":                    "icon__exchange",
+                        "action_type":                   "button"
+                    }
+                ]
             },
             {
                 "section_id":                           "account_type",
                 "text":                                 "Account Type",
                 "url":                                  "account-type.html",
-                "bln_create_account_complete":          1,
                 "stage_data": {
                     "stage_id":                         "signup",
                     "stage_heading":                    "Almost there!",
@@ -242,9 +282,6 @@
                 "section_id":                           "favourites",
                 "text":                                 "Favourites",
                 "url":                                  "favourites.html",
-                "bln_create_account_complete":          1,
-                "bln_account_type_complete":            1,
-                "bln_connect_sources_complete":         1,
                 "stage_data": {
                     "stage_id":                         "signup",
                     "stage_heading":                    "Almost there!",
@@ -259,17 +296,14 @@
                 "section_id":                           "create_team",
                 "text":                                 "Create Team",
                 "url":                                  "create-team.html",
-                "bln_create_account_complete":          1,
-                "bln_account_type_complete":            1,
-                "bln_connect_sources_complete":         1,
                 "stage_data": {
                     "stage_id":                         "signup",
                     "stage_heading":                    "Almost there!",
                     "stage_sub_heading":                "Add some favourites."
                 },
                 "help_data": {
-                    "heading":                          "Great job! Lets add some favourite people.",
-                    "subheading":                       "Selecting favourite people will allow gluru to make notifications meaningful."
+                    "heading":                          "Ok let’s create a team and invite some people.",
+                    "subheading":                       "Name your team, apply settings and most importantly invite some people."
                 }
             }
         ]

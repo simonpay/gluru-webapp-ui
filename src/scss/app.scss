@@ -61,7 +61,8 @@
 // MODULES
 // ------------------------------------------------
 // The majority of elements are modules - even layout elements (sidebar, containers etc)
-@import "modules/main-container",
+@import "modules/typography",
+        "modules/main-container",
         "modules/main-nav",
         "modules/stage",
         "modules/section-wrap",
@@ -96,8 +97,8 @@
         "modules/info-panel",
         "modules/modal",
         "modules/tooltips",
-        "modules/buttons",
-        "modules/typography";
+        "modules/loader",
+        "modules/buttons";
 
 
 

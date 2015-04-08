@@ -16,7 +16,7 @@
     border-radius: 100%;
     text-align: center;
     line-height: 36px;
-    margin: 0 auto 25px;
+    margin: 0 auto;
 }
 
 
@@ -57,5 +57,51 @@
         border-color: $gallery transparent transparent;         
     }
 }
+
+
+
+
+.sources__container {
+    margin: 25px 0;
+}
+
+    .sources__row {
+        @include outer-container;
+        height: 60px;
+        // outline: 1px solid red;
+
+        &:last-child {
+            // border-bottom: 1px solid $alto;
+        }
+    }
+
+        .sources__col--source {
+            @include span-columns(4);
+            height: inherit;
+        }
+        
+        .sources__col--status {
+            @include span-columns(5);
+            height: inherit;
+        }
+
+        .sources__col--action {
+            @include span-columns(3);
+            height: inherit;
+        }
+
+
+
+
+.hr__line {
+    border: none;
+    border-bottom: 1px solid $alto;
+    margin-bottom: 40px;
+}
+
+
+
+
+
 
 

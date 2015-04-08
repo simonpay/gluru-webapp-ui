@@ -31,6 +31,11 @@
         .-v-center & {
             padding-top: 0;
         }
+        
+        // sources loader in setup section
+        .sources__col--action & {
+            overflow: visible;
+        }
     }
 
     .media__img {
@@ -63,6 +68,12 @@
         // add margin to icons when inside table
         .table & {
             margin-left: 10px;
+            margin-right: 20px;
+        }
+        
+        // add custom margin to icons when inside sources row
+        // in setup process - add sources
+        .sources__row & {
             margin-right: 20px;
         }
         

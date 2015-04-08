@@ -5,7 +5,96 @@
 {% set obj_setup_data = obj.sections[1] %}
 {% include "stage__setup--start.swig" %}
 
+    <p class="info-panel__heading-text">Select the sources you want to connect to gluru</p>
+
+
+    <div class="sources__container">
+
+        {% for obj_source in obj_setup_data.sources %}
+
+        <div class="sources__row">
+            <div class="sources__col--source">
+
+                <div class="media -v-center">
+                    <div class="media__img">
+
+                        <div class="table__icon">
+                            <div class="{{ obj_source.icon_class }}"></div>
+                        </div>
+
+                    </div>
+                    <div class="media__body">
+
+                        <div class="table__text--heading">{{ obj_source.name }}</div>
+                        <div class="table__text--sub-heading">{{ obj_source.info }}</div>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="sources__col--status">
+                <div class="media -v-center">
+                    <div class="media__body">
+                        <div class="table__text -light">indexing...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sources__col--action">
+                <div class="media -v-center">
+                    <div class="media__body">
+
+                    {% if obj_source.action_type === "loader" %}
                         
+                        <div class="spinner u-center-block">
+                            <div class="spinner-container container1">
+                                <div class="circle1"></div>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                                <div class="circle4"></div>
+                            </div>
+                            <div class="spinner-container container2">
+                                <div class="circle1"></div>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                                <div class="circle4"></div>
+                            </div>
+                            <div class="spinner-container container3">
+                                <div class="circle1"></div>
+                                <div class="circle2"></div>
+                                <div class="circle3"></div>
+                                <div class="circle4"></div>
+                            </div>
+                        </div>
+
+                    {% elseif obj_source.action_type === "tick" %}
+
+                            <div class="icon-lrg__tick--green u-center-block"></div>
+
+                    {% elseif obj_source.action_type === "button" %}
+
+                        <button class="btn__lozenge u-center-block">CONNECT</button>
+
+                    {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <hr class="hr__line">
+
+    <p>
+        <button class="btn__lozenge -green -icon-right">
+            <div class="btn__icon icon__arrow--white"></div>
+            Next
+        </button>
+    </p>
+
+
 {% include "stage__setup--end.swig" %}
 
 {% include "stage-end.swig" %}

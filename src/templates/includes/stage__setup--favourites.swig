@@ -5,6 +5,7 @@
 {% set obj_setup_data = obj.sections[3] %}
 {% include "stage__setup--start.swig" %}
 
+    <p class="info-panel__heading-text">Add Favourites</p>
                         
 {% include "stage__setup--end.swig" %}
 

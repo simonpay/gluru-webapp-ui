@@ -162,6 +162,10 @@
     @extend %nowrap;
     @extend %color__black;
 
+    &.-light {
+        @extend %color__gray--light;
+    }
+
     // when table text is within 'is-selected' class reverse out
     .-files .table__row.is-selected & {
         @extend %color__white;
@@ -187,8 +191,8 @@
 .table__text--sub-heading {
     @extend %nowrap;
     @extend %font-size__13;
-    @extend %font-weight__bold;
-    @extend %color__gray--mid;
+    // @extend %font-weight__bold;
+    @extend %color__gray--light;
 }
 
 
@@ -295,7 +299,7 @@
 
     // make text smaller for setup progress
     .-setup & {
-        @extend %font-size__11;
+        @extend %font-size__12;
         @extend %color__gray--xxlight;
     }
 

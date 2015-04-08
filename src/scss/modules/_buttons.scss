@@ -47,36 +47,81 @@
 	.btn__lozenge {
 		display: block;
 		position: relative;
-		width: 280px;
-		height: 70px;
-		border-radius: 35px;
-		border: 3px solid $dusty-gray;
+		// width: 280px;                 
+		height: 46px; 
+		border-radius: 100px;
+		border: 2px solid $dusty-gray;
 		outline: none;
-		margin: 0 auto 25px;
+		padding: 1px 30px 0;
+		// margin: 0 auto 25px;
 
-		&:before {
-			content: "";
-			display: block;
-			position: absolute;
-			left: 75px;
-			width: 1px;
-			top: 5px;
-			bottom: 5px;
-			background: $dusty-gray;
+	    @extend %font-size__16;
+	    @extend %color__green;
+		
+		&.-large {
+			height: 70px;
+			border-width: 3px;
+	    	@extend %font-size__18;
+	    	@extend %color__gray--light;
 		}
+
+		&.-green {
+			height: 60px;
+			background: $green;
+			border-color: $green;
+	    	@extend %font-size__20;
+	    	@extend %color__white;
+		}
+
+		&.-icon-left {
+			text-align: left;
+			padding-left: 95px;
+			padding-right: 0;
+
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 75px;
+				width: 1px;
+				top: 5px;
+				bottom: 5px;
+				background: $dusty-gray;
+			}
+		}
+
+		&.-icon-right {
+			text-align: right;
+			padding-left: 35px;
+			padding-right: 70px;
+  		}
+
+		&.-large.-icon-left {
+			width: 280px;
+		}
+
+
+
 
 	}
 
 		.btn__icon {
 			// position: absolute;
 			@extend %scut-center-transform-y;
-			left: 20px;
+
+			.-icon-left & {
+				left: 20px;
+			}
+
+			.-green.-icon-right & {
+				right: 23px;
+			}
 		}
 
-		.btn__text-pos {
-			padding-left: 95px;
-			text-align: left;
-		}
+		// .btn__text-pos {
+		// 	padding-left: 95px;
+		// 	text-align: left;
+		// }
 
 
 
