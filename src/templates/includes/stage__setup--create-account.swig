@@ -1,9 +1,12 @@
-{% set obj_stage_data = obj.create_account.stage_data %}
+{% set obj_stage_data = obj.sections[0].stage_data %}
 {% include "stage-start.swig" %}
 {% include "panel-header-stage.swig" %}
 
-{% set obj_setup_data = obj.create_account %}
+{% set obj_setup_data = obj.sections[0] %}
 {% include "stage__setup--start.swig" %}
+
+    <div class="info-panel__heading-text">Create a Gluru account</div>
+    <div class="stage__text">You can create an account with Google+ or email.</div>
 
     <div class="btn__wrap">
 
@@ -24,7 +27,7 @@
         </button>
         
         <div class="stage__text-wrap">
-            <p class="stage__text">Already have an account? <a href="#" class="link -stage"><strong>Sign in</strong></a></p>
+            <p class="stage__text -cta">Already have an account? <a href="#" class="link -stage"><strong>Sign in</strong></a></p>
         </div>
         
     </div>

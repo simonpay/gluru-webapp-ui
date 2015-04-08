@@ -22,11 +22,11 @@
 	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}
-	{% include "src/templates/includes/stage__setup--account-setup.swig" %}
+	{% include "src/templates/includes/stage__setup--account-type.swig" %}
 
 {% endblock %}
 
 {% block javascripts %}
 	{% parent %}
-	<script src="js/pages/moments.js"></script>
+	<script src="js/pages/setup.js"></script>
 {% endblock %}

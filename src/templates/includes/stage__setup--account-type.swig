@@ -1,8 +1,8 @@
-{% set obj_stage_data = obj.account_setup.stage_data %}
+{% set obj_stage_data = obj.sections[2].stage_data %}
 {% include "stage-start.swig" %}
 {% include "panel-header-stage.swig" %}
 
-{% set obj_setup_data = obj.account_setup %}
+{% set obj_setup_data = obj.sections[2] %}
 {% include "stage__setup--start.swig" %}
 
                         

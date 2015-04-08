@@ -32,6 +32,12 @@ module.exports = function(grunt) {
                 ],
                 dest: '<%= pkg.dest_paths.js %>pages/moments.js',
             },
+            setup: {
+                src: [
+                    '<%= pkg.src_paths.js %>pages/setup.js',
+                ],
+                dest: '<%= pkg.dest_paths.js %>pages/setup.js',
+            },
         },
         // Minification of JS
         uglify: {

@@ -192,60 +192,87 @@
         "hide_stage_nav":           1,
         "hide_account_nav":         1,
         "hide_search_input":        1,
-        "create_account": {
-            "section_id":                           "create_account",
-            "stage_data": {
-                "stage_id":                         "signup",
-                "stage_heading":                    "Welcome to Gluru!",
-                "stage_sub_heading":                "Choose how you would like to create your account."
+        "sections": [
+            {
+                "section_id":                           "create_account",
+                "text":                                 "Create Account",
+                "url":                                  "create-account.html",
+                "stage_data": {
+                    "stage_id":                         "signup",
+                    "stage_heading":                    "Welcome to Gluru!",
+                    "stage_sub_heading":                "Choose how you would like to create your account."
+                },
+                "help_data": {
+                    "heading":                          "Hi there!",
+                    "subheading":                       "I’m Gluru the bot. Creating an account is easy and free forever."
+                }
             },
-            "help_data": {
-                "heading":                          "Hi there!",
-                "subheading":                       "I’m Gluru the bot. Creating an account is easy and free forever."
-            }
-        },
-        "account_setup": {
-            "section_id":                           "account_setup",
-            "bln_create_account_complete":          1,
-            "stage_data": {
-                "stage_id":                         "signup",
-                "stage_heading":                    "Almost there!",
-                "stage_sub_heading":                "Choose Single user or Team to setup your account."
+            {
+                "section_id":                           "connect_sources",
+                "text":                                 "Connect Sources",
+                "url":                                  "connect-sources.html",
+                "bln_create_account_complete":          1,
+                "bln_account_type_complete":            1,
+                "stage_data": {
+                    "stage_id":                         "signup",
+                    "stage_heading":                    "Almost there!",
+                    "stage_sub_heading":                "Connect some data sources so we can get started."
+                },
+                "help_data": {
+                    "heading":                          "Ok great now let’s connect your sources!",
+                    "subheading":                       "Connecting your data to Gluru is easy. Indexing time varies depending on how many files you have."
+                }
             },
-            "help_data": {
-                "heading":                          "Great job! Now lets set up your account.",
-                "subheading":                       "You can choose a single user or team account and then create your team!"
-            }
-        },
-        "connect_sources": {
-            "section_id":                           "connect_sources",
-            "bln_create_account_complete":          1,
-            "bln_account_setup_complete":           1,
-            "stage_data": {
-                "stage_id":                         "signup",
-                "stage_heading":                    "Almost there!",
-                "stage_sub_heading":                "Connect some data sources so we can get started."
+            {
+                "section_id":                           "account_type",
+                "text":                                 "Account Type",
+                "url":                                  "account-type.html",
+                "bln_create_account_complete":          1,
+                "stage_data": {
+                    "stage_id":                         "signup",
+                    "stage_heading":                    "Almost there!",
+                    "stage_sub_heading":                "Choose Single user or Team to setup your account."
+                },
+                "help_data": {
+                    "heading":                          "Great job! Now lets set up your account.",
+                    "subheading":                       "You can choose a single user or team account and then create your team!"
+                }
             },
-            "help_data": {
-                "heading":                          "Ok great now let’s connect your sources!",
-                "subheading":                       "Connecting your data to Gluru is easy. Indexing time varies depending on how many files you have."
-            }
-        },
-        "favourites": {
-            "section_id":                           "favourites",
-            "bln_create_account_complete":          1,
-            "bln_account_setup_complete":           1,
-            "bln_connect_sources_complete":         1,
-            "stage_data": {
-                "stage_id":                         "signup",
-                "stage_heading":                    "Almost there!",
-                "stage_sub_heading":                "Add some favourites."
+            {
+                "section_id":                           "favourites",
+                "text":                                 "Favourites",
+                "url":                                  "favourites.html",
+                "bln_create_account_complete":          1,
+                "bln_account_type_complete":            1,
+                "bln_connect_sources_complete":         1,
+                "stage_data": {
+                    "stage_id":                         "signup",
+                    "stage_heading":                    "Almost there!",
+                    "stage_sub_heading":                "Add some favourites."
+                },
+                "help_data": {
+                    "heading":                          "Great job! Lets add some favourite people.",
+                    "subheading":                       "Selecting favourite people will allow gluru to make notifications meaningful."
+                }
             },
-            "help_data": {
-                "heading":                          "Great job! Lets add some favourite people.",
-                "subheading":                       "Selecting favourite people will allow gluru to make notifications meaningful."
+            {
+                "section_id":                           "create_team",
+                "text":                                 "Create Team",
+                "url":                                  "create-team.html",
+                "bln_create_account_complete":          1,
+                "bln_account_type_complete":            1,
+                "bln_connect_sources_complete":         1,
+                "stage_data": {
+                    "stage_id":                         "signup",
+                    "stage_heading":                    "Almost there!",
+                    "stage_sub_heading":                "Add some favourites."
+                },
+                "help_data": {
+                    "heading":                          "Great job! Lets add some favourite people.",
+                    "subheading":                       "Selecting favourite people will allow gluru to make notifications meaningful."
+                }
             }
-        }
+        ]
     },
     "moments": {
         "stage_data": {

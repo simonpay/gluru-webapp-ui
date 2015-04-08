@@ -22,7 +22,7 @@
 	{% include "src/templates/includes/actions-footprint.swig" %}
 
 	{# stage #}
-	{% include "src/templates/includes/stage__setup--favourites.swig" %}
+	{% include "src/templates/includes/stage__setup--create-team.swig" %}
 
 {% endblock %}
 

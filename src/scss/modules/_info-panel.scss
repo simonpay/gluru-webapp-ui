@@ -29,12 +29,12 @@
         // height: 800px;
         @include span-columns(4);
         @include clearfix;
-        
     }
+
     .info-panel__content {
         // background: blue;
         // height: 800px;
         @include span-columns(8);
         @include clearfix;
-
+        padding-top: 5px;
     }

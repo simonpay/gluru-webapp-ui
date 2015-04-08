@@ -4,7 +4,32 @@
 	<header class="panel-header panel-header--setup">
 		<nav class="header-nav -setup">
 			<ul class="header-nav__list">
-				<li class="header-nav__item">
+				
+				{# {% set current_section = obj_setup_data.section_id %} #}
+				{% set current_section = obj_setup_data.section_id %}
+				{% for obj_section in obj.sections %}
+
+				<li class="header-nav__item js-header-nav__item">
+					<a href="{{ obj_section.url }}" 
+					class="header-nav__link {% if obj_section.section_id === current_section %}is-selected{% endif %} js-header-nav__link" 
+					data-timeline-range="recent">
+
+                        <div class="media -v-center">
+                            <div class="media__img">
+                                <div class="header-nav__icon header-nav__icon-text -num">{{ loop.index }}</div>
+                            </div>
+                            <div class="media__body">
+                                <div class="header-nav__text">{{ obj_section.text }}</div>
+                            </div>
+                        </div>
+
+					</a>
+				</li>
+
+				{% endfor %}
+
+
+{# 				<li class="header-nav__item">
 					<a href="create-account.html" 
 					class="header-nav__link {% if obj_setup_data.bln_create_account_complete %}is-complete {% endif %} {% if obj_setup_data.section_id === 'create_account' %}is-selected {% endif %}" 
 					data-timeline-range="recent">
@@ -68,7 +93,7 @@
 
 					</a>
 				</li>
-
+ #}
 {# 				<li class="header-nav__item">
 					<a href="#" 
 					class="header-nav__link" 
