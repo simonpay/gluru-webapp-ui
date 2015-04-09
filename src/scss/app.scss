@@ -14,6 +14,10 @@
 // sprites via compass (loaded with Bower) - see config.rb file for load path
 @import "retina-sprites";
 
+
+// select2
+@import "core";
+
 // TODO: check this out as it may prove useful - lots of utilities!
     // add to bower.json using "bower install scss-tooltips --save" if used or 
     // delete from current "bower_components" folder if not

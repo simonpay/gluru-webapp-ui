@@ -18,6 +18,7 @@
     &.is-hidden {
         height: 0;
         opacity: 0;
+        display: none;
         @include transition(opacity 0.3s, height 0 0.3s);
     }
 }
@@ -49,7 +50,7 @@
                     content: "";
                     @include scut-center-transform(y);
                     left: 16px;
-                    @include use-sprite("icon__tick"); 
+                    @include use-sprite("icon-sml__tick");
                 }
 
                 &.-divider {

@@ -17,6 +17,9 @@
     // 
     // @include outer-container;
     // background: red;
+    // 
+    
+
 }
 
     // .info-panel-header__text-pos {
@@ -38,4 +41,23 @@
         @include span-columns(8);
         @include clearfix;
         padding-top: 5px;
+        
+        > .info-panel__heading-text {
+            z-index: 3333;
+            margin-top: 0;
+        }
     }
+
+        .info-panel__content-block {
+            position: relative;
+            overflow: auto;
+            margin-top: 40px;
+
+            &.-narrow {
+                width: 280px;
+            }
+
+            &.-wide {
+                width: 600px;
+            }
+        }

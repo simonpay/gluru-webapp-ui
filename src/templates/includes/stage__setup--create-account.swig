@@ -8,7 +8,7 @@
     <p class="info-panel__heading-text">Create a Gluru account</p>
     <p class="stage__text">You can create an account with Google+ or email.</p>
 
-    <div class="btn__wrap">
+    <div class="info-panel__content-block -narrow">
 
         <p>
             <button class="btn__lozenge -large -icon-left">

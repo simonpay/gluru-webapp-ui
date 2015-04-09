@@ -9,9 +9,20 @@
 .u-center-transform {
     @include scut-center-transform;
 }
+
+.u-center-transform-x {
+    @include scut-center-transform(x);
+}
+
 .u-center-transform-y {
     @include scut-center-transform(y);
 }
+
+
 .u-center-block {
 	@include scut-center-block;
+}
+
+.u-full-width {
+	width: 100%;
 }

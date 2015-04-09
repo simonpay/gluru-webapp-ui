@@ -98,11 +98,12 @@
 // ------------------------------------
 .icon__nav-add--green {         @include use-sprite("icon__nav-add--green"); }
 .icon__expand {                 @include use-sprite("icon__expand"); }
-.icon__tick {                   @include use-sprite("icon__tick"); }
 .icon__notifications--white {   @include use-sprite("icon__notifications--white"); }
 
 .icon__arrow--white {           @include use-sprite("icon__arrow--white"); }
 
+.icon-sml__tick {               @include use-sprite("icon-sml__tick"); }
+.icon-sml__tick--white {        @include use-sprite("icon-sml__tick--white"); }
 .icon-sml__clock {              @include use-sprite("icon-sml__clock"); }
 .icon-sml__clock--pink {        @include use-sprite("icon-sml__clock--pink"); }
 .icon-sml__calendar {           @include use-sprite("icon-sml__calendar"); }

@@ -49,5 +49,6 @@ button {
 
 
 p {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    @extend %color__gray--dark;
 }

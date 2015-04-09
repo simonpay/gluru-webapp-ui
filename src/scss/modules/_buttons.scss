@@ -36,13 +36,12 @@
 	}
 }
 
-
-.btn__wrap {
-	position: relative;
-	overflow: auto;
-	width: 280px;
-	margin-top: 40px;
-}
+// .btn__wrap {
+// 	position: relative;
+// 	overflow: auto;
+// 	width: 280px;
+// 	margin-top: 40px;
+// }
 
 	.btn__lozenge {
 		display: block;
@@ -59,10 +58,24 @@
 	    @extend %color__green;
 		
 		&.-large {
+			width: 240px;
 			height: 70px;
 			border-width: 3px;
 	    	@extend %font-size__18;
 	    	@extend %color__gray--light;
+			
+			&.is-selected {
+				background-color: $green;
+				border-color: $green;
+				color: $white;
+
+	    		&:after {
+					content: "";
+					left: 25px;
+					@extend %scut-center-transform-y;
+					@include use-sprite("icon-sml__tick--white");
+	    		}
+			}
 		}
 
 		&.-green {

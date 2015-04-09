@@ -29,4 +29,7 @@
 {% block javascripts %}
 	{% parent %}
 	<script src="js/pages/setup.js"></script>
+    <script>
+        $(".js-example-basic-multiple").select2();
+    </script>
 {% endblock %}

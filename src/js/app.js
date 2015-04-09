@@ -641,8 +641,8 @@
                 _pop_menu_offset_top = _button_offset.top + _button_height + 5;
 
                 $pop_menu_wrap
-                    .offset({ left: _pop_menu_offset_left, top: _pop_menu_offset_top })
                     .removeClass( "is-hidden" )
+                    .offset({ left: _pop_menu_offset_left, top: _pop_menu_offset_top })
                     ;
             },
 

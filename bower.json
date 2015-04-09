@@ -9,6 +9,8 @@
     "bourbon": "~4.2.1",
     "scut": "~0.10.3",
     "normalize-scss": "~3.0.0",
-    "Retina-sprites-for-Compass": "*"
+    "Retina-sprites-for-Compass": "*",
+    "select2": "^4.0.0-rc.2",
+    "jquery-ui": "^1.11.4"
   }
 }

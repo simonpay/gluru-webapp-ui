@@ -3,7 +3,8 @@
 \*------------------------------------*/
 
 .stage-wrap {
-	overflow: auto;
+	// overflow: auto;
+	overflow: hidden;
 	height: 100%;
 	position: relative;
 	padding-top: $panel-header-stage-height;
@@ -13,7 +14,7 @@
 	    @include clearfix;
 	    @include mq(large){
 	        height: 100%;
-	        overflow: auto;
+	        // overflow: auto;
 	    }
 	}
 		
