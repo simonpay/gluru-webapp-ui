@@ -7,6 +7,23 @@
 }
 
 
+input[type=text] {
+    height: 38px;
+    border: 2px solid $green;
+    border-radius: 3px;
+    background: $white;
+    padding: 2px 10px;
+    width: 300px;
+    outline: 0;
+
+    color: $zeus;
+
+    &.-full-width {
+        width: 100%;
+    }
+}
+
+
 // select2 overrides
 .select2-container--default {
 
@@ -14,6 +31,34 @@
 		.select2-selection--multiple {
 			border: 2px solid $green;
 			outline: 0;
+		}
+	}
+
+	.select2-selection--single {
+		@include linear-gradient( to top, rgba($black, .06) 0%, rgba($white, 1) 100% );
+		border-radius: 3px;
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: $alto $dusty-gray $dusty-gray;
+
+		box-shadow: 
+			inset -2px 0px 0px $white, 
+			inset 0px 1px 0px $white,
+			0px 3px 3px -1px rgba($black, .2)
+			;
+
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 1px;
+			bottom: 1px;
+			width: 1px;
+			@include linear-gradient( to top, $dusty-gray 0%, $alto 100% );
+		}
+		&:after {
+			right: 0;
 		}
 	}
 
@@ -53,4 +98,113 @@
 
 	}
 }
+
+.select2-container {
+	.select2-selection--single {
+		height: $form-el__height--select;
+
+		.select2-selection__rendered {
+			// color: #444;
+			line-height: $form-el__height--select;
+			font-size: 14px;
+			padding-left: 11px;
+		}
+	}
+}
+
+.select2-selection--single {
+
+}
+
+
+
+
+
+
+// sliding checkbox button (jquery-ui)
+// todo: sort this out!
+.ui-state-default,
+// .ui-widget-content .ui-state-default,
+// .ui-widget-header .ui-state-default,
+{
+	background: $alto;
+	width: 80px;
+	height: 30px;
+	border-radius: 100px;
+	outline: 0;
+	border: 1px solid $silver;
+	// border: none;
+	@include transition( background-color .5s);
+
+	&.ui-state-active {
+		background: $green;
+		border-color: $green;
+	}
+}
+
+.ui-button-text-only .ui-button-text {
+	display: none;
+}
+
+label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:after,
+label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-active:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	@include transform( translateX( 100% ));
+	right: 100%;
+	border-radius: 100%;
+	width: 26px;
+	height: 26px;
+	background: white;
+	border: 1px solid $dusty-gray;
+	// @include transition( right 0.15s, transform 0.15s);
+	@include transition( right 0.15s, transform 0.15s, border-color .5s);
+}
+
+label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-active:after {
+	right: 0;
+	border-color: $green;
+	@include transform( translateX( 0% ));
+}
+
+
+
+
+// unused styling for select
+.select {
+	position: absolute;
+	top: 290px;
+	left: 200px;
+	width: 150px;
+	height: 30px;	
+	@include linear-gradient( to top, rgba($black, .06) 0%, rgba($white, 1) 100% );
+	// @include border-image( linear-gradient( to top, $dusty-gray 0%, $alto 100% ) 1 stretch );
+	border-radius: 3px;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: $alto $dusty-gray $dusty-gray;
+
+	box-shadow: 
+		inset -2px 0px 0px $white, 
+		inset 0px 1px 0px $white,
+		0px 5px 3px -3px rgba($black, .2)
+		;
+	
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 1px;
+		bottom: 1px;
+		width: 1px;
+		@include linear-gradient( to top, $dusty-gray 0%, $alto 100% );
+	}
+	&:after {
+		right: 0;
+	}
+}
+
 

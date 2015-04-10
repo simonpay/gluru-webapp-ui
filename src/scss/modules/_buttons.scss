@@ -2,39 +2,6 @@
 # BUTTONS
 \*------------------------------------*/
 
-.select {
-	position: absolute;
-	top: 290px;
-	left: 200px;
-	width: 150px;
-	height: 30px;	
-	@include linear-gradient( to top, rgba($black, .06) 0%, rgba($white, 1) 100% );
-	// @include border-image( linear-gradient( to top, $dusty-gray 0%, $alto 100% ) 1 stretch );
-	border-radius: 3px;
-	border-width: 1px 0;
-	border-style: solid;
-	border-color: $alto $dusty-gray $dusty-gray;
-
-	box-shadow: 
-		inset -2px 0px 0px $white, 
-		inset 0px 1px 0px $white,
-		0px 5px 3px -3px rgba($black, .2)
-		;
-	
-	&:before,
-	&:after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 1px;
-		bottom: 1px;
-		width: 1px;
-		@include linear-gradient( to top, $dusty-gray 0%, $alto 100% );
-	}
-	&:after {
-		right: 0;
-	}
-}
 
 // .btn__wrap {
 // 	position: relative;

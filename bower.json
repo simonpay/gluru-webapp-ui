@@ -5,7 +5,7 @@
   "dependencies": {
     "jquery": "latest",
     "modernizr": "latest",
-    "neat": "~1.5.1",
+    "neat": "~1.7.2",
     "bourbon": "~4.2.1",
     "scut": "~0.10.3",
     "normalize-scss": "~3.0.0",

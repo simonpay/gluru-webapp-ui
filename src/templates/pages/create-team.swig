@@ -4,6 +4,7 @@
 {% block meta-description %}{{meta.description}}{% endblock %}
 
 {% block head %}
+	<link rel="stylesheet" href="css/jquery-ui.css" />
 	{% parent %}
 {% endblock %}
 
@@ -30,6 +31,18 @@
 	{% parent %}
 	<script src="js/pages/setup.js"></script>
     <script>
-        $(".js-example-basic-multiple").select2();
+    	(function(){
+        	$(".js-example-basic-multiple").select2({
+				placeholder: "Select multiple sources",
+				allowClear: true        		
+        	});
+        	$(".js-example-basic-hide-search").select2({
+				placeholder: "Select...",
+				minimumResultsForSearch: Infinity       		
+        	});
+        	$( "#inviteTeamConnectSource" ).button();
+        	$( "#applySettingsForWholeTeam" ).button();
+        	$( ".js-prevent-fout" ).show();
+    	})();
     </script>
 {% endblock %}

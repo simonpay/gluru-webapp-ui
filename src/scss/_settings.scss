@@ -1,8 +1,8 @@
 
 // Neat settings override
 
-// $column: golden-ratio(1em, 3); // Column width
-// $gutter: golden-ratio(1em, 1); // Gutter between each two columns
+// $column: modular-scale(3, 1em, $golden);
+// $gutter: modular-scale(1, 1em, $golden);
 // $grid-columns: 12; // Total number of columns in the grid
 // $max-width: em(1088); // Max-width of the outer container
 // $border-box-sizing: true; // Makes all elements have a border-box layout
@@ -27,6 +27,7 @@ $orange:                    #f9441f;                    // orange
 $green:                     #16b451;                    // green
 $blue:                      #0098ce;                    // blue
 $light-green:               #8ce31c;                    // lime green
+$zeus:                      #2e261e;                    // very very dark brown
 // shades of gray - white to black range:   
 $white:                     #fff;                       // white
 $alabaster:                 #fafafa;                    // virtually white
@@ -41,7 +42,6 @@ $dusty-gray-dark:           darken($dusty-gray, 5%);
 $Gray:                 		#7f7f7f;                    // mid gray
 $dove-gray:                 #666;                       // dark gray
 $mine-shaft:                #333;                       // very dark gray
-$zeus:                      #2e261e;                    // virtually black
 $black:                     #000;                       // black
 
 $team-color-sales:          $orange;
@@ -178,6 +178,14 @@ $panel-drop-shadow-spread:      20px;
 
 $tooltip-animation-duration:    0.3s;
 $tooltip-show-delay:            0.5s;
+
+
+// -----------------------------------
+// FORMS
+// -----------------------------------
+$form-el__height--row:					38px;
+$form-el__height--input-text:			38px;
+$form-el__height--select:				38px;
 
 
 

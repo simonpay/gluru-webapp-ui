@@ -5,10 +5,11 @@
 .info-panel {
     position: relative;
     // width: 1050px;
-    height: 800px;
+    // height: 800px;
     // margin-top: 30px;
     // padding: 50px $stage-padding-left;
     padding: 50px 3.5%;
+    overflow: hidden;
     // margin-left: 20px;
     // margin-right: auto;
     // background: $white;
@@ -41,7 +42,7 @@
         @include span-columns(8);
         @include clearfix;
         padding-top: 5px;
-        
+
         > .info-panel__heading-text {
             z-index: 3333;
             margin-top: 0;

@@ -10,6 +10,9 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '<%= pkg.project_paths.bower_folder %>jquery/dist/jquery.js',
+                    '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/core.js',
+                    '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/widget.js',
+                    '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/button.js',
                     '<%= pkg.project_paths.bower_folder %>select2/dist/js/select2.js',
                     ['<%= pkg.src_paths.js %>**/*.js', '!<%= pkg.src_paths.js %>pages/**']
                 ],
@@ -109,6 +112,13 @@ module.exports = function(grunt) {
                         cwd: '<%= pkg.src_paths.images %>',
                         src: ['**/*', '!**/icons*/**'],
                         dest: '<%= pkg.dest_paths.images %>'
+                    },
+                    // jquery-ui theme css
+                    {
+                        expand: true,
+                        cwd: '<%= pkg.project_paths.bower_folder %>jquery-ui/themes/smoothness',
+                        src: ['**/*'],
+                        dest: '<%= pkg.dest_paths.css %>'
                     }
                 ]
             }
