@@ -213,7 +213,7 @@
                 "url":                                  "connect-sources.html",
                 "stage_data": {
                     "stage_id":                         "signup",
-                    "stage_heading":                    "Almost there!",
+                    "stage_heading":                    "Connect Sources",
                     "stage_sub_heading":                "Connect some data sources so we can get started."
                 },
                 "help_data": {
@@ -265,17 +265,17 @@
                 ]
             },
             {
-                "section_id":                           "account_type",
-                "text":                                 "Account Type",
-                "url":                                  "account-type.html",
+                "section_id":                           "auto_push",
+                "text":                                 "Auto-push",
+                "url":                                  "auto-push.html",
                 "stage_data": {
                     "stage_id":                         "signup",
                     "stage_heading":                    "Almost there!",
-                    "stage_sub_heading":                "Choose Single user or Team to setup your account."
+                    "stage_sub_heading":                "Choose your autopush settings."
                 },
                 "help_data": {
-                    "heading":                          "Great job! Now lets set up your account.",
-                    "subheading":                       "You can choose a single user or team account and then create your team!"
+                    "heading":                          "Ok great now let’s connect your sources!",
+                    "subheading":                       "Connecting your data to Gluru is easy. Indexing time varies depending on how many files you have."
                 }
             },
             {
@@ -290,6 +290,20 @@
                 "help_data": {
                     "heading":                          "Great job! Lets add some favourite people.",
                     "subheading":                       "Selecting favourite people will allow gluru to make notifications meaningful."
+                }
+            },
+            {
+                "section_id":                           "account_type",
+                "text":                                 "Account Type",
+                "url":                                  "account-type.html",
+                "stage_data": {
+                    "stage_id":                         "signup",
+                    "stage_heading":                    "Almost there!",
+                    "stage_sub_heading":                "Choose Single user or Team to setup your account."
+                },
+                "help_data": {
+                    "heading":                          "Great job! Now lets set up your account.",
+                    "subheading":                       "You can choose a single user or team account and then create your team!"
                 }
             },
             {

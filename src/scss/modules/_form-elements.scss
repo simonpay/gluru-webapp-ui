@@ -119,6 +119,10 @@ input[type=text] {
 
 
 
+$checkbox-slider__height:			30px;
+$checkbox-slider__width:			80px;
+$checkbox-slider--small__height:	20px;
+$checkbox-slider--small__width:		50px;
 
 
 // sliding checkbox button (jquery-ui)
@@ -129,7 +133,7 @@ input[type=text] {
 {
 	background: $alto;
 	width: 80px;
-	height: 30px;
+	height: $checkbox-slider__height;
 	border-radius: 100px;
 	outline: 0;
 	border: 1px solid $silver;
@@ -140,33 +144,71 @@ input[type=text] {
 		background: $green;
 		border-color: $green;
 	}
+
+	&.-small {
+		height: $checkbox-slider--small__height;
+	}
 }
 
 .ui-button-text-only .ui-button-text {
 	display: none;
 }
 
-label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:after,
-label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-active:after {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	@include transform( translateX( 100% ));
-	right: 100%;
-	border-radius: 100%;
-	width: 26px;
-	height: 26px;
-	background: white;
-	border: 1px solid $dusty-gray;
-	// @include transition( right 0.15s, transform 0.15s);
-	@include transition( right 0.15s, transform 0.15s, border-color .5s);
-}
+// .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:after,
+// .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-active:after {
+// 	content: "";
+// 	display: block;
+// 	position: absolute;
+// 	top: 0;
+// 	@include transform( translateX( 100% ));
+// 	right: 100%;
+// 	border-radius: 100%;
+// 	width: $checkbox-slider__height - 2;
+// 	height: $checkbox-slider__height - 2;
+// 	background: white;
+// 	border: 1px solid $dusty-gray;
+// 	// @include transition( right 0.15s, transform 0.15s);
+// 	@include transition( right 0.15s, transform 0.15s, border-color .5s);
 
-label.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-active:after {
-	right: 0;
-	border-color: $green;
-	@include transform( translateX( 0% ));
+// 	.-small & {
+// 		width: $checkbox-slider--small__height - 2;
+// 		height: $checkbox-slider--small__height - 2;
+// 	}
+// }
+
+
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+
+	&:after,
+	&.ui-state-active:after,
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		@include transform( translateX( 100% ));
+		right: 100%;
+		border-radius: 100%;
+		width: $checkbox-slider__height - 2;
+		height: $checkbox-slider__height - 2;
+		background: white;
+		border: 1px solid $dusty-gray;
+		// @include transition( right 0.15s, transform 0.15s);
+		@include transition( right 0.15s, transform 0.15s, border-color .5s);
+
+
+	}
+
+	&.ui-state-active:after {
+		right: 0;
+		border-color: $green;
+		@include transform( translateX( 0% ));
+	}
+
+	&.-small:after {
+		width: $checkbox-slider--small__height - 2;
+		height: $checkbox-slider--small__height - 2;
+	}
 }
 
 

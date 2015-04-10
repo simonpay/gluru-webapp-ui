@@ -1,8 +1,8 @@
-{% set obj_stage_data = obj.sections[2].stage_data %}
+{% set obj_stage_data = obj.sections[4].stage_data %}
 {% include "stage-start.swig" %}
 {% include "panel-header-stage.swig" %}
 
-{% set obj_setup_data = obj.sections[2] %}
+{% set obj_setup_data = obj.sections[4] %}
 {% include "stage__setup--start.swig" %}
 
     <p class="info-panel__heading-text">Account Type</p>
@@ -13,7 +13,7 @@
 
 		<div class="layout__item -btn-lozenge-large">
 	        <button class="btn__lozenge -large">
-	            Single User
+	            Continue as Single User
 	        </button>
     	</div>
 
@@ -33,8 +33,7 @@
 
     	<p>To get started you can select a Single User account or Team. If you just want create a Single User account to try gluru don’t worry you will still be able to create a team in the future.</p>
 
-    	<hr class="hr__line">
-
+    <hr class="hr__line">
     </div>
 
 

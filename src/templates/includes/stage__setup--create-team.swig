@@ -1,8 +1,8 @@
-{% set obj_stage_data = obj.sections[4].stage_data %}
+{% set obj_stage_data = obj.sections[5].stage_data %}
 {% include "stage-start.swig" %}
 {% include "panel-header-stage.swig" %}
 
-{% set obj_setup_data = obj.sections[4] %}
+{% set obj_setup_data = obj.sections[5] %}
 {% include "stage__setup--start.swig" %}
 
     <p class="info-panel__heading-text">Team Name</p>
@@ -69,7 +69,7 @@
             <div class="large-12">
                 <p class="info-panel__heading-text">Team Access Settings</p>
 
-                <p>Do you want each invited member to connect a source to join?</p>
+                <p class="stage__text">Do you want each invited member to connect a source to join?</p>
                 
             </div>
         </div>

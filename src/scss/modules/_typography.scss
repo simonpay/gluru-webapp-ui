@@ -371,8 +371,10 @@
         @extend %font-size__16;
         @extend %color__gray--light;
         padding-top: 10px;
+    }
 
-
+    &.-light {
+        @extend %color__gray--light;
     }
 
     .btn__wrap & {

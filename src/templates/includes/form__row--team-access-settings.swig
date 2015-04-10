@@ -3,13 +3,13 @@
         
         <div class="media">
             <div class="media__img">
-
-                <input type="checkbox" id="applySettingsForWholeTeam" style="display:none;"><label class="js-prevent-fout" for="applySettingsForWholeTeam" style="display:none;">Toggle</label>
+                
+                <input type="checkbox" id="applySettingsForWholeTeam" style="display:none;"><label class="-small js-prevent-fout" for="applySettingsForWholeTeam" style="display:none;">Toggle</label>
 
             </div>
             <div class="media__body">
 
-                <p class="stage__text">Apply these settings for the whole team?</p>
+                <p class="stage__text -light">Apply these settings for the whole team?</p>
 
             </div>
         </div>
