@@ -157,9 +157,16 @@
 }
 
 
-.section {
-    margin-bottom: 30px;
+// .form-section {
+//     &.-format {
+//         // margin-bottom: 24px;
+//     }
+// }
+
+.prevent-fout {
+    visibility: hidden;
 }
 
-
-
+.-hide-section {
+    display: none;
+}

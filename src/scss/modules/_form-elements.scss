@@ -112,8 +112,8 @@ input[type=text] {
 	}
 }
 
-.select2-selection--single {
-
+.select2-search__field {
+	width: 100% !important;
 }
 
 
@@ -124,7 +124,6 @@ $checkbox-slider__width:			80px;
 $checkbox-slider--small__height:	20px;
 $checkbox-slider--small__width:		50px;
 
-
 // sliding checkbox button (jquery-ui)
 // todo: sort this out!
 .ui-state-default,
@@ -132,7 +131,7 @@ $checkbox-slider--small__width:		50px;
 // .ui-widget-header .ui-state-default,
 {
 	background: $alto;
-	width: 80px;
+	width: $checkbox-slider__width;
 	height: $checkbox-slider__height;
 	border-radius: 100px;
 	outline: 0;
@@ -146,38 +145,52 @@ $checkbox-slider--small__width:		50px;
 	}
 
 	&.-small {
+		width: $checkbox-slider--small__width;
 		height: $checkbox-slider--small__height;
 	}
 }
 
+// hide label text for 'check box slider',
+// the text for this is created via pseudo els
 .ui-button-text-only .ui-button-text {
-	display: none;
+	
+    @extend %font-weight__bold;
+    @extend %color__white;
+    @extend %font-size__13;
+    @extend %text-transform__uppercase;
+
+	.check-box__slider & {
+		display: none;
+	}
 }
 
-// .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only:after,
-// .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-active:after {
-// 	content: "";
-// 	display: block;
-// 	position: absolute;
-// 	top: 0;
-// 	@include transform( translateX( 100% ));
-// 	right: 100%;
-// 	border-radius: 100%;
-// 	width: $checkbox-slider__height - 2;
-// 	height: $checkbox-slider__height - 2;
-// 	background: white;
-// 	border: 1px solid $dusty-gray;
-// 	// @include transition( right 0.15s, transform 0.15s);
-// 	@include transition( right 0.15s, transform 0.15s, border-color .5s);
 
-// 	.-small & {
-// 		width: $checkbox-slider--small__height - 2;
-// 		height: $checkbox-slider--small__height - 2;
-// 	}
-// }
+.ui-buttonset .ui-button {
+	margin: 0 2px;
+}
 
 
 .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
+
+	&:before,
+	&.ui-state-active:before,
+	{
+		content: "No";
+		@include scut-center-transform(y);
+		right: 18px;
+	    @extend %font-weight__bold;
+	    @extend %color__white;
+	    @extend %font-size__13;
+	    @extend %text-transform__uppercase;
+
+
+  	}
+
+	&.ui-state-active:before {
+		content: "Yes";
+		right: auto;
+		left: 12px;
+	}
 
 	&:after,
 	&.ui-state-active:after,
@@ -205,11 +218,29 @@ $checkbox-slider--small__width:		50px;
 		@include transform( translateX( 0% ));
 	}
 
-	&.-small:after {
-		width: $checkbox-slider--small__height - 2;
-		height: $checkbox-slider--small__height - 2;
+	
+	// small checkbox slider
+	&.-small {
+
+		&:before,
+		&.ui-state-active:before,
+		{
+			right: 9px;
+		    @extend %font-size__10;
+		}
+
+		&.ui-state-active:before,
+		{
+			left: -6px;
+		}
+
+		&:after {
+			width: $checkbox-slider--small__height - 2;
+			height: $checkbox-slider--small__height - 2;
+		}
 	}
 }
+
 
 
 
@@ -249,4 +280,30 @@ $checkbox-slider--small__width:		50px;
 	}
 }
 
+
+// TODO: needs attention
+// bugs caused from this - 
+.form-section {
+	height: auto;
+	overflow: hidden;
+	// visibility: visible;
+	opacity: 1;
+	@include transition( height 0 0, opacity .7s);
+	
+	&.is-hidden {
+		height: 0;
+		// visibility: hidden;
+		opacity: 0;
+		// @include transition( all 0 0);
+		// @include transition( none );
+	}
+
+
+	// add mb to last row in -team-invite-people section
+	&.-team-invite-people {
+		.row:last-child {
+			margin-bottom: 24px;
+		}
+	}
+}
 

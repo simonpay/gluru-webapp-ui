@@ -1,15 +1,23 @@
 <div class="row -form">
-    <div class="large-6">
+    <div class="large-6 u-inherit-height">
         
-        <div class="media">
+        <div class="media -v-center">
             <div class="media__img">
                 
-                <input type="checkbox" id="applySettingsForWholeTeam" style="display:none;"><label class="-small js-prevent-fout" for="applySettingsForWholeTeam" style="display:none;">Toggle</label>
+                <div class="check-box__slider prevent-fout">
+                    <input 
+                        type="checkbox" 
+                        class="checkbox_slider" 
+                        id="applySettingsForWholeTeam{{ i }}">
+                    <label 
+                        class="-small js-prevent-fout" 
+                        for="applySettingsForWholeTeam{{ i }}"></label>
+                </div>
 
             </div>
             <div class="media__body">
 
-                <p class="stage__text -light">Apply these settings for the whole team?</p>
+                <span class="stage__text -light">Apply these settings for the whole team?</span>
 
             </div>
         </div>

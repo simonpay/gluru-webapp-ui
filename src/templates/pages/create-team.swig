@@ -4,45 +4,43 @@
 {% block meta-description %}{{meta.description}}{% endblock %}
 
 {% block head %}
-	<link rel="stylesheet" href="css/jquery-ui.css" />
-	{% parent %}
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    {% parent %}
 {% endblock %}
 
 {% block content %}
 
-	{% set bln_hide_dev_buttons = 1 %}
-	{% set obj = mydata.setup %}
+    {% set bln_hide_dev_buttons = 1 %}
+    {% set obj = mydata.setup %}
 
-	{# main-nav #}
-	{% include "src/templates/includes/main-nav.swig" %}
+    {# main-nav #}
+    {% include "src/templates/includes/main-nav.swig" %}
 
-	{# drawer #}
-	{% include "src/templates/includes/drawer-files.swig" %}
+    {# drawer #}
+    {% include "src/templates/includes/drawer-files.swig" %}
 
-	{# actions #}
-	{% include "src/templates/includes/actions-footprint.swig" %}
+    {# actions #}
+    {% include "src/templates/includes/actions-footprint.swig" %}
 
-	{# stage #}
-	{% include "src/templates/includes/stage__setup--create-team.swig" %}
+    {# stage #}
+    {% include "src/templates/includes/stage__setup--create-team.swig" %}
 
 {% endblock %}
 
 {% block javascripts %}
-	{% parent %}
-	<script src="js/pages/setup.js"></script>
+    {% parent %}
+    <script src="js/pages/setup.js"></script>
     <script>
-    	(function(){
-        	$(".js-example-basic-multiple").select2({
-				placeholder: "Select multiple sources",
-				allowClear: true        		
-        	});
-        	$(".js-example-basic-hide-search").select2({
-				placeholder: "Select...",
-				minimumResultsForSearch: Infinity       		
-        	});
-        	$( "#inviteTeamConnectSource" ).button();
-        	$( "#applySettingsForWholeTeam" ).button();
-        	$( ".js-prevent-fout" ).show();
-    	})();
+        (function(){
+            $(".js-example-basic-multiple").select2();
+            $(".js-example-basic-hide-search").select2({
+                minimumResultsForSearch: Infinity
+            });
+            $( ".checkbox_slider" ).button();
+            $( "#radio" ).buttonset();
+
+            // remove class that sets visibility:hidden
+            $( ".prevent-fout" ).removeClass( "prevent-fout" );
+        })();
     </script>
 {% endblock %}

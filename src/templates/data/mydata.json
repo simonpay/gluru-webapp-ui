@@ -293,20 +293,6 @@
                 }
             },
             {
-                "section_id":                           "account_type",
-                "text":                                 "Account Type",
-                "url":                                  "account-type.html",
-                "stage_data": {
-                    "stage_id":                         "signup",
-                    "stage_heading":                    "Almost there!",
-                    "stage_sub_heading":                "Choose Single user or Team to setup your account."
-                },
-                "help_data": {
-                    "heading":                          "Great job! Now lets set up your account.",
-                    "subheading":                       "You can choose a single user or team account and then create your team!"
-                }
-            },
-            {
                 "section_id":                           "create_team",
                 "text":                                 "Create Team",
                 "url":                                  "create-team.html",

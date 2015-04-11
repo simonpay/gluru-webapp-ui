@@ -14,7 +14,7 @@
     </div>
     <div class="large-2">
 
-        <select class="js-example-basic-hide-search" style="width:100%;height:38px;display:none;">
+        <select class="js-example-basic-hide-search" style="width:100%;height:38px">
             <option value="a">Admin</option>
             <option value="b">Other</option>
             <option value="c">Another</option>
@@ -32,7 +32,7 @@
     </div>
     <div class="large-3">
 
-        <select class="js-example-basic-hide-search" style="width:100%;height:38px;display:none;">
+        <select class="js-example-basic-hide-search" style="width:100%;height:38px">
             <option value="a">See everything</option>
             <option value="b">Other</option>
             <option value="c">Another</option>
