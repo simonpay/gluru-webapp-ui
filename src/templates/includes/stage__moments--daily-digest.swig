@@ -5,27 +5,14 @@
     {# section moments #}
     <section class="section-wrap -moments js-section-moments">
         
-        {% set section = "timeline" %}
+        {% set section = "daily-digest" %}
         {% include "panel-header--moments.swig" %}
 
-        {# single view #}
+        {# daily digest doesnt have split view so always cols = 1 #}
         {% set cols = 1 %}
         {% set cols_class = "-cols-1" %}
         {% set split_view_class = "" %}
         {% include "stage__moments--split-view-wrap-outer.swig" %}
-
-        {# split-view - 2 cols #}
-        {% set cols = 2 %}
-        {% set cols_class = "-cols-2" %}
-        {% set split_view_class = "-split-view" %}
-        {% include "stage__moments--split-view-wrap-outer.swig" %}
-
-        {# split-view - 3 cols #}
-        {% set cols = 3 %}
-        {% set cols_class = "-cols-3" %}
-        {% set split_view_class = "-split-view" %}
-        {% include "stage__moments--split-view-wrap-outer.swig" %}
-
 
     </section><!-- // .section-wrap.-moments -->
 

@@ -326,6 +326,67 @@
                 }
             ]
         },
+        "daily_digest": {
+            "people": [
+                {
+                    "person_name":                  "Alex Li",
+                    "person_email":                 "alexLi@gmail.com",
+                    "person_avatar_src":            "img/tmp_avatar_1.png",
+                    "files": [
+                        {
+                            "file_name":                "todo-list.text",
+                            "file_type_class":          "icon-sml__file--evernote",
+                            "file_modified":            "12 May 2015",
+                            "file_source_class":        "icon-sml__evernote"
+                        },
+                        {
+                            "file_name":                "todo-list.text",
+                            "file_type_class":          "icon-sml__file--evernote",
+                            "file_modified":            "12 May 2015",
+                            "file_source_class":        "icon-sml__evernote"
+                        }
+                    ]
+                },
+                {
+                    "person_name":                  "Jason Smith",
+                    "person_email":                 "jasonsmith@gmail.com",
+                    "person_avatar_src":            "img/tmp_avatar_2.png",
+                    "files": [
+                        {
+                            "file_name":                "todo-list.text",
+                            "file_type_class":          "icon-sml__file--evernote",
+                            "file_modified":            "12 May 2015",
+                            "file_source_class":        "icon-sml__evernote"
+                        },
+                        {
+                            "file_name":                "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
+                            "file_type_class":          "icon-sml__file--text",
+                            "file_modified":            "12 May 2015",
+                            "file_source_class":        "icon-sml__gdrive"
+                        },
+                        {
+                            "file_name":                "todo-list.text",
+                            "file_type_class":          "icon-sml__file--evernote",
+                            "file_modified":            "12 May 2015",
+                            "file_source_class":        "icon-sml__evernote"
+                        }
+                    ]
+                },
+                {
+                    "person_name":                  "Alphonso Double-barrelled Long-name Engelking",
+                    "person_email":                 "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                    "person_avatar_src":            "img/tmp_avatar_3.png",
+                    "files": [
+                        {
+                            "file_name":                "todo-list.text",
+                            "file_type_class":          "icon-sml__file--evernote",
+                            "file_modified":            "12 May 2015",
+                            "file_source_class":        "icon-sml__evernote"
+                        }
+                    ]
+                }
+            ]
+        },
         "timeline": {
             "recent": {
                 "events": [

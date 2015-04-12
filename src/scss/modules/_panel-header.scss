@@ -61,6 +61,13 @@
         // border-top-right-radius: 15px;
         // background: $green;
     }
+
+    &.-daily-digest {
+        height: 80px;
+        background: $blue;
+        border-top-left-radius: $priority-box__border-radius;
+        border-top-right-radius: $priority-box__border-radius;
+    }
 }
 
 .panel-header--drawer {
@@ -89,7 +96,7 @@
 }
 
 .panel-header--location,
-.panel-header--timeline,
+.panel-header--moments,
 .panel-header--setup {
     background: $alabaster;
 
@@ -105,9 +112,9 @@
 }
 
 // header for timeline containing recent and future tabs 
-.panel-header--timeline,
+.panel-header--moments,
 .panel-header--setup {
-    z-index: $panel-header--timeline-z-index;
+    z-index: $panel-header--moments-z-index;
     // make panel absolute so it streteches 100% width when 
     // multiple timelines cause horizonatl scrolling
     position: absolute;

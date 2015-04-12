@@ -410,3 +410,25 @@
     @extend %color__zeus;
 }
 
+// daily digest header 
+.panel-header__heading-text {
+    @extend %font-size__20;
+    @extend %font-weight__lighter;
+    @extend %color__white;
+}
+
+// daily digest header 
+.panel-header__subheading-text {
+    @extend %color__white;
+}
+
+// section headings for people, meetings etc
+.daily-digest__section-heading {
+    @extend %font-size__20;
+    @extend %font-weight__lighter;
+    @extend %color__black;
+    @extend %line-height__normal;
+}
+
+
+

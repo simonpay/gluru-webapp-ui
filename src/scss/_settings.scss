@@ -25,12 +25,13 @@ $pink-light:                #dc4082;                    // light pink
 $pink-lighter:              #e5689d;                    // lighter pink
 $orange:                    #f9441f;                    // orange
 $green:                     #16b451;                    // green
-$blue:                      #0098ce;                    // blue
+$blue:                      #2b7de1;                    // blue
 $light-green:               #8ce31c;                    // lime green
 $zeus:                      #2e261e;                    // very very dark brown
 // shades of gray - white to black range:   
 $white:                     #fff;                       // white
 $alabaster:                 #fafafa;                    // virtually white
+$gallery:                   $gallery;                       // off white
 $gallery-light:             lighten($gallery, 4%);
 $alto:                      #ddd;                       // very light gray
 $silver-light:              lighten($silver, 5%);
@@ -39,7 +40,7 @@ $silver-dark:               darken($silver, 5%);
 $dusty-gray-light:          lighten($dusty-gray, 5%);
 $dusty-gray:                $dusty-gray;                // mid-light gray
 $dusty-gray-dark:           darken($dusty-gray, 5%);
-$Gray:                 		#7f7f7f;                    // mid gray
+$Gray:                      #7f7f7f;                    // mid gray
 $dove-gray:                 #666;                       // dark gray
 $mine-shaft:                #333;                       // very dark gray
 $black:                     #000;                       // black
@@ -56,8 +57,8 @@ $tooltips-arrow-height:     12px;
 // -----------------------------------
 // STACKING ORDER (z-index)
 // -----------------------------------
-$modal-z-index:     	                  	1000;
-// $modal-box-z-index:                       	1010;
+$modal-z-index:                             1000;
+// $modal-box-z-index:                          1010;
 // $modal-screen-z-index:                      1000;
 $tooltip-z-index:                           200;
 $main-nav-z-index:                          100;
@@ -65,7 +66,7 @@ $drawer-wrap-z-index:                       50;
 $actions-wrap-z-index:                      40;
 $search-wrap-z-index:                       30;
 $panel-header-stage-z-index:                20;
-$panel-header--timeline-z-index:			10;
+$panel-header--moments-z-index:            	10;
 // small screens
 $actions-wrap-z-index_mq-sml:               110;
 
@@ -85,13 +86,13 @@ $stage-padding-right:                       $_stage-indent-right;
 // -----------------------------------
 // on the stage (that eddie doesnt like)
 // toggle the value between 0 and 1;
-$show-stage-left-indent:					0;
+$show-stage-left-indent:                    0;
 
-$stage-left-indent:							0;
-$stage-section-padding-left:				$stage-padding-left;
+$stage-left-indent:                         0;
+$stage-section-padding-left:                $stage-padding-left;
 @if $show-stage-left-indent == 1 {
-	$stage-left-indent:						$stage-padding-left;
-	$stage-section-padding-left:			0;
+    $stage-left-indent:                     $stage-padding-left;
+    $stage-section-padding-left:            0;
 }
 // -----------------------------------
 
@@ -129,7 +130,7 @@ $sml-icon-height:                           20px;
 $lrg-icon-height:                           32px;
 
 // font sizes
-$standard-font-size--lists:			        rem(13);
+$standard-font-size--lists:                 rem(13);
 
 // options list
 $options-list-link-height-drawer:           38px;
@@ -147,7 +148,7 @@ $options-list-heading-padding-left--drawer: $panel-header-padding-left--drawer -
 // files
 $min-table-width-files-single:              600px;
 $min-table-width-files-split:               $min-table-width-files-single - 200px;
-$files-table-padding-left:	               	10px;
+$files-table-padding-left:                  10px;
 
 // timeline
 $event-height:                              80px;
@@ -155,8 +156,8 @@ $event-height-split-view:                   80px;
 $event-time-width:                          125px;
 $event-icon-wrap-width:                     52px;
 $event-icon-wrap-height:                    $event-icon-wrap-width;
-$event-arrow-width:							40px;
-$event-arrow-height:						20px;
+$event-arrow-width:                         40px;
+$event-arrow-height:                        20px;
 
 
 $panel-header-height--item-selected:        $panel-header-height + ($event-height - $panel-header-height) / 2;
@@ -183,10 +184,11 @@ $tooltip-show-delay:            0.5s;
 // -----------------------------------
 // FORMS
 // -----------------------------------
-$form-el__height--row:					38px;
-$form-el__height--input-text:			38px;
-$form-el__height--select:				38px;
+$form-el__height--row:                  38px;
+$form-el__height--input-text:           38px;
+$form-el__height--select:               38px;
 
 
-
+// priority box
+$priority-box__border-radius:			15px;
 

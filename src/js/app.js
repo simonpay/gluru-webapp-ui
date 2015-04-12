@@ -2,64 +2,67 @@
 (function(){
 
     // cached objects
-    var $main_container         = $( ".js-main-container" ),
-        $drawer_wrap            = $( ".js-drawer-wrap" ),
-        $actions_wrap           = $( ".js-actions-wrap" ),
-        $actions                = $( ".js-actions" ),
-        $search_wrap            = $( ".js-search-wrap" ),
+    var $main_container                     = $( ".js-main-container" ),
+        $drawer_wrap                        = $( ".js-drawer-wrap" ),
+        $actions_wrap                       = $( ".js-actions-wrap" ),
+        $actions                            = $( ".js-actions" ),
+        $search_wrap                        = $( ".js-search-wrap" ),
 
-        // main nav
-        $add_button             = $( ".js-add" ),
+        // main nav     
+        $add_button                         = $( ".js-add" ),
 
-        // modal
-        $modal                  = $( ".js-modal" ),
-        $show_modal             = $( ".js-show-modal" ),
-        $close_modal            = $( ".js-close-modal" ),
-    
-        // accounts nav
-        $notifications          = $( ".js-notifications" ),
-    
-        // stage nav
-        $js_sort                = $( ".js-sort" ),
-            
-        // drawer   
-        $toggle_drawer          = $( ".js-toggle-drawer" ),
-        $close_drawer           = $( ".js-close-drawer" ),
-    
-        // actions  
-        $toggle_actions         = $( ".js-toggle-actions" ),
-        $close_actions          = $( ".js-close-actions" ),
-        $actions_current_file   = $( ".js-actions--current-item" ),
+        // modal     
+        $modal                              = $( ".js-modal" ),
+        $show_modal                         = $( ".js-show-modal" ),
+        $close_modal                        = $( ".js-close-modal" ),
 
-        // search
-        $search                 = $( ".js-search" ),
-        $search_field_wrap      = $( ".js-search-field-wrap" ),
-        $search_field           = $( ".js-search-field" ),
-        $close_search           = $( ".js-close-search" ),
-    
-        // moments  
-        $now                    = $( ".js-now" ),
-        $timeline_wrap          = $( ".js-timeline-wrap" ),
-        $timeline_wrap_outer    = $( ".js-timeline-wrap-outer" ),
-        $timeline_range         = $( ".js-timeline-range" ),
-        $toggle_timeline_view   = $( ".js-toggle-timeline-view" ),
-        
+        // accounts nav     
+        $notifications                      = $( ".js-notifications" ),
+
+        // stage nav     
+        $js_sort                            = $( ".js-sort" ),
+
+        // drawer        
+        $toggle_drawer                      = $( ".js-toggle-drawer" ),
+        $close_drawer                       = $( ".js-close-drawer" ),
+
+        // actions       
+        $toggle_actions                     = $( ".js-toggle-actions" ),
+        $close_actions                      = $( ".js-close-actions" ),
+        $actions_current_file               = $( ".js-actions--current-item" ),
+
+        // search     
+        $search                             = $( ".js-search" ),
+        $search_field_wrap                  = $( ".js-search-field-wrap" ),
+        $search_field                       = $( ".js-search-field" ),
+        $close_search                       = $( ".js-close-search" ),
+
+        // moments       
+        $now                                = $( ".js-now" ),
+        $timeline_wrap                      = $( ".js-timeline-wrap" ),
+        $timeline_wrap_outer                = $( ".js-timeline-wrap-outer" ),
+        $timeline_range                     = $( ".js-timeline-range" ),
+        $toggle_timeline_view               = $( ".js-toggle-timeline-view" ),
+        //daily digest
+        $expandable_daily_digest_tables     = $( ".js-toggle-daily-digest-table" ),
+        // $table_wraps_daily_digest    = $( ".daily-digest .js-table-wrap" ),
+
         // tooltips
-        $tooltip                = $( ".js-tooltip" ),
-        $tooltip_text           = $( ".js-tooltip-text" ),
-        $tooltip_triggers       = $( ".js-tt" ),
-        
+        $tooltip                            = $( ".js-tooltip" ),
+        $tooltip_text                       = $( ".js-tooltip-text" ),
+        $tooltip_triggers                   = $( ".js-tt" ),
+
         // pop menu
-        $pop_menu_wrap          = $( ".js-pop-menu-wrap" ),
-        $pop_menu_triggers      = $( ".js-pmt" ),
-        $pop_menu_item          = $( ".js-pop-menu-item" ),
-        
+        $pop_menu_wrap                      = $( ".js-pop-menu-wrap" ),
+        $pop_menu_triggers                  = $( ".js-pmt" ),
+        $pop_menu_item                      = $( ".js-pop-menu-item" ),
+
         // collapsable lists
-        $expandable_lists       = $( ".js-toggle-expand-list" ),
-        $options_list_link      = $( ".options-list__link" ),
-        
+        $expandable_lists                   = $( ".js-toggle-expand-list" ),
+        $options_list_link                  = $( ".options-list__link" ),
+
         // files
-        $table_wraps            = $( ".js-file-table-wrap-outer" );
+        $table_wraps                        = $( ".js-file-table-wrap-outer" );
 
 
 
@@ -395,8 +398,8 @@
                         _timeline_range     = $this.data( "timeline-range" ),
                         _obj_gluru          = gluru_app;
 
-                    if ( _timeline_range === "future" ) {
-                        location.href = "moments-future.html";
+                    if ( _timeline_range === "daily-digest" ) {
+                        location.href = "moments-daily-digest.html";
                     } else {
                         location.href = "moments.html";
                     }
@@ -411,6 +414,27 @@
 
                     $this
                         .addClass( "is-selected" );
+                }
+            },
+
+            daily_digest: {
+
+                section_headers: {
+
+                    toggle: function () {
+
+                        $this = $(this);
+
+                        $this
+                            .toggleClass( "is-collapsed" )
+                                .parent()
+                                    .next( ".js-table-wrap" )
+                                        .animate({
+                                                "height": "toggle"
+                                            }, {
+                                                duration: 300
+                                            });
+                    }
                 }
             }
         },
@@ -830,12 +854,19 @@
     $toggle_timeline_view.on( "click", function(){
         obj_gluru.moments.timeline.toggle_timeline_view.call( $(this) );
     });
-    // timeline recent and future links
+    // timeline recent and daily digest links
     $timeline_range.on( "click", function(){
         obj_gluru.moments.timeline.do_range_nav_click.call( $(this) );
     });
     // set the initial view
     obj_gluru.moments.timeline.set_timeline_view( ".-cols-1" );
+
+
+    // DAILY DIGEST
+    // -------------------------------------------------
+    $expandable_daily_digest_tables.on( "click", function(){
+        obj_gluru.moments.daily_digest.section_headers.toggle.call( $(this) );
+    });
 
 
     // FILES

@@ -68,6 +68,10 @@
 .icon__people {                 @include use-sprite("icon__people"); }
 .icon__files {                  @include use-sprite("icon__files"); }
 
+// daily digest
+.icon__coffee--blue {           @include use-sprite("icon__coffee--blue"); }
+
+
 // sml variants
 .icon-sml__phone {              @include use-sprite("icon-sml__phone"); }
 .icon-sml__phone-in {           @include use-sprite("icon-sml__phone-in"); }

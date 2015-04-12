@@ -73,6 +73,11 @@
         .table & {
             margin-left: 10px;
             margin-right: 20px;
+            
+            // when inside daily-digest section
+            .daily-digest & {
+                margin-right: 23px;
+            }
         }
         
         // add custom margin to icons when inside sources row
@@ -81,10 +86,22 @@
             margin-right: 20px;
         }
         
-        // add extra margin to accomodate inset icons on event
-        // priority panels
-        .-event & {
+        // add extra margin to accomodate inset icons 
+        // priority panels for 
+        // - event
+        // - daily-digest
+        .-event &,
+        // .-daily-digest &,
+        {
             margin-right: 26px;
+        }
+
+        .daily-digest .table__col.-file-name & {
+            margin-left: 19px;
+        }
+
+        .panel-header.-daily-digest & {
+            margin-right: 20px;
         }
     }
 

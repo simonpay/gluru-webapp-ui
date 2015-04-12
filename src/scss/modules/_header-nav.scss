@@ -2,7 +2,7 @@
 # HEADER NAV
 \*------------------------------------*/
 
-// buttons that sit within headers such as timeline > recent, future
+// buttons that sit within headers such as timeline > recent, daily-digest
 // setup process > create account, connect sources
 
 .header-nav { // nav
@@ -30,7 +30,7 @@
                 height: inherit;
                 padding: 0 20px;
                 text-decoration: none;
-                @include transition( all 0.3s );
+                @include transition( color .3s, box-shadow .3s );
                 
                 .-setup & {
                     padding: 0 15px;
@@ -61,7 +61,7 @@
                             @include use-sprite("icon-sml__clock--pink");
                         }
 
-                        &.-future {
+                        &.-daily-digest {
                             @include use-sprite("icon-sml__calendar--pink");
                         }
                     }
@@ -70,7 +70,7 @@
 
                 .header-nav__icon {
                     @include transform( translateY(-2px) );
-                    @include transition( all .3s );
+                    @include transition( color .3s, border-color .3s );
                     margin-right: -2px;
 
                     &.-recent {
@@ -78,7 +78,7 @@
                         margin-right: -4px;
                     }
 
-                    &.-future {
+                    &.-daily-digest {
                         @include use-sprite("icon-sml__calendar");
                     }
 

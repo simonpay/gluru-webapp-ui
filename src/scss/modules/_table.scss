@@ -9,6 +9,10 @@
     width: 100%;
     table-layout: fixed; // make table cell widths depend on values rather than their content
     font-size: rem(13);
+
+    &.-daily-digest {
+        margin-top: 10px;
+    }
 }
 
     .table__row {
@@ -47,7 +51,7 @@
             // add rounded corners to first and last table row 
             // inside tables on 'future' events screen to match 
             // 'event' panels (priority-box)
-            .event-table-wrap .table__row:first-child & {
+            .table.-daily-digest .table__row:first-child & {
                 &:first-child {
                     border-top-left-radius: 15px;
                 }
@@ -55,7 +59,8 @@
                     border-top-right-radius: 15px;
                 }
             }
-            .event-table-wrap .table__row:last-child & {
+            .table.-daily-digest .table__row:last-child & {
+                border: none;
                 &:first-child {
                     border-bottom-left-radius: 15px;
                 }

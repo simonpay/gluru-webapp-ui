@@ -5,14 +5,27 @@
 // panels that can take on different colours for priority
 // the event panel and actions current file at this point
 
+// wrapper around priority-box for 
+// daily-digest section headers
+.priority-box__wrap {
+    position: relative;
+    margin-top: 15px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
 .priority-box {
+    position: relative;
     height: $event-height;
     white-space: normal;
     font-size: 1rem; // rest font-size
 
     // width: 500px;
     background: $dusty-gray;
-    border-radius: 15px;
+    border-radius: $priority-box__border-radius;
     
     &.-critical {
         background: $pink;
@@ -45,34 +58,40 @@
         }
     }
 
-    // the triangle that points to the time
-    &:after {
-        content: "";
-        @include scut-triangle(left, $event-arrow-height $event-arrow-width, $dusty-gray);
-        @include scut-center-transform(y);
-        left: -20px;
-    }
-
-    // set color of triangles when inside specific class 
-    &.-critical:after {
-        border-right-color: $pink;
-    }
-    &.-non-critical:after {
-        border-right-color: $orange;
-    }
-    &.-now:after {
-        border-right-color: $green;
-    }
-
     &.-event,
-    &.-current-item {
+    &.-current-item,
+    &.-daily-digest {
         padding: 0 35px 0 16px;
+    }
+
+    &.-daily-digest {
+        background: $gallery;
     }
 
     &.-event {
         width: 50%;
         max-width: 500px;
         min-width: 400px;
+
+        // the triangle that points to the time
+        // only sh9w this for "event" priority boxes
+        &:after {
+            content: "";
+            @include scut-triangle(left, $event-arrow-height $event-arrow-width, $dusty-gray);
+            @include scut-center-transform(y);
+            left: -20px;
+        }
+
+        // set color of triangles when inside specific class 
+        &.-critical:after {
+            border-right-color: $pink;
+        }
+        &.-non-critical:after {
+            border-right-color: $orange;
+        }
+        &.-now:after {
+            border-right-color: $green;
+        }
 
         // when timeline is split, remove animations
         .-split-view & {
@@ -107,6 +126,35 @@
             }
             &.-now:after {
                 border-bottom-color: $green;
+            }
+        }
+
+    }
+
+    // daily-digest section headers that have 
+    // collapsable tablees underneath
+    // TODO: make this into module - similar to
+    // the collapsable inside options-list
+    &.-collapsable {
+        cursor: pointer;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            @include calc( top, "50% - 6px" );
+            // top: 50%;
+            right: 38px;
+            width: 20px;
+            height: 12px;
+            @include transform( rotate(180deg) );
+            @include use-sprite("icon__expand");
+
+        }
+
+        &.is-collapsed {
+            &:after {
+                @include transform( rotate(0deg) );
             }
         }
     }

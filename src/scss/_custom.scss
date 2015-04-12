@@ -170,3 +170,22 @@
 .-hide-section {
     display: none;
 }
+
+
+
+
+
+.daily-digest-wrap {
+    margin: 0;
+    padding: 23px 14px;
+}
+
+.daily-digest {
+    position: relative;
+    background: white;
+    border-bottom-left-radius: $priority-box__border-radius;
+    border-bottom-right-radius: $priority-box__border-radius;
+    padding: 18px;
+}
+
+
