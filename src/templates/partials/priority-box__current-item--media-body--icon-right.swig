@@ -6,7 +6,7 @@
     </div>
     <div class="media__body">
 
-		<a href="#" class="link priority-box__text">Sales_Report_with_a_very_very_very_long_file_name_that_wont_fit_on_one_line.doc</a>
+		{%> "priority-box__current-item--media-body" %}
 
 	</div>
 </div>
