@@ -414,11 +414,10 @@
                     "section_name":               "Meetings",
                     "items": [
                         {
-                            "item_name":                   "Alphonso Double-barrelled Long-name Engelking",
-                            "item_email":                  "alphonso-double-barrelled-long-name-engelking@gmail.com",
-                            "item_avatar_src":             "img/tmp_avatar_3.png",
+                            "item_name":                   "Super long meeting name that will be truncated for sure even on fairly large screens resolutions",
+                            "item_date_time":              "Today, 10:33am",
+                            "item_location":               "8 Warner Yard, ‎Clerkenwell, London, EC1R 5EY",
                             "item_attendees":              "Jason Smith, Amy Tan, Han Solo, Tony Stark",
-                            "source_type":                  "icon-sml__gcalendar",
                             "file_categories": [
                                 {
                                     "file_category_id":          "docs",
@@ -485,11 +484,10 @@
                             ]
                         },
                         {
-                            "item_name":                   "Alex Li",
-                            "item_email":                  "Budget planning meeting request",
-                            "item_avatar_src":             "img/tmp_avatar_1.png",
+                            "item_name":                   "Budget planning meeting request",
+                            "item_date_time":              "Today, 3:15pm",
+                            "item_location":               "8 Warner Yard, ‎Clerkenwell, London, EC1R 5EY",
                             "item_attendees":              "Amy Tan, Alex Li, Han Solo, Tony Stark, Jason Smith",
-                            "source_type":                  "icon-sml__gcalendar",
                             "file_categories": [
                                 {
                                     "file_category_id":          "docs",

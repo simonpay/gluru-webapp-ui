@@ -159,6 +159,7 @@
 
 // the default text within tables
 .table__text {
+    display: block;
     @extend %nowrap;
     @extend %color__black;
     @extend %font-size__13;
@@ -187,6 +188,7 @@
 
 // font style for headings within tables
 .table__text--heading {
+    display: block;
     @extend %nowrap;
     @extend %font-size__16;
     @extend %font-weight__bold;
@@ -195,6 +197,7 @@
 
 // font style for sub-headings within tables
 .table__text--sub-heading {
+    display: block;
     @extend %nowrap;
     @extend %font-size__13;
     // @extend %font-weight__bold;
@@ -206,12 +209,16 @@
 .link {
     @extend %text-decoration__none;
 
+    &:hover {
+        @extend %text-decoration__underline;
+    }
+
     &.-stage {
         @extend %color__green;
 
-        &:hover {
-            @extend %text-decoration__underline;
-        }
+        // &:hover {
+        //     @extend %text-decoration__underline;
+        // }
     }
 }
 

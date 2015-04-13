@@ -57,13 +57,6 @@
             }
         }
 
-        .-daily-digest & {
-            &.-meeting {
-                width: 50%;
-                min-width: 200px;
-            }
-        }
-            
         // when inside actions, add margin to left 
         // for small icons in related files etc
         .actions & {
@@ -96,19 +89,30 @@
         // add extra margin to accomodate inset icons 
         // priority panels for 
         // - event
-        // - daily-digest
+        // - daily-digest // removed as meeting now doesnt have inset icon
         .-event &,
-        .-daily-digest &,
+        // .-daily-digest &,
         {
             margin-right: 26px;
         }
 
+        .-daily-digest & {
+            margin-right: 16px;
+            
+            &.-meeting {
+                width: 50%;
+                min-width: 200px;
+                margin-right: 5%;
+            }
+        }
+            
         .daily-digest .table__col.-file-name & {
             margin-left: 19px;
         }
-
+        
+        // daily-digest coffee icon
         .panel-header.-daily-digest & {
-            margin-right: 20px;
+            margin-right: 27px;
         }
     }
 

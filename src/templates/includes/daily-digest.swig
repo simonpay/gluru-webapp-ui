@@ -36,7 +36,13 @@
 
                             <div class="disc-img -event">
                                 <div class="disc-img__img-wrap">
-                                    <img class="disc-img__img" src="{{ obj_item.item_avatar_src }}" alt="">
+
+                                    {% if obj_section.section_id === "people" %}
+                                        <img class="disc-img__img" src="{{ obj_item.item_avatar_src }}" alt="">
+                                    {% elseif obj_section.section_id === "meetings" %}
+                                        <div class="u-center-transform icon__gcalendar"></div>
+                                    {% endif %}
+
                                 </div>
 
                                 {% if obj_item.source_type !== "" %}
@@ -44,6 +50,7 @@
                                     <div class="u-center-transform {{ obj_item.source_type }}"></div>
                                 </div>
                                 {% endif %}
+
                             </div>
 
                         </div>
@@ -51,21 +58,22 @@
 
                             {% if obj_section.section_id === "people" %}
 
-                                <div class="table__text--heading" title="{{ obj_item.title|striptags }}">{{ obj_item.item_name|safe }}</div>
-                                <div class="table__text--sub-heading" title="{{ obj_item.description|striptags }}">{{ obj_item.item_email|safe }}</div>
+                                <div class="table__text--heading" title="{{ obj_item.item_name|striptags }}">{{ obj_item.item_name|safe }}</div>
+                                <div class="table__text--sub-heading" title="{{ obj_item.item_email|striptags }}">{{ obj_item.item_email|safe }}</div>
 
                             {% elseif obj_section.section_id === "meetings" %}
 
                                 <div class="media -v-center">
                                     <div class="media__img -meeting">
 
-                                        <div class="table__text--heading" title="{{ obj_item.title|striptags }}">{{ obj_item.item_name|safe }}</div>
-                                        <div class="table__text--sub-heading" title="{{ obj_item.description|striptags }}">{{ obj_item.item_email|safe }}</div>
+                                        <div class="table__text--heading" title="{{ obj_item.item_name|striptags }}">{{ obj_item.item_name|safe }}</div>
+                                        <div class="table__text--sub-heading" title="{{ obj_item.item_date_time|striptags }}">{{ obj_item.item_date_time|safe }}</div>
 
                                     </div>
                                     <div class="media__body">
 
-                                        <div class="table__text"><strong>ATTENDEES: </strong><br>{{ obj_item.item_attendees|safe }}</div>
+                                        <div class="table__text" title="{{ obj_item.item_location|striptags }}"><strong>Location: </strong>{{ obj_item.item_location|safe }}</div>
+                                        <div class="table__text" title="{{ obj_item.item_attendees|striptags }}"><strong>Attendees: </strong>{{ obj_item.item_attendees|safe }}</div>
 
                                     </div>
                                 </div>

@@ -13,12 +13,8 @@
 
 		    </div>
 		    <div class="media__body">
-		    	<a href="#" class="link">
-		    		<div class="table__text--heading" title="{{ obj_person_row.person_name }}">{{ obj_person_row.person_name }}</div>
-		    	</a>
-		    	<a href="#" class="link">
-		    		<div class="table__text--sub-heading" title="{{ obj_person_row.person_email }}">{{ obj_person_row.person_email }}</div>
-		    	</a>
+	    		<a href="#" class="link table__text--heading" title="{{ obj_person_row.person_name }}">{{ obj_person_row.person_name }}</a>
+	    		<a href="#" class="link table__text--sub-heading" title="{{ obj_person_row.person_email }}">{{ obj_person_row.person_email }}</a>
 		    </div>
 
 		    {# {%> "file-nav" %} #}

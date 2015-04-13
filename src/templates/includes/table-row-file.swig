@@ -11,12 +11,10 @@
 		    </div>
 		    <div class="media__body">
 
-		    	<a href="#" class="link">
-		    		<div class="table__text" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_name }}</div>
-		    		{% if obj_file_row.file_summary %}
+	    		<a href="#" class="link table__text" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_name }}</a>
+	    		{% if obj_file_row.file_summary %}
 		    		<div class="table__text -light" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_summary }}</div>
-		    		{% endif %}
-		    	</a>
+	    		{% endif %}
 		    </div>
 
 		    {# {%> "file-nav" %} #}
