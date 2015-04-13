@@ -3,7 +3,7 @@
 
 <div class="split-view-wrap-container {{ col_class }} js-file-view">
 
-	{%> "panel-header--files-table" %}
+	{% include "panel-header--files-table.swig" %}
 
 	<div class="split-view-wrap">
 		<div class="scrollable-content">

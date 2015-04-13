@@ -115,7 +115,16 @@
 .icon-sml__clock--pink {        @include use-sprite("icon-sml__clock--pink"); }
 .icon-sml__calendar {           @include use-sprite("icon-sml__calendar"); }
 .icon-sml__calendar--pink {     @include use-sprite("icon-sml__calendar--pink"); }
+.icon-sml__chevron { 		    @include use-sprite("icon-sml__chevron"); }
 
+// positioning for icon 
+.icon__pos--path {
+	display: inline-block;
+	position: relative;
+	top: 6px;
+	width: 16px;
+	transform: translateX(-3px);
+}
 
 //  large icons
 // ------------------------------------

@@ -29,6 +29,7 @@
 // font-weight  
 @mixin font-weight($val)        {   font-weight: $val;                                                  }
 %font-weight__lighter           {   @include font-weight(lighter);                                      }
+%font-weight__normal            {   @include font-weight(normal);                                      }
 %font-weight__bold              {   @include font-weight(bold);                                         }
 
 // color
@@ -72,6 +73,8 @@
 // line-height
 @mixin line-height($val)        {   line-height: $val;                                                  }
 %line-height__normal            {   @include line-height(normal);                                       }
+%line-height__150percent        {   @include line-height(1.5);                                          }
+%line-height__200percent        {   @include line-height(2);                                            }
 
 // text-align
 @mixin text-align($val)         {   text-align: $val;                                                  }
@@ -223,6 +226,8 @@
 }
 
 // heading in single / split view panel-header
+// TODO: remove this if hierarchy structure approved by eddie
+// its not currently being used
 .split-view__heading {
     @extend %nowrap;
     @extend %font-size__18;
@@ -463,5 +468,24 @@
     }
 }
 
+.hierarchy__text {
+    @extend %font-size__13;
+    @extend %color__gray--dark;
 
+    &.-current-location {
+        @extend %font-weight__bold;
+        @extend %color__gray--xdark;
+    }
+
+    .panel-header--location & {
+        @extend %nowrap;
+        @extend %font-size__18;
+        @extend %font-weight__lighter;
+        @extend %color__gray--xxdark;
+
+        &.-current-location {
+            @extend %font-weight__normal;
+        }
+    }
+}
 

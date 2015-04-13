@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    # HIERARCHY
+\*------------------------------------*/
+
+// list of locations in actions panel footprint 
+
+.hierarchy__item { // ul
+    margin-top: -4px;
+    @extend %line-height__150percent;
+
+    .panel-header--location & {
+        margin-top: 0;
+    }
+}
+
+    .hierarchy__item { // li
+        float: left;
+        position: relative;
+        padding: 0 25px 0 0;
+
+        &:after {
+            content: "";
+            @include use-sprite("icon-sml__chevron");
+            position: absolute;
+            top: 2px;
+            right: 3px;
+        }
+
+        &:last-child {
+            &:after {
+                content: none;
+            }
+        }
+    }
+
+        .hierarchy__link { // a
+            // look in typography.scss
+        }

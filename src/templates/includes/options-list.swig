@@ -32,8 +32,8 @@
 
                             </div>
                             <div class="media__body">
-
-                                <div class="options-list__text--paragraph" title="{{ obj.text }}">{{ obj.text|safe }}</div>
+                            
+                                {% include "hierarchy-list.swig" %}
 
                             </div>
                         </div>

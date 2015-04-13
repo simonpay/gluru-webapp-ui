@@ -1,0 +1,21 @@
+{% for obj_hierarchy_option in mydata.actions.hierarchy.options %}
+
+    <ul class="hierarchy__list">
+    
+        {% for obj_node in obj_hierarchy_option.nodes %}
+
+            <li class="hierarchy__item">
+
+                {% if loop.last %}
+                    <span class="hierarchy__text -current-location" title="{{ obj_node.text|safe }}">{{ obj_node.text|safe }}</span>
+                {% else %}
+                    <a href="#" class="link hierarchy__text" title="{{ obj_node.text|safe }}">{{ obj_node.text|safe }}</a>
+                {% endif %}
+
+            </li>
+
+        {% endfor %}
+
+    </ul>
+
+{% endfor %}

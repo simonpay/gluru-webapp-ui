@@ -172,8 +172,25 @@
             "heading": "Hierarchy",
             "options": [
                 {
-                    "text"              : "<strong>My Drive</strong> > 2015 > Meetings > Meetings 2015 > Meetings 2015 > Meetings 2015",
-                    "className"         : "icon-sml__gdrive"
+                    "text"              : "<span class=\"icon__pos--path icon-sml__chevron\"></span>",
+                    "className"         : "icon-sml__gdrive",
+                    "nodes": [
+                        {
+                            "text":         "Google Drive"
+                        },
+                        {
+                            "text":         "My Drive"
+                        },
+                        {
+                            "text":         "2015"
+                        },
+                        {
+                            "text":         "Meetings 2015"
+                        },
+                        {
+                            "text":         "Branding"
+                        }
+                    ]
                 }
             ]
         },
