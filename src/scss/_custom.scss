@@ -172,8 +172,11 @@
 }
 
 
-
-
+// initiate table wrap around daily digest file table as display:none
+// the first jquery toggle will open instead of close  
+.daily-digest-table-wrap {
+    display: none;
+}
 
 .daily-digest-wrap {
     margin: 0;

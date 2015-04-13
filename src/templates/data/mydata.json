@@ -327,61 +327,232 @@
             ]
         },
         "daily_digest": {
-            "people": [
+            "sections": [
                 {
-                    "person_name":                  "Alex Li",
-                    "person_email":                 "alexLi@gmail.com",
-                    "person_avatar_src":            "img/tmp_avatar_1.png",
-                    "files": [
+                    "section_id":                 "people",
+                    "section_name":               "People",
+                    "items": [
                         {
-                            "file_name":                "todo-list.text",
-                            "file_type_class":          "icon-sml__file--evernote",
-                            "file_modified":            "12 May 2015",
-                            "file_source_class":        "icon-sml__evernote"
+                            "item_name":                   "Alex Li",
+                            "item_email":                  "alexLi@gmail.com",
+                            "item_avatar_src":             "img/tmp_avatar_1.png",
+                            "files": [
+                                {
+                                    "file_name":                "Sales.xls",
+                                    "file_type_class":          "icon-sml__file--spreadsheet",
+                                    "file_modified":            "10:33 am",
+                                    "file_source_class":        "icon-sml__gdrive"
+                                },
+                                {
+                                    "file_name":                "Itinerary.txt",
+                                    "file_type_class":          "icon-sml__file--drive",
+                                    "file_modified":            "9:01 am",
+                                    "file_source_class":        "icon-sml__box"
+                                },
+                                {
+                                    "file_name":                "Sales_Report.doc",
+                                    "file_type_class":          "icon-sml__file--drive",
+                                    "file_modified":            "20 Feb",
+                                    "file_source_class":        "icon-sml__gdrive"
+                                },
+                                {
+                                    "file_name":                "Proposal.pdf",
+                                    "file_type_class":          "icon-sml__file--pdf",
+                                    "file_modified":            "20 Feb",
+                                    "file_source_class":        "icon-sml__gdrive"
+                                }
+                            ]
                         },
                         {
-                            "file_name":                "todo-list.text",
-                            "file_type_class":          "icon-sml__file--evernote",
-                            "file_modified":            "12 May 2015",
-                            "file_source_class":        "icon-sml__evernote"
+                            "item_name":                   "Jason Smith",
+                            "item_email":                  "jasonsmith@gmail.com",
+                            "item_avatar_src":             "img/tmp_avatar_2.png",
+                            "files": [
+                                {
+                                    "file_name":                "Itinerary.txt",
+                                    "file_type_class":          "icon-sml__file--drive",
+                                    "file_modified":            "9:01 am",
+                                    "file_source_class":        "icon-sml__box"
+                                },
+                                {
+                                    "file_name":                "Sales.xls",
+                                    "file_type_class":          "icon-sml__file--spreadsheet",
+                                    "file_modified":            "10:33 am",
+                                    "file_source_class":        "icon-sml__gdrive"
+                                },
+                                {
+                                    "file_name":                "Proposal.pdf",
+                                    "file_type_class":          "icon-sml__file--pdf",
+                                    "file_modified":            "20 Feb",
+                                    "file_source_class":        "icon-sml__gdrive"
+                                }
+                            ]
+                        },
+                        {
+                            "item_name":                   "Alphonso Double-barrelled Long-name Engelking",
+                            "item_email":                  "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                            "item_avatar_src":             "img/tmp_avatar_3.png",
+                            "files": [
+                                {
+                                    "file_name":                "Sales.xls",
+                                    "file_type_class":          "icon-sml__file--spreadsheet",
+                                    "file_modified":            "10:33 am",
+                                    "file_source_class":        "icon-sml__gdrive"
+                                },
+                                {
+                                    "file_name":                "Itinerary.txt",
+                                    "file_type_class":          "icon-sml__file--drive",
+                                    "file_modified":            "9:01 am",
+                                    "file_source_class":        "icon-sml__box"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "person_name":                  "Jason Smith",
-                    "person_email":                 "jasonsmith@gmail.com",
-                    "person_avatar_src":            "img/tmp_avatar_2.png",
-                    "files": [
+                    "section_id":                 "meetings",
+                    "section_name":               "Meetings",
+                    "items": [
                         {
-                            "file_name":                "todo-list.text",
-                            "file_type_class":          "icon-sml__file--evernote",
-                            "file_modified":            "12 May 2015",
-                            "file_source_class":        "icon-sml__evernote"
+                            "item_name":                   "Alphonso Double-barrelled Long-name Engelking",
+                            "item_email":                  "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                            "item_avatar_src":             "img/tmp_avatar_3.png",
+                            "item_attendees":              "Jason Smith, Amy Tan, Han Solo, Tony Stark",
+                            "source_type":                  "icon-sml__gcalendar",
+                            "file_categories": [
+                                {
+                                    "file_category_id":          "docs",
+                                    "file_category_name":        "Docs",
+                                    "files": [
+                                        {
+                                            "file_name":                "Itinerary.txt",
+                                            "file_type_class":          "icon-sml__file--drive",
+                                            "file_modified":            "9:01 am",
+                                            "file_source_class":        "icon-sml__box"
+                                        },
+                                        {
+                                            "file_name":                "Proposal.pdf",
+                                            "file_type_class":          "icon-sml__file--pdf",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__gdrive"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "file_category_id":          "presentations",
+                                    "file_category_name":        "Presentations",
+                                    "files": [
+                                        {
+                                            "file_name":                "Board Meeting Deck.ppt",
+                                            "file_type_class":          "icon-sml__file--powerpoint",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__gdrive"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "file_category_id":          "emails",
+                                    "file_category_name":        "Emails",
+                                    "files": [
+                                        {
+                                            "file_name":                "Design Roadmap",
+                                            "file_summary":             "I really would love to get together.",
+                                            "file_type_class":          "icon-sml__file--email",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__gmail"
+                                        },
+                                        {
+                                            "file_name":                "Logo Options",
+                                            "file_summary":             "Please Make the logos 50% bigger.",
+                                            "file_type_class":          "icon-sml__file--email",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__gmail"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "file_category_id":          "spreadsheets",
+                                    "file_category_name":        "Spreadsheets",
+                                    "files": [
+                                        {
+                                            "file_name":                "Sales.xls",
+                                            "file_type_class":          "icon-sml__file--spreadsheet",
+                                            "file_modified":            "10:33 am",
+                                            "file_source_class":        "icon-sml__gdrive"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
-                            "file_name":                "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
-                            "file_type_class":          "icon-sml__file--text",
-                            "file_modified":            "12 May 2015",
-                            "file_source_class":        "icon-sml__gdrive"
-                        },
-                        {
-                            "file_name":                "todo-list.text",
-                            "file_type_class":          "icon-sml__file--evernote",
-                            "file_modified":            "12 May 2015",
-                            "file_source_class":        "icon-sml__evernote"
-                        }
-                    ]
-                },
-                {
-                    "person_name":                  "Alphonso Double-barrelled Long-name Engelking",
-                    "person_email":                 "alphonso-double-barrelled-long-name-engelking@gmail.com",
-                    "person_avatar_src":            "img/tmp_avatar_3.png",
-                    "files": [
-                        {
-                            "file_name":                "todo-list.text",
-                            "file_type_class":          "icon-sml__file--evernote",
-                            "file_modified":            "12 May 2015",
-                            "file_source_class":        "icon-sml__evernote"
+                            "item_name":                   "Alex Li",
+                            "item_email":                  "Budget planning meeting request",
+                            "item_avatar_src":             "img/tmp_avatar_1.png",
+                            "item_attendees":              "Amy Tan, Alex Li, Han Solo, Tony Stark, Jason Smith",
+                            "source_type":                  "icon-sml__gcalendar",
+                            "file_categories": [
+                                {
+                                    "file_category_id":          "docs",
+                                    "file_category_name":        "Docs",
+                                    "files": [
+                                        {
+                                            "file_name":                "Itinerary.txt",
+                                            "file_type_class":          "icon-sml__file--drive",
+                                            "file_modified":            "9:01 am",
+                                            "file_source_class":        "icon-sml__box"
+                                        },
+                                        {
+                                            "file_name":                "Proposal.pdf",
+                                            "file_type_class":          "icon-sml__file--pdf",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__gdrive"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "file_category_id":          "presentations",
+                                    "file_category_name":        "Presentations",
+                                    "files": [
+                                        {
+                                            "file_name":                "Board Meeting Deck.ppt",
+                                            "file_type_class":          "icon-sml__file--powerpoint",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__gdrive"
+                                        },
+                                        {
+                                            "file_name":                "Branding Evolution.ppt",
+                                            "file_type_class":          "icon-sml__file--powerpoint",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__box"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "file_category_id":          "emails",
+                                    "file_category_name":        "Emails",
+                                    "files": [
+                                        {
+                                            "file_name":                "Design Roadmap",
+                                            "file_summary":             "I really would love to get together.",
+                                            "file_type_class":          "icon-sml__file--email",
+                                            "file_modified":            "20 Feb",
+                                            "file_source_class":        "icon-sml__gmail"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "file_category_id":          "spreadsheets",
+                                    "file_category_name":        "Spreadsheets",
+                                    "files": [
+                                        {
+                                            "file_name":                "Sales.xls",
+                                            "file_type_class":          "icon-sml__file--spreadsheet",
+                                            "file_modified":            "10:33 am",
+                                            "file_source_class":        "icon-sml__gdrive"
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }
@@ -406,7 +577,7 @@
                         "avatar_type":          "image",
                         "type":                 "icon__phone-in--white",
                         "priority":             "critical",
-                        "title":                "<strong>Mike Smith</strong>  has just found files and people useful to you right now!",
+                        "title":                "<strong>Jason Smith</strong>  has just found files and people useful to you right now!",
                         "description":          "Incoming call has just found files and people useful to you right now!",
                         "source_type":          "",
                         "date_time":            "13:42 PM",
@@ -417,7 +588,7 @@
                         "avatar_type":          "image",
                         "type":                 "icon__calendar--white",
                         "priority":             "normal",
-                        "title":                "<strong>Mike Smith</strong>",
+                        "title":                "<strong>Jason Smith</strong>",
                         "description":          "Monday 10th meeting",
                         "source_type":          "icon-sml__evernote",
                         "date_time":            "12:30 PM",

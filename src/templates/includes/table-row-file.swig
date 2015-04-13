@@ -13,6 +13,9 @@
 
 		    	<a href="#" class="link">
 		    		<div class="table__text" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_name }}</div>
+		    		{% if obj_file_row.file_summary %}
+		    		<div class="table__text -light" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_summary }}</div>
+		    		{% endif %}
 		    	</a>
 		    </div>
 

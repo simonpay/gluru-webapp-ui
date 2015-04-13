@@ -161,13 +161,18 @@
 .table__text {
     @extend %nowrap;
     @extend %color__black;
+    @extend %font-size__13;
 
     &.-light {
         @extend %color__gray--light;
     }
 
     // when table text is within 'is-selected' class reverse out
-    .-files .table__row.is-selected & {
+    // scoping to -files section below removed as daily-digest is 
+    // now background blue when selected so this text needs to 
+    // reverse out to white 
+    // .-files .table__row.is-selected & {
+    .table__row.is-selected & {
         @extend %color__white;
     }
 }
@@ -177,6 +182,7 @@
     @extend %nowrap;
     @extend %font-weight__bold;
     @extend %color__gray--light;
+    @extend %font-size__13;
 }
 
 // font style for headings within tables
@@ -419,15 +425,35 @@
 
 // daily digest header 
 .panel-header__subheading-text {
+    @extend %font-size__14;
     @extend %color__white;
+    @extend %nowrap;
+    margin-top: 2px;
 }
 
 // section headings for people, meetings etc
 .daily-digest__section-heading {
-    @extend %font-size__20;
+    @extend %font-size__18;
     @extend %font-weight__lighter;
     @extend %color__black;
     @extend %line-height__normal;
+    @extend %text-transform__uppercase;
+    margin-top: 40px;
+    padding-left: 5px;
+
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    // doc type headings: 
+    // docs, presentations, spreadsheets etc
+    &.-docs {
+        @extend %font-size__16;
+        margin-top: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $alto;
+    }
 }
 
 

@@ -36,6 +36,9 @@
     &.-now {
         background: $green;
     }
+    &.-daily-digest {
+        background: $blue;
+    }
 
     // add hover when inside event-wrap 
     // (must be in timeline - not in actions header)
@@ -65,7 +68,9 @@
     }
 
     &.-daily-digest {
+        padding-right: 55px;
         background: $gallery;
+        border-radius: $priority-box--daily-digest__border-radius;
     }
 
     &.-event {
@@ -91,6 +96,9 @@
         }
         &.-now:after {
             border-right-color: $green;
+        }
+        &.-daily-digest:after {
+            border-right-color: $blue;
         }
 
         // when timeline is split, remove animations
@@ -127,6 +135,9 @@
             &.-now:after {
                 border-bottom-color: $green;
             }
+            &.-daily-digest:after {
+                border-bottom-color: $blue;
+            }
         }
 
     }
@@ -144,7 +155,7 @@
             position: absolute;
             @include calc( top, "50% - 6px" );
             // top: 50%;
-            right: 38px;
+            right: 27px;
             width: 20px;
             height: 12px;
             @include transform( rotate(180deg) );
