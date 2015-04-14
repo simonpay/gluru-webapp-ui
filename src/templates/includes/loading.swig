@@ -1,0 +1,4 @@
+<div class="loading-screen-data js-loading-screen-data is-hidden">
+    {% include "loader.swig" %}
+    <div class="loading-data__text">Loading Data</div>
+</div>

@@ -23,6 +23,7 @@
 </div>
 {%> "tool-tip" %}
 {%> "pop-menu" %}
+{% include "../includes/loading.swig" %}
 {% include "../includes/modal.swig" %}
 
 

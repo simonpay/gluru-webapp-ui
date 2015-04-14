@@ -192,11 +192,16 @@
 .drawer__heading-text,
 .actions__heading-text,
 .modal__heading-text,
+.loading-data__text,
 {
     @extend %text-transform__uppercase;
     @extend %font-size__22;
     @extend %font-weight__lighter;
     @extend %color__green;
+}
+
+.loading-data__text {
+    margin-top: 30px;
 }
 
 // text in 'now' icon in top right stage 
