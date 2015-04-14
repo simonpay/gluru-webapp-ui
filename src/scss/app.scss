@@ -3,6 +3,7 @@
 // ------------------------------------------------
 
 
+
 // ------------------------------------------------
 // VENDOR LIBRARIES & GLOBAL CONFIG
 // ------------------------------------------------
@@ -51,26 +52,14 @@
 @import "mixins";
 
 
-// TODO: check this out as it may prove useful - lots of utilities!
-    // add to bower.json using "bower install scss-tooltips --save" if used or 
-    // delete from current "bower_components" folder if not
-// @import "utility-belt";
-
-// css tooltips
-// TODO: evaluate this and see if its worth using
-    // UPDATE: not suitable due to being clipped by parent
-// @import "tooltips";
-
-// // susy is anpther css grid system - possible superior to neat
-// // TODO: trial this and keep or remove
-// @import "susy";
-
 
 // ------------------------------------------------
 // FONTS
 // ------------------------------------------------
 // @font-face webfonts
 // @import "fonts"
+
+
 
 // ------------------------------------------------
 // ANIMATIONS
@@ -80,18 +69,28 @@
 
 
 
+// ------------------------------------------------
 // BASE STYLES
 // ------------------------------------------------
-@import "normalize"; // css reset
 
+// NORMALIZE
+// ------------------------------------------------
+// css reset
+@import "normalize";
+
+// BASE
+// ------------------------------------------------
 // Base styles and other resets, utilities classes etc
 @import "base";
 
+// UTILITIES
+// ------------------------------------------------
 // Utilities, state classes, rules with !important
 @import "utilities";
 
 
 
+// ------------------------------------------------
 // MODULES
 // ------------------------------------------------
 // The majority of elements are modules - even layout elements (sidebar, containers etc)
@@ -141,6 +140,7 @@
 
 
 
+// ------------------------------------------------
 // MISC
 // ------------------------------------------------
 // Anything that doesnt quite fit anywhere else
