@@ -12,3 +12,77 @@
     }
 }
 
+
+
+// -----------------------------------
+// TYPOGRAPHY MIXINS
+// -----------------------------------
+// font-size    
+@mixin font-size($val)          {   font-size: rem($val);                                               }
+%font-size__10                  {   @include font-size(10);                                             }
+%font-size__11                  {   @include font-size(11);                                             }
+%font-size__12                  {   @include font-size(12);                                             }
+%font-size__13                  {   @include font-size(13);                                             }
+%font-size__14                  {   @include font-size(14);                                             }
+%font-size__15                  {   @include font-size(15);                                             }
+%font-size__16                  {   @include font-size(16);                                             }
+%font-size__18                  {   @include font-size(18);                                             }
+%font-size__20                  {   @include font-size(20);                                             }
+%font-size__22                  {   @include font-size(22);                                             }
+%font-size__30                  {   @include font-size(30);                                             }
+%font-size__42                  {   @include font-size(42);                                             }
+
+// font-weight  
+@mixin font-weight($val)        {   font-weight: $val;                                                  }
+%font-weight__lighter           {   @include font-weight(lighter);                                      }
+%font-weight__normal            {   @include font-weight(normal);                                      }
+%font-weight__bold              {   @include font-weight(bold);                                         }
+
+// color
+@mixin color($val)              {   color: $val;                                                        }
+%color__gray--xxlight           {   @include color($silver);                                            }
+%color__gray--xlight            {   @include color($silver-dark);                                       }
+%color__gray--light             {   @include color($dusty-gray);                                        }
+%color__gray--mid               {   @include color($Gray);                                              }
+%color__gray--dark              {   @include color($dove-gray);                                         }
+%color__gray--xdark             {   @include color($mine-shaft);                                        }
+%color__gray--xxdark            {   @include color($mine-shaft);                                              }
+%color__white                   {   @include color($white);                                             }
+%color__black                   {   @include color($black);                                             }
+%color__green                   {   @include color($green);                                             }
+%color__pink                    {   @include color($pink);                                              }
+%color__zeus                    {   @include color($zeus);                                              }
+
+// text-decoration
+@mixin text-decoration($val)    {   text-decoration: $val;                                              }
+%text-decoration__none          {   @include text-decoration(none);                                     }
+%text-decoration__underline     {   @include text-decoration(underline);                                }
+
+// word-break
+@mixin word-break($val)         {   word-break: $val;                                                   }
+%word-break__break-word         {   @include word-break(break-word);                                    }
+
+// nowrap
+@mixin nowrap                   {   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;     }
+%nowrap                         {   @include nowrap;                                                    }
+
+// wrap
+@mixin wrap                     {   white-space: normal; overflow: visible; text-overflow: inherit;     }
+%wrap                           {   @include wrap;                                                      }
+
+// text-transform
+@mixin text-transform($val)     {   text-transform: $val;                                               }
+%text-transform__uppercase      {   @include text-transform(uppercase);                                 }
+%text-transform__lowercase      {   @include text-transform(lowercase);                                 }
+%text-transform__capitalize     {   @include text-transform(capitalize);                                }
+
+// line-height
+@mixin line-height($val)        {   line-height: $val;                                                  }
+%line-height__normal            {   @include line-height(normal);                                       }
+%line-height__150percent        {   @include line-height(1.5);                                          }
+%line-height__200percent        {   @include line-height(2);                                            }
+
+// text-align
+@mixin text-align($val)         {   text-align: $val;                                                  }
+%text-align__center             {   @include text-align(center);                                       }
+

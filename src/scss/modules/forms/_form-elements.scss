@@ -1,0 +1,112 @@
+/*------------------------------------*\
+# FORM ELEMENTS
+\*------------------------------------*/
+
+$form-field__height:			38px;
+$form-field__border-radius:		3px;
+
+.input__check-box {
+    float: left;
+}
+
+
+input[type=text] {
+    height: $form-field__height;
+    border: 2px solid $green;
+    border-radius: $form-field__border-radius;
+    background: $white;
+    padding: 1px 7px 0;
+    width: 300px;
+    outline: 0;
+
+    color: $zeus;
+
+    &.-full-width {
+        width: 100%;
+    }
+}
+
+
+.form__static-item {
+	display: block;
+	position: relative;
+	height: $form-field__height;
+	background: $green;
+	border-radius: $form-field__border-radius;
+	padding: 0 10px;
+	line-height: $form-field__height;
+	cursor: default;
+}
+
+
+
+
+
+
+
+
+
+// unused styling for select
+.select {
+	position: absolute;
+	top: 290px;
+	left: 200px;
+	width: 150px;
+	height: 30px;	
+	@include linear-gradient( to top, rgba($black, .06) 0%, rgba($white, 1) 100% );
+	border-radius: $form-field__border-radius;
+	border-width: 1px 0;
+	border-style: solid;
+	border-color: $alto $dusty-gray $dusty-gray;
+
+	box-shadow: 
+		inset -2px 0px 0px $white, 
+		inset 0px 1px 0px $white,
+		0px 5px 3px -3px rgba($black, .2)
+		;
+	
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 1px;
+		bottom: 1px;
+		width: 1px;
+		@include linear-gradient( to top, $dusty-gray 0%, $alto 100% );
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+
+// TODO: needs attention
+// bugs caused from this - 
+.form-section {
+	height: auto;
+	overflow: hidden;
+	// visibility: visible;
+	opacity: 1;
+	@include transition( height 0 0, opacity .7s);
+	
+	&.is-hidden {
+		height: 0;
+		// visibility: hidden;
+		opacity: 0;
+		// @include transition( all 0 0);
+		// @include transition( none );
+	}
+
+
+	// add extra mb to last row
+	&.-team-access-settings,
+	&.-team-invite-people {
+		.row:nth-last-child(2) {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+
+

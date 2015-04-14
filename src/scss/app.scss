@@ -3,21 +3,53 @@
 // ------------------------------------------------
 
 
-
-// VENDOR LIBRARIES
 // ------------------------------------------------
-@import "bourbon"; // mixins
-@import "neat"; // css grid
-@import "scut"; // handy utilities
+// VENDOR LIBRARIES & GLOBAL CONFIG
+// ------------------------------------------------
 
-// Retina Sprites
-// sprites via compass (loaded with Bower) - see config.rb file for load path
+// BOURBON
+// ------------------------------------------------
+// lightweight mixin library for Sass
+@import "bourbon";
+
+// GLOBAL CONFIG
+// ------------------------------------------------
+// Variables, colors, font stacks, etc
+// settings.scss must be loaded before any components 
+// that have configurable variables (e.g. neat) so 
+// that !default values can be overridden
+@import "settings";
+
+// NEAT
+// ------------------------------------------------
+// lightweight semantic grid framework for Sass and Bourbon
+@import "neat";
+
+// SCUT
+// ------------------------------------------------
+// collection of Sass utilities to ease and improve 
+// our implementations of common style-code patterns.
+@import "scut";
+
+// RETINA SPRITES
+// ------------------------------------------------
+// sprites via compass (loaded with Bower) - see 
+// config.rb file for load path
 @import "retina-sprites";
 
-
-// select2
-// select input replacement plugin
+// SELECT2
+// ------------------------------------------------
+// jQuery replacement for select boxes
 @import "core";
+
+
+
+// ------------------------------------------------
+// MIXINS
+// ------------------------------------------------
+// Project-specific mixins and extends
+@import "mixins";
+
 
 // TODO: check this out as it may prove useful - lots of utilities!
     // add to bower.json using "bower install scss-tooltips --save" if used or 
@@ -34,18 +66,15 @@
 // @import "susy";
 
 
-
-// GLOBAL CONFIG
 // ------------------------------------------------
-// Variables, colors, font stacks, etc
-@import "settings";
-
-// Project-specific mixins
-@import "mixins";
-
+// FONTS
+// ------------------------------------------------
 // @font-face webfonts
 // @import "fonts"
 
+// ------------------------------------------------
+// ANIMATIONS
+// ------------------------------------------------
 // @keyframe animations
 // @import "animations"
 
@@ -95,7 +124,6 @@
         "modules/inset-icon",
         "modules/pop-menu-trigger",
         "modules/file-nav",
-        "modules/form-elements",
         "modules/pop-menu",
         "modules/arrow-button",
         "modules/close-button",
@@ -105,6 +133,11 @@
         "modules/loader",
         "modules/hierarchy",
         "modules/buttons";
+
+// forms
+@import "modules/forms/form-elements",
+        "modules/forms/select2-overrides",
+        "modules/forms/jquery-ui-checkbox-overrides";
 
 
 

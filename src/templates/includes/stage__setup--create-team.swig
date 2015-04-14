@@ -38,6 +38,10 @@
                 </div>
             </div>
 
+            <div class="large-11">
+                <hr class="hr__line">
+            </div>
+
         </section>
 
     
@@ -118,6 +122,10 @@
 
             </section>
 
+            <div class="large-11">
+                <hr class="hr__line">
+            </div>
+
         </section>
 
 
@@ -150,6 +158,10 @@
 {#             {% set i = 2 %}
             {% include "form__row--team-access-settings.swig" %}
  #}
+            <div class="large-11">
+                <hr class="hr__line">
+            </div>
+
         </section>
 
 
@@ -186,10 +198,14 @@
             {% set bln_hide_field = 1 %}
             {% include "form__row--invite-people.swig" %}
  #}
+            <div class="large-11">
+                <hr class="hr__line">
+            </div>
+
         </section>
             
-        <hr class="hr__line">
-
+{#         <hr class="hr__line">
+ #}
         <p>
             <button class="btn__lozenge -green -icon-right">
                 <div class="btn__icon icon__arrow--white"></div>

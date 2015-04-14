@@ -25,14 +25,9 @@
     </div>
     <div class="large-2">
 
-        <input 
-            type="text" 
-            class="-full-width" 
-            ng-model="" 
-            name="" 
-            placeholder="" 
-            required/>
-
+        <div class="form__static-item">
+            <div class="form__static-item-text">Google Drive</div>
+        </div>
 
     </div>
     <div class="large-3">
