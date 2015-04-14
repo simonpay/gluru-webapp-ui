@@ -36,6 +36,12 @@ module.exports = function(grunt) {
                 ],
                 dest: '<%= pkg.dest_paths.js %>pages/moments.js',
             },
+            timeline: {
+                src: [
+                    '<%= pkg.src_paths.js %>pages/timeline.js',
+                ],
+                dest: '<%= pkg.dest_paths.js %>pages/timeline.js',
+            },
             setup: {
                 src: [
                     '<%= pkg.src_paths.js %>pages/setup.js',

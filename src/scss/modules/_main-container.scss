@@ -3,8 +3,10 @@
 \*------------------------------------*/
 
 .main-container {
-	min-width: 320px;
-	min-width: 1050px;
+	// min-width: 320px;
+	// min-width: 500px;
+	// a wide min-width doesnt work here as 
+	// it breaks horizontal scrolling 
     position: absolute;
     left: 0px;
     top: 0px;

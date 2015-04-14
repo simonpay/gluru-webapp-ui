@@ -3,7 +3,7 @@
 
 <div class="split-view-wrap-container {{ col_class }}">
 	<div class="split-view-wrap">
-		<div class="scrollable-content{% if section === 'daily-digest' %} -daily-digest{% endif%}">
+		<div class="scrollable-content -{{ section }}">
 
 			{% if section === "timeline" %}
 

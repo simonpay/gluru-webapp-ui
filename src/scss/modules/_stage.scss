@@ -14,7 +14,10 @@
 	    @include clearfix;
 	    @include mq(large){
 	        height: 100%;
-	        // overflow: auto;
+
+	        // scroll needs to be applied when split screen 
+	        // views are too wide to fit in viewport 
+	        overflow-x: auto;
 	    }
 	}
 		

@@ -29,4 +29,5 @@
 {% block javascripts %}
 	{% parent %}
 	<script src="js/pages/moments.js"></script>
+	<script src="js/pages/timeline.js"></script>
 {% endblock %}
