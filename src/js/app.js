@@ -337,7 +337,18 @@
 
                 now: function () {
 
-                    location.href = "moments-now.html";
+                    $this = $(this);
+
+                    $this
+                        .addClass( "is-selected is-waiting" )
+                            .find( ".js-loader" )
+                                .show()
+                                    ;
+
+                    setTimeout(function(){
+                        location.href = "moments-now.html";
+                    }, 2000);
+
                 },
 
                 // // toggle timeline between infinity and split view
@@ -834,7 +845,7 @@
         obj_gluru.moments.timeline.do_click.call( $(this) );
     });
     $now.on( "click", function() {
-        obj_gluru.moments.timeline.now();
+        obj_gluru.moments.timeline.now.call( $(this) );
     });
     // TIMELINE SPLIT VIEW
     // -------------------------------------------------

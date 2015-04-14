@@ -6,6 +6,7 @@
 					<div class="stage-nav__now-text">Now</div>
 				</div>
 				<div class="stage-nav__icon icon__now--white"></div>
+				{% include "loader.swig" %}
 			</div>
 		</li>
 		<li class="stage-nav__item -notifications">

@@ -38,6 +38,12 @@
                 border-radius: $stage-nav__icon-wrap-height;
                 @include transition( width 0.3s );
                 cursor: pointer;
+                
+                // loading icon
+                // TODO: clean this up if its approved
+                .spinner {
+                    display: none;
+                }
 
                 .-now & {
                     background: $green;
@@ -50,6 +56,31 @@
                         .stage-nav__now-text-wrap { // now text
                             opacity: 1;
                             @include transition( opacity 0.3s 0.1s );
+                        }
+                        
+                        // class for when the now button has been clicked 
+                        // and the data is loading
+                        &.is-waiting {
+                            // background: $alto;
+
+                            .stage-nav__now-text-wrap { // now text
+                                display: none;
+                            }
+
+                            .icon__now--white {
+                                display: none;
+                            }
+                            
+                            // loader icon
+                            .spinner {
+                                width: 18px;
+                                height: 18px;
+                                @include transform( translateY(5px) );
+
+                                .spinner-container > div {
+                                    background-color: $white;
+                                }
+                            }
                         }
                     }
 

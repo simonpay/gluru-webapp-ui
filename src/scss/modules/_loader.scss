@@ -21,8 +21,10 @@
 .container1 > div,
 .container2 > div,
 .container3 > div {
-    width: 6px;
-    height: 6px;
+    // width: 6px;
+    // height: 6px;
+    width: 25%;
+    height: 25%;
     background-color: $green;
     border-radius: 100%;
     position: absolute;
