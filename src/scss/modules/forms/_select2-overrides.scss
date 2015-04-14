@@ -89,11 +89,33 @@
 
 	}
 
+	.select2-results__option {
+
+		// &[role=group] {
+		// 	padding: 0;
+		// }
+
+		// &[aria-disabled=true] {
+		// 	color: $gallery;
+		// }
+
+		&[aria-selected=true] {
+			background-color: $gallery-dark;
+		}
+	}
+
 	.select2-results__option--highlighted[aria-selected] {
 		background-color: $green;
 		// color: white;
 	}
+
 }
+
+.select2-dropdown {
+	border-color: $alto;
+	// border-radius: 4px;
+}
+
 
 .select2-container {
 

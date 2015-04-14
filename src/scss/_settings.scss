@@ -32,8 +32,9 @@ $zeus:                      #2e261e;                    // very very dark brown
 // shades of gray - white to black range:   
 $white:                     #fff;                       // white
 $alabaster:                 #fafafa;                    // virtually white
-$gallery:                   $gallery;                       // off white
 $gallery-light:             lighten($gallery, 4%);
+$gallery:                   $gallery;                   // off white
+$gallery-dark:             	darken($gallery, 4%);
 $alto:                      #ddd;                       // very light gray
 $silver-light:              lighten($silver, 5%);
 $silver:                    $silver;                    // light gray
