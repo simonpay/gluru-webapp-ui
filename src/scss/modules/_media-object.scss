@@ -95,10 +95,13 @@
         {
             margin-right: 26px;
         }
-
-        .-daily-digest & {
+        
+        // add margin for media 
+        .-daily-digest.-collapsable & {
             margin-right: 16px;
             
+            // text inside media__img inside daily-digest 
+            // collapsble 'priority-box' 
             &.-meeting {
                 width: 50%;
                 min-width: 200px;

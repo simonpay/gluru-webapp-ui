@@ -36,9 +36,6 @@
     &.-now {
         background: $green;
     }
-    &.-daily-digest {
-        background: $blue;
-    }
 
     // add hover when inside event-wrap 
     // (must be in timeline - not in actions header)
@@ -71,13 +68,22 @@
         padding-right: 55px;
         background: $gallery;
         border-radius: $priority-box--daily-digest__border-radius;
+        
+        // when inside actions footprint as 'current-item
+        &.-current-item {
+            background: $blue;
+        }
     }
 
     &.-event {
         width: 50%;
         max-width: 500px;
         min-width: 400px;
+    }
 
+    &.-event,
+    &.-current-item,
+    {
         // the triangle that points to the time
         // only sh9w this for "event" priority boxes
         &:after {

@@ -81,6 +81,11 @@
         }
     }
 
+    &.is-disabled {
+        opacity: 0.13;
+        cursor: default;
+    }
+
     &:active {
         &:after {
             background: rgba($black, .09);

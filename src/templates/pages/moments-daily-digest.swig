@@ -32,5 +32,9 @@
 	<script>
         $( ".js-timeline-range" ).removeClass( "is-selected" );
         $( ".js-timeline-range[data-timeline-range='daily-digest']" ).addClass( "is-selected" );
+	    $( ".js-toggle-timeline-view" )
+	    	.off()
+	    		.addClass( "is-disabled" );
+		$( ".js-actions--current-item" ).removeClass( "-now" ).addClass( "-daily-digest" );
 	</script>
 {% endblock %}

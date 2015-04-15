@@ -29,7 +29,7 @@
         {% for obj_item in obj_section.items %}
     
             <div class="priority-box__wrap">
-                <div class="priority-box -daily-digest -collapsable js-toggle-daily-digest-table">
+                <div class="priority-box -daily-digest -collapsable js-toggle-daily-digest-table is-collapsed">
 
                     <div class="media -v-center">
                         <div class="media__img">

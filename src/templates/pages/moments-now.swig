@@ -35,5 +35,6 @@
 			$( ".js-event-nav__link" )[0].click();
 			$( ".js-now" ).addClass( "is-selected" );
 		})();
-		</script>
+	</script>
+	<script src="js/pages/timeline.js"></script>
 {% endblock %}
