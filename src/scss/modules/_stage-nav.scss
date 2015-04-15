@@ -39,12 +39,6 @@
                 @include transition( width 0.3s );
                 cursor: pointer;
                 
-                // loading icon
-                // TODO: clean this up if its approved
-                .spinner {
-                    display: none;
-                }
-
                 .-now & {
                     background: $green;
                     width: $stage-nav__icon-wrap-width;
