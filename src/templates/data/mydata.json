@@ -111,11 +111,13 @@
                 },
                 {
                     "text"              : "Sales_Report",
-                    "className"         : "icon-sml__folder--custom"
+                    "className"         : "icon-sml__folder--custom",
+                    "source_class"      : "icon-sml__gdrive"
                 },
                 {
                     "text"              : "Profit_and_loss",
-                    "className"         : "icon-sml__folder--project"
+                    "className"         : "icon-sml__folder--project",
+                    "source_class"      : "icon-sml__box"
                 },
                 {
                     "text"              : "summary.pdf",

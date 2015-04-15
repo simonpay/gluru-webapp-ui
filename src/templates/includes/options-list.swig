@@ -90,7 +90,26 @@
                             </div>
                             <div class="media__body">
 
-                                <div class="options-list__text" title="{{ obj.text }}">{{ obj.text|safe }}</div>
+                                {% if obj.source_class !== "" %}
+
+                                    <div class="media -v-center">
+                                        <div class="media__img -right">
+
+                                            <div class="{{obj.source_class}}"></div>
+
+                                        </div>
+                                        <div class="media__body">
+
+                                            <div class="options-list__text" title="{{ obj.text }}">{{ obj.text|safe }}</div>
+
+                                        </div>
+                                    </div>
+
+                                {% else %}
+
+                                    <div class="options-list__text" title="{{ obj.text }}">{{ obj.text|safe }}</div>
+
+                                {% endif %}
 
                             </div>
                         </div>

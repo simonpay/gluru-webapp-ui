@@ -64,16 +64,16 @@
                             {% elseif obj_section.section_id === "meetings" %}
 
                                 <div class="media -v-center">
-                                    <div class="media__img -meeting">
+                                    <div class="media__img -right -meeting">
 
-                                        <div class="table__text--heading" title="{{ obj_item.item_name|striptags }}">{{ obj_item.item_name|safe }}</div>
-                                        <div class="table__text--sub-heading" title="{{ obj_item.item_date_time|striptags }}">{{ obj_item.item_date_time|safe }}</div>
+                                        <div class="table__text" title="{{ obj_item.item_location|striptags }}"><strong>Location: </strong>{{ obj_item.item_location|safe }}</div>
+                                        <div class="table__text" title="{{ obj_item.item_attendees|striptags }}"><strong>Attendees: </strong>{{ obj_item.item_attendees|safe }}</div>
 
                                     </div>
                                     <div class="media__body">
 
-                                        <div class="table__text" title="{{ obj_item.item_location|striptags }}"><strong>Location: </strong>{{ obj_item.item_location|safe }}</div>
-                                        <div class="table__text" title="{{ obj_item.item_attendees|striptags }}"><strong>Attendees: </strong>{{ obj_item.item_attendees|safe }}</div>
+                                        <div class="table__text--heading" title="{{ obj_item.item_name|striptags }}">{{ obj_item.item_name|safe }}</div>
+                                        <div class="table__text--sub-heading" title="{{ obj_item.item_date_time|striptags }}">{{ obj_item.item_date_time|safe }}</div>
 
                                     </div>
                                 </div>

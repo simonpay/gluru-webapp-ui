@@ -57,12 +57,6 @@
             }
         }
 
-        // when inside actions, add margin to left 
-        // for small icons in related files etc
-        .actions & {
-            margin-left: 4px;
-        }
-        
         // set width for media__img for all items inside drawer
         // due to teams dics being smaller than avatar discs
         .drawer & {
@@ -86,26 +80,30 @@
             margin-right: 20px;
         }
         
-        // add extra margin to accomodate inset icons 
-        // priority panels for 
-        // - event
-        // - daily-digest // removed as meeting now doesnt have inset icon
-        .-event &,
-        // .-daily-digest &,
-        {
-            margin-right: 26px;
+        &:not(.-right) {
+            // add extra margin (not on media-img -right) to accomodate 
+            // inset icons priority panels for 
+            // - event
+            // - daily-digest // removed as meeting now doesnt have inset icon
+            .-event &,
+            // .-daily-digest &,
+            {
+                margin-right: 26px;
+            }
+
+            // add extra margin to right of icon in daily-digest 
+            .-daily-digest.-collapsable & {
+                margin-right: 16px;
+            }
         }
         
         // add margin for media 
         .-daily-digest.-collapsable & {
-            margin-right: 16px;
-            
             // text inside media__img inside daily-digest 
             // collapsble 'priority-box' 
             &.-meeting {
-                width: 50%;
-                min-width: 200px;
-                margin-right: 5%;
+                width: 40%;
+                margin-left: 5%;
             }
         }
             
