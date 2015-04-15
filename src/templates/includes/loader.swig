@@ -1,4 +1,4 @@
-<div class="spinner u-center-block is-hidden js-loader">
+<div class="spinner u-center-block js-loader">
     <div class="spinner-container container1">
         <div class="circle1"></div>
         <div class="circle2"></div>

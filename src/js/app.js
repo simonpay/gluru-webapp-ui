@@ -84,9 +84,10 @@
                 console.log( $this.data( "modal-content" ) );
 
                 $modal
-                    .find( "." + $this.data( "modal-content" ) ).show()
-                        .end()
-                            .removeClass( "is-hidden" );
+                    .removeClass( "is-hidden" )
+                        .find( "." + $this.data( "modal-content" ) )
+                        .show()
+                            ;
             },
 
             _hide: function () {
@@ -356,8 +357,8 @@
 
                     $this
                         .addClass( "is-selected is-waiting" )
-                            .find( ".js-loader" )
-                                .show()
+                            .find( ".js-loader-wrap" )
+                                .removeClass( "is-hidden" )
                                     ;
 
                     setTimeout(function(){

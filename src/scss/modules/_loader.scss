@@ -6,6 +6,12 @@
 // TODO: make custom loader to match design
 // if keeping this, convert to use bourbon mixins
 
+.spinner-wrap {
+    &.is-hidden {
+        display: none;
+    }
+}
+
 .spinner {
     // margin: 100px auto;
     width: 26px;
@@ -17,10 +23,6 @@
     {
         width: 40px;
         height: 40px;
-    }
-
-    &.is-hidden {
-        display: none;
     }
 }
 
