@@ -1,8 +1,8 @@
-{% for obj_hierarchy_option in mydata.actions.hierarchy.options %}
+{# {% for obj_hierarchy_option in mydata.actions.hierarchy.options %} #}
 
     <ul class="hierarchy__list">
     
-        {% for obj_node in obj_hierarchy_option.nodes %}
+        {% for obj_node in mydata.hierarchy_lists[hierarchy_type].nodes %}
 
             <li class="hierarchy__item">
 
@@ -18,4 +18,4 @@
 
     </ul>
 
-{% endfor %}
+{# {% endfor %} #}

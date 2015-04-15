@@ -32,7 +32,8 @@
 
                             </div>
                             <div class="media__body">
-                            
+                                
+                                {% set hierarchy_type = "current_file" %}
                                 {% include "hierarchy-list.swig" %}
 
                             </div>

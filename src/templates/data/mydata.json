@@ -173,24 +173,7 @@
             "options": [
                 {
                     "text"              : "<span class=\"icon__pos--path icon-sml__chevron\"></span>",
-                    "className"         : "icon-sml__gdrive",
-                    "nodes": [
-                        {
-                            "text":         "Google Drive"
-                        },
-                        {
-                            "text":         "My Drive"
-                        },
-                        {
-                            "text":         "2015"
-                        },
-                        {
-                            "text":         "Meetings 2015"
-                        },
-                        {
-                            "text":         "Branding"
-                        }
-                    ]
+                    "className"         : "icon-sml__gdrive"
                 }
             ]
         },
@@ -201,6 +184,37 @@
             "options": [
                 {},
                 {}
+            ]
+        }
+    },
+    "hierarchy_lists": {
+        "files": {
+            "nodes": [
+                {
+                    "text":         "Google Drive"
+                },
+                {
+                    "text":         "My Drive"
+                }
+            ]
+        },
+        "current_file": {
+            "nodes": [
+                {
+                    "text":         "Google Drive"
+                },
+                {
+                    "text":         "My Drive"
+                },
+                {
+                    "text":         "2015"
+                },
+                {
+                    "text":         "Meetings 2015"
+                },
+                {
+                    "text":         "Branding"
+                }
             ]
         }
     },

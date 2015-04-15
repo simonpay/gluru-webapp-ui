@@ -841,7 +841,9 @@
     // MOMENTS
     // -------------------------------------------------
     // event nav links
-    $( ".js-event-nav__link" ).on( "click", function(){
+    // attach to .timeline and pass the trigger button to the function 
+    // as some events are created dynmically and dont exist yet in the dom
+    $( ".timeline" ).on( "click", ".js-event-nav__link", function(){
         obj_gluru.moments.timeline.do_click.call( $(this) );
     });
     $now.on( "click", function() {

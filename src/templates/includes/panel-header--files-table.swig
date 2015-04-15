@@ -8,7 +8,8 @@
 	    	<div class="icon__gdrive"></div>
 	    </div>
 	    <div class="media__body">
-
+			
+			{% set hierarchy_type = "files" %}
             {% include "hierarchy-list.swig" %}
 
 	    	{# <div class="split-view__heading">My Drive</div> #}

@@ -15,7 +15,7 @@
 .icon__dropbox {                @include use-sprite("icon__dropbox"); }
 .icon__evernote {               @include use-sprite("icon__evernote"); }
 
-//sml variants
+// small variants
 .icon-sml__custom {             @include use-sprite("icon-sml__everything"); }
 .icon-sml__onedrive {           @include use-sprite("icon-sml__onedrive"); }
 .icon-sml__gcalendar {          @include use-sprite("icon-sml__gcalendar"); }
@@ -39,6 +39,21 @@
 
 // file/folder icons
 // ------------------------------------
+.icon__folder {             	@include use-sprite("icon__folder"); }
+.icon__folder--shared {     	@include use-sprite("icon__folder--shared"); }
+.icon__folder--custom {     	@include use-sprite("icon__folder--custom"); }
+.icon__folder--project {    	@include use-sprite("icon__folder--project"); }
+.icon__file--pdf {          	@include use-sprite("icon__file--pdf"); }
+.icon__file--text {         	@include use-sprite("icon__file--text"); }
+.icon__file--email {        	@include use-sprite("icon__file--email"); }
+.icon__file--calendar {     	@include use-sprite("icon__file--calendar"); }
+.icon__file--spreadsheet {  	@include use-sprite("icon__file--spreadsheet"); }
+.icon__file--evernote {     	@include use-sprite("icon__file--evernote"); }
+.icon__file--drive {        	@include use-sprite("icon__file--drive"); }
+.icon__file--powerpoint {   	@include use-sprite("icon__file--powerpoint"); }
+.icon__file--sms {          	@include use-sprite("icon__file--sms"); }
+
+// small variants
 .icon-sml__folder {             @include use-sprite("icon-sml__folder"); }
 .icon-sml__folder--shared {     @include use-sprite("icon-sml__folder--shared"); }
 .icon-sml__folder--custom {     @include use-sprite("icon-sml__folder--custom"); }
@@ -82,7 +97,6 @@
 //  
 // ------------------------------------
 .icon__edit {                   @include use-sprite("icon__edit"); }
-.icon__folder {                 @include use-sprite("icon__folder"); }
 .icon__share {                  @include use-sprite("icon__share"); }
 .icon__delete {                 @include use-sprite("icon__delete"); }
 .icon__folder--white {          @include use-sprite("icon__folder--white"); }
