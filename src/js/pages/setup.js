@@ -1,6 +1,12 @@
 
 (function(){
 
+	var form_actions = {
+
+
+	};
+
+
 	$( ".js-header-nav__link.is-selected" )
 		.closest( ".js-header-nav__item" )
 		.prevAll()
@@ -21,7 +27,7 @@
 	});
 
 	$( "#ConnectSource" ).on( "click", function(){
-		$( ".js-team-settings-sources, .js-team-access" ).fadeIn();
+		$( ".js-team-settings-sources, .js-team-access" ).removeClass( "is-hidden" );
 	});
 
 	$( ".js-invitedMemberConnectSource#invitedMemberConnectSourceYes" ).on( "click", function(){

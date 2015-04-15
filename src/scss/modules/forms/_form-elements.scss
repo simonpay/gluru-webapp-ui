@@ -10,7 +10,8 @@ $form-field__border-radius:		3px;
 }
 
 
-input[type=text] {
+
+.text-input {
     height: $form-field__height;
     border: 2px solid $green;
     border-radius: $form-field__border-radius;
@@ -24,6 +25,9 @@ input[type=text] {
     &.-full-width {
         width: 100%;
     }
+}
+
+input[type=text] {
 }
 
 

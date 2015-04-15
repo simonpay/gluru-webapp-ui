@@ -4,8 +4,8 @@
             &nbsp;
         {% else %}
             <input 
-                type="text" 
-                class="-full-width" 
+                type="email" 
+                class="text-input -full-width" 
                 ng-model="" 
                 name="" 
                 placeholder="Email" 

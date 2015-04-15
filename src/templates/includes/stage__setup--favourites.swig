@@ -14,6 +14,7 @@
                 <div class="large-8">
                     <input 
                         type="email" 
+                        class="text-input -full-width" 
                         ng-model="signup.data.email" 
                         name="email" 
                         placeholder="Email" 

@@ -55,6 +55,7 @@
                     <p>
                         <input 
                             type="text" 
+                            class="text-input -full-width" 
                             ng-model="" 
                             name="team-name" 
                             placeholder="Team Name" 
