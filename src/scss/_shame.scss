@@ -2,28 +2,28 @@
     #SHAME
 \*------------------------------------*/
 
-// debug - show labels for current MQ breakpoint on the screen
-body:before {
-   position:fixed;
-   bottom:2px;
-   left:2px;
-   color:black;
-   z-index:9999;
-   background:rgba(255,255,255,0.75);
-   content:"small";
-   @include mq(medium) { content:"medium"; }
-   @include mq(large) { content:"large"; }
-}
-body:after {
-   position:fixed;
-   bottom:20px;
-   left: 2px;
-   color:black;
-   z-index:99999;
-   background:rgba(255,255,255,0.75);
-   @include mq(medium-and-up) { content:"medium-and-up"; }
-   @include mq(large-and-up) { content:"large-and-up"; }
-}
+// // debug - show labels for current MQ breakpoint on the screen
+// body:before {
+//    position:fixed;
+//    bottom:2px;
+//    left:2px;
+//    color:black;
+//    z-index:9999;
+//    background:rgba(255,255,255,0.75);
+//    content:"small";
+//    @include mq(medium) { content:"medium"; }
+//    @include mq(large) { content:"large"; }
+// }
+// body:after {
+//    position:fixed;
+//    bottom:20px;
+//    left: 2px;
+//    color:black;
+//    z-index:99999;
+//    background:rgba(255,255,255,0.75);
+//    @include mq(medium-and-up) { content:"medium-and-up"; }
+//    @include mq(large-and-up) { content:"large-and-up"; }
+// }
 
 
 // temp buttons
