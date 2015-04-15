@@ -48,3 +48,21 @@
 	    box-shadow: 0px 0px 15px rgba($black, 0.3);
 	    @include transition( opacity 0.3s );
 	}
+
+		.modal-box__content-wrap {
+			display: none;
+		}
+
+	        // main heading in drawer panel
+	        // TODO: abstract this into generic header
+	        // actions header is the same
+	        .modal-box__heading-wrap {
+	            @include scut-center-transform(y);
+	        }
+
+	        	.modal-box__content {
+	        		position: relative;
+	        		// TODO: find pattern in this padding and abstract
+				    padding: 24px $panel-header-padding-right 24px $panel-header-padding-left;
+	        	}
+

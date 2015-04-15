@@ -311,6 +311,7 @@
     &.-cta {
         @extend %font-size__16;
         @extend %color__gray--light;
+        @extend %text-align__center;
         padding-top: 10px;
     }
 

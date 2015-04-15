@@ -62,7 +62,10 @@
         $options_list_link                  = $( ".options-list__link" ),
 
         // files
-        $table_wraps                        = $( ".js-file-table-wrap-outer" );
+        $table_wraps                        = $( ".js-file-table-wrap-outer" ),
+
+        // forms
+        $set_up_form_sign_in                = $( ".js-sign-in" );
 
 
 
@@ -75,11 +78,23 @@
         modal: {
 
             _show: function () {
-                $modal.removeClass( "is-hidden" );
+
+                var $this = $(this);
+
+                console.log( $this.data( "modal-content" ) );
+
+                $modal
+                    .find( "." + $this.data( "modal-content" ) ).show()
+                        .end()
+                            .removeClass( "is-hidden" );
             },
 
             _hide: function () {
-                $modal.addClass( "is-hidden" );
+                $modal
+                    .addClass( "is-hidden" )
+                        .find( ".modal-box__content-wrap" )
+                            .hide()
+                                ;
             },
 
         },
@@ -706,6 +721,16 @@
 
                 _obj_gluru.pop_menu.hide();
             }
+        },
+
+        gluru_forms: {
+
+            sign_up: function () {
+                var $this        = $(this),
+                    _obj_gluru   = gluru_app;
+
+                _obj_gluru.modal._show.call( $this );
+            }
         }
     };
 
@@ -713,6 +738,14 @@
 
     // cache main app obj to variable
     var obj_gluru = gluru_app;
+
+
+    // FORMS
+    // -------------------------------------------------
+    // show
+    $set_up_form_sign_in.on( "click", function(){
+        obj_gluru.gluru_forms.sign_up.call( $(this) );
+    });
 
 
     // MODAL
