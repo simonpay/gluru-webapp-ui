@@ -91,6 +91,7 @@
             @include scut-triangle(left, $event-arrow-height $event-arrow-width, $dusty-gray);
             @include scut-center-transform(y);
             left: -20px;
+            @include transition( border-color 0.1s );
         }
 
         // set color of triangles when inside specific class 
@@ -186,7 +187,7 @@
         padding-right: 55px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        @include transition( left $actions-animation-duration );
+        @include transition( left $actions-animation-duration, background-color 0.1s );
 
         .is-hidden & {
             left: 20px;
