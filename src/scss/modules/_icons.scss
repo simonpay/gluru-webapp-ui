@@ -99,9 +99,11 @@
 .icon__edit {                   @include use-sprite("icon__edit"); }
 .icon__share {                  @include use-sprite("icon__share"); }
 .icon__delete {                 @include use-sprite("icon__delete"); }
+.icon__inspect {                @include use-sprite("icon__inspect"); }
 .icon__folder--white {          @include use-sprite("icon__folder--white"); }
 .icon__share--white {           @include use-sprite("icon__share--white"); }
 .icon__delete--white {          @include use-sprite("icon__delete--white"); }
+.icon__inspect--white {         @include use-sprite("icon__inspect--white"); }
 
 
 //  stage nav icons (top right)

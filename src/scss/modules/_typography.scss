@@ -8,6 +8,33 @@
 // efficiency but some are defined within relevent modules
 
 
+// standard small text within actions panel 
+.text {
+    @extend %font-size__13;
+    @extend %color__black;
+    margin-bottom: 10px;
+
+    &.-light {
+        @extend %color__gray--mid;
+    }
+    
+    &.-dark {
+        @extend %color__gray--dark;
+    }
+}
+
+.text-link {
+    @extend %color__green;
+
+    &:hover {
+        
+    }
+}
+
+.black {
+    // @extend %color__black;
+}
+
 // stage heading
 .stage__heading-text {
     @extend %font-size__20;

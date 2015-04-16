@@ -25,6 +25,7 @@
             right: 20px;
             visibility: visible;
             opacity: 1;
+            padding-left: 12px;
             @include transition(
                 right 0.3s, 
                 visibility 0.3s, 
@@ -70,6 +71,7 @@
         .event-nav__item { // li
             display: inline-block;
             cursor: pointer;
+            margin: 0 3px;
         }
 
 

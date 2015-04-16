@@ -33,7 +33,7 @@
 	<script>
 		(function(){
 			// $( ".js-icon-button.js-toggle-actions" ).click();
-			// $( ".timeline .js-event-nav__link" )[0].click();
+			$( ".timeline .js-event-nav__link" )[2].click();
 			// $( ".js-now" ).addClass( "is-selected" );
 		})();
 		$( ".js-now" ).click();

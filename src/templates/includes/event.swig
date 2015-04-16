@@ -42,6 +42,9 @@
 		<nav class="event-nav">
 			<ul class="event-nav__list">
 				<li class="event-nav__item">
+					<div class="icon__inspect--white js-event-nav__link"></div>
+				</li>
+				<li class="event-nav__item">
 					<div class="icon__folder--white js-event-nav__link"></div>
 				</li>
 				<li class="event-nav__item">
