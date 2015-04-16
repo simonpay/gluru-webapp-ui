@@ -46,11 +46,15 @@
             border-color: $green;
         }
 
+        // daily-digest
         .-daily-digest & {
             border-color: $gallery;
         }
+
+        // when inside "current-item" in actions header
+        .-current-item.-daily-digest & {
+            border-color: $blue;
+        }
     }
-
-
 }
 
