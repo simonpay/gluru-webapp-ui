@@ -8,7 +8,7 @@
 		<div class="event-icon {{ obj_event.type }}"></div>
 	</div>
 
-	<div class="priority-box -event -{{ obj_event.priority }} js-event" data-priority="{{ obj_event.priority }}">
+	<div class="priority-box -event -{{ obj_event.priority }} js-event" data-priority="{{ obj_event.priority }}"{% if obj_event.priority === "now" %} data-now-type="{{ obj_event.now_type }}"{% endif %}>
 
 		<div class="media -v-center">
 		    <div class="media__img">

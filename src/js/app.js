@@ -81,7 +81,7 @@
 
                 var $this = $(this);
 
-                console.log( $this.data( "modal-content" ) );
+                // console.log( $this.data( "modal-content" ) );
 
                 $modal
                     .removeClass( "is-hidden" )
@@ -202,18 +202,46 @@
 
             current_file: {
 
-                _show: function () {
-                    $actions_current_file.show();
-                    $actions.show();
+                _show: function ( header_type ) {
+
+                    // console.log( header_type );
+
+                    // show current-file header in actions panel
+                    $actions_current_file.removeClass( "is-hidden" );
+
+                    // hide all actions header content blocks
+                    $( ".js-demo-only__actions-header-contents-wrap" ).hide();
+
+                    // show specific header based on "header_type" argument passed to func
+                    $( ".js-demo-only__actions-header-contents-wrap" + ".-" + header_type ).show();
+
+                    //show actions panel contents
+                    // $actions.removeClass( "is-hidden" );
                 },
 
                 _hide: function () {
-                    $actions_current_file.hide();
-                    $actions.hide();
+                    $actions_current_file.addClass( "is-hidden" );
+                    // $actions.addClass( "is-hidden" );
                 }
 
-            }
+            },
 
+            actions_content: {
+
+                _show: function ( actions_type ) {
+
+                    // console.log( actions_type );
+
+                    // hide all actions content wrap blocks
+                    $( ".js-demo-only__actions-content-wrap" ).hide();
+
+                    // show specific actions content based on "actions_type" argument passed to func
+                    $( ".js-demo-only__actions-content-wrap" + ".-" + actions_type ).show();
+
+                    // show actions panel contents
+                    $actions.removeClass( "is-hidden" );
+                }
+            }
         },
 
 
@@ -327,27 +355,62 @@
                 do_click: function () {
 
                     // cache event nav menu item clicked
-                    var $this = $(this),
-                        _priority_class = "-" + $this.closest( ".js-event" ).data( "priority" );
+                    var $this           = $(this),
+                        $pbox_event     = $this.closest( ".js-event" ),  
+                        _priority       = $pbox_event.data( "priority" ),
+                        _priority_class = "-" + _priority,
+                        _now_type       = $pbox_event.data( "now-type" );
 
                     // open actions
                     obj_gluru.actions.set_state( "open" );
 
+                    // remove "is-selected" from all events
                     $( ".js-event-wrap" ).removeClass( "is-selected" );
 
+                    // add "is-selected" to current events
                     $this
                         .closest( ".js-event-wrap" )
                         .addClass( "is-selected" );
 
+                    // set class "item-is-selected" which sets a 'top' value in the css for '.actions' panel
+                    // to accomodate the taller 'priority-box' style header 
                     $actions_wrap
                         .addClass( "item-is-selected" );
 
+                    // remove all 'priority' classes from 'current file' priority-box in actions panel
                     $actions_current_file
-                        .removeClass( "-now -critical -non-critical" )
+                        .removeClass( "-now -critical -non-critical -daily-digest" )
                         .addClass( _priority_class )
                         ;
 
-                    obj_gluru.actions.current_file._show();
+                    // actions header
+                    // call function to show 'current-file' 'priority-box'
+                    var header_type;
+                    if ( _priority === "now" ) {
+                        header_type = _priority;
+                    } else {
+                        header_type = "footprint";
+                    }
+                    // console.log( "_priority = " + _priority );
+                    // console.log( "header_type = " + header_type );
+                    obj_gluru.actions.current_file._show( header_type );
+
+
+                    // actions content
+                    // call function to show specific content in actions panel
+                    // options for actions_type are:
+                    // -now-calendar
+                    // -now-non-calendar
+                    // -footprint
+                    var actions_type;
+                    if ( _priority === "now" ) {
+                        actions_type = _priority + "-" + _now_type;
+                    } else {
+                        actions_type = "footprint";
+                    }
+                    // console.log( "_priority = " + _priority );
+                    // console.log( "actions_type = " + actions_type );
+                    obj_gluru.actions.actions_content._show( actions_type );
 
                 },
 
@@ -355,31 +418,51 @@
 
                     $this = $(this);
 
-                    $this
-                        .addClass( "is-selected is-waiting" )
-                            .find( ".js-loader-wrap" )
-                                .removeClass( "is-hidden" )
-                                    ;
+                    // console.log( $this.data( "demo-only-is-timeline-page" ) );
 
-                    setTimeout(function(){
+                    // if now button is in a page that has the timeline (moments or moments-now)
+                    // clone now event
+                    if ( $this.data( "demo-only-is-timeline-page" ) ) {
+                        // console.log( "clone event" );
+
+                        // set now button to 'waiting' state with loader
+                        $this
+                            .addClass( "is-selected is-waiting" )
+                                .find( ".js-loader-wrap" )
+                                    .removeClass( "is-hidden" )
+                                        ;
+
+                        setTimeout(function(){
+                            // $( ".js-events-for-cloning .event-wrap" ).first()
+                            $( ".js-events-for-cloning .priority-box.-event.-now" ).first()
+                                .closest( ".event-wrap" )
+                                    .clone()
+                                        .insertAfter( ".timeline > .event-group-heading" )
+                                            // .css({
+                                            //     "background": "red"
+                                            // })
+                                            ;
+                            // console.log( "cloned" );
+
+                            // return now button to previous state
+                            $this
+                                .removeClass( "is-selected is-waiting" )
+                                    .find( ".js-loader-wrap" )
+                                        .addClass( "is-hidden" )
+                                            ;
+
+
+                        }, 750);
+                    
+                    // otherwsie, take user to moments-now.html where 
+                    // this function is called by activating click on 
+                    // now button from script on page
+                    } else {
+                        // console.log( "go to moments-now page" );
                         location.href = "moments-now.html";
-                    }, 2000);
+                    }
 
                 },
-
-                // // toggle timeline between infinity and split view
-                // set_timeline_view: function ( requested_view ) {
-
-                //  var $this   = $(this);
-                //      $target = $( $this.data("class") );
-
-                //  if ( requested_view !== undefined ) {
-                //      $target = $( requested_view );
-                //  }
-
-                //  $table_wraps.hide();
-                //  $target.show();
-                // },
 
                 // change single / split view
                 set_timeline_view: function ( requested_view ) {
@@ -486,8 +569,8 @@
                 $actions_wrap
                     .addClass( "item-is-selected" );
 
-                obj_gluru.actions.current_file._show();
-                
+                obj_gluru.actions.current_file._show( "footprint" );
+                obj_gluru.actions.actions_content._show( "footprint" );
 
             },
 

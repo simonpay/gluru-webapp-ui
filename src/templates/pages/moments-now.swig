@@ -10,6 +10,7 @@
 {% block content %}
 
 	{% set obj = mydata.moments %}
+	{% set bln_timeline_page = 1 %}
 
 	{# main-nav #}
 	{% include "src/templates/includes/main-nav.swig" %}
@@ -18,7 +19,7 @@
 	{% include "src/templates/includes/drawer-files.swig" %}
 
 	{# actions #}
-	{% include "src/templates/includes/actions-footprint.swig" %}
+	{% include "src/templates/includes/actions.swig" %}
 
 	{# stage #}
 	{% set type = "recent" %}
@@ -31,10 +32,11 @@
 	<script src="js/pages/moments.js"></script>
 	<script>
 		(function(){
-			$( ".stage-nav__icon.js-toggle-actions" ).click();
-			$( ".js-event-nav__link" )[0].click();
-			$( ".js-now" ).addClass( "is-selected" );
+			// $( ".js-icon-button.js-toggle-actions" ).click();
+			// $( ".timeline .js-event-nav__link" )[0].click();
+			// $( ".js-now" ).addClass( "is-selected" );
 		})();
+		$( ".js-now" ).click();
 	</script>
 	<script src="js/pages/timeline.js"></script>
 {% endblock %}

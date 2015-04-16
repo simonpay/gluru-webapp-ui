@@ -10,6 +10,7 @@
 {% block content %}
 
 	{% set obj = mydata.moments %}
+	{% set bln_timeline_page = 1 %}
 
 	{# main-nav #}
 	{% include "src/templates/includes/main-nav.swig" %}
@@ -18,7 +19,7 @@
 	{% include "src/templates/includes/drawer-files.swig" %}
 
 	{# actions #}
-	{% include "src/templates/includes/actions-footprint.swig" %}
+	{% include "src/templates/includes/actions.swig" %}
 
 	{# stage #}
 	{% set type = "recent" %}

@@ -594,9 +594,21 @@
                 "events": [
                     {
                         "is_group":             0,
+                        "avatar_type":          "image",
+                        "type":                 "icon__phone-in--white",
+                        "priority":             "critical",
+                        "title":                "<strong>Jason Smith</strong>  has just found files and people useful to you right now!",
+                        "description":          "Incoming call has just found files and people useful to you right now!",
+                        "source_type":          "",
+                        "date_time":            "13:42 PM",
+                        "person_id":            "tmp_avatar_2"
+                    },
+                    {
+                        "is_group":             0,
                         "avatar_type":          "icon",
                         "type":                 "icon__now--white",
                         "priority":             "now",
+                        "now_type":             "calendar",
                         "title":                "<strong>Gluru</strong> has just found files and <br class='break'>people useful to you right now!",
                         "description":          "",
                         "source_type":          "",
@@ -630,6 +642,7 @@
                         "avatar_type":          "icon",
                         "type":                 "icon__now--white",
                         "priority":             "now",
+                        "now_type":             "non-calendar",
                         "title":                "<strong>Gluru</strong> has just found files and <br class='break'>people useful to you right now!",
                         "description":          "",
                         "source_type":          "",
