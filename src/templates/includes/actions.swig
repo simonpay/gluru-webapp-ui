@@ -4,63 +4,18 @@
     
         <div class="js-demo-only__actions-content-wrap -now-calendar" style="display: none">
             
-        <div class="now-summary">
-            <p class="text -light">We think you may need these files for <a href="#" class="link text-link"><strong>design meeting</strong></a>.</p>
+            <div class="now-summary">
+                <p class="text -light">We think you may need these files for <a href="#" class="link text-link"><strong>design meeting</strong></a>.</p>
 
-            <p class="text -light">
-                Attendees:<br>
-                <strong class="text -dark">Jason Smith, Amy Tan, Han Solo, Tony Stark</strong>
-            </p>
-            <p class="text -light">
-                Location:<br>
-                <strong class="text -dark">8 Warner Yard <a href="" class="link text-link">map</a></strong>
-            </p>
-        </div>
-
-
-
-{#             <div class="row">
-                <div class="large-3">
-                    <p class="text -light">Attendees:</p>
-                </div>
-                <div class="large-9">
-                    <p class="text -dark"><strong>Jason Smith, Amy Tan, Han Solo, Tony Stark</strong></p>
-                </div>
+                <p class="text -light">
+                    Attendees:<br>
+                    <strong class="text -dark">Jason Smith, Amy Tan, Han Solo, Tony Stark</strong>
+                </p>
+                <p class="text -light">
+                    Location:<br>
+                    <strong class="text -dark">8 Warner Yard <a href="" class="link text-link">map</a></strong>
+                </p>
             </div>
-            <div class="row">
-                <div class="large-3">
-                    <p class="text -light">Location:</p>
-                </div>
-                <div class="large-9">
-                    <p class="text -dark"><strong>8 Warner Yard <a href="" class="link text-link">map</a></strong></p>
-                </div>
-            </div>
- #}
-{#             <div class="media">
-                <div class="media__img">
-
-                    <p class="text -light">Attendees:</p>
-
-                </div>
-                <div class="media__body">
-
-                    <p class="text -dark"><strong>Jason Smith, Amy Tan, Han Solo, Tony Stark</strong></p>
-
-                </div>
-            </div>
-
-            <div class="media">
-                <div class="media__img">
-
-                    <p class="text -light">Location:</p>
-
-                </div>
-                <div class="media__body">
-
-                    <p class="text -dark"><strong>8 Warner Yard <a href="" class="link text-link">map</a></strong></p>
-
-                </div>
-            </div> #}
 
             <div class="options-list__wrap">
                 
@@ -76,13 +31,12 @@
 
                                     <div class="options-list {{ rObj.options_list_type_class }}">
                                         <div class="options-list__heading -collapsable js-toggle-expand-list">{{ obj_file_category.file_category_name }}</div>
+
                                         <div class="options-list__inner-wrap">
 
                                             <ul class="options-list__list">
 
                                                 {% for obj_file in obj_file_category.files %}
-                                                    {# {% set obj = obj_file %} #}
-                                                    {# {% include "table-row-file.swig" %} #}
 
                                                     <li class="options-list__item">
                                                         <a href="#" class="options-list__link">
@@ -114,13 +68,13 @@
 
         </div>
 
-        <div class="js-demo-only__actions-content-wrap -now-non-calendar" style="display: none">
-            
-            <p>We think you may need these files for design meeting.</p>
-            <p><strong>Attendees</strong>: Jason Smith, Amy Tan, Han Solo, Tony Stark</p>
-            <p><strong>Location</strong>: 8 Warner Yard <strong>map</strong></p>
 
+        <div class="js-demo-only__actions-content-wrap -now-non-calendar" style="display: none">
+
+            {# no data for this yet #}
+            
         </div>
+
 
         <div class="js-demo-only__actions-content-wrap -footprint" style="display: none">
             
@@ -149,6 +103,7 @@
             {% include "options-list.swig" %}
 
         </div>
+
 
     {%> "actions-end" %}
 
