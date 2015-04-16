@@ -6,39 +6,39 @@
             "options": [
                 {
                     "text"              : "Everything",
-                    "className"         : "icon__everything"
+                    "file_class"        : "icon__everything"
                 },
                 {
                     "text"              : "Onedrive",
-                    "className"         : "icon__onedrive"
+                    "file_class"        : "icon__onedrive"
                 },
                 {
                     "text"              : "Google Calendar",
-                    "className"         : "icon__gcalendar"
+                    "file_class"        : "icon__gcalendar"
                 },
                 {
                     "text"              : "Google Mail",
-                    "className"         : "icon__gmail"
+                    "file_class"        : "icon__gmail"
                 },
                 {
                     "text"              : "Exchange",
-                    "className"         : "icon__exchange"
+                    "file_class"        : "icon__exchange"
                 },
                 {
                     "text"              : "Box",
-                    "className"         : "icon__box"
+                    "file_class"        : "icon__box"
                 },
                 {
                     "text"              : "Drive",
-                    "className"         : "icon__gdrive"
+                    "file_class"        : "icon__gdrive"
                 },
                 {
                     "text"              : "Dropbox",
-                    "className"         : "icon__dropbox"
+                    "file_class"        : "icon__dropbox"
                 },
                 {
                     "text"              : "Evernote - long source name",
-                    "className"         : "icon__evernote"
+                    "file_class"        : "icon__evernote"
                 }
             ]
         },
@@ -69,15 +69,15 @@
             "options": [
                 {
                     "text"              : "Sales team",
-                    "className"         : "-sales"
+                    "file_class"        : "-sales"
                 },
                 {
                     "text"              : "Marketing Team",
-                    "className"         : "-marketing"
+                    "file_class"        : "-marketing"
                 },
                 {
                     "text"              : "Overly Long Team Department Name",
-                    "className"         : "-development"
+                    "file_class"        : "-development"
                 }
             ]
         }
@@ -103,49 +103,49 @@
             "options": [
                 {
                     "text"              : "this_file_has_a_very_long_name_and_cant_fit_on_the_screen.doc",
-                    "className"         : "icon-sml__folder--shared"
+                    "file_class"        : "icon-sml__folder--shared"
                 },
                 {
                     "text"              : "Sales_Report",
-                    "className"         : "icon-sml__folder"
+                    "file_class"        : "icon-sml__folder"
                 },
                 {
                     "text"              : "Sales_Report",
-                    "className"         : "icon-sml__folder--custom",
+                    "file_class"        : "icon-sml__folder--custom",
                     "source_class"      : "icon-sml__gdrive"
                 },
                 {
                     "text"              : "Profit_and_loss",
-                    "className"         : "icon-sml__folder--project",
+                    "file_class"        : "icon-sml__folder--project",
                     "source_class"      : "icon-sml__box"
                 },
                 {
                     "text"              : "summary.pdf",
-                    "className"         : "icon-sml__file--pdf"
+                    "file_class"        : "icon-sml__file--pdf"
                 },
                 {
                     "text"              : "todo-list.txt",
-                    "className"         : "icon-sml__file--text"
+                    "file_class"        : "icon-sml__file--text"
                 },
                 {
                     "text"              : "cost-forecast.xls",
-                    "className"         : "icon-sml__file--spreadsheet"
+                    "file_class"        : "icon-sml__file--spreadsheet"
                 },
                 {
                     "text"              : "todo-list.txt",
-                    "className"         : "icon-sml__file--evernote"
+                    "file_class"        : "icon-sml__file--evernote"
                 },
                 {
                     "text"              : "stuff.txt",
-                    "className"         : "icon-sml__file--drive"
+                    "file_class"        : "icon-sml__file--drive"
                 },
                 {
                     "text"              : "todo-list.eml",
-                    "className"         : "icon-sml__file--email"
+                    "file_class"        : "icon-sml__file--email"
                 },
                 {
                     "text"              : "todo-list.txt",
-                    "className"         : "icon-sml__file--calendar"
+                    "file_class"        : "icon-sml__file--calendar"
                 }
             ]
         },
@@ -175,7 +175,7 @@
             "options": [
                 {
                     "text"              : "<span class=\"icon__pos--path icon-sml__chevron\"></span>",
-                    "className"         : "icon-sml__gdrive"
+                    "file_class"        : "icon-sml__gdrive"
                 }
             ]
         },
@@ -371,28 +371,28 @@
                             "item_avatar_src":             "img/tmp_avatar_1.png",
                             "files": [
                                 {
-                                    "file_name":                "Sales.xls",
-                                    "file_type_class":          "icon-sml__file--spreadsheet",
+                                    "text":                     "Sales.xls",
+                                    "file_class":               "icon-sml__file--spreadsheet",
                                     "file_modified":            "10:33 am",
-                                    "file_source_class":        "icon-sml__gdrive"
+                                    "source_class":             "icon-sml__gdrive"
                                 },
                                 {
-                                    "file_name":                "Itinerary.txt",
-                                    "file_type_class":          "icon-sml__file--drive",
+                                    "text":                     "Itinerary.txt",
+                                    "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "9:01 am",
-                                    "file_source_class":        "icon-sml__box"
+                                    "source_class":             "icon-sml__box"
                                 },
                                 {
-                                    "file_name":                "Sales_Report.doc",
-                                    "file_type_class":          "icon-sml__file--drive",
+                                    "text":                     "Sales_Report.doc",
+                                    "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "20 Feb",
-                                    "file_source_class":        "icon-sml__gdrive"
+                                    "source_class":             "icon-sml__gdrive"
                                 },
                                 {
-                                    "file_name":                "Proposal.pdf",
-                                    "file_type_class":          "icon-sml__file--pdf",
+                                    "text":                     "Proposal.pdf",
+                                    "file_class":               "icon-sml__file--pdf",
                                     "file_modified":            "20 Feb",
-                                    "file_source_class":        "icon-sml__gdrive"
+                                    "source_class":             "icon-sml__gdrive"
                                 }
                             ]
                         },
@@ -402,22 +402,22 @@
                             "item_avatar_src":             "img/tmp_avatar_2.png",
                             "files": [
                                 {
-                                    "file_name":                "Itinerary.txt",
-                                    "file_type_class":          "icon-sml__file--drive",
+                                    "text":                     "Itinerary.txt",
+                                    "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "9:01 am",
-                                    "file_source_class":        "icon-sml__box"
+                                    "source_class":             "icon-sml__box"
                                 },
                                 {
-                                    "file_name":                "Sales.xls",
-                                    "file_type_class":          "icon-sml__file--spreadsheet",
+                                    "text":                     "Sales.xls",
+                                    "file_class":               "icon-sml__file--spreadsheet",
                                     "file_modified":            "10:33 am",
-                                    "file_source_class":        "icon-sml__gdrive"
+                                    "source_class":             "icon-sml__gdrive"
                                 },
                                 {
-                                    "file_name":                "Proposal.pdf",
-                                    "file_type_class":          "icon-sml__file--pdf",
+                                    "text":                     "Proposal.pdf",
+                                    "file_class":               "icon-sml__file--pdf",
                                     "file_modified":            "20 Feb",
-                                    "file_source_class":        "icon-sml__gdrive"
+                                    "source_class":             "icon-sml__gdrive"
                                 }
                             ]
                         },
@@ -427,16 +427,16 @@
                             "item_avatar_src":             "img/tmp_avatar_3.png",
                             "files": [
                                 {
-                                    "file_name":                "Sales.xls",
-                                    "file_type_class":          "icon-sml__file--spreadsheet",
+                                    "text":                     "Sales.xls",
+                                    "file_class":               "icon-sml__file--spreadsheet",
                                     "file_modified":            "10:33 am",
-                                    "file_source_class":        "icon-sml__gdrive"
+                                    "source_class":             "icon-sml__gdrive"
                                 },
                                 {
-                                    "file_name":                "Itinerary.txt",
-                                    "file_type_class":          "icon-sml__file--drive",
+                                    "text":                     "Itinerary.txt",
+                                    "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "9:01 am",
-                                    "file_source_class":        "icon-sml__box"
+                                    "source_class":             "icon-sml__box"
                                 }
                             ]
                         }
@@ -457,16 +457,16 @@
                                     "file_category_name":        "Docs",
                                     "files": [
                                         {
-                                            "file_name":                "Itinerary.txt",
-                                            "file_type_class":          "icon-sml__file--drive",
+                                            "text":                     "Itinerary.txt",
+                                            "file_class":               "icon-sml__file--drive",
                                             "file_modified":            "9:01 am",
-                                            "file_source_class":        "icon-sml__box"
+                                            "source_class":             "icon-sml__box"
                                         },
                                         {
-                                            "file_name":                "Proposal.pdf",
-                                            "file_type_class":          "icon-sml__file--pdf",
+                                            "text":                     "Proposal.pdf",
+                                            "file_class":               "icon-sml__file--pdf",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__gdrive"
+                                            "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
                                 },
@@ -475,10 +475,10 @@
                                     "file_category_name":        "Presentations",
                                     "files": [
                                         {
-                                            "file_name":                "Board Meeting Deck.ppt",
-                                            "file_type_class":          "icon-sml__file--powerpoint",
+                                            "text":                     "Board Meeting Deck.ppt",
+                                            "file_class":               "icon-sml__file--powerpoint",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__gdrive"
+                                            "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
                                 },
@@ -487,18 +487,18 @@
                                     "file_category_name":        "Emails",
                                     "files": [
                                         {
-                                            "file_name":                "Design Roadmap",
+                                            "text":                     "Design Roadmap",
                                             "file_summary":             "I really would love to get together.",
-                                            "file_type_class":          "icon-sml__file--email",
+                                            "file_class":               "icon-sml__file--email",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__gmail"
+                                            "source_class":             "icon-sml__gmail"
                                         },
                                         {
-                                            "file_name":                "Logo Options",
+                                            "text":                     "Logo Options",
                                             "file_summary":             "Please Make the logos 50% bigger.",
-                                            "file_type_class":          "icon-sml__file--email",
+                                            "file_class":               "icon-sml__file--email",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__gmail"
+                                            "source_class":             "icon-sml__gmail"
                                         }
                                     ]
                                 },
@@ -507,10 +507,10 @@
                                     "file_category_name":        "Spreadsheets",
                                     "files": [
                                         {
-                                            "file_name":                "Sales.xls",
-                                            "file_type_class":          "icon-sml__file--spreadsheet",
+                                            "text":                     "Sales.xls",
+                                            "file_class":               "icon-sml__file--spreadsheet",
                                             "file_modified":            "10:33 am",
-                                            "file_source_class":        "icon-sml__gdrive"
+                                            "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
                                 }
@@ -527,16 +527,16 @@
                                     "file_category_name":        "Docs",
                                     "files": [
                                         {
-                                            "file_name":                "Itinerary.txt",
-                                            "file_type_class":          "icon-sml__file--drive",
+                                            "text":                     "Itinerary.txt",
+                                            "file_class":               "icon-sml__file--drive",
                                             "file_modified":            "9:01 am",
-                                            "file_source_class":        "icon-sml__box"
+                                            "source_class":             "icon-sml__box"
                                         },
                                         {
-                                            "file_name":                "Proposal.pdf",
-                                            "file_type_class":          "icon-sml__file--pdf",
+                                            "text":                     "Proposal.pdf",
+                                            "file_class":               "icon-sml__file--pdf",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__gdrive"
+                                            "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
                                 },
@@ -545,16 +545,16 @@
                                     "file_category_name":        "Presentations",
                                     "files": [
                                         {
-                                            "file_name":                "Board Meeting Deck.ppt",
-                                            "file_type_class":          "icon-sml__file--powerpoint",
+                                            "text":                     "Board Meeting Deck.ppt",
+                                            "file_class":               "icon-sml__file--powerpoint",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__gdrive"
+                                            "source_class":             "icon-sml__gdrive"
                                         },
                                         {
-                                            "file_name":                "Branding Evolution.ppt",
-                                            "file_type_class":          "icon-sml__file--powerpoint",
+                                            "text":                     "Branding Evolution.ppt",
+                                            "file_class":               "icon-sml__file--powerpoint",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__box"
+                                            "source_class":             "icon-sml__box"
                                         }
                                     ]
                                 },
@@ -563,11 +563,11 @@
                                     "file_category_name":        "Emails",
                                     "files": [
                                         {
-                                            "file_name":                "Design Roadmap",
+                                            "text":                     "Design Roadmap",
                                             "file_summary":             "I really would love to get together.",
-                                            "file_type_class":          "icon-sml__file--email",
+                                            "file_class":               "icon-sml__file--email",
                                             "file_modified":            "20 Feb",
-                                            "file_source_class":        "icon-sml__gmail"
+                                            "source_class":             "icon-sml__gmail"
                                         }
                                     ]
                                 },
@@ -576,10 +576,10 @@
                                     "file_category_name":        "Spreadsheets",
                                     "files": [
                                         {
-                                            "file_name":                "Sales.xls",
-                                            "file_type_class":          "icon-sml__file--spreadsheet",
+                                            "text":                     "Sales.xls",
+                                            "file_class":               "icon-sml__file--spreadsheet",
                                             "file_modified":            "10:33 am",
-                                            "file_source_class":        "icon-sml__gdrive"
+                                            "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
                                 }
@@ -747,34 +747,34 @@
                         "person_id":            "icon__files",
                         "items": [
                             {
-                                "file_name":                "todo-list.text",
-                                "file_type_class":          "icon-sml__file--evernote",
+                                "text":                     "todo-list.text",
+                                "file_class":               "icon-sml__file--evernote",
                                 "file_modified":            "12 May 2015",
-                                "file_source_class":        "icon-sml__evernote"
+                                "source_class":             "icon-sml__evernote"
                             },
                             {
-                                "file_name":                "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
-                                "file_type_class":          "icon-sml__file--text",
+                                "text":                     "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
+                                "file_class":               "icon-sml__file--text",
                                 "file_modified":            "12 May 2015",
-                                "file_source_class":        "icon-sml__gdrive"
+                                "source_class":             "icon-sml__gdrive"
                             },
                             {
-                                "file_name":                "todo-list.text",
-                                "file_type_class":          "icon-sml__file--evernote",
+                                "text":                     "todo-list.text",
+                                "file_class":               "icon-sml__file--evernote",
                                 "file_modified":            "12 May 2015",
-                                "file_source_class":        "icon-sml__evernote"
+                                "source_class":             "icon-sml__evernote"
                             },
                             {
-                                "file_name":                "summary.pdf",
-                                "file_type_class":          "icon-sml__file--pdf",
+                                "text":                     "summary.pdf",
+                                "file_class":               "icon-sml__file--pdf",
                                 "file_modified":            "12 May 2015",
-                                "file_source_class":        "icon-sml__box"
+                                "source_class":             "icon-sml__box"
                             },
                             {
-                                "file_name":                "cost-forecast.xls",
-                                "file_type_class":          "icon-sml__file--spreadsheet",
+                                "text":                     "cost-forecast.xls",
+                                "file_class":               "icon-sml__file--spreadsheet",
                                 "file_modified":            "12 May 2015",
-                                "file_source_class":        "icon-sml__dropbox"
+                                "source_class":             "icon-sml__dropbox"
                             }
                         ]
                     }
@@ -791,28 +791,28 @@
         "table_data": {
             "files": [
                 {
-                    "file_name":                "todo-list.text",
-                    "file_type_class":          "icon-sml__file--evernote",
+                    "text":                     "todo-list.text",
+                    "file_class":               "icon-sml__file--evernote",
                     "file_modified":            "12 May 2015",
-                    "file_source_class":        "icon-sml__evernote"
+                    "source_class":             "icon-sml__evernote"
                 },
                 {
-                    "file_name":                "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
-                    "file_type_class":          "icon-sml__file--text",
+                    "text":                     "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
+                    "file_class":               "icon-sml__file--text",
                     "file_modified":            "12 May 2015",
-                    "file_source_class":        "icon-sml__gdrive"
+                    "source_class":             "icon-sml__gdrive"
                 },
                 {
-                    "file_name":                "summary.pdf",
-                    "file_type_class":          "icon-sml__file--pdf",
+                    "text":                     "summary.pdf",
+                    "file_class":               "icon-sml__file--pdf",
                     "file_modified":            "12 May 2015",
-                    "file_source_class":        "icon-sml__box"
+                    "source_class":             "icon-sml__box"
                 },
                 {
-                    "file_name":                "cost-forecast.xls",
-                    "file_type_class":          "icon-sml__file--spreadsheet",
+                    "text":                     "cost-forecast.xls",
+                    "file_class":               "icon-sml__file--spreadsheet",
                     "file_modified":            "12 May 2015",
-                    "file_source_class":        "icon-sml__dropbox"
+                    "source_class":             "icon-sml__dropbox"
                 }
             ]
         }

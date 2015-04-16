@@ -4,9 +4,22 @@
     
         <div class="js-demo-only__actions-content-wrap -now-calendar" style="display: none">
             
+        <div class="now-summary">
             <p class="text -light">We think you may need these files for <a href="#" class="link text-link"><strong>design meeting</strong></a>.</p>
 
-            <div class="row">
+            <p class="text -light">
+                Attendees:<br>
+                <strong class="text -dark">Jason Smith, Amy Tan, Han Solo, Tony Stark</strong>
+            </p>
+            <p class="text -light">
+                Location:<br>
+                <strong class="text -dark">8 Warner Yard <a href="" class="link text-link">map</a></strong>
+            </p>
+        </div>
+
+
+
+{#             <div class="row">
                 <div class="large-3">
                     <p class="text -light">Attendees:</p>
                 </div>
@@ -22,7 +35,7 @@
                     <p class="text -dark"><strong>8 Warner Yard <a href="" class="link text-link">map</a></strong></p>
                 </div>
             </div>
-
+ #}
 {#             <div class="media">
                 <div class="media__img">
 
@@ -49,55 +62,47 @@
                 </div>
             </div> #}
 
-            {% for obj_section in obj.daily_digest.sections %}
-
-                {% for obj_item in obj_section.items %}
+            <div class="options-list__wrap">
+                
+                {% for obj_section in obj.daily_digest.sections %}
 
                     {% if obj_section.section_id === "meetings" %}
 
-                        {% for obj_file_category in obj_item.file_categories %}
+                        {% for obj_item in obj_section.items %}
 
-                            <div class="daily-digest__section-heading -docs">{{ obj_file_category.file_category_name }}</div>
+                            {% if loop.first %}
 
-                            <ul class="options-list__list">
+                                {% for obj_file_category in obj_item.file_categories %}
 
-                                {% for obj_file in obj_file_category.files %}
-                                    {# {% set obj = obj_file %} #}
-                                    {# {% include "table-row-file.swig" %} #}
+                                    <div class="options-list {{ rObj.options_list_type_class }}">
+                                        <div class="options-list__heading -collapsable js-toggle-expand-list">{{ obj_file_category.file_category_name }}</div>
+                                        <div class="options-list__inner-wrap">
 
-                                    <li class="options-list__item">
-                                        <a href="#" class="options-list__link">
+                                            <ul class="options-list__list">
 
-                                            <div class="media -v-center">
-                                                <div class="media__img">
+                                                {% for obj_file in obj_file_category.files %}
+                                                    {# {% set obj = obj_file %} #}
+                                                    {# {% include "table-row-file.swig" %} #}
 
-                                                    <div class="{{obj_file.file_type_class}}"></div>
+                                                    <li class="options-list__item">
+                                                        <a href="#" class="options-list__link">
 
-                                                </div>
-                                                <div class="media__body">
+                                                            {% set obj_file = obj_file %}
+                                                            {% include "options-list__row--related-file.swig" %}
 
-                                                    <div class="media -v-center">
-                                                        <div class="media__img -right">
+                                                        </a>
+                                                    </li>
 
-                                                            <div class="{{obj_file.file_source_class}}"></div>
+                                                {% endfor %}
 
-                                                        </div>
-                                                        <div class="media__body">
+                                            </ul>
 
-                                                            <div class="options-list__text" title="{{ obj_file.file_name }}">{{ obj_file.file_name|safe }}</div>
-
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                        </a>
-                                    </li>
+                                        </div><!-- //.options-list__inner-wrap -->
+                                    </div><!-- //.options-list -->
 
                                 {% endfor %}
 
-                            </ul>
+                            {% endif %}
 
                         {% endfor %}
 
@@ -105,7 +110,7 @@
 
                 {% endfor %}
 
-            {% endfor %}
+            </div>
 
         </div>
 

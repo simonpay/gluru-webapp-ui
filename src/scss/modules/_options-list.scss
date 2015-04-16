@@ -4,131 +4,140 @@
 
 // all lists within drawer & actions panels
 
-.options-list {
+.options-list__wrap {
     position: relative;
-    margin-top: 5px;
-
-    .actions & {
-        margin-top: 15px;
-        border-bottom: 1px solid $alto;
-    }
-
-    &.is-collapsed {
-    }
-    
-    &:first-child {
-        margin-top: 5px;
-    }
-
-    &:last-child {
-        border: none;
-    }
 }
 
-    .options-list__heading {
+    .options-list {
         position: relative;
-        padding-bottom: 10px;
-        text-transform: uppercase;
-        font-size: $options-list-heading-font-size;
-        color: $dove-gray;
-
-        &.-collapsable {
-            cursor: pointer;
-
-            &:after {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 20px;
-                height: 12px;
-                @include transform( rotate(180deg) );
-                @include use-sprite("icon__expand");
-
-                .is-collapsed & {
-                    @include transform( rotate(0deg) );
-                }
-
-                .drawer & {
-                    right: 15px;
-                }
+        margin-top: 5px;
+        
+        // set large margin-top for first 
+        // options-list inside .options-list__wrap
+        // used for 'now' results
+        &:first-child {
+            .options-list__wrap & {
+                margin-top: 20px;
             }
         }
 
+        .actions & {
+            margin-top: 15px;
+            border-bottom: 1px solid $alto;
+        }
 
-        .drawer & {
-            padding-left: $options-list-heading-padding-left--drawer;
+        &.is-collapsed {
+        }
+        
+        &:first-child {
+            margin-top: 5px;
+        }
+
+        &:last-child {
+            border: none;
         }
     }
 
-        .options-list__inner-wrap {
+        .options-list__heading {
+            position: relative;
 
-            // use psuedo el to fake margin-bottom after
-            // list content that will work with 
-            // the jquery animate on height
-            &:after {
-                content: "";
-                display: block;
-                position: relative;
-                height: 20px;
-                
-            }
-            
-            // remove :after from last options-list item
-            .options-list:last-child & {
+            &.-collapsable {
+                cursor: pointer;
+
                 &:after {
-                    content: none;
-                }
-            }
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 7px;
+                    width: 20px;
+                    height: 12px;
+                    @include transform( rotate(180deg) );
+                    @include use-sprite("icon__expand");
 
-        }
-
-            .options-list__list { // ul
-            }
-
-                .options-list__item { // li
-                    position: relative;
-                    margin-bottom: 0;
-
-                    &.-current-file {
-                        height: $options-list-link-height-actions;
-                        margin: 10px 0px 20px;
+                    .is-collapsed & {
+                        @include transform( rotate(0deg) );
                     }
 
                     .drawer & {
-                        margin-bottom: 4px;
+                        right: 15px;
                     }
+                }
+            }
+
+
+            .drawer & {
+                padding-left: $options-list-heading-padding-left--drawer;
+            }
+        }
+
+            .options-list__inner-wrap {
+
+                // use psuedo el to fake margin-bottom after
+                // list content that will work with 
+                // the jquery animate on height
+                &:after {
+                    content: "";
+                    display: block;
+                    position: relative;
+                    height: 20px;
                     
-                    // when ".-multi-line" class present on '.options-list'
-                    // add margin to bottom of .options-list__item (li)
-                    .-multi-block & { 
-                        margin-bottom: 14px;
+                }
+                
+                // remove :after from last options-list item
+                .options-list:last-child & {
+                    &:after {
+                        content: none;
                     }
                 }
 
-                    .options-list__link { // a
-                        display: block;
-                        position: relative;
-                        height: $options-list-link-height-actions;
-                        padding: 0 4px;
-                        text-decoration: none;
+            }
 
-                        &:hover,
-                        &.is-selected {
-                            background: rgba(0, 0, 0, 0.075);
+                .options-list__list { // ul
+                }
+
+                    .options-list__item { // li
+                        position: relative;
+                        margin-bottom: 0;
+
+                        &.-current-file {
+                            height: $options-list-link-height-actions;
+                            margin: 10px 0px 20px;
                         }
 
                         .drawer & {
-                            height: $options-list-link-height-drawer;
-                            padding-left: 18px;
-                            padding-right: 10px;
+                            margin-bottom: 4px;
+                        }
+                        
+                        // when ".-multi-line" class present on '.options-list'
+                        // add margin to bottom of .options-list__item (li)
+                        .-multi-block & { 
+                            margin-bottom: 14px;
                         }
                     }
-                    
-                    // center icon for 'sources' and 'teams' in 'drawer' 
-                    .options-list__icon {
-                        margin: 0 auto;
-                    }
+
+                        .options-list__link { // a
+                            display: block;
+                            position: relative;
+                            height: $options-list-link-height-actions;
+                            padding: 0 4px;
+                            text-decoration: none;
+
+                            &:hover,
+                            &.is-selected {
+                                background: rgba(0, 0, 0, 0.075);
+                            }
+
+                            .drawer & {
+                                height: $options-list-link-height-drawer;
+                                padding-left: 18px;
+                                padding-right: 10px;
+                            }
+                        }
+                        
+                        // center icon for 'sources' and 'teams' in 'drawer' 
+                        .options-list__icon {
+                            margin: 0 auto;
+                        }
 
 

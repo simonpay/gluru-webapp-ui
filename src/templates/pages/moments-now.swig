@@ -33,7 +33,9 @@
 	<script>
 		(function(){
 			// $( ".js-icon-button.js-toggle-actions" ).click();
-			$( ".timeline .js-event-nav__link" )[2].click();
+			setTimeout(function(){
+				$( ".timeline .js-event-nav__link" )[0].click();
+			}, 1000);
 			// $( ".js-now" ).addClass( "is-selected" );
 		})();
 		$( ".js-now" ).click();

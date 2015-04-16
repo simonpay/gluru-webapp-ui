@@ -47,7 +47,7 @@
                             <div class="media__img">
 
                                 <div class="disc-img">
-                                    <div class="disc-img__img-wrap options-list__icon -team {{ obj.className }}"></div>
+                                    <div class="disc-img__img-wrap options-list__icon -team {{ obj.file_class }}"></div>
                                 </div>
 
                             </div>
@@ -82,37 +82,8 @@
 
                     {% elseif rObj.id === "related_files" %}
 
-                        <div class="media -v-center">
-                            <div class="media__img">
-
-                                <div class="{{obj.className}}"></div>
-
-                            </div>
-                            <div class="media__body">
-
-                                {% if obj.source_class !== "" %}
-
-                                    <div class="media -v-center">
-                                        <div class="media__img -right">
-
-                                            <div class="{{obj.source_class}}"></div>
-
-                                        </div>
-                                        <div class="media__body">
-
-                                            <div class="options-list__text" title="{{ obj.text }}">{{ obj.text|safe }}</div>
-
-                                        </div>
-                                    </div>
-
-                                {% else %}
-
-                                    <div class="options-list__text" title="{{ obj.text }}">{{ obj.text|safe }}</div>
-
-                                {% endif %}
-
-                            </div>
-                        </div>
+                        {% set obj_file = obj %}
+                        {% include "options-list__row--related-file.swig" %}
 
 
                     {% elseif rObj.id === "sources" %}
@@ -121,7 +92,7 @@
                         <div class="media -v-center">
                             <div class="media__img">
 
-                                <div class="options-list__icon {{obj.className}}"></div>
+                                <div class="options-list__icon {{obj.file_class}}"></div>
 
                             </div>
                             <div class="media__body">

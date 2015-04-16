@@ -5,15 +5,15 @@
 		    <div class="media__img">
 
 		    	<div class="table__icon">
-		    		<div class="{{ obj_file_row.file_type_class }}"></div>
+		    		<div class="{{ obj_file_row.file_class }}"></div>
 		    	</div>
 
 		    </div>
 		    <div class="media__body">
 
-	    		<a href="#" class="link table__text" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_name }}</a>
+	    		<a href="#" class="link table__text" title="{{ obj_file_row.text }}">{{ obj_file_row.text }}</a>
 	    		{% if obj_file_row.file_summary %}
-		    		<div class="table__text -light" title="{{ obj_file_row.file_name }}">{{ obj_file_row.file_summary }}</div>
+		    		<div class="table__text -light" title="{{ obj_file_row.text }}">{{ obj_file_row.file_summary }}</div>
 	    		{% endif %}
 		    </div>
 
@@ -31,7 +31,7 @@
 		    <div class="media__img">
 
 		    	<div class="table__icon">
-		    		<div class="{{ obj_file_row.file_source_class }}"></div>
+		    		<div class="{{ obj_file_row.source_class }}"></div>
 		    	</div>
 
 		    </div>
