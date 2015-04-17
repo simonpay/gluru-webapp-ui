@@ -17,10 +17,11 @@
 
     @include mq(large){
         float: left;
-        @include transition(width $drawer-animation-duration);
         width: $drawer-wrap-width;
         height: 100%;
         visibility: visible;
+        @include transform( translate3d(0, 0, 0) );
+        @include transition( width $drawer-animation-duration);
     }
     
     &.is-hidden {

@@ -148,9 +148,11 @@ $options-list-text-font-size--drawer:       rem(14);
 $options-list-heading-padding-left--drawer: $panel-header-padding-left--drawer - $drawer-padding-left;
 
 // files
+// table
 $min-table-width-files-single:              600px;
 $min-table-width-files-split:               $min-table-width-files-single - 200px;
 $files-table-padding-left:                  10px;
+$table-col-height:							50px;
 
 // timeline
 $event-height:                              80px;

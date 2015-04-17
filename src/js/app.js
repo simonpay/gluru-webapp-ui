@@ -1067,6 +1067,35 @@
     }, false); 
 
 
+    // use js to set the width of .panel-header.-stage on re-size
+    // would need to use setInterval to set width during css transition 
+    // of drawer-wrap which affects the width of this el
+    // $(window).on( "resize", function(){
+    //     console.log( "resized" );
+    //     $( ".js-panel-header-stage" ).outerWidth( $(window).width() - 86 - $( ".js-drawer-wrap" ).outerWidth() );
+    // });
+    
+    // this makes the actions panel resizable along with jqueryui js and css
+    // this will be committed if needed and then removed
+    // to make it work properly, the css transition woldahve to be removed from 
+    // action-wrap whilst the element is being resized and then replaced once 
+    // its finished, the inline stles would also have to be removed from the action-wrap 
+    // if the actions bar needs to be animated back closed again
+    // the contents of actions-wrap would have to be made to be 100% width as well
+    // this also needs these 2 dep's added to grunt concat task:
+    // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/mouse.js',
+    // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/resizable.js',
+    // and this in head
+    // <link rel="stylesheet" href="css/jquery-ui.css" />
+    // $('.actions-wrap').resizable({
+    //         handles     : 'e,w',
+    //         resize      : function (event,ui){
+    //                        ui.position.left = ui.originalPosition.left;
+    //                        // ui.size.width    = ( ui.size.width - ui.originalSize.width )*2 + ui.originalSize.width;
+    //                     }
+    // });
+
+
     // FORCE PANEL STATES
     // -------------------------------------------------
     // obj_gluru.actions._open();

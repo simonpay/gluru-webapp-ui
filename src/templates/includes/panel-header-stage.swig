@@ -1,4 +1,4 @@
-<header class="panel-header -stage">
+<header class="panel-header -stage js-panel-header-stage">
 	
 	{% include "stage-heading.swig" %}
 
