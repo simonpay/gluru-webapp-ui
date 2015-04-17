@@ -362,56 +362,68 @@
                         _priority_class = "-" + _priority,
                         _now_type       = $pbox_event.data( "now-type" );
 
-                    // open actions
-                    obj_gluru.actions.set_state( "open" );
+                    // console.log( "priority = " + _priority );
 
-                    // remove "is-selected" from all events
-                    $( ".js-event-wrap" ).removeClass( "is-selected" );
+                    // daily digest event
+                    if ( _priority === "daily-digest" ) {
 
-                    // add "is-selected" to current events
-                    $this
-                        .closest( ".js-event-wrap" )
-                        .addClass( "is-selected" );
+                        location.href = "moments-daily-digest.html";
 
-                    // set class "item-is-selected" which sets a 'top' value in the css for '.actions' panel
-                    // to accomodate the taller 'priority-box' style header 
-                    $actions_wrap
-                        .addClass( "item-is-selected" );
-
-                    // remove all 'priority' classes from 'current file' priority-box in actions panel
-                    $actions_current_file
-                        .removeClass( "-now -critical -non-critical -daily-digest" )
-                        .addClass( _priority_class )
-                        ;
-
-                    // actions header
-                    // call function to show 'current-file' 'priority-box'
-                    var header_type;
-                    if ( _priority === "now" ) {
-                        header_type = _priority + "-" + _now_type;
+                    // everything else
                     } else {
-                        header_type = "footprint";
-                    }
-                    // console.log( "_priority = " + _priority );
-                    // console.log( "header_type = " + header_type );
-                    obj_gluru.actions.current_file._show( header_type );
+
+                        // open actions
+                        obj_gluru.actions.set_state( "open" );
+
+                        // remove "is-selected" from all events
+                        $( ".js-event-wrap" ).removeClass( "is-selected" );
+
+                        // add "is-selected" to current events
+                        $this
+                            .closest( ".js-event-wrap" )
+                            .addClass( "is-selected" );
+
+                        // set class "item-is-selected" which sets a 'top' value in the css for '.actions' panel
+                        // to accomodate the taller 'priority-box' style header 
+                        $actions_wrap
+                            .addClass( "item-is-selected" );
+
+                        // remove all 'priority' classes from 'current file' priority-box in actions panel
+                        $actions_current_file
+                            .removeClass( "-now -critical -non-critical -daily-digest" )
+                            .addClass( _priority_class )
+                            ;
+
+                        // actions header
+                        // call function to show 'current-file' 'priority-box'
+                        var header_type;
+                        if ( _priority === "now" ) {
+                            header_type = _priority + "-" + _now_type;
+                        } else {
+                            header_type = "footprint";
+                        }
+                        // console.log( "_priority = " + _priority );
+                        // console.log( "header_type = " + header_type );
+                        obj_gluru.actions.current_file._show( header_type );
 
 
-                    // actions content
-                    // call function to show specific content in actions panel
-                    // options for actions_type are:
-                    // -now-calendar
-                    // -now-non-calendar
-                    // -footprint
-                    var actions_type;
-                    if ( _priority === "now" ) {
-                        actions_type = _priority + "-" + _now_type;
-                    } else {
-                        actions_type = "footprint";
+                        // actions content
+                        // call function to show specific content in actions panel
+                        // options for actions_type are:
+                        // -now-calendar
+                        // -now-non-calendar
+                        // -footprint
+                        var actions_type;
+                        if ( _priority === "now" ) {
+                            actions_type = _priority + "-" + _now_type;
+                        } else {
+                            actions_type = "footprint";
+                        }
+                        // console.log( "_priority = " + _priority );
+                        // console.log( "actions_type = " + actions_type );
+                        obj_gluru.actions.actions_content._show( actions_type );
+
                     }
-                    // console.log( "_priority = " + _priority );
-                    // console.log( "actions_type = " + actions_type );
-                    obj_gluru.actions.actions_content._show( actions_type );
 
                 },
 
