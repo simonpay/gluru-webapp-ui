@@ -231,10 +231,19 @@
 // these are needed for the demo only - 
 // they shouldnt make it into the app!
 // TODO: save to module 
-.demo-only__actions-header-contents-wrap {
-    height: inherit;
-}
+.demo-only {
 
+    &.-actions-header-current-item__contents-wrap {
+        // inhert height so that .media.-v-center works correctly
+        // as this module needs to inherit the height of its parent
+        height: inherit;
+    }
+
+    // wrapper around content inside modal box 
+    &.-modal-box__content-wrap {
+        display: none;
+    }
+}
 
 
 .now-summary {

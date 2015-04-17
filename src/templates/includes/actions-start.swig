@@ -12,7 +12,7 @@
 
 	<div class="priority-box -current-item -now is-hidden js-actions--current-item">
 
-		<div class="demo-only__actions-header-contents-wrap js-demo-only__actions-header-contents-wrap -now" style="display: none">
+		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -now" style="display: none">
 
 			<div class="media -v-center">
 			    <div class="media__img">
@@ -46,7 +46,7 @@
 
 		</div>
 
-		<div class="demo-only__actions-header-contents-wrap js-demo-only__actions-header-contents-wrap -footprint" style="display: none">
+		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -footprint" style="display: none">
 
 			<div class="media -v-center">
 			    <div class="media__img">

@@ -13,6 +13,7 @@
 
         // modal     
         $modal                              = $( ".js-modal" ),
+        $modal_triggers                     = $( ".js-modal-trigger" ),
         $show_modal                         = $( ".js-show-modal" ),
         $close_modal                        = $( ".js-close-modal" ),
 
@@ -81,11 +82,11 @@
 
                 var $this = $(this);
 
-                // console.log( $this.data( "modal-content" ) );
+                console.log( $this.data( "modal-content" ) );
 
                 $modal
                     .removeClass( "is-hidden" )
-                        .find( "." + $this.data( "modal-content" ) )
+                        .find( ".js-demo-only__" + $this.data( "modal-content" ) )
                         .show()
                             ;
             },
@@ -93,7 +94,7 @@
             _hide: function () {
                 $modal
                     .addClass( "is-hidden" )
-                        .find( ".modal-box__content-wrap" )
+                        .find( ".-modal-box__content-wrap" )
                             .hide()
                                 ;
             },
@@ -210,10 +211,10 @@
                     $actions_current_file.removeClass( "is-hidden" );
 
                     // hide all actions header content blocks
-                    $( ".js-demo-only__actions-header-contents-wrap" ).hide();
+                    $( ".js-demo-only__actions-header-current-item__contents-wrap" ).hide();
 
                     // show specific header based on "header_type" argument passed to func
-                    $( ".js-demo-only__actions-header-contents-wrap" + ".-" + header_type ).show();
+                    $( ".js-demo-only__actions-header-current-item__contents-wrap" + ".-" + header_type ).show();
 
                     //show actions panel contents
                     // $actions.removeClass( "is-hidden" );
@@ -621,7 +622,7 @@
 
         tooltips: {
 
-            show: function () {
+            _show: function () {
 
                 var $this                       = $(this),
                     _button_width               = $this.outerWidth(),
@@ -704,8 +705,8 @@
                 $tooltip.removeClass( "is-hidden" );
             },
 
-            hide: function () {
-                // console.log( "tooltips.hide()" );
+            _hide: function () {
+                // console.log( "tooltips._hide()" );
                 $tooltip
                     .removeClass( "-left -right -above -below" )
                     .addClass( "is-hidden" )
@@ -746,11 +747,13 @@
 
         pop_menu: {
 
-            show: function () {
+            _show: function () {
                 // console.log( "SHOW" );
+                
                 var $this                   = $(this),
                     $_pop_menu__list        = $( ".js-pop-menu__list" ),
-                    $_pop_menu_to_show      = $( ".js-pop-menu__list--" + $this.data( "pop-menu" ) ),
+                    _pop_menu_content       = $this.data( "pop-menu" ),
+                    $_pop_menu_to_show      = $( ".js-pop-menu__list--" + _pop_menu_content ),
                     _window_width           = $(window).width(),
                     _button_height          = $this.height(),
                     _button_width           = $this.width(),
@@ -758,29 +761,46 @@
                     _obj_gluru              = gluru_app,
                     _pop_menu_offset_left;
 
-                $_pop_menu__list.hide();
-                $_pop_menu_to_show.show();
+                // if pop menu is visible && pop menu type is sort && sort is visible - hide pop menu
+                if ( !$pop_menu_wrap.hasClass( "is-hidden" ) && _pop_menu_content === "sort" && $( ".js-pop-menu__list--sort" ).css( "display" ) === "block" ) {
 
-                var _pop_menu_width         = $pop_menu_wrap.width();
+                    _obj_gluru.pop_menu._hide();
 
-                $this.addClass( "is-selected" );
+                // if pop menu is visible && pop menu type is sources && sources is visible - hide pop menu
+                } else if ( !$pop_menu_wrap.hasClass( "is-hidden" ) && _pop_menu_content === "sources" && $( ".js-pop-menu__list--sources" ).css( "display" ) === "block" ) {
 
-                // console.log( _window_width );
+                    _obj_gluru.pop_menu._hide();
 
-                if ( (_button_offset.left - _button_width + _pop_menu_width) > _window_width ) {
-                    _pop_menu_offset_left = _button_offset.left - _pop_menu_width + _button_width;
+                // pop menu is hidden - show pop menu
                 } else {
-                    _pop_menu_offset_left = _button_offset.left;
-                }
-                _pop_menu_offset_top = _button_offset.top + _button_height + 5;
 
-                $pop_menu_wrap
-                    .removeClass( "is-hidden" )
-                    .offset({ left: _pop_menu_offset_left, top: _pop_menu_offset_top })
-                    ;
+                    $_pop_menu__list.hide();
+                    $_pop_menu_to_show.show();
+
+                    // get width of pop menu now its visible
+                    var _pop_menu_width         = $pop_menu_wrap.width();
+
+                    $this.addClass( "is-selected" );
+
+                    // console.log( _window_width );
+
+                    if ( (_button_offset.left - _button_width + _pop_menu_width) > _window_width ) {
+                        _pop_menu_offset_left = _button_offset.left - _pop_menu_width + _button_width;
+                    } else {
+                        _pop_menu_offset_left = _button_offset.left;
+                    }
+                    _pop_menu_offset_top = _button_offset.top + _button_height + 5;
+
+                    $pop_menu_wrap
+                        .removeClass( "is-hidden" )
+                        .offset({ left: _pop_menu_offset_left, top: _pop_menu_offset_top })
+                        ;
+
+                }
+
             },
 
-            hide: function () {
+            _hide: function () {
 
                 $pop_menu_triggers.removeClass( "is-selected" );
 
@@ -799,11 +819,9 @@
                     .find( ".js-pop-menu-item" )
                     .removeClass( "is-selected" );
 
-                // console.log( $this.closest( ".js-pop-menu__list" ) );
-
                 $this.addClass( "is-selected" );
 
-                _obj_gluru.pop_menu.hide();
+                _obj_gluru.pop_menu._hide();
             }
         },
 
@@ -835,12 +853,13 @@
     // MODAL
     // -------------------------------------------------
     // show
-    $close_modal.on( "click", function(){
-        obj_gluru.modal._hide();
+    $modal_triggers.on( "click", function(){
+        console.log( "modal click" );
+        obj_gluru.modal._show.call( $(this) );
     });
     // hide
-    $show_modal.on( "click", function(){
-        obj_gluru.modal._show();
+    $close_modal.on( "click", function(){
+        obj_gluru.modal._hide();
     });
 
     // NOTIFICATIONS
@@ -853,40 +872,51 @@
     // -------------------------------------------------
     // show pop menu
     $pop_menu_triggers.on( "click", function(){
-        obj_gluru.pop_menu.show.call( $(this) );
+        obj_gluru.pop_menu._show.call( $(this) );
     });
     // select pop menu item
     $pop_menu_item.on( "click", function(){
         obj_gluru.pop_menu.select_item.call( $(this) );
     });
 
+    // hide items 
     $(document).on('click', function(e) {
+
+        console.log( "doc click" );
+
         // hide tooltip
-        obj_gluru.tooltips.hide();
+        obj_gluru.tooltips._hide();
+
+        // pop menu
         // if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
         if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {
             // Hide the pop_menu
-            obj_gluru.pop_menu.hide.call( $(this) );
+            console.log( "doc click hiding" );
+            obj_gluru.pop_menu._hide.call( $(this) );
         }
 
+        // search
         if ( !$(e.target).closest($search_field_wrap).length ) {
             obj_gluru.search.deactivate_field();
-            
-            // console.log( $search_field.val().length );
-            // if ( $search_field.value.length ) {
-
-            // }
         }
+
+        // modal
+        // if click event is not on modal box or on trigger
+        if ( !$(e.target).closest( ".modal__box" ).length && !$(e.target).closest( $modal_triggers ).length ) {
+            // console.log( "hide modal" );
+            obj_gluru.modal._hide();
+        }
+            
     });
 
 
     // TOOLTIPS
     // -------------------------------------------------
     $tooltip_triggers.on( "mouseover", function(){
-        obj_gluru.tooltips.show.call( $(this) );
+        obj_gluru.tooltips._show.call( $(this) );
     });
     $tooltip_triggers.on( "mouseout", function(){
-        obj_gluru.tooltips.hide.call( $(this) );
+        obj_gluru.tooltips._hide.call( $(this) );
     });
 
 

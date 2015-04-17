@@ -11,7 +11,7 @@
     <div class="info-panel__content-block -narrow">
 
         <p>
-            <button class="btn__lozenge -large -icon-left js-sign-in" data-modal-content="js-setting-up-account">
+            <button class="[ btn__lozenge -large -icon-left ] [ js-sign-in js-modal-trigger ]" data-modal-content="setting-up-account">
                 <div class="btn__icon icon-lrg__googleplus"></div>
                 Sign up with Google
             </button>
@@ -20,7 +20,7 @@
         <p><div class="or or-text">or</div></p>
 
         <p>
-            <button class="btn__lozenge -large -icon-left js-sign-in" data-modal-content="js-setting-up-account">
+            <button class="[ btn__lozenge -large -icon-left ] [ js-sign-in js-modal-trigger ]" data-modal-content="setting-up-account">
                 <div class="btn__icon icon-lrg__email"></div>
                 Sign up with email
             </button>

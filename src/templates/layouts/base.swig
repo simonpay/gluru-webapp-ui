@@ -32,7 +32,7 @@
 <div class="tmp-buttons">
     <div class="button-group js-buttons-generic">
         <div class="label">Modal</div>
-        <button class="button js-show-modal">Show</button>
+        <button class="button [ js-show-modal js-modal-trigger ]" data-modal-content="default">Show</button>
     </div>
 
     <div class="button-group js-buttons-generic">

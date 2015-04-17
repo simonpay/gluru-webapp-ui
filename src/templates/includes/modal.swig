@@ -4,8 +4,22 @@
 
 	<div class="modal__box">
 		
-		{# this wrapping div is just for the prototype #}
-		<div class="modal-box__content-wrap js-setting-up-account">
+		{# this wrapping div is just for the demo #}
+		<div class="[ demo-only -modal-box__content-wrap ] js-demo-only__default">
+
+			<header class="panel-header">
+				<div class="modal-box__heading-wrap">
+					<div class="modal__heading-text">Modal Box</div>
+				</div>
+				<div class="icon-button -center-transform -right js-close-modal">
+					<div class="icon-close"></div>
+				</div>
+			</header>
+
+		</div>
+
+		{# this wrapping div is just for the demo #}
+		<div class="[ demo-only -modal-box__content-wrap ] js-demo-only__setting-up-account">
 
 			<header class="panel-header">
 				<div class="modal-box__heading-wrap">
