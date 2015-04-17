@@ -82,7 +82,7 @@
 
                 var $this = $(this);
 
-                console.log( $this.data( "modal-content" ) );
+                // console.log( $this.data( "modal-content" ) );
 
                 $modal
                     .removeClass( "is-hidden" )
@@ -388,7 +388,7 @@
                     // call function to show 'current-file' 'priority-box'
                     var header_type;
                     if ( _priority === "now" ) {
-                        header_type = _priority;
+                        header_type = _priority + "-" + _now_type;
                     } else {
                         header_type = "footprint";
                     }
@@ -854,7 +854,7 @@
     // -------------------------------------------------
     // show
     $modal_triggers.on( "click", function(){
-        console.log( "modal click" );
+        // console.log( "modal click" );
         obj_gluru.modal._show.call( $(this) );
     });
     // hide
@@ -882,7 +882,7 @@
     // hide items 
     $(document).on('click', function(e) {
 
-        console.log( "doc click" );
+        // console.log( "doc click" );
 
         // hide tooltip
         obj_gluru.tooltips._hide();
@@ -891,7 +891,7 @@
         // if click is NOT on a pop_menu_triggers AND NOT on the pop_menu itself
         if ( !$(e.target).closest($pop_menu_triggers).length && !$(e.target).closest($pop_menu_wrap).length ) {
             // Hide the pop_menu
-            console.log( "doc click hiding" );
+            // console.log( "doc click hiding" );
             obj_gluru.pop_menu._hide.call( $(this) );
         }
 

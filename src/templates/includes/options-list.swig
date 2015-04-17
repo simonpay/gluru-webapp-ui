@@ -15,7 +15,7 @@
 
                 {% if rObj.id === "sources" || rObj.id === "favourites" || rObj.id === "teams" || rObj.id === "related_files" %}
 
-                    <a href="#" class="options-list__link">
+                    <a href="#" class="options-list__link{% if rObj.id === 'favourites' %} -people{% endif %}">
 
                 {% endif %}
 

@@ -18,51 +18,8 @@
             </div>
 
             <div class="options-list__wrap">
-                
-                {% for obj_section in obj.daily_digest.sections %}
 
-                    {% if obj_section.section_id === "meetings" %}
-
-                        {% for obj_item in obj_section.items %}
-
-                            {% if loop.first %}
-
-                                {% for obj_file_category in obj_item.file_categories %}
-
-                                    <div class="options-list {{ rObj.options_list_type_class }}">
-                                        <div class="options-list__heading -collapsable js-toggle-expand-list">{{ obj_file_category.file_category_name }}</div>
-
-                                        <div class="options-list__inner-wrap">
-
-                                            <ul class="options-list__list">
-
-                                                {% for obj_file in obj_file_category.files %}
-
-                                                    <li class="options-list__item">
-                                                        <a href="#" class="options-list__link">
-
-                                                            {% set obj_file = obj_file %}
-                                                            {% include "options-list__row--related-file.swig" %}
-
-                                                        </a>
-                                                    </li>
-
-                                                {% endfor %}
-
-                                            </ul>
-
-                                        </div><!-- //.options-list__inner-wrap -->
-                                    </div><!-- //.options-list -->
-
-                                {% endfor %}
-
-                            {% endif %}
-
-                        {% endfor %}
-
-                    {% endif %}
-
-                {% endfor %}
+                {% include "options-list__daily-digest__meeting--files.swig" %}
 
             </div>
 
@@ -71,8 +28,64 @@
 
         <div class="js-demo-only__actions-content-wrap -now-non-calendar" style="display: none">
 
-            {# no data for this yet #}
-            
+            <div class="now-summary">
+                <p class="text -light">It looks like you're currently working with <a href="#" class="link text-link"><strong>Mike Smith</strong></a>,  <a href="#" class="link text-link"><strong>Amy Green</strong></a>,  <a href="#" class="link text-link"><strong>Alex Li</strong></a>. The most likely files you will need are:</p>
+            </div>
+
+            <div class="options-list__wrap">
+
+                {% include "options-list__daily-digest__meeting--files.swig" %}
+                
+                {% for obj_section in obj.daily_digest.sections %}
+
+                    {% if obj_section.section_id === "people" %}
+
+                        <div class="options-list {{ rObj.options_list_type_class }}">
+                            <div class="options-list__heading -collapsable js-toggle-expand-list">{{ obj_section.section_name }}</div>
+
+                            <div class="options-list__inner-wrap">
+
+                                <ul class="options-list__list">
+
+                                    {% for obj_person in obj_section.items %}
+
+                                        <li class="options-list__item">
+                                            <a href="#" class="options-list__link -people">
+
+                                                <div class="media -v-center">
+                                                    <div class="media__img">
+
+                                                        <div class="disc-img">
+                                                            <div class="disc-img__img-wrap">
+                                                                <img class="disc-img__img" src="{{ obj_person.item_avatar_src }}" alt="">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="media__body">
+
+                                                        <div class="options-list__text" title="{{ obj_person.item_name }}">{{ obj_person.item_name }}</div>
+                                                        <div class="options-list__text--secondary" title="{{ obj_person.item_email }}">{{ obj_person.item_email }}</div>
+
+                                                    </div>
+                                                </div>
+
+                                            </a>
+                                        </li>
+
+                                    {% endfor %}
+
+                                </ul>
+
+                            </div><!-- //.options-list__inner-wrap -->
+                        </div><!-- //.options-list -->
+
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
         </div>
 
 

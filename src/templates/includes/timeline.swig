@@ -1,11 +1,15 @@
 <div class="js-events-for-cloning u-display-none">
 	{% for obj_event in obj.timeline[type].events %}
-
+		
 		{% if !obj_event.is_group && loop.index !== 1 %}
 
-			{% set obj_event = obj_event %}
-			{% include "event.swig" %}
+			{# remove first item which was daily-digest but has now been removed#}
+			{% if loop.index !== 1 %}
 
+				{% set obj_event = obj_event %}
+				{% include "event.swig" %}
+
+			{% endif %}
 		{% endif %}
 
 	{% endfor %}

@@ -106,7 +106,7 @@
                         }
 
                         .drawer & {
-                            margin-bottom: 4px;
+                            margin-bottom: 2px;
                         }
                         
                         // when ".-multi-line" class present on '.options-list'
@@ -122,7 +122,7 @@
                             height: $options-list-link-height-actions;
                             padding: 0 4px;
                             text-decoration: none;
-
+                            
                             &:hover,
                             &.is-selected {
                                 background: rgba(0, 0, 0, 0.075);
@@ -132,6 +132,11 @@
                                 height: $options-list-link-height-drawer;
                                 padding-left: 18px;
                                 padding-right: 10px;
+                            }
+
+                            // people lists in actions and drawer
+                            &.-people {
+                                height: 42px;
                             }
                         }
                         

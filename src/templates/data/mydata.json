@@ -596,17 +596,6 @@
                         "is_group":             0,
                         "avatar_type":          "image",
                         "type":                 "icon__phone-in--white",
-                        "priority":             "daily-digest",
-                        "title":                "<strong>Jason Smith</strong>  has just found files and people useful to you right now!",
-                        "description":          "Incoming call has just found files and people useful to you right now!",
-                        "source_type":          "",
-                        "date_time":            "13:42 PM",
-                        "person_id":            "tmp_avatar_2"
-                    },
-                    {
-                        "is_group":             0,
-                        "avatar_type":          "image",
-                        "type":                 "icon__phone-in--white",
                         "priority":             "critical",
                         "title":                "<strong>Jason Smith</strong>  has just found files and people useful to you right now!",
                         "description":          "Incoming call has just found files and people useful to you right now!",

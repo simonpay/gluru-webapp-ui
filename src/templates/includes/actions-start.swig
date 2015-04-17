@@ -9,10 +9,10 @@
 		</div>
 	</header>
 	
-
+	{# now-calendar #}
 	<div class="priority-box -current-item -now is-hidden js-actions--current-item">
 
-		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -now" style="display: none">
+		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -now-calendar" style="display: none">
 
 			<div class="media -v-center">
 			    <div class="media__img">
@@ -45,7 +45,43 @@
 			</div>
 
 		</div>
+		
+		{# now-non-calendar #}
+		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -now-non-calendar" style="display: none">
 
+			<div class="media -v-center">
+			    <div class="media__img">
+
+					<div class="disc-img -current-item">
+						<div class="disc-img__img-wrap">
+							<div class="icon__now--green u-center-transform"></div>
+						</div>
+					</div>
+
+			    </div>
+			    <div class="media__body">
+
+					<div class="media -v-center">
+					    <div class="media__img -right u-text-right">
+
+							<div class="priority-box__text">9:12 am</div>
+							<div class="priority-box__text"><strong>02/04/14</strong></div>
+
+					    </div>
+					    <div class="media__body">
+
+							<div class="priority-box__text"><strong>Non Meeting</strong></div>
+							<div class="priority-box__text">Files and People</div>
+
+					    </div>
+					</div>
+
+			    </div>
+			</div>
+
+		</div>
+		
+		{# footprint #}
 		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -footprint" style="display: none">
 
 			<div class="media -v-center">
