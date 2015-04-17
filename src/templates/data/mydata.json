@@ -594,6 +594,17 @@
                 "events": [
                     {
                         "is_group":             0,
+                        "avatar_type":          "icon",
+                        "type":                 "icon__coffee--white",
+                        "priority":             "daily-digest",
+                        "title":                "<strong>Gluru</strong> your daily digest results!",
+                        "description":          "",
+                        "source_type":          "icon-sml__custom",
+                        "date_time":            "13:42 PM",
+                        "person_id":            "icon__coffee--blue"
+                    },
+                    {
+                        "is_group":             0,
                         "avatar_type":          "image",
                         "type":                 "icon__phone-in--white",
                         "priority":             "critical",

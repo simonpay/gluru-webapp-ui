@@ -10,9 +10,10 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '<%= pkg.project_paths.bower_folder %>jquery/dist/jquery.js',
-                    '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/core.js',
-                    '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/widget.js',
-                    '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/button.js',
+                    '<%= pkg.project_paths.bower_folder %>jquery-ui/jquery-ui.js',
+                    // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/core.js',
+                    // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/widget.js',
+                    // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/button.js',
                     '<%= pkg.project_paths.bower_folder %>select2/dist/js/select2.js',
                     ['<%= pkg.src_paths.js %>**/*.js', '!<%= pkg.src_paths.js %>pages/**']
                 ],

@@ -45,11 +45,14 @@
         .-now & {
             border-color: $green;
         }
-
-        // daily-digest
         .-daily-digest & {
+            border-color: $blue;
+        }
+        // inset icons within main daily-digest section
+        .daily-digest-wrap & {
             border-color: $gallery;
         }
+
 
         // when inside "current-item" in actions header
         .-current-item.-daily-digest & {

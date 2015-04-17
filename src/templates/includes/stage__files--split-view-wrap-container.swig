@@ -11,50 +11,53 @@
 
 				{%> "table-row__file--header" %}
 
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
+				<div class="table__body">
+
+					{% for obj_file_row in obj.table_data.files %}
+						{% set obj_file_row = obj_file_row %}
+						{% include "table-row-file.swig" %}
+					{% endfor %}
 
 
-			{% if col_class === "-col-2" %}
+					{% if col_class === "-col-2" %}
 
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
+						{% for obj_file_row in obj.table_data.files %}
+							{% set obj_file_row = obj_file_row %}
+							{% include "table-row-file.swig" %}
+						{% endfor %}
+						{% for obj_file_row in obj.table_data.files %}
+							{% set obj_file_row = obj_file_row %}
+							{% include "table-row-file.swig" %}
+						{% endfor %}
+						{% for obj_file_row in obj.table_data.files %}
+							{% set obj_file_row = obj_file_row %}
+							{% include "table-row-file.swig" %}
+						{% endfor %}
+						{% for obj_file_row in obj.table_data.files %}
+							{% set obj_file_row = obj_file_row %}
+							{% include "table-row-file.swig" %}
+						{% endfor %}
 
-			{% endif %}
+					{% endif %}
 
-			{% if col_class === "-col-3" %}
+					{% if col_class === "-col-3" %}
 
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
-				{% for obj_file_row in obj.table_data.files %}
-					{% set obj_file_row = obj_file_row %}
-					{% include "table-row-file.swig" %}
-				{% endfor %}
+						{% for obj_file_row in obj.table_data.files %}
+							{% set obj_file_row = obj_file_row %}
+							{% include "table-row-file.swig" %}
+						{% endfor %}
+						{% for obj_file_row in obj.table_data.files %}
+							{% set obj_file_row = obj_file_row %}
+							{% include "table-row-file.swig" %}
+						{% endfor %}
+						{% for obj_file_row in obj.table_data.files %}
+							{% set obj_file_row = obj_file_row %}
+							{% include "table-row-file.swig" %}
+						{% endfor %}
 
-			{% endif %}
+					{% endif %}
 
+				</div><!-- // .tbody -->
 			</div><!-- // .table -->
 		</div><!-- // .scrollable-content -->
 	</div><!-- // .split-view-wrap -->

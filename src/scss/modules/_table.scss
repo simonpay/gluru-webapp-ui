@@ -16,133 +16,142 @@
         margin-top: 5px;
     }
 }
-
-    .table__row {
-        display: table-row;
-
-        &:not(.-header) {
-            &:not(.is-selected):hover {
-                .table__col {
-                    cursor: pointer;
-                    background-color: $gallery;
-                }
-            }
-            &:hover, 
-            &.is-selected {
-
-                // show file nav on table row hover
-                .file-nav {
-                    opacity: 1;
-                    @include transition(opacity 0.3s);
-                }
-            }
-        }
+    
+    .table__header { // th
+        display: table-header-group;
     }
 
-        .table__col {
-            display: table-cell;
-            height: 50px;
-            padding: 0 10px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            vertical-align: middle;
-            border-bottom: 1px solid $gallery;
-            @include transition(all 0.3s);
-            
-            // add rounded corners to first and last table row cols
-            // inside tables on 'daily-digest' screen to match 
-            // priority-box panels used for people / meetings
-            .table.-daily-digest:not(.-categories) .table__row:first-child & {
+    // used only for jquery-ui sortable
+    .table__body { // tbody
+        display: table-row-group;
+    }
 
-                &:first-child {
-                    border-top-left-radius: $priority-box--daily-digest__border-radius;
+        .table__row { // tr
+            display: table-row;
+
+            // &:not(.-header) {
+                &:not(.is-selected):hover {
+                    .table__col {
+                        cursor: pointer;
+                        background-color: $gallery;
+                    }
                 }
+                &:hover, 
+                &.is-selected {
 
-                &:last-child {
-                    border-top-right-radius: $priority-box--daily-digest__border-radius;
+                    // show file nav on table row hover
+                    .file-nav {
+                        opacity: 1;
+                        @include transition(opacity 0.3s);
+                    }
                 }
-            }
-            .table.-daily-digest:not(.-categories) .table__row:last-child & {
-
-                &:first-child {
-                    border-bottom-left-radius: $priority-box--daily-digest__border-radius;
-                }
-
-                &:last-child {
-                    border-bottom-right-radius: $priority-box--daily-digest__border-radius;
-                }
-            }
-
-            // remove border-bottom from last cols in last row 
-            // inside daily digest file tables 
-            .table.-daily-digest .table__row:last-child & {
-                border: none;
-            }
-
-            // specific modifiers for file explorer table
-            &.-file-name {
-                width: 100%; // width only used if table-layout: fixed;
-            }
-
-            &.-modified {
-                width: 120px;
-            }
-
-            &.-source {
-                width: 90px;
-                text-align: center;
-
-                .-daily-digest & {
-                    width: 70px;
-                }
-
-                // when .-source column is inside '.stage-wrap--files .-split-view' 
-                // hide it due to narrow width - scope to files section only
-                // note: removed scoping to files section as removal needs to happen
-                // in timeline as well
-                // .stage-wrap--files 
-                .-split-view & {
-                    display: none;
-                }
-
-                .media {
-                    width: 40px;
-                }
-            }
-
-            &.-event-type {
-                width: 90px;
-                text-align: center;
-            }
-            
-            // table inside future event for poeple 
-            &.-people {
-                height: 70px;
-            }
-
-            .section-wrap.-files .is-selected > & {
-                background: $pink;
-            }
-
-            .section-wrap.-moments .is-selected > & {
-                background: $blue;
-            }
+            // }
         }
 
-            .table__icon {
-                position: relative;
+            .table__col { // td
+                display: table-cell;
+                height: 50px;
+                padding: 0 10px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                vertical-align: middle;
+                border-bottom: 1px solid $gallery;
+                @include transition(all 0.3s);
+                
+                // add rounded corners to first and last table row cols
+                // inside tables on 'daily-digest' screen to match 
+                // priority-box panels used for people / meetings
+                .table.-daily-digest:not(.-categories) .table__row:first-child & {
 
-                &:after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: -8px;
-                    right: -8px;
-                    bottom: -8px;
-                    left: -8px;
-                    background: white;
-                    z-index: -1;
-                    border-radius: 100%;
+                    &:first-child {
+                        border-top-left-radius: $priority-box--daily-digest__border-radius;
+                    }
+
+                    &:last-child {
+                        border-top-right-radius: $priority-box--daily-digest__border-radius;
+                    }
+                }
+                .table.-daily-digest:not(.-categories) .table__row:last-child & {
+
+                    &:first-child {
+                        border-bottom-left-radius: $priority-box--daily-digest__border-radius;
+                    }
+
+                    &:last-child {
+                        border-bottom-right-radius: $priority-box--daily-digest__border-radius;
+                    }
+                }
+
+                // remove border-bottom from last cols in last row 
+                // inside daily digest file tables 
+                .table.-daily-digest .table__row:last-child & {
+                    border: none;
+                }
+
+                // specific modifiers for file explorer table
+                &.-file-name {
+                    width: 100%; // width only used if table-layout: fixed;
+                }
+
+                &.-modified {
+                    width: 120px;
+                }
+
+                &.-source {
+                    width: 90px;
+                    text-align: center;
+
+                    .-daily-digest & {
+                        width: 70px;
+                    }
+
+                    // when .-source column is inside '.stage-wrap--files .-split-view' 
+                    // hide it due to narrow width - scope to files section only
+                    // note: removed scoping to files section as removal needs to happen
+                    // in timeline as well
+                    // .stage-wrap--files 
+                    .-split-view & {
+                        display: none;
+                    }
+
+                    .media {
+                        width: 40px;
+                    }
+                }
+
+                &.-event-type {
+                    width: 90px;
+                    text-align: center;
+                }
+                
+                // table inside future event for poeple 
+                &.-people {
+                    height: 70px;
+                }
+
+                .section-wrap.-files .is-selected > & {
+                    background: $pink;
+                }
+
+                .section-wrap.-moments .is-selected > & {
+                    background: $blue;
                 }
             }
+
+                .table__icon {
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: -8px;
+                        right: -8px;
+                        bottom: -8px;
+                        left: -8px;
+                        background: white;
+                        z-index: -1;
+                        border-radius: 100%;
+                    }
+                }

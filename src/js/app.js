@@ -1094,7 +1094,40 @@
     // http://www.html5rocks.com/en/mobile/touch/
     document.body.addEventListener('touchmove', function(e) {
         e.preventDefault();
-    }, false); 
+    }, false);
+
+
+
+
+
+    // sortable file table rows
+    var fixHelperModified = function(e, tr) {
+        var $originals = tr.children();
+        var $helper = tr.clone();
+        $helper.children().each(function(index)
+        {
+          $(this).width($originals.eq(index).width());
+        });
+        return $helper;
+    };
+
+    //Make table sortable
+    $(".table .table__body").sortable({
+        helper: fixHelperModified,
+        stop: function(event,ui) {
+            renumber_table('.table');
+        }
+    }).disableSelection();
+
+
+    //Renumber table rows
+    function renumber_table(tableID) {
+        $( tableID + " .table__row" ).each( function() {
+            count = $(this).parent().children().index($(this)) + 1;
+            $(this).find('.priority').html(count);
+        });
+    }
+
 
 
     // use js to set the width of .panel-header.-stage on re-size

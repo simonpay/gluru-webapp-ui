@@ -1,4 +1,5 @@
-<div class="table__row -header">
+{# <div class="table__header -header"> #}
+<div class="table__header">
 	<div class="table__col -file-name">
 		<div class="table__text--header">Filename</div>
 	</div>
