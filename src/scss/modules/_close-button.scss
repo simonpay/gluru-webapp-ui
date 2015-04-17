@@ -9,6 +9,10 @@
     right: 0;
     width: 45px;
     height: $panel-header-height;
+
+    .search-wrap & {
+        right: 37px;
+    }
 }
 
 // .close-button {

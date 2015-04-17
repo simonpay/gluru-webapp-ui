@@ -87,8 +87,12 @@
 .icon__files {                  @include use-sprite("icon__files"); }
 
 // daily digest
-.icon__coffee--blue {           @include use-sprite("icon__coffee--blue"); }
-.icon__coffee--white {          @include use-sprite("icon__coffee--white"); }
+.icon__coffee--blue,
+.icon__digest--blue
+{					            @include use-sprite("icon__coffee--blue"); }
+.icon__coffee--white,
+.icon__digest--white
+{						        @include use-sprite("icon__coffee--white"); }
 
 
 // sml variants

@@ -130,7 +130,8 @@
                     height: 70px;
                 }
 
-                .section-wrap.-files .is-selected > & {
+                .section-wrap.-files .is-selected > &,
+                .search-results-wrap .is-selected > & {
                     background: $pink;
                 }
 
