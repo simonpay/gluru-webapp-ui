@@ -24,6 +24,10 @@
             position: absolute;
             top: 2px;
             right: 3px;
+
+            .panel-header--location & {
+                top: 4px;
+            }
         }
 
         &:last-child {
