@@ -9,7 +9,7 @@
     float: none;
     width: 100%;
     height: 100%;
-    @include transition(opacity $actions-animation-duration);
+    @include transition( opacity $actions-animation-duration );
     overflow: hidden;
     background: $alabaster;
 
@@ -20,9 +20,13 @@
         top: $panel-header-stage-height;
         @include calc( height, "100% - #{$panel-header-stage-height}" );
         width: $actions-width;
+        visibility: visible;
         overflow: visible;
-        @include transition(width $actions-animation-duration);
         box-shadow: -1px 0px 0px $silver; // border-left so width stays at zero 
+        @include transition( 
+            width $actions-animation-duration, 
+            visibility 0s 0s 
+        );
     }
     
     // css transition for slide out of drawer
@@ -33,10 +37,14 @@
         visibility: hidden;
 
         @include mq(large){
-            opacity: 1;
-            visibility: visible;
             width: 0;
+            opacity: 1;
+            visibility: hidden;
             @include calc( height, "100% - #{$panel-header-stage-height}" );
+            @include transition( 
+                width $actions-animation-duration, 
+                visibility 0s $actions-animation-duration 
+            );
         }
     }
 }

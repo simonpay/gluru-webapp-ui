@@ -20,8 +20,15 @@
         width: $drawer-wrap-width;
         height: 100%;
         visibility: visible;
-        @include transform( translate3d(0, 0, 0) );
-        @include transition( width $drawer-animation-duration);
+        // use graphics acceleration - not sure this works
+        // for this type of animation - think its only on 
+        // transforms
+        // TODO: delete if not effective
+        // @include transform( translate3d(0, 0, 0) );
+        @include transition( 
+            width $drawer-animation-duration, 
+            visibility 0s 0s 
+        );
     }
     
     &.is-hidden {
@@ -31,8 +38,13 @@
         @include mq(large){
             width: 0;
             height: 100%;
-            // visibility: hidden;
-            // @include transition(height $drawer-animation-duration, bottom 0 $drawer-animation-duration);
+            visibility: hidden;
+            // animate width instantly but delay vsiibility 
+            // until after width has finished
+            @include transition( 
+                width $drawer-animation-duration, 
+                visibility 0s $drawer-animation-duration
+            );
         }
     }
 }
