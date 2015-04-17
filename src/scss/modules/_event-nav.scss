@@ -66,6 +66,9 @@
         .-now & {
             background: $green;
         }
+        .-daily-digest & {
+            background: $blue;
+        }
     }
 
         .event-nav__item { // li

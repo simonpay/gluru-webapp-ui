@@ -1,7 +1,7 @@
 <div class="js-events-for-cloning u-display-none">
 	{% for obj_event in obj.timeline[type].events %}
 
-		{% if !obj_event.is_group %}
+		{% if !obj_event.is_group && loop.index !== 1 %}
 
 			{% set obj_event = obj_event %}
 			{% include "event.swig" %}

@@ -66,9 +66,13 @@
 
     &.-daily-digest {
         padding-right: 55px;
-        background: $gallery;
+        background: $blue;
         border-radius: $priority-box--daily-digest__border-radius;
         
+        .daily-digest & {
+            background: $gallery;
+        }
+
         // when inside actions footprint as 'current-item
         &.-current-item {
             background: $blue;
