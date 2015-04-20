@@ -42,24 +42,23 @@
         @include span-columns(8);
         @include clearfix;
         padding-top: 5px;
-
-        > .info-panel__heading-text {
-            z-index: 3333;
-            margin-top: 0;
-        }
     }
 
-        .info-panel__content-block {
-            position: relative;
-            overflow: auto;
-            margin-top: 30px;
-            width: 400px;
-
-            &.-narrow {
-                width: 280px;
-            }
-
-            &.-wide {
-                width: 600px;
-            }
+        .info_panel__header {
+            margin-bottom: 20px;
         }
+
+            .info-panel__content-block {
+                position: relative;
+                overflow: auto;
+                margin-top: 30px;
+                width: 400px;
+
+                &.-narrow {
+                    width: 280px;
+                }
+
+                &.-wide {
+                    width: 600px;
+                }
+            }

@@ -44,12 +44,21 @@
 
             <hr class="hr__line">
 
-            <p>
-                <button class="btn__lozenge -green -icon-right">
+
+            <section class="form-section -submit js-section-submit">
+
+                <button class="btn__lozenge -gray -icon-right">
+                    <div class="btn__icon icon__arrow--white"></div>
+                    Skip
+                </button>
+                
+                <button class="btn__lozenge -green -icon-right js-btn-next">
                     <div class="btn__icon icon__arrow--white"></div>
                     Next
                 </button>
-            </p>
+
+            </section>
+
 
         </form>
 

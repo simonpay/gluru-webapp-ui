@@ -251,7 +251,7 @@
                 "stage_data": {
                     "stage_id":                         "signup",
                     "stage_heading":                    "Welcome to Gluru!",
-                    "stage_sub_heading":                "Choose how you would like to create your account."
+                    "stage_sub_heading":                "Choose how you would like to create your account"
                 },
                 "help_data": {
                     "heading":                          "Hi there!",
@@ -265,7 +265,7 @@
                 "stage_data": {
                     "stage_id":                         "signup",
                     "stage_heading":                    "Connect Sources",
-                    "stage_sub_heading":                "Connect some data sources so we can get started."
+                    "stage_sub_heading":                "Connect some data sources so we can get started"
                 },
                 "help_data": {
                     "heading":                          "Ok great now let’s connect your sources!",
@@ -321,12 +321,12 @@
                 "url":                                  "auto-push.html",
                 "stage_data": {
                     "stage_id":                         "signup",
-                    "stage_heading":                    "Almost there!",
-                    "stage_sub_heading":                "Choose your autopush settings."
+                    "stage_heading":                    "Autopush Settings",
+                    "stage_sub_heading":                "Choose how Gluru will handle your email attachments"
                 },
                 "help_data": {
-                    "heading":                          "Ok great now let’s connect your sources!",
-                    "subheading":                       "Connecting your data to Gluru is easy. Indexing time varies depending on how many files you have."
+                    "heading":                          "Next, decide how Gluru should handle your email attachments",
+                    "subheading":                       "Gluru can save your email attachments to multiple destinations like Dropbox and Google Drive"
                 }
             },
             {
@@ -335,8 +335,8 @@
                 "url":                                  "favourites.html",
                 "stage_data": {
                     "stage_id":                         "signup",
-                    "stage_heading":                    "Almost there!",
-                    "stage_sub_heading":                "Add some favourites."
+                    "stage_heading":                    "Favourites",
+                    "stage_sub_heading":                "Add the people you would like to connect with"
                 },
                 "help_data": {
                     "heading":                          "Great job! Lets add some favourite people.",

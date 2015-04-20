@@ -34,7 +34,7 @@
             $( "#radio" ).buttonset();
 
             // remove class that sets visibility:hidden
-            $( ".prevent-fout" ).removeClass( "prevent-fout" );
+            // $( ".prevent-fout" ).removeClass( "prevent-fout" );
         })();
     </script>
 {% endblock %}

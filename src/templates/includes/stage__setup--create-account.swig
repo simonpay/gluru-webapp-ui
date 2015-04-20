@@ -5,7 +5,7 @@
 {% set obj_setup_data = obj.sections[0] %}
 {% include "stage__setup--start.swig" %}
 
-    <p class="info-panel__heading-text">Create a Gluru account</p>
+    <h1 class="info-panel__heading-text">Create a Gluru account</h1>
     <p class="stage__text">You can create an account with Google+ or email.</p>
 
     <div class="info-panel__content-block -narrow">

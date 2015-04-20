@@ -8,6 +8,15 @@
 // efficiency but some are defined within relevent modules
 
 
+p {
+    margin-bottom: 24px;
+    @extend %color__gray--dark;
+
+    &.subheading {
+        margin-bottom: 0;
+    }
+}
+
 // standard small text within actions panel 
 .text {
     @extend %font-size__13;
@@ -398,6 +407,10 @@
     // margin-bottom: 3px;
     margin-top: 20px;
     margin-bottom: 10px;
+
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 

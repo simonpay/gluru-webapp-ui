@@ -11,7 +11,8 @@
 // }
 
 	.btn__lozenge {
-		display: block;
+		// display: block;
+		display: inline-block;
 		position: relative;
 		// width: 280px;                 
 		height: 46px; 
@@ -19,7 +20,16 @@
 		border: 2px solid $dusty-gray;
 		outline: none;
 		padding: 1px 30px 0;
+		margin-right: 15px;
 		// margin: 0 auto 25px;
+		
+		&.is-hidden {
+			display: none;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
 
 	    @extend %font-size__16;
 	    @extend %color__green;
@@ -55,6 +65,14 @@
 			height: 60px;
 			background: $green;
 			border-color: $green;
+	    	@extend %font-size__20;
+	    	@extend %color__white;
+		}
+
+		&.-gray {
+			height: 60px;
+			background: $silver;
+			border-color: $silver;
 	    	@extend %font-size__20;
 	    	@extend %color__white;
 		}
@@ -100,6 +118,7 @@
 				left: 20px;
 			}
 
+			.-gray.-icon-right &,
 			.-green.-icon-right & {
 				right: 23px;
 			}

@@ -133,12 +133,16 @@
 	// make input text on multiple search select2 
 	// vertical centered 
 	.select2-search--inline {
-		margin-top: 5px;
+		// margin-top: 5px;
 		// display: none;
+		.select2-search__field {
+			// margin-top: 6px;
+			// visibility: hidden;
+		}
 	}
 }
 
 .select2-search__field {
-	width: 100% !important;
+	// width: 100% !important;
 }
 

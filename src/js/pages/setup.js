@@ -1,27 +1,67 @@
 
 (function(){
 
-    var $team_setup                         = $( ".js-team-setup" ),
-    $team_name                              = $( ".js-team-name" ),
-    $team_settings                          = $( ".js-team-settings" ),
-    $team_settings_sources                  = $( ".js-team-settings-sources" ),
-    $team_access_settings                   = $( ".js-team-access-settings" ),
-    $team_invite_people                     = $( ".js-team-invite-people" ),
-    $submit                                 = $( ".js-submit" ),
-    $team_access_settings_row_container     = $( ".js-team-access-settings-row-container" ),
-    $invite_people_row_container_clone      = $( ".js-invite-people-row-container-clone" ),
-    $invite_people_row_wrapper              = $( ".js-invite-people-row-wrapper" ),
-    $team_access_settings_row_clone         = $( ".js-team-access-settings-row-clone" ),
-    $invite_people_row_clone                = $( ".js-invite-people-row-clone" ),
-    $add_new_email                          = $( ".js-add-new-email" ),
-    $add_new_favourite                      = $( ".js-add-new-favourite" ),
-    $favourite_row                          = $( ".js-favourite-row" ),
-    $favourite_row_container                = $( ".js-favourites-row-container" )
-    // $team_access_settings_row               = $( ".js-team-access-settings-row" )
-    ;
+    var 
+        // sections
+        // create team
+        $section_team_setup                             = $( ".js-section-team-setup" ),
+        $section_team_name                              = $( ".js-section-team-name" ),
+        $section_team_settings                          = $( ".js-section-team-settings" ),
+        $section_team_settings_sources                  = $( ".js-section-team-settings-sources" ),
+        $section_team_access_settings                   = $( ".js-section-team-access-settings" ),
+        $section_team_invite_people                     = $( ".js-section-team-invite-people" ),
+        $section_submit                                 = $( ".js-section-submit" ),
+
+        // autopush
+        $section_autopush_destination                   = $( ".js-section-autopush-destination" ),
+        $section_autopush_notifications                 = $( ".js-section-autopush-notifications" ),
+
+        $btn_next                                       = $( ".js-btn-next" ),
+
+        $team_access_settings_row_container             = $( ".js-team-access-settings-row-container" ),
+        $invite_people_row_container_clone              = $( ".js-invite-people-row-container-clone" ),
+        $invite_people_row_wrapper                      = $( ".js-invite-people-row-wrapper" ),
+        $team_access_settings_row_clone                 = $( ".js-team-access-settings-row-clone" ),
+        $invite_people_row_clone                        = $( ".js-invite-people-row-clone" ),
+        $add_new_email                                  = $( ".js-add-new-email" ),
+        $add_new_favourite                              = $( ".js-add-new-favourite" ),
+        $favourite_row                                  = $( ".js-favourite-row" ),
+        $favourite_row_container                        = $( ".js-favourites-row-container" ),
+        // $team_access_settings_row               = $( ".js-team-access-settings-row" )
+
+        $autopush_source_multi_select                   = $( ".js-autopush-source__multi-select" ),
+        $autopush_destination_multi_select              = $( ".js-autopush-destination__multi-select" ),
+        
+        $checkbox_slider                                = $( ".js-checkbox-slider" )
+
+        ;
 
 
     var form_actions = {
+
+
+        _set_section_state: function ( ary_sections, state ) {
+
+            var sections = ary_sections;
+
+            for (var i=0; i<sections.length; i++) {
+
+                // console.log( sections[i] );
+
+                if ( state === "show" ) {
+
+                    ary_sections[i].removeClass( "is-hidden" );
+
+                } else {
+
+                    ary_sections[i].addClass( "is-hidden" );
+
+                }
+            }
+
+            // console.log( i );
+        },
+
 
         add_favourites: {
 
@@ -33,6 +73,50 @@
 
                 e.preventDefault();
             }
+        },
+
+        autopush: {
+
+            _do_add_source: function () {
+
+                obj_form_actions._set_section_state( [ $section_autopush_destination ], "show" );
+                
+            },
+
+            _do_remove_source: function () {
+
+                var $this = $(this);
+                var source_data = $this.select2( "data" );
+
+                console.log( source_data.length );
+                
+                if ( source_data.length === 0 ) {
+                    obj_form_actions._set_section_state( [ $section_autopush_destination, $section_autopush_notifications, $btn_next ], "hide" );
+
+                    // reset $autopush_destination_multi_select
+                    $autopush_destination_multi_select.val(null).trigger("change");
+                }
+                
+            },
+
+            _do_add_destination: function () {
+
+                obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "show" );
+                
+            },
+
+            _do_remove_destination: function () {
+
+                var $this = $(this);
+                var source_data = $this.select2( "data" );
+
+                // console.log( source_data.length );
+
+                if ( source_data.length === 0 ) {
+                    obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "hide" );
+                }
+
+            },
         },
 
         create_team: {
@@ -47,8 +131,8 @@
 
                     // console.log( "hide team input" );
 
-                    obj_form_actions.create_team._set_section_state( [ $team_settings, $team_name ], "hide" );
-                    obj_form_actions.create_team._set_section_state( [ $submit ], "show" );
+                    obj_form_actions._set_section_state( [ $section_team_settings, $section_team_name ], "hide" );
+                    obj_form_actions._set_section_state( [ $section_submit ], "show" );
 
                     $this.removeClass( "is-selected" );
 
@@ -58,8 +142,8 @@
                     
                     // console.log( "show team input" );
 
-                    obj_form_actions.create_team._set_section_state( [ $team_settings, $team_name ], "show" );
-                    obj_form_actions.create_team._set_section_state( [ $submit ], "hide" );
+                    obj_form_actions._set_section_state( [ $section_team_settings, $section_team_name ], "show" );
+                    obj_form_actions._set_section_state( [ $section_submit ], "hide" );
 
                     $this.addClass( "is-selected" );
 
@@ -70,33 +154,11 @@
                 e.preventDefault();
             },
 
-            _set_section_state: function ( ary_sections, state ) {
-
-                var sections = ary_sections;
-
-                for (var i=0; i<sections.length; i++) {
-
-                    // console.log( sections[i] );
-
-                    if ( state === "show" ) {
-
-                        ary_sections[i].removeClass( "is-hidden" );
-
-                    } else {
-
-                        ary_sections[i].addClass( "is-hidden" );
-
-                    }
-                }
-
-                // console.log( i );
-            },
-
-            _do_select_source: function () {
+            _do_add_source: function () {
 
                 var $this = $(this);
 
-                obj_form_actions.create_team._set_section_state( [ $team_access_settings, $team_invite_people, $submit ], "show" );
+                obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people, $section_submit ], "show" );
                 // obj_form_actions.create_team._clone_team_access_row.call( $this );
                 obj_form_actions.create_team._build_team_access_rows.call( $this );
                 
@@ -215,7 +277,7 @@
                 }
 
                 if ( source_data.length === 0 ) {
-                    obj_form_actions.create_team._set_section_state( [ $team_access_settings, $team_invite_people ], "hide" );
+                    obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people ], "hide" );
                 }
 
                 // set up jquery button
@@ -277,11 +339,9 @@
     };
 
 
+    // GENERIC
+    // -------------------------------------------------
     var obj_form_actions = form_actions;
-
-    $add_new_favourite.on( "click", function(e) {
-        obj_form_actions.add_favourites._clone_favourite.call( $(this), e );
-    });
 
 
     // select menu items
@@ -292,6 +352,11 @@
                 .addClass( "is-complete" );
 
 
+
+    // -------------------------------------------------
+    // FAVOURITES PAGE
+    // -------------------------------------------------
+
     $add_new_email.on( "click", function(e) {
         obj_form_actions.create_team._add_new_email_recipient.call( $(this), e );
     });
@@ -300,42 +365,28 @@
         obj_form_actions.create_team._create_team.call( $(this), e );
     });
     
-    // $( "#addTeam" ).on( "click", function(){
-    //  if ( $(this).is(':checked') ) {
-    //      $( ".js-team-settings, .js-team-name" ).removeClass( "is-hidden" );
-    //  } else {
-    //      $( ".js-team-settings, .js-team-name, .js-team-settings, .js-team-settings-sources, .js-team-access-settings, .js-team-invite-people" ).addClass( "is-hidden" );
 
-    //      // reset redio button for "team settings"
-    //      $( "#radio input" ).removeAttr('checked');
-    //      $( "#radio" ).buttonset('refresh');
-    //  }
-    // });
 
-    // $( "#ConnectSource" ).on( "click", function(){
-    //  console.log( "HELLO" );
-    //  $( ".js-team-settings-sources, .js-team-access" ).removeClass( "is-hidden" );
-    // });
+    // -------------------------------------------------
+    // CREATE TEAM PAGE
+    // -------------------------------------------------
 
-    $( "#invitedMemberConnectSourceYes" ).on( "click", function(){
+    $( "#invited-member-connect-source-yes" ).on( "click", function(){
         // reset select2 sources box
         $( ".js-example-basic-multiple" ).val(null).trigger("change");
 
-        obj_form_actions.create_team._set_section_state( [ $team_settings_sources ], "show" );
-        obj_form_actions.create_team._set_section_state( [ $team_access_settings, $team_invite_people, $submit ], "hide" );
-        // $( ".js-team-settings-sources" ).removeClass( "is-hidden" );
-        // $( ".js-team-invite-people" ).addClass( "is-hidden" );
+        obj_form_actions._set_section_state( [ $section_team_settings_sources ], "show" );
+        obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people, $section_submit ], "hide" );
     });
 
-    // $( ".js-invitedMemberConnectSource#invitedMemberConnectSourceYes" ).on( "click", function(){
-    //  $( ".js-team-settings-sources" ).removeClass( "is-hidden" );
-    //  $( ".js-team-invite-people" ).addClass( "is-hidden" );
-    // });
+    $add_new_favourite.on( "click", function(e) {
+        obj_form_actions.add_favourites._clone_favourite.call( $(this), e );
+    });
 
-    $( "#invitedMemberConnectSourceNo" ).on( "click", function(){
+    $( "#invited-member-connect-source-no" ).on( "click", function(){
         // console.log( "called" );
-        obj_form_actions.create_team._set_section_state( [ $team_invite_people, $submit ], "show" );
-        obj_form_actions.create_team._set_section_state( [ $team_settings_sources, $team_access_settings ], "hide" );
+        obj_form_actions._set_section_state( [ $section_team_invite_people, $section_submit ], "show" );
+        obj_form_actions._set_section_state( [ $section_team_settings_sources, $section_team_access_settings ], "hide" );
 
         // reset
         obj_form_actions.create_team._remove_invite_people_rows();
@@ -347,16 +398,47 @@
         $( ".js-example-basic-multiple" ).val(null).trigger("change");
     });
 
-
     $('.js-example-basic-multiple').on("select2:select", function (e) { 
-        obj_form_actions.create_team._do_select_source.call( $(this) );
+        obj_form_actions.create_team._do_add_source.call( $(this) );
     });
     $('.js-example-basic-multiple').on("select2:unselect", function (e) { 
-        obj_form_actions.create_team._do_select_source.call( $(this) );
+        obj_form_actions.create_team._do_add_source.call( $(this) );
     });
-    // $('.js-example-basic-multiple').on("change", function (e) { 
-    //     obj_form_actions.create_team._do_select_source.call( $(this) );
-    // });
+
+
+
+    // -------------------------------------------------
+    // AUTOPUSH PAGE
+    // -------------------------------------------------
+
+    if ( $autopush_source_multi_select.length > 0 ) $autopush_source_multi_select.select2();
+    if ( $autopush_destination_multi_select.length > 0 ) $autopush_destination_multi_select.select2();
+
+    // jquery-ui button (checkbox slider)
+    if ( $checkbox_slider.length > 0 ) $checkbox_slider.button();
+
+
+    $autopush_source_multi_select.on("select2:select", function (e) { 
+        obj_form_actions.autopush._do_add_source();
+    });
+    $autopush_source_multi_select.on("select2:unselect", function (e) { 
+        obj_form_actions.autopush._do_remove_source.call( $(this) );
+    });
+
+    $autopush_destination_multi_select.on("select2:select", function (e) { 
+        obj_form_actions.autopush._do_add_destination();
+    });
+    $autopush_destination_multi_select.on("select2:unselect", function (e) { 
+        obj_form_actions.autopush._do_remove_destination.call( $(this) );
+    });
+
+
+
+    // remove class that hides content whilst form els are 
+    // initiated to prevent FOUT 
+    $( ".prevent-fout" ).removeClass( "prevent-fout" );
+
+
 
 
     // .js-team-setup

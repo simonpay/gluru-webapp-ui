@@ -50,12 +50,6 @@
                 @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
             }
 
-            // when drawer doesnt exist in dom
-            // &.-no-drawer {
-            //     @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
-            // }
-
-
         }
 
         &:before {

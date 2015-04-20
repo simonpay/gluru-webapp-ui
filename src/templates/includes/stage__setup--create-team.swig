@@ -5,12 +5,13 @@
 {% set obj_setup_data = obj.sections[4] %}
 {% include "stage__setup--start.swig" %}
     
-    <p class="info-panel__heading-text">Create Team</p>
-    <p class="stage__text">You can add team functionality to Gluru.</p>
 
     <form>
 
-        <section class="form-section -team-setup js-team-setup">
+        <h1 class="info-panel__heading-text">Create Team</h1>
+        <p class="stage__text">You can add team functionality to Gluru.</p>
+
+        <section class="form-section -team-setup js-section-team-setup">
 
             <div class="row">
                 <div class="large-11">
@@ -43,12 +44,6 @@
             </div>
 
             <p>
-
-{#                 <button class="btn__lozenge -green -icon-right -down js-add-team">
-                    <div class="btn__icon icon__arrow--white"></div>
-                    Create Team
-                </button>
- #}
                 <button class="btn__lozenge js-add-team">
                     CREATE TEAM
                 </button>
@@ -62,7 +57,7 @@
 
     
 
-        <section class="form-section -team-name is-hidden js-team-name">
+        <section class="form-section -team-name is-hidden js-section-team-name">
 
             <div class="row">
 
@@ -87,7 +82,7 @@
 
 
 
-        <section class="form-section -team-settings is-hidden js-team-settings">
+        <section class="form-section -team-settings is-hidden js-section-team-settings">
 
             <p class="info-panel__heading-text">Team Settings</p>
 
@@ -97,8 +92,8 @@
                         <div class="media__img -right -lrg-margin">
 
                             <div id="radio">
-                                <input type="radio" class="js-invitedMemberConnectSource" id="invitedMemberConnectSourceNo" name="invitedMemberConnectSource"><label for="invitedMemberConnectSourceNo">No</label>
-                                <input type="radio" class="js-invitedMemberConnectSource" id="invitedMemberConnectSourceYes" name="invitedMemberConnectSource"><label for="invitedMemberConnectSourceYes">Yes</label>
+                                <input type="radio" class="js-invited-member-connect-source" id="invited-member-connect-source-no" name="invited-member-connect-source"><label for="invited-member-connect-source-no">No</label>
+                                <input type="radio" class="js-invited-member-connect-source" id="invited-member-connect-source-yes" name="invited-member-connect-source"><label for="invited-member-connect-source-yes">Yes</label>
                             </div>
 
 
@@ -115,7 +110,7 @@
                 </div>
             </div>
 
-            <section class="form-section -team-settings-sources is-hidden js-team-settings-sources">
+            <section class="form-section -team-settings-sources is-hidden js-section-team-settings-sources">
 
                 <div class="row">
                     <div class="large-11">
@@ -151,7 +146,7 @@
 
 
 
-        <section class="form-section -team-access-settings is-hidden js-team-access-settings">
+        <section class="form-section -team-access-settings is-hidden js-section-team-access-settings">
 
             <div class="row">
                 <div class="large-12">
@@ -186,7 +181,7 @@
 
 
 
-        <section class="form-section -team-invite-people is-hidden js-team-invite-people">
+        <section class="form-section -team-invite-people is-hidden js-section-team-invite-people">
 
             <div class="row">
                 <div class="large-12">
@@ -228,10 +223,10 @@
             </div>
 
         </section>
-            
 
 
-        <section class="form-section -submit js-submit">
+
+        <section class="form-section -submit js-section-submit">
 
             <p>
                 <button class="btn__lozenge -green -icon-right">
