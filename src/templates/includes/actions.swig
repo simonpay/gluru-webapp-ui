@@ -9,8 +9,11 @@
 
                 <p class="text -light">
                     Attendees:<br>
-                    <strong class="text -dark">Jason Smith, Amy Tan, Han Solo, Tony Stark</strong>
+                    {% for obj_attendee in mydata.actions.attendees %}
+                        <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a><br>
+                    {% endfor %}
                 </p>
+
                 <p class="text -light">
                     Location:<br>
                     <strong class="text -dark">8 Warner Yard <a href="" class="link text-link">map</a></strong>
@@ -29,7 +32,15 @@
         <div class="js-demo-only__actions-content-wrap -now-non-calendar" style="display: none">
 
             <div class="now-summary">
-                <p class="text -light">It looks like you're currently working with <a href="#" class="link text-link"><strong>Mike Smith</strong></a>,  <a href="#" class="link text-link"><strong>Amy Green</strong></a>,  <a href="#" class="link text-link"><strong>Alex Li</strong></a>. The most likely files you will need are:</p>
+
+                <p class="text -light">It looks like you're currently working with:<br>
+                    {% for obj_attendee in mydata.actions.attendees %}
+                        <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a><br>
+                    {% endfor %}
+                </p>
+
+                <p class="text -light">The most likely files you will need are:</p>
+
             </div>
 
             <div class="options-list__wrap">

@@ -187,7 +187,24 @@
                 {},
                 {}
             ]
-        }
+        },
+        "attendees": [
+            {
+                "email"           : "tim@gluru.co"
+            },
+            {
+                "email"           : "andy@gluru.co"
+            },
+            {
+                "email"           : "eddie@gluru.co"
+            },
+            {
+                "email"           : "john@gluru.co"
+            },
+            {
+                "email"           : "denis@gluru.co"
+            }
+        ]
     },
     "hierarchy_lists": {
         "files": {
