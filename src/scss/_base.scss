@@ -58,4 +58,8 @@ button {
 p {
     margin-bottom: 24px;
     @extend %color__gray--dark;
+
+    &.subheading {
+        margin-bottom: 0;
+    }
 }

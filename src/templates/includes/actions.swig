@@ -7,16 +7,20 @@
             <div class="now-summary">
                 <p class="text -light">We think you may need these files for <a href="#" class="link text-link"><strong>design meeting</strong></a>.</p>
 
-                <p class="text -light">
-                    Attendees:<br>
-                    {% for obj_attendee in mydata.actions.attendees %}
-                        <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a><br>
-                    {% endfor %}
-                </p>
+                <p class="text -light subheading">Attendees:</p>
 
-                <p class="text -light">
-                    Location:<br>
-                    <strong class="text -dark">8 Warner Yard <a href="" class="link text-link">map</a></strong>
+                <ul class="text">
+                    {% for obj_attendee in mydata.actions.attendees %}
+                        <li>
+                            <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <p class="text -light subheading">Location:</p>
+
+                <p class="text">
+                    <strong class="-dark">8 Warner Yard <a href="" class="link text-link">map</a></strong>
                 </p>
             </div>
 
@@ -33,11 +37,15 @@
 
             <div class="now-summary">
 
-                <p class="text -light">It looks like you're currently working with:<br>
+                <p class="text -light subheading">It looks like you're currently working with:</p>
+
+                <ul class="text">
                     {% for obj_attendee in mydata.actions.attendees %}
-                        <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a><br>
+                        <li>
+                            <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a>
+                        </li>
                     {% endfor %}
-                </p>
+                </ul>
 
                 <p class="text -light">The most likely files you will need are:</p>
 
