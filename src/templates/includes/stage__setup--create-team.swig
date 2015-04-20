@@ -4,11 +4,9 @@
 
 {% set obj_setup_data = obj.sections[4] %}
 {% include "stage__setup--start.swig" %}
-
+    
     <p class="info-panel__heading-text">Create Team</p>
     <p class="stage__text">You can add team functionality to Gluru.</p>
-
-
 
     <form>
 
@@ -16,7 +14,12 @@
 
             <div class="row">
                 <div class="large-11">
-                    <div class="media">
+
+                    <a name="team-setup"></a>
+
+                    <p class="stage__text">Do you want to add a team to your Gluru account? If you just want to continue with a Single User account to try gluru don’t worry, you'll still be able to create a team in the future.</p>
+
+{#                     <div class="media">
                         <div class="media__img -right -lrg-margin">
                         
                             <div class="check-box__slider prevent-fout">
@@ -35,8 +38,21 @@
 
                         </div>
                     </div>
+ #}
                 </div>
             </div>
+
+            <p>
+
+{#                 <button class="btn__lozenge -green -icon-right -down js-add-team">
+                    <div class="btn__icon icon__arrow--white"></div>
+                    Create Team
+                </button>
+ #}
+                <button class="btn__lozenge js-add-team">
+                    CREATE TEAM
+                </button>
+            </p>
 
             <div class="large-11">
                 <hr class="hr__line">
@@ -45,9 +61,12 @@
         </section>
 
     
+
         <section class="form-section -team-name is-hidden js-team-name">
 
             <div class="row">
+
+                <a name="team-name"></a>
 
                 <p class="info-panel__heading-text">Team Name</p>
 
@@ -65,6 +84,7 @@
             </div>
 
         </section>
+
 
 
         <section class="form-section -team-settings is-hidden js-team-settings">
@@ -88,7 +108,7 @@
                         <div class="media__body">
 
                             {# <p class="stage__text">Do you want each invited member to connect a source to join? The benefit is more shared data for gluru to help organise your team.</p> #}
-                            <p class="stage__text">Do you want each invited member to connect a source to join? The benefit is more shared data for gluru to help organise your team. If not, invite some team members to join below</p>
+                            <p class="stage__text">Do you want each invited member to connect a source to join? The benefit is more shared data for gluru to help organise your team. {# If not, invite some team members to join below #}</p>
 
                         </div>
                     </div>
@@ -131,7 +151,6 @@
 
 
 
-
         <section class="form-section -team-access-settings is-hidden js-team-access-settings">
 
             <div class="row">
@@ -154,16 +173,17 @@
                 <div class="large-1"></div>
             </div>
             
-            {% set i = 1 %}
-            {% include "form__row--team-access-settings.swig" %}
-{#             {% set i = 2 %}
-            {% include "form__row--team-access-settings.swig" %}
- #}
+            <div class="js-team-access-settings-row-container">
+                {# {% set i = 1 %} #}
+                {% include "form__row--team-access-settings.swig" %}
+            </div>
+
             <div class="large-11">
                 <hr class="hr__line">
             </div>
 
         </section>
+
 
 
         <section class="form-section -team-invite-people is-hidden js-team-invite-people">
@@ -190,29 +210,41 @@
                 <div class="large-1"></div>
             </div>
             
-            {% include "form__row--invite-people.swig" %}
-{#             {% set bln_hide_field = 1 %}
-            {% include "form__row--invite-people.swig" %}
-            {% include "form__row--invite-people.swig" %}
-            {% set bln_hide_field = 0 %}
-            {% include "form__row--invite-people.swig" %}
-            {% set bln_hide_field = 1 %}
-            {% include "form__row--invite-people.swig" %}
- #}
-            <div class="large-11">
-                <hr class="hr__line">
+            <div class="js-invite-people-row-wrapper">
+                <div class="invite-people-row-container js-invite-people-row-container-clone">
+                    {% include "form__row--invite-people.swig" %}
+                </div>
+            </div>
+
+            <a href="#" class="link link--add js-add-new-email">
+                <div class="link__icon icon__add"></div>
+                Invite more people
+            </a>
+
+            <div class="row">
+                <div class="large-11">
+                    <hr class="hr__line">
+                </div>
             </div>
 
         </section>
             
-{#         <hr class="hr__line">
- #}
-        <p>
-            <button class="btn__lozenge -green -icon-right">
-                <div class="btn__icon icon__arrow--white"></div>
-                Next
-            </button>
-        </p>
+
+
+        <section class="form-section -submit js-submit">
+
+            <p>
+                <button class="btn__lozenge -green -icon-right">
+                    <div class="btn__icon icon__arrow--white"></div>
+                    Finish
+                </button>
+            </p>
+
+        </section>
+
+
+
+        <div class="spacer -xxxlarge"></div>
 
     </form>
 

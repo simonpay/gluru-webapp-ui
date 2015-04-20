@@ -24,6 +24,12 @@
 	    @extend %font-size__16;
 	    @extend %color__green;
 		
+		&.is-selected {
+			background-color: $green;
+			border-color: $green;
+			color: $white;
+		}
+		
 		&.-large {
 			width: 240px;
 			height: 70px;
@@ -74,6 +80,7 @@
 			text-align: right;
 			padding-left: 35px;
 			padding-right: 70px;
+			padding-bottom: 2px;
   		}
 
 		&.-large.-icon-left {
@@ -95,6 +102,10 @@
 
 			.-green.-icon-right & {
 				right: 23px;
+			}
+
+			.-green.-icon-right.-down & {
+				@include transform( translateY(-50%) rotate(45deg) );
 			}
 		}
 

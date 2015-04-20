@@ -64,35 +64,6 @@
 }
 
 
-// form add sources 
-.sources__container {
-    margin: 25px 0;
-}
-
-    .sources__row {
-        // @include row;
-        height: 60px;
-        // outline: 1px solid red;
-
-        &:last-child {
-            // border-bottom: 1px solid $alto;
-        }
-    }
-
-        .sources__col--source {
-            @include span-columns(4);
-            height: inherit;
-        }
-        
-        .sources__col--status {
-            @include span-columns(5);
-            height: inherit;
-        }
-
-        .sources__col--action {
-            @include span-columns(3);
-            height: inherit;
-        }
 
 
 .row {
@@ -156,20 +127,6 @@
 
 }
 
-
-// .form-section {
-//     &.-format {
-//         // margin-bottom: 24px;
-//     }
-// }
-
-.prevent-fout {
-    visibility: hidden;
-}
-
-.-hide-section {
-    display: none;
-}
 
 
 // initiate table wrap around daily digest file table as display:none
@@ -252,5 +209,11 @@
 }
 
 
+.spacer {
+    height: 20px;
 
+    &.-xxxlarge {
+        height: 300px;
+    }
+}
 

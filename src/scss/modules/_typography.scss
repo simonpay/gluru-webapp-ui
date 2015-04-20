@@ -164,7 +164,31 @@
         //     @extend %text-decoration__underline;
         // }
     }
+
+    // TODO: abstract this class!
+    &.link--add {
+        display: block;
+        position: relative;
+        @extend %font-size__16;
+        @extend %color__green;
+        @extend %font-weight__bold;
+        // TODO: abstract these magic numbers
+        padding-left: 37px;
+        line-height: 32px;
+        margin: 15px 0 5px;
+    }
 }
+
+    // TODO: abstract this class!
+    .link__icon {
+        position: absolute;
+        left: 0;
+
+        &.-right {
+            left: auto;
+            right: 0;
+        }
+    }
 
 // heading in single / split view panel-header
 // TODO: remove this if hierarchy structure approved by eddie

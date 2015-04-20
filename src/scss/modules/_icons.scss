@@ -72,6 +72,7 @@
 // event icons
 // ------------------------------------
 .icon__add--white {             @include use-sprite("icon__add--white"); }
+.icon__add { 		            @include use-sprite("icon__add"); }
 .icon__calendar {		        @include use-sprite("icon__calendar"); }
 .icon__calendar--white {        @include use-sprite("icon__calendar--white"); }
 .icon__edit--white {            @include use-sprite("icon__edit--white"); }

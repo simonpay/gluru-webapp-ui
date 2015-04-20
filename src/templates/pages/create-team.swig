@@ -30,7 +30,7 @@
             $(".js-example-basic-hide-search").select2({
                 minimumResultsForSearch: Infinity
             });
-            $( ".checkbox_slider" ).button();
+            // $( ".checkbox_slider" ).button();
             $( "#radio" ).buttonset();
 
             // remove class that sets visibility:hidden

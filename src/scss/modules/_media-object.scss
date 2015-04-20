@@ -26,7 +26,6 @@
 
     .media__body {
         overflow: hidden;
-        // padding-top: 2px;
 
         .-v-center & {
             padding-top: 0;
@@ -36,12 +35,22 @@
         .sources__col--action & {
             overflow: visible;
         }
+        
+        // resolve issue in firefox with header-nav__link
+        // where if no float set on media__body, the icon 
+        // in media__img reduces the width of media__body
+        // (by the same width as media__icon) so reults in 
+        // the text being truncated
+        // TODO: investigate this further
+        &.-float-left {
+            float: left;
+        }
     }
 
     .media__img {
+        // display: block;
         float: left;
         margin-right: 10px;
-        display: block;
 
         .options-list & {
             margin-right: 12px;

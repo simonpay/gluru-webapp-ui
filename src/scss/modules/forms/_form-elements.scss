@@ -44,6 +44,52 @@ input[type=text] {
 
 
 
+// form add sources 
+.sources__container {
+    margin: 25px 0;
+}
+
+    .sources__row {
+        // @include row;
+        height: 60px;
+        // outline: 1px solid red;
+
+        &:last-child {
+            // border-bottom: 1px solid $alto;
+        }
+    }
+
+        .sources__col--source {
+            @include span-columns(4);
+            height: inherit;
+        }
+        
+        .sources__col--status {
+            @include span-columns(5);
+            height: inherit;
+        }
+
+        .sources__col--action {
+            @include span-columns(3);
+            height: inherit;
+        }
+
+
+
+
+// .form-section {
+//     &.-format {
+//         // margin-bottom: 24px;
+//     }
+// }
+
+.prevent-fout {
+    visibility: hidden;
+}
+
+.-hide-section {
+    display: none;
+}
 
 
 
@@ -92,7 +138,7 @@ input[type=text] {
 	overflow: hidden;
 	// visibility: visible;
 	opacity: 1;
-	@include transition( height 0 0, opacity .7s);
+	@include transition( height 0s 0s, opacity .7s);
 	
 	&.is-hidden {
 		height: 0;
@@ -107,10 +153,15 @@ input[type=text] {
 	&.-team-access-settings,
 	&.-team-invite-people {
 		.row:nth-last-child(2) {
-			margin-bottom: 24px;
+			// margin-bottom: 24px;
 		}
 	}
 }
 
+.invite-people-row-container {
+	margin-bottom: 40px;
 
-
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

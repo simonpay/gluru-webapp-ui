@@ -18,7 +18,7 @@
 	                            <div class="media__img">
 	                                <div class="header-nav__icon header-nav__icon-text -num">{{ loop.index }}</div>
 	                            </div>
-	                            <div class="media__body">
+	                            <div class="media__body -float-left">
 	                                <div class="header-nav__text">{{ obj_section.text }}</div>
 	                            </div>
 	                        </div>

@@ -44,9 +44,18 @@
             
             // use sibling selector to set width of .panel-header.-stage 
             // based on existence of 'is-hidden' class on drawer-wrap
-            .drawer-wrap.is-hidden ~ .stage-wrap & {
+            .drawer-wrap.is-hidden ~ .stage-wrap &,
+            // when drawer doesnt exist in dom
+            &.-no-drawer { 
                 @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
             }
+
+            // when drawer doesnt exist in dom
+            // &.-no-drawer {
+            //     @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
+            // }
+
+
         }
 
         &:before {

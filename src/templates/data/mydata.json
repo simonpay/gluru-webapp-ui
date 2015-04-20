@@ -225,6 +225,7 @@
         "hide_stage_nav":           1,
         "hide_account_nav":         1,
         "hide_search_input":        1,
+        "bln_no_drawer":            1,
         "sections": [
             {
                 "section_id":                           "create_account",
