@@ -7,12 +7,13 @@
 
     <form>
 
-        <h1 class="info-panel__heading-text">Autopush source</h1>
 
         <section class="form-section -autopush-sources js-autopush-sources">
 
             <div class="row">
                 <div class="large-11">
+
+        			<h1 class="info-panel__heading-text">Autopush source</h1>
 
 					<p class="stage__text">If you would like gluru to help you organise your email attachments you can <strong>click below to add sources</strong>. You can skip this step and set up autopush later if you like.</p>
 
@@ -41,10 +42,11 @@
 
         <section class="form-section -autopush-destination is-hidden js-section-autopush-destination">
 
-	        <h1 class="info-panel__heading-text">Autopush destination source</h1>
 
             <div class="row">
                 <div class="large-11">
+
+	        		<h1 class="info-panel__heading-text">Autopush destination source</h1>
 
 					<p class="stage__text">Now select a destination source for gluru to store your attachments. Gluru will keep them safe in a folder called <strong>gluru attachments</strong>.</p>
 
@@ -74,7 +76,6 @@
 
         <section class="form-section -autopush-notifications is-hidden js-section-autopush-notifications">
 
-	        <h1 class="info-panel__heading-text">Autopush notifications</h1>
 
             <div class="row">
                 <div class="large-11">
@@ -93,6 +94,8 @@
 
                         </div>
                         <div class="media__body">
+
+					        <h1 class="info-panel__heading-text">Autopush notifications</h1>
 
 							<p class="stage__text">Would you like to receive storage limit notifications for your destination source?</p>
 

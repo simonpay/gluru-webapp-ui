@@ -7,9 +7,33 @@
 // most text styles are defined here using @extend for 
 // efficiency but some are defined within relevent modules
 
+// consistent margin added to bottom of losse selectors
+// ref Harry Roberts
+// https://www.youtube.com/watch?v=ldx4ZFxMEeo&hd=1
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+ul,
+ol,
+figure,
+address,
+table,
+fieldset,
+p,
+pre {
+    margin: 0;
+    margin-bottom: 24px;
+}
+
 
 p {
-    margin-bottom: 24px;
     @extend %color__gray--dark;
 
     &.subheading {
@@ -368,7 +392,7 @@ p {
 .stage__text {
     @extend %font-size__14;
     @extend %color__zeus;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     
     &.-cta {
         @extend %font-size__16;
@@ -383,6 +407,12 @@ p {
 
     .btn__wrap & {
         @extend %text-align__center;
+    }
+    
+    // pull back top margin for stage__text 
+    // when it follows .info-panel__heading-text
+    .info-panel__heading-text ~ & {
+        // margin-top: -15px;
     }
 }
 

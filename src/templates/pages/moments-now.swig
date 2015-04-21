@@ -23,6 +23,7 @@
 
 	{# stage #}
 	{% set type = "recent" %}
+	{% set moments_section = "timeline" %}
 	{% include "src/templates/includes/stage__moments.swig" %}
 
 {% endblock %}

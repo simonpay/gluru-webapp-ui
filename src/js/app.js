@@ -783,6 +783,16 @@
 
                     _obj_gluru.pop_menu._hide();
 
+                // if pop menu is visible && pop menu type is timeline-source && timeline-source is visible - hide pop menu
+                } else if ( !$pop_menu_wrap.hasClass( "is-hidden" ) && _pop_menu_content === "timeline-source" && $( ".js-pop-menu__list--timeline-source" ).css( "display" ) === "block" ) {
+
+                    _obj_gluru.pop_menu._hide();
+
+                // if pop menu is visible && pop menu type is timeline-sort && timeline-sort is visible - hide pop menu
+                } else if ( !$pop_menu_wrap.hasClass( "is-hidden" ) && _pop_menu_content === "timeline-sort" && $( ".js-pop-menu__list--timeline-sort" ).css( "display" ) === "block" ) {
+
+                    _obj_gluru.pop_menu._hide();
+
                 // pop menu is hidden - show pop menu
                 } else {
 

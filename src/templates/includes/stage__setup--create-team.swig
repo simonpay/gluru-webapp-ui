@@ -16,8 +16,6 @@
             <div class="row">
                 <div class="large-11">
 
-                    <a name="team-setup"></a>
-
                     <p class="stage__text">Do you want to add a team to your Gluru account? If you just want to continue with a Single User account to try gluru don’t worry, you'll still be able to create a team in the future.</p>
 
 {#                     <div class="media">
@@ -44,7 +42,7 @@
             </div>
 
             <p>
-                <button class="btn__lozenge js-add-team">
+                <button class="btn__lozenge js-btn-add-team">
                     CREATE TEAM
                 </button>
             </p>
@@ -61,11 +59,10 @@
 
             <div class="row">
 
-                <a name="team-name"></a>
-
-                <p class="info-panel__heading-text">Team Name</p>
-
                 <div class="large-6">
+
+                    <p class="info-panel__heading-text">Team Name</p>
+
                     <p>
                         <input 
                             type="text" 
@@ -92,8 +89,8 @@
                         <div class="media__img -right -lrg-margin">
 
                             <div id="radio">
-                                <input type="radio" class="js-invited-member-connect-source" id="invited-member-connect-source-no" name="invited-member-connect-source"><label for="invited-member-connect-source-no">No</label>
-                                <input type="radio" class="js-invited-member-connect-source" id="invited-member-connect-source-yes" name="invited-member-connect-source"><label for="invited-member-connect-source-yes">Yes</label>
+                                <input type="radio" class="js-invited-member-connect-source" id="rdo-invited-member-connect-source-no" name="invited-member-connect-source"><label for="rdo-invited-member-connect-source-no">No</label>
+                                <input type="radio" class="js-invited-member-connect-source" id="rdo-invited-member-connect-source-yes" name="invited-member-connect-source"><label for="rdo-invited-member-connect-source-yes">Yes</label>
                             </div>
 
 
@@ -117,7 +114,7 @@
 
                         <p>
                             <select 
-                                class="js-example-basic-multiple" 
+                                class="js-team-settings-source__multi-select" 
                                 multiple="multiple" 
                                 data-placeholder="Click to add sources..." 
                                 style="width:100%">

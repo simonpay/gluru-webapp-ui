@@ -17,6 +17,7 @@
         $section_autopush_notifications                 = $( ".js-section-autopush-notifications" ),
 
         $btn_next                                       = $( ".js-btn-next" ),
+        $btn_add_team                                   = $( ".js-btn-add-team" ),
 
         $team_access_settings_row_container             = $( ".js-team-access-settings-row-container" ),
         $invite_people_row_container_clone              = $( ".js-invite-people-row-container-clone" ),
@@ -31,8 +32,15 @@
 
         $autopush_source_multi_select                   = $( ".js-autopush-source__multi-select" ),
         $autopush_destination_multi_select              = $( ".js-autopush-destination__multi-select" ),
+
+        $rdo_invited_member_connect_source_yes          = $( "#rdo-invited-member-connect-source-yes" ),
+        $rdo_invited_member_connect_source_no           = $( "#rdo-invited-member-connect-source-no" ),
+
+        $team_settings_source_multi_select              = $( ".js-team-settings-source__multi-select" ),
         
-        $checkbox_slider                                = $( ".js-checkbox-slider" )
+        $checkbox_slider                                = $( ".js-checkbox-slider" ),
+
+        $prevent_fout                                   = $( ".prevent-fout" )
 
         ;
 
@@ -55,15 +63,14 @@
                 } else {
 
                     ary_sections[i].addClass( "is-hidden" );
-
                 }
             }
-
-            // console.log( i );
         },
 
 
+
         add_favourites: {
+
 
             _clone_favourite: function (e) {
 
@@ -75,13 +82,16 @@
             }
         },
 
+
+
         autopush: {
+
 
             _do_add_source: function () {
 
                 obj_form_actions._set_section_state( [ $section_autopush_destination ], "show" );
-                
             },
+
 
             _do_remove_source: function () {
 
@@ -96,14 +106,14 @@
                     // reset $autopush_destination_multi_select
                     $autopush_destination_multi_select.val(null).trigger("change");
                 }
-                
             },
+
 
             _do_add_destination: function () {
 
                 obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "show" );
-                
             },
+
 
             _do_remove_destination: function () {
 
@@ -115,11 +125,13 @@
                 if ( source_data.length === 0 ) {
                     obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "hide" );
                 }
-
             },
         },
 
+
+
         create_team: {
+
 
             _create_team: function (e) {
                 
@@ -154,55 +166,62 @@
                 e.preventDefault();
             },
 
+
+            _do_invite_sources_radio_click: function ( yep_nope ) {
+
+                // yes
+                if ( yep_nope === "yes" ) {
+
+                    // reset select2 sources box
+                    $( ".js-example-basic-multiple" ).val(null).trigger("change");
+
+                    obj_form_actions._set_section_state( [ $section_team_settings_sources ], "show" );
+                    obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people, $section_submit ], "hide" );
+
+                // no
+                } else if ( yep_nope === "no" ) {
+
+                    obj_form_actions._set_section_state( [ $section_team_invite_people, $section_submit ], "show" );
+                    obj_form_actions._set_section_state( [ $section_team_settings_sources, $section_team_access_settings ], "hide" );
+
+                    // reset
+                    obj_form_actions.create_team._remove_invite_people_rows();
+                    obj_form_actions.create_team._remove_invite_people_containers();
+
+                    obj_form_actions.create_team._clone_invite_people_row();
+
+                    // reset select2 sources box
+                    $( ".js-example-basic-multiple" ).val(null).trigger("change");
+                }
+            },
+
+
             _do_add_source: function () {
 
                 var $this = $(this);
 
                 obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people, $section_submit ], "show" );
-                // obj_form_actions.create_team._clone_team_access_row.call( $this );
                 obj_form_actions.create_team._build_team_access_rows.call( $this );
-                
             },
 
-            // _clone_team_access_row: function () {
-
-            //     var $this = $(this);
-
-
-            //     var data = $this.select2('data');
-            //     console.log( data[0].text );
-
-            //     // console.log( $this );
-
-            //     $team_access_settings_row_clone
-            //         .clone()
-            //             .removeClass( "js-team-access-settings-row-clone" )
-            //             .addClass( "js-team-access-settings-row" )
-            //                 .show()
-            //                     .appendTo( $team_access_settings_row_container )
-            //                         .find( ".js-source-name" )
-            //                         .html( data[0].text )
-            //                             ;
-
-            // },
 
             _remove_access_setting_rows: function () {
 
                 $( ".js-team-access-settings-row" ).remove();
-                
             },
+
 
             _remove_invite_people_rows: function () {
 
                 $( ".js-invite-people-row" ).remove();
-                
             },
+
 
             _remove_invite_people_containers: function () {
 
                 $( ".js-invite-people-row-container" ).remove();
-                
             },
+
 
             _build_team_access_rows: function () {
 
@@ -216,9 +235,6 @@
                 // console.log( source_data.length );
 
                 // reset
-                // $( ".js-team-access-settings-row" ).remove();
-                // $( ".js-invite-people-row" ).remove();
-                // $( ".js-invite-people-row-container" ).remove();
                 obj_form_actions.create_team._remove_access_setting_rows();
                 obj_form_actions.create_team._remove_invite_people_rows();
                 obj_form_actions.create_team._remove_invite_people_containers();
@@ -279,13 +295,8 @@
                 if ( source_data.length === 0 ) {
                     obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people ], "hide" );
                 }
-
-                // set up jquery button
-
-                // set up select box
-                // console.log( "called" );
-
             },
+
 
             _clone_invite_people_row: function () {
 
@@ -305,8 +316,8 @@
                                     minimumResultsForSearch: Infinity
                                 })
                                     ;
-
             },
+
 
             _add_new_email_recipient: function (e) {
 
@@ -329,8 +340,6 @@
                                                 minimumResultsForSearch: Infinity
                                             })
                                             ;
-
-                // console.log( _invite_people_row_container );
 
                 e.preventDefault();
             }
@@ -357,52 +366,8 @@
     // FAVOURITES PAGE
     // -------------------------------------------------
 
-    $add_new_email.on( "click", function(e) {
-        obj_form_actions.create_team._add_new_email_recipient.call( $(this), e );
-    });
-
-    $( ".js-add-team" ).on( "click", function(e){
-        obj_form_actions.create_team._create_team.call( $(this), e );
-    });
-    
-
-
-    // -------------------------------------------------
-    // CREATE TEAM PAGE
-    // -------------------------------------------------
-
-    $( "#invited-member-connect-source-yes" ).on( "click", function(){
-        // reset select2 sources box
-        $( ".js-example-basic-multiple" ).val(null).trigger("change");
-
-        obj_form_actions._set_section_state( [ $section_team_settings_sources ], "show" );
-        obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people, $section_submit ], "hide" );
-    });
-
     $add_new_favourite.on( "click", function(e) {
         obj_form_actions.add_favourites._clone_favourite.call( $(this), e );
-    });
-
-    $( "#invited-member-connect-source-no" ).on( "click", function(){
-        // console.log( "called" );
-        obj_form_actions._set_section_state( [ $section_team_invite_people, $section_submit ], "show" );
-        obj_form_actions._set_section_state( [ $section_team_settings_sources, $section_team_access_settings ], "hide" );
-
-        // reset
-        obj_form_actions.create_team._remove_invite_people_rows();
-        obj_form_actions.create_team._remove_invite_people_containers();
-
-        obj_form_actions.create_team._clone_invite_people_row();
-
-        // reset select2 sources box
-        $( ".js-example-basic-multiple" ).val(null).trigger("change");
-    });
-
-    $('.js-example-basic-multiple').on("select2:select", function (e) { 
-        obj_form_actions.create_team._do_add_source.call( $(this) );
-    });
-    $('.js-example-basic-multiple').on("select2:unselect", function (e) { 
-        obj_form_actions.create_team._do_add_source.call( $(this) );
     });
 
 
@@ -411,32 +376,74 @@
     // AUTOPUSH PAGE
     // -------------------------------------------------
 
+    // init select2 on <select> els if in DOM
     if ( $autopush_source_multi_select.length > 0 ) $autopush_source_multi_select.select2();
     if ( $autopush_destination_multi_select.length > 0 ) $autopush_destination_multi_select.select2();
 
-    // jquery-ui button (checkbox slider)
+    // init jquery-ui button (checkbox slider) if el in DOM
     if ( $checkbox_slider.length > 0 ) $checkbox_slider.button();
 
-
+    // add source
     $autopush_source_multi_select.on("select2:select", function (e) { 
         obj_form_actions.autopush._do_add_source();
     });
+    // remove source
     $autopush_source_multi_select.on("select2:unselect", function (e) { 
         obj_form_actions.autopush._do_remove_source.call( $(this) );
     });
 
+    // add destination
     $autopush_destination_multi_select.on("select2:select", function (e) { 
         obj_form_actions.autopush._do_add_destination();
     });
+    // remove destination
     $autopush_destination_multi_select.on("select2:unselect", function (e) { 
         obj_form_actions.autopush._do_remove_destination.call( $(this) );
     });
 
 
 
+    // -------------------------------------------------
+    // CREATE TEAM PAGE
+    // -------------------------------------------------
+
+    // add team button
+    $btn_add_team.on( "click", function(e){
+        obj_form_actions.create_team._create_team.call( $(this), e );
+    });
+
+    // init select2 on <select> els if in DOM
+    if ( $team_settings_source_multi_select.length > 0 ) $team_settings_source_multi_select.select2();
+
+    // invite member radio button - YES
+    $rdo_invited_member_connect_source_yes.on( "click", function(){
+        obj_form_actions.create_team._do_invite_sources_radio_click( "yes" );
+    });
+
+    // invite member radio button - NO
+    $rdo_invited_member_connect_source_no.on( "click", function(){
+        obj_form_actions.create_team._do_invite_sources_radio_click( "no" );
+    });
+
+    // team access add source
+    $team_settings_source_multi_select.on("select2:select", function (e) { 
+        obj_form_actions.create_team._do_add_source.call( $(this) );
+    });
+    // team access remove source
+    $team_settings_source_multi_select.on("select2:unselect", function (e) { 
+        obj_form_actions.create_team._do_add_source.call( $(this) );
+    });
+
+    // add new email recipient
+    $add_new_email.on( "click", function(e) {
+        obj_form_actions.create_team._add_new_email_recipient.call( $(this), e );
+    });
+
+
+
     // remove class that hides content whilst form els are 
     // initiated to prevent FOUT 
-    $( ".prevent-fout" ).removeClass( "prevent-fout" );
+    $prevent_fout.removeClass( "prevent-fout" );
 
 
 

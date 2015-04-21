@@ -26,10 +26,10 @@
     <script src="js/pages/setup.js"></script>
     <script>
         (function(){
-            $(".js-example-basic-multiple").select2();
-            $(".js-example-basic-hide-search").select2({
-                minimumResultsForSearch: Infinity
-            });
+            // $(".js-example-basic-multiple").select2();
+            // $(".js-example-basic-hide-search").select2({
+            //     minimumResultsForSearch: Infinity
+            // });
             // $( ".checkbox_slider" ).button();
             $( "#radio" ).buttonset();
 

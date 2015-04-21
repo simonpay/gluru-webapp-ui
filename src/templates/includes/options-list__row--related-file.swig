@@ -4,7 +4,7 @@
         <div class="{{obj_file.file_class}}"></div>
 
     </div>
-    <div class="media__body">
+    <div class="media__body{% if obj_file.source_class !== "" %} u-inherit-height{% endif %}">
 
         {% if obj_file.source_class !== "" %}
 

@@ -9,27 +9,18 @@
 
 {% block content %}
 
-	{% set obj = mydata.moments %}
-	{% set bln_timeline_page = 1 %}
+	{% set bln_hide_dev_buttons = 1 %}
+	{% set obj = mydata.setup %}
 
 	{# main-nav #}
 	{% include "src/templates/includes/main-nav.swig" %}
 
-	{# drawer #}
-	{% include "src/templates/includes/drawer-files.swig" %}
-
-	{# actions #}
-	{% include "src/templates/includes/actions.swig" %}
-
 	{# stage #}
-	{% set type = "recent" %}
-	{% set moments_section = "timeline" %}
-	{% include "src/templates/includes/stage__moments.swig" %}
+	{% include "src/templates/includes/stage__setup--test.swig" %}
 
 {% endblock %}
 
 {% block javascripts %}
 	{% parent %}
 	<script src="js/pages/moments.js"></script>
-	<script src="js/pages/timeline.js"></script>
 {% endblock %}

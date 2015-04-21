@@ -78,9 +78,14 @@
             position: relative;
             overflow: hidden;
 
-            .stage-wrap--moments & {
+            .stage-wrap--timeline & {
+                @include calc( height, "100% - #{$panel-header-height}" ); 
+            }
+
+            .stage-wrap--daily-digest & {
                 height: 100%;
             }
+            
             .stage-wrap--files & {
                 @include calc( height, "100% - #{$panel-header-height}" ); 
                 padding-left: $files-table-padding-left;

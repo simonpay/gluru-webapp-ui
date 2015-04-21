@@ -111,3 +111,54 @@
     background-size: contain;
 
 }
+
+
+
+
+// harry roberts css for review
+// re-usable nav
+.nav {
+    list-style: none;
+    margin-left: 0;
+
+    & > li,
+    & > li > a {
+        display: inline-block;
+    }
+}
+
+// island object
+// http://csswizardry.com/2011/10/the-island-object/
+.island {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.island > :last-child {
+    margin-bottom: 0;
+    /* Remove the margin from the last child of a boxed off area so that we don’t end up with compounded margin/padding spacings. */
+}
+
+.content {
+    width: 460px;
+    float: left;
+    background-color: #fff;
+}
+
+.sub-content {
+    width: 160px;
+    float: left;
+    background-color: #333;
+    color: #fff;
+}
+
+.promo {
+    border: 1px solid #ff8;
+    background-color: #ffc;
+    color: #333;
+}
+
+.twitter {
+    color: #fff;
+    background-color: #00a0d1;
+}
