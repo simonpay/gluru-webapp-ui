@@ -4,7 +4,8 @@
     
         <div class="js-demo-only__actions-content-wrap -now-calendar" style="display: none">
             
-            <div class="now-summary">
+            <div class="actions__summary">
+
                 <p class="text -light">We think you may need these files for <a href="#" class="link text-link"><strong>design meeting</strong></a>.</p>
 
                 <p class="text -light subheading">Attendees:</p>
@@ -35,7 +36,7 @@
 
         <div class="js-demo-only__actions-content-wrap -now-non-calendar" style="display: none">
 
-            <div class="now-summary">
+            <div class="actions__summary">
 
                 <p class="text -light subheading">It looks like you're currently working with:</p>
 

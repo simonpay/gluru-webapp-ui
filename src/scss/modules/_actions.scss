@@ -82,4 +82,13 @@
         .actions__heading-wrap {
             @include scut-center-transform(y);
         }
+            
+            // container for summary content within actions panel
+            // for content such as calendar event details
+            .actions__summary {
+                padding-bottom: 10px;
+                border-bottom: 1px solid $alto;
+            }
+
+
 
