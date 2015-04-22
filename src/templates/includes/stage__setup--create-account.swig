@@ -8,22 +8,22 @@
     <h1 class="info-panel__heading-text">Create a Gluru account</h1>
     <p class="stage__text">You can create an account with Google+ or email.</p>
 
-    <div class="info-panel__content-block -narrow">
+    <div class="layout -w-310">
 
         <p>
-            <button class="[ btn__lozenge -large -icon-left ] [ js-sign-in js-modal-trigger ]" data-modal-content="setting-up-account">
-                <div class="btn__icon icon-lrg__googleplus"></div>
-                Sign up with Google
-            </button>
+            <a href="#" class="btn -lozenge -white -col-grey -large -full js-sign-in js-modal-trigger" data-modal-content="setting-up-account">
+                <span class="btn__icon icon-lrg__googleplus"></span><!--
+                --><span class="btn__text -divider">Sign up with Google</span>
+            </a>
         </p>
         
         <p><div class="or or-text">or</div></p>
 
         <p>
-            <button class="[ btn__lozenge -large -icon-left ] [ js-sign-in js-modal-trigger ]" data-modal-content="setting-up-account">
-                <div class="btn__icon icon-lrg__email"></div>
-                Sign up with email
-            </button>
+            <a href="#" class="btn -lozenge -white -col-grey -large -full js-sign-in js-modal-trigger" data-modal-content="setting-up-account">
+                <span class="btn__icon icon-lrg__email"></span><!--
+                --><span class="btn__text -divider">Sign up with email</span>
+            </a>
         </p>
         
         <p class="stage__text -cta">

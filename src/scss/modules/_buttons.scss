@@ -10,131 +10,211 @@
 // 	margin-top: 40px;
 // }
 
-	.btn__lozenge {
-		// display: block;
-		display: inline-block;
-		position: relative;
-		// width: 280px;                 
-		height: 46px; 
+.btn {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	overflow: visible;
+	margin-right: 15px;
+	padding: 12px 35px;
+	background-color: $dusty-gray;
+	border: 2px solid $dusty-gray;
+	cursor: pointer;
+	text-align: center;
+	color: $white;
+	text-decoration: none;
+    @extend %font-size__20;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&.is-hidden {
+		display: none;
+	}
+
+	&.-lozenge {
 		border-radius: 100px;
-		border: 2px solid $dusty-gray;
-		outline: none;
-		padding: 1px 30px 0;
-		margin-right: 15px;
-		// margin: 0 auto 25px;
-		
-		&.is-hidden {
-			display: none;
+	}
+
+	&.-positive {
+		background-color: $green;
+		border-color: $green;
+	}
+
+	&.-white {
+		background-color: $white;
+		border-color: $dusty-gray;
+		color: $green;
+		@extend %color__gray--light;
+
+		&.-col-grey {
+			color: $dusty-gray;
 		}
 
-		&:last-child {
-			margin-right: 0;
-		}
-
-	    @extend %font-size__16;
-	    @extend %color__green;
-		
-		&.is-selected {
+    	&.is-selected {
 			background-color: $green;
 			border-color: $green;
 			color: $white;
-		}
-		
-		&.-large {
-			width: 240px;
-			height: 70px;
-			border-width: 3px;
-	    	@extend %font-size__18;
-	    	@extend %color__gray--light;
-			
-			&.is-selected {
-				background-color: $green;
-				border-color: $green;
-				color: $white;
+    	}
+	}
 
-	    		&:after {
-					content: "";
-					left: 25px;
-					@extend %scut-center-transform-y;
-					@include use-sprite("icon-sml__tick--white");
-	    		}
-			}
-		}
+	&.-small {
+		padding: 10px 28px;
+    	@extend %font-size__16;
+	}
 
-		&.-green {
-			height: 60px;
-			background: $green;
-			border-color: $green;
-	    	@extend %font-size__20;
-	    	@extend %color__white;
-		}
+	&.-large {
+		border-width: 3px;
+		padding: 12px 38px;
+    	@extend %font-size__18;
+	}
 
-		&.-gray {
-			height: 60px;
-			background: $dusty-gray;
-			border-color: $dusty-gray;
-	    	@extend %font-size__20;
-	    	@extend %color__white;
+	&.-icon-right {
+		text-align: right;
+		padding-left: 35px;
+		padding-right: 70px;
+		padding-bottom: 2px;
+	}
+
+	&.-full {
+		width: 100%;
+	}
+
+}
+
+	.btn__icon {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+
+		&:last-child {
+			margin: 0 -8px 0 7px;
 		}
 
-		&.-icon-left {
-			text-align: left;
-			padding-left: 95px;
-			padding-right: 0;
+		&:first-child {
+			margin: 0 7px 0 -8px;
+		}
+	}
+
+	.btn__text {
+		position: relative;
+
+		&.-divider {
+			margin-left: 25px;
 
 			&:before {
 				content: "";
-				display: block;
 				position: absolute;
-				left: 75px;
+				top: -11px;
+				bottom: -14px;
+				left: -17px;
+				display: inline-block;
 				width: 1px;
-				top: 5px;
-				bottom: 5px;
-				background: $dusty-gray;
+				background: #999;
+				vertical-align: middle;
 			}
 		}
-
-		&.-icon-right {
-			text-align: right;
-			padding-left: 35px;
-			padding-right: 70px;
-			padding-bottom: 2px;
-  		}
-
-		&.-large.-icon-left {
-			width: 280px;
-		}
-
-
-
-
 	}
 
-		.btn__icon {
-			// position: absolute;
-			@extend %scut-center-transform-y;
-
-			.-icon-left & {
-				left: 20px;
-			}
-
-			.-gray.-icon-right &,
-			.-green.-icon-right & {
-				right: 23px;
-			}
-
-			.-green.-icon-right.-down & {
-				@include transform( translateY(-50%) rotate(45deg) );
-			}
-		}
-
-		// .btn__text-pos {
-		// 	padding-left: 95px;
-		// 	text-align: left;
-		// }
 
 
+	// // .btn__divider {
+	// // 	display: inline-block;
+	// // 	border-left: 1px solid black;
+	// // }
 
+	// .btn__lozenge {
+	// 	height: 46px; 
+	// 	border-radius: 100px;
+	// 	border: 2px solid $dusty-gray;
+	// 	outline: none;
+	// 	// padding: 1px 30px 0;
+	// 	margin-right: 15px;
+	// 	// margin: 0 auto 25px;
+		
+	// 	&.is-hidden {
+	// 		display: none;
+	// 	}
+
+	// 	&:last-child {
+	// 		margin-right: 0;
+	// 	}
+
+	//     @extend %font-size__16;
+	//     @extend %color__green;
+		
+	// 	&.is-selected {
+	// 		background-color: $green;
+	// 		border-color: $green;
+	// 		color: $white;
+	// 	}
+		
+	// 	&.-large {
+	// 		width: 240px;
+	// 		height: 70px;
+	// 		border-width: 3px;
+	//     	@extend %font-size__18;
+	//     	@extend %color__gray--light;
+			
+	// 		&.is-selected {
+	// 			background-color: $green;
+	// 			border-color: $green;
+	// 			color: $white;
+
+	//     		&:after {
+	// 				content: "";
+	// 				left: 25px;
+	// 				@extend %scut-center-transform-y;
+	// 				@include use-sprite("icon-sml__tick--white");
+	//     		}
+	// 		}
+	// 	}
+
+	// 	&.-green {
+	// 		height: 60px;
+	// 		background: $green;
+	// 		border-color: $green;
+	//     	@extend %font-size__20;
+	//     	@extend %color__white;
+	// 	}
+
+	// 	&.-gray {
+	// 		height: 60px;
+	// 		background: $dusty-gray;
+	// 		border-color: $dusty-gray;
+	//     	@extend %font-size__20;
+	//     	@extend %color__white;
+	// 	}
+
+	// 	&.-icon-left {
+	// 		text-align: left;
+	// 		padding-left: 95px;
+	// 		padding-right: 0;
+
+	// 		&:before {
+	// 			content: "";
+	// 			display: block;
+	// 			position: absolute;
+	// 			left: 75px;
+	// 			width: 1px;
+	// 			top: 5px;
+	// 			bottom: 5px;
+	// 			background: $dusty-gray;
+	// 		}
+	// 	}
+
+	// 	&.-icon-right {
+	// 		text-align: right;
+	// 		padding-left: 35px;
+	// 		padding-right: 70px;
+	// 		padding-bottom: 2px;
+ //  		}
+
+	// 	&.-large.-icon-left {
+	// 		width: 280px;
+	// 	}
+	// }
 
 
 

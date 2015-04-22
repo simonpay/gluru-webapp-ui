@@ -42,9 +42,9 @@
             </div>
 
             <p>
-                <button class="btn__lozenge js-btn-add-team">
+                <a href="#" class="btn -lozenge -white -small js-btn-add-team">
                     CREATE TEAM
-                </button>
+                </a>
             </p>
 
             <div class="large-11">
@@ -226,10 +226,10 @@
         <section class="form-section -submit js-section-submit">
 
             <p>
-                <button class="btn__lozenge -green -icon-right">
-                    <div class="btn__icon icon__arrow--white"></div>
-                    Finish
-                </button>
+                <a href="#" class="btn -lozenge -positive">
+                    <span class="btn__icon icon__arrow--white"></span><!--
+                    --><span class="btn__text">Finish</span>
+                </a>
             </p>
 
         </section>

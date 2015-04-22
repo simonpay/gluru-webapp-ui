@@ -115,15 +115,15 @@
 
         <section class="form-section -submit js-section-submit">
 
-            <button class="btn__lozenge -gray -icon-right">
-                <div class="btn__icon icon__arrow--white"></div>
-                Skip
-            </button>
+            <a href="#" class="btn -lozenge">
+                <span class="btn__icon icon__arrow--white"></span><!--
+                --><span class="btn__text">Skip</span>
+            </a>
 			
-            <button class="btn__lozenge -green -icon-right is-hidden js-btn-next">
-                <div class="btn__icon icon__arrow--white"></div>
-                Next
-            </button>
+            <a href="#" class="btn -lozenge -positive is-hidden js-btn-next">
+                <span class="btn__icon icon__arrow--white"></span><!--
+                --><span class="btn__text">Next</span>
+            </a>
 
         </section>
 

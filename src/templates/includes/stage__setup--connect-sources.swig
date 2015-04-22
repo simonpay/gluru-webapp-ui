@@ -53,7 +53,7 @@
 
                     {% elseif obj_source.action_type === "button" %}
 
-                        <button class="btn__lozenge u-center-block">CONNECT</button>
+                        <a href="#" class="btn -lozenge -white -small u-center-block">CONNECT</a>
 
                     {% endif %}
 
@@ -69,10 +69,10 @@
     <hr class="hr__line">
 
     <p>
-        <button class="btn__lozenge -green -icon-right">
-            <div class="btn__icon icon__arrow--white"></div>
-            Next
-        </button>
+        <a href="#" class="btn -lozenge -positive">
+            <span class="btn__icon icon__arrow--white"></span><!--
+            --><span class="btn__text">Next</span>
+        </a>
     </p>
 
 

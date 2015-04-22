@@ -217,3 +217,16 @@
     }
 }
 
+
+
+// unlikely that this will stay - cant currently think 
+// of a better way to create modular custom fixed width
+// containers when needed  
+.layout {
+    &.-w-310 {
+        width: 310px;
+    }
+}
+
+
+

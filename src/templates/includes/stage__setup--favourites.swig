@@ -47,15 +47,15 @@
 
             <section class="form-section -submit js-section-submit">
 
-                <button class="btn__lozenge -gray -icon-right">
-                    <div class="btn__icon icon__arrow--white"></div>
-                    Skip
-                </button>
+                <a href="#" class="btn -lozenge -icon-rightsss">
+                    <span class="btn__text">Skip</span><!--
+                    --><span class="btn__icon icon__arrow--white"></span>
+                </a><!--
                 
-                <button class="btn__lozenge -green -icon-right js-btn-next">
-                    <div class="btn__icon icon__arrow--white"></div>
-                    Next
-                </button>
+                --><a href="#" class="btn -lozenge -positive -icon-rightss js-btn-next">
+                    <span class="btn__icon icon__arrow--white"></span><!--
+                    --><span class="btn__text">Next</span>
+                </a>
 
             </section>
 

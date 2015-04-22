@@ -31,9 +31,8 @@
 
 <div class="scrollable-content__wrap -stage">
 	<div class="scrollable-content">
-		<div class="info-panel-DISABLED">
+		<div class="scrollable-content__inner-wrap -stage">
 
-			{# <aside class="info-panel__aside"> #}
 			<aside class="stage_sidebar">
 				
 				<div class="speech-bubble">

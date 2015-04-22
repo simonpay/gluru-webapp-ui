@@ -44,12 +44,11 @@
         }
     }
 
-        // .scrollable-content__inner-wrap {
-        //     &.-stage {
-        //         position: relative;
-        //         height: 100%;
-        //         padding: 50px 30px;
-        //         overflow: auto;
-        //     }
-        // }
+        .scrollable-content__inner-wrap {
+            &.-stage {
+                position: relative;
+                padding: 50px 30px;
+                overflow: hidden;
+            }
+        }
 
