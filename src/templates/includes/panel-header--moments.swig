@@ -1,4 +1,4 @@
-<header class="panel-header panel-header--moments">
+<div class="panel-header panel-header--moments">
     <nav class="header-nav">
         <ul class="header-nav__list">
             <li class="header-nav__item">
@@ -35,4 +35,4 @@
             </li>
         </ul>
     </nav>
-</header>
+</div>

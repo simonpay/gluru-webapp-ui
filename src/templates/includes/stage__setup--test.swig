@@ -5,7 +5,6 @@
 {% set obj_setup_data = obj.sections[0] %}
 
 {# section signup #}
-<section class="section-wrap -setup js-section-setup">
     
     <header class="panel-header panel-header--setup">
         <nav class="header-nav -setup">

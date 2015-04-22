@@ -4,5 +4,3 @@
 		</div><!-- // .scrollable-content -->
 	</div><!-- // .scrollable-content__wrap.-stage -->
 
-
-</section><!-- // .section-wrap.-setup -->

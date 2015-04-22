@@ -5,7 +5,7 @@
 
 	{% if moments_section === "timeline" %}
 
-		<header class="panel-header panel-header--timeline">
+		<div class="panel-header panel-header--timeline">
 			<div class="media -v-center">
 			    <div class="media__img pop-menu-trigger js-pmt js-tt" 
 			    	data-tt="Change Source"
@@ -34,7 +34,7 @@
 
 			    </div>
 			</div>
-		</header>
+		</div>
 
 	{% endif %}
 
