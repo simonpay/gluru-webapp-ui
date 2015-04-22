@@ -22,7 +22,7 @@
 
 	{# stage #}
 	{% set type = "future" %}
-	{% set moments_section = "daily-digest" %}
+	{# {% set moments_section = "daily-digest" %} #}
 	{% include "src/templates/includes/stage__moments--daily-digest.swig" %}
 
 {% endblock %}

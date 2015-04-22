@@ -2,7 +2,25 @@
     # SPLIT VIEW WRAP
 \*------------------------------------*/
 
-.split-view-wrap-outer {
+// module for managing the row / cols of any component that has 
+// split-view such as file manager or timeline 
+
+// TODO: update thse classes
+// proposed replacement class names with 
+// more semantic meaning
+// .split-view-wrap-outer { 
+// becomes
+.split-view__row {
+}
+
+// .split-view-wrap-container { 
+// becomes
+.split-view__col {
+}
+
+
+// .split-view-wrap-outer {
+.split-view__row {
     position: relative;
     height: 100%;
     
@@ -22,7 +40,8 @@
     }
 }
 
-    .split-view-wrap-container {
+    // .split-view-wrap-container {
+    .split-view__col {
         position: relative;
         height: 100%;
         // TODO: remove this transition if its not able to 
@@ -74,23 +93,24 @@
         }
     }
 
-        .split-view-wrap {
-            position: relative;
-            overflow: hidden;
+        // now ".scrollable-content__wrap"
+        // .split-view-wrap {
+        //     position: relative;
+        //     overflow: hidden;
 
-            .stage-wrap--timeline & {
-                @include calc( height, "100% - #{$panel-header-height}" ); 
-            }
+        //     .stage-wrap--timeline & {
+        //         @include calc( height, "100% - #{$panel-header-height}" ); 
+        //     }
 
-            .stage-wrap--daily-digest & {
-                height: 100%;
-            }
+        //     .stage-wrap--daily-digest & {
+        //         height: 100%;
+        //     }
             
-            .stage-wrap--files & {
-                @include calc( height, "100% - #{$panel-header-height}" ); 
-                padding-left: $files-table-padding-left;
-            }
-        }
+        //     .stage-wrap--files & {
+        //         @include calc( height, "100% - #{$panel-header-height}" ); 
+        //         padding-left: $files-table-padding-left;
+        //     }
+        // }
 
 
 
