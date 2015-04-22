@@ -53,4 +53,21 @@
 				    margin-bottom: 3px;
 				}
 
+		    .stage_sidebar { // aside
+		        // background: green;
+		        // height: 800px;
+		        @include span-columns(4);
+		        @include clearfix;
+		    }
+
+		    .stage_content {
+		        // background: blue;
+		        // height: 800px;
+		        @include span-columns(8);
+		        @include clearfix;
+		        padding-top: 5px;
+		    }
+
+
+
 			

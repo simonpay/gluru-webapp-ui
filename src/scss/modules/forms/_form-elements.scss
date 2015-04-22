@@ -72,6 +72,7 @@ input[type=text] {
         .sources__col--action {
             @include span-columns(3);
             height: inherit;
+            text-align: center;
         }
 
 
