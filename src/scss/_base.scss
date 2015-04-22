@@ -16,13 +16,6 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     overflow: hidden;
-    
-    // allow page to scroll when age is intended to be 
-    // loaded via ajax - this is for the prototype only
-    // and isnt use as part of main web app
-    .ajax-content & {
-        overflow: visible;
-    }
 }
 
 // resets for web apps (selected from https://github.com/suitcss/base)

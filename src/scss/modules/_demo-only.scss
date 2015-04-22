@@ -1,0 +1,40 @@
+/*------------------------------------*\
+# DEMO ONLY
+\*------------------------------------*/
+
+// these rules are for the demo only and 
+// should nit be included in the production release
+// comment out the @import via app.scss
+
+body {
+    // allow page to scroll when page is intended to be 
+    // loaded via ajax - this is for the prototype only
+    // and isnt use as part of main web app
+    .ajax-content & {
+        overflow: visible;
+    }
+}
+
+
+// demo only classes
+// these are needed for the demo only - 
+// they shouldnt make it into the app!
+.demo-only {
+
+    &.-actions-header-current-item__contents-wrap {
+        // inhert height so that .media.-v-center works correctly
+        // as this module needs to inherit the height of its parent
+        // for the demo, tehre are multiple sets of actions header 
+        // that are displayed based on teh user's selections
+        // which is whe this is required for the demo but not 
+        // for production
+        height: inherit;
+    }
+
+    // wrapper around content inside modal box 
+    // to enable display state of different 
+    // sets of modal content
+    &.-modal-box__content-wrap {
+        display: none;
+    }
+}

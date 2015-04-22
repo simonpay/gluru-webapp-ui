@@ -137,6 +137,8 @@
         "modules/forms/select2-overrides",
         "modules/forms/jquery-ui-checkbox-overrides";
 
+// used for demo only - comment this out for production
+@import "modules/demo-only"; 
 
 
 // ------------------------------------------------

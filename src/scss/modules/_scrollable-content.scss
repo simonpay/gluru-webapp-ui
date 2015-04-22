@@ -2,10 +2,12 @@
     # SCROLLABLE CONTENT
 \*------------------------------------*/
 
-// this class is applied to any div taht contains 
-// scrollable content
+// this class is applied to any div 
+// that contains scrollable content
 
-// sets a custom height so ".scrollable-content" can be 100% height
+// sets a custom height so ".scrollable-content" takes up 
+// the correct amount of height taking into account any 
+// fixed headers that precede before it
 .scrollable-content__wrap {
     position: relative;
     overflow: hidden;
@@ -33,7 +35,6 @@
     .scrollable-content {
         width: 100%;
         height: 100%;
-        // overflow: auto;
         // scroll y is comtrolled here
         // scroll x is hidden here and shown via .stage
         overflow-y: auto;
