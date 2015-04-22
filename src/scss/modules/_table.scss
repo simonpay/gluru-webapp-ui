@@ -130,12 +130,12 @@
                     height: 70px;
                 }
 
-                .section-wrap.-files .is-selected > &,
+                .stage-wrap--files .is-selected > &,
                 .search-results-wrap .is-selected > & {
                     background: $pink;
                 }
 
-                .section-wrap.-moments .is-selected > & {
+                .stage-wrap--moments .is-selected > & {
                     background: $blue;
                 }
             }
