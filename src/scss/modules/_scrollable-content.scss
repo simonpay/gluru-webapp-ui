@@ -27,9 +27,10 @@
         padding-left: $files-table-padding-left;
     }
 
-    // &.-daily-digest {
-    //     height: 100%; // same as default so commented out
-    // }
+    &.-daily-digest {
+        background: $gallery;
+        // height: 100%; // same as default so commented out
+    }
 }
 
     .scrollable-content {
@@ -39,17 +40,28 @@
         // scroll x is hidden here and shown via .stage
         overflow-y: auto;
         overflow-x: hidden;
-
-        &.-daily-digest {
-           background: $gallery;
-        }
     }
-
+        
+        // sets a custom padding value so that content requiring 
+        // space can be displayed correctly - areas that have content 
+        // that fills the scrollable area dont require this element 
         .scrollable-content__inner-wrap {
+            position: relative;
+            overflow: hidden;
+
             &.-stage {
-                position: relative;
                 padding: 50px 30px;
-                overflow: hidden;
+            }
+            
+            &.-timeline {
+                padding: 30px 24px;
+            }
+
+            // set custom padding for daily-digest section 
+            // this will reveal a gray 'border' from the background-color
+            // set on .scrollable-content__wrap.-daily-digest 
+            &.-daily-digest {
+                padding: 23px 14px;
             }
         }
 

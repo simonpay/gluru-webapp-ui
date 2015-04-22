@@ -1,0 +1,20 @@
+/*------------------------------------*\
+# DAILY DIGEST
+\*------------------------------------*/
+
+// custom styles for daily digest area inside moments section
+
+.daily-digest {
+    position: relative;
+    background: white;
+    border-bottom-left-radius: $priority-box__border-radius;
+    border-bottom-right-radius: $priority-box__border-radius;
+    padding: 18px;
+}
+
+    // initiate table wrap around daily digest file table as display:none
+    // the first jquery toggle will open instead of close
+    .daily-digest__table-wrap {
+        display: none;
+    }
+

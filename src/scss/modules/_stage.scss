@@ -21,53 +21,22 @@
 	    }
 	}
 		
-		// section within the stage content area
-		.stage-section {
-			margin-bottom: 20px;
-			// padding: 30px 0;
-			padding-top: 30px;
-			// add left indent
-			padding-left: $stage-section-padding-left;
-			padding-right: $stage-section-padding-left;
-			// padding: 20px;
-			// use border for vertical spacing instead of 
-			// padding because the div doesnt scroll when the 
-			// cursor is placed over the area of padding - 
-			// works correctly with border 
-			// this appears to be a chrome bug?
-			// TODO: revisit this and comfirm if neccesary 
-			// - feels hackish!!
-				// border-style: solid;
-				// border-color: transparent;
-				// border-left-width: $stage-padding-left;
-				// border-right-width: $stage-padding-right;
-				
+		.stage__heading-wrap {
+			position: relative;
+			top: 30px;
 		}
 
-			.stage__heading-wrap {
-				position: relative;
-				top: 30px;
+			.stage__heading {
+			    margin-bottom: 3px;
 			}
 
-				.stage__heading {
-				    margin-bottom: 3px;
-				}
+	    .stage_sidebar { // aside
+	        @include span-columns(4);
+	        @include clearfix;
+	    }
 
-		    .stage_sidebar { // aside
-		        // background: green;
-		        // height: 800px;
-		        @include span-columns(4);
-		        @include clearfix;
-		    }
+	    .stage_content { // div
+	        @include span-columns(8);
+	        @include clearfix;
+	    }
 
-		    .stage_content {
-		        // background: blue;
-		        // height: 800px;
-		        @include span-columns(8);
-		        @include clearfix;
-		        padding-top: 5px;
-		    }
-
-
-
-			

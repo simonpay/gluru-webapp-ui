@@ -88,7 +88,7 @@
 
 
     
-            <div class="daily-digest-table-wrap js-table-wrap">
+            <div class="daily-digest__table-wrap js-table-wrap">
 
                 {% if obj_section.section_id === "people" %}
 

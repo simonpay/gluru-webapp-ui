@@ -275,19 +275,16 @@ p {
 }
 
 // main heading inside drawer and actions
+// also used for modal and data-box
 .drawer__heading-text,
 .actions__heading-text,
 .modal__heading-text,
-.loading-data__text,
+.data-box__text,
 {
     @extend %text-transform__uppercase;
     @extend %font-size__22;
     @extend %font-weight__lighter;
     @extend %color__green;
-}
-
-.loading-data__text {
-    margin-top: 30px;
 }
 
 // text in 'now' icon in top right stage 

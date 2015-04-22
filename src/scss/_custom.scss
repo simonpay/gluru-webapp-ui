@@ -33,7 +33,7 @@
     // height: 100px;
     // text-align: center;
     // line-height: 100px;
-    margin: 0 auto 40px;
+    margin: -5px auto 40px;
     padding: 18px 20px 26px;
     background-color: $gallery;
     border: 8px solid $alto;
@@ -129,37 +129,10 @@
 
 
 
-// initiate table wrap around daily digest file table as display:none
-// the first jquery toggle will open instead of close  
-.daily-digest-table-wrap {
-    display: none;
-}
-
-.daily-digest-wrap {
-    margin: 0;
-    padding: 23px 14px;
-}
-
-.daily-digest {
-    position: relative;
-    background: white;
-    border-bottom-left-radius: $priority-box__border-radius;
-    border-bottom-right-radius: $priority-box__border-radius;
-    padding: 18px;
-}
 
 
 
 
-.centered-block {
-    display: none;
-    z-index: 9999999;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    @include scut-center-transform;
-
-}
 
 
 

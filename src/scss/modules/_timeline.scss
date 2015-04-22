@@ -2,35 +2,33 @@
     # TIMELINE
 \*------------------------------------*/
 
-.timeline-wrap {
+// styles for the timeline module
+
+.timeline {
     position: relative;
-}
+    width: 100%;
+    
+    .-split-view & {
 
-    .timeline {
-        position: relative;
-        width: 100%;
-        
-        .-split-view & {
-
-            // timeline - v line split-view
-            &:before {
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-            }
-        }
-
-        // timeline - v line
+        // timeline - v line split-view
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 40px;
-            left: 149px;
-            width: 3px;
-            background: $alto;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
         }
     }
+
+    // timeline - v line
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 40px;
+        left: 149px;
+        width: 3px;
+        background: $alto;
+    }
+}
 
 
 

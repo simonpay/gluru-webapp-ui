@@ -42,19 +42,19 @@
 	<div class="scrollable-content__wrap -{{ moments_section }}{% if moments_section === 'timeline' %} js-scrollable-content__wrap--timeline{% endif %}">
 		<div class="scrollable-content{% if moments_section === 'timeline' %} js-scrollable-content-timeline{% endif %}">
 
+			{% set str_include = moments_section + ".swig" %}
 			{% if moments_section === "timeline" %}
-
-				<section class="stage-section timeline-wrap js-timeline-wrap">
-					{% include "timeline.swig" %}
-				</section><!-- // .timeline-wrap -->
-
+				{% set str_js = "js-timeline-wrap" %}
 			{% elseif moments_section === "daily-digest" %}
-
-				<section class="stage-section daily-digest-wrap">
-					{% include "daily-digest.swig" %}
-				</section><!-- // .timeline-wrap -->
-
+				{% set str_js = "" %}
 			{% endif %}
+		
+			<div class="scrollable-content__inner-wrap -{{ moments_section }} {{ str_js }}">
+
+				{% include str_include %}
+
+			</div><!-- // .scrollable-content__inner-wrap -->
+			
 		</div><!-- // .scrollable-content -->
 	</div><!-- // .scrollable-content__wrap -->
 </div><!-- // .split-view__col -->
