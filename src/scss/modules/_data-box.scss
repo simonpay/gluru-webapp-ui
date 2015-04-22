@@ -1,0 +1,27 @@
+/*------------------------------------*\
+# DATA BOX
+\*------------------------------------*/
+
+// small box to display data such as loading... with loader
+// loading more events...
+// loading more data...
+// etc
+
+.data-box {
+    z-index: $data-box-z-index;
+    position: absolute;
+    width: 150px;
+    padding: 25px 0 20px;
+    background: rgba($white, 0.95);
+    border: 1px solid $alto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba($black, .3);
+    text-align: center;
+    @include transition( opacity .15s, visibility 0s 0s );
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        @include transition( opacity .15s, visibility 0s .15s );
+    }
+}
