@@ -5,12 +5,29 @@
 // this class is applied to any div taht contains 
 // scrollable content
 
+// sets a custom height so ".scrollable-content" can be 100% height
 .scrollable-content__wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
     &.-stage {
-        position: relative;
         top: $panel-header-height;
         @include calc( height, "100% - 58px" );
     }
+
+    &.-timeline {
+        @include calc( height, "100% - #{$panel-header-height}" ); 
+    }
+
+    &.-files {
+        @include calc( height, "100% - #{$panel-header-height}" ); 
+        padding-left: $files-table-padding-left;
+    }
+
+    // &.-daily-digest {
+    //     height: 100%; // same as default so commented out
+    // }
 }
 
     .scrollable-content {
@@ -27,12 +44,12 @@
         }
     }
 
-        .scrollable-content__inner-wrap {
-            &.-stage {
-                position: relative;
-                height: 100%;
-                padding: 50px 30px;
-                overflow: auto;
-            }
-        }
+        // .scrollable-content__inner-wrap {
+        //     &.-stage {
+        //         position: relative;
+        //         height: 100%;
+        //         padding: 50px 30px;
+        //         overflow: auto;
+        //     }
+        // }
 

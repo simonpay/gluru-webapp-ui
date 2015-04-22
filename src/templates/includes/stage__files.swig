@@ -9,19 +9,19 @@
 		{% set cols = 1 %}
 		{% set cols_class = "-cols-1" %}
 		{% set split_view_class = "" %}
-		{% include "stage__files--split-view-wrap-outer.swig" %}
+		{% include "stage__files--split-view__row.swig" %}
 
 		{# split-view - 2 cols #}
 		{% set cols = 2 %}
 		{% set cols_class = "-cols-2" %}
 		{% set split_view_class = "-split-view" %}
-		{% include "stage__files--split-view-wrap-outer.swig" %}
+		{% include "stage__files--split-view__row.swig" %}
 
 		{# split-view - 3 cols #}
 		{% set cols = 3 %}
 		{% set cols_class = "-cols-3" %}
 		{% set split_view_class = "-split-view" %}
-		{% include "stage__files--split-view-wrap-outer.swig" %}
+		{% include "stage__files--split-view__row.swig" %}
 
 	</section><!-- // .section-wrap.-files -->
 

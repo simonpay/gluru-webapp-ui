@@ -5,14 +5,14 @@
     {# section moments #}
     <section class="section-wrap -moments js-section-moments">
         
-        {% set section = "daily-digest" %}
+        {% set moments_section = "daily-digest" %}
         {% include "panel-header--moments.swig" %}
 
         {# daily digest doesnt have split view so always cols = 1 #}
         {% set cols = 1 %}
         {% set cols_class = "-cols-1" %}
         {% set split_view_class = "" %}
-        {% include "stage__moments--split-view-wrap-outer.swig" %}
+        {% include "stage__moments--split-view__row.swig" %}
 
     </section><!-- // .section-wrap.-moments -->
 

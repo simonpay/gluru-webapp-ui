@@ -1,7 +1,7 @@
 
 (function(){
 
-    $( ".scrollable-content.-timeline" ).on( "scroll", function() {
+    $( ".js-scrollable-content-timeline" ).on( "scroll", function() {
 
         if( $(this).scrollTop() + $(this).innerHeight() >= this.scrollHeight ) {
             console.log( "end reached" );
@@ -9,7 +9,7 @@
             // store ref to $this fr use within setTimeout func
             var $this 				= $(this),
             	$loader 			= $( ".js-loading-screen-data" ),
-                viewport_offset     = $this.closest( ".split-view-wrap" ).offset(),
+                viewport_offset     = $this.closest( ".js-scrollable-content__wrap--timeline" ).offset(),
             	viewport_width 		= $this.outerWidth(),
             	viewport_height 	= $this.outerHeight(),
             	loader_width    	= $loader.outerWidth(),
