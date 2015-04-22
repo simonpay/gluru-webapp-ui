@@ -20,7 +20,7 @@
     <div class="large-2">
 
         <div class="form__static-item">
-            <div class="form__static-item-text js-source-name">Google Drive</div>
+            <div class="form__static-item-text js-source-name">5 Connected</div>
         </div>
         
     </div>
