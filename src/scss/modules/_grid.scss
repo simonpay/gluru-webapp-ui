@@ -4,6 +4,23 @@
 
 // styles related to css grid
 
+// row - neat grid
+.row {
+    @include row;
+
+    // the header row in setup forms
+    &.-grid-header {
+        height: 26px;
+    }
+
+    // the header row in setup forms
+    &.-form {
+        height: $form-el__height--row;
+        margin-bottom: 10px;
+    }
+
+}
+
 // create 'col' classes
 // @include make-col-class(large, 2);
 // @include make-col-class(large, 4);

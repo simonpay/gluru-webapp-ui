@@ -24,22 +24,6 @@
     }
 }
 
-.row {
-    @include row;
-
-    // the header row in setup forms
-    &.-grid-header {
-        height: 26px;
-    }
-
-    // the header row in setup forms
-    &.-form {
-        height: $form-el__height--row;
-        margin-bottom: 10px;
-    }
-
-}
-
 // grey horizontal line - used in setup forms
 .hr__line {
     border: none;
