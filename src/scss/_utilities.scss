@@ -86,10 +86,22 @@
 // of a better way to create modular custom fixed width
 // containers when needed  
 .u-layout {
+
     &.-w-310 {
         width: 310px;
     }
+
+    &.-w-400 {
+        width: 400px;
+    }
 }
 
+// margin utility classes
+.u-mb0 {
+    margin-bottom: 0 !important;
+}
+.u-mb {
+    margin-bottom: 24px;
+}
 
 

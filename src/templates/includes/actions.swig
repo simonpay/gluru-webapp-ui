@@ -6,11 +6,11 @@
             
             <div class="actions__summary">
 
-                <p class="text -light">We think you may need these files for <a href="#" class="link text-link"><strong>design meeting</strong></a>.</p>
+                <p>We think you may need these files for <a href="#" class="text-link"><strong>design meeting</strong></a>.</p>
 
-                <p class="text -light subheading">Attendees:</p>
+                <p class="u-mb0">Attendees:</p>
 
-                <ul class="text">
+                <ul>
                     {% for obj_attendee in mydata.actions.attendees %}
                         <li>
                             <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a>
@@ -18,10 +18,10 @@
                     {% endfor %}
                 </ul>
 
-                <p class="text -light subheading">Location:</p>
+                <p class="u-mb0">Location:</p>
 
-                <p class="text">
-                    <strong class="-dark">8 Warner Yard <a href="" class="link text-link">map</a></strong>
+                <p>
+                    <strong class="-dark">8 Warner Yard <a href="" class="text-link">map</a></strong>
                 </p>
             </div>
 
@@ -38,9 +38,9 @@
 
             <div class="actions__summary">
 
-                <p class="text -light subheading">It looks like you're currently working with:</p>
+                <p class="u-mb0">It looks like you're currently working with:</p>
 
-                <ul class="text">
+                <ul>
                     {% for obj_attendee in mydata.actions.attendees %}
                         <li>
                             <a href="#" class="text text-link" title="{{ obj_attendee.email }}">{{ obj_attendee.email }}</a>
@@ -48,7 +48,7 @@
                     {% endfor %}
                 </ul>
 
-                <p class="text -light">The most likely files you will need are:</p>
+                <p>The most likely files you will need are:</p>
 
             </div>
 

@@ -122,8 +122,9 @@
                             position: relative;
                             height: $options-list-link-height-actions;
                             padding: 0 4px;
-                            text-decoration: none;
-                            
+
+                            @include set-href-underline(none);
+
                             &:hover,
                             &.is-selected {
                                 background: rgba(0, 0, 0, 0.075);

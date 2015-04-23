@@ -37,6 +37,7 @@ h5,
 h6,
 figure,
 p,
+hr,
 pre {
     margin: 0;
 }
@@ -47,4 +48,10 @@ button {
     padding: 0;
 }
 
+// grey horizontal line - used in setup forms
+hr {
+    border: none;
+    border-bottom: 1px solid $alto;
+    margin-bottom: 24px;
+}
 

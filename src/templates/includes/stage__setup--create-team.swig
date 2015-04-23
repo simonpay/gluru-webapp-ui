@@ -5,10 +5,10 @@
 {% set obj_setup_data = obj.sections[4] %}
 {% include "stage__setup--start.swig" %}
     
-
     <form>
 
         <h1 class="info-panel__heading-text">Create Team</h1>
+
         <p class="stage__text">You can add team functionality to Gluru.</p>
 
         <section class="form-section -team-setup js-section-team-setup">
@@ -18,26 +18,6 @@
 
                     <p class="stage__text">Do you want to add a team to your Gluru account? If you just want to continue with a Single User account to try gluru don’t worry, you'll still be able to create a team in the future.</p>
 
-{#                     <div class="media">
-                        <div class="media__img -right -lrg-margin">
-                        
-                            <div class="check-box__slider prevent-fout">
-                                <input 
-                                    type="checkbox" 
-                                    class="checkbox_slider" 
-                                    id="addTeam">
-                                <label 
-                                    for="addTeam">Toggle</label>
-                            </div>
-
-                        </div>
-                        <div class="media__body">
-
-                            <p class="stage__text">Do you want to add a team to your Gluru account? If you just want to continue with a Single User account to try gluru don’t worry, you'll still be able to create a team in the future.</p>
-
-                        </div>
-                    </div>
- #}
                 </div>
             </div>
 
@@ -48,7 +28,7 @@
             </p>
 
             <div class="large-11">
-                <hr class="hr__line">
+                <hr>
             </div>
 
         </section>
@@ -128,7 +108,7 @@
                             </select>
                         </p>
 
-                        {# <hr class="hr__line"> #}
+                        {# <hr> #}
 
                     </div>
                 </div>
@@ -136,7 +116,7 @@
             </section>
 
             <div class="large-11">
-                <hr class="hr__line">
+                <hr>
             </div>
 
         </section>
@@ -147,6 +127,7 @@
 
             <div class="row">
                 <div class="large-12">
+
                     <p class="info-panel__heading-text">Team Access Settings</p>
 
                     <p class="stage__text">Do you want each invited member to connect a source to join?</p>
@@ -155,23 +136,29 @@
             </div>
 
             <div class="row -grid-header">
+
                 <div class="large-6">&nbsp;</div>
+
                 <div class="large-2">
-                    <span class="grid-header__text">Source</span>
+                    Source
                 </div>
+
                 <div class="large-3">
-                    <span class="grid-header__text">Access Settings</span>
+                    Access Settings
                 </div>
+
                 <div class="large-1"></div>
+
             </div>
             
-            <div class="js-team-access-settings-row-container">
-                {# {% set i = 1 %} #}
+            <div class="js-team-access-settings-row-container u-mb">
+
                 {% include "form__row--team-access-settings.swig" %}
+
             </div>
 
             <div class="large-11">
-                <hr class="hr__line">
+                <hr>
             </div>
 
         </section>
@@ -181,14 +168,14 @@
         <section class="form-section -team-invite-people is-hidden js-section-team-invite-people">
 
             <div class="row">
-                <div class="large-12">
+                <div class="large-11">
                     <p class="info-panel__heading-text">Invite People</p>
                 </div>
             </div>
             
             <div class="row -grid-header">
                 <div class="large-4">
-                    <span class="grid-header__text">Type email address</span>
+                    Type email address
                 </div>
                 <div class="large-2">
                     Type
@@ -208,15 +195,13 @@
                 </div>
             </div>
 
-            <a href="#" class="link link--add js-add-new-email">
-                <div class="link__icon icon__add"></div>
-                Invite more people
+            <a href="#" class="btn -clear -pad0 js-add-new-email">
+                <span class="btn__icon icon__add"></span><!--
+                --><span class="btn__text">Invite more people</span>
             </a>
 
-            <div class="row">
-                <div class="large-11">
-                    <hr class="hr__line">
-                </div>
+            <div class="large-11">
+                <hr>
             </div>
 
         </section>

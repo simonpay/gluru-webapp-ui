@@ -104,4 +104,13 @@
 }
 
 
+@mixin set-href-underline( $val ) {
+    &:hover, 
+    &:active, 
+    &:focus,
+    {
+        text-decoration: $val;
+    }
+}
+
 

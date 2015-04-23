@@ -7,7 +7,6 @@
 
     <form>
 
-
         <section class="form-section -autopush-sources js-autopush-sources">
 
             <div class="row">
@@ -28,20 +27,16 @@
                         </select>
                     </p>
 
+		            <hr>
+
                 </div>
             </div>
-
-		    <div class="row">
-		        <div class="large-11">
-		            <hr class="hr__line">
-		        </div>
-		    </div>
 
         </section>
 
 
-        <section class="form-section -autopush-destination is-hidden js-section-autopush-destination">
 
+        <section class="form-section -autopush-destination is-hidden js-section-autopush-destination">
 
             <div class="row">
                 <div class="large-11">
@@ -64,18 +59,16 @@
                         </select>
                     </p>
 
+    	            <hr>
+
                 </div>
             </div>
-
-	        <div class="large-11">
-	            <hr class="hr__line">
-	        </div>
 
         </section>
 
 
-        <section class="form-section -autopush-notifications is-hidden js-section-autopush-notifications">
 
+        <section class="form-section -autopush-notifications is-hidden js-section-autopush-notifications">
 
             <div class="row">
                 <div class="large-11">
@@ -102,15 +95,13 @@
                         </div>
                     </div>
 
+                    <hr>
 
                 </div>
             </div>
 
-	        <div class="large-11">
-	            <hr class="hr__line">
-	        </div>
-
         </section>
+
 
 
         <section class="form-section -submit js-section-submit">
@@ -126,6 +117,7 @@
             </a>
 
         </section>
+
 
 
         <div class="u-spacer -xxlrg"></div>

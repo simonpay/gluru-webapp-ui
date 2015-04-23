@@ -23,7 +23,9 @@
 	text-align: center;
 	color: $white;
 	text-decoration: none;
-    @extend %font-size__20;
+	font-size: rem(20);
+
+    @include set-href-underline(none);
 
 	&:last-child {
 		margin-right: 0;
@@ -31,6 +33,19 @@
 
 	&.is-hidden {
 		display: none;
+	}
+	
+	&.-pad0 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&.-clear {
+		background-color: transparent;
+		border: 0;
+		color: $green;
+		font-size: rem(16);
+		font-weight: bold;
 	}
 
 	&.-lozenge {

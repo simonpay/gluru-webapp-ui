@@ -7,7 +7,13 @@
 // most text styles are defined here using @extend for 
 // efficiency but some are defined within relevent modules
 
-// consistent margin added to bottom of losse selectors
+
+// -----------------------------------
+// LOOSE SELECTORS
+// -----------------------------------
+// far-reaching selectors to set generic styles
+
+// consistent margin added to bottom of loose selectors
 // ref Harry Roberts
 // https://www.youtube.com/watch?v=ldx4ZFxMEeo&hd=1
 blockquote,
@@ -33,36 +39,46 @@ pre {
 }
 
 
+a {
+    text-decoration: none;
+    color: $green;
+    
+    @include set-href-underline(underline);
+}
+
+// set location-based font-sizes for generic text
+p,
+li,
+// a, // a inherits from p
+{
+    // set default font-size when inside actions panel
+    .actions & {
+        font-size: rem(14);
+    }
+}
+
+p,
+ul,
+ol,
+{
+    // reduce standard mb when inside actions panel
+    .actions & {
+        margin-bottom: 12px;
+    }
+}
+
+
 p {
     @extend %color__gray--dark;
-
-    &.subheading {
-        margin-bottom: 0;
-    }
 }
 
-// standard small text within actions panel 
-.text {
-    @extend %font-size__13;
-    @extend %color__black;
-    margin-bottom: 10px;
 
-    &.-light {
-        @extend %color__gray--light;
-    }
 
-    &.-dark {
-        @extend %color__gray--dark;
-    }
-}
-
-.text-link {
-    @extend %color__green;
-
-    &:hover {
-        
-    }
-}
+// -----------------------------------
+// SPECIFIC SELECTORS
+// -----------------------------------
+// specific class selectors to set custom 
+// typographic styles
 
 // stage heading
 .stage__heading-text {
@@ -136,7 +152,7 @@ p {
 
 // the default text within tables
 .table__text {
-    display: block;
+    // display: block; // why is this block? commented out for now - TODO: tidy up
     @extend %nowrap;
     @extend %color__black;
     @extend %font-size__13;
@@ -184,23 +200,12 @@ p {
 
 // a tags
 .link {
-    @extend %text-decoration__none;
-
-    &:hover {
-        @extend %text-decoration__underline;
-    }
-
-    &.-stage {
-        @extend %color__green;
-
-        // &:hover {
-        //     @extend %text-decoration__underline;
-        // }
-    }
 
     // TODO: abstract this class!
-    &.link--add {
-        display: block;
+}
+
+    .link--add {
+        display: inline-block;
         position: relative;
         @extend %font-size__16;
         @extend %color__green;
@@ -210,7 +215,6 @@ p {
         line-height: 32px;
         margin: 15px 0 5px;
     }
-}
 
     // TODO: abstract this class!
     .link__icon {
@@ -426,7 +430,6 @@ p {
     }
 }
 
-
 .info-panel__heading-text {
     @extend %font-size__20;
     @extend %color__zeus;
@@ -438,11 +441,6 @@ p {
     &:first-child {
         margin-top: 0;
     }
-}
-
-
-.grid-header__text {
-    @extend %color__zeus;
 }
 
 // daily digest header 

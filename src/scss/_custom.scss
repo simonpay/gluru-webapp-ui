@@ -2,12 +2,7 @@
     #custom
 \*------------------------------------*/
 
-.process__text-pos {
-    text-align: center;
-    line-height: 1.2;
-}
-
-// the 'or' text inside disc with border
+// 'or' text inside disc with border
 .or {
     position: relative;
     width: 40px;
@@ -17,19 +12,6 @@
     text-align: center;
     line-height: 36px;
     margin: 0 auto;
-
-    &.-center {
-        margin: 0 30px;
-        // @extend %scut-center-transform-y;
-    }
-}
-
-// grey horizontal line - used in setup forms
-.hr__line {
-    border: none;
-    border-bottom: 1px solid $alto;
-    margin-top: 0;
-    margin-bottom: 24px;
 }
 
 

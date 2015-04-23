@@ -7,12 +7,12 @@
 
     <p class="info-panel__heading-text">Select the sources you want to connect to gluru</p>
 
-
-    <div class="sources__container">
+    <div class="sources__container u-mb">
 
         {% for obj_source in obj_setup_data.sources %}
 
         <div class="sources__row">
+
             <div class="sources__col--source">
 
                 <div class="media -v-center">
@@ -32,6 +32,7 @@
                 </div>
                 
             </div>
+
             <div class="sources__col--status">
                 <div class="media -v-center">
                     <div class="media__body">
@@ -39,6 +40,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="sources__col--action">
                 <div class="media -v-center">
                     <div class="media__body">
@@ -60,13 +62,14 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         {% endfor %}
 
     </div>
 
-    <hr class="hr__line">
+    <hr>
 
     <p>
         <a href="#" class="btn -lozenge -positive">

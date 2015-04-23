@@ -7,16 +7,15 @@
 
     <p class="info-panel__heading-text">Add Favourites</p>
 
-    <div class="info-panel__content-block">
+    <div class="u-layout -w-400">
 
         <form>
-
             
             <div class="js-favourites-row-container">
 
                 <div class="row -grid-header">
                     <div class="large-10">
-                        <span class="grid-header__text">Type email address</span>
+                        Type email address
                     </div>
                 </div>
                 
@@ -37,13 +36,16 @@
 
             </div>
 
-            <a href="#" class="link link--add js-add-new-favourite">
-                <div class="link__icon icon__add"></div>
-                Add more favourites
+            <a href="#" class="btn -clear -pad0 js-add-new-favourite">
+                <span class="btn__icon icon__add"></span><!--
+                --><span class="btn__text">Add more favourites</span>
             </a>
 
-            <hr class="hr__line">
-
+            <div class="row">
+                <div class="large-10">
+                    <hr>
+                </div>
+            </div>
 
             <section class="form-section -submit js-section-submit">
 
@@ -58,7 +60,6 @@
                 </a>
 
             </section>
-
 
         </form>
 
