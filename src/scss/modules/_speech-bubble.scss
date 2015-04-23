@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    # SPEECH-BUBBLE
+\*------------------------------------*/
+
+// form setup speech bubble from gluru bot
+.speech-bubble {
+    position: relative;
+    width: 280px;
+    margin: -5px auto 40px;
+    padding: 18px 20px 26px;
+    background-color: $gallery;
+    border: 8px solid $alto;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba($black, .15);
+
+    &:before,
+    &:after,
+    {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        @include transform( translateX( -50% ) translateY( 100% ) );
+    }
+
+    &:before {
+        border: 34px solid;
+        border-color: $alto transparent transparent;
+    }
+
+    &:after {
+        border: 22px solid;
+        border-color: $gallery transparent transparent;         
+    }
+}

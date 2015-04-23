@@ -24,48 +24,6 @@
     }
 }
 
-
-
-// form setup
-.speech-bubble {
-    position: relative;
-    width: 280px;
-    // height: 100px;
-    // text-align: center;
-    // line-height: 100px;
-    margin: -5px auto 40px;
-    padding: 18px 20px 26px;
-    background-color: $gallery;
-    border: 8px solid $alto;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgba($black, .15);
-
-    &:before,
-    &:after,
-    {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        @include transform( translateX( -50% ) translateY( 100% ) );
-    }
-
-    &:before {
-        border: 34px solid;
-        border-color: $alto transparent transparent;
-    }
-
-    &:after {
-        border: 22px solid;
-        border-color: $gallery transparent transparent;         
-    }
-}
-
-
-
-
 .row {
     @include row;
 
@@ -82,8 +40,6 @@
 
 }
 
-
-
 @mixin make-col-class($size, $span-columns) {
     .#{$size}-#{$span-columns} {
         @include span-columns($span-columns);
@@ -99,7 +55,6 @@
 @for $i from 1 through 12 {
     @include make-col-class(large, $i);
 }
-
 
 // grey horizontal line - used in setup forms
 .hr__line {
