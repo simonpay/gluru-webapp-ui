@@ -70,3 +70,15 @@
 	text-align: right;
 }
 
+
+// spacer used to add additional vertical height
+.u-spacer {
+    height: 20px;
+
+    &.-xxlrg {
+        height: 300px;
+    }
+}
+
+
+
