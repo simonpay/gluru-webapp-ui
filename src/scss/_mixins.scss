@@ -2,6 +2,11 @@
     #mixins
 \*------------------------------------*/
 
+
+
+// -----------------------------------
+// MEDIA QUERY MIXINS
+// -----------------------------------
 // media queries for responsive views
 @mixin mq($screen) {
     @if $screen == medium {
@@ -85,4 +90,18 @@
 // text-align
 @mixin text-align($val)         {   text-align: $val;                                                  }
 %text-align__center             {   @include text-align(center);                                       }
+
+
+
+// -----------------------------------
+// GRID MIXINS
+// -----------------------------------
+// make RWD classes such as .large-8
+@mixin make-col-class($size, $span-columns) {
+    .#{$size}-#{$span-columns} {
+        @include span-columns($span-columns);
+    }
+}
+
+
 

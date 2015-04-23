@@ -1,0 +1,17 @@
+/*------------------------------------*\
+# GRID
+\*------------------------------------*/
+
+// styles related to css grid
+
+// create 'col' classes
+// @include make-col-class(large, 2);
+// @include make-col-class(large, 4);
+// @include make-col-class(large, 6);
+// @include make-col-class(large, 8);
+// @include make-col-class(large, 12);
+
+@for $i from 1 through 12 {
+    @include make-col-class(large, $i);
+}
+

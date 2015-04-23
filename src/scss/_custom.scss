@@ -40,22 +40,6 @@
 
 }
 
-@mixin make-col-class($size, $span-columns) {
-    .#{$size}-#{$span-columns} {
-        @include span-columns($span-columns);
-    }
-}
-
-// @include make-col-class(large, 2);
-// @include make-col-class(large, 4);
-// @include make-col-class(large, 6);
-// @include make-col-class(large, 8);
-// @include make-col-class(large, 12);
-
-@for $i from 1 through 12 {
-    @include make-col-class(large, $i);
-}
-
 // grey horizontal line - used in setup forms
 .hr__line {
     border: none;
