@@ -8,7 +8,7 @@
     <h1 class="info-panel__heading-text">Create a Gluru account</h1>
     <p class="stage__text">You can create an account with Google+ or email.</p>
 
-    <div class="layout -w-310">
+    <div class="u-layout -w-310">
 
         <p>
             <a href="#" class="btn -lozenge -white -col-grey -large -full js-sign-in js-modal-trigger" data-modal-content="setting-up-account">

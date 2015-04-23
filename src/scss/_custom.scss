@@ -106,45 +106,11 @@
     border: none;
     border-bottom: 1px solid $alto;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 
 
-// currently only used for setup form buttons
-// TODO: refactor this
-.layout__item {
-    display: inline-block;
-    // padding-left: 24px;
-    vertical-align: top;
-    // width: 100%;
-
-    &.-btn-lozenge-large,
-    &.-or {
-        width: auto;
-        vertical-align: middle;
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-// unlikely that this will stay - cant currently think 
-// of a better way to create modular custom fixed width
-// containers when needed  
-.layout {
-    &.-w-310 {
-        width: 310px;
-    }
-}
 
 
 

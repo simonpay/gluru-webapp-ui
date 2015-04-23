@@ -70,13 +70,24 @@
 	text-align: right;
 }
 
-
+// vertical space
 // spacer used to add additional vertical height
 .u-spacer {
     height: 20px;
 
     &.-xxlrg {
         height: 300px;
+    }
+}
+
+// custom fixed-width container
+// TODO: refactor
+// unlikely that this will stay - cant currently think 
+// of a better way to create modular custom fixed width
+// containers when needed  
+.u-layout {
+    &.-w-310 {
+        width: 310px;
     }
 }
 
