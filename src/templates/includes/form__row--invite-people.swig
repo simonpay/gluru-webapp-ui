@@ -1,5 +1,5 @@
 <div class="row -form js-invite-people-row-clone" style="display:none">
-    <div class="large-4 js-invite-people-email">
+    <div class="med-4 js-invite-people-email">
         <input 
             type="email" 
             class="text-input -full-width" 
@@ -8,32 +8,31 @@
             placeholder="Email" 
             required/>
     </div>
-    <div class="large-2">
+    <div class="med-2">
 
         <select class="js-user-type" style="width:100%;height:38px">
-            <option value="a">Admin</option>
-            <option value="b">Other</option>
-            <option value="c">Another</option>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
         </select>
 
     </div>
-    <div class="large-2">
+    <div class="med-2">
 
         <div class="form__static-item">
             <div class="form__static-item-text js-source-name">5 Connected</div>
         </div>
         
     </div>
-    <div class="large-3">
+    <div class="med-3">
 
         <select class="js-access-settings" style="width:100%;height:38px">
-            <option value="a">See everything</option>
-            <option value="b">Other</option>
-            <option value="c">Another</option>
+            <option value="everything">See everything</option>
+            <option value="activity">Activity</option>
+            <option value="nothing">See nothing</option>
         </select>
 
     </div>
-    <div class="large-1 u-inherit-height">
+    <div class="med-1 u-inherit-height">
         <div class="media -v-center">
             <div class="media__body">
                 

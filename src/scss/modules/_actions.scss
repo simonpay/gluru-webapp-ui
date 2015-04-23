@@ -13,7 +13,7 @@
     overflow: hidden;
     background: $alabaster;
 
-    @include mq(large){
+    @include mq(medium){
         z-index: $actions-wrap-z-index;
         position: relative;
         float: right;
@@ -36,7 +36,7 @@
         opacity: 0;
         visibility: hidden;
 
-        @include mq(large){
+        @include mq(medium){
             width: 0;
             opacity: 1;
             visibility: hidden;
@@ -55,7 +55,7 @@
         padding: 20px;
         overflow-y: auto;
 
-        @include mq(large){
+        @include mq(medium){
             position: absolute;
             top: $panel-header-height;
             bottom: 0;

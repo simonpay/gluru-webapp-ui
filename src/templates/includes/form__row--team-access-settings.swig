@@ -1,5 +1,5 @@
 <div class="row -form js-team-access-settings-row-clone" style="display:none">
-    <div class="large-6 u-inherit-height">
+    <div class="med-6 u-inherit-height">
         
         <div class="media -v-center">
             <div class="media__img">
@@ -17,25 +17,25 @@
             </div>
             <div class="media__body">
 
-                <span class="stage__text -light">Apply these settings for the whole team?</span>
+                <span class="stage__text">Apply these settings for the whole team?</span>
 
             </div>
         </div>
 
     </div>
-    <div class="large-2">
+    <div class="med-2">
 
         <div class="form__static-item">
             <div class="form__static-item-text js-source-name">Google Drive</div>
         </div>
 
     </div>
-    <div class="large-3">
+    <div class="med-3">
 
         <select class="js-access-settings" style="width:100%;height:38px;display:none;">
-            <option value="a">See everything</option>
-            <option value="b">Other</option>
-            <option value="c">Another</option>
+            <option value="everything">See everything</option>
+            <option value="activity">Activity</option>
+            <option value="nothing">See nothing</option>
         </select>
 
     </div>

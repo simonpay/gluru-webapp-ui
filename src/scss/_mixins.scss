@@ -12,8 +12,8 @@
     @if $screen == medium {
         @media only screen and (min-width: 641px) { @content; }
     } @else if $screen == large {
-        // @media only screen and (min-width: 1025px) { @content; }
-        @media only screen and (min-width: 1px) { @content; }
+        @media only screen and (min-width: 1025px) { @content; }
+        // @media only screen and (min-width: 1px) { @content; }
     }
 }
 
@@ -85,6 +85,7 @@
 @mixin line-height($val)        {   line-height: $val;                                                  }
 %line-height__normal            {   @include line-height(normal);                                       }
 %line-height__150percent        {   @include line-height(1.5);                                          }
+%line-height__130percent        {   @include line-height(1.3);                                          }
 %line-height__200percent        {   @include line-height(2);                                            }
 
 // text-align
@@ -96,7 +97,7 @@
 // -----------------------------------
 // GRID MIXINS
 // -----------------------------------
-// make RWD classes such as .large-8
+// make RWD classes such as .lrg-8
 @mixin make-col-class($size, $span-columns) {
     .#{$size}-#{$span-columns} {
         @include span-columns($span-columns);
@@ -104,12 +105,16 @@
 }
 
 
-@mixin set-href-underline( $val ) {
+@mixin set-href-underline( $val, $col:null ) {
     &:hover, 
     &:active, 
     &:focus,
     {
-        text-decoration: $val;
+        @if $val == border {
+            @include scut-link-bb($col);
+        } @else {
+            text-decoration: $val;
+        }
     }
 }
 

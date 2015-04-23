@@ -12,7 +12,6 @@
 			{% set hierarchy_type = "files" %}
             {% include "hierarchy-list.swig" %}
 
-	    	{# <div class="split-view__heading">My Drive</div> #}
 	    </div>
 	</div>
 </header>

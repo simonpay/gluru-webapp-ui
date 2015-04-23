@@ -21,14 +21,33 @@
 
 }
 
-// create 'col' classes
-// @include make-col-class(large, 2);
-// @include make-col-class(large, 4);
-// @include make-col-class(large, 6);
-// @include make-col-class(large, 8);
-// @include make-col-class(large, 12);
 
-@for $i from 1 through 12 {
-    @include make-col-class(large, $i);
+@include mq(medium) {
+
+    // create 'col' classes
+    // @include make-col-class(lrg, 2);
+    // @include make-col-class(lrg, 4);
+    // @include make-col-class(lrg, 6);
+    // @include make-col-class(lrg, 8);
+    // @include make-col-class(lrg, 12);
+
+    @for $i from 1 through 12 {
+        @include make-col-class(med, $i);
+    }
+
 }
 
+@include mq(large) {
+
+    // create 'col' classes
+    // @include make-col-class(lrg, 2);
+    // @include make-col-class(lrg, 4);
+    // @include make-col-class(lrg, 6);
+    // @include make-col-class(lrg, 8);
+    // @include make-col-class(lrg, 12);
+
+    @for $i from 1 through 12 {
+        @include make-col-class(lrg, $i);
+    }
+
+}

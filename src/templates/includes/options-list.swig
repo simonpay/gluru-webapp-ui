@@ -123,7 +123,7 @@
                                 <div class="options-list__text--paragraph"><strong>Alex Li</strong> renamed this file with a very long description that will wrap</div>
                                 <div class="options-list__text--secondary">Today, 9:00am</div>
 
-                                <div class="media -v-center">
+                                <div class="media">
                                     <div class="media__img">
                                         <div class="icon-sml__gdrive"></div>
                                     </div>
@@ -131,7 +131,7 @@
                                         <div class="options-list__text">Meeting Notes with a long subject that will not wrap</div>
                                     </div>
                                 </div>
-                                <div class="media -v-center">
+                                <div class="media">
                                     <div class="media__img">
                                         <div class="icon-sml__gdrive"></div>
                                     </div>

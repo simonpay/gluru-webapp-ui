@@ -35,7 +35,7 @@
 		display: none;
 	}
 	
-	&.-pad0 {
+	&.-padh0 {
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -129,6 +129,14 @@
 				background: #999;
 				vertical-align: middle;
 			}
+		}
+
+		&.-gray {
+			color: $dusty-gray;
+		}
+
+		&.-light {
+			font-weight: lighter;
 		}
 	}
 

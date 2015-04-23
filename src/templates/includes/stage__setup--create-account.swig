@@ -5,8 +5,8 @@
 {% set obj_setup_data = obj.sections[0] %}
 {% include "stage__setup--start.swig" %}
 
-    <h1 class="info-panel__heading-text">Create a Gluru account</h1>
-    <p class="stage__text">You can create an account with Google+ or email.</p>
+    <h1 class="stage__heading-text">Create a Gluru account</h1>
+    <p class="stage__text u-mb+">You can create an account with Google+ or email.</p>
 
     <div class="u-layout -w-310">
 
@@ -26,8 +26,10 @@
             </a>
         </p>
         
-        <p class="stage__text -cta">
-            Already have an account? <a href="#" class="link -stage"><strong>Sign in</strong></a>
+        <p>
+            <a href="#" class="btn -clear -padh0 -full">
+                <span class="btn__text -gray -light">Already have an account?</span> Sign in
+            </a>
         </p>
         
     </div>

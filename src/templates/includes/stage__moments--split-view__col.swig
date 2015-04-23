@@ -27,7 +27,7 @@
 					    </div>
 					    <div class="media__body">
 							
-							<div class="split-view__heading">Everything</div>
+							<span class="hierarchy__text">Everything</span>
 
 					    </div>
 					</div>

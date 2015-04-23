@@ -30,7 +30,7 @@
         // stage panel-header must be position: fixed to anable the actions panel to open 'underneath' it  
         // we now have to set the width of panel-header based on whether the drawer panel is open 
         // and animate it to match the opening of the drawer panel
-        @include mq(large) {
+        @include mq(medium) {
             position: fixed;
             top: 0;
             @include calc( width, "100% - #{$main-nav-width} - #{$drawer-width}" ); // viewport - main-nav - drawer
@@ -58,13 +58,6 @@
         }
     }
 
-    &.-info-panel {
-        // height: 70px;
-        // border-top-left-radius: 15px;
-        // border-top-right-radius: 15px;
-        // background: $green;
-    }
-
     &.-daily-digest {
         height: 80px;
         background: $blue;
@@ -86,7 +79,7 @@
 
 .panel-header--actions {
 
-    @include mq(large) {
+    @include mq(medium) {
         // set width to prevent close button moving when actions is closed
         width: $actions-width;
         padding-left: 20px;

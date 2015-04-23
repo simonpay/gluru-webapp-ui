@@ -33,7 +33,7 @@
 	<div class="scrollable-content">
 		<div class="scrollable-content__inner-wrap -stage">
 
-			<aside class="stage_sidebar">
+			<aside class="stage__sidebar">
 				
 				<div class="speech-bubble">
 					<div class="speech-bubble__text -heading">{{ obj_setup_data.help_data.heading }}</div>
@@ -43,4 +43,4 @@
 				<div class="sprite__gluru-bot u-center-block"></div>
 
 			</aside>
-			<div class="stage_content">
+			<div class="stage__content">

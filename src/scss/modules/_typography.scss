@@ -35,7 +35,7 @@ fieldset,
 p,
 pre {
     margin: 0;
-    margin-bottom: 24px;
+    margin-bottom: $base-line-height;
 }
 
 
@@ -81,7 +81,8 @@ p {
 // typographic styles
 
 // stage heading
-.stage__heading-text {
+// .stage__heading-text {
+.stage__hd-heading {
     @extend %font-size__20;
     @extend %font-weight__lighter;
     @extend %color__black;
@@ -94,7 +95,7 @@ p {
 }
 
 // stage sub-heading
-.stage__sub-heading-text {
+.stage__hd-subheading {
     @extend %font-size__16;
     @extend %color__green;
     @extend %line-height__normal;
@@ -204,17 +205,6 @@ p {
     // TODO: abstract this class!
 }
 
-    .link--add {
-        display: inline-block;
-        position: relative;
-        @extend %font-size__16;
-        @extend %color__green;
-        @extend %font-weight__bold;
-        // TODO: abstract these magic numbers
-        padding-left: 37px;
-        line-height: 32px;
-        margin: 15px 0 5px;
-    }
 
     // TODO: abstract this class!
     .link__icon {
@@ -227,26 +217,18 @@ p {
         }
     }
 
-// heading in single / split view panel-header
-// TODO: remove this if hierarchy structure approved by eddie
-// its not currently being used
-.split-view__heading {
-    @extend %nowrap;
-    @extend %font-size__18;
-    @extend %font-weight__lighter;
-}
-
 .options-list__heading {
     @extend %text-transform__uppercase;
     @extend %font-size__16;
     @extend %color__gray--dark;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .options-list__text {
     @extend %nowrap;
     @extend %font-size__13;
     @extend %color__black;
+    @extend %line-height__130percent;
     
     // when options-list__text is inside .drawer
     .drawer-wrap & {
@@ -358,13 +340,6 @@ p {
 }
 
 
-.info-panel-header__text {
-    @extend %font-size__20;
-    @extend %font-weight__lighter;
-    @extend %color__white;
-    @extend %text-transform__uppercase;
-}
-
 // the text heading in staged sections such
 // as the setup process 
 .process__heading-text {
@@ -393,15 +368,8 @@ p {
 .stage__text {
     @extend %font-size__14;
     @extend %color__zeus;
-    margin-bottom: 24px;
+    margin-bottom: $base-line-height;
     
-    &.-cta {
-        @extend %font-size__16;
-        @extend %color__gray--light;
-        @extend %text-align__center;
-        padding-top: 10px;
-    }
-
     &.-light {
         @extend %color__gray--light;
     }
@@ -411,8 +379,8 @@ p {
     }
     
     // pull back top margin for stage__text 
-    // when it follows .info-panel__heading-text
-    .info-panel__heading-text ~ & {
+    // when it follows .stage__heading-text
+    .stage__heading-text ~ & {
         // margin-top: -15px;
     }
 }
@@ -427,19 +395,6 @@ p {
         @extend %font-size__18;
         @extend %font-weight__bold;
         margin-bottom: 10px;
-    }
-}
-
-.info-panel__heading-text {
-    @extend %font-size__20;
-    @extend %color__zeus;
-    @extend %font-weight__bold;
-    // margin-bottom: 3px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-
-    &:first-child {
-        margin-top: 0;
     }
 }
 
@@ -511,22 +466,33 @@ p {
 .hierarchy__text {
     @extend %font-size__13;
     @extend %color__gray--dark;
+    @include set-href-underline(border, $silver-dark);
 
-    &.-current-location {
+    &.-active {
         @extend %font-weight__bold;
         @extend %color__gray--xdark;
+        @include set-href-underline(none);
+        border-bottom: 0;
     }
 
-    .panel-header--location & {
+    .panel-header--location &,
+    .panel-header--timeline &,
+    {
         @extend %nowrap;
         @extend %font-size__18;
         @extend %font-weight__lighter;
         @extend %color__gray--xxdark;
 
-        &.-current-location {
+        &.-active {
             @extend %font-weight__normal;
+            @include set-href-underline(none);
+            border-bottom: 0;
         }
     }
+}
+
+span.hierarchy__text {
+    border-bottom: 0 !important;
 }
 
 

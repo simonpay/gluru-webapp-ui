@@ -30,7 +30,7 @@
 .tmp-buttons {
     z-index: 9999;
     position: fixed;
-    top: -20px;
+    top: -25px;
     // top: 5px;
     left: 50%;
     @include transform( translateX(-50%) );
@@ -40,7 +40,7 @@
     @include transition( top 0.2s );
 
     &:hover {
-      top: 0;
+        top: -2px;
     }
 
     // &.-files {

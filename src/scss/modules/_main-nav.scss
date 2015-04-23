@@ -11,7 +11,7 @@
     background: $pink;
     overflow: auto;
 
-    @include mq(large){
+    @include mq(medium){
         position: relative;
         @include clearfix;
         float: left;
@@ -31,7 +31,7 @@
             float: left;
             @include use-sprite("gluru-logo");
 
-            @include mq(large){
+            @include mq(medium){
                 position: relative;
                 top: 15px;
                 float: none;
@@ -46,7 +46,7 @@
             position: relative;
             float: left;
             
-            @include mq(large){
+            @include mq(medium){
                 float: none;
                 margin-bottom: 15px;
 

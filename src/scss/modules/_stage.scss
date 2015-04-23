@@ -11,32 +11,49 @@
 }
 
 	.stage {
+	    height: 100%;
 	    @include clearfix;
-	    @include mq(large){
-	        height: 100%;
 
+	    @include mq(medium){
 	        // scroll needs to be applied when split screen 
 	        // views are too wide to fit in viewport 
 	        overflow-x: auto;
 	    }
 	}
 		
-		.stage__heading-wrap {
+		// .stage__heading-wrap {
+		.stage__hd-wrap {
+			display: inline-block;
 			position: relative;
-			top: 30px;
+			margin-top: 30px;
 		}
 
-			.stage__heading {
-			    margin-bottom: 3px;
+	    .stage__sidebar { // aside
+	    	display: none;
+	        @include clearfix;
+
+	        @include mq(large) {
+		    	display: block;
+		        @include span-columns(4);
+	        }
+	    }
+
+	    .stage__content { // div
+	        @include clearfix;
+
+	        @include mq(large) {
+		        @include span-columns(8);
+	        }
+	    }
+
+			.stage__heading-text {
+				font-size: rem(20);
+				font-weight: bold;
+			    margin-top: $base-line-height;
+			    margin-bottom: $base-line-height / 2;
+
+			    &:first-child {
+			        margin-top: 0;
+			    }
 			}
-
-	    .stage_sidebar { // aside
-	        @include span-columns(4);
-	        @include clearfix;
-	    }
-
-	    .stage_content { // div
-	        @include span-columns(8);
-	        @include clearfix;
-	    }
 

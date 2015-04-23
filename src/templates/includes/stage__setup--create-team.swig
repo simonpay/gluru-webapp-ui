@@ -7,14 +7,14 @@
     
     <form>
 
-        <h1 class="info-panel__heading-text">Create Team</h1>
+        <h1 class="stage__heading-text">Create Team</h1>
 
         <p class="stage__text">You can add team functionality to Gluru.</p>
 
         <section class="form-section -team-setup js-section-team-setup">
 
             <div class="row">
-                <div class="large-11">
+                <div class="med-11">
 
                     <p class="stage__text">Do you want to add a team to your Gluru account? If you just want to continue with a Single User account to try gluru don’t worry, you'll still be able to create a team in the future.</p>
 
@@ -27,7 +27,7 @@
                 </a>
             </p>
 
-            <div class="large-11">
+            <div class="med-11">
                 <hr>
             </div>
 
@@ -39,9 +39,9 @@
 
             <div class="row">
 
-                <div class="large-6">
+                <div class="med-6">
 
-                    <p class="info-panel__heading-text">Team Name</p>
+                    <p class="stage__heading-text">Team Name</p>
 
                     <p>
                         <input 
@@ -61,12 +61,12 @@
 
         <section class="form-section -team-settings is-hidden js-section-team-settings">
 
-            <p class="info-panel__heading-text">Team Settings</p>
+            <p class="stage__heading-text">Team Settings</p>
 
             <div class="row">
-                <div class="large-11">
+                <div class="med-11">
                     <div class="media">
-                        <div class="media__img -right -lrg-margin">
+                        <div class="media__img -right -med-margin">
 
                             <div id="radio">
                                 <input type="radio" class="js-invited-member-connect-source" id="rdo-invited-member-connect-source-no" name="invited-member-connect-source"><label for="rdo-invited-member-connect-source-no">No</label>
@@ -90,7 +90,7 @@
             <section class="form-section -team-settings-sources is-hidden js-section-team-settings-sources">
 
                 <div class="row">
-                    <div class="large-11">
+                    <div class="med-11">
 
                         <p>
                             <select 
@@ -115,7 +115,7 @@
 
             </section>
 
-            <div class="large-11">
+            <div class="med-11">
                 <hr>
             </div>
 
@@ -126,9 +126,9 @@
         <section class="form-section -team-access-settings is-hidden js-section-team-access-settings">
 
             <div class="row">
-                <div class="large-12">
+                <div class="med-12">
 
-                    <p class="info-panel__heading-text">Team Access Settings</p>
+                    <p class="stage__heading-text">Team Access Settings</p>
 
                     <p class="stage__text">Do you want each invited member to connect a source to join?</p>
                     
@@ -137,17 +137,17 @@
 
             <div class="row -grid-header">
 
-                <div class="large-6">&nbsp;</div>
+                <div class="med-6">&nbsp;</div>
 
-                <div class="large-2">
+                <div class="med-2">
                     Source
                 </div>
 
-                <div class="large-3">
+                <div class="med-3">
                     Access Settings
                 </div>
 
-                <div class="large-1"></div>
+                <div class="med-1"></div>
 
             </div>
             
@@ -157,7 +157,7 @@
 
             </div>
 
-            <div class="large-11">
+            <div class="med-11">
                 <hr>
             </div>
 
@@ -168,25 +168,25 @@
         <section class="form-section -team-invite-people is-hidden js-section-team-invite-people">
 
             <div class="row">
-                <div class="large-11">
-                    <p class="info-panel__heading-text">Invite People</p>
+                <div class="med-11">
+                    <p class="stage__heading-text">Invite People</p>
                 </div>
             </div>
             
             <div class="row -grid-header">
-                <div class="large-4">
+                <div class="med-4">
                     Type email address
                 </div>
-                <div class="large-2">
+                <div class="med-2">
                     Type
                 </div>
-                <div class="large-2">
+                <div class="med-2">
                     Source
                 </div>
-                <div class="large-3">
+                <div class="med-3">
                     Access Settings
                 </div>
-                <div class="large-1"></div>
+                <div class="med-1"></div>
             </div>
             
             <div class="js-invite-people-row-wrapper">
@@ -195,12 +195,12 @@
                 </div>
             </div>
 
-            <a href="#" class="btn -clear -pad0 js-add-new-email">
+            <a href="#" class="btn -clear -padh0 js-add-new-email">
                 <span class="btn__icon icon__add"></span><!--
                 --><span class="btn__text">Invite more people</span>
             </a>
 
-            <div class="large-11">
+            <div class="med-11">
                 <hr>
             </div>
 

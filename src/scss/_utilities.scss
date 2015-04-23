@@ -101,7 +101,9 @@
     margin-bottom: 0 !important;
 }
 .u-mb {
-    margin-bottom: 24px;
+    margin-bottom: $base-line-height !important;
 }
-
+.u-mb\+ {
+    margin-bottom: $base-line-height * 1.5 !important;
+}
 
