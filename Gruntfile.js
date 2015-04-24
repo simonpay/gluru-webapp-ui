@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/core.js',
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/widget.js',
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/button.js',
-                    '<%= pkg.project_paths.bower_folder %>select2/dist/js/select2.js',
+                    '<%= pkg.project_paths.bower_folder %>select2/dist/js/select2.js', // v4.0.0-rc.2
                     ['<%= pkg.src_paths.js %>**/*.js', '!<%= pkg.src_paths.js %>pages/**']
                 ],
                 dest: '<%= pkg.dest_paths.js %>app.js'

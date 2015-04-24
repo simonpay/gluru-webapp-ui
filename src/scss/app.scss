@@ -41,6 +41,7 @@
 // SELECT2
 // ------------------------------------------------
 // jQuery replacement for select boxes
+// v4.0.0-rc.2
 @import "core";
 
 
@@ -94,10 +95,11 @@
 // MODULES
 // ------------------------------------------------
 // The majority of elements are modules - even layout elements (sidebar, containers etc)
-@import "modules/typography",
+
+@import "modules/icons",
+        "modules/typography",
         "modules/grid",
         "modules/buttons",
-        "modules/icons",
         "modules/icon-button",
         "modules/modal",
         "modules/tooltips",

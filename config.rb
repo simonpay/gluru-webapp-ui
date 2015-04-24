@@ -8,6 +8,7 @@ add_import_path "bower_components/normalize-scss"
 add_import_path "bower_components/scut/dist"
 add_import_path "bower_components/Retina-sprites-for-Compass/src"
 # add_import_path "bower_components/scss-tooltips/vendor/"
+# select2 v4.0.0-rc.2
 add_import_path "bower_components/select2/src/scss"
 
 
