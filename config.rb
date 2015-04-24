@@ -7,9 +7,11 @@ add_import_path "bower_components/neat/app/assets/stylesheets"
 add_import_path "bower_components/normalize-scss"
 add_import_path "bower_components/scut/dist"
 add_import_path "bower_components/Retina-sprites-for-Compass/src"
-# add_import_path "bower_components/scss-tooltips/vendor/"
-# select2 v4.0.0-rc.2
-add_import_path "bower_components/select2/src/scss"
+
+# removed as angular app cant support v4 of select2
+# downgraded to v3.4.5 which doesnt use sass
+# select2 v3.4.5
+# add_import_path "bower_components/select2/src/scss"
 
 
 # Set this to the root of your project when deployed:

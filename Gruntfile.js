@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/core.js',
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/widget.js',
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/button.js',
-                    '<%= pkg.project_paths.bower_folder %>select2/dist/js/select2.js', // v4.0.0-rc.2
+                    '<%= pkg.project_paths.bower_folder %>select2/select2.js', // v3.4.5
                     ['<%= pkg.src_paths.js %>**/*.js', '!<%= pkg.src_paths.js %>pages/**']
                 ],
                 dest: '<%= pkg.dest_paths.js %>app.js'
@@ -125,6 +125,14 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: '<%= pkg.project_paths.bower_folder %>jquery-ui/themes/smoothness',
                         src: ['**/*'],
+                        dest: '<%= pkg.dest_paths.css %>'
+                    },
+                    // select2 v3.4.5 css (no sass for this version)
+                    {
+                        expand: true,
+                        cwd: '<%= pkg.project_paths.bower_folder %>select2',
+                        // src: ['select2.css', 'select2.png', 'select2x2.png', 'select2-spinner.gif'],
+                        src: ['select2.css'],
                         dest: '<%= pkg.dest_paths.css %>'
                     }
                 ]

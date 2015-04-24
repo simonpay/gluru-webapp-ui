@@ -95,7 +95,7 @@
                         <p>
                             <select 
                                 class="js-team-settings-source__multi-select" 
-                                multiple="multiple" 
+                                multiple 
                                 data-placeholder="Click to add sources..." 
                                 style="width:100%">
                                     <option value="Gmail">Gmail</option>

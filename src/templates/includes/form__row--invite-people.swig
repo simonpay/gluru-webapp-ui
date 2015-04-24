@@ -10,7 +10,7 @@
     </div>
     <div class="med-2">
 
-        <select class="js-user-type" style="width:100%;height:38px">
+        <select class="js-user-type" style="width:100%;">
             <option value="admin">Admin</option>
             <option value="user">User</option>
         </select>
@@ -25,7 +25,7 @@
     </div>
     <div class="med-3">
 
-        <select class="js-access-settings" style="width:100%;height:38px">
+        <select class="js-access-settings" style="width:100%;">
             <option value="everything">See everything</option>
             <option value="activity">Activity</option>
             <option value="nothing">See nothing</option>

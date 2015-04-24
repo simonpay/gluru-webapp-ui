@@ -32,7 +32,7 @@
     </div>
     <div class="med-3">
 
-        <select class="js-access-settings" style="width:100%;height:38px;display:none;">
+        <select class="js-access-settings" style="width:100%;">
             <option value="everything">See everything</option>
             <option value="activity">Activity</option>
             <option value="nothing">See nothing</option>

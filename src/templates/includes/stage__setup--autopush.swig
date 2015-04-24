@@ -19,7 +19,7 @@
                     <p>
                         <select 
                             class="js-autopush-source__multi-select prevent-fout" 
-                            multiple="multiple" 
+                            multiple 
                             data-placeholder="Click to add sources..." 
                             style="width:100%">
                                 <option value="Gmail">Gmail</option>

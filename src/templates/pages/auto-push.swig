@@ -4,6 +4,7 @@
 {% block meta-description %}{{meta.description}}{% endblock %}
 
 {% block head %}
+    <link rel="stylesheet" href="css/select2.css" />
 	{% parent %}
 {% endblock %}
 

@@ -200,6 +200,8 @@
 
                 var $this = $(this);
 
+                console.log( "_do_add_source" );
+
                 obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people, $section_submit ], "show" );
                 obj_form_actions.create_team._build_team_access_rows.call( $this );
             },
@@ -225,81 +227,92 @@
 
             _build_team_access_rows: function () {
 
-                var $this = $(this);
-                var source_data = $this.select2('data');
+                setTimeout(function(){
+                }, 0);
 
-                // console.log( source_data );
-                // console.log( typeof(source_data) );
-                // console.log( data[0].text );
 
-                // console.log( source_data.length );
+                    var $this = $(this);
+                    var source_data = $this.select2( "data" );
 
-                // reset
-                obj_form_actions.create_team._remove_access_setting_rows();
-                obj_form_actions.create_team._remove_invite_people_rows();
-                obj_form_actions.create_team._remove_invite_people_containers();
+                    // console.log( $this );
 
-                // loop around sources in select2 multiple select and build form rows 
-                for ( var i=0; i<source_data.length; i++) {
-
-                    // console.log( "cloned a row" );
-
-                    // clone access settings row
-                    $team_access_settings_row_clone
-                        .clone()
-                        .removeClass( "js-team-access-settings-row-clone" )
-                        .addClass( "js-team-access-settings-row" )
-                        .show()
-                        .appendTo( $team_access_settings_row_container )
-                            .find( ".js-source-name" )
-                            .html( source_data[i].text )
-                                .closest( ".js-team-access-settings-row" )
-                                    .find( "input[type='checkbox']" )
-                                    .attr( "id", "applySettingsForWholeTeam" + source_data[i].text )
-                                        .parent()
-                                        .find( "label" )
-                                        .attr( "for", "applySettingsForWholeTeam" + source_data[i].text )
-                                            .parent().find( ".checkbox_slider" )
-                                            .button()
-                                                .closest( ".js-team-access-settings-row" )
-                                                .find( "label" ).last()
-                                                .attr( "for", "applySettingsForWholeTeam" + source_data[i].text )
-                                                    .closest( ".js-team-access-settings-row" )
-                                                    .find( ".js-access-settings" )
-                                                    .select2({
-                                                        minimumResultsForSearch: Infinity
-                                                    })
-                                                    ;
-
-                    // clone invite people email row
-                    var _invite_people_row = $invite_people_row_clone
-                        .clone()
-                        .removeClass( "js-invite-people-row-clone" )
-                        .addClass( "js-invite-people-row" )
-                        .show()
-                        .appendTo( $invite_people_row_container_clone )
-                            .find( ".js-source-name" )
-                            .html( source_data[i].text )
-                                .end()
-                                    .find( ".js-user-type, .js-access-settings" ).select2({
-                                        minimumResultsForSearch: Infinity
-                                    })
-                                        .end()
-                                        ;
-
-                    // remove email field from each row except the first one
-                    if ( i > 0 ) {
-                        _invite_people_row
-                            .find( ".js-invite-people-email" )
-                            .removeClass( ".js-invite-people-email" )
-                            .html( "&nbsp;" )
-                                ;
+                    // console.log( source_data );
+                    console.log( source_data.length );
+                    for ( var j=0; j<source_data.length; j++) {
+                        console.log( j + " = " + source_data[j].text );
                     }
-                }
+                    // console.log( "_build_team_access_rows" );
+                    // console.log( typeof(source_data) );
+                    // console.log( data[0].text );
+                    
+                    // reset
+                    obj_form_actions.create_team._remove_access_setting_rows();
+                    obj_form_actions.create_team._remove_invite_people_rows();
+                    obj_form_actions.create_team._remove_invite_people_containers();
 
-                if ( source_data.length === 0 ) {
-                    obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people ], "hide" );
-                }
+                    // loop around sources in select2 multiple select and build form rows 
+                    for ( var i=0; i<source_data.length; i++) {
+
+                        // console.log( "cloned a row" );
+
+                        // clone access settings row
+                        $team_access_settings_row_clone
+                            .clone()
+                            .removeClass( "js-team-access-settings-row-clone" )
+                            .addClass( "js-team-access-settings-row" )
+                            .show()
+                            .appendTo( $team_access_settings_row_container )
+                                .find( ".js-source-name" )
+                                .html( source_data[i].text )
+                                    .closest( ".js-team-access-settings-row" )
+                                        .find( "input[type='checkbox']" )
+                                        .attr( "id", "applySettingsForWholeTeam" + source_data[i].text )
+                                            .parent()
+                                            .find( "label" )
+                                            .attr( "for", "applySettingsForWholeTeam" + source_data[i].text )
+                                                .parent().find( ".checkbox_slider" )
+                                                .button()
+                                                    .closest( ".js-team-access-settings-row" )
+                                                    .find( "label" ).last()
+                                                    .attr( "for", "applySettingsForWholeTeam" + source_data[i].text )
+                                                        .closest( ".js-team-access-settings-row" )
+                                                        .find( ".js-access-settings" )
+                                                        .select2({
+                                                            minimumResultsForSearch: -1
+                                                        })
+                                                        .show()
+                                                        ;
+
+                        // clone invite people email row
+                        var _invite_people_row = $invite_people_row_clone
+                            .clone()
+                            .removeClass( "js-invite-people-row-clone" )
+                            .addClass( "js-invite-people-row" )
+                            .show()
+                            .appendTo( $invite_people_row_container_clone )
+                                .find( ".js-source-name" )
+                                .html( source_data[i].text )
+                                    .end()
+                                        .find( ".js-user-type, .js-access-settings" ).select2({
+                                            minimumResultsForSearch: -1
+                                        })
+                                            .end()
+                                            ;
+
+                        // remove email field from each row except the first one
+                        if ( i > 0 ) {
+                            _invite_people_row
+                                .find( ".js-invite-people-email" )
+                                .removeClass( ".js-invite-people-email" )
+                                .html( "&nbsp;" )
+                                    ;
+                        }
+                    }
+
+                    // if ( source_data.length === 0 ) {
+                    //     obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people ], "hide" );
+                    // }
+
             },
 
 
@@ -318,7 +331,7 @@
                         // .html( source_data[i].text )
                         //     .end()
                                 .find( ".js-user-type, .js-access-settings" ).select2({
-                                    minimumResultsForSearch: Infinity
+                                    minimumResultsForSearch: -1
                                 })
                                     ;
             },
@@ -342,7 +355,7 @@
                                         .end()
                                             // programmatic-init select2 on these select boxes 
                                             .find( ".js-user-type, .js-access-settings" ).select2({
-                                                minimumResultsForSearch: Infinity
+                                                minimumResultsForSearch: -1
                                             })
                                             ;
 
@@ -389,20 +402,20 @@
     if ( $checkbox_slider.length > 0 ) $checkbox_slider.button();
 
     // add source
-    $autopush_source_multi_select.on("select2:select", function (e) { 
+    $autopush_source_multi_select.on("select2-selecting", function (e) { 
         obj_form_actions.autopush._do_add_source();
     });
     // remove source
-    $autopush_source_multi_select.on("select2:unselect", function (e) { 
+    $autopush_source_multi_select.on("select2-removing", function (e) { 
         obj_form_actions.autopush._do_remove_source.call( $(this) );
     });
 
     // add destination
-    $autopush_destination_multi_select.on("select2:select", function (e) { 
+    $autopush_destination_multi_select.on("select2-selecting", function (e) { 
         obj_form_actions.autopush._do_add_destination();
     });
     // remove destination
-    $autopush_destination_multi_select.on("select2:unselect", function (e) { 
+    $autopush_destination_multi_select.on("select2-removing", function (e) { 
         obj_form_actions.autopush._do_remove_destination.call( $(this) );
     });
 
@@ -412,13 +425,24 @@
     // CREATE TEAM PAGE
     // -------------------------------------------------
 
+    // init select2 on <select> els if in DOM
+    if ( $team_settings_source_multi_select.length > 0 ) {
+
+        $team_settings_source_multi_select.select2();
+
+        // $( "div.js-team-settings-source__multi-select" )
+        //         .removeClass( "js-team-settings-source__multi-select" );
+
+        // remove class from div (as v3.4.5 of select2 copies the 
+        // class names you set on the select el and we dont want 
+        // 2 classes named the same - we just want the js-xxx 
+        // class on the actual select )
+    }
+
     // add team button
     $btn_add_team.on( "click", function(e){
         obj_form_actions.create_team._create_team.call( $(this), e );
     });
-
-    // init select2 on <select> els if in DOM
-    if ( $team_settings_source_multi_select.length > 0 ) $team_settings_source_multi_select.select2();
 
     // invite member radio button - YES
     $rdo_invited_member_connect_source_yes.on( "click", function(){
@@ -431,11 +455,11 @@
     });
 
     // team access add source
-    $team_settings_source_multi_select.on("select2:select", function (e) { 
+    $team_settings_source_multi_select.on("select2-selecting", function (e) { 
         obj_form_actions.create_team._do_add_source.call( $(this) );
     });
     // team access remove source
-    $team_settings_source_multi_select.on("select2:unselect", function (e) { 
+    $team_settings_source_multi_select.on("select2-removing", function (e) { 
         obj_form_actions.create_team._do_add_source.call( $(this) );
     });
 
