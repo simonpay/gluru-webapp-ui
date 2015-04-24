@@ -2,13 +2,7 @@
 # BUTTONS
 \*------------------------------------*/
 
-
-// .btn__wrap {
-// 	position: relative;
-// 	overflow: auto;
-// 	width: 280px;
-// 	margin-top: 40px;
-// }
+// congigurable button class
 
 .btn {
 	display: inline-block;
@@ -25,7 +19,7 @@
 	text-decoration: none;
 	font-size: rem(20);
 
-    @include set-href-underline(none);
+    @include set-text-decoration(none);
 
 	&:last-child {
 		margin-right: 0;
@@ -139,105 +133,3 @@
 			font-weight: lighter;
 		}
 	}
-
-
-
-	// // .btn__divider {
-	// // 	display: inline-block;
-	// // 	border-left: 1px solid black;
-	// // }
-
-	// .btn__lozenge {
-	// 	height: 46px; 
-	// 	border-radius: 100px;
-	// 	border: 2px solid $dusty-gray;
-	// 	outline: none;
-	// 	// padding: 1px 30px 0;
-	// 	margin-right: 15px;
-	// 	// margin: 0 auto 25px;
-		
-	// 	&.is-hidden {
-	// 		display: none;
-	// 	}
-
-	// 	&:last-child {
-	// 		margin-right: 0;
-	// 	}
-
-	//     @extend %font-size__16;
-	//     @extend %color__green;
-		
-	// 	&.is-selected {
-	// 		background-color: $green;
-	// 		border-color: $green;
-	// 		color: $white;
-	// 	}
-		
-	// 	&.-large {
-	// 		width: 240px;
-	// 		height: 70px;
-	// 		border-width: 3px;
-	//     	@extend %font-size__18;
-	//     	@extend %color__gray--light;
-			
-	// 		&.is-selected {
-	// 			background-color: $green;
-	// 			border-color: $green;
-	// 			color: $white;
-
-	//     		&:after {
-	// 				content: "";
-	// 				left: 25px;
-	// 				@extend %scut-center-transform-y;
-	// 				@include use-sprite("icon-sml__tick--white");
-	//     		}
-	// 		}
-	// 	}
-
-	// 	&.-green {
-	// 		height: 60px;
-	// 		background: $green;
-	// 		border-color: $green;
-	//     	@extend %font-size__20;
-	//     	@extend %color__white;
-	// 	}
-
-	// 	&.-gray {
-	// 		height: 60px;
-	// 		background: $dusty-gray;
-	// 		border-color: $dusty-gray;
-	//     	@extend %font-size__20;
-	//     	@extend %color__white;
-	// 	}
-
-	// 	&.-icon-left {
-	// 		text-align: left;
-	// 		padding-left: 95px;
-	// 		padding-right: 0;
-
-	// 		&:before {
-	// 			content: "";
-	// 			display: block;
-	// 			position: absolute;
-	// 			left: 75px;
-	// 			width: 1px;
-	// 			top: 5px;
-	// 			bottom: 5px;
-	// 			background: $dusty-gray;
-	// 		}
-	// 	}
-
-	// 	&.-icon-right {
-	// 		text-align: right;
-	// 		padding-left: 35px;
-	// 		padding-right: 70px;
-	// 		padding-bottom: 2px;
- //  		}
-
-	// 	&.-large.-icon-left {
-	// 		width: 280px;
-	// 	}
-	// }
-
-
-

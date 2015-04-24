@@ -154,9 +154,9 @@
     }
 
     // daily-digest section headers that have 
-    // collapsable tablees underneath
-    // TODO: make this into module - similar to
-    // the collapsable inside options-list
+    // collapsable tables underneath
+    // TODO: make this into module - as this is very 
+    // similar to the 'collapsable' inside options-list
     &.-collapsable {
         cursor: pointer;
 
@@ -202,7 +202,6 @@
         }
     }
 }
-
 
     .break { // br
         

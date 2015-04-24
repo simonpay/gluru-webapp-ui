@@ -41,31 +41,6 @@
         .options-list__heading {
             position: relative;
 
-            &.-collapsable {
-                cursor: pointer;
-
-                &:after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    top: 40%;
-                    right: 7px;
-                    width: 20px;
-                    height: 12px;
-                    @include transform( translateY(-50%) rotate(180deg) );
-                    @include use-sprite("icon__expand");
-
-                    .is-collapsed & {
-                        @include transform( translateY(-50%) rotate(0deg) );
-                    }
-
-                    .drawer & {
-                        right: 15px;
-                    }
-                }
-            }
-
-
             .drawer & {
                 padding-left: $options-list-heading-padding-left--drawer;
             }
@@ -123,7 +98,7 @@
                             height: $options-list-link-height-actions;
                             padding: 0 4px;
 
-                            @include set-href-underline(none);
+                            @include set-text-decoration(none);
 
                             &:hover,
                             &.is-selected {

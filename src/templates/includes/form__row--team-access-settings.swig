@@ -17,7 +17,7 @@
             </div>
             <div class="media__body">
 
-                <span class="stage__text">Apply these settings for the whole team?</span>
+                <label for="applySettingsForWholeTeam" class="stage__text">Apply these settings for the whole team?</label>
 
             </div>
         </div>

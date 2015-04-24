@@ -62,7 +62,6 @@
 
 	        	.modal-box__content {
 	        		position: relative;
-	        		// TODO: find pattern in this padding and abstract
-				    padding: 24px $panel-header-padding-right 24px $panel-header-padding-left;
+				    padding: $base-line-height $panel-header-padding-right $base-line-height $panel-header-padding-left;
 	        	}
 

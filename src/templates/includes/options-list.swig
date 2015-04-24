@@ -1,5 +1,5 @@
 <div class="options-list {{ rObj.options_list_type_class }}">
-    <div class="options-list__heading -collapsable js-toggle-expand-list">{{ rObj.heading }}</div>
+    <div class="options-list__heading collapsable js-toggle-expand-list">{{ rObj.heading }}</div>
     <div class="options-list__inner-wrap">
 
     {% if rObj.id !== "file_summary" %}

@@ -43,7 +43,7 @@ a {
     text-decoration: none;
     color: $green;
     
-    @include set-href-underline(underline);
+    @include set-text-decoration(underline);
 }
 
 // set location-based font-sizes for generic text
@@ -466,12 +466,12 @@ p {
 .hierarchy__text {
     @extend %font-size__13;
     @extend %color__gray--dark;
-    @include set-href-underline(border, $silver-dark);
+    @include set-text-decoration(border, $silver-dark);
 
     &.-active {
         @extend %font-weight__bold;
         @extend %color__gray--xdark;
-        @include set-href-underline(none);
+        @include set-text-decoration(none);
         border-bottom: 0;
     }
 
@@ -485,7 +485,7 @@ p {
 
         &.-active {
             @extend %font-weight__normal;
-            @include set-href-underline(none);
+            @include set-text-decoration(none);
             border-bottom: 0;
         }
     }

@@ -93,6 +93,22 @@
 %text-align__center             {   @include text-align(center);                                       }
 
 
+// set text-decoration for a tags with option to use 
+// scut's mixin for border-bottom instead of text-decoration
+@mixin set-text-decoration( $val, $col:null ) {
+    &:hover, 
+    &:active, 
+    &:focus,
+    {
+        @if $val == border {
+            @include scut-link-bb($col);
+        } @else {
+            text-decoration: $val;
+        }
+    }
+}
+
+
 
 // -----------------------------------
 // GRID MIXINS
@@ -105,17 +121,5 @@
 }
 
 
-@mixin set-href-underline( $val, $col:null ) {
-    &:hover, 
-    &:active, 
-    &:focus,
-    {
-        @if $val == border {
-            @include scut-link-bb($col);
-        } @else {
-            text-decoration: $val;
-        }
-    }
-}
 
 

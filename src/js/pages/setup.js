@@ -256,15 +256,20 @@
                                 .closest( ".js-team-access-settings-row" )
                                     .find( "input[type='checkbox']" )
                                     .attr( "id", "applySettingsForWholeTeam" + source_data[i].text )
-                                    .parent()
-                                    .find( "label" )
-                                    .attr( "for", "applySettingsForWholeTeam" + source_data[i].text )
-                                    .parent().find( ".checkbox_slider" ).button()
-                                        .closest( ".js-team-access-settings-row" )
-                                            .find( ".js-access-settings" ).select2({
-                                                minimumResultsForSearch: Infinity
-                                            })
-                                            ;
+                                        .parent()
+                                        .find( "label" )
+                                        .attr( "for", "applySettingsForWholeTeam" + source_data[i].text )
+                                            .parent().find( ".checkbox_slider" )
+                                            .button()
+                                                .closest( ".js-team-access-settings-row" )
+                                                .find( "label" ).last()
+                                                .attr( "for", "applySettingsForWholeTeam" + source_data[i].text )
+                                                    .closest( ".js-team-access-settings-row" )
+                                                    .find( ".js-access-settings" )
+                                                    .select2({
+                                                        minimumResultsForSearch: Infinity
+                                                    })
+                                                    ;
 
                     // clone invite people email row
                     var _invite_people_row = $invite_people_row_clone

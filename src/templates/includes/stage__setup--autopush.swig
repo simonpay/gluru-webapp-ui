@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="lrg-11">
 
-        			<h1 class="stage__heading-text">Autopush source</h1>
+        			<h2 class="stage__heading-text">Autopush source</h2>
 
 					<p class="stage__text">If you would like gluru to help you organise your email attachments you can <strong>click below to add sources</strong>. You can skip this step and set up autopush later if you like.</p>
 
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="lrg-11">
 
-	        		<h1 class="stage__heading-text">Autopush destination source</h1>
+	        		<h2 class="stage__heading-text">Autopush destination source</h2>
 
 					<p class="stage__text">Now select a destination source for gluru to store your attachments. Gluru will keep them safe in a folder called <strong>gluru attachments</strong>.</p>
 
@@ -88,7 +88,7 @@
                         </div>
                         <div class="media__body">
 
-					        <h1 class="stage__heading-text">Autopush notifications</h1>
+					        <h2 class="stage__heading-text">Autopush notifications</h2>
 
 							<p class="stage__text">Would you like to receive storage limit notifications for your destination source?</p>
 

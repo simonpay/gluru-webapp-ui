@@ -1,0 +1,39 @@
+/*------------------------------------*\
+# COLLAPSABLE
+\*------------------------------------*/
+
+// the small up/down arrow within panel headers 
+// above collapsable areas e.g. .options-list, 
+// .daily-digest priority box
+
+.collapsable {
+    cursor: pointer;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        @include calc( top, "50% - 6px" );
+        right: 7px;
+        width: 20px;
+        height: 12px;
+        @include transform( rotate(180deg) );
+        @include use-sprite("icon__expand");
+
+        .daily-digest & {
+            right: 27px;
+        }
+
+        .drawer & {
+            right: 15px;
+        }
+    }
+
+    &.is-collapsed,
+    .is-collapsed & 
+    {
+        &:after {
+            @include transform( rotate(0deg) );
+        }
+    }
+}

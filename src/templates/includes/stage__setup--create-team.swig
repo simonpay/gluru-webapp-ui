@@ -41,7 +41,7 @@
 
                 <div class="med-6">
 
-                    <p class="stage__heading-text">Team Name</p>
+                    <h2 class="stage__heading-text">Team Name</h2>
 
                     <p>
                         <input 
@@ -61,7 +61,7 @@
 
         <section class="form-section -team-settings is-hidden js-section-team-settings">
 
-            <p class="stage__heading-text">Team Settings</p>
+            <h2 class="stage__heading-text">Team Settings</h2>
 
             <div class="row">
                 <div class="med-11">
@@ -128,7 +128,7 @@
             <div class="row">
                 <div class="med-12">
 
-                    <p class="stage__heading-text">Team Access Settings</p>
+                    <h1 class="stage__heading-text">Team Access Settings</h1>
 
                     <p class="stage__text">Do you want each invited member to connect a source to join?</p>
                     
@@ -169,7 +169,7 @@
 
             <div class="row">
                 <div class="med-11">
-                    <p class="stage__heading-text">Invite People</p>
+                    <h1 class="stage__heading-text">Invite People</h1>
                 </div>
             </div>
             

@@ -5,7 +5,7 @@
 {% set obj_setup_data = obj.sections[1] %}
 {% include "stage__setup--start.swig" %}
 
-    <p class="stage__heading-text">Select the sources you want to connect to gluru</p>
+    <h1 class="stage__heading-text">Select the sources you want to connect to gluru</h1>
 
     <div class="sources__container u-mb">
 

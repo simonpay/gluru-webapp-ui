@@ -128,9 +128,6 @@ $panel-header-padding-right:                $stage-padding-right;
 $panel-header-padding-left--drawer:         18px;
 $panel-header-padding-right--drawer:        $panel-header-padding-left--drawer;
 
-// content-panel=header
-$content-panel-header-height:               28px;
-
 // icons
 $sml-icon-height:                           20px;
 $lrg-icon-height:                           32px;
@@ -171,7 +168,7 @@ $event-arrow-height:                        20px;
 $panel-header-height--item-selected:        $panel-header-height + ($event-height - $panel-header-height) / 2;
 
 // -----------------------------------
-// FONTS
+// VERTICAL RYTHM
 // -----------------------------------
 $em-base: 			16px;
 $base-font-size: 	$em-base;

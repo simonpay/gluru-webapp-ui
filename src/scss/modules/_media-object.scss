@@ -29,7 +29,7 @@
 
         .-v-center & {
             // TODO: not sure this is being used? 
-            padding-top: 0;
+            // padding-top: 0;
         }
         
         // sources loader in setup section
@@ -49,7 +49,6 @@
     }
 
     .media__img {
-        // display: block;
         float: left;
         margin-right: 10px;
 
@@ -68,7 +67,7 @@
             
             // very custom class to pull sort icon back from right 
             // edge to accomodate the pseudo el inside the icon 
-            // class taht extends 2px outisde of its parent resulting 
+            // class that extends 2px outisde of its parent resulting 
             // in the circle edge being obscured
             // TODO: a solution is to export the icons stage nav icons
             // at the same size as the psuedo el but then icons wold 

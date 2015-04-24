@@ -35,18 +35,4 @@
                 content: none;
             }
         }
-
-        // & ~ .hierarchy__item:last-child {
-
-        //     .hierarchy__text {
-        //         @extend %font-weight__bold;
-        //         @extend %color__gray--xdark;
-        //         @include set-href-underline(none);
-        //         border-bottom: 0;
-        //     }
-        // }
     }
-
-        .hierarchy__link { // a
-            // look in typography.scss
-        }

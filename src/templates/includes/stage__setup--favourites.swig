@@ -5,12 +5,13 @@
 {% set obj_setup_data = obj.sections[3] %}
 {% include "stage__setup--start.swig" %}
 
-    <p class="stage__heading-text">Add Favourites</p>
 
-    <div class="u-layout -w-400">
+    <form>
 
-        <form>
+        <div class="u-layout -w-400">
             
+            <h1 class="stage__heading-text">Add Favourites</h1>
+
             <div class="js-favourites-row-container">
 
                 <div class="row -grid-header">
@@ -61,9 +62,9 @@
 
             </section>
 
-        </form>
+        </div>
 
-    </div>
+    </form>
 
                         
 {% include "stage__setup--end.swig" %}

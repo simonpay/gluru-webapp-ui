@@ -2,11 +2,15 @@
     # EVENT NAV
 \*------------------------------------*/
 
+// pop-out nav that sits within each event 
+// providing icon links for user actions
+
 .event-nav {
     @include scut-center-transform(y);
     right: 0;
     // set 'hit' area for hover
-    padding: 40px 8px 40px 30px;
+    padding: 40px;
+    padding-right: 8px;
 
     .dot {
         width: 5px;
@@ -56,16 +60,21 @@
             visibility 0.3s, 
             opacity 0.1s
         );
-
+        
+        // this classes will be in same 
+        // div as .priority-box.-event
         .-critical & {
             background: $pink;
         }
+
         .-non-critical & {
             background: $orange;
         }
+
         .-now & {
             background: $green;
         }
+
         .-daily-digest & {
             background: $blue;
         }
