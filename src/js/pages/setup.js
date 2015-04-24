@@ -54,16 +54,21 @@
 
             for (var i=0; i<sections.length; i++) {
 
-                // console.log( sections[i] );
 
                 if ( state === "show" ) {
+
+                    // console.log( "show" );
 
                     ary_sections[i].removeClass( "is-hidden" );
 
                 } else {
 
+                    // console.log( "hide" );
+
                     ary_sections[i].addClass( "is-hidden" );
                 }
+
+                // console.log( sections[i] );
             }
         },
 
@@ -86,44 +91,49 @@
 
         autopush: {
 
-
-            _do_add_source: function () {
-
-                obj_form_actions._set_section_state( [ $section_autopush_destination ], "show" );
-            },
-
-
-            _do_remove_source: function () {
+            _do_change_source: function () {
 
                 var $this = $(this);
                 var source_data = $this.select2( "data" );
 
                 console.log( source_data.length );
                 
+                // if last item in source, hide relevant els and reset destination multi-select
                 if ( source_data.length === 0 ) {
+
                     obj_form_actions._set_section_state( [ $section_autopush_destination, $section_autopush_notifications, $btn_next ], "hide" );
 
                     // reset $autopush_destination_multi_select
                     $autopush_destination_multi_select.val(null).trigger("change");
+
+                // otherwise, show relevant els
+                } else {
+
+                    obj_form_actions._set_section_state( [ $section_autopush_destination ], "show" );
+
                 }
             },
 
 
-            _do_add_destination: function () {
-
-                obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "show" );
-            },
-
-
-            _do_remove_destination: function () {
+            _do_change_destination: function () {
 
                 var $this = $(this);
                 var source_data = $this.select2( "data" );
 
                 // console.log( source_data.length );
 
+                // if last item in destination, hide relevant els
                 if ( source_data.length === 0 ) {
+
+                    console.log( "HIDE" );
+
                     obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "hide" );
+
+                // otherwise, show relevant els
+                } else {
+
+                    obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "show" );
+
                 }
             },
         },
@@ -181,17 +191,19 @@
                 // no
                 } else if ( yep_nope === "no" ) {
 
-                    obj_form_actions._set_section_state( [ $section_team_invite_people, $section_submit ], "show" );
-                    obj_form_actions._set_section_state( [ $section_team_settings_sources, $section_team_access_settings ], "hide" );
-
                     // reset
                     obj_form_actions.create_team._remove_invite_people_rows();
                     obj_form_actions.create_team._remove_invite_people_containers();
 
+                    // reset select2 sources box
+                    $team_settings_source_multi_select.val(null).trigger("change");
+
+                    // clone a blank row for email invite
                     obj_form_actions.create_team._clone_invite_people_row();
 
-                    // reset select2 sources box
-                    $( ".js-example-basic-multiple" ).val(null).trigger("change");
+                    obj_form_actions._set_section_state( [ $section_team_invite_people, $section_submit ], "show" );
+                    obj_form_actions._set_section_state( [ $section_team_settings_sources, $section_team_access_settings ], "hide" );
+
                 }
             },
 
@@ -200,9 +212,13 @@
 
                 var $this = $(this);
 
-                console.log( "_do_add_source" );
+                // console.log( "_do_add_source" );
 
+                // show relevant sections
                 obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people, $section_submit ], "show" );
+
+                // build team access rows
+                // console.log( $this.select2( "data" ).length );
                 obj_form_actions.create_team._build_team_access_rows.call( $this );
             },
 
@@ -214,6 +230,8 @@
 
 
             _remove_invite_people_rows: function () {
+
+                // console.log( "_remove_invite_people_rows" );
 
                 $( ".js-invite-people-row" ).remove();
             },
@@ -234,10 +252,11 @@
                     var $this = $(this);
                     var source_data = $this.select2( "data" );
 
+                    // console.log( $this.select2( "data" ).length );
                     // console.log( $this );
 
                     // console.log( source_data );
-                    console.log( source_data.length );
+                    // console.log( source_data.length );
                     for ( var j=0; j<source_data.length; j++) {
                         console.log( j + " = " + source_data[j].text );
                     }
@@ -309,9 +328,10 @@
                         }
                     }
 
-                    // if ( source_data.length === 0 ) {
-                    //     obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people ], "hide" );
-                    // }
+                    // if last item removed, hide sections
+                    if ( source_data.length === 0 ) {
+                        obj_form_actions._set_section_state( [ $section_team_access_settings, $section_team_invite_people ], "hide" );
+                    }
 
             },
 
@@ -348,13 +368,14 @@
                                 // find and remove the 'clone' row
                                 .find( ".js-invite-people-row-clone" ).remove()
                                     .end()
-                                        // find all .select2 select boxes that were part 
+                                        // find all .select2-container select boxes that were 
                                         // created as part of the clone process above
-                                        // and remove them
-                                        .find( ".select2" ).remove()
+                                        // and remove them before initing select2 on the select
+                                        // boxes programmatically
+                                        .find( ".select2-container" ).remove()
                                         .end()
                                             // programmatic-init select2 on these select boxes 
-                                            .find( ".js-user-type, .js-access-settings" ).select2({
+                                            .find( "select.js-user-type, select.js-access-settings" ).select2({
                                                 minimumResultsForSearch: -1
                                             })
                                             ;
@@ -401,22 +422,14 @@
     // init jquery-ui button (checkbox slider) if el in DOM
     if ( $checkbox_slider.length > 0 ) $checkbox_slider.button();
 
-    // add source
-    $autopush_source_multi_select.on("select2-selecting", function (e) { 
-        obj_form_actions.autopush._do_add_source();
-    });
-    // remove source
-    $autopush_source_multi_select.on("select2-removing", function (e) { 
-        obj_form_actions.autopush._do_remove_source.call( $(this) );
+    // change source
+    $autopush_source_multi_select.on("change", function (e) { 
+        obj_form_actions.autopush._do_change_source.call( $(this) );
     });
 
-    // add destination
-    $autopush_destination_multi_select.on("select2-selecting", function (e) { 
-        obj_form_actions.autopush._do_add_destination();
-    });
-    // remove destination
-    $autopush_destination_multi_select.on("select2-removing", function (e) { 
-        obj_form_actions.autopush._do_remove_destination.call( $(this) );
+    // change destination
+    $autopush_destination_multi_select.on("change", function (e) { 
+        obj_form_actions.autopush._do_change_destination.call( $(this) );
     });
 
 
@@ -455,11 +468,11 @@
     });
 
     // team access add source
-    $team_settings_source_multi_select.on("select2-selecting", function (e) { 
+    $team_settings_source_multi_select.on("change", function (e) { 
         obj_form_actions.create_team._do_add_source.call( $(this) );
     });
     // team access remove source
-    $team_settings_source_multi_select.on("select2-removing", function (e) { 
+    $team_settings_source_multi_select.on("select2-removed", function (e) { 
         obj_form_actions.create_team._do_add_source.call( $(this) );
     });
 

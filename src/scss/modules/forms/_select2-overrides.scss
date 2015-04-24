@@ -570,7 +570,8 @@ Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
 .select2-container-multi .select2-choices .select2-search-choice {
     // padding: 3px 5px 3px 18px;
     // margin: 3px 0 3px 5px;
-    margin: 5px 0 6px 5px;
+    margin: 5px;
+    margin-right: 0;
     padding: 9px 11px 9px 24px;
     font-size: rem(14);
     background: $green;
