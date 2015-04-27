@@ -1,4 +1,4 @@
-<header class="panel-header -stage{% if obj.bln_no_drawer %} -no-drawer{% endif %} js-panel-header-stage">
+<header class="panel-header -stage{% if obj.drawer_is_not_present %} -no-drawer{% endif %} js-panel-header-stage">
 	
 	{% include "stage-heading.swig" %}
 

@@ -9,6 +9,7 @@
         $search_wrap                        = $( ".js-search-wrap" ),
 
         // main nav     
+        $main_nav_link                      = $( ".js-main-nav__link" ),
         $add_button                         = $( ".js-add" ),
 
         // modal     
@@ -248,13 +249,14 @@
 
         main_nav: {
 
-            do_click: function () {
+            do_click: function ( e ) {
                 
                 var $this           = $(this),
                     _is_gluru_logo  = $(this).hasClass( "js-gluru" ),
                     _is_add         = $(this).hasClass( "-add" ),
                     _is_moments     = $(this).hasClass( "-moments" ),
-                    _is_files       = $(this).hasClass( "-files" )
+                    _is_files       = $(this).hasClass( "-files" ),
+                    _is_settings    = $(this).hasClass( "-settings" )
                     ;
 
                 if ( _is_gluru_logo ) {
@@ -264,6 +266,10 @@
                 } else if ( _is_moments ) {
 
                     location.href = "moments.html";
+
+                } else if ( _is_settings ) {
+
+                    location.href = "settings-people.html";
 
                 } else if ( _is_add ) {
 
@@ -283,6 +289,8 @@
                     location.href = "files.html";
 
                 }
+
+                e.preventDefault();
             }
 
         },
@@ -1002,8 +1010,8 @@
     // MAIN NAV 
     // -------------------------------------------------
     // clicks
-    $( ".js-main-nav__link" ).on( "click", function(){
-        obj_gluru.main_nav.do_click.call( $(this) );
+    $main_nav_link.on( "click", function( e ){
+        obj_gluru.main_nav.do_click.call( $(this), e );
     });
 
 

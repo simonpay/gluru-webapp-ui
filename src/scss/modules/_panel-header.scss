@@ -108,8 +108,9 @@
 }
 
 // header for timeline containing recent and future tabs 
-.panel-header--moments,
-.panel-header--setup {
+// .panel-header--moments,
+// .panel-header--setup {
+.panel-header--absolute {
     z-index: $panel-header--moments-z-index;
     // make panel absolute so it streteches 100% width when 
     // multiple timelines cause horizonatl scrolling

@@ -1,4 +1,4 @@
-<div class="panel-header panel-header--setup">
+<div class="panel-header panel-header--absolute">
 	<nav class="header-nav -setup">
 		<ul class="header-nav__list">
 			

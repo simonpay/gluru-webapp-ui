@@ -10,17 +10,29 @@
 				data-tt="Toggle Actions" 
 				data-tt-pos="left"></div>
 		</li>
-		<li class="stage-nav__item">
-		{% if obj_stage_data.stage_id === "moments" %}
-			<div class="icon-button js-icon-button -infinity js-toggle-timeline-view js-tt"
-				data-tt="Toggle View" 
-				data-tt-pos="left"></div>
-		{% elseif obj_stage_data.stage_id === "files" %}
-			<div class="icon-button js-icon-button -infinity js-toggle-file-view js-tt"
-				data-tt="Toggle View" 
-				data-tt-pos="left"></div>
+		
+		{% if obj_stage_data.stage_id === "moments" || obj_stage_data.stage_id === "files" %}
+
+			<li class="stage-nav__item">
+
+				{% if obj_stage_data.stage_id === "moments" %}
+
+					<div class="icon-button js-icon-button -infinity js-toggle-timeline-view js-tt"
+						data-tt="Toggle View" 
+						data-tt-pos="left"></div>
+
+				{% elseif obj_stage_data.stage_id === "files" %}
+
+					<div class="icon-button js-icon-button -infinity js-toggle-file-view js-tt"
+						data-tt="Toggle View" 
+						data-tt-pos="left"></div>
+
+				{% endif %}
+
+			</li>
+
 		{% endif %}
-		</li>
+
 		<li class="stage-nav__item">
 			<div class="icon-button js-icon-button -sort js-sort js-pmt js-tt" 
 				data-pop-menu="sort" 

@@ -53,6 +53,10 @@
                 padding: 50px 30px;
             }
             
+            &.-settings {
+                padding: $base-line-height $stage-padding-left;
+            }
+            
             &.-timeline {
                 padding: 30px 24px;
             }

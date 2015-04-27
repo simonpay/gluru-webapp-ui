@@ -48,6 +48,11 @@
                         border-color: $dove-gray;
                         color: $dove-gray;
                     }
+
+                    .header-nav__icon {
+                        opacity: 1;
+                    }
+                    
                 }
 
                 // &.is-complete {
@@ -65,24 +70,74 @@
                         &.-daily-digest {
                             @include use-sprite("icon-sml__calendar--pink");
                         }
+
+                        &.-sources {
+                            @include use-sprite("icon-sml__sources--pink");
+                        }
+
+                        &.-profile {
+                            @include use-sprite("icon-sml__person--pink");
+                        }
+
+                        &.-people {
+                            @include use-sprite("icon-sml__people--pink");
+                        }
+
+                        &.-notifications {
+                            @include use-sprite("icon-sml__notifications--pink");
+                        }
+
+                        &.-security {
+                            @include use-sprite("icon-sml__security--pink");
+                        }
+
                     }
                 }
             }
-
+                
+                // initial margin values to mkae it easier to 
+                // set custom ones for the icons that need it
+                $margin-right:  -4px;
+                $margin-top:    2px;
                 .header-nav__icon {
                     @include transform( translateY(-2px) );
-                    @include transition( color .3s, border-color .3s );
-                    margin-right: -2px;
+                    @include transition( color .3s, border-color .3s, opacity .3s );
+                    margin: $margin-top $margin-right 0 0;
+                    opacity: 0.7;
 
                     &.-recent {
                         @include use-sprite("icon-sml__clock");
-                        margin-right: -4px;
+                        margin-right: $margin-right - 1px;
                     }
 
                     &.-daily-digest {
                         @include use-sprite("icon-sml__calendar");
+                        margin-right: $margin-right + 1px;
                     }
 
+                    &.-sources {
+                        @include use-sprite("icon-sml__sources");
+                        margin-top: $margin-top - 2px;
+                    }
+
+                    &.-profile {
+                        @include use-sprite("icon-sml__person");
+                    }
+
+                    &.-people {
+                        @include use-sprite("icon-sml__people");
+                        margin-right: $margin-right + 3px;
+                    }
+
+                    &.-notifications {
+                        @include use-sprite("icon-sml__notifications");
+                    }
+
+                    &.-security {
+                        @include use-sprite("icon-sml__security");
+                    }
+                    
+                    // numbers for process style nav - e.g. setup process
                     &.-num {
                         display: block;
                         position: relative;
@@ -91,6 +146,7 @@
                         border-radius: 100%;
                         border: 2px solid $alto;
                         line-height: 22px;
+                        margin: 2px -4px 0 0;
 
                         .is-complete & {
                             border-color: $green;

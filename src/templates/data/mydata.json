@@ -251,7 +251,7 @@
         "hide_stage_nav":           1,
         "hide_account_nav":         1,
         "hide_search_input":        1,
-        "bln_no_drawer":            1,
+        "drawer_is_not_present":    0,
         "sections": [
             {
                 "section_id":                           "create_account",
@@ -364,6 +364,113 @@
                 "help_data": {
                     "heading":                          "Ok let’s create a team and invite some people.",
                     "subheading":                       "Name your team, apply settings and most importantly invite some people."
+                }
+            }
+        ]
+    },
+    "settings": {
+        "hide_nav_items":           0,
+        "hide_stage_nav":           0,
+        "hide_account_nav":         0,
+        "hide_search_input":        0,
+        "drawer_is_not_present":    0,
+        "sections": [
+            {
+                "section_id":                           "profile",
+                "text":                                 "Profile",
+                "icon_class":                           "profile",
+                "url":                                  "settings-profile.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 Mrach, 2015"
+                }
+            },
+            {
+                "section_id":                           "sources",
+                "text":                                 "Sources",
+                "icon_class":                           "sources",
+                "url":                                  "settings-sources.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 Mrach, 2015"
+                },
+                "sources": [
+                    {
+                        "name":                          "Gmail",
+                        "info":                          "3.8 GB used",
+                        "icon_class":                    "icon__gmail",
+                        "action_type":                   "loader"
+                    },
+                    {
+                        "name":                          "Drive",
+                        "info":                          "5.1 GB used",
+                        "icon_class":                    "icon__gdrive",
+                        "action_type":                   "loader"
+                    },
+                    {
+                        "name":                          "Calendar",
+                        "icon_class":                    "icon__gcalendar",
+                        "action_type":                   "tick"
+                    },
+                    {
+                        "name":                          "Dropbox",
+                        "info":                          "",
+                        "icon_class":                    "icon__dropbox",
+                        "action_type":                   "button"
+                    },
+                    {
+                        "name":                          "Evernote",
+                        "info":                          "",
+                        "icon_class":                    "icon__evernote",
+                        "action_type":                   "button"
+                    },
+                    {
+                        "name":                          "Box",
+                        "info":                          "",
+                        "icon_class":                    "icon__box",
+                        "action_type":                   "button"
+                    },
+                    {
+                        "name":                          "Exchange",
+                        "info":                          "",
+                        "icon_class":                    "icon__exchange",
+                        "action_type":                   "button"
+                    }
+                ]
+            },
+            {
+                "section_id":                           "people",
+                "text":                                 "People",
+                "icon_class":                           "people",
+                "url":                                  "settings-people.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 Mrach, 2015"
+                }
+            },
+            {
+                "section_id":                           "notifications",
+                "text":                                 "Notifications",
+                "icon_class":                           "notifications",
+                "url":                                  "settings-notifications.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 Mrach, 2015"
+                }
+            },
+            {
+                "section_id":                           "security",
+                "text":                                 "Security",
+                "icon_class":                           "security",
+                "url":                                  "settings.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 Mrach, 2015"
                 }
             }
         ]

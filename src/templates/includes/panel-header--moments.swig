@@ -1,4 +1,4 @@
-<div class="panel-header panel-header--moments">
+<div class="panel-header panel-header--absolute">
     <nav class="header-nav">
         <ul class="header-nav__list">
             <li class="header-nav__item">

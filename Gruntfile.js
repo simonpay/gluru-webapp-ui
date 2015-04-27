@@ -49,6 +49,12 @@ module.exports = function(grunt) {
                 ],
                 dest: '<%= pkg.dest_paths.js %>pages/setup.js',
             },
+            settings: {
+                src: [
+                    '<%= pkg.src_paths.js %>pages/settings.js',
+                ],
+                dest: '<%= pkg.dest_paths.js %>pages/settings.js',
+            },
         },
         // Minification of JS
         uglify: {

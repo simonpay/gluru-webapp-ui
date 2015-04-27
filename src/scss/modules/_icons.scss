@@ -4,142 +4,165 @@
 
 // source icons
 // ------------------------------------
-.icon__everything {             @include use-sprite("icon__everything"); }
-.icon__custom {                 @include use-sprite("icon__everything"); }
-.icon__onedrive {               @include use-sprite("icon__onedrive"); }
-.icon__gcalendar {              @include use-sprite("icon__gcalendar"); }
-.icon__gmail {                  @include use-sprite("icon__gmail"); }
-.icon__exchange {               @include use-sprite("icon__exchange"); }
-.icon__box {                    @include use-sprite("icon__box"); }
-.icon__gdrive {                 @include use-sprite("icon__gdrive"); }
-.icon__dropbox {                @include use-sprite("icon__dropbox"); }
-.icon__evernote {               @include use-sprite("icon__evernote"); }
+.icon__everything {             	@include use-sprite("icon__everything"); }
+.icon__custom {                 	@include use-sprite("icon__everything"); }
+.icon__onedrive {               	@include use-sprite("icon__onedrive"); }
+.icon__gcalendar {              	@include use-sprite("icon__gcalendar"); }
+.icon__gmail {                  	@include use-sprite("icon__gmail"); }
+.icon__exchange {               	@include use-sprite("icon__exchange"); }
+.icon__box {                    	@include use-sprite("icon__box"); }
+.icon__gdrive {                 	@include use-sprite("icon__gdrive"); }
+.icon__dropbox {                	@include use-sprite("icon__dropbox"); }
+.icon__evernote {               	@include use-sprite("icon__evernote"); }
 
 // small variants
-.icon-sml__custom {             @include use-sprite("icon-sml__everything"); }
-.icon-sml__onedrive {           @include use-sprite("icon-sml__onedrive"); }
-.icon-sml__gcalendar {          @include use-sprite("icon-sml__gcalendar"); }
-.icon-sml__gmail {              @include use-sprite("icon-sml__gmail"); }
-.icon-sml__exchange {           @include use-sprite("icon-sml__exchange"); }
-.icon-sml__box {                @include use-sprite("icon-sml__box"); }
-.icon-sml__gdrive {             @include use-sprite("icon-sml__gdrive"); }
-.icon-sml__dropbox {            @include use-sprite("icon-sml__dropbox"); }
-.icon-sml__evernote {           @include use-sprite("icon-sml__evernote"); }
+.icon-sml__custom {             	@include use-sprite("icon-sml__everything"); }
+.icon-sml__onedrive {           	@include use-sprite("icon-sml__onedrive"); }
+.icon-sml__gcalendar {          	@include use-sprite("icon-sml__gcalendar"); }
+.icon-sml__gmail {              	@include use-sprite("icon-sml__gmail"); }
+.icon-sml__exchange {           	@include use-sprite("icon-sml__exchange"); }
+.icon-sml__box {                	@include use-sprite("icon-sml__box"); }
+.icon-sml__gdrive {             	@include use-sprite("icon-sml__gdrive"); }
+.icon-sml__dropbox {            	@include use-sprite("icon-sml__dropbox"); }
+.icon-sml__evernote {           	@include use-sprite("icon-sml__evernote"); }
 
 
 // nav icons (re-used in other places)
 // ------------------------------------
-.icon__moments--white {         @include use-sprite("icon__moments--white"); }
-.icon__files--white {           @include use-sprite("icon__files--white"); }
-.icon__people--white {          @include use-sprite("icon__people--white"); }
-.icon__projects--white {        @include use-sprite("icon__projects--white"); }
-.icon__autopush--white {        @include use-sprite("icon__autopush--white"); }
-.icon__settings--white {        @include use-sprite("icon__settings--white"); }
+.icon__moments--white {         	@include use-sprite("icon__moments--white"); }
+.icon__files--white {           	@include use-sprite("icon__files--white"); }
+.icon__people--white {          	@include use-sprite("icon__people--white"); }
+.icon__projects--white {        	@include use-sprite("icon__projects--white"); }
+.icon__autopush--white {        	@include use-sprite("icon__autopush--white"); }
+.icon__settings--white {        	@include use-sprite("icon__settings--white"); }
+// .icon__settings--pink {         @include use-sprite("icon__settings--pink"); }
 
 
 // file/folder icons
 // ------------------------------------
-.icon__folder {             	@include use-sprite("icon__folder"); }
-.icon__folder--shared {     	@include use-sprite("icon__folder--shared"); }
-.icon__folder--custom {     	@include use-sprite("icon__folder--custom"); }
-.icon__folder--project {    	@include use-sprite("icon__folder--project"); }
-.icon__file--pdf {          	@include use-sprite("icon__file--pdf"); }
-.icon__file--text {         	@include use-sprite("icon__file--text"); }
-.icon__file--email {        	@include use-sprite("icon__file--email"); }
-.icon__file--calendar {     	@include use-sprite("icon__file--calendar"); }
-.icon__file--spreadsheet {  	@include use-sprite("icon__file--spreadsheet"); }
-.icon__file--evernote {     	@include use-sprite("icon__file--evernote"); }
-.icon__file--drive {        	@include use-sprite("icon__file--drive"); }
-.icon__file--powerpoint {   	@include use-sprite("icon__file--powerpoint"); }
-.icon__file--sms {          	@include use-sprite("icon__file--sms"); }
+.icon__folder {             		@include use-sprite("icon__folder"); }
+.icon__folder--shared {     		@include use-sprite("icon__folder--shared"); }
+.icon__folder--custom {     		@include use-sprite("icon__folder--custom"); }
+.icon__folder--project {    		@include use-sprite("icon__folder--project"); }
+.icon__file--pdf {          		@include use-sprite("icon__file--pdf"); }
+.icon__file--text {         		@include use-sprite("icon__file--text"); }
+.icon__file--email {        		@include use-sprite("icon__file--email"); }
+.icon__file--calendar {     		@include use-sprite("icon__file--calendar"); }
+.icon__file--spreadsheet {  		@include use-sprite("icon__file--spreadsheet"); }
+.icon__file--evernote {     		@include use-sprite("icon__file--evernote"); }
+.icon__file--drive {        		@include use-sprite("icon__file--drive"); }
+.icon__file--powerpoint {   		@include use-sprite("icon__file--powerpoint"); }
+.icon__file--sms {          		@include use-sprite("icon__file--sms"); }
 
 // small variants
-.icon-sml__folder {             @include use-sprite("icon-sml__folder"); }
-.icon-sml__folder--shared {     @include use-sprite("icon-sml__folder--shared"); }
-.icon-sml__folder--custom {     @include use-sprite("icon-sml__folder--custom"); }
-.icon-sml__folder--project {    @include use-sprite("icon-sml__folder--project"); }
-.icon-sml__file--pdf {          @include use-sprite("icon-sml__file--pdf"); }
-.icon-sml__file--text {         @include use-sprite("icon-sml__file--text"); }
-.icon-sml__file--email {        @include use-sprite("icon-sml__file--email"); }
-.icon-sml__file--calendar {     @include use-sprite("icon-sml__file--calendar"); }
-.icon-sml__file--spreadsheet {  @include use-sprite("icon-sml__file--spreadsheet"); }
-.icon-sml__file--evernote {     @include use-sprite("icon-sml__file--evernote"); }
-.icon-sml__file--drive {        @include use-sprite("icon-sml__file--drive"); }
-.icon-sml__file--powerpoint {   @include use-sprite("icon-sml__file--powerpoint"); }
-.icon-sml__file--sms {          @include use-sprite("icon-sml__file--sms"); }
+.icon-sml__folder {             	@include use-sprite("icon-sml__folder"); }
+.icon-sml__folder--shared {     	@include use-sprite("icon-sml__folder--shared"); }
+.icon-sml__folder--custom {     	@include use-sprite("icon-sml__folder--custom"); }
+.icon-sml__folder--project {    	@include use-sprite("icon-sml__folder--project"); }
+.icon-sml__file--pdf {          	@include use-sprite("icon-sml__file--pdf"); }
+.icon-sml__file--text {         	@include use-sprite("icon-sml__file--text"); }
+.icon-sml__file--email {        	@include use-sprite("icon-sml__file--email"); }
+.icon-sml__file--calendar {     	@include use-sprite("icon-sml__file--calendar"); }
+.icon-sml__file--spreadsheet {  	@include use-sprite("icon-sml__file--spreadsheet"); }
+.icon-sml__file--evernote {     	@include use-sprite("icon-sml__file--evernote"); }
+.icon-sml__file--drive {        	@include use-sprite("icon-sml__file--drive"); }
+.icon-sml__file--powerpoint {   	@include use-sprite("icon-sml__file--powerpoint"); }
+.icon-sml__file--sms {          	@include use-sprite("icon-sml__file--sms"); }
 
 
 // event icons
 // ------------------------------------
-.icon__add--white {             @include use-sprite("icon__add--white"); }
-.icon__add { 		            @include use-sprite("icon__add"); }
-.icon__calendar {		        @include use-sprite("icon__calendar"); }
-.icon__calendar--white {        @include use-sprite("icon__calendar--white"); }
-.icon__edit--white {            @include use-sprite("icon__edit--white"); }
-.icon__now--white {             @include use-sprite("icon__now--white"); }
-.icon__now--green {             @include use-sprite("icon__now--green"); }
-.icon__phone {                  @include use-sprite("icon__phone"); }
-.icon__phone--white {           @include use-sprite("icon__phone--white"); }
-.icon__phone-in {               @include use-sprite("icon__phone-in"); }
-.icon__phone-in--white {        @include use-sprite("icon__phone-in--white"); }
-.icon__people--white {          @include use-sprite("icon__people--white"); }
-.icon__files--white {           @include use-sprite("icon__files--white"); }
-.icon__people {                 @include use-sprite("icon__people"); }
-.icon__files {                  @include use-sprite("icon__files"); }
+.icon__add--white {             	@include use-sprite("icon__add--white"); }
+.icon__add { 		            	@include use-sprite("icon__add"); }
+.icon__calendar {		        	@include use-sprite("icon__calendar"); }
+.icon__calendar--white {        	@include use-sprite("icon__calendar--white"); }
+.icon__calendar--pink { 	    	@include use-sprite("icon__calendar--pink"); }
+// .icon__clock { 		 		    @include use-sprite("icon__clock"); }
+// .icon__clock--pink { 	    	@include use-sprite("icon__clock--pink"); }
+.icon__edit--white {            	@include use-sprite("icon__edit--white"); }
+.icon__now--white {             	@include use-sprite("icon__now--white"); }
+.icon__now--green {             	@include use-sprite("icon__now--green"); }
+.icon__phone {                  	@include use-sprite("icon__phone"); }
+.icon__phone--white {           	@include use-sprite("icon__phone--white"); }
+.icon__phone-in {               	@include use-sprite("icon__phone-in"); }
+.icon__phone-in--white {        	@include use-sprite("icon__phone-in--white"); }
+.icon__people--white {          	@include use-sprite("icon__people--white"); }
+// .icon__people--pink {	        @include use-sprite("icon__people--pink"); }
+.icon__person {			        	@include use-sprite("icon__person"); }
+.icon__person--white {	        	@include use-sprite("icon__person--white"); }
+// .icon__person--pink {	        @include use-sprite("icon__person--pink"); }
+.icon__files--white {           	@include use-sprite("icon__files--white"); }
+.icon__people {                 	@include use-sprite("icon__people"); }
+.icon__files {                  	@include use-sprite("icon__files"); }
 
 // daily digest
 .icon__coffee--blue,
 .icon__digest--blue
-{					            @include use-sprite("icon__coffee--blue"); }
+{					            	@include use-sprite("icon__coffee--blue"); }
 .icon__coffee--white,
 .icon__digest--white
-{						        @include use-sprite("icon__coffee--white"); }
+{						        	@include use-sprite("icon__coffee--white"); }
 
 
 // sml variants
-.icon-sml__phone {              @include use-sprite("icon-sml__phone"); }
-.icon-sml__phone-in {           @include use-sprite("icon-sml__phone-in"); }
+.icon-sml__phone {              	@include use-sprite("icon-sml__phone"); }
+.icon-sml__phone-in {           	@include use-sprite("icon-sml__phone-in"); }
 
 //  
 // ------------------------------------
-.icon__edit {                   @include use-sprite("icon__edit"); }
-.icon__share {                  @include use-sprite("icon__share"); }
-.icon__delete {                 @include use-sprite("icon__delete"); }
-.icon__inspect {                @include use-sprite("icon__inspect"); }
-.icon__folder--white {          @include use-sprite("icon__folder--white"); }
-.icon__share--white {           @include use-sprite("icon__share--white"); }
-.icon__delete--white {          @include use-sprite("icon__delete--white"); }
-.icon__inspect--white {         @include use-sprite("icon__inspect--white"); }
+.icon__edit {                   	@include use-sprite("icon__edit"); }
+.icon__share {                  	@include use-sprite("icon__share"); }
+.icon__delete {                 	@include use-sprite("icon__delete"); }
+.icon__inspect {                	@include use-sprite("icon__inspect"); }
+.icon__folder--white {          	@include use-sprite("icon__folder--white"); }
+.icon__share--white {           	@include use-sprite("icon__share--white"); }
+.icon__delete--white {          	@include use-sprite("icon__delete--white"); }
+.icon__inspect--white {         	@include use-sprite("icon__inspect--white"); }
 
 
 //  stage nav icons (top right)
 // ------------------------------------
-.icon__sort--dark {             @include use-sprite("icon__sort--dark"); }
-.icon__infinityview--dark {     @include use-sprite("icon__infinityview--dark"); }
-.icon__splitview--dark {        @include use-sprite("icon__splitview--dark"); }
-.icon__toggledrawer--dark {     @include use-sprite("icon__toggledrawer--dark"); }
-.icon__toggleactions--dark {    @include use-sprite("icon__toggleactions--dark"); }
-.icon__search--dark {           @include use-sprite("icon__search--dark"); }
-.icon__now--dark {              @include use-sprite("icon__now--dark"); }
+.icon__sort--dark {             	@include use-sprite("icon__sort--dark"); }
+.icon__infinityview--dark {     	@include use-sprite("icon__infinityview--dark"); }
+.icon__splitview--dark {        	@include use-sprite("icon__splitview--dark"); }
+.icon__toggledrawer--dark {     	@include use-sprite("icon__toggledrawer--dark"); }
+.icon__toggleactions--dark {    	@include use-sprite("icon__toggleactions--dark"); }
+.icon__search--dark {           	@include use-sprite("icon__search--dark"); }
+.icon__now--dark {              	@include use-sprite("icon__now--dark"); }
 
 
 //  custom icons
 // ------------------------------------
-.icon__nav-add--green {         @include use-sprite("icon__nav-add--green"); }
-.icon__expand {                 @include use-sprite("icon__expand"); }
-.icon__notifications--white {   @include use-sprite("icon__notifications--white"); }
+.icon__nav-add--green {         	@include use-sprite("icon__nav-add--green"); }
+.icon__expand {                 	@include use-sprite("icon__expand"); }
+.icon__notifications--white {   	@include use-sprite("icon__notifications--white"); }
 
-.icon__arrow--white {           @include use-sprite("icon__arrow--white"); }
+.icon__arrow--white {           	@include use-sprite("icon__arrow--white"); }
 
-.icon-sml__tick {               @include use-sprite("icon-sml__tick"); }
-.icon-sml__tick--white {        @include use-sprite("icon-sml__tick--white"); }
-.icon-sml__clock {              @include use-sprite("icon-sml__clock"); }
-.icon-sml__clock--pink {        @include use-sprite("icon-sml__clock--pink"); }
-.icon-sml__calendar {           @include use-sprite("icon-sml__calendar"); }
-.icon-sml__calendar--pink {     @include use-sprite("icon-sml__calendar--pink"); }
-.icon-sml__chevron { 		    @include use-sprite("icon-sml__chevron"); }
+.icon-sml__tick {               	@include use-sprite("icon-sml__tick"); }
+.icon-sml__tick--white {        	@include use-sprite("icon-sml__tick--white"); }
+.icon-sml__chevron { 		    	@include use-sprite("icon-sml__chevron"); }
 
-// positioning for icon 
+
+//  header nav icons - small dimensions
+// ------------------------------------
+.icon-sml__clock {              	@include use-sprite("icon-sml__clock"); }
+.icon-sml__clock--pink {        	@include use-sprite("icon-sml__clock--pink"); }
+.icon-sml__calendar {           	@include use-sprite("icon-sml__calendar"); }
+.icon-sml__calendar--pink {     	@include use-sprite("icon-sml__calendar--pink"); }
+.icon-sml__person {             	@include use-sprite("icon-sml__person"); }
+.icon-sml__person--pink {       	@include use-sprite("icon-sml__person--pink"); }
+.icon-sml__sources {       			@include use-sprite("icon-sml__sources"); }
+.icon-sml__sources--pink { 			@include use-sprite("icon-sml__sources--pink"); }
+.icon-sml__people {             	@include use-sprite("icon-sml__people"); }
+.icon-sml__people--pink {       	@include use-sprite("icon-sml__people--pink"); }
+.icon-sml__notifications {       	@include use-sprite("icon-sml__notifications"); }
+.icon-sml__notifications--pink { 	@include use-sprite("icon-sml__notifications--pink"); }
+.icon-sml__security {           	@include use-sprite("icon-sml__security"); }
+.icon-sml__security--pink {     	@include use-sprite("icon-sml__security--pink"); }
+
+
+// positioning for chevron icon in hierarchy paths 
 .icon__pos--path {
 	display: inline-block;
 	position: relative;
