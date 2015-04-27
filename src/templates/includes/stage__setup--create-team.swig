@@ -7,7 +7,7 @@
     
     <form>
 
-        <h1 class="stage__heading-text">Create Team</h1>
+        <h1 class="stage__heading-text">Create team</h1>
 
         <p class="stage__text">You can add team functionality to Gluru.</p>
 
@@ -41,7 +41,7 @@
 
                 <div class="med-6">
 
-                    <h2 class="stage__heading-text">Team Name</h2>
+                    <h2 class="stage__heading-text">Team name</h2>
 
                     <p>
                         <input 
@@ -61,7 +61,7 @@
 
         <section class="form-section -team-settings is-hidden js-section-team-settings">
 
-            <h2 class="stage__heading-text">Team Settings</h2>
+            <h2 class="stage__heading-text">Team settings</h2>
 
             <div class="row">
                 <div class="med-11">
@@ -128,7 +128,7 @@
             <div class="row">
                 <div class="med-12">
 
-                    <h1 class="stage__heading-text">Team Access Settings</h1>
+                    <h1 class="stage__heading-text">Team access settings</h1>
 
                     <p class="stage__text">Do you want each invited member to connect a source to join?</p>
                     
@@ -169,7 +169,7 @@
 
             <div class="row">
                 <div class="med-11">
-                    <h1 class="stage__heading-text">Invite People</h1>
+                    <h1 class="stage__heading-text">Invite people</h1>
                 </div>
             </div>
             

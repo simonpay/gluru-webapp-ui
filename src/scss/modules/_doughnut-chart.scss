@@ -1,0 +1,90 @@
+/*------------------------------------*\
+# _DOUGHNUT-CHART
+\*------------------------------------*/
+
+// 'doughnut' style pie charts using svg 
+
+// sass-map for source data
+$source-data: (
+	"gmail": 		$gmail-red,
+	"gdrive":  		$gdrive-yellow,
+	"dropbox":  	$dropbox-blue,
+	"evernote":  	$evernote-green,
+	"box":  		$box-blue,
+	"onedrive":  	$onedrive-blue,
+	"exchange":  	$exchange-blue
+);
+
+// mixin to build custom color modifier classes below
+@mixin build-doughnut-chart-color-class( $source-class, $source-color-name, $property ) {
+	.-#{$source-class} & {
+		#{$property}: $source-color-name;
+	}
+}
+
+.doughnut-chart__container {
+	position: relative;
+	float: left;
+	margin: 10px;
+	padding-bottom: 10px;
+	// outline: 1px solid red;
+}
+
+	.doughnut-chart {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		// outline: 1px solid red;
+	}
+
+		.doughnut-chart__svg {
+			position: absolute;
+			@include transform( rotate( -90deg ) );
+			// @include transform( rotate3d(1, 1, 0, 180deg) );
+		}
+
+			.doughnut-chart__ring {
+				stroke-width: 11px;
+				stroke: $alto;
+				fill: none;
+				stroke-dasharray: 314;
+
+				// &.-white {
+				// 	display: none;
+				// 	stroke: $white;
+				// 	stroke-dashoffset: 156.9999999999996 - ( 0.87222222222222 * 2 ) ; // (314 / 360) * 180
+				// }
+
+				&.-color {
+					stroke: $dusty-gray;
+					stroke-dashoffset: 156.9999999999996; // (314 / 360) * 180
+					stroke-dashoffset: 314; // (314 / 360) * 180
+
+					// output custom color blocks for svg stroke
+					@each $source, $color in $source-data {
+						@include build-doughnut-chart-color-class( #{$source}, #{$color}, stroke );
+					}
+				}
+			}
+
+				.doughnut-chart__text {
+					@include scut-center-transform;
+					top: 49%;
+					font-size: rem(25);
+					font-weight: lighter;
+					color: $black;
+				}
+
+	.doughnut-chart__bar {
+		height: 10px;
+		background: $alto;
+		margin: 20px 5px 12px;
+		border-radius: 2px;
+		
+		// output custom color blocks for bar background
+		@each $source, $color in $source-data {
+			@include build-doughnut-chart-color-class( #{$source}, #{$color}, background );
+		}
+	}
+

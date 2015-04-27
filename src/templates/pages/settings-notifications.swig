@@ -1,0 +1,31 @@
+
+{% extends 'src/templates/layouts/base.swig' %}
+
+{% block title %}{{meta.title}}{% endblock %}
+{% block meta-description %}{{meta.description}}{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/select2.css" />
+    {% parent %}
+{% endblock %}
+
+{% block content %}
+
+    {% set obj = mydata.settings %}
+
+    {# main-nav #}
+    {% include "src/templates/includes/main-nav.swig" %}
+
+    {# drawer #}
+    {% include "src/templates/includes/drawer-files.swig" %}
+
+    {# stage #}
+    {% include "src/templates/includes/stage__settings--notifications.swig" %}
+
+{% endblock %}
+
+{% block javascripts %}
+    {% parent %}
+    <script src="js/pages/settings.js"></script>
+{% endblock %}

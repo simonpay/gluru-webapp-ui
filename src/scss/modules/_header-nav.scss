@@ -63,6 +63,7 @@
                     box-shadow: inset 0px -4px 0px $pink;
 
                     .header-nav__icon {
+                        opacity: 1;
                         &.-recent {
                             @include use-sprite("icon-sml__clock--pink");
                         }

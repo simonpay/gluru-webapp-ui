@@ -21,6 +21,7 @@
 $dusty-gray:                #999;                       // mid gray
 $silver:                    #ccc;                       // light gray
 $gallery:                   #eee;                       // off white
+$mine-shaft:                #333;                       // very dark gray
 
 $pink:                      #d41a68;                    // pink
 $pink-dark:                 #af044c;                    // dark pink
@@ -30,8 +31,19 @@ $pink-lighter:              #e5689d;                    // lighter pink
 $orange:                    #f9441f;                    // orange
 $green:                     #16b451;                    // green
 $blue:                      #2b7de1;                    // blue
+
+// brand colors
+$gmail-red:					#e41212;
+$gdrive-yellow:				#fccd48;
+$dropbox-blue:				#007ee6;
+$evernote-green:            #45b52d;                    // lime green
+$box-blue:					#abd5eb;
+$onedrive-blue:				#0047b4;
+$exchange-blue:				#0070c8;
+
 $light-green:               #8ce31c;                    // lime green
 $zeus:                      #2e261e;                    // very very dark brown
+
 // shades of gray - white to black range:   
 $white:                     #fff;                       // white
 $alabaster:                 #fafafa;                    // virtually white
@@ -47,6 +59,7 @@ $dusty-gray:                $dusty-gray;                // mid-light gray
 $dusty-gray-dark:           darken($dusty-gray, 5%);
 $gray:                      #7f7f7f;                    // mid gray
 $dove-gray:                 #666;                       // dark gray
+$mine-shaft-light:          lighten(#333, 5%);
 $mine-shaft:                #333;                       // very dark gray
 $black:                     #000;                       // black
 

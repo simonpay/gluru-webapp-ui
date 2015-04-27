@@ -384,7 +384,44 @@
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
                     "stage_sub_heading":                "25 Mrach, 2015"
-                }
+                },
+                "space_by_source": [
+                    {
+                        "source"                    :   "gmail",
+                        "percentage_available"      :   "85",
+                        "icon_class"                :   "icon__gmail"
+                    },
+                    {
+                        "source"                    :   "gdrive",
+                        "percentage_available"      :   "95",
+                        "icon_class"                :   "icon__gdrive"
+                    },
+                    {
+                        "source"                    :   "dropbox",
+                        "percentage_available"      :   "95",
+                        "icon_class"                :   "icon__dropbox"
+                    },
+                    {
+                        "source"                    :   "evernote",
+                        "percentage_available"      :   "75",
+                        "icon_class"                :   "icon__evernote"
+                    },
+                    {
+                        "source"                    :   "box",
+                        "percentage_available"      :   "82",
+                        "icon_class"                :   "icon__box"
+                    },
+                    {
+                        "source"                    :   "onedrive",
+                        "percentage_available"      :   "92",
+                        "icon_class"                :   "icon__onedrive"
+                    },
+                    {
+                        "source"                    :   "exchange",
+                        "percentage_available"      :   "79",
+                        "icon_class"                :   "icon__exchange"
+                    }
+                ]
             },
             {
                 "section_id":                           "sources",
@@ -466,7 +503,7 @@
                 "section_id":                           "security",
                 "text":                                 "Security",
                 "icon_class":                           "security",
-                "url":                                  "settings.html",
+                "url":                                  "settings-security.html",
                 "stage_data": {
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",

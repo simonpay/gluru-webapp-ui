@@ -47,10 +47,11 @@
 	    }
 
 			.stage__heading-text {
-				font-size: rem(20);
-				font-weight: bold;
 			    margin-top: $base-line-height;
 			    margin-bottom: $base-line-height / 2;
+				font-size: rem(20);
+				font-weight: bold;
+				color: $mine-shaft-light;
 
 			    &:first-child {
 			        margin-top: 0;

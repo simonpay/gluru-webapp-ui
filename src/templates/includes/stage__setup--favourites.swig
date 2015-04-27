@@ -10,7 +10,7 @@
 
         <div class="u-layout -w-400">
             
-            <h1 class="stage__heading-text">Add Favourites</h1>
+            <h1 class="stage__heading-text">Add favourites</h1>
 
             <div class="js-favourites-row-container">
 
