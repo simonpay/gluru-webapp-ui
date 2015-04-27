@@ -38,3 +38,79 @@ body {
         display: none;
     }
 }
+
+
+// temp dev buttons for performing actions
+.tmp-buttons {
+    z-index: 9999;
+    position: fixed;
+    top: -25px;
+    // top: 5px;
+    left: 50%;
+    @include transform( translateX(-50%) );
+    // right: 0;
+    margin: 0 auto;
+    padding: 5px 0 15px;
+    @include transition( top 0.2s );
+
+    &:hover {
+        top: -2px;
+    }
+
+    // &.-files {
+    //     top: 28px;
+    // }
+    
+    .button-group {
+        position: relative;
+        float: right;
+        margin-right: 5px;
+        padding-right: 5px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            width: 1px;
+            height: 100%;
+            background: $silver;
+        }
+
+        &.is-hidden {
+            display: none !important;
+        }
+    }
+    
+    .label {
+        float: left;
+        padding: 2px 3px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .button {
+        float: left;
+        margin: 0 2px;
+        border: 1px solid gray;
+        padding: 1px 3px;
+        background: rgba(255,255,255,0.8);
+        outline: none;
+        font-size: 9px;
+        cursor: pointer;
+        @include mq(large) {
+            background: rgba(0,0,0,0.075);
+        }
+        &:hover {
+            background: rgba(255,255,255,0.7);
+            @include mq(large) {
+                background: rgba(0,0,0,0.075);
+            }
+        }
+        &:active {
+            background: rgba(255,255,255,0.6);
+            @include mq(large) {
+                background: rgba(0,0,0,0.2);
+            }
+        }
+    }
+}

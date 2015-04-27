@@ -971,6 +971,11 @@
     // $tmp_open_actions.on( "click", function(){
     //  obj_gluru.actions.set_state( "open" );
     // });
+    // link to setup section
+    $( ".js-setup-pages" ).on( "click", function( e ){
+        location.href = "setup-create-account.html";
+        e.preventDefault();
+    });
 
 
     // DRAWER
@@ -1026,6 +1031,7 @@
     $now.on( "click", function() {
         obj_gluru.moments.timeline.now.call( $(this) );
     });
+
     // TIMELINE SPLIT VIEW
     // -------------------------------------------------
     // set timeline view 
@@ -1037,6 +1043,8 @@
     //      Th 3 variations are hardcoded in the HTML.
     //      This just sets display for the 3 variations
     //      (hides all then shows the target view)
+
+    // dev buttons
     $( ".js-buttons-moments .button" ).on( "click", function(){
         obj_gluru.moments.timeline.set_timeline_view.call( $(this) );
     });
@@ -1067,6 +1075,7 @@
         .on( "click", function(){
             obj_gluru.files.do_click.call( $(this) );
     });
+
     // FILE EXPLORER SPLIT VIEW
     // -------------------------------------------------
     // set file explorer view 
@@ -1078,6 +1087,8 @@
     //      Th 3 variations are hardcoded in the HTML.
     //      This just sets display for the 3 variations
     //      (hides all then shows the target view)
+
+    // dev buttons
     $( ".js-buttons-files .button" ).on( "click", function(){
         obj_gluru.files.set_file_explorer_view.call( $(this) );
     });

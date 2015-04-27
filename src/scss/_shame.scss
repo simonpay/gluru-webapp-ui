@@ -26,139 +26,66 @@
 // }
 
 
-// temp buttons
-.tmp-buttons {
-    z-index: 9999;
-    position: fixed;
-    top: -25px;
-    // top: 5px;
-    left: 50%;
-    @include transform( translateX(-50%) );
-    // right: 0;
-    margin: 0 auto;
-    padding: 5px 0 15px;
-    @include transition( top 0.2s );
-
-    &:hover {
-        top: -2px;
-    }
-
-    // &.-files {
-    //     top: 28px;
-    // }
-    
-    .button-group {
-        position: relative;
-        float: right;
-        margin-right: 5px;
-        padding-right: 5px;
-
-        &:after {
-            content: "";
-            position: absolute;
-            right: 0;
-            width: 1px;
-            height: 100%;
-            background: $silver;
-        }
-
-        &.is-hidden {
-            display: none !important;
-        }
-    }
-    
-    .label {
-        float: left;
-        padding: 2px 3px;
-        font-size: 10px;
-        font-weight: bold;
-    }
-
-    .button {
-        float: left;
-        margin: 0 2px;
-        border: 1px solid gray;
-        padding: 1px 3px;
-        background: rgba(255,255,255,0.8);
-        outline: none;
-        font-size: 9px;
-        cursor: pointer;
-        @include mq(large) {
-            background: rgba(0,0,0,0.075);
-        }
-        &:hover {
-            background: rgba(255,255,255,0.7);
-            @include mq(large) {
-                background: rgba(0,0,0,0.075);
-            }
-        }
-        &:active {
-            background: rgba(255,255,255,0.6);
-            @include mq(large) {
-                background: rgba(0,0,0,0.2);
-            }
-        }
-    }
-}
 
 
-.thumbnail {
-    height: 99px;
-    margin-bottom: 10px; 
-    background-image: url("../img/tmp-thumbnail-preview.png");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
 
-}
+// .thumbnail {
+//     height: 99px;
+//     margin-bottom: 10px; 
+//     background-image: url("../img/tmp-thumbnail-preview.png");
+//     background-repeat: no-repeat;
+//     background-position: 50% 50%;
+//     background-size: contain;
+
+// }
 
 
 
 
-// harry roberts css for review
-// re-usable nav
-.nav {
-    list-style: none;
-    margin-left: 0;
+// // harry roberts css for review
+// // re-usable nav
+// .nav {
+//     list-style: none;
+//     margin-left: 0;
 
-    & > li,
-    & > li > a {
-        display: inline-block;
-    }
-}
+//     & > li,
+//     & > li > a {
+//         display: inline-block;
+//     }
+// }
 
-// island object
-// http://csswizardry.com/2011/10/the-island-object/
-.island {
-    padding: 20px;
-    margin-bottom: 20px;
-}
+// // island object
+// // http://csswizardry.com/2011/10/the-island-object/
+// .island {
+//     padding: 20px;
+//     margin-bottom: 20px;
+// }
 
-.island > :last-child {
-    margin-bottom: 0;
-    /* Remove the margin from the last child of a boxed off area so that we don’t end up with compounded margin/padding spacings. */
-}
+// .island > :last-child {
+//     margin-bottom: 0;
+//     // Remove the margin from the last child of a boxed off area so that we don’t end up with compounded margin/padding spacings.
+// }
 
-.content {
-    width: 460px;
-    float: left;
-    background-color: #fff;
-}
+// .content {
+//     width: 460px;
+//     float: left;
+//     background-color: #fff;
+// }
 
-.sub-content {
-    width: 160px;
-    float: left;
-    background-color: #333;
-    color: #fff;
-}
+// .sub-content {
+//     width: 160px;
+//     float: left;
+//     background-color: #333;
+//     color: #fff;
+// }
 
-.promo {
-    border: 1px solid #ff8;
-    background-color: #ffc;
-    color: #333;
-}
+// .promo {
+//     border: 1px solid #ff8;
+//     background-color: #ffc;
+//     color: #333;
+// }
 
-.twitter {
-    color: #fff;
-    background-color: #00a0d1;
-}
+// .twitter {
+//     color: #fff;
+//     background-color: #00a0d1;
+// }
