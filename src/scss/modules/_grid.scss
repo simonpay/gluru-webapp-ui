@@ -8,6 +8,10 @@
 .row {
     @include row;
 
+    &.-pad-v {
+        padding: 12px 0;
+    }
+
     // the header row in setup forms
     &.-grid-header {
         height: 26px;

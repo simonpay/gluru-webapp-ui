@@ -8,7 +8,7 @@
     <section class="u-cf">
         
         <h1 class="stage__heading-text u-mb0">Account profile</h1>
-        <p class="stage__text">View and manage your profile and account details.</p>
+        <p class="stage__text u-mb++">View and manage your profile and account details.</p>
 
         <div class="row">
             <div class="lrg-4 u-cf">
@@ -96,7 +96,7 @@
 
     <section>
         
-        <h1 class="stage__heading-text">Account email</h1>
+        <h2 class="stage__subheading-text">Account email</h2>
 
         <div class="row">
             <div class="lrg-4 u-cf">
@@ -129,7 +129,7 @@
 
     <section>
         
-        <h1 class="stage__heading-text">Total usage - available space</h1>
+        <h2 class="stage__subheading-text">Total usage - available space</h2>
 
         <div class="progress-bar__container u-mb">
             <div class="progress-bar" style="width:5%"></div>
@@ -146,9 +146,9 @@
 
     <section>
         
-        <h1 class="stage__heading-text">Available space by source</h1>
+        <h2 class="stage__subheading-text">Available space by source</h2>
 
-        <div class="space-by-source">
+        <div class="doughnut-chart__wrap js-doughnut-chart">
             
             {% for obj_source in obj_setup_data.space_by_source %}
 

@@ -29,23 +29,25 @@
         .table__row { // tr
             display: table-row;
 
-            // &:not(.-header) {
+            .-selectable & {
+                
                 &:not(.is-selected):hover {
                     .table__col {
                         cursor: pointer;
                         background-color: $gallery;
                     }
                 }
-                &:hover, 
-                &.is-selected {
+            }
 
-                    // show file nav on table row hover
-                    .file-nav {
-                        opacity: 1;
-                        @include transition(opacity 0.3s);
-                    }
+            &:hover, 
+            &.is-selected {
+
+                // show file nav on table row hover
+                .file-nav {
+                    opacity: 1;
+                    @include transition(opacity 0.3s);
                 }
-            // }
+            }
         }
 
             .table__col { // td
@@ -59,6 +61,11 @@
                 border-bottom: 1px solid $gallery;
                 @include transition(all 0.3s);
                 
+                // when inside .table.-tall-cells 
+                .-tall-cells & {
+                    height: 64px;
+                }
+
                 // add rounded corners to first and last table row cols
                 // inside tables on 'daily-digest' screen to match 
                 // priority-box panels used for people / meetings
@@ -96,6 +103,11 @@
 
                 &.-modified {
                     width: 120px;
+                }
+                
+                // deauth button in settings sources table
+                &.-deauth {
+                    width: 140px;
                 }
 
                 &.-source {

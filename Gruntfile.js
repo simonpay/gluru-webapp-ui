@@ -132,15 +132,15 @@ module.exports = function(grunt) {
                         cwd: '<%= pkg.project_paths.bower_folder %>jquery-ui/themes/smoothness',
                         src: ['**/*'],
                         dest: '<%= pkg.dest_paths.css %>'
-                    },
-                    // select2 v3.4.5 css (no sass for this version)
-                    {
-                        expand: true,
-                        cwd: '<%= pkg.project_paths.bower_folder %>select2',
-                        // src: ['select2.css', 'select2.png', 'select2x2.png', 'select2-spinner.gif'],
-                        src: ['select2.css'],
-                        dest: '<%= pkg.dest_paths.css %>'
                     }
+                    // // select2 v3.4.5 css (no sass for this version)
+                    // {
+                    //     expand: true,
+                    //     cwd: '<%= pkg.project_paths.bower_folder %>select2',
+                    //     // src: ['select2.css', 'select2.png', 'select2x2.png', 'select2-spinner.gif'],
+                    //     src: ['select2.css'],
+                    //     dest: '<%= pkg.dest_paths.css %>'
+                    // }
                 ]
             }
         },

@@ -140,6 +140,8 @@
 
 // forms
 @import "modules/forms/form-elements",
+        // select2 base css left 'as-is' and converted to _select2.scss
+        "modules/forms/select2/select2-base",
         "modules/forms/select2-overrides",
         "modules/forms/jquery-ui-checkbox-overrides";
 

@@ -438,49 +438,50 @@
                 "stage_data": {
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
-                    "stage_sub_heading":                "25 Mrach, 2015"
+                    "stage_sub_heading":                "25 March, 2015"
                 },
                 "sources": [
                     {
                         "name":                          "Gmail",
-                        "info":                          "3.8 GB used",
                         "icon_class":                    "icon__gmail",
-                        "action_type":                   "loader"
+                        "authentication_date":           "01/08/2015",
+                        "usage":                         "You are using 2.31 GB (15%) of your 15 GB"
                     },
                     {
-                        "name":                          "Drive",
-                        "info":                          "5.1 GB used",
+                        "name":                          "Google Drive",
                         "icon_class":                    "icon__gdrive",
-                        "action_type":                   "loader"
+                        "authentication_date":           "12/10/2015",
+                        "usage":                         "You are using 0.25 GB (0%) of your 30 GB"
                     },
                     {
-                        "name":                          "Calendar",
+                        "name":                          "Google Calendar",
                         "icon_class":                    "icon__gcalendar",
-                        "action_type":                   "tick"
+                        "authentication_date":           "04/03/2015",
+                        "usage":                         ""
                     },
                     {
                         "name":                          "Dropbox",
-                        "info":                          "",
                         "icon_class":                    "icon__dropbox",
-                        "action_type":                   "button"
+                        "authentication_date":           "21/05/2015",
+                        "usage":                         "You are using 4.2 GB (1%) of your 28 GB"
                     },
                     {
                         "name":                          "Evernote",
-                        "info":                          "",
                         "icon_class":                    "icon__evernote",
-                        "action_type":                   "button"
+                        "authentication_date":           "11/01/2015",
+                        "usage":                         "You are using 0 MB (0%) of your 60 MB"
                     },
                     {
                         "name":                          "Box",
-                        "info":                          "",
                         "icon_class":                    "icon__box",
-                        "action_type":                   "button"
+                        "authentication_date":           "21/02/2015",
+                        "usage":                         "You are using 16.3 MB (0%) of your 10 GB"
                     },
                     {
                         "name":                          "Exchange",
-                        "info":                          "",
                         "icon_class":                    "icon__exchange",
-                        "action_type":                   "button"
+                        "authentication_date":           "30/05/2015",
+                        "usage":                         "You are using 2.31 GB (15%) of your 15 GB"
                     }
                 ]
             },
@@ -504,7 +505,25 @@
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
                     "stage_sub_heading":                "25 Mrach, 2015"
-                }
+                },
+                "notifications": [
+                    {
+                        "name":                         "Daily Digest",
+                        "id":                           "daily_digest"
+                    },
+                    {
+                        "name":                         "New product features",
+                        "id":                           "new_product_features"
+                    },
+                    {
+                        "name":                         "Gluru source storage nearly full",
+                        "id":                           "gluru_source_storage_nearly_full"
+                    },
+                    {
+                        "name":                         "Gluru newsletter",
+                        "id":                           "gluru_newsletter"
+                    }
+                ]
             },
             {
                 "section_id":                           "security",

@@ -137,6 +137,11 @@
     margin-bottom: $base-line-height * 2.5 !important;
 }
 
+.u-mb- {
+    margin-bottom: $base-line-height / 2 !important;
+}
+
+
 .u-ml {
     margin-left: $base-line-height !important;
 }
@@ -151,4 +156,8 @@
 
 .u-text-center {
     text-align: center !important;
+}
+
+.u-text-right {
+    text-align: right !important;
 }

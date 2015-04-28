@@ -93,7 +93,7 @@
 
                 {% if obj_section.section_id === "people" %}
 
-                    <div class="table -daily-digest">
+                    <div class="table -selectable -daily-digest">
 
                         {% for obj_file in obj_item.files %}
                             {% set obj_file_row = obj_file %}
@@ -108,7 +108,7 @@
 
                         <div class="daily-digest__section-heading -docs">{{ obj_file_category.file_category_name }}</div>
 
-                        <div class="table -daily-digest -categories">
+                        <div class="table -selectable -daily-digest -categories">
 
                             {% for obj_file in obj_file_category.files %}
                                 {% set obj_file_row = obj_file %}

@@ -10,7 +10,10 @@
 
 
     var 
-        $section_team_setup           	= $( ".js-section-team-setup" );
+        $section_team_setup           	= $( ".js-section-team-setup" ),
+        $doughnut_chart					= $( ".js-doughnut-chart" ),
+        $prevent_fout					= $( ".prevent-fout" )
+        ;
 
 
 
@@ -45,7 +48,14 @@
 
 
     setTimeout(function(){
-    	obj_settings_actions.doughnut_charts._do_animation();
+    	if ( $doughnut_chart.length > 0 ) {
+    		obj_settings_actions.doughnut_charts._do_animation();
+    	}
     }, 1000);
+
+
+    $prevent_fout.removeClass( "prevent-fout" );
+
+    $( ".checkbox_slider" ).button();
 
 })();

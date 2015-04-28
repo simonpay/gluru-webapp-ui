@@ -1153,10 +1153,10 @@
     };
 
     //Make table sortable
-    $(".table .table__body").sortable({
+    $(".table.sortable .table__body").sortable({
         helper: fixHelperModified,
         stop: function(event,ui) {
-            renumber_table('.table');
+            renumber_table('.table.sortable');
         }
     }).disableSelection();
 

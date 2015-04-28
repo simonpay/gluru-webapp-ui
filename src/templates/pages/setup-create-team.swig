@@ -5,7 +5,6 @@
 
 {% block head %}
     <link rel="stylesheet" href="css/jquery-ui.css" />
-    <link rel="stylesheet" href="css/select2.css" />
     {% parent %}
 {% endblock %}
 

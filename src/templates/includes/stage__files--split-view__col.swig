@@ -8,7 +8,7 @@
 	{# <div class="split-view-wrap"> #}
 	<div class="scrollable-content__wrap -files">
 		<div class="scrollable-content">
-			<div class="table">
+			<div class="table -selectable">
 
 				{%> "table-row__file--header" %}
 

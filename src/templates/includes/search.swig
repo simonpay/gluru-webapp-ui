@@ -9,7 +9,7 @@
 		<div class="search-results-wrap">
 
 			<div class="scrollable-content">
-				<div class="table">
+				<div class="table -selectable">
 					<div class="table__header">
 						<div class="table__col -file-name">
 							<div class="table__text--header">Filename</div>

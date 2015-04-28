@@ -703,152 +703,16 @@ Version: 3.4.5 Timestamp: Mon Nov  4 08:22:42 PST 2013
 }
 
 
-
-
-
-
-
-
-
-
-// v4.0.0-rc.2
-// .select2-container--default {
-
-// 	&.select2-container--focus {
-
-// 		.select2-selection--multiple {
-// 			border: 2px solid $green;
-// 			outline: 0;
-// 		}
-
-// 		.select2-selection--single {
-// 			outline: 0;
-// 		}
-// 	}
-
-// 	.select2-selection--single {
-// 		@include linear-gradient( to top, rgba($black, .06) 0%, rgba($white, 1) 100% );
-// 		border-radius: $form-field__border-radius;
-// 		border-width: 1px 0;
-// 		border-style: solid;
-// 		border-color: $alto $dusty-gray $dusty-gray;
-
-// 		box-shadow: 
-// 			inset -2px 0px 0px $white, 
-// 			inset 0px 1px 0px $white,
-// 			0px 3px 3px -1px rgba($black, .2)
-// 			;
-
-// 		&:before,
-// 		&:after {
-// 			content: "";
-// 			display: block;
-// 			position: absolute;
-// 			top: 1px;
-// 			bottom: 1px;
-// 			width: 1px;
-// 			@include linear-gradient( to top, $dusty-gray 0%, $alto 100% );
-// 		}
-// 		&:after {
-// 			right: 0;
-// 		}
-
-// 		.select2-selection__arrow {
-// 			right: 4px;
-// 			height: 36px;
-// 		}
-// 	}
-
-// 	.select2-selection--multiple {
-// 		border: 2px solid $green;
-// 		padding: 2px;
-
-// 		.select2-selection__choice { //li
-// 			background-color: $green;
-// 			padding: 6px 10px 4px;
-// 			// font-size: rem(13);
-// 			color: $white;
-// 			border-color: $green;
-// 			margin-right: 7px;
-
-// 			// border-radius: 4px;
-// 			// cursor: default;
-
-// 			// float: left;
-
-// 			// margin-right: 5px;
-// 			// margin-top: 5px;
-// 			// padding: 0 5px;
-// 		}
-
-// 		.select2-selection__choice__remove {
-// 			margin-right: 0;
-// 			display: block;
-// 			float: right;
-// 			margin-left: 7px;
-// 			color: $white;	
-
-// 			&:hover {
-// 				color: rgba($white, .6);
-// 			}		
-// 		}
-
-// 	}
-
-// 	.select2-results__option {
-
-// 		// &[role=group] {
-// 		// 	padding: 0;
-// 		// }
-
-// 		// &[aria-disabled=true] {
-// 		// 	color: $gallery;
-// 		// }
-
-// 		&[aria-selected=true] {
-// 			background-color: $gallery-dark;
-// 		}
-// 	}
-
-// 	.select2-results__option--highlighted[aria-selected] {
-// 		background-color: $green;
-// 		// color: white;
-// 	}
-
-// }
-
-// .select2-dropdown {
-// 	border-color: $alto;
-// 	// border-radius: 4px;
-// }
-
-
-// .select2-container {
-
-// 	.select2-selection--single {
-// 		height: $form-el__height--select;
-
-// 		.select2-selection__rendered {
-// 			// color: #444;
-// 			line-height: $form-el__height--select;
-// 			font-size: 14px;
-// 			padding-left: 11px;
-// 		}
-// 	}
-	
-// 	// make input text on multiple search select2 
-// 	// vertical centered 
-// 	.select2-search--inline {
-// 		// margin-top: 5px;
-// 		// display: none;
-// 		.select2-search__field {
-// 			// margin-top: 6px;
-// 			// visibility: hidden;
-// 		}
-// 	}
-// }
-
-// .select2-search__field {
-// 	// width: 100% !important;
-// }
-
+.select2-container .select2-choice .select2-arrow:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    border-color: #888888 transparent transparent transparent;
+    margin-left: -4px;
+    margin-top: -2px;
+}

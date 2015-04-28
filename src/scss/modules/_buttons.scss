@@ -72,13 +72,13 @@
     	&.is-selected {
 			background-color: $green;
 			border-color: $green;
-			color: $white;
+			color: $white !important;
     	}
 	}
 
 	&.-small {
-		padding: 10px 28px;
-    	@extend %font-size__16;
+		padding: 7px 16px;
+    	@extend %font-size__15;
 	}
 
 	&.-large {
