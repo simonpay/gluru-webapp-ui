@@ -13,6 +13,12 @@
         height: inherit;
     }
     
+    // block in settings section where we need 
+    // to prevent width for being 100% 
+    &.-settings {
+        float: left;
+    }
+    
     // nested media object
     .media {
         // height: 24px;
@@ -61,7 +67,8 @@
             margin-right: 0;
             margin-left: 10px;
 
-            &.-lrg-margin {
+            // &.-lrg-margin {
+            &.-ml\+\+\+ {
                 margin-left: 40px;
             }
             

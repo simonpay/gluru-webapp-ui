@@ -36,6 +36,12 @@
         height: 34px;
         overflow: hidden;
         border-radius: 100%;
+        
+        &.-profile {
+            width: 46px;
+            height: 46px;
+            background: $pink;
+        }
 
         .-event &,
         .-current-item & {
@@ -55,7 +61,8 @@
         .-current-item & {
             background: $white;
         }
-
+        
+        // profile stage-nav__item - top right of screen
         .-profile & {
             border: 3px solid $pink;
         }

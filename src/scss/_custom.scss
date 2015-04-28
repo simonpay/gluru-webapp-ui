@@ -14,3 +14,20 @@
     margin: 0 auto;
 }
 
+.progress-bar__container {
+	position: relative;
+	background: $alto;
+	border-radius: 2px;
+}
+
+	.progress-bar {
+		height: 10px;
+		background: $green;
+		border-radius: 2px;
+	}
+
+		.progress-bar__label {
+			position: absolute;
+			top: -45px;
+			right: 0;
+		}

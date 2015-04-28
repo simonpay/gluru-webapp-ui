@@ -10,27 +10,149 @@
         <h1 class="stage__heading-text u-mb0">Account profile</h1>
         <p class="stage__text">View and manage your profile and account details.</p>
 
+        <div class="row">
+            <div class="lrg-4 u-cf">
+
+                <div class="media -settings">
+                    <div class="media__img -right">
+
+                        <p>
+                            <a href="#" class="btn -lozenge -white -small u-ml-">Sign Out</a>
+                        </p>
+
+                    </div>
+                    <div class="media__body">
+
+                        <div class="media">
+                            <div class="media__img">
+
+                                <div class="disc-img">
+                                    <div class="disc-img__img-wrap -profile">
+                                        <div class="icon__person--white u-center-transform"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="media__body">
+
+                                <div class="" title="">Alex Li</div>
+                                <div class="options-list__text--secondary" title="{{ obj.email }}">alexli@tech.co</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lrg-4 u-cf">
+
+                <div class="media -settings">
+                    <div class="media__img -right">
+
+                        <p>
+                            <a href="#" class="btn -lozenge -positive -small u-ml-">Upgrade</a>
+                        </p>
+
+                    </div>
+                    <div class="media__body">
+
+                        <div class="">Account type:</div>
+                        <div class="stage__text">Teams &amp; Enterprise</div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="lrg-4 u-cf">
+
+                <div class="media -settings">
+                    <div class="media__img -right">
+
+                        <p>
+                            <a href="#" class="btn -lozenge -white -small u-ml-">Deactivate</a>
+                        </p>
+
+                    </div>
+                    <div class="media__body">
+
+                        <div class="">Deactivate my <br>gluru account</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 
-    <hr>
+
+
+    <hr class="u-mb++">
+
+
 
     <section>
         
         <h1 class="stage__heading-text">Account email</h1>
 
+        <div class="row">
+            <div class="lrg-4 u-cf">
+
+                <div class="media -settings">
+                    <div class="media__img -right">
+
+                        <p>
+                            <a href="#" class="btn -lozenge -white -small u-ml-">Change</a>
+                        </p>
+
+                    </div>
+                    <div class="media__body">
+
+                        <div class="stage__text">alexli@smarttech.co</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 
-    <hr>
+
+
+    <hr class="u-mb++">
+
+
 
     <section>
         
-        <h1 class="stage__heading-text">Total usage</h1>
+        <h1 class="stage__heading-text">Total usage - available space</h1>
+
+        <div class="progress-bar__container u-mb">
+            <div class="progress-bar" style="width:5%"></div>
+            <div class="progress-bar__label lrg-label-text">95%</div>
+        </div>
+
+    </section>
+
+
+
+    <hr class="u-mb++">
+
+
+
+    <section>
+        
+        <h1 class="stage__heading-text">Available space by source</h1>
 
         <div class="space-by-source">
             
             {% for obj_source in obj_setup_data.space_by_source %}
 
-                <div class="doughnut-chart__container -{{ obj_source.source }}">
+                <div class="doughnut-chart__container -{{ obj_source.source }}"  title="{{ obj_source.name }} - {{ obj_source.percentage_available }}% available">
                     
                     <div class="doughnut-chart js-chart" data-percentage="{{ obj_source.percentage_available }}">
                         <svg class="doughnut-chart__svg" xmlns="http://www.w3.org/2000/svg" viewBox="-8 -8 116 116">
@@ -44,7 +166,7 @@
                             </g>
                         </svg>
 
-                        <div class="doughnut-chart__text">{{ obj_source.percentage_available }}%</div>
+                        <div class="doughnut-chart__label lrg-label-text">{{ obj_source.percentage_available }}%</div>
 
                     </div>
 

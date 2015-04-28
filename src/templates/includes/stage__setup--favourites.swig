@@ -50,12 +50,12 @@
 
             <section class="form-section -submit js-section-submit">
 
-                <a href="#" class="btn -lozenge -icon-rightsss">
+                <a href="#" class="btn -lozenge">
                     <span class="btn__text">Skip</span><!--
                     --><span class="btn__icon icon__arrow--white"></span>
                 </a><!--
                 
-                --><a href="#" class="btn -lozenge -positive -icon-rightss js-btn-next">
+                --><a href="#" class="btn -lozenge -positive js-btn-next">
                     <span class="btn__icon icon__arrow--white"></span><!--
                     --><span class="btn__text">Next</span>
                 </a>

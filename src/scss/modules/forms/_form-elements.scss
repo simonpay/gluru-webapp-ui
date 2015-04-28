@@ -137,16 +137,12 @@ input[type=text] {
 .form-section {
 	height: auto;
 	overflow: hidden;
-	// visibility: visible;
 	opacity: 1;
-	@include transition( height 0s 0s, opacity .7s);
+	@include transition( height 0s 0s, opacity 0.7s );
 	
 	&.is-hidden {
 		height: 0;
-		// visibility: hidden;
 		opacity: 0;
-		// @include transition( all 0 0);
-		// @include transition( none );
 	}
 
 
@@ -158,6 +154,22 @@ input[type=text] {
 		}
 	}
 }
+
+// TODO: resolve bug
+// symptoms: create team page in Chrome, when the user clicks the create team button to hide
+// the team options, the team settings sections does not hide correctly and the submit button 
+// is overlaid until the css transition completes and then the team section hides - somwething 
+// to do with the submit button section overlaying the team settings section and preventing the 
+// styles taking effect correctly (height: 0 and opacity: 0)
+// The tests below sets a custom transition on the submit section which should delay the opacity 
+// change on the submit section for 2s to delay it until the team settings section has compelteed its
+// own transition but all taht happens is the team settings section is not hidden until the submit 
+// tarnsition compeltes (after 2s) 
+// .form-section.-submit {
+// 	outline: 1px solid red;
+// 	@include transition( height 0s, opacity 0.7s 2s );
+// }
+
 
 .invite-people-row-container {
 	margin-bottom: 40px;

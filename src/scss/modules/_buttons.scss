@@ -18,6 +18,7 @@
 	color: $white;
 	text-decoration: none;
 	font-size: rem(20);
+	@include transition( color .15s, background-color .15s, border-color .15s );
 
     @include set-text-decoration(none);
 
@@ -54,8 +55,15 @@
 	&.-white {
 		background-color: $white;
 		border-color: $dusty-gray;
-		color: $green;
+		color: $dusty-gray;
 		@extend %color__gray--light;
+
+		&:not(.large):hover {
+			color: $green;
+			// color: $white;
+			// background-color: $green;
+			// border-color: $green;
+		}
 
 		&.-col-grey {
 			color: $dusty-gray;

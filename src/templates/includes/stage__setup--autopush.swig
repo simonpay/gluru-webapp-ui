@@ -74,7 +74,7 @@
                 <div class="lrg-11">
 
                     <div class="media">
-                        <div class="media__img -right -lrg-margin">
+                        <div class="media__img -right -m+++">
                         
                             <div class="check-box__slider prevent-fout">
                                 <input 

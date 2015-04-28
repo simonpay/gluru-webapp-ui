@@ -96,7 +96,7 @@
                 var $this = $(this);
                 var source_data = $this.select2( "data" );
 
-                console.log( source_data.length );
+                // console.log( source_data.length );
                 
                 // if last item in source, hide relevant els and reset destination multi-select
                 if ( source_data.length === 0 ) {
@@ -125,7 +125,7 @@
                 // if last item in destination, hide relevant els
                 if ( source_data.length === 0 ) {
 
-                    console.log( "HIDE" );
+                    // console.log( "HIDE" );
 
                     obj_form_actions._set_section_state( [ $section_autopush_notifications, $btn_next ], "hide" );
 
@@ -257,9 +257,9 @@
 
                     // console.log( source_data );
                     // console.log( source_data.length );
-                    for ( var j=0; j<source_data.length; j++) {
-                        console.log( j + " = " + source_data[j].text );
-                    }
+                    // for ( var j=0; j<source_data.length; j++) {
+                    //     console.log( j + " = " + source_data[j].text );
+                    // }
                     // console.log( "_build_team_access_rows" );
                     // console.log( typeof(source_data) );
                     // console.log( data[0].text );

@@ -100,10 +100,55 @@
 .u-mb0 {
     margin-bottom: 0 !important;
 }
+
+.u-mh {
+    margin-top: $base-line-height !important;
+    margin-bottom: $base-line-height !important;
+}
+
+.u-mh\+ {
+    margin-top: $base-line-height * 1.5 !important;
+    margin-bottom: $base-line-height * 1.5 !important;
+}
+
+.u-mh\+\+ {
+    margin-top: $base-line-height * 2 !important;
+    margin-bottom: $base-line-height * 2 !important;
+}
+
+.u-mh\+\+\+ {
+    margin-top: $base-line-height * 2.5 !important;
+    margin-bottom: $base-line-height * 2.5 !important;
+}
+
 .u-mb {
     margin-bottom: $base-line-height !important;
 }
+
 .u-mb\+ {
     margin-bottom: $base-line-height * 1.5 !important;
 }
 
+.u-mb\+\+ {
+    margin-bottom: $base-line-height * 2 !important;
+}
+
+.u-mb\+\+\+ {
+    margin-bottom: $base-line-height * 2.5 !important;
+}
+
+.u-ml {
+    margin-left: $base-line-height !important;
+}
+
+.u-ml- {
+    margin-left: $base-line-height / 2 !important;
+}
+
+.u-mr {
+    margin-right: $base-line-height !important;
+}
+
+.u-text-center {
+    text-align: center !important;
+}

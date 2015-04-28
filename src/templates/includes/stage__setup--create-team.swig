@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="med-11">
                     <div class="media">
-                        <div class="media__img -right -med-margin">
+                        <div class="media__img -right">
 
                             <div id="radio">
                                 <input type="radio" class="js-invited-member-connect-source" id="rdo-invited-member-connect-source-no" name="invited-member-connect-source"><label for="rdo-invited-member-connect-source-no">No</label>

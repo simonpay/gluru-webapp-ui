@@ -68,12 +68,9 @@ $source-data: (
 				}
 			}
 
-				.doughnut-chart__text {
+				.doughnut-chart__label {
 					@include scut-center-transform;
 					top: 49%;
-					font-size: rem(25);
-					font-weight: lighter;
-					color: $black;
 				}
 
 	.doughnut-chart__bar {

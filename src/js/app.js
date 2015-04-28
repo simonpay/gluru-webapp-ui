@@ -269,7 +269,7 @@
 
                 } else if ( _is_settings ) {
 
-                    location.href = "settings-people.html";
+                    location.href = "settings-profile.html";
 
                 } else if ( _is_add ) {
 
