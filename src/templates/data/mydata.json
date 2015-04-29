@@ -251,7 +251,7 @@
         "hide_stage_nav":           1,
         "hide_account_nav":         1,
         "hide_search_input":        1,
-        "drawer_is_not_present":    0,
+        "drawer_is_not_present":    1,
         "sections": [
             {
                 "section_id":                           "create_account",
@@ -494,7 +494,37 @@
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
                     "stage_sub_heading":                "25 Mrach, 2015"
-                }
+                },
+                "favourites": [
+                    {
+                        "name":                         "Alex Li",
+                        "color":                        "pink"
+                    },
+                    {
+                        "name":                         "Alex Li",
+                        "color":                        "pink"
+                    },
+                    {
+                        "name":                         "Alex Li",
+                        "color":                        "pink"
+                    },
+                    {
+                        "name":                         "Alex Li",
+                        "color":                        "pink"
+                    },
+                    {
+                        "name":                         "Alex Li",
+                        "color":                        "pink"
+                    },
+                    {
+                        "name":                         "Alex Li",
+                        "color":                        "pink"
+                    },
+                    {
+                        "name":                         "Alex Li",
+                        "color":                        "pink"
+                    }
+                ]
             },
             {
                 "section_id":                           "notifications",
@@ -534,7 +564,39 @@
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
                     "stage_sub_heading":                "25 Mrach, 2015"
-                }
+                },
+                "sessions": [
+                    {
+                        "name":                         "Chrome on Mac OS X",
+                        "icon_class":                   "icon__chrome",
+                        "authentication_date":          "21/02/2015",
+                        "timing":                       "In the last hour"
+                    },
+                    {
+                        "name":                         "Chrome on Mac OS X",
+                        "icon_class":                   "icon__chrome",
+                        "authentication_date":          "21/02/2015",
+                        "timing":                       "About 2 days ago"
+                    },
+                    {
+                        "name":                         "Android Nexus 5",
+                        "icon_class":                   "icon__android",
+                        "authentication_date":          "21/02/2015",
+                        "timing":                       "About 2 days ago"
+                    },
+                    {
+                        "name":                         "Android Nexus 5",
+                        "icon_class":                   "icon__android",
+                        "authentication_date":          "21/02/2015",
+                        "timing":                       "About 3 days ago"
+                    },
+                    {
+                        "name":                         "Chrome on Mac OS X",
+                        "icon_class":                   "icon__chrome",
+                        "authentication_date":          "21/02/2015",
+                        "timing":                       "About 1 week ago"
+                    }
+                ]
             }
         ]
     },

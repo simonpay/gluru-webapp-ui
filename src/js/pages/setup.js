@@ -39,6 +39,7 @@
         $team_settings_source_multi_select              = $( ".js-team-settings-source__multi-select" ),
         
         $checkbox_slider                                = $( ".js-checkbox-slider" ),
+        $radio_buttonset                                = $( ".js-radio-buttonset" ),
 
         $prevent_fout                                   = $( ".prevent-fout" )
 
@@ -451,6 +452,9 @@
         // 2 classes named the same - we just want the js-xxx 
         // class on the actual select )
     }
+
+    // init jquery-ui buttonset on radio - yes / no nuttons
+    if ( $radio_buttonset.length > 0 ) $radio_buttonset.buttonset();
 
     // add team button
     $btn_add_team.on( "click", function(e){

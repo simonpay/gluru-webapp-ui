@@ -68,7 +68,7 @@
                     <div class="media">
                         <div class="media__img -right">
 
-                            <div id="radio">
+                            <div class="js-radio-buttonset">
                                 <input type="radio" class="js-invited-member-connect-source" id="rdo-invited-member-connect-source-no" name="invited-member-connect-source"><label for="rdo-invited-member-connect-source-no">No</label>
                                 <input type="radio" class="js-invited-member-connect-source" id="rdo-invited-member-connect-source-yes" name="invited-member-connect-source"><label for="rdo-invited-member-connect-source-yes">Yes</label>
                             </div>

@@ -23,7 +23,7 @@
         @include transform( rotate(45deg) );
         opacity: 1;
         border-radius: 100%;
-        border: 1px solid $dusty-gray-dark;
+        border: 1px solid $gray;
         cursor: pointer;
         @include transition( opacity 0.3s );
 
@@ -36,7 +36,7 @@
             right: 31%;
             width: 3px;
             height: 50%;
-            background: $dusty-gray-dark;
+            background: $gray;
 
         }
         &:after {

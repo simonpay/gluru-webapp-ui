@@ -38,7 +38,7 @@
                 }
 
                 &:not(.is-complete):not(.is-selected):hover {
-                    box-shadow: inset 0px -4px 0px $dove-gray;
+                    box-shadow: inset 0px -4px 0px $silver;
 
                     .header-nav__text {
                         color: $black;

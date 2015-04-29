@@ -18,10 +18,6 @@
 // COLORS
 // -----------------------------------
 // non-brand color names generated using http://chir.ag/projects/name-that-color/
-$dusty-gray:                #999;                       // mid gray
-$silver:                    #ccc;                       // light gray
-$gallery:                   #eee;                       // off white
-$mine-shaft:                #333;                       // very dark gray
 
 $pink:                      #d41a68;                    // pink
 $pink-dark:                 #af044c;                    // dark pink
@@ -33,40 +29,39 @@ $green:                     #16b451;                    // green
 $blue:                      #2b7de1;                    // blue
 
 // brand colors
-$gmail-red:					#e41212;
-$gdrive-yellow:				#fccd48;
-$dropbox-blue:				#007ee6;
+$gmail-red:                 #e41212;
+$gdrive-yellow:             #fccd48;
+$dropbox-blue:              #007ee6;
 $evernote-green:            #45b52d;                    // lime green
-$box-blue:					#abd5eb;
-$onedrive-blue:				#0047b4;
-$exchange-blue:				#0070c8;
+$box-blue:                  #abd5eb;
+$onedrive-blue:             #0047b4;
+$exchange-blue:             #0070c8;
 
 $light-green:               #8ce31c;                    // lime green
 $zeus:                      #2e261e;                    // very very dark brown
 
-// shades of gray - white to black range:   
+// grayscale range   
 $white:                     #fff;                       // white
 $alabaster:                 #fafafa;                    // virtually white
-$gallery-light:             lighten($gallery, 4%);
-$gallery:                   $gallery;                   // off white
-$gallery-dark:             	darken($gallery, 4%);
+$wild-sand:                 #f5f5f5;
+$gallery:                   #eee;                       // off white
 $alto:                      #ddd;                       // very light gray
-$silver-light:              lighten($silver, 5%);
-$silver:                    $silver;                    // light gray
-$silver-dark:               darken($silver, 5%);
-$dusty-gray-light:          lighten($dusty-gray, 5%);
-$dusty-gray:                $dusty-gray;                // mid-light gray
-$dusty-gray-dark:           darken($dusty-gray, 5%);
+$alto-dark:                 #d4d4d4;
+$silver:                    #ccc;                       // light gray
+$silver-chalice:            #b2b2b2;
+$dusty-gray:                #999;                       // mid-light gray
 $gray:                      #7f7f7f;                    // mid gray
 $dove-gray:                 #666;                       // dark gray
-$mine-shaft-light:          lighten(#333, 5%);
+$tundora:                   #4c4c4c;
 $mine-shaft:                #333;                       // very dark gray
 $black:                     #000;                       // black
 
+// team colors
 $team-color-sales:          $orange;
 $team-color-marketing:      $blue;
 $team-color-development:    $light-green;
 
+// tooltips
 $tooltips-background-color: rgba($black, 0.8);
 $tooltips-arrow-width:      6px;
 $tooltips-arrow-height:     12px;
@@ -76,7 +71,7 @@ $tooltips-arrow-height:     12px;
 // STACKING ORDER (z-index)
 // -----------------------------------
 $modal-z-index:                             1000;
-$data-box-z-index:                      	300;
+$data-box-z-index:                          300;
 // $modal-box-z-index:                          1010;
 // $modal-screen-z-index:                      1000;
 $tooltip-z-index:                           200;
@@ -85,7 +80,7 @@ $drawer-wrap-z-index:                       50;
 $actions-wrap-z-index:                      40;
 $search-wrap-z-index:                       30;
 $panel-header-stage-z-index:                20;
-$panel-header--moments-z-index:            	10;
+$panel-header--moments-z-index:             10;
 // small screens
 $actions-wrap-z-index_mq-sml:               110;
 
@@ -166,7 +161,7 @@ $options-list-heading-padding-left--drawer: $panel-header-padding-left--drawer -
 $min-table-width-files-single:              600px;
 $min-table-width-files-split:               $min-table-width-files-single - 200px;
 $files-table-padding-left:                  10px;
-$table-col-height:							50px;
+$table-col-height:                          50px;
 
 // timeline
 $event-height:                              80px;
@@ -183,10 +178,10 @@ $panel-header-height--item-selected:        $panel-header-height + ($event-heigh
 // -----------------------------------
 // VERTICAL RYTHM
 // -----------------------------------
-$em-base: 			16px;
-$base-font-size: 	$em-base;
-$base-line-height: 	24px;
-$default-margin: 	$base-line-height;
+$em-base:           16px;
+$base-font-size:    $em-base;
+$base-line-height:  24px;
+$default-margin:    $base-line-height;
 
 
 // -----------------------------------
@@ -211,15 +206,15 @@ $form-el__height--select:               38px;
 $form-el__border-radius:                3px;
 
 // jquery-ui checkbox variables
-$checkbox-slider__height:			30px;
-$checkbox-slider__width:			80px;
-$checkbox-slider--small__height:	20px;
-$checkbox-slider--small__width:		50px;
+$checkbox-slider__height:           30px;
+$checkbox-slider__width:            80px;
+$checkbox-slider--small__height:    20px;
+$checkbox-slider--small__width:     50px;
 
 
 // priority box
-$priority-box__border-radius:					15px;
-$priority-box--daily-digest__border-radius:		10px;
+$priority-box__border-radius:                   15px;
+$priority-box--daily-digest__border-radius:     10px;
 
 
 

@@ -1153,7 +1153,7 @@
     };
 
     //Make table sortable
-    $(".table.sortable .table__body").sortable({
+    $(".table.-sortable .table__body").sortable({
         helper: fixHelperModified,
         stop: function(event,ui) {
             renumber_table('.table.sortable');

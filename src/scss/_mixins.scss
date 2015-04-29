@@ -46,12 +46,11 @@
 // color
 @mixin color($val)              {   color: $val;                                                        }
 %color__gray--xxlight           {   @include color($silver);                                            }
-%color__gray--xlight            {   @include color($silver-dark);                                       }
+%color__gray--xlight            {   @include color($silver-chalice);                                       }
 %color__gray--light             {   @include color($dusty-gray);                                        }
 %color__gray--mid               {   @include color($gray);                                              }
 %color__gray--dark              {   @include color($dove-gray);                                         }
 %color__gray--xdark             {   @include color($mine-shaft);                                        }
-// %color__gray--xxdark            {   @include color($mine-shaft);                                              }
 %color__white                   {   @include color($white);                                             }
 %color__black                   {   @include color($black);                                             }
 %color__green                   {   @include color($green);                                             }

@@ -466,7 +466,7 @@ p {
 .hierarchy__text {
     @extend %font-size__13;
     @extend %color__gray--dark;
-    @include set-text-decoration(border, $silver-dark);
+    @include set-text-decoration(border, $silver-chalice);
 
     &.-active {
         @extend %font-weight__bold;
@@ -510,4 +510,10 @@ span.hierarchy__text {
     font-weight: lighter;
     color: $black;
 }
+
+
+.subtle__text {
+    color: $dusty-gray;
+}
+
 

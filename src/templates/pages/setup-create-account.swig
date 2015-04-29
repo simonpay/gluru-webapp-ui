@@ -22,5 +22,5 @@
 
 {% block javascripts %}
 	{% parent %}
-	<script src="js/pages/moments.js"></script>
+    <script src="js/pages/setup.js"></script>
 {% endblock %}

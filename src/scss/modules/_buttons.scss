@@ -47,9 +47,23 @@
 		border-radius: 100px;
 	}
 
+	&.-disc {
+		border-radius: 100%;
+
+		&.-full {
+			height: 100%;
+		}
+	}
+
 	&.-positive {
 		background-color: $green;
 		border-color: $green;
+	}
+
+	&.-light {
+		background-color: $wild-sand;
+		border-width: 1px;
+		border-color: $silver;
 	}
 
 	&.-white {

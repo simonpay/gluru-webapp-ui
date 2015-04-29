@@ -43,13 +43,23 @@
     @include transform( rotate(45deg) );
     // opacity: 1;
     // border-radius: 100%;
-    // border: 1px solid $dusty-gray-dark;
     cursor: pointer;
     // @include transition( opacity 0.3s );
 
-    // trun "close" icon into "add" icon
+    // turn "close" icon into "add" icon
     &.-add {
         @include transform( rotate(0deg) );
+
+        &.-vcenter {
+            top: 50%;
+            left: 50%;
+            @include transform( rotate(0deg) translateY(-50%) translateX(-50%) );
+        }
+    }
+
+    &.-lrg {
+        width: 50px;
+        height: 50px;
     }
 
     &.-light {
@@ -62,7 +72,7 @@
         @include scut-center-transform;
         width: 3px;
         height: 75%;
-        background: $dusty-gray-dark;
+        background: $gray;
 
     }
     &:after {
@@ -73,7 +83,15 @@
     //     opacity: 0.5;
     // }
 
+    &.-positive {
+        &:before,
+        &:after {
+            background: $green;
 
+        }
+    }
+
+    &.-reverse,
     .-reverse & {
         &:before,
         &:after {

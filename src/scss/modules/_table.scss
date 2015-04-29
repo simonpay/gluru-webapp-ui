@@ -52,6 +52,7 @@
 
             .table__col { // td
                 display: table-cell;
+                position: relative;
                 height: 50px;
                 padding: 0 10px;
                 overflow: hidden;

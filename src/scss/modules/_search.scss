@@ -81,10 +81,9 @@
             outline: none;
             font-size: rem(16);
             font-weight: normal;
-            color: $dusty-gray-dark;
+            color: $gray;
             @include placeholder {
-                color: $dusty-gray-dark;
-                // color: $silver-light;
+                color: $gray;
             }
 
         }
@@ -103,7 +102,7 @@
             font-weight: lighter;
             color: $dusty-gray;
             @include placeholder {
-                color: $silver-light;
+                color: $alto-dark;
             }
         }
 
@@ -128,7 +127,7 @@
                     @include scut-center-transform;
                     width: 5px;
                     height: 100%;
-                    background: $dusty-gray-dark;
+                    background: $gray;
 
                 }
                 &:after {

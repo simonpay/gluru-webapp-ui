@@ -31,3 +31,19 @@
 			top: -45px;
 			right: 0;
 		}
+
+
+.gallery__container {
+	position: relative;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+	.gallery__item {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		// margin: 10px;
+		// outline: 1px solid red;
+	}
+
