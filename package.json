@@ -65,5 +65,10 @@
     "includes": "src/templates/includes/",
     "data": "src/templates/data/",
     "layouts": "src/templates/layouts/"
+  },
+  "devDependencies": {
+    "grunt-premailer": "^0.2.13",
+    "grunt-processhtml": "^0.3.7",
+    "grunt-uncss": "^0.4.2"
   }
 }

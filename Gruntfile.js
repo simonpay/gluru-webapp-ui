@@ -226,8 +226,45 @@ module.exports = function(grunt) {
                 src: ['*.html'],
                 dest: '<%= pkg.dest_paths.assets %>'
             }
+        },
+
+        uncss: {
+            dist: {
+                src: ['src/emails/daily-digest/daily-digest-code.html'],
+                dest: 'build/emails/daily-digest/css/tidy.css',
+                options: {
+                    report: 'min' // optional: include to report savings
+                }
+            }
+        },
+
+        processhtml: {
+            dist: {
+                files: {
+                    'build/emails/daily-digest/daily-digest-code.html': ['src/emails/daily-digest/daily-digest-code.html'],
+                    'build/emails/welcome/welcome-code.html': ['src/emails/welcome/welcome-code.html']
+                }
+            }
+        },
+
+        premailer: {
+            main: {
+                options: {
+                    verbose: true,
+                    // removeClasses: true,
+                    baseUrl: 'https://s3-eu-west-1.amazonaws.com/gloo-emails/'
+                },
+                files: {
+                    'build/emails/daily-digest/daily-digest-inline.html': ['build/emails/daily-digest/daily-digest-code.html'],
+                    'build/emails/welcome/welcome-inline.html': ['build/emails/welcome/welcome-code.html']
+                }
+            }
         }
     });
+
+    grunt.loadNpmTasks('grunt-uncss');
+    grunt.loadNpmTasks('grunt-processhtml');
+    grunt.loadNpmTasks('grunt-premailer');
 
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-prettify');
@@ -250,5 +287,6 @@ module.exports = function(grunt) {
     grunt.registerTask('build', ['assemble', 'jshint', 'concat', 'uglify:dev', 'compass', 'copy']);
     grunt.registerTask('dist', ['clean', 'assemble', 'prettify', 'jshint', 'concat', 'uglify', 'compass', 'cssmin', 'copy']);
     grunt.registerTask('serve', 'connect');
+    grunt.registerTask('email', ['uncss', 'processhtml', 'premailer']);
 
 };

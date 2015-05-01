@@ -1,0 +1,117 @@
+/* custom styles */
+
+    .body,
+    .bg-gray {
+      background-color: #eeeeee;
+    }
+
+    .bg-white {
+      background-color: white;
+    }
+
+    .bg-blue {
+      background-color: #2b7de1;
+    }
+
+    .color-white {
+      color: white;
+    }
+
+    .text-pad-grey {
+      border-left: 12px solid #f2f2f2;
+      border-right: 12px solid #f2f2f2;
+    }
+
+    .table-files__col,
+    .table-files-header__col,
+    .table-main-header__col {
+      vertical-align: middle;
+      padding: 16px 0;
+    }
+
+    .table-files__col {
+      background: white;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .table-files-header__col {
+      background: #eeeeee;
+    }
+    
+    .table-main-header__col {
+      background: #2b7de1;
+    }
+
+    .v-align-middle {
+      vertical-align: middle;
+    }
+
+    .table-col__icon--file,
+    .table-col__icon--source {
+      text-align: center;
+    }
+
+    .table-col__icon--file {
+      width: 100px;
+    }
+
+    .table-col__icon--source {
+      width: 60px;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+
+    .white-borders-h {
+      border-right: 20px solid white;
+      border-left: 20px solid white;      
+    }
+
+
+
+
+    /* typography */
+
+    .h1 {
+      font-size: 24px;
+      color: white;
+      font-weight: lighter;
+    }
+
+    p {
+      font-weight: lighter;
+    }
+
+
+
+    /* utilities */
+    .p0 {
+      padding: 0px !important;
+    }
+
+    .m0 {
+      margin: 0px !important;
+    }
+
+    .pr {
+      padding-right: 10px !important;
+    }
+
+    .spacer-v-10 {
+      height: 10px !important;
+    }
+
+    .spacer-v-5 {
+      height: 5px !important;
+    }
+
+    .spacer-v-20 {
+      height: 20px !important;
+    }
+
+    .spacer-h-20 {
+      width: 20px !important;
+    }
+
