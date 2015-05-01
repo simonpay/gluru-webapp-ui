@@ -1,0 +1,13 @@
+/*------------------------------------*\
+# COLLAPSABLE-CONTENT
+\*------------------------------------*/
+
+// wrapper for content that is collapsable 
+
+.collapsable-content {
+
+    // init content as collapsed
+    &.-collapsed {
+        display: none;
+    }
+}

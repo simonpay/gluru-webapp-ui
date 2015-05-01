@@ -45,9 +45,6 @@
         $timeline_wrap_outer                = $( ".js-timeline-wrap-outer" ),
         $timeline_range                     = $( ".js-timeline-range" ),
         $toggle_timeline_view               = $( ".js-toggle-timeline-view" ),
-        //daily digest
-        $expandable_daily_digest_tables     = $( ".js-toggle-daily-digest-table" ),
-        // $table_wraps_daily_digest    = $( ".daily-digest .js-table-wrap" ),
 
         // tooltips
         $tooltip                            = $( ".js-tooltip" ),
@@ -63,11 +60,21 @@
         $expandable_lists                   = $( ".js-toggle-expand-list" ),
         $options_list_link                  = $( ".options-list__link" ),
 
+        // collapsable content
+        $toggle_collapsable_content         = $( ".js-toggle-collapsable-content" ),
+        // $collapsable_content                = $( ".js-collapsable-content" ),
+
         // files
         $table_wraps                        = $( ".js-file-table-wrap-outer" ),
+        $table_row                          = $( ".js-table-row" ),
 
         // forms
-        $set_up_form_sign_in                = $( ".js-sign-in" );
+        $set_up_form_sign_in                = $( ".js-sign-in" ),
+
+        // settings
+        // manage team buttons in team settings page
+        $btn_manage_team                    = $( ".js-manage-team" )
+        ;
 
 
 
@@ -75,6 +82,49 @@
 
         // cache main app obj to variable
         _obj_gluru: gluru_app,
+
+
+        collapsable: {
+
+            toggle: function () {
+
+                $this = $(this);
+
+                $this
+                    .toggleClass( "is-collapsed" )
+                        .parent()
+                            .next( ".js-collapsable-content" )
+                                .animate({
+                                        "height": "toggle"
+                                    }, {
+                                        duration: 300
+                                    });
+            }
+        },
+
+        settings: {
+
+            _manage_team: function ( e ) {
+
+                // console.log( "_manage_team" );
+
+                var $this = $(this);
+
+                // reset all manage team buttons
+                $btn_manage_team
+                    .removeClass( "-positive" )
+                    .addClass( "-white" );
+
+                obj_gluru.actions.set_state.call( $this, "open", e );
+
+                // select button
+                $this
+                    .removeClass( "-white" )
+                    .addClass( "-positive" );
+
+
+            }
+        },
 
 
         modal: {
@@ -98,13 +148,16 @@
                         .find( ".-modal-box__content-wrap" )
                             .hide()
                                 ;
-            },
+            }
 
         },
+
 
         drawer: {
 
             set_state: function ( requested_state ) {
+
+                // console.log( "drawer: set_state: " + requested_state );
 
                 var $this = $(this),
                 drawer_is_open = !$drawer_wrap.hasClass( "is-hidden" );
@@ -156,7 +209,7 @@
 
         actions: {
 
-            set_state: function ( requested_state ) {
+            set_state: function ( requested_state, e ) {
 
                 var $this = $(this),
                     actions_is_open = !$actions_wrap.hasClass( "is-hidden" );
@@ -189,6 +242,8 @@
                     }
 
                 }
+
+                if (e !== undefined) e.preventDefault();
 
             },
 
@@ -546,27 +601,6 @@
                     $this
                         .addClass( "is-selected" );
                 }
-            },
-
-            daily_digest: {
-
-                section_headers: {
-
-                    toggle: function () {
-
-                        $this = $(this);
-
-                        $this
-                            .toggleClass( "is-collapsed" )
-                                .parent()
-                                    .next( ".js-table-wrap" )
-                                        .animate({
-                                                "height": "toggle"
-                                            }, {
-                                                duration: 300
-                                            });
-                    }
-                }
             }
         },
 
@@ -582,7 +616,7 @@
                 // open actions
                 obj_gluru.actions.set_state( "open" );
 
-                $( ".js-table-row" ).removeClass( "is-selected" );
+                $table_row.removeClass( "is-selected" );
 
                 $this
                     .addClass( "is-selected" );
@@ -1060,10 +1094,14 @@
     obj_gluru.moments.timeline.set_timeline_view( ".-cols-1" );
 
 
-    // DAILY DIGEST
+    // COLLAPSABLE CONTENT
     // -------------------------------------------------
-    $expandable_daily_digest_tables.on( "click", function(){
-        obj_gluru.moments.daily_digest.section_headers.toggle.call( $(this) );
+    $toggle_collapsable_content.on( "click", function( e ){
+        // if user has not clicked on a button that 
+        // occupies the same area as the $toggle_collapsable_content
+        if ( !$(e.target).closest( ".btn" ).length ) {
+            obj_gluru.collapsable.toggle.call( $(this) );
+        }
     });
 
 
@@ -1071,8 +1109,7 @@
     // -------------------------------------------------
     // click event for each row in the table (except the header)
     // $( ".js-table-row:not(.-header, .js-open-file)" ).on( "click", function(){
-    $( ".js-table-row" )
-        .on( "click", function(){
+    $table_row.on( "click", function(){
             obj_gluru.files.do_click.call( $(this) );
     });
 
@@ -1127,6 +1164,12 @@
     // select optins list item
     $options_list_link.on( "click", function(){
         obj_gluru.options_list.select_item.call( $(this) );
+    });
+
+
+    // SETTINGS
+    $btn_manage_team.on( "click", function( e ){
+        obj_gluru.settings._manage_team.call( $(this), e );
     });
 
 

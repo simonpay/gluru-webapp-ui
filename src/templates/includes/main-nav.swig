@@ -25,6 +25,7 @@
 				data-tt="Files"
 				data-tt-pos="right">Files</a>
 		</li>
+{# 
 		<li class="main-nav__item">
 			<a href="#" 
 				class="main-nav__link -people -highlight js-main-nav__link js-tt" 
@@ -43,7 +44,8 @@
 				data-tt="Auto-push"
 				data-tt-pos="right">Auto-push</a>
 		</li>
-		<li class="main-nav__item">
+		
+ #}		<li class="main-nav__item">
 			<a href="#" 
 				class="main-nav__link -settings -highlight js-main-nav__link js-tt" 
 				data-tt="Settings"

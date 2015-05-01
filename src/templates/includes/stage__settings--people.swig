@@ -56,7 +56,7 @@
     
             <div class="priority-box__wrap">
 
-                <div class="priority-box -settings collapsable is-collapsed js-toggle-daily-digest-table">
+                <div class="priority-box -settings collapsable is-collapsed js-toggle-collapsable-content">
 
                     <div class="media -v-center">
                         <div class="media__img u-mr">
@@ -71,8 +71,7 @@
                             <div class="media -v-center">
                                 <div class="media__img -right -meeting">
 
-                                    <a href="#" class="btn -lozenge -white -small">Delete</a>
-                                    <a href="#" class="btn -lozenge -positive -small">Save</a>
+                                    <a href="#" class="btn -lozenge -white -small js-manage-team">Manage</a>
 
                                 </div>
                                 <div class="media__body">
@@ -91,7 +90,7 @@
 
 
     
-            <div class="daily-digest__table-wrap js-table-wrap">
+            <div class="collapsable-content -collapsed js-collapsable-content">
 
                 <div class="table -daily-digest -categories">
 

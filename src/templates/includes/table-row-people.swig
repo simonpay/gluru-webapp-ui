@@ -1,4 +1,4 @@
-<div class="table__row js-table-row">
+<div class="table__row">
 
 	<div class="table__col -people">
 
@@ -23,7 +23,7 @@
 
 	<div class="table__col -btn">
 
-        <a href="#" class="btn -lozenge -white -small -full">Manage</a>
+        <a href="#" class="btn -lozenge -white -small js-manage-team">Manage</a>
 
 	</div>
 

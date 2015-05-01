@@ -29,8 +29,8 @@
         {% for obj_item in obj_section.items %}
     
             <div class="priority-box__wrap">
-                {# <div class="priority-box -daily-digest -collapsable js-toggle-daily-digest-table is-collapsed"> #}
-                <div class="priority-box -daily-digest collapsable is-collapsed js-toggle-daily-digest-table">
+
+                <div class="priority-box -daily-digest collapsable is-collapsed js-toggle-collapsable-content">
 
                     <div class="media -v-center">
                         <div class="media__img">
@@ -89,7 +89,7 @@
 
 
     
-            <div class="daily-digest__table-wrap js-table-wrap">
+            <div class="collapsable-content -collapsed js-collapsable-content">
 
                 {% if obj_section.section_id === "people" %}
 

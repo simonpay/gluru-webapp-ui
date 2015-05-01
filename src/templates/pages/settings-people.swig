@@ -18,6 +18,9 @@
     {# drawer #}
     {% include "src/templates/includes/drawer-files.swig" %}
 
+    {# actions #}
+    {% include "src/templates/includes/actions.swig" %}
+
     {# stage #}
     {% include "src/templates/includes/stage__settings--people.swig" %}
 

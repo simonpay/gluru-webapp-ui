@@ -487,7 +487,7 @@
             },
             {
                 "section_id":                           "people",
-                "text":                                 "People",
+                "text":                                 "Teams",
                 "icon_class":                           "people",
                 "url":                                  "settings-people.html",
                 "stage_data": {
