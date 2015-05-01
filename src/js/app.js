@@ -14,6 +14,7 @@
 
         // modal     
         $modal                              = $( ".js-modal" ),
+        $modal_box                          = $( ".js-modal-box" ),
         $modal_triggers                     = $( ".js-modal-trigger" ),
         $show_modal                         = $( ".js-show-modal" ),
         $close_modal                        = $( ".js-close-modal" ),
@@ -73,7 +74,9 @@
 
         // settings
         // manage team buttons in team settings page
-        $btn_manage_team                    = $( ".js-manage-team" )
+        $btn_create_team                    = $( ".js-create-team" ),
+        $btn_manage_team                    = $( ".js-manage-team" ),
+        $btn_add_team_member                = $( ".js-add-team-member" )
         ;
 
 
@@ -129,17 +132,27 @@
 
         modal: {
 
-            _show: function () {
+            _show: function ( e ) {
 
-                var $this = $(this);
+                var $this           = $(this),
+                    _modal_size     = $this.data( "modal-size" ),
+                    _modal_content  = $this.data( "modal-content" )
+                    ;
 
                 // console.log( $this.data( "modal-content" ) );
 
+                $modal_box.removeClass( "-large" );
+
                 $modal
                     .removeClass( "is-hidden" )
-                        .find( ".js-demo-only__" + $this.data( "modal-content" ) )
-                        .show()
-                            ;
+                        .find( ".js-modal-box" )
+                        .addClass( _modal_size !== undefined ? "-" + _modal_size : "" )
+                        // .addClass( "-" + _modal_size )
+                            .find( ".js-demo-only__" + _modal_content )
+                            .show()
+                                ;
+
+                if (e !== undefined) e.preventDefault();
             },
 
             _hide: function () {
@@ -1168,8 +1181,16 @@
 
 
     // SETTINGS
+    $btn_create_team.on( "click", function( e ){
+        obj_gluru.modal._show.call( $(this), e );
+    });
+
     $btn_manage_team.on( "click", function( e ){
         obj_gluru.settings._manage_team.call( $(this), e );
+    });
+
+    $btn_add_team_member.on( "click", function( e ){
+        obj_gluru.modal._show.call( $(this), e );
     });
 
 

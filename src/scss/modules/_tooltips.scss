@@ -8,19 +8,20 @@
 	position: absolute;
     top: 15px;
     left: 42px;
-    padding: 8px 8px 5px;
+    padding: 7px 9px 7px;
     opacity: 1;
     visibility: visible;
     background: $tooltips-background-color;
     border-radius: 4px;
     @include transition(opacity $tooltip-animation-duration $tooltip-show-delay);
 
-    &.-above {
-        padding-top: 8px;
-    }
-    &.-below {
-        padding-bottom: 4px;
-    }
+    // &.-above {
+    //     padding-top: 8px;
+    // }
+
+    // &.-below {
+    //     padding-bottom: 4px;
+    // }
 
     &.is-hidden {
         opacity: 0;

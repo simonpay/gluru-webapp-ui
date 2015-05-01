@@ -42,8 +42,17 @@
 // ------------------------------------------------
 // jQuery replacement for select boxes
 // removed as angular app cant support v4 of select2
-// downgraded to v3.4.5 which doesnt use sass
 // @import "core";
+
+// downgraded to v3.4.5 which doesnt use sass
+// select2 base css left 'as-is' and converted to scss
+@import "vendor/select2/select2-base";
+
+// JQUERY-UI
+// ------------------------------------------------
+// jquery-ui 'complete' css left 'as-is' and converted to scss
+// TODO: pull-in only relevant css instead of everything
+@import "vendor/jquery-ui/jquery-ui-complete";
 
 
 
@@ -141,8 +150,6 @@
 
 // forms
 @import "modules/forms/form-elements",
-        // select2 base css left 'as-is' and converted to _select2.scss
-        "modules/forms/select2/select2-base",
         "modules/forms/select2-overrides",
         "modules/forms/jquery-ui-checkbox-overrides";
 

@@ -1,4 +1,4 @@
-<div class="row -form js-invite-people-row-clone" style="display:none">
+<div class="row -form js-invite-people-row-clone" style="display:{{ display_value }}">
     <div class="med-4 js-invite-people-email">
         <input 
             type="email" 

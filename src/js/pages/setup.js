@@ -20,10 +20,10 @@
         $btn_add_team                                   = $( ".js-btn-add-team" ),
 
         $team_access_settings_row_container             = $( ".js-team-access-settings-row-container" ),
-        $invite_people_row_container_clone              = $( ".js-invite-people-row-container-clone" ),
-        $invite_people_row_wrapper                      = $( ".js-invite-people-row-wrapper" ),
         $team_access_settings_row_clone                 = $( ".js-team-access-settings-row-clone" ),
-        $invite_people_row_clone                        = $( ".js-invite-people-row-clone" ),
+        $invite_people_row_container_clone              = $( ".stage-wrap--setup .js-invite-people-row-container-clone" ),
+        $invite_people_row_wrapper                      = $( ".stage-wrap--setup .js-invite-people-row-wrapper" ),
+        $invite_people_row_clone                        = $( ".stage-wrap--setup .js-invite-people-row-clone" ),
         $add_new_email                                  = $( ".js-add-new-email" ),
         $add_new_favourite                              = $( ".js-add-new-favourite" ),
         $favourite_row                                  = $( ".js-favourite-row" ),

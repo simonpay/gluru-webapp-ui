@@ -88,9 +88,9 @@ p {
     @extend %font-size__20;
     @extend %font-weight__lighter;
     @extend %color__black;
-    @extend %line-height__normal;
+    // @extend %line-height__normal;
 
-    .stage-wrap--signup & {
+    .stage-wrap--setup & {
         @extend %font-size__30;
         @extend %color__pink;
     }
@@ -100,9 +100,9 @@ p {
 .stage__hd-subheading {
     @extend %font-size__16;
     @extend %color__green;
-    @extend %line-height__normal;
+    // @extend %line-height__normal;
 
-    .stage-wrap--signup & {
+    .stage-wrap--setup & {
         @extend %font-size__16;
         @extend %font-weight__lighter;
         @extend %color__gray--light;

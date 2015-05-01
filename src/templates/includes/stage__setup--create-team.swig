@@ -191,6 +191,7 @@
             
             <div class="js-invite-people-row-wrapper">
                 <div class="invite-people-row-container js-invite-people-row-container-clone">
+                    {% set display_value = "none" %}
                     {% include "form__row--invite-people.swig" %}
                 </div>
             </div>

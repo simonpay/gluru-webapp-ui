@@ -90,11 +90,11 @@
 
 
 
-    <hr class="u-mb++">
+{#     <hr class="u-mb++">
+ #}
 
 
-
-    <section>
+{#     <section>
         
         <h2 class="stage__subheading-text">Account email</h2>
 
@@ -120,7 +120,7 @@
         </div>
 
     </section>
-
+ #}
 
 
     <hr class="u-mb++">

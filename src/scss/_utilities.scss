@@ -146,6 +146,14 @@
     margin-left: $base-line-height !important;
 }
 
+.u-ml\+ {
+    margin-left: $base-line-height * 1.5 !important;
+}
+
+.u-ml\+\+ {
+    margin-left: $base-line-height * 2 !important;
+}
+
 .u-ml- {
     margin-left: $base-line-height / 2 !important;
 }

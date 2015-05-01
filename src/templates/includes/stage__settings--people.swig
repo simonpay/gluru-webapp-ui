@@ -18,7 +18,7 @@
                 
                 <div class="gallery__item">
 
-                    <a href="#" class="btn -disc -full -light">
+                    <a href="#" class="btn -disc -full -light js-create-team js-modal-trigger" data-modal-content="create-team" data-modal-size="large">
                     	<div class="icon-close -positive -add -vcenter -lrg"></div>
                         <div class="btn__text -c-dark -fw-light -size-normal -below">Create New Team</div>
                     </a>
@@ -92,7 +92,7 @@
     
             <div class="collapsable-content -collapsed js-collapsable-content">
 
-                <div class="table -daily-digest -categories">
+                <div class="table">
 
                     {% for obj_person in obj_team.people %}
 
@@ -102,6 +102,11 @@
                     {% endfor %}
 
                 </div>
+
+                <a href="#" class="btn -clear -padh0 u-ml+ js-add-team-member js-modal-trigger" data-modal-content="add-team-member" data-modal-size="large">
+                    <span class="btn__icon icon__add"></span><!--
+                    --><span class="btn__text">Add more people to this team</span>
+                </a>
 
             </div>
             

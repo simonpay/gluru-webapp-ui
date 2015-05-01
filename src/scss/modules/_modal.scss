@@ -47,6 +47,11 @@
 	    border-radius: 10px;
 	    box-shadow: 0px 0px 15px rgba($black, 0.3);
 	    @include transition( opacity 0.3s );
+
+	    &.-large {
+			width: 800px;
+			height: 500px;
+	    }
 	}
 
 		.modal-box__content-wrap {

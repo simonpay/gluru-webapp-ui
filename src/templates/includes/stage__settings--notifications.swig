@@ -10,41 +10,46 @@
 
     <section>
         
-    	<h2 class="stage__subheading-text">Email notifications</h2>
+	   	{% for obj_catgeory in obj_setup_data.notifications.categories %}
 
-	    <hr>
+	    	<h2 class="stage__subheading-text">{{ obj_catgeory.name }} notifications</h2>
 
-	    <div class="u-mb">
-	    	
-	    	{% for obj_source in obj_setup_data.notifications %}
+		    <hr class="u-mb-">
 
-				<div class="row u-mb-">
+		    <div class="u-mb++">
+		    	
+		    	{% set counter = loop.index %}
+		    	{% for obj_notification in obj_catgeory.items %}
 
-					<div class="med-6">
+					<div class="row u-mb-">
 
-			    		<span class="table__text" title="{{ obj_source.name }}">{{ obj_source.name }}</span>
+						<div class="med-6">
 
+				    		<span class="table__text" title="{{ obj_notification.name }}">{{ obj_notification.name }}</span>
+
+						</div>
+
+						<div class="med-6 u-text-right">
+
+			                <div class="check-box__slider prevent-fout">
+			                    <input 
+			                        type="checkbox" 
+			                        class="checkbox_slider" 
+			                        checked
+			                        id="{{ obj_notification.id }}{{ counter }}">
+			                    <label 
+			                        class="prevent-fout" 
+			                        for="{{ obj_notification.id }}{{ counter }}"></label>
+			                </div>
+
+						</div>
 					</div>
 
-					<div class="med-6 u-text-right">
+				{% endfor %}
 
-		                <div class="check-box__slider prevent-fout">
-		                    <input 
-		                        type="checkbox" 
-		                        class="checkbox_slider" 
-		                        checked
-		                        id="{{ obj_source.id }}">
-		                    <label 
-		                        class="prevent-fout" 
-		                        for="{{ obj_source.id }}"></label>
-		                </div>
+		    </div>
 
-					</div>
-				</div>
-
-			{% endfor %}
-
-	    </div>
+		{% endfor %}
 
 		<div class="row u-text-right">
 

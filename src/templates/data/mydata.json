@@ -258,7 +258,7 @@
                 "text":                                 "Create Account",
                 "url":                                  "setup-create-account.html",
                 "stage_data": {
-                    "stage_id":                         "signup",
+                    "stage_id":                         "setup",
                     "stage_heading":                    "Welcome to Gluru!",
                     "stage_sub_heading":                "Choose how you would like to create your account"
                 },
@@ -272,7 +272,7 @@
                 "text":                                 "Connect Sources",
                 "url":                                  "setup-connect-sources.html",
                 "stage_data": {
-                    "stage_id":                         "signup",
+                    "stage_id":                         "setup",
                     "stage_heading":                    "Connect Sources",
                     "stage_sub_heading":                "Connect some data sources so we can get started"
                 },
@@ -329,7 +329,7 @@
                 "text":                                 "Auto-push",
                 "url":                                  "setup-auto-push.html",
                 "stage_data": {
-                    "stage_id":                         "signup",
+                    "stage_id":                         "setup",
                     "stage_heading":                    "Autopush Settings",
                     "stage_sub_heading":                "Choose how Gluru will handle your email attachments"
                 },
@@ -343,7 +343,7 @@
                 "text":                                 "Favourites",
                 "url":                                  "setup-favourites.html",
                 "stage_data": {
-                    "stage_id":                         "signup",
+                    "stage_id":                         "setup",
                     "stage_heading":                    "Favourites",
                     "stage_sub_heading":                "Add the people you would like to connect with"
                 },
@@ -357,7 +357,7 @@
                 "text":                                 "Create Team",
                 "url":                                  "setup-create-team.html",
                 "stage_data": {
-                    "stage_id":                         "signup",
+                    "stage_id":                         "setup",
                     "stage_heading":                    "Almost there!",
                     "stage_sub_heading":                "Add some favourites."
                 },
@@ -383,7 +383,7 @@
                 "stage_data": {
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
-                    "stage_sub_heading":                "25 Mrach, 2015"
+                    "stage_sub_heading":                "25 March, 2015"
                 },
                 "space_by_source": [
                     {
@@ -493,7 +493,7 @@
                 "stage_data": {
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
-                    "stage_sub_heading":                "25 Mrach, 2015"
+                    "stage_sub_heading":                "25 March, 2015"
                 },
                 "teams": [
                     {
@@ -569,26 +569,94 @@
                 "stage_data": {
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
-                    "stage_sub_heading":                "25 Mrach, 2015"
+                    "stage_sub_heading":                "25 March, 2015"
                 },
-                "notifications": [
-                    {
-                        "name":                         "Daily Digest",
-                        "id":                           "daily_digest"
-                    },
-                    {
-                        "name":                         "New product features",
-                        "id":                           "new_product_features"
-                    },
-                    {
-                        "name":                         "Gluru source storage nearly full",
-                        "id":                           "gluru_source_storage_nearly_full"
-                    },
-                    {
-                        "name":                         "Gluru newsletter",
-                        "id":                           "gluru_newsletter"
-                    }
-                ]
+                "notifications": {
+                    "categories": [
+                        {
+                            "name":                         "Email",
+                            "id":                           "email",
+                            "items": [
+                                {
+                                    "name":                         "Daily Digest",
+                                    "id":                           "daily_digest"
+                                },
+                                {
+                                    "name":                         "New product features",
+                                    "id":                           "new_product_features"
+                                },
+                                {
+                                    "name":                         "Gluru source storage nearly full",
+                                    "id":                           "gluru_source_storage_nearly_full"
+                                },
+                                {
+                                    "name":                         "Gluru newsletter",
+                                    "id":                           "gluru_newsletter"
+                                }
+                            ]
+                        },
+                        {
+                            "name":                         "Android",
+                            "id":                           "android",
+                            "items": [
+                                {
+                                    "name":                         "TBC",
+                                    "id":                           "tbc"
+                                }
+                            ]
+                        },
+                        {
+                            "name":                         "People",
+                            "id":                           "people",
+                            "items": [
+                                {
+                                    "name":                         "TBC",
+                                    "id":                           "tbc"
+                                }
+                            ]
+                        },
+                        {
+                            "name":                         "Meetings",
+                            "id":                           "meetings",
+                            "items": [
+                                {
+                                    "name":                         "TBC",
+                                    "id":                           "tbc"
+                                }
+                            ]
+                        },
+                        {
+                            "name":                         "Calls",
+                            "id":                           "calls",
+                            "items": [
+                                {
+                                    "name":                         "TBC",
+                                    "id":                           "tbc"
+                                }
+                            ]
+                        },
+                        {
+                            "name":                         "Projects",
+                            "id":                           "projects",
+                            "items": [
+                                {
+                                    "name":                         "TBC",
+                                    "id":                           "tbc"
+                                }
+                            ]
+                        },
+                        {
+                            "name":                         "Team activity",
+                            "id":                           "team-activity",
+                            "items": [
+                                {
+                                    "name":                         "TBC",
+                                    "id":                           "tbc"
+                                }
+                            ]
+                        }
+                    ]
+                }
             },
             {
                 "section_id":                           "security",
@@ -598,7 +666,7 @@
                 "stage_data": {
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",
-                    "stage_sub_heading":                "25 Mrach, 2015"
+                    "stage_sub_heading":                "25 March, 2015"
                 },
                 "sessions": [
                     {
@@ -632,6 +700,28 @@
                         "timing":                       "About 1 week ago"
                     }
                 ]
+            },
+            {
+                "section_id":                           "billing",
+                "text":                                 "Billing",
+                "icon_class":                           "billing",
+                "url":                                  "settings-billing.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 March, 2015"
+                }
+            },
+            {
+                "section_id":                           "support",
+                "text":                                 "Support",
+                "icon_class":                           "support",
+                "url":                                  "settings-support.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 March, 2015"
+                }
             }
         ]
     },
