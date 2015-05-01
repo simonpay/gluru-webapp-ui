@@ -63,7 +63,7 @@
 	&.-light {
 		background-color: $wild-sand;
 		border-width: 1px;
-		border-color: $silver;
+		border-color: $alto;
 	}
 
 	&.-white {
@@ -147,11 +147,32 @@
 			}
 		}
 
-		&.-gray {
+		&.-c-gray {
 			color: $dusty-gray;
 		}
 
-		&.-light {
+		&.-c-dark {
+			color: $tundora;
+		}
+
+		&.-fw-light {
 			font-weight: lighter;
+		}
+
+		&.-below {
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			white-space: nowrap;
+			@include transform( translateX(-50%) translateY(50%) );
+
+			&.-lrg-disc {
+				max-width: 130px;
+				@include nowrap;
+			}
+		}
+
+		&.-size-normal {
+			font-size: rem(16);
 		}
 	}

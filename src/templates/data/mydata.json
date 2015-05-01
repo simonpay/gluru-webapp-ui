@@ -495,34 +495,69 @@
                     "stage_heading":                    "Settings",
                     "stage_sub_heading":                "25 Mrach, 2015"
                 },
-                "favourites": [
+                "teams": [
                     {
-                        "name":                         "Alex Li",
-                        "color":                        "pink"
+                        "team_name":                    "Sales Team",
+                        "team_class":                   "sales",
+                        "people": [
+                            {
+                                "person_name":                  "Alex Li",
+                                "person_email":                 "alexLi@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_1.png"
+                            },
+                            {
+                                "person_name":                  "Jason Smith",
+                                "person_email":                 "jasonsmith@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_2.png"
+                            },
+                            {
+                                "person_name":                  "Alphonso Double-barrelled Long-name Engelking",
+                                "person_email":                 "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_3.png"
+                            }
+                        ]
                     },
                     {
-                        "name":                         "Alex Li",
-                        "color":                        "pink"
+                        "team_name":                    "Marketing Team",
+                        "team_class":                   "marketing",
+                        "people": [
+                            {
+                                "person_name":                  "Alphonso Double-barrelled Long-name Engelking",
+                                "person_email":                 "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_3.png"
+                            },
+                            {
+                                "person_name":                  "Alex Li",
+                                "person_email":                 "alexLi@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_1.png"
+                            }
+                        ]
                     },
                     {
-                        "name":                         "Alex Li",
-                        "color":                        "pink"
-                    },
-                    {
-                        "name":                         "Alex Li",
-                        "color":                        "pink"
-                    },
-                    {
-                        "name":                         "Alex Li",
-                        "color":                        "pink"
-                    },
-                    {
-                        "name":                         "Alex Li",
-                        "color":                        "pink"
-                    },
-                    {
-                        "name":                         "Alex Li",
-                        "color":                        "pink"
+                        "team_name":                    "Development Team",
+                        "team_class":                   "development",
+                        "people": [
+                            {
+                                "person_name":                  "Jason Smith",
+                                "person_email":                 "jasonsmith@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_2.png"
+                            },
+                            {
+                                "person_name":                  "Alex Li",
+                                "person_email":                 "alexLi@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_1.png"
+                            },
+                            {
+                                "person_name":                  "Jason Smith",
+                                "person_email":                 "jasonsmith@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_2.png"
+                            },
+                            {
+                                "person_name":                  "Alphonso Double-barrelled Long-name Engelking",
+                                "person_email":                 "alphonso-double-barrelled-long-name-engelking@gmail.com",
+                                "person_avatar_src":            "img/tmp_avatar_3.png"
+                            }
+                        ]
                     }
                 ]
             },

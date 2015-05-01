@@ -91,7 +91,7 @@
 							    </div>
 							    <div class="media__body">
 
-						    		<a href="#" class="link table__text" title="{{ obj_source.name }}">{{ obj_source.name }}</a>
+						    		<a href="#" class="table__text" title="{{ obj_source.name }}">{{ obj_source.name }}</a>
 
 							    </div>
 							</div>

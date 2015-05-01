@@ -68,9 +68,6 @@
         }
 
         &.-team {
-            width: 30px;
-            height: 30px;
-
             &.-sales {
                 background: $team-color-sales;
             }
@@ -82,6 +79,21 @@
             &.-development {
                 background: $team-color-development;
             }
+        }
+
+        &.-team {
+            width: 30px;
+            height: 30px;
+        }
+
+        &.-med {
+            width: 46px;
+            height: 46px;
+        }
+
+        &.-xxlrg {
+            width: 130px;
+            height: 130px;
         }
     }
 

@@ -11,7 +11,7 @@
 		    </div>
 		    <div class="media__body">
 
-	    		<a href="#" class="link table__text" title="{{ obj_file_row.text }}">{{ obj_file_row.text }}</a>
+	    		<a href="#" class="table__text" title="{{ obj_file_row.text }}">{{ obj_file_row.text }}</a>
 	    		{% if obj_file_row.file_summary %}
 		    		<div class="table__text -light" title="{{ obj_file_row.text }}">{{ obj_file_row.file_summary }}</div>
 	    		{% endif %}

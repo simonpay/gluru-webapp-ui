@@ -39,6 +39,9 @@ $exchange-blue:             #0070c8;
 
 $light-green:               #8ce31c;                    // lime green
 $zeus:                      #2e261e;                    // very very dark brown
+$mulberry:					#c95c8a;					// move
+$emerald:					#5ed68b;					// pastel green
+$curious-blue:				#3497d6;
 
 // grayscale range   
 $white:                     #fff;                       // white
@@ -57,9 +60,9 @@ $mine-shaft:                #333;                       // very dark gray
 $black:                     #000;                       // black
 
 // team colors
-$team-color-sales:          $orange;
-$team-color-marketing:      $blue;
-$team-color-development:    $light-green;
+$team-color-sales:          $mulberry;
+$team-color-marketing:      $emerald;
+$team-color-development:    $curious-blue;
 
 // tooltips
 $tooltips-background-color: rgba($black, 0.8);
@@ -178,38 +181,41 @@ $panel-header-height--item-selected:        $panel-header-height + ($event-heigh
 // -----------------------------------
 // VERTICAL RYTHM
 // -----------------------------------
-$em-base:           16px;
-$base-font-size:    $em-base;
-$base-line-height:  24px;
-$default-margin:    $base-line-height;
+$em-base:           						16px;
+$base-font-size:    						$em-base;
+$base-line-height:  						22px;
+$default-margin:    						$base-line-height;
+
+// html declaration in _base.scss
+$line-height:								$base-line-height / $base-font-size;
 
 
 // -----------------------------------
 // ANIMATIONS
 // -----------------------------------
-$drawer-animation-duration:     0.3s;
-$actions-animation-duration:    0.3s;
+$drawer-animation-duration:     			0.3s;
+$actions-animation-duration:    			0.3s;
 
-$panel-drop-shadow:             rgba(0, 0, 0, 0.15);
-$panel-drop-shadow-spread:      20px;
+$panel-drop-shadow:             			rgba(0, 0, 0, 0.15);
+$panel-drop-shadow-spread:      			20px;
 
-$tooltip-animation-duration:    0.3s;
-$tooltip-show-delay:            0.5s;
+$tooltip-animation-duration:    			0.3s;
+$tooltip-show-delay:            			0.5s;
 
 
 // -----------------------------------
 // FORMS
 // -----------------------------------
-$form-el__height--row:                  38px;
-$form-el__height--input-text:           38px;
-$form-el__height--select:               38px;
-$form-el__border-radius:                3px;
+$form-el__height--row:          			38px;
+$form-el__height--input-text:   			38px;
+$form-el__height--select:       			38px;
+$form-el__border-radius:        			3px;
 
-// jquery-ui checkbox variables
-$checkbox-slider__height:           30px;
-$checkbox-slider__width:            80px;
-$checkbox-slider--small__height:    20px;
-$checkbox-slider--small__width:     50px;
+// jquery-ui checkbox variables: 		
+$checkbox-slider__height:           		30px;
+$checkbox-slider__width:            		80px;
+$checkbox-slider--small__height:    		20px;
+$checkbox-slider--small__width:     		50px;
 
 
 // priority box

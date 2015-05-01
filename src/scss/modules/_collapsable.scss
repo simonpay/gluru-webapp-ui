@@ -20,7 +20,10 @@
         @include transform( rotate(180deg) );
         @include use-sprite("icon__expand");
 
-        .daily-digest & {
+        // force collapsable arrow from 
+        // right side for priority-boxes
+        .daily-digest &,
+        .-settings & {
             right: 27px;
         }
 

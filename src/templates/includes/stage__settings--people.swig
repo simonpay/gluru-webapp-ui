@@ -10,21 +10,33 @@
                         
     <section>
         
-        <h2 class="stage__subheading-text">Favourites</h2>
+        <h2 class="stage__subheading-text">Teams</h2>
 
         <div class="gallery__wrap u-mb u-cf">
             
-            {% for obj_source in obj_setup_data.favourites %}
+            <div class="gallery__container -{{ obj_teams.teams }}">
+                
+                <div class="gallery__item">
 
-                <div class="gallery__container -{{ obj_source.source }}">
+                    <a href="#" class="btn -disc -full -light">
+                    	<div class="icon-close -positive -add -vcenter -lrg"></div>
+                        <div class="btn__text -c-dark -fw-light -size-normal -below">Create New Team</div>
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% for obj_team in obj_setup_data.teams %}
+
+                <div class="gallery__container">
                     
                     <div class="gallery__item">
 
-                        <a href="#" class="btn -disc -full -light">
-                        	<div class="icon-close -positive -add -vcenter -lrg"></div>
-                        </a>
-
-                        <div class="doughnut-chart__label lrg-label-text">{{ obj_source.percentage_available }}</div>
+                        <div class="disc-img">
+                            <div class="disc-img__img-wrap -xxlrg -team -{{ obj_team.team_class }}"></div>
+                            <div class="btn__text -c-dark -size-normal -below -lrg-disc" title="{{ obj_team.team_name }}">{{ obj_team.team_name }}</div>
+                        </div>
 
                     </div>
 
@@ -34,12 +46,69 @@
 
         </div>
 
+
+
+        <hr class="u-mb+">
+
+
+
+        {% for obj_team in obj_setup_data.teams %}
+    
+            <div class="priority-box__wrap">
+
+                <div class="priority-box -settings collapsable is-collapsed js-toggle-daily-digest-table">
+
+                    <div class="media -v-center">
+                        <div class="media__img u-mr">
+
+                            <div class="disc-img">
+                                <div class="disc-img__img-wrap -med -team -{{ obj_team.team_class }}"></div>
+                            </div>
+
+                        </div>
+                        <div class="media__body">
+
+                            <div class="media -v-center">
+                                <div class="media__img -right -meeting">
+
+                                    <a href="#" class="btn -lozenge -white -small">Delete</a>
+                                    <a href="#" class="btn -lozenge -positive -small">Save</a>
+
+                                </div>
+                                <div class="media__body">
+
+                                    <div class="table__text--heading" title="{{ obj_team.team_name|striptags }}">{{ obj_team.team_name|safe }}</div>
+                                    <div class="table__text--sub-heading" title="{{ obj_team.item_date_time|striptags }}">{{ obj_team.people.length }} members</div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+    
+            <div class="daily-digest__table-wrap js-table-wrap">
+
+                <div class="table -daily-digest -categories">
+
+                    {% for obj_person in obj_team.people %}
+
+                        {% set obj_person_row = obj_person %}
+                        {% include "table-row-people.swig" %}
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+            
+        {% endfor %}
+
     </section>
-
-
-
-    <hr class="u-mb++">
-
 
 
 {% include "stage__settings--end.swig" %}
