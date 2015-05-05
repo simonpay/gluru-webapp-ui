@@ -21,6 +21,7 @@
 
         // accounts nav     
         $notifications                      = $( ".js-notifications" ),
+        $account_avatar                     = $( ".js-account-avatar" ),
 
         // stage nav     
         $js_sort                            = $( ".js-sort" ),
@@ -56,6 +57,11 @@
         $pop_menu_wrap                      = $( ".js-pop-menu-wrap" ),
         $pop_menu_triggers                  = $( ".js-pmt" ),
         $pop_menu_item                      = $( ".js-pop-menu-item" ),
+
+        // status bar
+        $status_bar                         = $( ".js-status-bar" ),
+        $toggle_status_bar                  = $( ".js-toggle-status-bar" ),
+        $close_status_bar                   = $( ".js-close-status-bar" ),
 
         // collapsable lists
         $expandable_lists                   = $( ".js-toggle-expand-list" ),
@@ -105,6 +111,54 @@
             }
         },
 
+        status_bar: {
+
+            // toggle: function () {
+
+            //     $this = $(this);
+
+            //     $status_bar.toggleClass( "is-hidden" );
+            // },
+
+            set_state: function ( requested_state ) {
+
+                console.log( "status_bar: set_state: " + requested_state );
+
+                var $this = $(this),
+                status_bar_is_hidden = $status_bar.hasClass( "is-hidden" );
+
+                // open/close status_bar based on param "requested_state" passed to function
+                if ( requested_state !== undefined ) {
+
+                    obj_gluru.status_bar["_" + requested_state]();
+
+                // toggle status_bar
+                } else {
+
+                    if ( status_bar_is_hidden ) {
+
+                        // show status_bar
+                        obj_gluru.status_bar._show();
+
+                    } else {
+
+                        // hide status_bar
+                        obj_gluru.status_bar._hide();
+                    }
+                }
+            },
+
+            _show: function () {
+
+                $status_bar.removeClass( "is-hidden" );
+            },
+
+            _hide: function () {
+
+                $status_bar.addClass( "is-hidden" );
+            }
+        },
+
         settings: {
 
             _manage_team: function ( e ) {
@@ -132,14 +186,31 @@
 
         modal: {
 
-            _show: function ( e ) {
+            _show: function ( e, modal_content, modal_size ) {
 
                 var $this           = $(this),
-                    _modal_size     = $this.data( "modal-size" ),
-                    _modal_content  = $this.data( "modal-content" )
-                    ;
+                    _modal_size,
+                    _modal_content;
 
-                // console.log( $this.data( "modal-content" ) );
+
+                if ( modal_content === undefined ) {
+
+                    _modal_content = $this.data( "modal-content" );
+
+                } else {
+
+                    _modal_content = modal_content;
+                }
+
+                if ( modal_size === undefined ) {
+
+                    _modal_size    = $this.data( "modal-size" );
+
+                } else {
+
+                    _modal_size    = modal_size;
+                }
+
 
                 $modal_box.removeClass( "-large" );
 
@@ -939,11 +1010,21 @@
         obj_gluru.modal._hide();
     });
 
-    // NOTIFICATIONS
+
+
+    // STAGE NAV
     // -------------------------------------------------
+    // notifications
     $notifications.on( "click", function(){
         obj_gluru.notifications.do_click.call( $(this) );
     });
+
+    // avatar
+    $account_avatar.on( "click", function(){
+        location.href = "settings-profile.html";
+    });
+
+
 
     // POP MENUS
     // -------------------------------------------------
@@ -979,9 +1060,9 @@
 
         // modal
         // if click event is not on modal box or on trigger
-        if ( !$(e.target).closest( ".modal__box" ).length && !$(e.target).closest( $modal_triggers ).length ) {
+        if ( !$(e.target).closest( ".modal__box" ).length && !$(e.target).closest( $modal_triggers ).length && !$(e.target).closest( ".select2-drop-mask" ).length ) {
             // console.log( "hide modal" );
-            obj_gluru.modal._hide();
+            // obj_gluru.modal._hide();
         }
             
     });
@@ -1152,6 +1233,20 @@
 
 
 
+    // STATUS BAR
+    // -------------------------------------------------
+    // toggle status bar
+    $toggle_status_bar.on( "click", function(){
+        // obj_gluru.status_bar.toggle.call( $(this) );
+        obj_gluru.status_bar.set_state.call( $(this) );
+    });
+    // toggle status bar
+    $close_status_bar.on( "click", function(){
+        obj_gluru.status_bar.set_state.call( $(this), "hide" );
+    });
+
+
+
     // SEARCH
     // -------------------------------------------------
     // search activate
@@ -1271,6 +1366,19 @@
     // obj_gluru.search._open();
 
     // obj_gluru.pop_menu.show.call( $( ".table-wrap-outer.-cols-1 .js-pmt" ) );
+
+
+
+
+
+    // daily-digest first run page 
+    // this is opened after the user has finished the setup process
+    if ( $( ".daily-digest-first-run" ).length > 0 ) {
+
+        obj_gluru.modal._show.call( $(this), undefined, "indexing-files", "large" );
+        obj_gluru.status_bar.set_state();
+
+    }
 
 
 })();

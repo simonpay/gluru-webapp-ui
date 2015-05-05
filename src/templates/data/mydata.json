@@ -758,24 +758,28 @@
                                     "text":                     "Sales.xls",
                                     "file_class":               "icon-sml__file--spreadsheet",
                                     "file_modified":            "10:33 am",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__gdrive"
                                 },
                                 {
                                     "text":                     "Itinerary.txt",
                                     "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "9:01 am",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__box"
                                 },
                                 {
                                     "text":                     "Sales_Report.doc",
                                     "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "20 Feb",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__gdrive"
                                 },
                                 {
                                     "text":                     "Proposal.pdf",
                                     "file_class":               "icon-sml__file--pdf",
                                     "file_modified":            "20 Feb",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__gdrive"
                                 }
                             ]
@@ -789,18 +793,21 @@
                                     "text":                     "Itinerary.txt",
                                     "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "9:01 am",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__box"
                                 },
                                 {
                                     "text":                     "Sales.xls",
                                     "file_class":               "icon-sml__file--spreadsheet",
                                     "file_modified":            "10:33 am",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__gdrive"
                                 },
                                 {
                                     "text":                     "Proposal.pdf",
                                     "file_class":               "icon-sml__file--pdf",
                                     "file_modified":            "20 Feb",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__gdrive"
                                 }
                             ]
@@ -814,12 +821,14 @@
                                     "text":                     "Sales.xls",
                                     "file_class":               "icon-sml__file--spreadsheet",
                                     "file_modified":            "10:33 am",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__gdrive"
                                 },
                                 {
                                     "text":                     "Itinerary.txt",
                                     "file_class":               "icon-sml__file--drive",
                                     "file_modified":            "9:01 am",
+                                    "file_owner":               "Me",
                                     "source_class":             "icon-sml__box"
                                 }
                             ]
@@ -844,12 +853,14 @@
                                             "text":                     "Itinerary.txt",
                                             "file_class":               "icon-sml__file--drive",
                                             "file_modified":            "9:01 am",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__box"
                                         },
                                         {
                                             "text":                     "Proposal.pdf",
                                             "file_class":               "icon-sml__file--pdf",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
@@ -862,6 +873,7 @@
                                             "text":                     "Board Meeting Deck.ppt",
                                             "file_class":               "icon-sml__file--powerpoint",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
@@ -875,6 +887,7 @@
                                             "file_summary":             "I really would love to get together.",
                                             "file_class":               "icon-sml__file--email",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gmail"
                                         },
                                         {
@@ -882,6 +895,7 @@
                                             "file_summary":             "Please Make the logos 50% bigger.",
                                             "file_class":               "icon-sml__file--email",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gmail"
                                         }
                                     ]
@@ -894,6 +908,7 @@
                                             "text":                     "Sales.xls",
                                             "file_class":               "icon-sml__file--spreadsheet",
                                             "file_modified":            "10:33 am",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
@@ -914,12 +929,14 @@
                                             "text":                     "Itinerary.txt",
                                             "file_class":               "icon-sml__file--drive",
                                             "file_modified":            "9:01 am",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__box"
                                         },
                                         {
                                             "text":                     "Proposal.pdf",
                                             "file_class":               "icon-sml__file--pdf",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
@@ -932,12 +949,14 @@
                                             "text":                     "Board Meeting Deck.ppt",
                                             "file_class":               "icon-sml__file--powerpoint",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gdrive"
                                         },
                                         {
                                             "text":                     "Branding Evolution.ppt",
                                             "file_class":               "icon-sml__file--powerpoint",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__box"
                                         }
                                     ]
@@ -951,6 +970,7 @@
                                             "file_summary":             "I really would love to get together.",
                                             "file_class":               "icon-sml__file--email",
                                             "file_modified":            "20 Feb",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gmail"
                                         }
                                     ]
@@ -963,6 +983,7 @@
                                             "text":                     "Sales.xls",
                                             "file_class":               "icon-sml__file--spreadsheet",
                                             "file_modified":            "10:33 am",
+                                            "file_owner":               "Me",
                                             "source_class":             "icon-sml__gdrive"
                                         }
                                     ]
@@ -1211,24 +1232,28 @@
                     "text":                     "todo-list.text",
                     "file_class":               "icon-sml__file--evernote",
                     "file_modified":            "12 May 2015",
+                    "file_owner":               "Me",
                     "source_class":             "icon-sml__evernote"
                 },
                 {
                     "text":                     "file-name--very-long-filename-that-will-have-to-be-truncated-somehow.ext",
                     "file_class":               "icon-sml__file--text",
                     "file_modified":            "12 May 2015",
+                    "file_owner":               "Sales Team",
                     "source_class":             "icon-sml__gdrive"
                 },
                 {
                     "text":                     "summary.pdf",
                     "file_class":               "icon-sml__file--pdf",
                     "file_modified":            "12 May 2015",
+                    "file_owner":               "Me",
                     "source_class":             "icon-sml__box"
                 },
                 {
                     "text":                     "cost-forecast.xls",
                     "file_class":               "icon-sml__file--spreadsheet",
                     "file_modified":            "12 May 2015",
+                    "file_owner":               "Me",
                     "source_class":             "icon-sml__dropbox"
                 }
             ]

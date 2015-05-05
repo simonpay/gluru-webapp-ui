@@ -69,7 +69,8 @@
                         }
 
                         &.-daily-digest {
-                            @include use-sprite("icon-sml__calendar--pink");
+                            // @include use-sprite("icon-sml__calendar--pink");
+                            @include use-sprite("icon-sml__coffee--pink");
                         }
 
                         &.-sources {
@@ -112,8 +113,10 @@
                     }
 
                     &.-daily-digest {
-                        @include use-sprite("icon-sml__calendar");
-                        margin-right: $margin-right + 1px;
+                        // @include use-sprite("icon-sml__calendar");
+                        @include use-sprite("icon-sml__coffee");
+                        margin-top: $margin-top - 4px;
+                        // margin-right: $margin-right + 1px;
                     }
 
                     &.-sources {

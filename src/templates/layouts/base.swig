@@ -50,6 +50,11 @@
         <button class="button js-setup-pages">Take me there</button>
     </div>
 
+    <div class="button-group is-hidden js-buttons-generic">
+        <div class="label">Status Bar</div>
+        <button class="button js-toggle-status-bar">Toggle</button>
+    </div>
+
     <div class="button-group is-hidden js-buttons-files">
         <button class="button js-single" data-class=".-cols-1"><strong>Single</strong> View</button>
         <button class="button js-double" data-class=".-cols-2">Split - <strong>2 cols</strong></button>

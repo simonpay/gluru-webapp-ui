@@ -52,7 +52,7 @@
                     <div class="media__img -right">
 
                         <p>
-                            <a href="#" class="btn -lozenge -positive -small u-ml-">Upgrade</a>
+                            <a href="#" class="btn -lozenge -positive -small u-ml- js-modal-trigger js-upgrade" data-modal-content="settings-upgrade">Upgrade</a>
                         </p>
 
                     </div>
@@ -72,7 +72,7 @@
                     <div class="media__img -right">
 
                         <p>
-                            <a href="#" class="btn -lozenge -white -small u-ml-">Deactivate</a>
+                            <a href="#" class="btn -lozenge -white -small u-ml- js-modal-trigger js-upgrade" data-modal-content="settings-deactivate" data-modal-size="large">Deactivate</a>
                         </p>
 
                     </div>

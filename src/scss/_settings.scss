@@ -81,6 +81,7 @@ $tooltip-z-index:                           200;
 $main-nav-z-index:                          100;
 $drawer-wrap-z-index:                       50;
 $actions-wrap-z-index:                      40;
+$status-bar-z-index:                        35;
 $search-wrap-z-index:                       30;
 $panel-header-stage-z-index:                20;
 $panel-header--moments-z-index:             10;
@@ -115,7 +116,7 @@ $stage-section-padding-left:                $stage-padding-left;
 
 
 // stage nav
-$stage-nav__icon-wrap-width:                30px;
+$stage-nav__icon-wrap-width:                32px;
 $stage-nav__icon-wrap-height:               $stage-nav__icon-wrap-width;
 
 // main nav
@@ -175,8 +176,14 @@ $event-icon-wrap-height:                    $event-icon-wrap-width;
 $event-arrow-width:                         40px;
 $event-arrow-height:                        20px;
 
-
 $panel-header-height--item-selected:        $panel-header-height + ($event-height - $panel-header-height) / 2;
+
+// modal
+$modal-box__height:							300px;
+$modal-box__height--large:					500px;
+
+// status-bar
+$status-bar__height:						80px;
 
 // -----------------------------------
 // VERTICAL RYTHM

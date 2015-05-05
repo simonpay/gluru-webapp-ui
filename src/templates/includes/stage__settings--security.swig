@@ -17,7 +17,7 @@
                     <div class="media__img -right">
 
                         <p>
-                            <a href="#" class="btn -lozenge -white -small u-ml-">Change</a>
+                            <a href="#" class="btn -lozenge -white -small u-ml- js-modal-trigger" data-modal-content="change-username">Change</a>
                         </p>
 
                     </div>
@@ -45,7 +45,7 @@
                     <div class="media__img -right">
 
                         <p>
-                            <a href="#" class="btn -lozenge -white -small u-ml-">Change</a>
+                            <a href="#" class="btn -lozenge -white -small u-ml- js-modal-trigger" data-modal-content="change-password">Change</a>
                         </p>
 
                     </div>

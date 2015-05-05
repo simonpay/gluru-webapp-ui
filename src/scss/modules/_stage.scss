@@ -18,6 +18,16 @@
 	        // scroll needs to be applied when split screen 
 	        // views are too wide to fit in viewport 
 	        overflow-x: auto;
+
+		    // use sibling selector to set height of .stage 
+		    // based on existence of 'is-hidden' class on status-bar
+		    .status-bar ~ & {
+		        @include calc( height, "100% - #{$status-bar__height}" );
+		    }
+
+		    .status-bar.is-hidden ~ & {
+		        height: 100%;
+		    }
 	    }
 	}
 		

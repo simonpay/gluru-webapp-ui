@@ -26,6 +26,10 @@
 		<div class="table__text" title="{{ obj_file_row.file_modified }}">{{ obj_file_row.file_modified }}</div>
 	</div>
 
+	<div class="table__col -owner">
+		<div class="table__text" title="{{ obj_file_row.file_owner }}">{{ obj_file_row.file_owner }}</div>
+	</div>
+
 	<div class="table__col -source">
 		<div class="media -v-center u-center-block">
 		    <div class="media__img">

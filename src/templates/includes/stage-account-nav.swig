@@ -21,7 +21,8 @@
 			<div class="stage-nav__icon-wrap">
 				<div class="disc-img">
 					<div class="disc-img__img-wrap">
-						<img class="disc-img__img" src="img/tmp_avatar_1.png" alt="">
+						{# <img class="disc-img__img" src="img/tmp_avatar_1.png" alt=""> #}
+						<div class="stage-nav__icon u-center-transform icon-sml__person--pink js-account-avatar"></div>
 					</div>
 				</div>
 			</div>

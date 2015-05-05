@@ -5,4 +5,5 @@
 {# {% endif %} #}
 {# <div class="stage-wrap stage-wrap--{{ stage_wrap_section }}"> #}
 <div class="stage-wrap stage-wrap--{{ obj_stage_data.stage_id }}">
+	{% include "../includes/status-bar.swig" %}
 	<main class="stage">

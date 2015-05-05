@@ -27,4 +27,9 @@
 {% block javascripts %}
     {% parent %}
     <script src="js/pages/settings.js"></script>
+    <script>
+        (function(){
+            $( ".js-reasons-for-leaving" ).select2({minimumResultsForSearch: -1});
+        })();
+    </script>
 {% endblock %}

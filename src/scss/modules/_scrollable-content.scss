@@ -31,6 +31,13 @@
         background: $gallery;
         // height: 100%; // same as default so commented out
     }
+
+    &.-modal {
+        height: $modal-box__height - $panel-header-height;
+        &.-large {
+            height: $modal-box__height--large - $panel-header-height - 2px;
+        }
+    }
 }
 
     .scrollable-content {

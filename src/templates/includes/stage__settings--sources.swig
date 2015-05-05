@@ -10,7 +10,7 @@
 
     <section>
         
-        <p class="stage__text u-mb-">Total usage - available space</p>
+        <p class="stage__text u-mb--">Total usage - available space</p>
 
         <div class="progress-bar__container u-mb">
             <div class="progress-bar" style="width:5%"></div>

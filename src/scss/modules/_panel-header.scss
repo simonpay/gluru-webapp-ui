@@ -47,7 +47,7 @@
             .drawer-wrap.is-hidden ~ .stage-wrap &,
             // when drawer doesnt exist in dom
             &.-no-drawer { 
-                @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav - drawer
+                @include calc( width, "100% - #{$main-nav-width}" ); // viewport - main-nav
             }
 
         }

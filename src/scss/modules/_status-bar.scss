@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    # STATUS BAR
+\*------------------------------------*/
+
+// status bar is a panel that sits at the bottom 
+// of the screen that shows status reports such as 
+// file indexing progress 
+
+.status-bar {
+    z-index: $status-bar-z-index;
+    // position: fixed;
+    position: absolute;
+    bottom: 0;
+    // left: $main-nav-width;
+    right: 0;
+    width: 100%;
+    height: $status-bar__height;
+    background: $alabaster;
+    border-top: 1px solid $alto;
+    opacity: 1;
+    @include transition( left .3s, opacity .3s, height 0s 0s );
+    
+    // // when .drawer-wrap is present and open 
+    // // set left value to be main-nav + drawer-width 
+    // .drawer-wrap ~ .stage-wrap & {
+    //  left: $main-nav-width + $drawer-width;
+    // }
+
+    // // when .drawer-wrap is present and hidden
+    // // set left value to be main-nav 
+    // .drawer-wrap.is-hidden ~ .stage-wrap & {
+    //  left: $main-nav-width;
+    // }
+
+    &.is-hidden {
+        height: 0;
+        opacity: 0;
+        @include transition( opacity .3s, height 0s .3s );
+    }
+}

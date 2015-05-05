@@ -259,12 +259,49 @@ module.exports = function(grunt) {
                     'build/emails/welcome/welcome-inline.html': ['build/emails/welcome/welcome-code.html']
                 }
             }
+        },
+
+        inlinecss: {
+            main: {
+                options: {
+                    // applyStyleTags: false,
+                    preserveMediaQueries: true,
+                    // applyWidthAttributes: true
+                },
+                files: {
+                    // 'out.html': 'in.html'
+                    'build/emails/daily-digest/daily-digest-inline.html': ['build/emails/daily-digest/daily-digest-code.html'],
+                    'build/emails/welcome/welcome-inline.html': ['build/emails/welcome/welcome-code.html']
+                }
+            }
+        },
+
+        replace: {
+            example: {
+                src: ['build/emails/daily-digest/daily-digest-inline.html'], // source files array (supports minimatch) 
+                dest: 'build/emails/daily-digest/daily-digest-inline.html', // destination directory or file 
+                replacements: [{
+                    from: '<!-- &nbsp; -->', // string replacement 
+                    to: '&nbsp;'
+                // }, {
+                //     from: /(f|F)(o{2,100})/g, // regex replacement ('Fooo' to 'Mooo') 
+                //     to: 'M$2'
+                // }, {
+                //     from: 'Foo',
+                //     to: function(matchedWord) { // callback replacement 
+                //         return matchedWord + ' Bar';
+                //     }
+                }]
+            }
         }
+
     });
 
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-premailer');
+    grunt.loadNpmTasks('grunt-inline-css');
+    grunt.loadNpmTasks('grunt-text-replace');
 
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-prettify');
@@ -287,6 +324,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', ['assemble', 'jshint', 'concat', 'uglify:dev', 'compass', 'copy']);
     grunt.registerTask('dist', ['clean', 'assemble', 'prettify', 'jshint', 'concat', 'uglify', 'compass', 'cssmin', 'copy']);
     grunt.registerTask('serve', 'connect');
-    grunt.registerTask('email', ['uncss', 'processhtml', 'premailer']);
+    grunt.registerTask('email', ['uncss', 'processhtml', 'premailer', 'replace']);
+    // grunt.registerTask('email', ['uncss', 'processhtml', 'inlinecss']);
 
 };

@@ -114,3 +114,38 @@ body {
         }
     }
 }
+
+// hard-coded animation for progress bar for demo only
+.progress-bar {
+    @include animation-name(progress-bar);
+    @include animation-duration(10s);
+    @include animation-timing-function(linear);
+    @include animation-iteration-count(1);
+    @include animation-fill-mode(both);
+
+    .scrollable-content__inner-wrap.-settings & {
+        @include animation-name(progress-bar-95-percent);
+        @include animation-duration(.75s);
+    }
+}
+
+@include keyframes(progress-bar) {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@include keyframes(progress-bar-95-percent) {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 5%;
+    }
+}
+
+
+

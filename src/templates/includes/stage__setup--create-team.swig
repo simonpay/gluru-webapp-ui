@@ -212,7 +212,7 @@
         <section class="form-section -submit js-section-submit">
 
             <p>
-                <a href="#" class="btn -lozenge -positive">
+                <a href="moments-daily-digest-first-run.html" class="btn -lozenge -positive">
                     <span class="btn__icon icon__arrow--white"></span><!--
                     --><span class="btn__text">Finish</span>
                 </a>

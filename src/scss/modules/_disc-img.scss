@@ -10,10 +10,10 @@
 .disc-img {
     position: relative;
 
-    // when inside .-profile class
-    .-profile & {
-        top: 2px;
-    }
+    // // when inside .-profile class
+    // .-profile & {
+    //     top: 2px;
+    // }
 
     &.-right {
         left: auto;
@@ -32,8 +32,9 @@
 }
 
     .disc-img__img-wrap {
-        width: 34px;
-        height: 34px;
+        position: relative;
+        width: 32px;
+        height: 32px;
         overflow: hidden;
         border-radius: 100%;
         

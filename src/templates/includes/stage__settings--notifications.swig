@@ -14,14 +14,14 @@
 
 	    	<h2 class="stage__subheading-text">{{ obj_catgeory.name }} notifications</h2>
 
-		    <hr class="u-mb-">
+		    <hr class="u-mb--">
 
 		    <div class="u-mb++">
 		    	
 		    	{% set counter = loop.index %}
 		    	{% for obj_notification in obj_catgeory.items %}
 
-					<div class="row u-mb-">
+					<div class="row u-mb--">
 
 						<div class="med-6">
 

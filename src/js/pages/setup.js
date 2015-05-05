@@ -360,6 +360,8 @@
 
             _add_new_email_recipient: function (e) {
 
+                // console.log( "_add_new_email_recipient" );
+
                 var _invite_people_row_container = $invite_people_row_container_clone
                     // clone the container which holds all the sources
                     .clone()
@@ -491,7 +493,8 @@
     // initiated to prevent FOUT 
     $prevent_fout.removeClass( "prevent-fout" );
 
-
+    // actuvate generic dev buttons
+    $( ".js-buttons-generic" ).removeClass( "is-hidden" );
 
 
     // .js-team-setup

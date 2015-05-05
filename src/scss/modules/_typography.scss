@@ -352,10 +352,18 @@ p {
 .stage__text {
     @extend %font-size__14;
     @extend %color__zeus;
-    margin-bottom: $base-line-height;
+    // margin-bottom: $base-line-height;
     
     &.-light {
         @extend %color__gray--light;
+    }
+
+    &.-mid {
+        @extend %color__gray--mid;
+    }
+
+    &.-dark {
+        @extend %color__gray--xdark;
     }
 
     .btn__wrap & {

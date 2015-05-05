@@ -52,7 +52,6 @@
                             data-placeholder="Click to add destinations..." 
                             style="width:100%">
                                 <option value="Drive">Drive</option>
-                                <option value="Calendar">Calendar</option>
                                 <option value="Dropbox">Dropbox</option>
                                 <option value="Evernote">Evernote</option>
                                 <option value="Box">Box</option>

@@ -92,7 +92,7 @@
 // .icon__people--pink {	        @include use-sprite("icon__people--pink"); }
 .icon__person {			        	@include use-sprite("icon__person"); }
 .icon__person--white {	        	@include use-sprite("icon__person--white"); }
-// .icon__person--pink {	        @include use-sprite("icon__person--pink"); }
+.icon__person--pink {	       		@include use-sprite("icon__person--pink"); }
 .icon__files--white {           	@include use-sprite("icon__files--white"); }
 .icon__people {                 	@include use-sprite("icon__people"); }
 .icon__files {                  	@include use-sprite("icon__files"); }
@@ -162,6 +162,8 @@
 .icon-sml__notifications--pink { 	@include use-sprite("icon-sml__notifications--pink"); }
 .icon-sml__security {           	@include use-sprite("icon-sml__security"); }
 .icon-sml__security--pink {     	@include use-sprite("icon-sml__security--pink"); }
+.icon-sml__coffee {      	     	@include use-sprite("icon-sml__coffee"); }
+.icon-sml__coffee--pink {   	  	@include use-sprite("icon-sml__coffee--pink"); }
 
 
 // positioning for chevron icon in hierarchy paths 
@@ -183,6 +185,7 @@
 //  sprites
 // ------------------------------------
 .sprite__gluru-bot {            @include use-sprite("gluru-bot"); }
+.sprite__gluru-bot--med {       @include use-sprite("gluru-bot--med"); }
 
 
 // .tmp-fav-avatar-1 {             @include use-sprite("tmp-fav-avatar-1"); }

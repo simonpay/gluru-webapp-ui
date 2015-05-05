@@ -27,9 +27,19 @@ $form-field__border-radius:		3px;
     }
 }
 
-input[type=text] {
-}
+// input[type=text] {
+// }
 
+.text-area {
+    border: 2px solid $green;
+    border-radius: $form-field__border-radius;
+    background: $white;
+	height: 200px;
+	
+	&.-full-width {
+        width: 100%;
+	}
+}
 
 .form__static-item {
 	display: block;

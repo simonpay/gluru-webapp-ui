@@ -1,0 +1,28 @@
+/*------------------------------------*\
+# GALLERY
+\*------------------------------------*/
+
+// re-usable component for repeating blocks 
+// of content such as images in a gallery 
+// or large buttons, avatars etc
+
+.gallery__container {
+    position: relative;
+    float: left;
+    margin: 0 36px 56px 0;
+
+    &:first-child {
+        margin-right: 60px;
+    }
+}
+
+    .gallery__item {
+        position: relative;
+        width: 130px;
+        height: 130px;
+        // margin: 10px;
+        // outline: 1px solid red;
+    }
+
+
+
