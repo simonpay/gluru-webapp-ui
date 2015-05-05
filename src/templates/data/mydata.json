@@ -486,10 +486,10 @@
                 ]
             },
             {
-                "section_id":                           "people",
+                "section_id":                           "teams",
                 "text":                                 "Teams",
-                "icon_class":                           "people",
-                "url":                                  "settings-people.html",
+                "icon_class":                           "teams",
+                "url":                                  "settings-teams.html",
                 "stage_data": {
                     "stage_id":                         "settings",
                     "stage_heading":                    "Settings",

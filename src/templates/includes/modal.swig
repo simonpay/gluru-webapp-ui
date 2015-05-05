@@ -162,62 +162,68 @@
 			</header>
 
 
-			<div class="modal-box__content">
+			<div class="scrollable-content__wrap -modal -large">
+				<div class="scrollable-content">
 
-		        <section class="form-section -team-invite-people js-section-team-invite-people">
+					<div class="modal-box__content">
 
-		            <div class="row">
-		                <div class="med-11">
-		                    <h1 class="stage__heading-text">Invite people</h1>
-		                </div>
-		            </div>
-		            
-		            <div class="row -grid-header">
-		                <div class="med-4">
-		                    Type email address
-		                </div>
-		                <div class="med-2">
-		                    Type
-		                </div>
-		                <div class="med-2">
-		                    Source
-		                </div>
-		                <div class="med-3">
-		                    Access Settings
-		                </div>
-		                <div class="med-1"></div>
-		            </div>
-		            
-		            <div class="js-invite-people-row-wrapper">
-		                <div class="invite-people-row-container js-invite-people-row-container-clone">
-		                    {% set display_value = "block" %}
-		                    {% include "form__row--invite-people.swig" %}
-		                </div>
-		            </div>
+				        <section class="form-section -team-invite-people js-section-team-invite-people">
 
-		            <a href="#" class="btn -clear -padh0 js-add-new-email">
-		                <span class="btn__icon icon__add"></span><!--
-		                --><span class="btn__text">Invite more people</span>
-		            </a>
+				            <div class="row">
+				                <div class="med-11">
+				                    <h1 class="stage__heading-text">Invite people</h1>
+				                </div>
+				            </div>
+				            
+				            <div class="row -grid-header">
+				                <div class="med-4">
+				                    Type email address
+				                </div>
+				                <div class="med-2">
+				                    Type
+				                </div>
+				                <div class="med-2">
+				                    Source
+				                </div>
+				                <div class="med-3">
+				                    Access Settings
+				                </div>
+				                <div class="med-1"></div>
+				            </div>
+				            
+				            <div class="js-invite-people-row-wrapper">
+				                <div class="invite-people-row-container js-invite-people-row-container-clone">
+				                    {% set display_value = "block" %}
+				                    {% include "form__row--invite-people.swig" %}
+				                </div>
+				            </div>
 
-		            <div class="med-11">
-		                <hr>
-		            </div>
+				            <a href="#" class="btn -clear -padh0 js-add-new-email">
+				                <span class="btn__icon icon__add"></span><!--
+				                --><span class="btn__text">Invite more people</span>
+				            </a>
 
-		        </section>
+				            <div class="med-11">
+				                <hr>
+				            </div>
+
+				        </section>
 
 
 
-		        <section class="form-section -submit js-section-submit">
+				        <section class="form-section -submit js-section-submit">
 
-		            <p>
-		                <a href="#" class="btn -lozenge -positive">
-		                    Create
-		                </a>
-		            </p>
+				            <p>
+				                <a href="#" class="btn -lozenge -positive">
+				                    Create
+				                </a>
+				            </p>
 
-		        </section>
+				        </section>
 
+					</div>
+					
+				</div>
 			</div>
 
 		</div>
@@ -237,84 +243,90 @@
 			</header>
 
 
-			<div class="modal-box__content">
+			<div class="scrollable-content__wrap -modal -large">
+				<div class="scrollable-content">
 
-		        <section class="form-section -team-name js-section-team-name">
+					<div class="modal-box__content">
 
-		            <div class="row">
+				        <section class="form-section -team-name js-section-team-name">
 
-		                <div class="med-6">
+				            <div class="row">
 
-		                    <h2 class="stage__heading-text">Team name</h2>
+				                <div class="med-6">
 
-		                    <p>
-		                        <input 
-		                            type="text" 
-		                            class="text-input -full-width" 
-		                            ng-model="" 
-		                            name="team-name" 
-		                            placeholder="Team Name" 
-		                            required/>
-		                    </p>
-		                </div>
-		            </div>
+				                    <h2 class="stage__heading-text">Team name</h2>
 
-		        </section>
+				                    <p>
+				                        <input 
+				                            type="text" 
+				                            class="text-input -full-width" 
+				                            ng-model="" 
+				                            name="team-name" 
+				                            placeholder="Team Name" 
+				                            required/>
+				                    </p>
+				                </div>
+				            </div>
 
-		        <section class="form-section -team-invite-people js-section-team-invite-people">
+				        </section>
 
-		            <div class="row">
-		                <div class="med-11">
-		                    <h1 class="stage__heading-text">Invite people</h1>
-		                </div>
-		            </div>
-		            
-		            <div class="row -grid-header">
-		                <div class="med-4">
-		                    Type email address
-		                </div>
-		                <div class="med-2">
-		                    Type
-		                </div>
-		                <div class="med-2">
-		                    Source
-		                </div>
-		                <div class="med-3">
-		                    Access Settings
-		                </div>
-		                <div class="med-1"></div>
-		            </div>
-		            
-		            <div class="js-invite-people-row-wrapper">
-		                <div class="invite-people-row-container js-invite-people-row-container-clone">
-		                    {% set display_value = "block" %}
-		                    {% include "form__row--invite-people.swig" %}
-		                </div>
-		            </div>
+				        <section class="form-section -team-invite-people js-section-team-invite-people">
 
-		            <a href="#" class="btn -clear -padh0 js-add-new-email">
-		                <span class="btn__icon icon__add"></span><!--
-		                --><span class="btn__text">Invite more people</span>
-		            </a>
+				            <div class="row">
+				                <div class="med-11">
+				                    <h1 class="stage__heading-text">Invite people</h1>
+				                </div>
+				            </div>
+				            
+				            <div class="row -grid-header">
+				                <div class="med-4">
+				                    Type email address
+				                </div>
+				                <div class="med-2">
+				                    Type
+				                </div>
+				                <div class="med-2">
+				                    Source
+				                </div>
+				                <div class="med-3">
+				                    Access Settings
+				                </div>
+				                <div class="med-1"></div>
+				            </div>
+				            
+				            <div class="js-invite-people-row-wrapper">
+				                <div class="invite-people-row-container js-invite-people-row-container-clone">
+				                    {% set display_value = "block" %}
+				                    {% include "form__row--invite-people.swig" %}
+				                </div>
+				            </div>
 
-		            <div class="med-11">
-		                <hr>
-		            </div>
+				            <a href="#" class="btn -clear -padh0 js-add-new-email">
+				                <span class="btn__icon icon__add"></span><!--
+				                --><span class="btn__text">Invite more people</span>
+				            </a>
 
-		        </section>
+				            <div class="med-11">
+				                <hr>
+				            </div>
+
+				        </section>
 
 
 
-		        <section class="form-section -submit js-section-submit">
+				        <section class="form-section -submit js-section-submit">
 
-		            <p>
-		                <a href="#" class="btn -lozenge -positive">
-		                    Create
-		                </a>
-		            </p>
+				            <p>
+				                <a href="#" class="btn -lozenge -positive">
+				                    Create
+				                </a>
+				            </p>
 
-		        </section>
+				        </section>
 
+					</div>
+
+				</div>
 			</div>
 
 		</div>

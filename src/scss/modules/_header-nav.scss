@@ -81,7 +81,7 @@
                             @include use-sprite("icon-sml__person--pink");
                         }
 
-                        &.-people {
+                        &.-teams {
                             @include use-sprite("icon-sml__people--pink");
                         }
 
@@ -128,7 +128,7 @@
                         @include use-sprite("icon-sml__person");
                     }
 
-                    &.-people {
+                    &.-teams {
                         @include use-sprite("icon-sml__people");
                         margin-right: $margin-right + 3px;
                     }

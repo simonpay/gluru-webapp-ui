@@ -103,7 +103,7 @@
 
                 </div>
 
-                <a href="#" class="btn -clear -padh0 u-ml+ js-add-team-member js-modal-trigger" data-modal-content="add-team-member" data-modal-size="large">
+                <a href="#" class="btn -clear -padh0 u-ml+ js-modal-trigger" data-modal-content="add-team-member" data-modal-size="large">
                     <span class="btn__icon icon__add"></span><!--
                     --><span class="btn__text">Add more people to this team</span>
                 </a>
