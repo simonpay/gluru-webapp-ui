@@ -31,6 +31,12 @@
     "grunt-docco": "~0.3.3",
     "grunt-prettify": "~0.3.5"
   },
+  "devDependencies": {
+    "grunt-premailer": "^0.2.13",
+    "grunt-processhtml": "^0.3.7",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-uncss": "^0.4.2"
+  },
   "author": {
     "name": "Simon Pay"
   },
@@ -65,12 +71,5 @@
     "includes": "src/templates/includes/",
     "data": "src/templates/data/",
     "layouts": "src/templates/layouts/"
-  },
-  "devDependencies": {
-    "grunt-inline-css": "^0.1.4",
-    "grunt-premailer": "^0.2.13",
-    "grunt-processhtml": "^0.3.7",
-    "grunt-text-replace": "^0.4.0",
-    "grunt-uncss": "^0.4.2"
   }
 }
