@@ -230,8 +230,8 @@ module.exports = function(grunt) {
 
         uncss: {
             dist: {
-                src: ['src/emails/daily-digest/daily-digest-code.html'],
-                dest: 'build/emails/daily-digest/css/tidy.css',
+                src: ['src/emails/daily-digest-code.html', 'src/emails/join-team-code.html', 'src/emails/sources-indexed-code.html', 'src/emails/activation-code.html'],
+                dest: 'build/emails/css/tidy.css',
                 options: {
                     report: 'min' // optional: include to report savings
                 }
@@ -241,8 +241,10 @@ module.exports = function(grunt) {
         processhtml: {
             dist: {
                 files: {
-                    'build/emails/daily-digest/daily-digest-code.html': ['src/emails/daily-digest/daily-digest-code.html'],
-                    'build/emails/welcome/welcome-code.html': ['src/emails/welcome/welcome-code.html']
+                    'build/emails/daily-digest-code.html': ['src/emails/daily-digest-code.html'],
+                    'build/emails/join-team-code.html': ['src/emails/join-team-code.html'],
+                    'build/emails/sources-indexed-code.html': ['src/emails/sources-indexed-code.html'],
+                    'build/emails/activation-code.html': ['src/emails/activation-code.html']
                 }
             }
         },
@@ -255,16 +257,18 @@ module.exports = function(grunt) {
                     baseUrl: 'https://s3-eu-west-1.amazonaws.com/gloo-emails/'
                 },
                 files: {
-                    'build/emails/daily-digest/daily-digest-inline.html': ['build/emails/daily-digest/daily-digest-code.html'],
-                    'build/emails/welcome/welcome-inline.html': ['build/emails/welcome/welcome-code.html']
+                    'build/emails/daily-digest-inline.html': ['build/emails/daily-digest-code.html'],
+                    'build/emails/join-team-inline.html': ['build/emails/join-team-code.html'],
+                    'build/emails/sources-indexed-inline.html': ['build/emails/sources-indexed-code.html'],
+                    'build/emails/activation-inline.html': ['build/emails/activation-code.html']
                 }
             }
         },
 
         replace: {
             example: {
-                src: ['build/emails/daily-digest/daily-digest-inline.html'], // source files array (supports minimatch) 
-                dest: 'build/emails/daily-digest/daily-digest-inline.html', // destination directory or file 
+                src: ['build/emails/daily-digest-inline.html', 'build/emails/join-team-inline.html', 'build/emails/sources-indexed-inline.html', 'build/emails/activation-inline.html'], // source files array (supports minimatch) 
+                dest: 'build/emails/', // destination directory or file 
                 replacements: [{
                     from: '<!-- &nbsp; -->', // string replacement 
                     to: '&nbsp;'
