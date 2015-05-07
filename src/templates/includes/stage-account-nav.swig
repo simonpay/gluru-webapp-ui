@@ -6,7 +6,8 @@
 					<div class="stage-nav__now-text">Now</div>
 				</div>
 				<div class="stage-nav__icon icon__now--white"></div>
-				<div class="spinner-wrap is-hidden js-loader-wrap">
+				{# <div class="spinner-wrap is-hidden js-loader-wrap"> #}
+				<div class="loader__wrap -small -white is-hidden js-loader-wrap">
 					{% include "loader.swig" %}
 				</div>
 			</div>

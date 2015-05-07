@@ -53,5 +53,10 @@
 		</li>
 	</ul>
 	{% endif %}
+
+{# 	<div class="loader__wrap -white js-loader">
+	    {% include "loader.swig" %}
+	</div>
+ #}
 </nav>
 

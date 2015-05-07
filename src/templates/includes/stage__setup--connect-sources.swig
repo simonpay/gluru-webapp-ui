@@ -47,7 +47,10 @@
 
                     {% if obj_source.action_type === "loader" %}
                         
-                        {% include "loader.swig" %}
+                        <div class="loader__wrap">
+                            {% include "loader.swig" %}
+                        </div>
+                        {# {% include "loader.swig" %} #}
 
                     {% elseif obj_source.action_type === "tick" %}
 

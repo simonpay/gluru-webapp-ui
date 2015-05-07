@@ -36,7 +36,9 @@
         <div class="media -v-center">
             <div class="media__body">
                 
-                {# {% include "loader.swig" %} #}
+                <div class="loader__wrap">
+                    {% include "loader.swig" %}
+                </div>
 
             </div>
         </div>

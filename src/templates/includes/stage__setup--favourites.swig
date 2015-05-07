@@ -31,6 +31,9 @@
                             required/>
                     </div>
                     <div class="lrg-2">
+                        <div class="loader__wrap">
+                            {% include "loader.swig" %}
+                        </div>
                         {# {% include "loader.swig" %} #}
                     </div>
                 </div>

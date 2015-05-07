@@ -349,7 +349,10 @@
 
 				<p>Please wait whilst your account is set up. This may take a while...</p>
 
-			    {% include "loader.swig" %}
+				<div class="loader__wrap">
+				    {% include "loader.swig" %}
+				</div>
+			    {# {% include "loader.swig" %} #}
 				
 			</div>
 
