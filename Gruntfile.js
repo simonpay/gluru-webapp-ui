@@ -261,21 +261,6 @@ module.exports = function(grunt) {
             }
         },
 
-        inlinecss: {
-            main: {
-                options: {
-                    // applyStyleTags: false,
-                    preserveMediaQueries: true,
-                    // applyWidthAttributes: true
-                },
-                files: {
-                    // 'out.html': 'in.html'
-                    'build/emails/daily-digest/daily-digest-inline.html': ['build/emails/daily-digest/daily-digest-code.html'],
-                    'build/emails/welcome/welcome-inline.html': ['build/emails/welcome/welcome-code.html']
-                }
-            }
-        },
-
         replace: {
             example: {
                 src: ['build/emails/daily-digest/daily-digest-inline.html'], // source files array (supports minimatch) 
@@ -300,7 +285,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-uncss');
     grunt.loadNpmTasks('grunt-processhtml');
     grunt.loadNpmTasks('grunt-premailer');
-    grunt.loadNpmTasks('grunt-inline-css');
     grunt.loadNpmTasks('grunt-text-replace');
 
     grunt.loadNpmTasks('assemble');
@@ -325,6 +309,5 @@ module.exports = function(grunt) {
     grunt.registerTask('dist', ['clean', 'assemble', 'prettify', 'jshint', 'concat', 'uglify', 'compass', 'cssmin', 'copy']);
     grunt.registerTask('serve', 'connect');
     grunt.registerTask('email', ['uncss', 'processhtml', 'premailer', 'replace']);
-    // grunt.registerTask('email', ['uncss', 'processhtml', 'inlinecss']);
 
 };

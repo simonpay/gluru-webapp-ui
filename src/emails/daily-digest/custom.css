@@ -13,6 +13,10 @@
       background-color: #2b7de1;
     }
 
+    .bg-gray {
+      background-color: #eeeeee;
+    }
+
     .color-white {
       color: white;
     }
@@ -26,7 +30,7 @@
     .table-files-header__col,
     .table-main-header__col {
       vertical-align: middle;
-      padding: 16px 0;
+      padding: 14px 0;
     }
 
     .table-files__col {
@@ -34,11 +38,17 @@
       border-bottom: 1px solid #eeeeee;
     }
 
+    .last-row .table-files__col {
+      border-bottom: 1px solid #ffffff;
+    }
+
     .table-files-header__col {
+      padding: 0;
       background: #eeeeee;
     }
     
     .table-main-header__col {
+      padding: 10px 0 16px;
       background: #2b7de1;
     }
 
@@ -55,12 +65,37 @@
       width: 100px;
     }
 
+    .table-col__icon--modified {
+      width: 90px;
+    }
+
     .table-col__icon--source {
       width: 60px;
     }
 
-    .full-width {
-      width: 100%;
+    .table-col__meeting {
+      width: 215px;
+    }
+
+    .table-col__category {
+      padding: 20px 0 10px 28px;
+      font-size: 16px;
+      color: #777;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .table-files-header__heading {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .table-files-header__subheading {
+      font-size: 14px;
+      color: #949494;
+    }
+
+    .table-col__file-header-icon {
+      padding: 0 0 0 20px !important;
     }
 
 
@@ -87,6 +122,11 @@
 
 
     /* utilities */
+
+    .full-width {
+      width: 100%;
+    }
+
     .p0 {
       padding: 0px !important;
     }
@@ -97,6 +137,18 @@
 
     .pr {
       padding-right: 10px !important;
+    }
+
+    .pb {
+      padding-bottom: 10px !important;
+    }
+
+    .pb20 {
+      padding-bottom: 20px !important;
+    }
+
+    .pr- {
+      padding-right: 5px !important;
     }
 
     .spacer-v-10 {
@@ -111,7 +163,69 @@
       height: 20px !important;
     }
 
+    .spacer-v-15 {
+      height: 15px !important;
+    }
+
     .spacer-h-20 {
       width: 20px !important;
     }
+
+    .float-right {
+      float: right !important;
+    }
+
+
+    /* header */
+    .header .wrapper,
+    .header .wrapper-bottomless {
+      background: #263c53;
+      color: white;
+    }
+
+
+    /* footer */
+    .footer .wrapper,
+    .footer .wrapper-bottomless {
+      background: #D41A68;
+      color: white;
+    }
+
+    .footer a {
+      color: white !important;
+      text-decoration: underline;
+    }
+    .footer a:visited {
+      color: white !important;
+    }
+
+    .footer p {
+      color: white;
+    }
+
+
+    /* hacks */
+    
+    /* stop outlook 2013 making short cells taller than they should be (double height?) */
+    /*https://www.campaignmonitor.com/forums/topic/7376/outlook-2013-cell-height-bug-solution/*/
+    .h-fix {
+      font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px;
+    }
+
+    .border-red {
+      border: 1px solid red !important;
+    }
+
+    .border-blue {
+      border: 1px solid blue !important;
+    }
+
+    .border-green {
+      border: 1px solid green !important;
+    }
+
+
+
+
+
 
