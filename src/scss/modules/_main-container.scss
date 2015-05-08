@@ -13,6 +13,7 @@
     right: 0px;
     bottom: 0px;
     overflow: hidden;
+    @include transition( bottom .3s );
     
     // use sibling selector to set height of .stage 
     // based on existence of 'is-hidden' class on status-bar

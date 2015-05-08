@@ -16,7 +16,7 @@
     height: $status-bar__height;
     background: $alabaster;
     border-top: 1px solid $alto;
-    opacity: 1;
+    // opacity: 1;
     visibility: visible;
     // @include transition( bottom .3s, opacity 0s .3s, height 0s .3s );
     @include transition( bottom .3s );
@@ -38,7 +38,7 @@
         // height: 0;
         bottom: -$status-bar__height;
         visibility: hidden;
-        z-index: 6666666666;
+        @include transition( bottom .3s, visibility 0s .3s );
         // opacity: 0;
         // @include transition( bottom .3, opacity .3s, height 0s .3s );
     }

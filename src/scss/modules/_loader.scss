@@ -34,8 +34,6 @@ $circle-data: (
     "-deg180":     180
 );
 
-// $opacity-list: 11 10 9 8 7 6 5 4 3 2 1;
-
 // mixin to build circle classes
 @mixin build-circle-class( $class, $rotation ) {
     &.#{$class} {
@@ -72,16 +70,14 @@ $circle-data: (
     .loader__container {
         width: $loader-size;
         height: $loader-size;
-        opacity: 1;
+        // opacity: 1;
         @include scut-center-block;
-        // @include transition( opacity .3s .1s, height 0s 0s );
 
         &.is-hidden {
-            // display: none;
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            // @include transition( none );
+            display: none;
+            // height: 0;
+            // opacity: 0;
+            // overflow: hidden;
         }
         
         &.-large {
@@ -103,23 +99,20 @@ $circle-data: (
         &.-pad-lrg { padding: 20%; }
     }
     
-    // loading sources when status bar hidden
+    // loading sources icon when status bar hidden
+    // appears at the bottom of the main nav
     .loader__container--main-nav {
-        // z-index: 99999;
-        // display: block;
         position: absolute;
-        bottom: 25px;
+        @include calc( top, "100% - #{$loader-size} - 25px" );
         left: $main-nav-width / 2;
-        opacity: 1;
         @include transform( translateX( -50% ) );
+        visibility: visible;
         cursor: pointer;
-        @include transition( opacity .3s .2s, height 0s 0s );
+        @include transition( top .15s .3s);
 
         &.is-hidden {
-            height: 0;
-            opacity: 0;
-            overflow: hidden;
-            @include transition( none );
+            visibility: hidden;
+            top: 100%;
         }
 
         &:hover {
