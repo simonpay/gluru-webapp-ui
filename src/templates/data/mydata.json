@@ -246,6 +246,29 @@
             ]
         }
     },
+    "login": {
+        "hide_nav_items":           1,
+        "hide_stage_nav":           1,
+        "hide_account_nav":         1,
+        "hide_search_input":        1,
+        "drawer_is_not_present":    1,
+        "sections": [
+            {
+                "section_id":                           "login",
+                "text":                                 "Log in",
+                "url":                                  "login.html",
+                "stage_data": {
+                    "stage_id":                         "setup",
+                    "stage_heading":                    "Log in to Gluru!",
+                    "stage_sub_heading":                "XXXX"
+                },
+                "help_data": {
+                    "heading":                          "Hi there!",
+                    "subheading":                       "Text here."
+                }
+            }
+        ]
+    },
     "setup": {
         "hide_nav_items":           1,
         "hide_stage_nav":           1,

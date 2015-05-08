@@ -13,9 +13,11 @@
     overflow: hidden;
     height: 100%;
 
-    &.-stage {
+    &.-setup,
+    &.-settings
+    {
         top: $panel-header-height;
-        @include calc( height, "100% - 58px" );
+        @include calc( height, "100% - #{$panel-header-height}" );
     }
 
     &.-timeline {

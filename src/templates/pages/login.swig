@@ -10,13 +10,14 @@
 {% block content %}
 
 	{% set bln_hide_dev_buttons = 1 %}
-	{% set obj = mydata.setup %}
+	{% set bln_login_page = 1 %}
+	{% set obj = mydata.login %}
 
 	{# main-nav #}
 	{% include "src/templates/includes/main-nav.swig" %}
 
 	{# stage #}
-	{% include "src/templates/includes/stage__setup--create-account.swig" %}
+	{% include "src/templates/includes/stage__login.swig" %}
 
 {% endblock %}
 

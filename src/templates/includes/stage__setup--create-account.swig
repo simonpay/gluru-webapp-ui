@@ -27,7 +27,7 @@
         </p>
         
         <p>
-            <a href="#" class="btn -clear -padh0 -full">
+            <a href="login.html" class="btn -clear -padh0 -full">
                 <span class="btn__text -c-gray -fw-light">Already have an account?</span> Sign in
             </a>
         </p>

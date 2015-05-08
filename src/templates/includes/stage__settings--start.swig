@@ -28,6 +28,6 @@
 	</nav>
 </div>
 
-<div class="scrollable-content__wrap -stage">
+<div class="scrollable-content__wrap -settings">
 	<div class="scrollable-content">
-		<div class="scrollable-content__inner-wrap -settings">
+		<div class="scrollable-content__inner-wrap -stage">

@@ -1,3 +1,4 @@
+{% if !bln_login_page %}
 <div class="panel-header panel-header--absolute">
 	<nav class="header-nav -setup">
 		<ul class="header-nav__list">
@@ -28,8 +29,9 @@
 		</ul>
 	</nav>
 </div>
+{% endif %}
 
-<div class="scrollable-content__wrap -stage">
+<div class="scrollable-content__wrap{% if !bln_login_page %} -setup{% endif %}">
 	<div class="scrollable-content">
 		<div class="scrollable-content__inner-wrap -stage">
 

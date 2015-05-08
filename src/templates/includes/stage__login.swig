@@ -5,34 +5,72 @@
 {% set obj_setup_data = obj.sections[0] %}
 {% include "stage__setup--start.swig" %}
 
-    <h1 class="stage__heading-text">Create a Gluru account</h1>
-    <p class="stage__text u-mb+">You can create an account with Google+ or email.</p>
+    <h1 class="stage__heading-text u-mb0">Log in to Gluru</h1>
+    <p class="stage__text u-mb+">You can log in with Google+ or email.</p>
 
-    <div class="u-layout -w-310">
+    <form>
 
-        <p>
-            <a href="#" class="btn -lozenge -white -col-grey -large -full js-sign-in js-modal-trigger" data-modal-content="setting-up-account">
-                <span class="btn__icon icon-lrg__googleplus"></span><!--
-                --><span class="btn__text -divider">Sign up with Google</span>
-            </a>
-        </p>
-        
-        <p><div class="or or-text">or</div></p>
+        <div class="u-layout -w-400">
+            
+            <div class="row -form">
+                <div class="lrg-12">
+                    <input 
+                        class="text-input -full-width" 
+                        ng-model="" 
+                        name="username" 
+                        placeholder="Username" 
+                        required/>
+                </div>
+            </div>
 
-        <p>
-            <a href="#" class="btn -lozenge -white -col-grey -large -full js-sign-in js-modal-trigger" data-modal-content="setting-up-account">
-                <span class="btn__icon icon-lrg__email"></span><!--
-                --><span class="btn__text -divider">Sign up with email</span>
-            </a>
-        </p>
-        
-        <p>
-            <a href="#" class="btn -clear -padh0 -full">
-                <span class="btn__text -c-gray -fw-light">Already have an account?</span> Sign in
-            </a>
-        </p>
-        
-    </div>
+            <div class="row -form u-mb">
+                <div class="lrg-12">
+                    <input 
+                        class="text-input -full-width" 
+                        ng-model="" 
+                        name="password" 
+                        placeholder="Password" 
+                        required/>
+                </div>
+            </div>
+
+            <p class="u-mb-">
+                <a href="#" class="btn -lozenge -positive js-btn-next">
+                    <span class="btn__icon icon__arrow--white"></span><!--
+                    --><span class="btn__text">Log in</span>
+                </a>
+            </p>
+
+            <p class="u-mb-">
+                <a href="login.html" class="btn -clear -padh0 -padh0">
+                    <span class="btn__text -c-gray -fw-light">Forgot your password?</span> Reset it
+                </a>
+            </p>
+
+
+            <hr>
+
+            <h2 class="stage__subheading-text u-mb">Signed up with your Google account?</h2>
+
+            <p class="u-mb+">
+                <a href="#" class="btn -lozenge -white -col-grey -large js-sign-in js-modal-trigger" data-modal-content="setting-up-account">
+                    <span class="btn__icon icon-lrg__googleplus"></span><!--
+                    --><span class="btn__text -divider">Sign up with Google</span>
+                </a>
+            </p>
+
+            <hr class="u-mb-">
+
+            <p>
+                <a href="login.html" class="btn -clear -padh0 -padh0">
+                    <span class="btn__text -c-gray -fw-light">Don't have an account yet?</span> Create a Gluru account
+                </a>
+            </p>
+
+        </div>
+
+    </form>
+
                         
 {% include "stage__setup--end.swig" %}
 
