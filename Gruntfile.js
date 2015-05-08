@@ -272,6 +272,12 @@ module.exports = function(grunt) {
                 replacements: [{
                     from: '<!-- &nbsp; -->', // string replacement 
                     to: '&nbsp;'
+                }, {
+                    from: '%7B%7B',
+                    to: '{{'
+                },{
+                    from: '%7D%7D',
+                    to: '}}'
                 // }, {
                 //     from: /(f|F)(o{2,100})/g, // regex replacement ('Fooo' to 'Mooo') 
                 //     to: 'M$2'
