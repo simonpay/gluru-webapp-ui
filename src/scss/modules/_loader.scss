@@ -34,6 +34,8 @@ $circle-data: (
     "-deg180":     180
 );
 
+// $opacity-list: 11 10 9 8 7 6 5 4 3 2 1;
+
 // mixin to build circle classes
 @mixin build-circle-class( $class, $rotation ) {
     &.#{$class} {
@@ -71,13 +73,15 @@ $circle-data: (
         width: $loader-size;
         height: $loader-size;
         // opacity: 1;
+        visibility: visible;
         @include scut-center-block;
-
+        
+        // make el hidden using 
         &.is-hidden {
-            display: none;
-            // height: 0;
+            height: 0;
             // opacity: 0;
-            // overflow: hidden;
+            visibility: hidden;
+            overflow: hidden;
         }
         
         &.-large {
