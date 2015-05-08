@@ -2,6 +2,13 @@
     # PROGRESS-BAR
 \*------------------------------------*/
 
+.progress-bar__outer-wrap {
+	width: 50%;
+	min-width: 400px;
+	height: 100%;
+	@include scut-center-block;
+}
+
 .progress-bar__wrap {
 
 	&.-status-bar {

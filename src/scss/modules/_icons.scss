@@ -145,8 +145,14 @@
 .icon-sml__tick--white {        	@include use-sprite("icon-sml__tick--white"); }
 .icon-sml__chevron { 		    	@include use-sprite("icon-sml__chevron"); }
 
+.icon__sources--green { 			@include use-sprite("icon__sources--green"); }
+// .icon-sml__sources--green { 		@include use-sprite("icon-sml__sources--green"); }
+
 
 //  header nav icons - small dimensions
+//  TODO: rename these so they dont become confused with the stadard "sml" naming 
+//  convention - although they are the same size, they are not the same scale as 
+//  "sml" variants of standrad icons and are only used for header menu items (currently)
 // ------------------------------------
 .icon-sml__clock {              	@include use-sprite("icon-sml__clock"); }
 .icon-sml__clock--pink {        	@include use-sprite("icon-sml__clock--pink"); }

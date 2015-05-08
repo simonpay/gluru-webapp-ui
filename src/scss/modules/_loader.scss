@@ -58,6 +58,11 @@ $circle-data: (
         width: 100px;
         height: 100px;
     }
+
+    &.-forty {
+        width: 40px;
+        height: 40px;
+    }
 }
     
     // loader__container sets the initial size for 
