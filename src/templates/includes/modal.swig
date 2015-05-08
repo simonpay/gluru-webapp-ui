@@ -349,8 +349,10 @@
 
 				<p>Please wait whilst your account is set up. This may take a while...</p>
 
-				<div class="loader__wrap">
-				    {% include "loader.swig" %}
+				<div class="loader__wrap -large">
+					<div class="loader__container -large -width-twenty -fill-parent">
+					    {% include "loader.swig" %}
+					</div>
 				</div>
 			    {# {% include "loader.swig" %} #}
 				

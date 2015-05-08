@@ -47,7 +47,7 @@
 
                     {% if obj_source.action_type === "loader" %}
                         
-                        <div class="loader__wrap">
+                        <div class="loader__container">
                             {% include "loader.swig" %}
                         </div>
                         {# {% include "loader.swig" %} #}

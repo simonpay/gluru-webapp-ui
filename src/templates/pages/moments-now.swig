@@ -35,7 +35,7 @@
 		(function(){
 			// $( ".js-icon-button.js-toggle-actions" ).click();
 			setTimeout(function(){
-				$( ".timeline .js-event-nav__link" )[0].click();
+				$( ".timeline .js-event.-now .js-event-nav__link" )[0].click();
 			}, 1000);
 			// $( ".js-now" ).addClass( "is-selected" );
 		})();
