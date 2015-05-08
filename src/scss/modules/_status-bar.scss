@@ -7,18 +7,20 @@
 // file indexing progress 
 
 .status-bar {
-    z-index: $status-bar-z-index;
+    // z-index: $status-bar-z-index;
     // position: fixed;
     position: absolute;
     bottom: 0;
-    // left: $main-nav-width;
     right: 0;
     width: 100%;
     height: $status-bar__height;
     background: $alabaster;
     border-top: 1px solid $alto;
     opacity: 1;
-    @include transition( left .3s, opacity .3s, height 0s 0s );
+    visibility: visible;
+    // @include transition( bottom .3s, opacity 0s .3s, height 0s .3s );
+    @include transition( bottom .3s );
+    // @include transition( all .3s );
     
     // // when .drawer-wrap is present and open 
     // // set left value to be main-nav + drawer-width 
@@ -33,8 +35,11 @@
     // }
 
     &.is-hidden {
-        height: 0;
-        opacity: 0;
-        @include transition( opacity .3s, height 0s .3s );
+        // height: 0;
+        bottom: -$status-bar__height;
+        visibility: hidden;
+        z-index: 6666666666;
+        // opacity: 0;
+        // @include transition( bottom .3, opacity .3s, height 0s .3s );
     }
 }

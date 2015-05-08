@@ -1,6 +1,6 @@
-<div class="status-bar is-hiddens js-status-bar">
+<div class="status-bar is-hidden js-status-bar">
     
-    <div class="progress-bar__outer-wrap">
+    <div class="progress-bar__wrap">
 
 		<div class="media -v-center">
 		    <div class="media__img u-mr-">
@@ -15,7 +15,7 @@
 		    </div>
 		    <div class="media__body">
 
-			    <div class="progress-bar__wrap -status-barXXX">
+			    {# <div class="progress-bar__wrap"> #}
 
 					<div class="media u-mb------">
 					    <div class="media__img">
@@ -33,7 +33,8 @@
 				    <div class="progress-bar__container">
 				        <div class="progress-bar"></div>
 				    </div>
-			    </div>
+
+			    {# </div> #}
 
 		    </div>
 		</div>
@@ -41,9 +42,9 @@
 	</div>
 
 
-
 	<div class="icon-button -center-transform -right js-close-status-bar">
 		<div class="icon-close"></div>
 	</div>
 
 </div>
+

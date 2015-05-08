@@ -58,5 +58,11 @@
 	    {% include "loader.swig" %}
 	</div>
  #}
+
+	<div class="loader__container -width-three -white loader__container--main-nav is-hidden js-status-loading-sources js-open-status-bar" title="Show status bar">
+	    {% include "loader.swig" %}
+		<div class="icon-sml__sources--white u-center-transform"></div>
+	</div>
+
 </nav>
 

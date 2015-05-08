@@ -145,7 +145,9 @@
 .icon-sml__tick--white {        	@include use-sprite("icon-sml__tick--white"); }
 .icon-sml__chevron { 		    	@include use-sprite("icon-sml__chevron"); }
 
+.icon__sources--white { 			@include use-sprite("icon__sources--white"); }
 .icon__sources--green { 			@include use-sprite("icon__sources--green"); }
+.icon-sml__sources--white { 		@include use-sprite("icon-sml__sources--white"); }
 // .icon-sml__sources--green { 		@include use-sprite("icon-sml__sources--green"); }
 
 

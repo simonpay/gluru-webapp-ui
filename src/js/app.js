@@ -62,6 +62,7 @@
         $status_bar                         = $( ".js-status-bar" ),
         $toggle_status_bar                  = $( ".js-toggle-status-bar" ),
         $close_status_bar                   = $( ".js-close-status-bar" ),
+        $open_status_bar                    = $( ".js-open-status-bar" ),
 
         // collapsable lists
         $expandable_lists                   = $( ".js-toggle-expand-list" ),
@@ -131,6 +132,7 @@
                 if ( requested_state !== undefined ) {
 
                     obj_gluru.status_bar["_" + requested_state]();
+                    $( ".js-status-loading-sources" ).toggleClass( "is-hidden" );
 
                 // toggle status_bar
                 } else {
@@ -139,11 +141,14 @@
 
                         // show status_bar
                         obj_gluru.status_bar._show();
+                        $( ".js-status-loading-sources" ).addClass( "is-hidden" );
 
                     } else {
 
                         // hide status_bar
                         obj_gluru.status_bar._hide();
+                        $( ".js-status-loading-sources" ).removeClass( "is-hidden" );
+
                     }
                 }
             },
@@ -1242,9 +1247,13 @@
         // obj_gluru.status_bar.toggle.call( $(this) );
         obj_gluru.status_bar.set_state.call( $(this) );
     });
-    // toggle status bar
+    // hide status bar
     $close_status_bar.on( "click", function(){
         obj_gluru.status_bar.set_state.call( $(this), "hide" );
+    });
+    // show status bar
+    $open_status_bar.on( "click", function(){
+        obj_gluru.status_bar.set_state.call( $(this), "show" );
     });
 
 

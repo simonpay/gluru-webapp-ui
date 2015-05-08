@@ -72,12 +72,18 @@ $circle-data: (
     .loader__container {
         width: $loader-size;
         height: $loader-size;
+        opacity: 1;
         @include scut-center-block;
+        // @include transition( opacity .3s .1s, height 0s 0s );
 
         &.is-hidden {
-            display: none;
+            // display: none;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            // @include transition( none );
         }
-
+        
         &.-large {
             width: $loader-size--large;
             height: $loader-size--large;
@@ -88,16 +94,36 @@ $circle-data: (
             height: 100%;
         }
 
-        &.-pad-sml {
-            padding: 5%;
+        &.-absolute {
+            @include scut-center-transform;
         }
 
-        &.-pad-med {
-            padding: 10%;
+        &.-pad-sml { padding: 5%; }
+        &.-pad-med { padding: 10%; }
+        &.-pad-lrg { padding: 20%; }
+    }
+    
+    // loading sources when status bar hidden
+    .loader__container--main-nav {
+        // z-index: 99999;
+        // display: block;
+        position: absolute;
+        bottom: 25px;
+        left: $main-nav-width / 2;
+        opacity: 1;
+        @include transform( translateX( -50% ) );
+        cursor: pointer;
+        @include transition( opacity .3s .2s, height 0s 0s );
+
+        &.is-hidden {
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            @include transition( none );
         }
 
-        &.-pad-lrg {
-            padding: 20%;
+        &:hover {
+            opacity: .7;
         }
     }
 
@@ -164,6 +190,7 @@ $circle-data: (
                             border-right-color: rgba($white, $loader-border-opacity--white);
                         }
 
+                        .loader__container.-width-three &   { border-width: 3px;  }
                         .loader__container.-width-five &    { border-width: 5px;  }
                         .loader__container.-width-ten &     { border-width: 10px; }
                         .loader__container.-width-twenty &  { border-width: 20px; }
