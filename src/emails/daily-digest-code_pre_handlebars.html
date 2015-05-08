@@ -106,7 +106,7 @@
                                 <td class="h1 pb">Daily Digest</td>
                               </tr>
                               <tr>
-                                <td class="color-white"><strong>Hi {{name}} </strong>Here are files Gluru thinks you'll need today and the people you'll most likely work with.</td>
+                                <td class="color-white"><strong>Hi *|name|* </strong>Here are files Gluru thinks you'll need today and the people you'll most likely work with.</td>
                               </tr>
                             </table>
                           </td>
@@ -123,7 +123,6 @@
 
 
                       <!-- file header -->
-                      {{#each people}}
                       <table class="full-width white-borders-h">
 
                         <tr>
@@ -155,11 +154,11 @@
 
                             <table>
                               <tr>
-                                <td width="440" class="table-files-header__heading" class="pr">{{@key}}</td>
+                                <td width="440" class="table-files-header__heading" class="pr">Alex Li</td>
                               </tr>
                               <tr>
                                 <td width="440" class="pr">
-                                  <a href="mailto:{{@key}}" class="table-files-header__subheading">{{@key}}</a>
+                                  <a href="mailto:alexLi@gmail.com" class="table-files-header__subheading">alexLi@gmail.com</a>
                                 </td>
                               </tr>
                             </table>
@@ -185,8 +184,6 @@
 
 
                       <!-- file row -->
-                      <!-- People files iteration -->
-                      {{#each this}}
                       <table class="full-width white-borders-h">
                         <tr>
                           <td width="100" class="table-files__col table-col__icon--file">
@@ -194,20 +191,20 @@
                             <table class="full-width">
                               <tr>
                                 <td width="34"><!-- &nbsp; --></td>
-                                <td><img src="assets/icon__file--{{this.type}}.png" width="32" height="32"></td>
+                                <td><img src="assets/icon__file--drive.png" width="32" height="32"></td>
                                 <td width="34"><!-- &nbsp; --></td>
                               </tr>
                             </table>
 
                           </td>
-                          <td class="table-files__col">{{this.title}}</td>
-                          <td width="90" class="table-files__col hide-for-small table-col__icon--modified">{{this.timestamp}}</td>
+                          <td class="table-files__col">Sales.xls</td>
+                          <td width="90" class="table-files__col hide-for-small table-col__icon--modified">10:33 am</td>
                           <td width="60" class="table-files__col table-col__icon--source">
 
                             <table>
                               <tr>
                                 <td width="14"></td>
-                                <td width="32"><img src="assets/icon__{{this.source}}.png" width="32" height="32"></td>
+                                <td width="32"><img src="assets/icon__box.png" width="32" height="32"></td>
                                 <td width="14"></td>
                               </tr>
                             </table>
@@ -215,8 +212,37 @@
                           </td>
                         </tr>
                       </table>
-                      {{/each}}
 
+
+                      <!-- file row -->
+                      <table class="full-width white-borders-h last-row">
+                        <tr>
+                          <td width="100" class="table-files__col table-col__icon--file">
+
+                            <table class="full-width">
+                              <tr>
+                                <td width="34"><!-- &nbsp; --></td>
+                                <td><img src="assets/icon__file--drive.png" width="32" height="32"></td>
+                                <td width="34"><!-- &nbsp; --></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                          <td class="table-files__col">Sales.xls</td>
+                          <td width="90" class="table-files__col hide-for-small table-col__icon--modified">10:33 am</td>
+                          <td width="60" class="table-files__col table-col__icon--source">
+
+                            <table>
+                              <tr>
+                                <td width="14"></td>
+                                <td width="32"><img src="assets/icon__box.png" width="32" height="32"></td>
+                                <td width="14"></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
 
 
                       <!-- spacer -->
@@ -225,11 +251,9 @@
                           <td height="10" class="full-width spacer-v-10 bg-white"></td>
                         </tr>
                       </table>
-                      {{/each}} <!-- //END EACH PEOPLE-->
 
 
                       <!-- file header -->
-                      {{#each events}}
                       <table class="full-width white-borders-h">
 
                         <tr>
@@ -269,11 +293,11 @@
 
                                         <table>
                                           <tr>
-                                            <td class="table-files-header__heading p0">{{name}}</td>
+                                            <td class="table-files-header__heading p0">Mike Smith</td>
                                           </tr>
                                           <tr>
                                             <td class="p0">
-                                              <span class="table-files-header__subheading">{{time}}</span>
+                                              <span class="table-files-header__subheading">Design planning meeting</span>
                                             </td>
                                           </tr>
                                         </table>
@@ -317,40 +341,116 @@
                       </table>
 
 
-                        <!-- file row -->
-                        <!-- duplicate this to create a file row-->
-                        {{#each this.files}}
-                        <table class="full-width white-borders-h last-row">
-                          <tr>
-                            <td width="100" class="table-files__col table-col__icon--file">
+                      <!-- file category heading -->
+                      <table class="full-width white-borders-h">
+                        <tr>
+                          <td class="table-files__col table-col__category">DOCS</td>
+                        </tr>
+                      </table>
 
-                              <table class="full-width">
-                                <tr>
-                                  <td width="34"><!-- &nbsp; --></td>
-                                  <td><img src="assets/icon__file--{{this.type}}.png" width="32" height="32"></td>
-                                  <td width="34"><!-- &nbsp; --></td>
-                                </tr>
-                              </table>
 
-                            </td>
-                            <td class="table-files__col">{{this.title}}</td>
-                            <td width="90" class="table-files__col hide-for-small table-col__icon--modified">{{this.timestamp}}</td>
-                            <td width="60" class="table-files__col table-col__icon--source">
+                      <!-- file row -->
+                      <!-- duplicate this to create a file row-->
+                      <table class="full-width white-borders-h last-row">
+                        <tr>
+                          <td width="100" class="table-files__col table-col__icon--file">
 
-                              <table>
-                                <tr>
-                                  <td width="14"></td>
-                                  <td width="32"><img src="assets/icon__{{this.source}}.png" width="32" height="32"></td>
-                                  <td width="14"></td>
-                                </tr>
-                              </table>
+                            <table class="full-width">
+                              <tr>
+                                <td width="34"><!-- &nbsp; --></td>
+                                <td><img src="assets/icon__file--drive.png" width="32" height="32"></td>
+                                <td width="34"><!-- &nbsp; --></td>
+                              </tr>
+                            </table>
 
-                            </td>
-                          </tr>
-                        </table>
-                        {{/each}}
-                      {{/each}}
+                          </td>
+                          <td class="table-files__col">Sales.xls</td>
+                          <td width="90" class="table-files__col hide-for-small table-col__icon--modified">10:33 am</td>
+                          <td width="60" class="table-files__col table-col__icon--source">
 
+                            <table>
+                              <tr>
+                                <td width="14"></td>
+                                <td width="32"><img src="assets/icon__box.png" width="32" height="32"></td>
+                                <td width="14"></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
+
+
+                      <!-- file category heading -->
+                      <table class="full-width white-borders-h">
+                        <tr>
+                          <td class="table-files__col table-col__category">PRESENTATIONS</td>
+                        </tr>
+                      </table>
+
+
+                      <!-- file row -->
+                      <!-- duplicate this to create a file row-->
+                      <table class="full-width white-borders-h">
+                        <tr>
+                          <td width="100" class="table-files__col table-col__icon--file">
+
+                            <table class="full-width">
+                              <tr>
+                                <td width="34"><!-- &nbsp; --></td>
+                                <td><img src="assets/icon__file--drive.png" width="32" height="32"></td>
+                                <td width="34"><!-- &nbsp; --></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                          <td class="table-files__col">Sales.xls</td>
+                          <td width="90" class="table-files__col hide-for-small table-col__icon--modified">10:33 am</td>
+                          <td width="60" class="table-files__col table-col__icon--source">
+
+                            <table>
+                              <tr>
+                                <td width="14"></td>
+                                <td width="32"><img src="assets/icon__box.png" width="32" height="32"></td>
+                                <td width="14"></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
+
+
+                      <!-- last file row -->
+                      <!-- duplicate this to create a file row-->
+                      <table class="full-width white-borders-h last-row">
+                        <tr>
+                          <td width="100" class="table-files__col table-col__icon--file">
+
+                            <table class="full-width">
+                              <tr>
+                                <td width="34"><!-- &nbsp; --></td>
+                                <td><img src="assets/icon__file--drive.png" width="32" height="32"></td>
+                                <td width="34"><!-- &nbsp; --></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                          <td class="table-files__col">Sales.xls</td>
+                          <td width="90" class="table-files__col hide-for-small table-col__icon--modified">10:33 am</td>
+                          <td width="60" class="table-files__col table-col__icon--source">
+
+                            <table>
+                              <tr>
+                                <td width="14"></td>
+                                <td width="32"><img src="assets/icon__box.png" width="32" height="32"></td>
+                                <td width="14"></td>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
 
 
                       <!-- spacer -->
