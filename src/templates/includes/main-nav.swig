@@ -54,7 +54,7 @@
 	</ul>
 	{% endif %}
 
-{# 	<div class="loader__wrap -white js-loader">
+{# 	<div class="loader__container -white js-loader">
 	    {% include "loader.swig" %}
 	</div>
  #}

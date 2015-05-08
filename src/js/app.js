@@ -601,6 +601,8 @@
                                             // .css({
                                             //     "background": "red"
                                             // })
+                                            .find( ".js-event-nav__link" )[0]
+                                                .click()
                                             ;
                             // console.log( "cloned" );
 
@@ -612,7 +614,7 @@
                                             ;
 
 
-                        }, 1000750);
+                        }, 11111750);
                     
                     // otherwsie, take user to moments-now.html where 
                     // this function is called by activating click on 

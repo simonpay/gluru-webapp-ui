@@ -30,8 +30,8 @@
                             placeholder="Email" 
                             required/>
                     </div>
-                    <div class="lrg-2">
-                        <div class="loader__wrap">
+                    <div class="lrg-2 u-inherit-height">
+                        <div class="loader__container u-center-transform">
                             {% include "loader.swig" %}
                         </div>
                         {# {% include "loader.swig" %} #}
