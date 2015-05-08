@@ -614,7 +614,7 @@
                                             ;
 
 
-                        }, 11111750);
+                        }, 750);
                     
                     // otherwsie, take user to moments-now.html where 
                     // this function is called by activating click on 

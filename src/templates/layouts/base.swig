@@ -18,8 +18,9 @@
 
 <body>
 
+{% include "../includes/status-bar.swig" %}
 <div class="main-container js-main-container">
-{% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 </div>
 {%> "tool-tip" %}
 {%> "pop-menu" %}

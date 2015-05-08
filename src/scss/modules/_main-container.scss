@@ -13,4 +13,14 @@
     right: 0px;
     bottom: 0px;
     overflow: hidden;
+    
+    // use sibling selector to set height of .stage 
+    // based on existence of 'is-hidden' class on status-bar
+    .status-bar ~ & {
+        bottom: $status-bar__height;
+    }
+
+    .status-bar.is-hidden ~ & {
+        bottom: 0;
+    }
 }
