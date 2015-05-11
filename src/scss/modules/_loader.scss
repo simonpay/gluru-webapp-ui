@@ -134,6 +134,12 @@ $circle-data: (
             @include scut-center-transform(y);
             margin: auto;
             position: relative;
+            
+            // pause animaion when inside any el 
+            // with a class of ".is-hidden"
+            .is-hidden & {
+                @include animation-play-state(paused);
+            }
         }
 
         @include keyframes(loader) {
