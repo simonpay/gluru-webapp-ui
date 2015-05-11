@@ -377,7 +377,7 @@
 
 			<div class="modal-box__content">
 
-			    <div class="progress-bar__wrap u-mb+">
+			    <div class="progress-bar__wrap -full-width u-mb+">
 
 					<div class="media u-mb------">
 					    <div class="media__img">

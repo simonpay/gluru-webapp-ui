@@ -8,6 +8,10 @@
 	height: 100%;
 	@include scut-center-block;
 	padding-bottom: 6px;
+
+	&.-full-width {
+		width: 100%;
+	}
 }
 
 // .progress-bar__wrap {
