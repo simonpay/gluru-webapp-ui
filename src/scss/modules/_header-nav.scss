@@ -30,7 +30,10 @@
                 position: relative;
                 height: inherit;
                 padding: 0 20px;
-                text-decoration: none;
+                // todo: look into why underline is applied to this 
+                // link in angular despite the setting below
+                // for now, added !imprtant which clears the underline
+                text-decoration: none !important; 
                 @include transition( color .3s, box-shadow .3s );
                 
                 .-setup & {
