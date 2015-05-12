@@ -31,7 +31,7 @@
 
 						<div class="med-6 u-text-right">
 
-			                <div class="check-box__slider prevent-fout">
+			                <div class="jquery-ui__form check-box__slider prevent-fout">
 			                    <input 
 			                        type="checkbox" 
 			                        class="checkbox_slider" 

@@ -75,13 +75,13 @@
                     <div class="media">
                         <div class="media__img -right -m+++">
                         
-                            <div class="check-box__slider prevent-fout">
+                            <div class="jquery-ui__form check-box__slider prevent-fout">
                                 <input 
                                     type="checkbox" 
                                     class="checkbox_slider js-checkbox-slider" 
                                     id="addTeam">
                                 <label 
-                                    for="addTeam">Toggle</label>
+                                    for="addTeam"></label>
                             </div>
 
                         </div>

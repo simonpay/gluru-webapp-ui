@@ -113,6 +113,7 @@
         "modules/icon-button",
         "modules/modal",
         "modules/tooltips",
+        "modules/annotations",
         "modules/loader",
         "modules/media-object",
         "modules/disc-img",
@@ -154,7 +155,7 @@
 // forms
 @import "modules/forms/form-elements",
         "modules/forms/select2-overrides",
-        "modules/forms/jquery-ui-checkbox-overrides";
+        "modules/forms/jquery-ui-overrides";
 
 // used for demo only - comment this out for production
 @import "modules/demo-only"; 

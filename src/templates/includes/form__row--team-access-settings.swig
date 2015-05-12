@@ -4,7 +4,7 @@
         <div class="media -v-center">
             <div class="media__img">
                 
-                <div class="check-box__slider prevent-fout">
+                <div class="jquery-ui__form check-box__slider prevent-fout">
                     <input 
                         type="checkbox" 
                         class="checkbox_slider" 
