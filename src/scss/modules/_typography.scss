@@ -383,10 +383,19 @@ p {
     @extend %color__gray--dark;
     @extend %font-weight__lighter;
 
+    .-annotations & {
+        @extend %font-size__14;
+    }
+
     &.-heading {
         @extend %font-size__18;
         @extend %font-weight__bold;
         margin-bottom: 10px;
+
+        .-annotations & {
+            @extend %font-size__16;
+            margin-bottom: 6px;
+        }
     }
 }
 

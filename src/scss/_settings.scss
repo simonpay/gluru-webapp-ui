@@ -74,6 +74,7 @@ $tooltips-arrow-height:     12px;
 // STACKING ORDER (z-index)
 // -----------------------------------
 $modal-z-index:                             1000;
+$annotations-z-index:                       900;
 $data-box-z-index:                          300;
 // $modal-box-z-index:                          1010;
 // $modal-screen-z-index:                      1000;
@@ -100,6 +101,9 @@ $stage-padding-left:                        $_stage-indent-left;
 $stage-padding-right:                       $_stage-indent-right;
 
 
+// -----------------------------------
+// LEFT INDENT
+// -----------------------------------
 // this section is to toggle the left indent 
 // -----------------------------------
 // on the stage (that eddie doesnt like)
@@ -115,24 +119,38 @@ $stage-section-padding-left:                $stage-padding-left;
 // -----------------------------------
 
 
-// stage nav
+// -----------------------------------
+// STAGE NAV
+// -----------------------------------
 $stage-nav__icon-wrap-width:                32px;
 $stage-nav__icon-wrap-height:               $stage-nav__icon-wrap-width;
 
-// main nav
+
+// -----------------------------------
+// MAIN NAV
+// -----------------------------------
 $main-nav-width:                            80px;
 
-// drawer
+
+// -----------------------------------
+// DRAWER
+// -----------------------------------
 $drawer-wrap-width:                         260px;
 $drawer-width:                              $drawer-wrap-width;
 $drawer-padding-left:                       4px;
 // $drawer-padding-right:                      $drawer-padding-left;
 
-// actions
+
+// -----------------------------------
+// ACTIONS
+// -----------------------------------
 $actions-width:                             370px;
 $event-style-header-box-shadow:             -2px 5px 10px rgba(0, 0, 0, 0.3);
 
-// panel-header
+
+// -----------------------------------
+// PANEL-HEADER
+// -----------------------------------
 $panel-header-height:                       58px;
 $panel-header-stage-height:                 117px;
 $panel-header-padding-left:                 $stage-padding-left;
@@ -140,14 +158,27 @@ $panel-header-padding-right:                $stage-padding-right;
 $panel-header-padding-left--drawer:         18px;
 $panel-header-padding-right--drawer:        $panel-header-padding-left--drawer;
 
-// icons
+
+// -----------------------------------
+// ICONS
+// -----------------------------------
 $sml-icon-height:                           20px;
 $lrg-icon-height:                           32px;
 
-// font sizes
+
+// -----------------------------------
+// FONTS
+// -----------------------------------
+// stack
+$base-font-stack:							Helvetica, Arial, sans-serif;
+
+// font size
 $standard-font-size--lists:                 rem(13);
 
-// options list
+
+// -----------------------------------
+// OPTIONS LIST
+// -----------------------------------
 $options-list-link-height-drawer:           38px;
 $options-list-link-height-actions:          30px;
 // $options-link-left-padding-drawer:          18px;
@@ -160,14 +191,20 @@ $options-list-text-font-size:               $standard-font-size--lists;
 $options-list-text-font-size--drawer:       rem(14);
 $options-list-heading-padding-left--drawer: $panel-header-padding-left--drawer - $drawer-padding-left;
 
-// files
+
+// -----------------------------------
+// FILES
+// -----------------------------------
 // table
 $min-table-width-files-single:              600px;
 $min-table-width-files-split:               $min-table-width-files-single - 200px;
 $files-table-padding-left:                  10px;
 $table-col-height:                          50px;
 
-// timeline
+
+// -----------------------------------
+// TIMELINE
+// -----------------------------------
 $event-height:                              80px;
 $event-height-split-view:                   80px;
 $event-time-width:                          125px;
@@ -178,12 +215,19 @@ $event-arrow-height:                        20px;
 
 $panel-header-height--item-selected:        $panel-header-height + ($event-height - $panel-header-height) / 2;
 
-// modal
+
+// -----------------------------------
+// MODAL
+// -----------------------------------
 $modal-box__height:							300px;
 $modal-box__height--large:					500px;
 
-// status-bar
+
+// -----------------------------------
+// STATUS-BAR
+// -----------------------------------
 $status-bar__height:						80px;
+
 
 // -----------------------------------
 // VERTICAL RYTHM
@@ -225,9 +269,19 @@ $checkbox-slider--small__height:    		20px;
 $checkbox-slider--small__width:     		50px;
 
 
-// priority box
-$priority-box__border-radius:                   15px;
-$priority-box--daily-digest__border-radius:     10px;
+// -----------------------------------
+// PRIORITY BOX
+// -----------------------------------
+$priority-box__border-radius:               15px;
+$priority-box--daily-digest__border-radius: 10px;
+
+
+// -----------------------------------
+// SPEECH BUBBLES
+// -----------------------------------
+$speech-bubble__border-width:       		6px;
+$speech-bubble__background-color:   		$gallery;
+$speech-bubble__border-color:       		$alto;
 
 
 

@@ -83,7 +83,13 @@
         // manage team buttons in team settings page
         $btn_create_team                    = $( ".js-create-team" ),
         $btn_manage_team                    = $( ".js-manage-team" ),
-        $btn_add_team_member                = $( ".js-add-team-member" )
+        $btn_add_team_member                = $( ".js-add-team-member" ),
+
+        // annotations
+        $annotations                        = $( ".annotations" ),
+        // $annotations_tabs                   = $( ".annotations__tabs" ),
+
+        $prevent_fout                       = $( ".prevent-fout" )
         ;
 
 
@@ -99,6 +105,8 @@
             toggle: function () {
 
                 $this = $(this);
+
+                console.log($(this));
 
                 $this
                     .toggleClass( "is-collapsed" )
@@ -184,6 +192,94 @@
                     .removeClass( "-white" )
                     .addClass( "-positive" );
 
+
+            }
+        },
+
+        annotations: {
+
+            build_annotations: function () {
+
+                var $annotation_zones   = $( ".js-annotation_zone" ),
+                    _counter            = 0;
+
+                $annotation_zones.each(function(){
+
+                    console.log( $(this) );
+                    var $this                       = $(this), // annotation zone
+                        _zone_width                 = $this.outerWidth(),
+                        _zone_height                = $this.outerHeight(),
+                        _offset                     = $this.offset(),
+                        // _tooltip_text               = $this.data( "tt" ),
+                        // _tooltip_config             = $this.data( "tt-config" ),
+                        // _tooltip_position           = $this.data( "tt-pos" ),
+                        // _is_main_nav_item           = $this.hasClass( "js-main-nav__link" ),
+                        // _tooltip_position_class     = "",
+                        _left,
+                        _top,
+                        _arrow_width                = 15
+                        ;
+
+                    var _annotation_width = $( ".annotation" ).outerWidth(),
+                        _annotation_height = $( ".annotation" ).outerHeight();
+
+
+                    _left = _offset.left - ( _annotation_width / 2 ) + ( _zone_width / 2 );
+                    _top = _offset.top + _zone_height + _arrow_width;
+
+
+                    $( ".js-annotation" )
+                        .clone()
+                        .appendTo( "body" )
+                        .offset({ left: _left, top: _top })
+                        // .css({
+                        //     "left": (_counter * 30) + "%"
+                        // })
+                        .removeClass( "is-hidden js-annotation" )
+                            .find( ".speech-bubble.-annotations" )
+                            .addClass( "-below" )
+                                .find( ".annotations__tabs" )
+                                .tabs({
+                                    heightStyle: "auto",
+                                    show: { effect: "fade", duration: 400 }
+                                })
+                                ;
+
+                    _counter ++;
+
+                });
+            },
+
+            navigate_tab_content: function ( e ) {
+
+                var $this =                 $(this), // next button
+                    $tabs =                 $this.closest( ".annotations__tabs__wrap" ).find( ".annotations__tabs" ),
+                    current_tab_index =     $tabs.tabs( "option", "active" ),
+                    tab_count =             $tabs.find( " > ul > li" ).size(),
+                    new_tab_index;
+
+                if ( current_tab_index < tab_count - 1 ) {
+                    // NOT the last tab
+                    new_tab_index = current_tab_index + 1;
+                } else {
+                    // LAST tab
+                    new_tab_index = 0;
+                }
+
+                // $this.hide();
+                // $this.parent().parent().hide();
+                // console.log( $this.parent().parent().find( ".annotations__tabs" ).tabs( "option", "active" ) );
+                
+
+                console.log( "$this:");
+                console.log($this);
+                console.log( "current_tab_index = " + current_tab_index );
+                console.log( "tab_count = " + tab_count );
+                console.log( "new_tab_index = " + new_tab_index );
+
+                $tabs.tabs({ active: new_tab_index });
+
+                e.preventDefault();
 
             }
         },
@@ -1211,7 +1307,7 @@
     // click event for each row in the table (except the header)
     // $( ".js-table-row:not(.-header, .js-open-file)" ).on( "click", function(){
     $table_row.on( "click", function(){
-            obj_gluru.files.do_click.call( $(this) );
+        obj_gluru.files.do_click.call( $(this) );
     });
 
     // FILE EXPLORER SPLIT VIEW
@@ -1301,6 +1397,25 @@
 
 
 
+
+    // DAILY-DIGEST FIRST RUN PAGE 
+    // -------------------------------------------------
+    // this is opened after the user has finished the setup process
+    if ( $( ".daily-digest-first-run" ).length > 0 ) {
+
+        obj_gluru.modal._show.call( $(this), undefined, "indexing-files", "large" );
+        obj_gluru.status_bar.set_state();
+
+        obj_gluru.annotations.build_annotations();
+
+        $( ".js-annotations-btn-next" ).on( "click", function( e ){
+            obj_gluru.annotations.navigate_tab_content.call( $(this), e );
+        });
+    }
+
+
+
+
     // disable iOS overscroll effect
     // http://www.html5rocks.com/en/mobile/touch/
     document.body.addEventListener('touchmove', function(e) {
@@ -1381,15 +1496,6 @@
 
 
 
-
-    // daily-digest first run page 
-    // this is opened after the user has finished the setup process
-    if ( $( ".daily-digest-first-run" ).length > 0 ) {
-
-        obj_gluru.modal._show.call( $(this), undefined, "indexing-files", "large" );
-        obj_gluru.status_bar.set_state();
-
-    }
 
 
 })();

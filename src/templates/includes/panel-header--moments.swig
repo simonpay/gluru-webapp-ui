@@ -1,6 +1,6 @@
 <div class="panel-header panel-header--absolute">
     <nav class="header-nav">
-        <ul class="header-nav__list">
+        <ul class="header-nav__list js-annotation_zone">
             <li class="header-nav__item">
                 <a href="#" 
                 class="header-nav__link is-selected js-timeline-range" 

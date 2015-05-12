@@ -5,34 +5,204 @@
 // form setup speech bubble from gluru bot
 .speech-bubble {
     position: relative;
-    // width: 280px;
-    width: 80%;
-    margin: -5px auto 40px;
+    width: 400px;
+    height: 250px;
     padding: 18px 20px 26px;
-    background-color: $gallery;
-    border: 8px solid $alto;
+    background-color: $speech-bubble__background-color;
+    border: $speech-bubble__border-width solid $speech-bubble__border-color;
     border-radius: 25px;
-    box-shadow: 0 0 10px rgba($black, .15);
+    box-shadow: 0 0 10px rgba($black, .25);
+    
+    &.-setup {
+        width: 80%;
+        height: auto;
+        margin: -5px auto 40px;
+    }
+
+    &.-annotations {
+        // z-index: $annotations-z-index;
+        // position: absolute;
+        height: auto;
+        // top: 10%;
+        // left: 10%;
+        padding: 20px 24px 18px;
+    }
+
+    
+    $speech-bubble__triangle-outer-border-width:  34px;
+    $speech-bubble__triangle-inner-border-width:  $speech-bubble__triangle-outer-border-width - 10px;
+    
+    // show the arrow only when a position modifier 
+    // is present on ".speech-bubble" e.g. "-above"
+    &.-above,
+    &.-below,
+    &.-left,
+    &.-right,
+    {
+        &:before,
+        &:after,
+        {
+            content: "";
+        }
+    }
 
     &:before,
     &:after,
     {
-        content: "";
         position: absolute;
-        left: 50%;
-        bottom: 0;
         width: 0;
         height: 0;
-        @include transform( translateX( -50% ) translateY( 100% ) );
     }
 
     &:before {
-        border: 34px solid;
-        border-color: $alto transparent transparent;
+        border: $speech-bubble__triangle-outer-border-width solid;
+        border-color: $speech-bubble__border-color transparent transparent;
     }
 
     &:after {
-        border: 22px solid;
-        border-color: $gallery transparent transparent;         
+        border: $speech-bubble__triangle-inner-border-width solid;
+        border-color: $speech-bubble__background-color transparent transparent;         
     }
+
+    // speech bubble above content - 
+    // arrow pointing down
+    &.-above {
+        &:before,
+        &:after,
+        {
+            left: 50%;
+            top: 100%;
+            @include transform( translateX( -50% ) );
+        }
+    }
+    
+    // speech bubble below content - 
+    // arrow pointing up
+    &.-below {
+        &:before,
+        &:after,
+        {
+            left: 50%;
+            bottom: 100%;
+            @include transform( translateX( -50% ) rotate(180deg) );
+        }
+    }
+    
+    // speech bubble to the right of - 
+    // arrow pointing left
+    &.-right {
+        &:before,
+        &:after,
+        {
+            right: 100%;
+            top: 50%;
+            @include transform( translateY(-50%) rotate(90deg) );
+        }
+    }
+
+    // speech bubble to the left of - 
+    // arrow pointing right
+    &.-left {
+        &:before,
+        &:after,
+        {
+            left: 100%;
+            top: 50%;
+            @include transform( translateY(-50%) rotate(-90deg) );
+        }
+    }
+
+
+
+
+
+    // &:before,
+    // &:after,
+    // {
+    //     content: "";
+    //     position: absolute;
+    //     left: 50%;
+    //     bottom: 0;
+    //     width: 0;
+    //     height: 0;
+    //     @include transform( translateX( -50% ) translateY( 100% ) );
+    // }
+
+    // &:before {
+    //     border: 34px solid;
+    //     border-color: $speech-bubble__border-color transparent transparent;
+    // }
+
+    // &:after {
+    //     border: 24px solid;
+    //     border-color: $speech-bubble__background-color transparent transparent;         
+    // }
+
+
+
+
 }
+
+
+
+// // custom css for preserving the 
+// // shadow on the triangle element 
+// // of the bubble - requires too much 
+// // custom code so prob best to sacrafice
+// // the shadow and use standard css 
+// // triangle instead
+// .speech-bubble__triangle-wrap {
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     right: 0;
+//     width: 90px;
+//     height: 40px;
+//     margin: auto;
+//     // outline: 1px solid red;
+// }
+
+// .speech-bubble__triangle,
+// .speech-bubble__triangle-shadow {
+//     position: absolute;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     overflow: hidden;
+//     // box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
+//     // outline: 1px solid green;
+
+//     &:after {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         width: 45px;
+//         height: 45px;
+//         margin: auto;
+//         @include transform( rotate(45deg) translateY(-40%) translateX(-40%) );
+//         // transform: rotate(45deg); /* Prefixes... */
+//     }
+// }
+
+// .speech-bubble__triangle {
+//     // display: none;
+//     &:after {
+//         background-color: $speech-bubble__background-color;
+//         border: $speech-bubble__border-width solid $speech-bubble__border-color;
+//     }
+// }
+
+// .speech-bubble__triangle-shadow {
+//     top: $speech-bubble__border-width;
+//     &:after {
+//         top: -$speech-bubble__border-width;
+//         // background-color: $green;
+//         box-shadow: 0 0 10px rgba($black, .15);
+//     }
+// }
+
+
+
+

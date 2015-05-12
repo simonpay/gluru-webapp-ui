@@ -26,6 +26,7 @@
 {%> "pop-menu" %}
 {% include "../includes/loading.swig" %}
 {% include "../includes/modal.swig" %}
+{% include "../includes/annotations.swig" %}
 
 
 {% if !bln_hide_dev_buttons %}

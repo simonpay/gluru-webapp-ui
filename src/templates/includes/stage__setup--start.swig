@@ -37,9 +37,15 @@
 
 			<aside class="stage__sidebar">
 				
-				<div class="speech-bubble">
+				<div class="speech-bubble -setup -above">
 					<div class="speech-bubble__text -heading">{{ obj_setup_data.help_data.heading }}</div>
 					<div class="speech-bubble__text">{{ obj_setup_data.help_data.subheading }}</div>
+
+{# 					<div class="speech-bubble__triangle-wrap">
+						<div class="speech-bubble__triangle-shadow"></div>
+						<div class="speech-bubble__triangle"></div>
+					</div>
+ #}
 				</div>
 
 				<div class="sprite__gluru-bot u-center-block"></div>

@@ -1,5 +1,5 @@
 <nav class="stage-nav">
-	<ul class="stage-nav__list">
+	<ul class="stage-nav__list js-annotation_zone">
 		<li class="stage-nav__item">
 			<div class="icon-button js-icon-button -drawer js-toggle-drawer js-tt"
 				data-tt="Toggle Drawer" 

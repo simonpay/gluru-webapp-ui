@@ -400,7 +400,7 @@
 				<div class="row">
 					<aside class="med-6">
 						
-						<div class="speech-bubble">
+						<div class="speech-bubble -setup">
 							<div class="speech-bubble__text -heading">See you soon Tim!</div>
 							<div class="speech-bubble__text">Ok you’re all setup, I’m busy indexing all your data.</div>
 						</div>
