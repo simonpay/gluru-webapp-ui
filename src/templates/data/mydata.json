@@ -260,7 +260,7 @@
                 "stage_data": {
                     "stage_id":                         "setup",
                     "stage_heading":                    "Log in to Gluru!",
-                    "stage_sub_heading":                "XXXX"
+                    "stage_sub_heading":                "Log in with your username and password or Google account"
                 },
                 "help_data": {
                     "heading":                          "Hi there!",

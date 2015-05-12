@@ -30,11 +30,6 @@
 		display: none;
 	}
 	
-	&.-padh0 {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
 	&.-clear {
 		background-color: transparent;
 		border: 0;
@@ -92,13 +87,13 @@
 
 	&.-small {
 		padding: 7px 16px;
-    	@extend %font-size__15;
+		font-size: rem(15);
 	}
 
 	&.-large {
 		border-width: 3px;
 		padding: 12px 38px;
-    	@extend %font-size__18;
+		font-size: rem(18);
 	}
 
 	&.-icon-right {
@@ -112,6 +107,10 @@
 		width: 100%;
 	}
 
+	&.-padh0 {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 }
 
 	.btn__icon {
@@ -157,6 +156,10 @@
 
 		&.-fw-light {
 			font-weight: lighter;
+		}
+
+		&.-fw-bold {
+			font-weight: bold;
 		}
 
 		&.-below {
