@@ -5,7 +5,6 @@
 {% block meta-description %}{{meta.description}}{% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="css/jquery-ui.css" />
     {% parent %}
 {% endblock %}
 
