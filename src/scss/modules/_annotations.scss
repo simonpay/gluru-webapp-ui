@@ -22,19 +22,23 @@
 
 .annotation {
     z-index: $annotations-z-index;
-    display: block;
+    // display: block;
     position: absolute;
+    top: -99999px;
+    left: -99999px;
     // height: auto;
-    top: 10%;
-    left: 10%;
+    // top: 10%;
+    // left: 10%;
     // padding: 20px 24px 18px;
-    // opacity: 1;
+    opacity: 1;
+    visibility: visible;
+    @include transition( opacity .15s, visibility 0s 0s );
 
     &.is-hidden {
-        // visibility: hidden;
-        // opacity: 0;
-        display: none;
-        // @include transition( visibility 0s .3s );
+        visibility: hidden;
+        opacity: 0;
+        // display: none;
+        @include transition( opacity .15s, visibility 0s .15s );
     }
 
     .gluru-bot {

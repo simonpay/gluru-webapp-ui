@@ -87,6 +87,7 @@
 
         // annotations
         $annotations                        = $( ".annotations" ),
+        $suppress_annotations               = $( ".js-suppress-annotations" ),
         // $annotations_tabs                   = $( ".annotations__tabs" ),
 
         $prevent_fout                       = $( ".prevent-fout" )
@@ -281,6 +282,18 @@
 
                 e.preventDefault();
 
+            },
+
+            _hide: function ( e ) {
+
+                $( ".annotation" )
+                    .addClass( "is-hidden" );
+
+                setTimeout(function(){
+                    $( ".annotation" ).remove();
+                }, 500);
+
+                e.preventDefault();
             }
         },
 
@@ -1410,6 +1423,10 @@
 
         $( ".js-annotations-btn-next" ).on( "click", function( e ){
             obj_gluru.annotations.navigate_tab_content.call( $(this), e );
+        });
+
+        $( ".js-suppress-annotations" ).on( "click", function( e ){
+            obj_gluru.annotations._hide( e );
         });
     }
 
