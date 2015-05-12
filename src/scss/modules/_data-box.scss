@@ -10,6 +10,8 @@
 .data-box {
     z-index: $data-box-z-index;
     position: absolute;
+    top: -99999px;
+    left: -99999px;
     width: 150px;
     padding: 25px 0 20px;
     background: rgba($white, 0.95);

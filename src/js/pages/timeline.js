@@ -41,6 +41,7 @@
 			            		;
 
             	$loader
+                    .removeAttr("style")
         			.addClass( "is-hidden" );
 
 			    // load extra events using ajax - only works 
