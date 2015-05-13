@@ -155,11 +155,13 @@
 
                             <table>
                               <tr>
-                                <td width="440" class="table-files-header__heading" class="pr">{{@key}}</td>
+                                <td width="440" class="table-files-header__heading" class="pr">
+                                  <a href="mailto:{{@key}}" style='color:black;' class="table-files-header__subheading"><span style='color:black;'>{{@key}}</span></a>
+                                </td>
                               </tr>
                               <tr>
                                 <td width="440" class="pr">
-                                  <a href="mailto:{{@key}}" class="table-files-header__subheading">{{@key}}</a>
+                                   <a href="mailto:{{@key}}" style='color:#777777;' class="table-files-header__subheading"><span style='color:#777777;'>{{@key}}</span></a>
                                 </td>
                               </tr>
                             </table>
@@ -200,7 +202,9 @@
                             </table>
 
                           </td>
-                          <td class="table-files__col">{{this.title}}</td>
+                          <td class="table-files__col">
+                            <a href='https://gluru.co/app/moments?file={{this.file_id}}' style="color:black;"><span style="color:black;">{{this.title}}</span></a>
+                          </td>
                           <td width="90" class="table-files__col hide-for-small table-col__icon--modified">{{this.timestamp}}</td>
                           <td width="60" class="table-files__col table-col__icon--source">
 
@@ -288,7 +292,13 @@
 
                                   <table class="five columns">
                                     <tr>
-                                      <td><span class="table-files-header__heading">ATTENDEES: </span><span class="table-files-header__subheading">Mike Smith, Amy Tan, Han Solo, Tony Stark</span></td>
+                                      <td><span class="table-files-header__heading">ATTENDEES: </span><span class="table-files-header__subheading">
+
+                                        {{#each this.attendees}}
+                                        <a href='mailto:{{this}}' style='color:#777777;'><span style='color:#777777;'>{{this}}</span></a>
+                                        {{/each}}
+
+                                      </span></td>
                                       <td class="expander"></td>
                                     </tr>
                                   </table>
@@ -333,7 +343,9 @@
                               </table>
 
                             </td>
-                            <td class="table-files__col">{{this.title}}</td>
+                            <td class="table-files__col">
+                              <a href='https://gluru.co/app/moments?file={{this.file_id}}' style="color:black;"><span style="color:black;">{{this.title}}</span></a>
+                            </td>
                             <td width="90" class="table-files__col hide-for-small table-col__icon--modified">{{this.timestamp}}</td>
                             <td width="60" class="table-files__col table-col__icon--source">
 
