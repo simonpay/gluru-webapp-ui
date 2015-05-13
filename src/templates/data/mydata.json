@@ -454,6 +454,17 @@
                 ]
             },
             {
+                "section_id":                           "autopush",
+                "text":                                 "Autopush",
+                "icon_class":                           "autopush",
+                "url":                                  "settings-autopush.html",
+                "stage_data": {
+                    "stage_id":                         "settings",
+                    "stage_heading":                    "Settings",
+                    "stage_sub_heading":                "25 March, 2015"
+                }
+            },
+            {
                 "section_id":                           "sources",
                 "text":                                 "Sources",
                 "icon_class":                           "sources",

@@ -9,7 +9,7 @@
 .icon__onedrive {               	@include use-sprite("icon__onedrive"); }
 .icon__gcalendar {              	@include use-sprite("icon__gcalendar"); }
 .icon__gmail {                  	@include use-sprite("icon__gmail"); }
-.icon__exchange {               	@include use-sprite("icon__exchange"); }
+.icon__exchangemail {               @include use-sprite("icon__exchange"); }
 .icon__box {                    	@include use-sprite("icon__box"); }
 .icon__gdrive {                 	@include use-sprite("icon__gdrive"); }
 .icon__dropbox {                	@include use-sprite("icon__dropbox"); }
@@ -20,7 +20,7 @@
 .icon-sml__onedrive {           	@include use-sprite("icon-sml__onedrive"); }
 .icon-sml__gcalendar {          	@include use-sprite("icon-sml__gcalendar"); }
 .icon-sml__gmail {              	@include use-sprite("icon-sml__gmail"); }
-.icon-sml__exchange {           	@include use-sprite("icon-sml__exchange"); }
+.icon-sml__exchangemail {           @include use-sprite("icon-sml__exchange"); }
 .icon-sml__box {                	@include use-sprite("icon-sml__box"); }
 .icon-sml__gdrive {             	@include use-sprite("icon-sml__gdrive"); }
 .icon-sml__dropbox {            	@include use-sprite("icon-sml__dropbox"); }
@@ -172,6 +172,8 @@
 .icon-sml__security--pink {     	@include use-sprite("icon-sml__security--pink"); }
 .icon-sml__coffee {      	     	@include use-sprite("icon-sml__coffee"); }
 .icon-sml__coffee--pink {   	  	@include use-sprite("icon-sml__coffee--pink"); }
+.icon-sml__autopush {      	     	@include use-sprite("icon-sml__autopush"); }
+.icon-sml__autopush--pink {   	  	@include use-sprite("icon-sml__autopush--pink"); }
 
 
 // positioning for chevron icon in hierarchy paths 

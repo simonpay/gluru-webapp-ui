@@ -96,6 +96,9 @@
                             @include use-sprite("icon-sml__security--pink");
                         }
 
+                        &.-autopush {
+                            @include use-sprite("icon-sml__autopush--pink");
+                        }
                     }
                 }
             }
@@ -142,6 +145,10 @@
 
                     &.-security {
                         @include use-sprite("icon-sml__security");
+                    }
+                    
+                    &.-autopush {
+                        @include use-sprite("icon-sml__autopush");
                     }
                     
                     // numbers for process style nav - e.g. setup process
