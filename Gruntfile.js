@@ -278,6 +278,11 @@ module.exports = function(grunt) {
                 },{
                     from: '%7D%7D',
                     to: '}}'
+                },{
+                    from: 'UNSUBLINK',
+                    to: "<a href='{{unsub \"https://gluru.co/app/unsubscribe\"}}' style='color:white!important;text-decoration:underline'><span style=\"color:white;\">unsubscribe</span></a>"
+
+
                 // }, {
                 //     from: /(f|F)(o{2,100})/g, // regex replacement ('Fooo' to 'Mooo') 
                 //     to: 'M$2'
