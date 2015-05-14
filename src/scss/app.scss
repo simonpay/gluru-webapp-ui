@@ -38,6 +38,13 @@
 // config.rb file for load path
 @import "retina-sprites";
 
+// ZURB FOUNDATION JOYRIDE
+// ------------------------------------------------
+// zurb foundation joyride component converted to scss and 
+// customised directly in file instead of using overrides
+@import "vendor/foundation//joyride-2.1";
+
+
 // SELECT2
 // ------------------------------------------------
 // jQuery replacement for select boxes
@@ -113,7 +120,7 @@
         "modules/icon-button",
         "modules/modal",
         "modules/tooltips",
-        "modules/annotations",
+        // "modules/annotations",
         "modules/loader",
         "modules/media-object",
         "modules/disc-img",
@@ -150,7 +157,8 @@
         "modules/doughnut-chart",
         "modules/progress-bar",
         "modules/gallery",
-        "modules/speech-bubble";
+        "modules/speech-bubble",
+        "modules/tour";
 
 // forms
 @import "modules/forms/form-elements",
@@ -167,6 +175,5 @@
 // Anything that doesnt quite fit anywhere else
 @import "custom";
 @import "shame"; // temp stuff or code in need of refactoring
-
 
 

@@ -30,7 +30,7 @@
     
             <div class="priority-box__wrap">
 
-                <div class="priority-box -daily-digest collapsable is-collapsed js-toggle-collapsable-content">
+                <div class="priority-box -daily-digest collapsable is-collapsed js-toggle-collapsable-content {% if obj_section.section_id === "meetings" %} step-three{% endif %}">
 
                     <div class="media -v-center">
                         <div class="media__img">
@@ -126,5 +126,6 @@
         {% endfor %}
 
     {% endfor %}
+
 
 </div><!-- // .daily-digest -->

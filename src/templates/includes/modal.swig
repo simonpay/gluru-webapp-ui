@@ -364,7 +364,7 @@
 
 
 		{# this wrapping div is just for the demo #}
-		<div class="[ demo-only -modal-box__content-wrap ] js-demo-only__indexing-files">
+		<div class="[ demo-only -modal-box__content-wrap ] js-demo-only__indexing-files" data-modal-content="indexing-files">
 
 			<header class="panel-header">
 				<div class="modal-box__heading-wrap">

@@ -18,8 +18,22 @@ body, html {
 }
 
 body {
+    position: relative;
     overflow: hidden;
+    background: $white;
+    color: $mine-shaft;
+    cursor: auto;
+    font-family: $base-font-stack;
+    font-style: normal;
+    font-weight: normal;
+    line-height: $line-height;
+    margin: 0;
+    padding: 0;
 }
+
+
+
+
 
 // resets for web apps (selected from https://github.com/suitcss/base)
 ol,

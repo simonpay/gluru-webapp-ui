@@ -2,6 +2,10 @@
     # SPEECH-BUBBLE
 \*------------------------------------*/
 
+
+$speech-bubble__triangle-outer-border-width:  34px;
+$speech-bubble__triangle-inner-border-width:  $speech-bubble__triangle-outer-border-width - 10px;
+
 // form setup speech bubble from gluru bot
 .speech-bubble {
     position: relative;
@@ -19,18 +23,37 @@
         margin: -5px auto 40px;
     }
 
-    &.-annotations {
-        // z-index: $annotations-z-index;
-        // position: absolute;
-        height: auto;
-        // top: 10%;
-        // left: 10%;
-        padding: 20px 24px 18px;
-    }
+    // &.-annotations {
+    //     // z-index: $annotations-z-index;
+    //     // position: absolute;
+    //     height: auto;
+    //     // top: 10%;
+    //     // left: 10%;
+    //     padding: 20px 24px 18px;
+        
+    //     // position arrow to left or top of speech 
+    //     // bubble for tour speech bubbles
+    //     &.-above,
+    //     &.-below,
+    //     {
+    //         &:before,
+    //         &:after,
+    //         {
+    //             left: 20%;
+    //         }
+    //     }
 
-    
-    $speech-bubble__triangle-outer-border-width:  34px;
-    $speech-bubble__triangle-inner-border-width:  $speech-bubble__triangle-outer-border-width - 10px;
+    //     &.-left,
+    //     &.-right,
+    //     {
+    //         &:before,
+    //         &:after,
+    //         {
+    //             top: 30%;
+    //         }
+    //     }
+    // }
+
     
     // show the arrow only when a position modifier 
     // is present on ".speech-bubble" e.g. "-above"
@@ -62,6 +85,58 @@
     &:after {
         border: $speech-bubble__triangle-inner-border-width solid;
         border-color: $speech-bubble__background-color transparent transparent;         
+    }
+    
+    &.-left,
+    &.-right,
+    {
+        // speech bubbles that are positioned at the top of the screen (tour) 
+        // with triangles positioned to the top-left or top-right  
+        &.-top-left,
+        &.-top-right,
+        {
+            // custom positioning for triangle when 
+            // bubble is at top of screen (tour)
+            &:before,
+            &:after,
+            {
+                top: 32px;
+            }
+
+            &:before,
+            {
+                border-width: $speech-bubble__triangle-outer-border-width - 14;
+            }
+
+            &:after,
+            {
+                border-width: $speech-bubble__triangle-inner-border-width - 12;
+            }
+        }
+
+        &.-top-left,
+        {
+            &:before {
+                border-color: $speech-bubble__border-color $speech-bubble__border-color transparent transparent;
+            }
+
+            &:after {
+                border-color: $speech-bubble__background-color $speech-bubble__background-color transparent transparent;
+                @include transform( translateY( -55% ) rotate(-90deg) );
+            }
+        }
+
+        &.-top-right,
+        {
+            &:before {
+                border-color: $speech-bubble__border-color transparent transparent $speech-bubble__border-color;
+            }
+
+            &:after {
+                border-color: $speech-bubble__background-color transparent transparent $speech-bubble__background-color;
+                @include transform( translateY( -55% ) rotate(90deg) );
+            }
+        }
     }
 
     // speech bubble above content - 

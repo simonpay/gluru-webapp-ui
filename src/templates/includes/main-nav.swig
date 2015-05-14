@@ -1,7 +1,7 @@
 <nav class="main-nav">
 	<div class="main-nav__logo-wrap">
 		<a href="#" 
-			class="main-nav__logo js-gluru js-main-nav__link js-tt" 
+			class="main-nav__logo step-zero js-gluru js-main-nav__link js-tt" 
 			data-tt="Home"
 			data-tt-pos="right"></a>
 	</div>

@@ -26,7 +26,7 @@
 {%> "pop-menu" %}
 {% include "../includes/loading.swig" %}
 {% include "../includes/modal.swig" %}
-{% include "../includes/annotations.swig" %}
+{# {% include "../includes/annotations.swig" %} #}
 
 
 {% if !bln_hide_dev_buttons %}
@@ -71,11 +71,12 @@
 </div>
 {% endif %}
 
-
 {% block javascripts %}
 <script src="js/app.js"></script>
 {% endblock %}
 
-</body>
+{% block tourdata %}
+{% endblock %}
 
+</body>
 </html>

@@ -99,10 +99,6 @@
 }
 
 // margin
-.u-mb0 {
-    margin-bottom: 0 !important;
-}
-
 .u-mh {
     margin-top: $base-line-height !important;
     margin-bottom: $base-line-height !important;
@@ -173,6 +169,10 @@
 
 .u-mr- {
     margin-right: $base-line-height / 2 !important;
+}
+
+.u-mb0 {
+    margin-bottom: 0 !important;
 }
 
 // text-align

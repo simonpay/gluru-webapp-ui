@@ -10,6 +10,8 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     '<%= pkg.project_paths.bower_folder %>jquery/dist/jquery.js',
+                    '<%= pkg.project_paths.bower_folder %>vendor/foundation/jquery.joyride-2.1.js',
+                    '<%= pkg.project_paths.bower_folder %>vendor/foundation/jquery.cookie.js',
                     '<%= pkg.project_paths.bower_folder %>jquery-ui/jquery-ui.js',
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/core.js',
                     // '<%= pkg.project_paths.bower_folder %>jquery-ui/ui/widget.js',
@@ -86,7 +88,7 @@ module.exports = function(grunt) {
         // JSHint to review JS code before build
         jshint: {
             files: [
-                '<%= pkg.src_paths.js %>**/*.js'
+                ['<%= pkg.src_paths.js %>**/*.js', '!<%= pkg.src_paths.js %>vendor/**/*.js']
             ],
             options: {
                 // options here to override JSHint defaults

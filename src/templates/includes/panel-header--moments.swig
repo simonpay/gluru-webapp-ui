@@ -1,7 +1,7 @@
 <div class="panel-header panel-header--absolute">
     <nav class="header-nav">
         <ul class="header-nav__list js-annotation_zone">
-            <li class="header-nav__item">
+            <li class="header-nav__item step-four">
                 <a href="#" 
                 class="header-nav__link is-selected js-timeline-range" 
                 data-timeline-range="recent">
@@ -17,7 +17,7 @@
 
                 </a>
             </li>
-            <li class="header-nav__item">
+            <li class="header-nav__item step-one step-two">
                 <a href="#" 
                 class="header-nav__link js-timeline-range" 
                 data-timeline-range="daily-digest">

@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    # TOUR
+\*------------------------------------*/
+
+// 'tour' is a custom module that is appled to ".speech-bubble" 
+// to apply custom styles for the triangle and bubble
+
+
+// the holder for the tour stop content
+.tour__content {
+    display: none;
+}
+
+.tour {
+    // position: absolute;
+    height: auto;
+    // top: 10%;
+    // left: 10%;
+    padding: 22px 24px 8px;
+    
+    // make triangle smaller for 
+    // tour speech bubbles
+    &:before {
+        border-width: $speech-bubble__triangle-outer-border-width - 5;
+    }
+
+    &:after {
+        border-width: $speech-bubble__triangle-inner-border-width - 5;
+    }
+
+    // position arrow to left or top of speech 
+    // bubble for tour speech bubbles
+    &.-above,
+    &.-below,
+    {
+        &:before,
+        &:after,
+        {
+            left: 20%;
+        }
+    }
+
+    &.-above {
+        @include transform( translateY( -30px ) );
+    }
+
+    &.-below {
+        @include transform( translateY( 30px ) );
+    }
+    
+    // position triangle further toward the top of the speech bubble
+    &.-left,
+    &.-right,
+    {
+        &:before,
+        &:after,
+        {
+            top: 30%;
+        }
+    }
+
+    &.-top-left {
+        @include transform( translateX( -40px ) );
+    }
+
+    &.-top-right {
+        @include transform( translateX( 40px ) );
+    }
+}
+
+// remove outline on next button
+.joyride-tip-guide {
+  .btn {
+    outline: none;
+  }
+}
+
+// clear wrapper
+.joyride-content-wrapper {
+  @include clearfix;
+
+    .gluru-bot {
+        // position: absolute;
+        // bottom: 20px;
+        margin-bottom: 20px;
+    }
+}

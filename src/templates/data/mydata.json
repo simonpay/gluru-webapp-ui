@@ -22,7 +22,7 @@
                 },
                 {
                     "text"              : "Exchange",
-                    "file_class"        : "icon__exchange"
+                    "file_class"        : "icon__exchangemail"
                 },
                 {
                     "text"              : "Box",
@@ -342,7 +342,7 @@
                     {
                         "name":                          "Exchange",
                         "info":                          "",
-                        "icon_class":                    "icon__exchange",
+                        "icon_class":                    "icon__exchangemail",
                         "action_type":                   "button"
                     }
                 ]
@@ -449,7 +449,7 @@
                         "source"                    :   "exchange",
                         "name"                      :   "Microsoft Exchange",
                         "percentage_available"      :   "79",
-                        "icon_class"                :   "icon__exchange"
+                        "icon_class"                :   "icon__exchangemail"
                     }
                 ]
             },
@@ -513,7 +513,7 @@
                     },
                     {
                         "name":                          "Exchange",
-                        "icon_class":                    "icon__exchange",
+                        "icon_class":                    "icon__exchangemail",
                         "authentication_date":           "30/05/2015",
                         "usage":                         "You are using 2.31 GB (15%) of your 15 GB"
                     }

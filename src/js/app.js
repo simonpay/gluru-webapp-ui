@@ -107,7 +107,7 @@
 
                 $this = $(this);
 
-                console.log($(this));
+                // console.log($(this));
 
                 $this
                     .toggleClass( "is-collapsed" )
@@ -132,7 +132,7 @@
 
             set_state: function ( requested_state ) {
 
-                console.log( "status_bar: set_state: " + requested_state );
+                // console.log( "status_bar: set_state: " + requested_state );
 
                 var $this = $(this),
                 status_bar_is_hidden = $status_bar.hasClass( "is-hidden" );
@@ -206,7 +206,8 @@
 
                 $annotation_zones.each(function(){
 
-                    console.log( $(this) );
+                    // console.log( $(this) );
+
                     var $this                       = $(this), // annotation zone
                         _zone_width                 = $this.outerWidth(),
                         _zone_height                = $this.outerHeight(),
@@ -272,11 +273,11 @@
                 // console.log( $this.parent().parent().find( ".annotations__tabs" ).tabs( "option", "active" ) );
                 
 
-                console.log( "$this:");
-                console.log($this);
-                console.log( "current_tab_index = " + current_tab_index );
-                console.log( "tab_count = " + tab_count );
-                console.log( "new_tab_index = " + new_tab_index );
+                // console.log( "$this:");
+                // console.log($this);
+                // console.log( "current_tab_index = " + current_tab_index );
+                // console.log( "tab_count = " + tab_count );
+                // console.log( "new_tab_index = " + new_tab_index );
 
                 $tabs.tabs({ active: new_tab_index });
 
@@ -341,11 +342,26 @@
             },
 
             _hide: function () {
+
+                var $this                   = $(this),
+                    $modal_content          = $this.closest( ".demo-only.-modal-box__content-wrap" ),
+                    _modal_content          = $modal_content.data( "modal-content" );
+
+
                 $modal
                     .addClass( "is-hidden" )
                         .find( ".-modal-box__content-wrap" )
                             .hide()
                                 ;
+
+                if ( _modal_content === "indexing-files" ) {
+
+                    // initiate tour after 1 second when 
+                    // 'indexing files' modal is closed 
+                    setTimeout(function(){
+                        $( ".tour__content" ).joyride( "restart" );
+                    }, 500);
+                }
             }
 
         },
@@ -1123,7 +1139,7 @@
     });
     // hide
     $close_modal.on( "click", function(){
-        obj_gluru.modal._hide();
+        obj_gluru.modal._hide.call( $(this) );
     });
 
 
@@ -1419,7 +1435,7 @@
         obj_gluru.modal._show.call( $(this), undefined, "indexing-files", "large" );
         obj_gluru.status_bar.set_state();
 
-        obj_gluru.annotations.build_annotations();
+        // obj_gluru.annotations.build_annotations();
 
         $( ".js-annotations-btn-next" ).on( "click", function( e ){
             obj_gluru.annotations.navigate_tab_content.call( $(this), e );
@@ -1428,6 +1444,42 @@
         $( ".js-suppress-annotations" ).on( "click", function( e ){
             obj_gluru.annotations._hide( e );
         });
+
+
+        // run joyride when al content (inc images) has loaded
+        $(window).load(function() {
+            $( ".tour__content" ).joyride({
+                'autoStart':                false,
+                'scroll':                   false,
+                'nextButton':               false,
+                'tipAnimation':             'fade',
+                'timer':                    5000,
+                'tipAnimationFadeSpeed':    150,
+                // 'tipContainer':          '.js-main-container',
+                'modal':                    false,
+                'expose':                   false,
+                'template' : { // HTML segments for tip layout
+                    'link'                  : '<div class="close-button-wrap__header-panel joyride-close-tip"><div class="icon-button -center-transform -right js-close-search"><a href="#close" class="icon-close"></a></div></div>',
+                    'timer'                 : '<div class="joyride-timer-indicator-wrap u-mb-"><span class="joyride-timer-indicator"></span></div>',
+                    'tip'                   : '<div class="joyride-tip-guide speech-bubble tour"></div>',
+                    'modal'                 : '<div class="joyride-modal-bg modal__screen -tour"></div>'
+                },
+                postStepCallback: function(index, tip) {
+                    if (index == 3) {
+                        // console.log( tip );
+                        // console.log( $(this) );
+                        $( ".scrollable-content" ).scrollTop($(".scrollable-content")[0].scrollHeight);
+                    }
+                }
+            });
+
+            // $( ".js-main-nav__link" ).off();
+
+            // $( ".js-main-nav__link" ).on( "click", function( e ){
+            //     $('#tour__content').joyride('restart');
+            // });
+        });
+
     }
 
 

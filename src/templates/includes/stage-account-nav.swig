@@ -1,6 +1,6 @@
 <nav class="stage-nav -account">
 	<ul class="stage-nav__list">
-		<li class="stage-nav__item -now">
+		<li class="stage-nav__item -now step-five">
 			<div class="stage-nav__icon-wrap js-now" data-demo-only-is-timeline-page="{% if bln_timeline_page %}true{% else %}false{% endif %}">
 				<div class="stage-nav__now-text-wrap">
 					<div class="stage-nav__now-text">Now</div>
