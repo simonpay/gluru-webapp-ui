@@ -1,8 +1,10 @@
-{% set obj_stage_data = obj.sections[0].stage_data %}
+{% set index = settings_index__profile %}
+
+{% set obj_stage_data = obj.sections[index].stage_data %}
 {% include "stage-start.swig" %}
 {% include "panel-header-stage.swig" %}
 
-{% set obj_setup_data = obj.sections[0] %}
+{% set obj_setup_data = obj.sections[index] %}
 {% include "stage__settings--start.swig" %}
 
     <section class="u-cf">

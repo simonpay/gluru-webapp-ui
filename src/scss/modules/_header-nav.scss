@@ -76,12 +76,16 @@
                             @include use-sprite("icon-sml__coffee--pink");
                         }
 
+                        &.-profile {
+                            @include use-sprite("icon-sml__person--pink");
+                        }
+
                         &.-sources {
                             @include use-sprite("icon-sml__sources--pink");
                         }
 
-                        &.-profile {
-                            @include use-sprite("icon-sml__person--pink");
+                        &.-autopush {
+                            @include use-sprite("icon-sml__autopush--pink");
                         }
 
                         &.-teams {
@@ -96,8 +100,12 @@
                             @include use-sprite("icon-sml__security--pink");
                         }
 
-                        &.-autopush {
-                            @include use-sprite("icon-sml__autopush--pink");
+                        &.-billing {
+                            @include use-sprite("icon-sml__billing--pink");
+                        }
+
+                        &.-support {
+                            @include use-sprite("icon-sml__support--pink");
                         }
                     }
                 }
@@ -125,13 +133,18 @@
                         // margin-right: $margin-right + 1px;
                     }
 
+                    &.-profile {
+                        @include use-sprite("icon-sml__person");
+                    }
+
                     &.-sources {
                         @include use-sprite("icon-sml__sources");
                         margin-top: $margin-top - 2px;
                     }
-
-                    &.-profile {
-                        @include use-sprite("icon-sml__person");
+                    
+                    &.-autopush {
+                        @include use-sprite("icon-sml__autopush");
+                        margin-right: $margin-right + 2px;
                     }
 
                     &.-teams {
@@ -146,9 +159,15 @@
                     &.-security {
                         @include use-sprite("icon-sml__security");
                     }
-                    
-                    &.-autopush {
-                        @include use-sprite("icon-sml__autopush");
+
+                    &.-billing {
+                        @include use-sprite("icon-sml__billing");
+                        margin-right: $margin-right + 2px;
+                    }
+
+                    &.-support {
+                        @include use-sprite("icon-sml__support");
+                        margin-right: $margin-right - 1px;
                     }
                     
                     // numbers for process style nav - e.g. setup process

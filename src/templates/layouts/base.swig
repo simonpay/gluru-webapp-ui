@@ -18,6 +18,16 @@
 
 <body>
 
+{# settings data array indexes #}
+{% set settings_index__profile = 0 %}
+{% set settings_index__sources = 1 %}
+{% set settings_index__autopush = 2 %}
+{% set settings_index__teams = 3 %}
+{% set settings_index__notifications = 4 %}
+{% set settings_index__security = 5 %}
+{% set settings_index__billing = 6 %}
+{% set settings_index__support = 7 %}
+
 {% include "../includes/status-bar.swig" %}
 <div class="main-container js-main-container">
     {% block content %}{% endblock %}

@@ -1,8 +1,10 @@
-{% set obj_stage_data = obj.sections[4].stage_data %}
+{% set index = settings_index__security %}
+
+{% set obj_stage_data = obj.sections[index].stage_data %}
 {% include "stage-start.swig" %}
 {% include "panel-header-stage.swig" %}
 
-{% set obj_setup_data = obj.sections[4] %}
+{% set obj_setup_data = obj.sections[index] %}
 {% include "stage__settings--start.swig" %}
 
     <h1 class="stage__heading-text u-mb0">Security settings</h1>
