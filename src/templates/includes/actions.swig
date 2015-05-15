@@ -138,5 +138,72 @@
         </div>
 
 
+        <div class="js-demo-only__actions-content-wrap -share" style="display: none">
+            
+
+            <div class="options-list u-mb--">
+                <div class="options-list__heading u-mb-">Select teams to share to</div>
+                <div class="options-list__inner-wrap">
+                    <hr>
+                    <ul class="options-list__list">
+                        <li class="options-list__item u-mb-">
+                                
+                            {% set obj_team = { "text": "All" } %}
+                            {% include "share-team-checkbox-row.swig" %}
+                                
+                        </li>
+                        <hr class="u-mb-">
+
+                        {% for obj_team in mydata.drawer.teams.options %}
+                            <li>
+                                
+                                {% set obj_team = obj_team %}
+                                {% include "share-team-checkbox-row.swig" %}
+                                
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+
+                </div>
+            </div>
+
+
+
+{#             <div class="actions__summary">
+
+                <p>Select teams to share to:</p>
+
+                <ul>
+                    <li>
+                        
+                        {% set obj_team = { "text": "All" } %}
+                        {% include "share-team-checkbox-row.swig" %}
+                        
+                    </li>
+                    {% for obj_team in mydata.drawer.teams.options %}
+                        <li>
+                            
+                            {% set obj_team = obj_team %}
+                            {% include "share-team-checkbox-row.swig" %}
+                            
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+ #}
+            <p class="u-text-center">
+                <a href="#" class="btn -lozenge -small -positive u-mh">
+                    <span class="btn__icon icon-sml__share--white"></span><!--
+                    --><span class="btn__text">Share to Timeline</span>
+                </a>
+            </p>
+
+
+        </div>
+
+
+
     {%> "actions-end" %}
 

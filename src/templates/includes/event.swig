@@ -42,14 +42,18 @@
 		<nav class="event-nav">
 			<ul class="event-nav__list">
 				<li class="event-nav__item">
-					<div class="icon__inspect--white js-event-nav__link"></div>
+					<div class="icon__inspect--white js-event-nav__link" data-action="inspect"></div>
 				</li>
+{# 
 				<li class="event-nav__item">
 					<div class="icon__folder--white js-event-nav__link"></div>
 				</li>
+ #}
+				{% if obj_event.priority !== "daily-digest" %}
 				<li class="event-nav__item">
-					<div class="icon__share--white js-event-nav__link"></div>
+					<div class="icon__share--white js-event-nav__link" data-action="share"></div>
 				</li>
+				{% endif %}
 			</ul>
 			<div class="event-nav__more">
 				<div class="dot"></div>

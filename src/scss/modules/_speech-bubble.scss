@@ -20,7 +20,8 @@ $speech-bubble__triangle-inner-border-width:  $speech-bubble__triangle-outer-bor
     &.-setup {
         width: 80%;
         height: auto;
-        margin: -5px auto 40px;
+        // margin: -5px auto 40px;
+        margin: 0 auto 40px;
     }
 
     // &.-annotations {

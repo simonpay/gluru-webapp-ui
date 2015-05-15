@@ -101,6 +101,25 @@
         _obj_gluru: gluru_app,
 
 
+        check_all: function () {
+
+            var $this           = $(this),
+                _is_checked     = $this.is(":checked"),
+                $checkboxes     = $this.closest( ".options-list__list" ).find( ".checkbox_slider" );
+
+            $checkboxes.each(function(){
+
+                // console.log( _is_checked );
+
+                $(this)
+                    .prop( "checked", _is_checked)
+                    .button( "refresh" )
+                    ;
+            });
+
+        },
+
+
         collapsable: {
 
             toggle: function () {
@@ -120,6 +139,7 @@
                                     });
             }
         },
+
 
         status_bar: {
 
@@ -173,6 +193,7 @@
             }
         },
 
+
         settings: {
 
             _manage_team: function ( e ) {
@@ -196,6 +217,7 @@
 
             }
         },
+
 
         annotations: {
 
@@ -502,15 +524,42 @@
                 _show: function ( actions_type ) {
 
                     // console.log( actions_type );
+                    
+                    var $target_actions_content_wrap = $( ".js-demo-only__actions-content-wrap" + ".-" + actions_type );
 
                     // hide all actions content wrap blocks
                     $( ".js-demo-only__actions-content-wrap" ).hide();
 
                     // show specific actions content based on "actions_type" argument passed to func
-                    $( ".js-demo-only__actions-content-wrap" + ".-" + actions_type ).show();
+                    $target_actions_content_wrap.show();
 
                     // show actions panel contents
                     $actions.removeClass( "is-hidden" );
+
+                    // init checkbox sliders for 
+                    // share content in actions
+                    if ( actions_type === "share") {
+
+                        $target_actions_content_wrap
+                            .find( ".checkbox_slider" )
+                            .each(function(){
+                                var $this               = $(this),
+                                    $label              = $this.closest( ".media" ).find( "label" ).last();
+                                    label_for_value     = $label.data( "for" );
+
+                                // console.log( $this );
+                                // console.log( label_for_value );
+
+                                // init jquery button
+                                $this.button();
+
+                                // set label 'for' to link to checbox 
+                                // this is done after the init otherwise 
+                                // jquery-ui will convert the label into 
+                                // a button as well
+                                $label.attr( "for", label_for_value );
+                            });
+                    }
                 }
             }
         },
@@ -634,6 +683,7 @@
 
                     // cache event nav menu item clicked
                     var $this           = $(this),
+                        _action         = $this.data( "action" ),
                         $pbox_event     = $this.closest( ".js-event" ),  
                         _priority       = $pbox_event.data( "priority" ),
                         _priority_class = "-" + _priority,
@@ -674,11 +724,22 @@
                         // actions header
                         // call function to show 'current-file' 'priority-box'
                         var header_type;
-                        if ( _priority === "now" ) {
-                            header_type = _priority + "-" + _now_type;
+                        if ( _action === "share" ) {
+
+                            header_type = _action;
+
                         } else {
-                            header_type = "footprint";
+
+                            if ( _priority === "now" ) {
+
+                                header_type = _priority + "-" + _now_type;
+
+                            } else {
+
+                                header_type = "footprint";
+                            }
                         }
+
                         // console.log( "_priority = " + _priority );
                         // console.log( "header_type = " + header_type );
                         obj_gluru.actions.current_file._show( header_type );
@@ -691,11 +752,22 @@
                         // -now-non-calendar
                         // -footprint
                         var actions_type;
-                        if ( _priority === "now" ) {
-                            actions_type = _priority + "-" + _now_type;
+                        if ( _action === "share" ) {
+
+                            actions_type = _action;
+
                         } else {
-                            actions_type = "footprint";
+                            
+                            if ( _priority === "now" ) {
+
+                                actions_type = _priority + "-" + _now_type;
+
+                            } else {
+
+                                actions_type = "footprint";
+                            }
                         }
+
                         // console.log( "_priority = " + _priority );
                         // console.log( "actions_type = " + actions_type );
                         obj_gluru.actions.actions_content._show( actions_type );
@@ -1266,9 +1338,15 @@
         // by simulating a click on the toggle button
         $( ".-actions.js-toggle-actions" ).click();
     });
+
     // toggle drawer
     $toggle_actions.on( "click", function(){
         obj_gluru.actions.set_state.call( $(this) );
+    });
+
+    // check all
+    $( ".js-demo-only__actions-content-wrap.-share .js-check-all" ).on( "click", function(){
+        obj_gluru.check_all.call( $(this) );
     });
 
 

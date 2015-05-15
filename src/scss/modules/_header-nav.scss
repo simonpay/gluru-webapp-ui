@@ -23,13 +23,20 @@
         .header-nav__item { // li
             display: inline-block;
             height: inherit;
+            
+            // set custom padding for first item in 
+            // header-nav to match padding on other 
+            // headers and stage
+            &:first-child .header-nav__link {
+                padding-left: $panel-header-padding-left - 3px;
+            }
         }
 
             .header-nav__link { // a
                 display: block;
                 position: relative;
                 height: inherit;
-                padding: 0 20px;
+                padding: 0 15px;
                 // todo: look into why underline is applied to this 
                 // link in angular despite the setting below
                 // for now, added !imprtant which clears the underline

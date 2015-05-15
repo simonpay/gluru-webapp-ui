@@ -5,14 +5,14 @@
 
 	{% if moments_section === "timeline" %}
 
-		<div class="panel-header panel-header--timeline">
+		<div class="panel-header -timeline">
 			<div class="media -v-center">
 			    <div class="media__img pop-menu-trigger js-pmt js-tt" 
 			    	data-tt="Change Source"
 			    	data-tt-pos="above"
 			    	data-pop-menu="timeline-source"
 			    	>
-			    	<div class="icon__gdrive"></div>
+			    	<div class="icon-sml__gdrive"></div>
 			    </div>
 			    <div class="media__body u-inherit-height">
 					

@@ -6,7 +6,7 @@
 
 {# section signup #}
     
-    <header class="panel-header panel-header--absolute">
+    <header class="panel-header -absolute">
         <nav class="header-nav -setup">
             <ul class="header-nav__list">
                 

@@ -4,20 +4,30 @@
 
 // congigurable button class
 
+$btn__line-height: 				34px;
+$btn__line-height--small: 		22px;
+$btn__line-height--large: 		34px;
+
+$btn__font-size: 				16;
+$btn__font-size--small: 		14;
+$btn__font-size--large: 		18;
+
 .btn {
 	display: inline-block;
 	position: relative;
 	vertical-align: middle;
 	overflow: visible;
 	margin-right: 15px;
-	padding: 12px 35px;
+	// padding: 12px 35px;
+	padding: 3px 26px;
 	background-color: $dusty-gray;
 	border: 2px solid $dusty-gray;
 	cursor: pointer;
 	text-align: center;
 	color: $white;
 	text-decoration: none;
-	font-size: rem(20);
+	font-size: rem($btn__font-size);
+	line-height: $btn__line-height;
 	@include transition( color .15s, background-color .15s, border-color .15s );
 
     @include set-text-decoration(none);
@@ -29,7 +39,22 @@
 	&.is-hidden {
 		display: none;
 	}
-	
+
+	&.-small {
+		// padding: 7px 16px;
+		padding: 3px 20px 4px;
+		font-size: rem($btn__font-size--small);
+		line-height: $btn__line-height--small;
+	}
+
+	&.-large {
+		border-width: 3px;
+		// padding: 12px 38px;
+		padding: 8px 32px;
+		font-size: rem($btn__font-size--large);
+		line-height: $btn__line-height--large;
+	}
+
 	&.-clear {
 		background-color: transparent;
 		border: 0;
@@ -65,7 +90,7 @@
 		background-color: $white;
 		border-color: $dusty-gray;
 		color: $dusty-gray;
-		@extend %color__gray--light;
+		// @extend %color__gray--light;
 
 		&:not(.large):hover {
 			color: $green;
@@ -83,17 +108,6 @@
 			border-color: $green;
 			color: $white !important;
     	}
-	}
-
-	&.-small {
-		padding: 7px 16px;
-		font-size: rem(15);
-	}
-
-	&.-large {
-		border-width: 3px;
-		padding: 12px 38px;
-		font-size: rem(18);
 	}
 
 	&.-icon-right {
@@ -119,11 +133,15 @@
 		vertical-align: middle;
 
 		&:last-child {
-			margin: 0 -8px 0 7px;
+			margin: 0 -4px 0 7px;
 		}
 
 		&:first-child {
-			margin: 0 7px 0 -8px;
+			margin: 0 6px 0 -2px;
+		}
+
+			margin-top: -2px;
+		.btn.-small & {
 		}
 	}
 

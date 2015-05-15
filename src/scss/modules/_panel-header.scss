@@ -64,62 +64,71 @@
         border-top-left-radius: $priority-box__border-radius;
         border-top-right-radius: $priority-box__border-radius;
     }
-}
 
-.panel-header--drawer {
-    // set width to prevent close button moving when actions is closed
-    width: $drawer-width;
-    padding: 0 $panel-header-padding-right--drawer 0 $panel-header-padding-left--drawer;
-
-    &:before {
-        left: 10px;
-        right: 10px;
+    // header for timeline containing recent and future tabs 
+    // .panel-header--moments,
+    // .panel-header--setup {
+    &.-absolute {
+        z-index: $panel-header--moments-z-index;
+        // make panel absolute so it streteches 100% width when 
+        // multiple split-views cause horizontal scrolling
+        position: absolute;
+        left: $stage-left-indent;
+        right: 0;
+        padding-left: 0;
+        // box-shadow: 0px 2px 20px rgba( $black, 0.2 );
     }
-}
 
-.panel-header--actions {
-
-    @include mq(medium) {
+    &.-drawer {
         // set width to prevent close button moving when actions is closed
-        width: $actions-width;
-        padding-left: 20px;
+        width: $drawer-width;
+        padding: 0 $panel-header-padding-right--drawer 0 $panel-header-padding-left--drawer;
 
-        // remove bottom keyline
         &:before {
-            content: none;
+            left: 10px;
+            right: 10px;
         }
     }
-}
 
-.panel-header--location,
-.panel-header--moments,
-.panel-header--setup {
-    background: $alabaster;
+    &.-actions {
 
-    &:before {
-        height: 2px;
+        @include mq(medium) {
+            // set width to prevent close button moving when actions is closed
+            width: $actions-width;
+            padding-left: 20px;
+
+            // remove bottom keyline
+            &:before {
+                content: none;
+            }
+        }
+    }
+
+    // header for file explorer / timeline showing current source and crumbtrail (location) 
+    &.-location,
+    &.-timeline,
+    {
+        // make padding less to visually align icon with main heading
+        padding-left: $panel-header-padding-left - 3px;
+    }
+
+    &.-location,
+    &.-moments,
+    &.-setup,
+    // &.-timeline,
+    {
+        background: $alabaster;
+
+        // &:before {
+        //     height: 2px;
+        // }
     }
 }
 
-// header for file explorer showing current source and crumbtrail (location) 
-.panel-header--location {
-    // make padding less to visually align icon with main heading
-    padding-left: $panel-header-padding-left - 3px;
-}
 
-// header for timeline containing recent and future tabs 
-// .panel-header--moments,
-// .panel-header--setup {
-.panel-header--absolute {
-    z-index: $panel-header--moments-z-index;
-    // make panel absolute so it streteches 100% width when 
-    // multiple timelines cause horizonatl scrolling
-    position: absolute;
-    left: $stage-left-indent;
-    right: 0;
-    padding-left: 0;
-    // box-shadow: 0px 2px 20px rgba( $black, 0.2 );
-}
+
+
+
 
 
 

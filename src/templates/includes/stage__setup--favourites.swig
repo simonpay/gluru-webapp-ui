@@ -59,8 +59,8 @@
                 </a><!--
                 
                 --><a href="#" class="btn -lozenge -positive js-btn-next">
-                    <span class="btn__icon icon__arrow--white"></span><!--
-                    --><span class="btn__text">Next</span>
+                    <span class="btn__text">Next</span><!--
+                    --><span class="btn__icon icon__arrow--white"></span>
                 </a>
 
             </section>

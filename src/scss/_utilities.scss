@@ -55,6 +55,8 @@
 
 
 .u-center-block {
+    // margin-left: auto !important;
+    // margin-right: auto !important;
 	@include scut-center-block;
 }
 

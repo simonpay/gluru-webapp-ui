@@ -26,11 +26,13 @@
             border-bottom: 1px solid $alto;
         }
 
-        &.is-collapsed {
-        }
+        // &.is-collapsed {
+        // }
         
+        // remove margin from first options list
         &:first-child {
-            margin-top: 5px;
+            // margin-top: 5px;
+            margin-top: 0;
         }
 
         &:last-child {

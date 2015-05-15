@@ -58,13 +58,17 @@
             position: relative;
             overflow: hidden;
 
+            &.-setup {
+                padding: 40px 24px;
+            }
+            
             &.-stage {
                 padding: 30px 24px;
             }
             
-            &.-settings {
-                padding: $base-line-height $stage-padding-left;
-            }
+            // &.-settings {
+            //     padding: $base-line-height $stage-padding-left;
+            // }
             
             &.-timeline {
                 padding: 30px 24px;

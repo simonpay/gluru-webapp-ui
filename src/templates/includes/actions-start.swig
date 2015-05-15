@@ -1,6 +1,6 @@
 <div class="actions-wrap is-hidden js-actions-wrap">
 
-	<header class="panel-header panel-header--actions">
+	<header class="panel-header -actions">
 		<div class="actions__heading-wrap">
 			<div class="actions__heading-text">Footprint</div>
 		</div>
@@ -9,6 +9,7 @@
 		</div>
 	</header>
 	
+
 	{# now-calendar #}
 	<div class="priority-box -current-item -now is-hidden js-actions--current-item">
 
@@ -46,6 +47,7 @@
 
 		</div>
 		
+
 		{# now-non-calendar #}
 		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -now-non-calendar" style="display: none">
 
@@ -81,6 +83,7 @@
 
 		</div>
 		
+
 		{# footprint #}
 		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -footprint" style="display: none">
 
@@ -102,6 +105,31 @@
 			</div>
 
 		</div>
+
+
+		{# share #}
+		<div class="[ demo-only -actions-header-current-item__contents-wrap ] js-demo-only__actions-header-current-item__contents-wrap -share" style="display: none">
+
+			<div class="media -v-center">
+			    <div class="media__img">
+
+					<div class="disc-img -current-item">
+						<div class="disc-img__img-wrap">
+							<div class="icon__share u-center-transform"></div>
+						</div>
+					</div>
+
+			    </div>
+			    <div class="media__body">
+
+					<div class="priority-box__text"><strong>Sharing</strong></div>
+					<div class="priority-box__text">cost-forefast.doc</div>
+
+			    </div>
+			</div>
+
+		</div>
+		
 
 		<div class="close-button-wrap__header-panel">
 			<div class="icon-button -center-transform -right -reverse js-close-actions">

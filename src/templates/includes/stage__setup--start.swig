@@ -1,5 +1,5 @@
 {% if !bln_login_page %}
-<div class="panel-header panel-header--absolute">
+<div class="panel-header -absolute">
 	<nav class="header-nav -setup">
 		<ul class="header-nav__list">
 			
@@ -33,8 +33,9 @@
 
 <div class="scrollable-content__wrap{% if !bln_login_page %} -setup{% endif %}">
 	<div class="scrollable-content">
-		<div class="scrollable-content__inner-wrap -stage">
+		<div class="scrollable-content__inner-wrap -setup">
 
+			{% if !bln_remove_sidebar %}
 			<aside class="stage__sidebar">
 				
 				<div class="speech-bubble -setup -above">
@@ -51,4 +52,5 @@
 				<div class="sprite__gluru-bot u-center-block"></div>
 
 			</aside>
+			{% endif %}
 			<div class="stage__content">

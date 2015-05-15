@@ -203,7 +203,7 @@ p {
 
 .options-list__heading {
     @extend %text-transform__uppercase;
-    @extend %font-size__16;
+    @extend %font-size__15;
     @extend %color__gray--dark;
     margin-bottom: 10px;
 }
@@ -282,8 +282,9 @@ p {
 // containing buttons for timeline recent / future and
 // setup progress 
 .header-nav__text {
-    @extend %font-size__16;
+    @extend %font-size__14;
     @extend %color__gray--dark;
+    // @extend %font-weight__lighter;
     @extend %text-transform__uppercase;
     @include transition( color 0.3s );
 
@@ -476,11 +477,11 @@ p {
         border-bottom: 0;
     }
 
-    .panel-header--location &,
-    .panel-header--timeline &,
+    .panel-header.-location &,
+    .panel-header.-timeline &,
     {
         @extend %nowrap;
-        @extend %font-size__18;
+        @extend %font-size__16;
         @extend %font-weight__lighter;
         @extend %color__gray--xdark;
 

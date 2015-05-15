@@ -6,16 +6,41 @@
 // of header - holds the avatar, now & notificatons buttons 
 // the icons themselves are in icon-button.scss
 
+// .stage-nav { // nav
+//     position: absolute;
+//     bottom: 20px;
+//     right: $stage-padding-right - 5px;
+
+//     &.-account {
+//         top: 15px;
+//         bottom: auto;
+//     }
+// }
+
 .stage-nav { // nav
-    position: absolute;
-    bottom: 20px;
-    right: $stage-padding-right - 5px;
+    // position: absolute;
+    position: relative;
+    top: 16px;
+    float: right;
+    right: 10px;
+
+    background: rgba($wild-sand, .5);
+    // background: $alabaster;
+    border: 1px solid rgba($alto, .5);
+    // border: 1px solid $wild-sand;
+    border-radius: 200px;
+    padding: 10px 5px;
 
     &.-account {
-        top: 15px;
-        bottom: auto;
+        right: 0;
+        // top: 15px;
+        // bottom: auto;
     }
 }
+.stage__hd-wrap {
+    margin-top: 24px;
+}
+
 
     .stage-nav__list { // ul
         font-size: 0;

@@ -3,6 +3,7 @@
 {% include "panel-header-stage.swig" %}
 
 {% set obj_setup_data = obj.sections[0] %}
+{% set bln_remove_sidebar = true %}
 {% include "stage__setup--start.swig" %}
 
     <h1 class="stage__heading-text u-mb0">Log in to Gluru</h1>
@@ -55,14 +56,14 @@
             <p class="u-mb+">
                 <a href="#" class="btn -lozenge -white -col-grey -large js-sign-in js-modal-trigger" data-modal-content="setting-up-account">
                     <span class="btn__icon icon-lrg__googleplus"></span><!--
-                    --><span class="btn__text -divider">Sign up with Google</span>
+                    --><span class="btn__text -divider">Log in with Google</span>
                 </a>
             </p>
 
             <hr class="u-mb-">
 
             <p>
-                <a href="login.html" class="btn -clear -padh0 -padh0">
+                <a href="#" class="btn -clear -padh0 -padh0">
                     <span class="btn__text -c-gray -fw-light">Don't have an account yet?</span> Create a Gluru account
                 </a>
             </p>

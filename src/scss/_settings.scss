@@ -151,8 +151,10 @@ $event-style-header-box-shadow:             -2px 5px 10px rgba(0, 0, 0, 0.3);
 // -----------------------------------
 // PANEL-HEADER
 // -----------------------------------
-$panel-header-height:                       58px;
-$panel-header-stage-height:                 117px;
+// $panel-header-height:                       58px;
+$panel-header-height:                       50px;
+// $panel-header-stage-height:                 117px;
+$panel-header-stage-height:                 110px;
 $panel-header-padding-left:                 $stage-padding-left;
 $panel-header-padding-right:                $stage-padding-right;
 $panel-header-padding-left--drawer:         18px;

@@ -19,7 +19,7 @@
                     <div class="media__img -right">
 
                         <p>
-                            <a href="#" class="btn -lozenge -white -small u-ml-">Sign Out</a>
+                            <a href="#" class="btn -lozenge -white u-ml-">Sign Out</a>
                         </p>
 
                     </div>
@@ -54,7 +54,7 @@
                     <div class="media__img -right">
 
                         <p>
-                            <a href="#" class="btn -lozenge -positive -small u-ml- js-modal-trigger js-upgrade" data-modal-content="settings-upgrade">Upgrade</a>
+                            <a href="#" class="btn -lozenge -positive u-ml- js-modal-trigger js-upgrade" data-modal-content="settings-upgrade">Upgrade</a>
                         </p>
 
                     </div>
@@ -74,7 +74,7 @@
                     <div class="media__img -right">
 
                         <p>
-                            <a href="#" class="btn -lozenge -white -small u-ml- js-modal-trigger js-upgrade" data-modal-content="settings-deactivate" data-modal-size="large">Deactivate</a>
+                            <a href="#" class="btn -lozenge -white u-ml- js-modal-trigger js-upgrade" data-modal-content="settings-deactivate" data-modal-size="large">Deactivate</a>
                         </p>
 
                     </div>

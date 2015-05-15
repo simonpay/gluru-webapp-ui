@@ -1,4 +1,4 @@
-<header class="panel-header panel-header--location">
+<header class="panel-header -location">
 	<div class="media -v-center">
 	    <div class="media__img pop-menu-trigger js-pmt js-tt" 
 	    	data-tt="Change Source"

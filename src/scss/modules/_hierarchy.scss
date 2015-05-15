@@ -4,28 +4,39 @@
 
 // list of locations in actions panel footprint 
 
-.hierarchy__item { // ul
-    margin-top: -4px;
-    @extend %line-height__150percent;
+.hierarchy__list {
+    margin: 0;
+    white-space: nowrap;
 
-    .panel-header--location & {
+    .actions & {
+        white-space: normal;
+    }
+}
+
+.hierarchy__item { // ul
+    // margin-top: -4px;
+    // @extend %line-height__150percent;
+
+    .panel-header.-location & {
         margin-top: 0;
     }
 }
 
     .hierarchy__item { // li
-        float: left;
+        display: inline-block;
+        // float: left;
         position: relative;
-        padding: 0 25px 0 0;
+        padding: 0 19px 0 0;
 
         &:after {
             content: "";
-            @include use-sprite("icon-sml__chevron");
+            @include use-sprite("icon-xsml__chevron");
             position: absolute;
-            top: 2px;
-            right: 3px;
+            top: 3px;
+            right: 2px;
+            opacity: 0.5;
 
-            .panel-header--location & {
+            .panel-header.-location & {
                 top: 4px;
             }
         }

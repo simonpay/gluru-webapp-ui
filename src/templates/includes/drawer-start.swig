@@ -1,5 +1,5 @@
 <div class="drawer-wrap is-hidden js-drawer-wrap">
-	<header class="panel-header panel-header--drawer">
+	<header class="panel-header -drawer">
 		<div class="drawer__heading-wrap">
 			<div class="drawer__heading-text">{{ heading }}</div>
 		</div>

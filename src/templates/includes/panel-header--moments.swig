@@ -1,4 +1,4 @@
-<div class="panel-header panel-header--absolute">
+<div class="panel-header -absolute -moments">
     <nav class="header-nav">
         <ul class="header-nav__list js-annotation_zone">
             <li class="header-nav__item step-four">

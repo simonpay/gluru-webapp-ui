@@ -22,9 +22,7 @@
             </div>
 
             <p>
-                <a href="#" class="btn -lozenge -white -small js-btn-add-team">
-                    CREATE TEAM
-                </a>
+                <a href="#" class="btn -lozenge -small -white js-btn-add-team">CREATE TEAM</a>
             </p>
 
             <div class="med-11">
@@ -213,8 +211,8 @@
 
             <p>
                 <a href="moments-daily-digest-first-run.html" class="btn -lozenge -positive">
-                    <span class="btn__icon icon__arrow--white"></span><!--
-                    --><span class="btn__text">Finish</span>
+                    <span class="btn__text">Finish</span><!--
+                    --><span class="btn__icon icon__arrow--white"></span>
                 </a>
             </p>
 
