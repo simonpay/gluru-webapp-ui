@@ -121,6 +121,7 @@
 .icon__delete--white {          	@include use-sprite("icon__delete--white"); }
 .icon__inspect--white {         	@include use-sprite("icon__inspect--white"); }
 
+.icon-sml__share--white {          	@include use-sprite("icon-sml__share--white"); }
 
 //  stage nav icons (top right)
 // ------------------------------------
@@ -140,10 +141,14 @@
 .icon__notifications--white {   	@include use-sprite("icon__notifications--white"); }
 
 .icon__arrow--white {           	@include use-sprite("icon__arrow--white"); }
+.icon-sml__arrow--white {           @include use-sprite("icon-sml__arrow--white"); }
+
+.icon__tick--green {               	@include use-sprite("icon__tick--green"); }
 
 .icon-sml__tick {               	@include use-sprite("icon-sml__tick"); }
 .icon-sml__tick--white {        	@include use-sprite("icon-sml__tick--white"); }
 .icon-sml__chevron { 		    	@include use-sprite("icon-sml__chevron"); }
+.icon-xsml__chevron { 		    	@include use-sprite("icon-xsml__chevron"); }
 
 .icon__sources--white { 			@include use-sprite("icon__sources--white"); }
 .icon__sources--green { 			@include use-sprite("icon__sources--green"); }
