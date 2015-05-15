@@ -34,6 +34,7 @@
         $toggle_actions                     = $( ".js-toggle-actions" ),
         $close_actions                      = $( ".js-close-actions" ),
         $actions_current_file               = $( ".js-actions--current-item" ),
+        $share_to_timeline                  = $( ".js-share-to-timeline" ),
 
         // search     
         $search                             = $( ".js-search" ),
@@ -541,6 +542,7 @@
                     if ( actions_type === "share") {
 
                         $target_actions_content_wrap
+                            .data( "target-event", $(this) )
                             .find( ".checkbox_slider" )
                             .each(function(){
                                 var $this               = $(this),
@@ -770,7 +772,7 @@
 
                         // console.log( "_priority = " + _priority );
                         // console.log( "actions_type = " + actions_type );
-                        obj_gluru.actions.actions_content._show( actions_type );
+                        obj_gluru.actions.actions_content._show.call( $this, actions_type );
 
                     }
 
@@ -888,6 +890,22 @@
 
                     $this
                         .addClass( "is-selected" );
+                },
+
+                share: function () {
+                    var $this           = $(this),
+                        $target_event   = $this.closest( ".js-demo-only__actions-content-wrap" ).data( "target-event" ).closest( ".js-event-wrap" ),
+                        $timeline       = $target_event.closest( ".timeline" ),
+                        $event_heading  = $timeline.find( ".event-group-heading" ).first();
+
+                    // console.log( $event_heading );
+
+                    $target_event
+                        .clone()
+                            .removeClass( "is-selected" )
+                                .insertAfter( $event_heading )
+                                ;
+
                 }
             }
         },
@@ -1347,6 +1365,11 @@
     // check all
     $( ".js-demo-only__actions-content-wrap.-share .js-check-all" ).on( "click", function(){
         obj_gluru.check_all.call( $(this) );
+    });
+
+    // share
+    $share_to_timeline.on( "click", function(){
+        obj_gluru.moments.timeline.share.call( $(this) );
     });
 
 

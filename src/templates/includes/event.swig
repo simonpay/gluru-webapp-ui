@@ -49,7 +49,7 @@
 					<div class="icon__folder--white js-event-nav__link"></div>
 				</li>
  #}
-				{% if obj_event.priority !== "daily-digest" %}
+				{% if obj_event.priority !== "daily-digest" && obj_event.priority !== "now" %}
 				<li class="event-nav__item">
 					<div class="icon__share--white js-event-nav__link" data-action="share"></div>
 				</li>

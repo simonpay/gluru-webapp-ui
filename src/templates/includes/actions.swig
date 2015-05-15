@@ -194,7 +194,7 @@
             </div>
  #}
             <p class="u-text-center">
-                <a href="#" class="btn -lozenge -small -positive u-mh">
+                <a href="#" class="btn -lozenge -small -positive u-mh js-share-to-timeline">
                     <span class="btn__icon icon-sml__share--white"></span><!--
                     --><span class="btn__text">Share to Timeline</span>
                 </a>
