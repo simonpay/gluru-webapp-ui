@@ -1,8 +1,8 @@
-# Gluru Web App
+# Gluru Web App (Demo)
 
 
 ### Description
-Static development site for the Gluru Web App.
+Development site for the static Gluru Web App Demo.
 
 ### Requirements
  - [Bower](http://bower.io/)
@@ -79,16 +79,22 @@ Watch for changes in SCSS, js, image and font directories, and any templates. On
 #### grunt docco
 Build HTML documentation for javascript files. See [Docco documentation](http://jashkenas.github.io/docco/) for more information.
 
+#### grunt email
+Automates the inlining of css into html emails. HTML email tenapltes are stored in /src/email/ and use Zurb's Ink platform. New html emails must be added to the grunt file manually (requires automating).
+[Responsive Email Framework](http://zurb.com/ink/)
+[A workflow for responsive emails using Ink and Grunt](https://medium.com/@victorgarcia/a-workflow-for-responsive-emails-using-ink-and-grunt-32d607879082)
+
+
 
 ## CSS Style Guide
 Where possible, all CSS is based on the style guide written by Harry Roberts:
 [CSS style guide](http://cssguidelin.es/)
 
-Naming convention is based on BEM methodology with a variation described here: [http://webuild.envato.com/blog/chainable-bem-modifiers/](http://webuild.envato.com/blog/chainable-bem-modifiers/) and here: [http://webuild.envato.com/blog/chainable-bem-modifiers/](http://viget.com/extend/bem-sass-modifiers).
+Naming convention is based on BEM methodology with a influences from these articles: [http://webuild.envato.com/blog/chainable-bem-modifiers/](http://webuild.envato.com/blog/chainable-bem-modifiers/) and [http://viget.com/extend/bem-sass-modifiers](http://viget.com/extend/bem-sass-modifiers). 
 
-The methodology could be described as BEVM:
+The methodology usually follows this pattern:
 
-	block__element--variation -modifier, plus internal SASS %modifier selectors.
+	block__element -modifier
 
 Any class prefixed with a "-" is scoped to the parent. E.g. 
 
