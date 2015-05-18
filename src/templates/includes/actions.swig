@@ -141,7 +141,7 @@
         <div class="js-demo-only__actions-content-wrap -share" style="display: none">
             
 
-            <div class="options-list u-mb--">
+            <div class="options-list u-mb+">
                 <div class="options-list__heading u-mb-">Select teams to share to</div>
                 <div class="options-list__inner-wrap">
                     <hr>
@@ -169,34 +169,9 @@
             </div>
 
 
+            <div class="u-text-center">
 
-{#             <div class="actions__summary">
-
-                <p>Select teams to share to:</p>
-
-                <ul>
-                    <li>
-                        
-                        {% set obj_team = { "text": "All" } %}
-                        {% include "share-team-checkbox-row.swig" %}
-                        
-                    </li>
-                    {% for obj_team in mydata.drawer.teams.options %}
-                        <li>
-                            
-                            {% set obj_team = obj_team %}
-                            {% include "share-team-checkbox-row.swig" %}
-                            
-                        </li>
-                    {% endfor %}
-                </ul>
-
-            </div>
- #}
-            <p class="u-text-center">
-            </p>
-
-                <a href="#" class="btn -lozenge -small -positive u-mh js-share-to-timeline">
+                <a href="#" class="btn -lozenge -small -positive js-share-to-timeline u-text-center">
                     <span class="btn__icon icon-sml__share--white">
                         <div class="loader__container -white -pad-sml -width-five -fill-parent is-hidden">
                             {% include "loader.swig" %}
@@ -205,6 +180,7 @@
                     --><span class="btn__text">Share to Timeline</span>
                 </a>
 
+            </div>
 
         </div>
 
