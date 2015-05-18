@@ -173,7 +173,7 @@
 
                 <a href="#" class="btn -lozenge -small -positive js-share-to-timeline u-text-center">
                     <span class="btn__icon icon-sml__share--white">
-                        <div class="loader__container -white -pad-sml -width-five -fill-parent is-hidden">
+                        <div class="loader__container -white -pad-sml -width-three -fill-parent is-hidden">
                             {% include "loader.swig" %}
                         </div>
                     </span><!--
