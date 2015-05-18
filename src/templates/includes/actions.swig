@@ -194,11 +194,16 @@
             </div>
  #}
             <p class="u-text-center">
+            </p>
+
                 <a href="#" class="btn -lozenge -small -positive u-mh js-share-to-timeline">
-                    <span class="btn__icon icon-sml__share--white"></span><!--
+                    <span class="btn__icon icon-sml__share--white">
+                        <div class="loader__container -white -pad-sml -width-five -fill-parent is-hidden">
+                            {% include "loader.swig" %}
+                        </div>
+                    </span><!--
                     --><span class="btn__text">Share to Timeline</span>
                 </a>
-            </p>
 
 
         </div>

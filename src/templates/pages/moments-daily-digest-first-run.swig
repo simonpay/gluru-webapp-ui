@@ -57,7 +57,7 @@
 
 	<li data-class="step-zero" class="-right -top-right" data-options="tipLocation:right">
 		<p class="speech-bubble__text -heading">Home Button</p>
-        <p class="speech-bubble__text">Take's you home...</p>
+        <p class="speech-bubble__text">Takes you home...</p>
 
 	    {% include "src/templates/includes/tour__button.swig" %}
 	</li>

@@ -900,11 +900,26 @@
 
                     // console.log( $event_heading );
 
-                    $target_event
-                        .clone()
-                            .removeClass( "is-selected" )
-                                .insertAfter( $event_heading )
+                    $this
+                        .addClass( "is-waiting" )
+                            .find( ".loader__container" )
+                            .removeClass( "is-hidden" )
+                            ;
+
+                    setTimeout(function(){
+
+                        $target_event
+                            .clone()
+                                .removeClass( "is-selected" )
+                                    .insertAfter( $event_heading )
+                                    ;
+                        $this
+                            .removeClass( "is-waiting" )
+                                .find( ".loader__container" )
+                                .addClass( "is-hidden" )
                                 ;
+                    }, 1000);
+
 
                 }
             }

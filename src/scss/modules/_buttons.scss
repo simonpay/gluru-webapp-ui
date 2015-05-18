@@ -4,196 +4,209 @@
 
 // congigurable button class
 
-$btn__line-height: 				34px;
-$btn__line-height--small: 		22px;
-$btn__line-height--large: 		34px;
+$btn__line-height:              34px;
+$btn__line-height--small:       22px;
+$btn__line-height--large:       34px;
 
-$btn__font-size: 				16;
-$btn__font-size--small: 		14;
-$btn__font-size--large: 		18;
+$btn__font-size:                16;
+$btn__font-size--small:         14;
+$btn__font-size--large:         18;
+
+$btn__padding:                  3px 26px 4px;
+$btn__padding--small:           4px 20px 5px;
+$btn__padding--large:           8px 32px 9px;
+
 
 .btn {
-	display: inline-block;
-	position: relative;
-	vertical-align: middle;
-	overflow: visible;
-	margin-right: 15px;
-	// padding: 12px 35px;
-	padding: 3px 26px;
-	background-color: $dusty-gray;
-	border: 2px solid $dusty-gray;
-	cursor: pointer;
-	text-align: center;
-	color: $white;
-	text-decoration: none;
-	font-size: rem($btn__font-size);
-	line-height: $btn__line-height;
-	@include transition( color .15s, background-color .15s, border-color .15s );
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    overflow: visible;
+    margin-right: 15px;
+    // padding: 12px 35px;
+    padding: $btn__padding;
+    background-color: $dusty-gray;
+    border: 2px solid $dusty-gray;
+    cursor: pointer;
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+    font-size: rem($btn__font-size);
+    line-height: $btn__line-height;
+    @include transition( color .15s, background-color .15s, border-color .15s );
 
     @include set-text-decoration(none);
 
-	&:last-child {
-		margin-right: 0;
-	}
+    &:last-child {
+        margin-right: 0;
+    }
 
-	&.is-hidden {
-		display: none;
-	}
+    &.is-hidden {
+        display: none;
+    }
 
-	&.-small {
-		// padding: 7px 16px;
-		padding: 3px 20px 4px;
-		font-size: rem($btn__font-size--small);
-		line-height: $btn__line-height--small;
-	}
+    &.-small {
+        // padding: 7px 16px;
+        padding: $btn__padding--small;
+        font-size: rem($btn__font-size--small);
+        line-height: $btn__line-height--small;
+    }
 
-	&.-large {
-		border-width: 3px;
-		// padding: 12px 38px;
-		padding: 8px 32px;
-		font-size: rem($btn__font-size--large);
-		line-height: $btn__line-height--large;
-	}
+    &.-large {
+        border-width: 3px;
+        // padding: 12px 38px;
+        padding: $btn__padding--large;
+        font-size: rem($btn__font-size--large);
+        line-height: $btn__line-height--large;
+    }
 
-	&.-clear {
-		background-color: transparent;
-		border: 0;
-		color: $green;
-		font-size: rem(16);
-		font-weight: bold;
-	}
+    &.-clear {
+        background-color: transparent;
+        border: 0;
+        color: $green;
+        font-size: rem(16);
+        font-weight: bold;
+    }
 
-	&.-lozenge {
-		border-radius: 100px;
-	}
+    &.-lozenge {
+        border-radius: 100px;
+    }
 
-	&.-disc {
-		border-radius: 100%;
+    &.-disc {
+        border-radius: 100%;
 
-		&.-full {
-			height: 100%;
-		}
-	}
+        &.-full {
+            height: 100%;
+        }
+    }
 
-	&.-positive {
-		background-color: $green;
-		border-color: $green;
-	}
+    &.-positive {
+        background-color: $green;
+        border-color: $green;
+    }
 
-	&.-light {
-		background-color: $wild-sand;
-		border-width: 1px;
-		border-color: $alto;
-	}
+    &.-light {
+        background-color: $wild-sand;
+        border-width: 1px;
+        border-color: $alto;
+    }
 
-	&.-white {
-		background-color: $white;
-		border-color: $dusty-gray;
-		color: $dusty-gray;
-		// @extend %color__gray--light;
+    &.-white {
+        background-color: $white;
+        border-color: $dusty-gray;
+        color: $dusty-gray;
+        // @extend %color__gray--light;
 
-		&:not(.large):hover {
-			color: $green;
-			// color: $white;
-			// background-color: $green;
-			// border-color: $green;
-		}
+        &:not(.large):hover {
+            color: $green;
+            // color: $white;
+            // background-color: $green;
+            // border-color: $green;
+        }
 
-		&.-col-grey {
-			color: $dusty-gray;
-		}
+        &.-col-grey {
+            color: $dusty-gray;
+        }
 
-    	&.is-selected {
-			background-color: $green;
-			border-color: $green;
-			color: $white !important;
-    	}
-	}
+        &.is-selected {
+            background-color: $green;
+            border-color: $green;
+            color: $white !important;
+        }
+    }
 
-	&.-icon-right {
-		text-align: right;
-		padding-left: 35px;
-		padding-right: 70px;
-		padding-bottom: 2px;
-	}
+    &.-icon-right {
+        text-align: right;
+        padding-left: 35px;
+        padding-right: 70px;
+        padding-bottom: 2px;
+    }
 
-	&.-full {
-		width: 100%;
-	}
+    &.-full {
+        width: 100%;
+    }
 
-	&.-padh0 {
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
+    &.-padh0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    &.is-waiting {
+        .btn__text {
+            opacity: .5 !important;
+        }
+        .btn__icon {
+            background-image: none !important;
+        }
+    }
 }
 
-	.btn__icon {
-		position: relative;
-		display: inline-block;
-		vertical-align: middle;
+    .btn__icon {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
 
-		&:last-child {
-			margin: 0 -4px 0 7px;
-		}
+        &:last-child {
+            margin: -2px -4px 0 7px;
+        }
 
-		&:first-child {
-			margin: 0 6px 0 -2px;
-		}
+        &:first-child {
+            margin: -2px 6px 0 -2px;
+        }
 
-			margin-top: -2px;
-		.btn.-small & {
-		}
-	}
+        // .btn.-small & {
+        // }
+    }
 
-	.btn__text {
-		position: relative;
+    .btn__text {
+        position: relative;
 
-		&.-divider {
-			margin-left: 25px;
+        &.-divider {
+            margin-left: 25px;
 
-			&:before {
-				content: "";
-				position: absolute;
-				top: -11px;
-				bottom: -14px;
-				left: -17px;
-				display: inline-block;
-				width: 1px;
-				background: #999;
-				vertical-align: middle;
-			}
-		}
+            &:before {
+                content: "";
+                position: absolute;
+                top: -11px;
+                bottom: -14px;
+                left: -17px;
+                display: inline-block;
+                width: 1px;
+                background: #999;
+                vertical-align: middle;
+            }
+        }
 
-		&.-c-gray {
-			color: $dusty-gray;
-		}
+        &.-c-gray {
+            color: $dusty-gray;
+        }
 
-		&.-c-dark {
-			color: $tundora;
-		}
+        &.-c-dark {
+            color: $tundora;
+        }
 
-		&.-fw-light {
-			font-weight: lighter;
-		}
+        &.-fw-light {
+            font-weight: lighter;
+        }
 
-		&.-fw-bold {
-			font-weight: bold;
-		}
+        &.-fw-bold {
+            font-weight: bold;
+        }
 
-		&.-below {
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			white-space: nowrap;
-			@include transform( translateX(-50%) translateY(50%) );
+        &.-below {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            white-space: nowrap;
+            @include transform( translateX(-50%) translateY(50%) );
 
-			&.-lrg-disc {
-				max-width: 130px;
-				@include nowrap;
-			}
-		}
+            &.-lrg-disc {
+                max-width: 130px;
+                @include nowrap;
+            }
+        }
 
-		&.-size-normal {
-			font-size: rem(16);
-		}
-	}
+        &.-size-normal {
+            font-size: rem(16);
+        }
+    }
