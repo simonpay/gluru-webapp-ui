@@ -132,8 +132,8 @@ $btn__padding--large:           8px 32px 9px;
     }
 
     &.is-waiting {
-        cursor: default;
-        
+        cursor: default; 
+
         .btn__text {
             opacity: .5 !important;
         }
