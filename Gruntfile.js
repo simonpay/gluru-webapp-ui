@@ -128,6 +128,13 @@ module.exports = function(grunt) {
                         src: ['**/*', '!**/icons*/**'],
                         dest: '<%= pkg.dest_paths.images %>'
                     },
+                    // favicon
+                    {
+                        expand: true,
+                        cwd: 'src/',
+                        src: 'favicon.ico',
+                        dest: 'build/'
+                    },
                     // jquery-ui theme css
                     {
                         expand: true,

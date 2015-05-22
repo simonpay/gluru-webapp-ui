@@ -112,7 +112,8 @@
 // -----------------------------------
 // GRID MIXINS
 // -----------------------------------
-// make RWD classes such as .lrg-8
+// make RWD classes such as .lrg-8 to add basic grid classes 
+// before concentrating on custom responsive dev
 @mixin make-col-class($size, $span-columns) {
     .#{$size}-#{$span-columns} {
         @include span-columns($span-columns);
